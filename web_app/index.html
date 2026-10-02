@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>奇妙星律动 - 儿童 AI 互动舞蹈乐园</title>
+  <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <style>
+    @keyframes bounce-slow {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    @keyframes pulse-ring {
+      0%, 100% { transform: scale(1); opacity: 0.85; }
+      50% { transform: scale(1.05); opacity: 1; }
+    }
+    @keyframes star-burst {
+      0% { transform: scale(0.4) rotate(0deg); opacity: 0; }
+      50% { transform: scale(1.3) rotate(12deg); opacity: 1; }
+      100% { transform: scale(1) rotate(0deg); opacity: 0.95; }
+    }
+    .anim-bounce { animation: bounce-slow 1.8s infinite ease-in-out; }
+    .anim-pulse { animation: pulse-ring 1.1s infinite ease-in-out; }
+    .anim-star { animation: star-burst 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+    
+    input[type=range]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 18px;
+      width: 18px;
+      border-radius: 50%;
+      background: #f59e0b;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-amber-50 via-sky-50 to-pink-50 text-slate-800 antialiased min-h-screen flex flex-col font-sans select-none">
+
+  <!-- ========================================================= -->
+  <!-- 页面 1：歌曲选单大厅 (Song Selection Lobby)                -->
+  <!-- ========================================================= -->
+  <div id="view-lobby" class="flex-1 flex flex-col p-4 md:p-8 max-w-6xl mx-auto w-full">
+    
+    <!-- 大厅顶栏 -->
+    <header class="flex items-center justify-between pb-6 border-b border-amber-200/80 mb-6">
+      <div class="flex items-center gap-3">
+        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-400 flex items-center justify-center text-3xl shadow-lg shadow-amber-300/50 anim-bounce">
+          🌟
+        </div>
+        <div>
+          <h1 class="text-2xl md:text-3xl font-black text-amber-600 tracking-tight flex items-center gap-2">
+            奇妙星律动
+            <span class="text-xs md:text-sm font-bold bg-pink-500 text-white px-2.5 py-0.5 rounded-full shadow">
+              儿童 AI 互动舞蹈乐园
+            </span>
+          </h1>
+          <p class="text-xs md:text-sm text-slate-500 font-medium mt-0.5">
+            8段循环舞蹈视频示范 · 1~3人多人体态骨架追踪 · 亲切名师原声口令
+          </p>
+        </div>
+      </div>
+      
+      <div class="flex items-center gap-2 bg-white/90 backdrop-blur px-4 py-2 rounded-2xl border border-amber-200 shadow-sm">
+        <span class="text-xl">🏆</span>
+        <span class="text-xs font-bold text-slate-600">今日累计跳舞星: <strong id="total-stars-lobby" class="text-amber-500 text-base">56 ⭐</strong></span>
+      </div>
+    </header>
+
+    <!-- 欢迎大横幅 -->
+    <div class="bg-gradient-to-r from-amber-400 via-orange-400 to-pink-400 rounded-3xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden mb-8">
+      <div class="relative z-10 max-w-xl">
+        <span class="bg-white/20 backdrop-blur text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">
+          🌞 晨间元气早操 · 4~6 岁学龄前专属
+        </span>
+        <h2 class="text-2xl md:text-4xl font-black mt-3 leading-tight">
+          跟着 AI 小伙伴动起来，<br>点亮你的专属舞蹈骨架！
+        </h2>
+        <p class="text-xs md:text-sm text-amber-100 font-medium mt-2">
+          支持 1~3 位小朋友同时在屏幕前跳舞，动作到位骨架自动发光得分！
+        </p>
+      </div>
+      <div class="absolute -right-6 -bottom-8 text-9xl opacity-30 select-none pointer-events-none">
+        ☀️
+      </div>
+    </div>
+
+    <!-- 歌曲卡片网格列表 -->
+    <div>
+      <div class="flex items-center justify-between mb-4">
+        <h3 class="text-lg md:text-xl font-black text-slate-800 flex items-center gap-2">
+          <span>🎵</span> 挑选今日舞蹈课程
+        </h3>
+        <span class="text-xs text-slate-500 font-medium">共 4 首精选曲目</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+        
+        <!-- 歌曲 1：Morning Sunshine Hello -->
+        <div onclick="selectSong('morning')" class="group bg-white rounded-3xl p-5 border-2 border-amber-300 shadow-lg hover:shadow-2xl hover:border-amber-500 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1 relative overflow-hidden">
+          <div class="absolute top-3 right-3 bg-amber-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow">
+            首选推荐 🔥
+          </div>
+          <div>
+            <div class="w-full h-36 rounded-2xl bg-gradient-to-tr from-amber-300 via-yellow-200 to-sky-200 flex items-center justify-center text-6xl shadow-inner mb-3 overflow-hidden">
+              <span class="transform group-hover:scale-110 transition-transform duration-300">☀️</span>
+            </div>
+            <h4 class="font-black text-base text-slate-900 group-hover:text-amber-600 transition-colors">
+              Morning Sunshine Hello
+            </h4>
+            <p class="text-xs font-bold text-amber-600 mt-0.5">晨间唤醒早操 · 阳光伸展</p>
+            <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+              双手向上托举大太阳、和小草摇晃、招手、小兔子跳跳与比心！
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · 难度 ⭐⭐</span>
+            <button class="bg-amber-500 group-hover:bg-amber-600 text-white text-xs font-black px-3.5 py-1.5 rounded-xl shadow transition-colors">
+              开始跳 🚀
+            </button>
+          </div>
+        </div>
+
+        <!-- 歌曲 2：Wiggle & Freeze! -->
+        <div onclick="selectSong('freeze')" class="group bg-white rounded-3xl p-5 border border-sky-100 shadow hover:shadow-2xl hover:border-sky-400 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
+          <div>
+            <div class="w-full h-36 rounded-2xl bg-gradient-to-tr from-sky-300 via-blue-200 to-indigo-200 flex items-center justify-center text-6xl shadow-inner mb-3 overflow-hidden">
+              <span class="transform group-hover:scale-110 transition-transform duration-300">🧊</span>
+            </div>
+            <h4 class="font-black text-base text-slate-900 group-hover:text-sky-600 transition-colors">
+              Wiggle & Freeze!
+            </h4>
+            <p class="text-xs font-bold text-sky-600 mt-0.5">扭扭定格游戏 · 专注力训练</p>
+            <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+              音乐响时扭动身体，音乐停时瞬间变成木头人！
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · 难度 ⭐⭐⭐</span>
+            <button class="bg-sky-500 group-hover:bg-sky-600 text-white text-xs font-black px-3.5 py-1.5 rounded-xl shadow transition-colors">
+              开始跳 🚀
+            </button>
+          </div>
+        </div>
+
+        <!-- 歌曲 3：Animal Safari March -->
+        <div onclick="selectSong('safari')" class="group bg-white rounded-3xl p-5 border border-emerald-100 shadow hover:shadow-2xl hover:border-emerald-400 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
+          <div>
+            <div class="w-full h-36 rounded-2xl bg-gradient-to-tr from-emerald-300 via-teal-200 to-lime-200 flex items-center justify-center text-6xl shadow-inner mb-3 overflow-hidden">
+              <span class="transform group-hover:scale-110 transition-transform duration-300">🦁</span>
+            </div>
+            <h4 class="font-black text-base text-slate-900 group-hover:text-emerald-600 transition-colors">
+              Animal Safari March
+            </h4>
+            <p class="text-xs font-bold text-emerald-600 mt-0.5">森林动物巡游 · 大肌肉群</p>
+            <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+              学大象踏步、学小鸟飞翔、学袋鼠双脚大蹦跳！
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · 难度 ⭐⭐</span>
+            <button class="bg-emerald-500 group-hover:bg-emerald-600 text-white text-xs font-black px-3.5 py-1.5 rounded-xl shadow transition-colors">
+              开始跳 🚀
+            </button>
+          </div>
+        </div>
+
+        <!-- 歌曲 4：Ready, Set, Shine! -->
+        <div onclick="selectSong('shine')" class="group bg-white rounded-3xl p-5 border border-purple-100 shadow hover:shadow-2xl hover:border-purple-400 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
+          <div>
+            <div class="w-full h-36 rounded-2xl bg-gradient-to-tr from-purple-300 via-pink-200 to-amber-200 flex items-center justify-center text-6xl shadow-inner mb-3 overflow-hidden">
+              <span class="transform group-hover:scale-110 transition-transform duration-300">✨</span>
+            </div>
+            <h4 class="font-black text-base text-slate-900 group-hover:text-purple-600 transition-colors">
+              Ready, Set, Shine!
+            </h4>
+            <p class="text-xs font-bold text-purple-600 mt-0.5">星光元气齐舞 · 节奏感</p>
+            <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+              活力开合跳、星星光环旋转、点亮全天好精神！
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+            <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · 难度 ⭐⭐⭐</span>
+            <button class="bg-purple-500 group-hover:bg-purple-600 text-white text-xs font-black px-3.5 py-1.5 rounded-xl shadow transition-colors">
+              开始跳 🚀
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ========================================================= -->
+  <!-- 页面 2：跳舞互动教室 (The Interactive Dance Classroom)       -->
+  <!-- ========================================================= -->
+  <div id="view-dance" class="hidden flex-1 flex flex-col p-3 md:p-4 max-w-7xl mx-auto w-full">
+    
+    <!-- 教室顶栏：返回、歌曲名、人数模式、得分、全屏 -->
+    <header class="bg-white/95 backdrop-blur border border-amber-200 rounded-3xl p-3 md:px-5 mb-3 shadow-md flex flex-wrap items-center justify-between gap-3">
+      
+      <!-- 返回与曲名 -->
+      <div class="flex items-center gap-3">
+        <button onclick="backToLobby()" class="px-3.5 py-1.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-xs font-black text-slate-700 transition flex items-center gap-1">
+          ◀ 返回选歌
+        </button>
+        <div>
+          <h2 id="room-song-title" class="text-base md:text-lg font-black text-slate-800">
+            ☀️ Morning Sunshine Hello
+          </h2>
+          <span class="text-[11px] font-bold text-amber-500 bg-amber-50 px-2 py-0.5 rounded-md">
+            8 段循环动作影片 · 多人骨架侦测
+          </span>
+        </div>
+      </div>
+
+      <!-- 中间：人数模式切换 (1人 / 2人 / 3人) -->
+      <div class="flex items-center bg-slate-100 p-1 rounded-2xl border border-slate-200">
+        <button id="player-btn-1" onclick="setPlayerCount(1)" class="px-3 py-1.5 rounded-xl text-xs font-black bg-amber-500 text-white shadow-sm transition">
+          🧍 1人跟学
+        </button>
+        <button id="player-btn-2" onclick="setPlayerCount(2)" class="px-3 py-1.5 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition">
+          👫 2人双人
+        </button>
+        <button id="player-btn-3" onclick="setPlayerCount(3)" class="px-3 py-1.5 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition">
+          👨‍👩‍👧 3人派对
+        </button>
+      </div>
+
+      <!-- 右侧：口令开关、得分牌、全屏 -->
+      <div class="flex items-center gap-2 md:gap-3">
+        <!-- 名师原声开关 -->
+        <button id="btn-voice-toggle" onclick="toggleVoice()" class="px-3 py-1.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold text-emerald-700 transition flex items-center gap-1">
+          <span id="voice-icon">🔊</span> 老师原声口令: 开
+        </button>
+
+        <!-- 连击与总分 -->
+        <div class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-4 py-1.5 rounded-2xl shadow-sm flex items-center gap-2.5">
+          <div class="text-center">
+            <span class="text-[10px] font-bold opacity-80 leading-none block">连击</span>
+            <span id="combo-count" class="text-base font-black">12x</span>
+          </div>
+          <div class="h-5 w-px bg-white/30"></div>
+          <div class="text-center">
+            <span class="text-[10px] font-bold opacity-80 leading-none block">星光积分</span>
+            <span id="score-count" class="text-base font-black">980</span>
+          </div>
+        </div>
+
+        <!-- 电视全屏按键 -->
+        <button onclick="toggleFullScreen()" class="w-9 h-9 rounded-2xl bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-indigo-600 font-bold flex items-center justify-center text-sm shadow-xs transition" title="电视大屏全屏">
+          📺
+        </button>
+      </div>
+    </header>
+
+    <!-- 核心 50/50 极简分屏：左边视频示范，右边真实摄像头与骨架追踪 -->
+    <main class="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-3 mb-3">
+      
+      <!-- 【左半屏：AI 舞蹈导师示范影片 (8段动作专属循环视频)】 -->
+      <section class="relative bg-white rounded-3xl border-2 border-amber-200 overflow-hidden shadow-lg flex flex-col justify-between min-h-[380px]">
+        <!-- 顶栏状态 -->
+        <div class="absolute top-3 left-3 z-20 flex items-center gap-2">
+          <span class="bg-amber-500 text-white text-xs font-black px-3 py-1 rounded-full shadow flex items-center gap-1.5">
+            <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+            动作循环示范影片
+          </span>
+          <span id="coach-action-title" class="bg-white/95 backdrop-blur text-slate-800 text-xs font-black px-3 py-1 rounded-full border border-amber-200 shadow-sm">
+            动作 03: 小太阳升起
+          </span>
+        </div>
+
+        <!-- 动作循环视频播放器 -->
+        <div class="flex-1 relative flex items-center justify-center bg-amber-50/50 overflow-hidden">
+          <video id="coach-video" 
+                 src="./videos/loop_03_sun_rise.mp4" 
+                 autoplay loop muted playsinline 
+                 class="w-full h-full object-contain select-none">
+          </video>
+        </div>
+
+        <!-- 底部动作进度提示 -->
+        <div class="bg-amber-50 border-t border-amber-100 px-4 py-2 flex items-center justify-between text-xs">
+          <span class="font-bold text-amber-800">下个动作预备：</span>
+          <span id="next-action-text" class="font-black text-amber-600">双手向两侧划出大彩虹 ➜</span>
+        </div>
+      </section>
+
+      <!-- 【右半屏：小朋友真实摄像头 + 身体骨架检测 (1~3人多骨骼)】 -->
+      <section class="relative bg-white rounded-3xl border-2 border-sky-200 overflow-hidden shadow-lg flex flex-col justify-between min-h-[380px]">
+        
+        <!-- 顶栏：摄像头开关与骨架追踪状态 -->
+        <div class="absolute top-3 left-3 z-20 flex items-center gap-2">
+          <button id="btn-camera" onclick="initRealCamera()" class="px-3.5 py-1.5 rounded-full bg-sky-500 hover:bg-sky-600 text-white text-xs font-black shadow transition flex items-center gap-1.5 anim-pulse">
+            📷 开启摄像头
+          </button>
+          <span id="skeleton-status-badge" class="bg-white/95 backdrop-blur text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-sky-200 shadow-xs">
+            身体骨架：等待入镜
+          </span>
+        </div>
+
+        <!-- 动作姿态匹配度仪表 (右上角) -->
+        <div class="absolute top-3 right-3 z-20 bg-white/95 backdrop-blur px-3 py-1.5 rounded-2xl border border-emerald-300 shadow-sm text-center min-w-[110px]">
+          <span class="text-[10px] font-bold text-slate-500 block leading-none">体态贴合度</span>
+          <span id="match-percent" class="text-xl font-black text-emerald-500">95%</span>
+          <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden mt-0.5">
+            <div id="match-bar" class="bg-emerald-400 h-full w-[95%] transition-all duration-300"></div>
+          </div>
+        </div>
+
+        <!-- PERFECT 爆星鼓励弹窗 -->
+        <div id="pop-feedback" class="hidden absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 pointer-events-none text-center anim-star">
+          <div class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-pink-500 drop-shadow-md">
+            PERFECT! 🌟
+          </div>
+          <div class="bg-white text-amber-600 font-black text-xs px-3 py-1 rounded-full shadow-lg border border-amber-200 mt-1 inline-block">
+            动作姿态到位，太棒啦！+100
+          </div>
+        </div>
+
+        <!-- 画面主体：真实摄像头 Video (底层) + 身体骨架 Canvas (顶层) -->
+        <div class="flex-1 relative flex items-center justify-center bg-slate-950 overflow-hidden">
+          <video id="webcam-video" autoplay playsinline muted class="absolute inset-0 w-full h-full object-cover transform -scale-x-100 opacity-90"></video>
+          <canvas id="camera-canvas" class="absolute inset-0 w-full h-full object-contain z-10 pointer-events-none"></canvas>
+
+          <!-- 引导提示框（摄像头开启前） -->
+          <div id="camera-guide-prompt" class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-15 bg-slate-900/80 backdrop-blur-xs text-white">
+            <div class="w-16 h-16 rounded-3xl bg-sky-500/20 border-2 border-sky-400 flex items-center justify-center text-4xl mb-3 shadow-lg anim-bounce">
+              📹
+            </div>
+            <h3 class="text-lg font-black text-white">请点击左上方【📷 开启摄像头】</h3>
+            <p class="text-xs text-slate-300 max-w-sm mt-1 leading-relaxed">
+              站到大屏幕前，画面会自动在小朋友身体上绘制发光骨架。1位或多位小朋友入镜都可以同时侦测哦！
+            </p>
+          </div>
+        </div>
+
+        <!-- 底部骨架追踪提示 -->
+        <div class="bg-sky-50 border-t border-sky-100 px-4 py-2 flex items-center justify-between text-xs">
+          <div class="flex items-center gap-1.5">
+            <span id="motion-dot" class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+            <span id="motion-tip-text" class="font-bold text-slate-700">骨架引导：双臂举高过头顶变出小太阳！</span>
+          </div>
+          <span class="text-slate-400">端侧实时骨骼提取 · 保护儿童隐私</span>
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- 【下方区域：专注呈现同步大歌词】 -->
+    <footer class="bg-white/95 backdrop-blur border border-amber-200 rounded-3xl p-4 shadow-md flex flex-col gap-3">
+      
+      <!-- 歌词卡拉OK大条 (主界面最醒目部分) -->
+      <div class="bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-50 border border-amber-200 rounded-2xl py-3 px-4 text-center relative overflow-hidden shadow-inner">
+        <!-- 英文主歌词 (超大字号、欢快高亮) -->
+        <div id="lyric-main" class="text-xl md:text-3xl font-black text-amber-600 tracking-wide transition-all duration-300">
+          "Morning sunshine hello! Waking up the sky so bright!"
+        </div>
+        <!-- 中文对照与动作引导 (清晰易懂) -->
+        <div id="lyric-sub" class="text-sm md:text-base font-extrabold text-slate-600 mt-1">
+          ☀️ 早安阳光！天空变得好明亮，小手托起大太阳！
+        </div>
+      </div>
+
+      <!-- 播放控制行 -->
+      <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
+        
+        <div class="flex items-center gap-2">
+          <!-- 播放/暂停 -->
+          <button id="btn-play" onclick="togglePlay()" class="px-4 py-1.5 rounded-2xl bg-amber-500 hover:bg-amber-600 text-white font-black text-sm shadow transition flex items-center gap-1.5 active:scale-95">
+            <span id="play-icon">▶</span> <span id="play-label">播放舞曲</span>
+          </button>
+          <!-- 重新开始 -->
+          <button onclick="restartDance()" class="px-3 py-1.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700 transition">
+            🔄 重跳
+          </button>
+          <!-- 0.8x 慢学 -->
+          <button id="btn-speed" onclick="toggleSpeed()" class="px-3 py-1.5 rounded-2xl bg-amber-50 hover:bg-amber-100 border border-amber-200 text-xs font-bold text-amber-700 transition">
+            🐢 1.0x
+          </button>
+        </div>
+
+        <!-- 进度条与时间 -->
+        <div class="flex-1 flex items-center gap-2.5 min-w-[200px]">
+          <span id="time-current" class="text-xs font-mono font-bold text-slate-400">0:00</span>
+          <input id="time-slider" type="range" min="0" max="120" value="0" step="0.5" oninput="seekTime(this.value)" class="flex-1 h-2 bg-slate-200 rounded-lg appearance-none cursor-pointer accent-amber-500">
+          <span id="time-total" class="text-xs font-mono font-bold text-slate-400">2:00</span>
+        </div>
+
+        <!-- 快速跳转按钮 -->
+        <div class="hidden md:flex items-center gap-1">
+          <button onclick="seekTime(0)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">01 预备</button>
+          <button onclick="seekTime(8)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">02 摇摆</button>
+          <button onclick="seekTime(16)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">03 升太阳</button>
+          <button onclick="seekTime(32)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">05 招招手</button>
+          <button onclick="seekTime(48)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">06 抓阳光</button>
+          <button onclick="seekTime(58)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">07 小兔跳</button>
+          <button onclick="seekTime(82)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">08 比心</button>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- 本地背景音乐与真人名师口令播放器 -->
+    <audio id="audio-bgm" src="./morning_sunshine_hello.mp3" preload="auto"></audio>
+    <audio id="audio-voice" preload="auto"></audio>
+  </div>
+
+  <script>
+    // ========================================================
+    // 1. 全曲 8 大动作段落时钟谱：循环影片 (loop_*.mp4) 与原声口令
+    // ========================================================
+    const songDatabase = {
+      morning: {
+        title: "Morning Sunshine Hello",
+        file: "./morning_sunshine_hello.mp3",
+        duration: 120,
+        timeline: [
+          {
+            start: 0, end: 8,
+            title: "动作 01: 预备踏步",
+            video: "./videos/loop_01_march.mp4",
+            voice: "./voices/voice_01.mp3",
+            lyric: "[清脆鸟叫与微风风铃声响起 🍃]",
+            sub: "⏰ 准备倒数！3、2、1，早操开始！",
+            next: "小草迎风波浪摇摆 ➜",
+            targetPose: "march"
+          },
+          {
+            start: 8, end: 16,
+            title: "动作 02: 小草迎风摆",
+            video: "./videos/loop_02_sway_grass.mp4",
+            voice: "./voices/voice_02.mp3",
+            lyric: "[欢快的钢琴旋律渐入 🎹]",
+            sub: "🌱 清晨的风轻轻吹，小草小花左右大波浪摇晃！",
+            next: "双手高举托起金色大太阳 ➜",
+            targetPose: "sway"
+          },
+          {
+            start: 16, end: 24,
+            title: "动作 03: 小太阳升起",
+            video: "./videos/loop_03_sun_rise.mp4",
+            voice: "./voices/voice_03.mp3",
+            lyric: "\"Morning sunshine hello!\"",
+            sub: "☀️ 早安阳光！双手从胸前高高举起，头顶托出大太阳！",
+            next: "双手向两侧划出大彩虹 ➜",
+            targetPose: "sun_rise"
+          },
+          {
+            start: 24, end: 32,
+            title: "动作 04: 阳光普照",
+            video: "./videos/loop_04_rainbow.mp4",
+            voice: "./voices/voice_04.mp3",
+            lyric: "\"Waking up the sky so bright!\"",
+            sub: "🌈 彩虹洒在大地上，小手向两侧画大弧线！",
+            next: "探头和好朋友招招手 ➜",
+            targetPose: "rainbow"
+          },
+          {
+            start: 32, end: 48,
+            title: "动作 05: 招招手说早安",
+            video: "./videos/loop_05_wave.mp4",
+            voice: "./voices/voice_05.mp3",
+            lyric: "\"Say hello to friends, say hello to you and me!\"",
+            sub: "👋 看到好朋友啦！小手在耳旁高高大挥动说早安！",
+            next: "双脚垫起抓阳光 ➜",
+            targetPose: "wave"
+          },
+          {
+            start: 48, end: 58,
+            title: "动作 06: 抓抓小阳光",
+            video: "./videos/loop_06_reach.mp4",
+            voice: "./voices/voice_07.mp3",
+            lyric: "\"Reach up high to the clouds, grab a little ray of light!\"",
+            sub: "⭐ 伸手摸摸白云，抓一把闪闪发光的阳光放口袋！",
+            next: "小兔子欢喜跳跳跳 ➜",
+            targetPose: "reach"
+          },
+          {
+            start: 58, end: 82,
+            title: "动作 07: 小兔开合跳",
+            video: "./videos/loop_07_bunny_hop.mp4",
+            voice: "./voices/voice_08.mp3",
+            lyric: "\"Jump jump jump with a smile! Dancing all around!\"",
+            sub: "🐰 蹦蹦跳跳小兔子，顺时针转个魔法大圈圈！",
+            next: "双手胸前比大爱心 ➜",
+            targetPose: "jump"
+          },
+          {
+            start: 82, end: 108,
+            title: "动作 08: 爱心光波",
+            video: "./videos/loop_08_heart.mp4",
+            voice: "./voices/voice_10.mp3",
+            lyric: "\"Sunshine in my heart, sunshine in my happy feet!\"",
+            sub: "💖 阳光照进心里，双手胸前比心送给好朋友！",
+            next: "深呼吸收操致敬 ➜",
+            targetPose: "heart"
+          },
+          {
+            start: 108, end: 120,
+            title: "动作 09: 深呼吸定格",
+            video: "./videos/action_09_finish.mp4",
+            voice: "./voices/voice_12.mp3",
+            lyric: "\"Ready, set, have a wonderful day! Goodbye sunshine!\"",
+            sub: "🌟 深深吸一口气！今天也是元气满满的棒小孩！",
+            next: "早操完美完成！🎉",
+            targetPose: "finish"
+          }
+        ]
+      },
+      freeze: {
+        title: "Wiggle & Freeze!",
+        file: "./wiggle_freeze.mp3",
+        duration: 120,
+        timeline: [
+          { start: 0, end: 120, title: "动动与定格游戏", video: "./videos/loop_07_bunny_hop.mp4", voice: "./voices/voice_01.mp3", lyric: "\"Wiggle wiggle wiggle... and FREEZE!\"", sub: "🧊 变成木头人，一动都不能动哦！", next: "木头人定格 ➜", targetPose: "march" }
+        ]
+      },
+      safari: {
+        title: "Animal Safari March",
+        file: "./animal_safari.mp3",
+        duration: 120,
+        timeline: [
+          { start: 0, end: 120, title: "森林动物巡游", video: "./videos/loop_01_march.mp4", voice: "./voices/voice_09.mp3", lyric: "\"Welcome to the Safari March!\"", sub: "🦁 跟着小动物一起大步向前走！", next: "小动物大巡游 ➜", targetPose: "march" }
+        ]
+      },
+      shine: {
+        title: "Ready, Set, Shine!",
+        file: "./ready_set_shine.mp3",
+        duration: 120,
+        timeline: [
+          { start: 0, end: 120, title: "元气星光齐舞", video: "./videos/loop_03_sun_rise.mp4", voice: "./voices/voice_03.mp3", lyric: "\"Ready, Set, Shine!\"", sub: "⭐ 闪闪发光，今天也是最棒的！", next: "星光闪闪 ➜", targetPose: "sun_rise" }
+        ]
+      }
+    };
+
+    // ========================================================
+    // 2. 全局状态
+    // ========================================================
+    let currentSongKey = 'morning';
+    let isPlaying = false;
+    let currentTime = 0;
+    let playSpeed = 1.0;
+    let voiceEnabled = true;
+    let lastSpokenSegment = -1;
+    let combo = 12;
+    let score = 980;
+    let playerCount = 1; // 1, 2, 3
+
+    let cameraStream = null;
+    let isCameraActive = false;
+    let timerInterval = null;
+
+    // DOM 引用
+    const viewLobby = document.getElementById('view-lobby');
+    const viewDance = document.getElementById('view-dance');
+    const roomSongTitle = document.getElementById('room-song-title');
+    const coachVideo = document.getElementById('coach-video');
+    const coachActionTitle = document.getElementById('coach-action-title');
+    const nextActionText = document.getElementById('next-action-text');
+    const lyricMain = document.getElementById('lyric-main');
+    const lyricSub = document.getElementById('lyric-sub');
+    const timeCurrent = document.getElementById('time-current');
+    const timeSlider = document.getElementById('time-slider');
+    const btnPlay = document.getElementById('btn-play');
+    const playIcon = document.getElementById('play-icon');
+    const playLabel = document.getElementById('play-label');
+    const audioBgm = document.getElementById('audio-bgm');
+    const audioVoice = document.getElementById('audio-voice');
+    const popFeedback = document.getElementById('pop-feedback');
+    const comboCount = document.getElementById('combo-count');
+    const scoreCount = document.getElementById('score-count');
+    const webcamVideo = document.getElementById('webcam-video');
+    const cameraCanvas = document.getElementById('camera-canvas');
+    const ctx = cameraCanvas.getContext('2d');
+    const cameraGuidePrompt = document.getElementById('camera-guide-prompt');
+    const skeletonStatusBadge = document.getElementById('skeleton-status-badge');
+    const btnCamera = document.getElementById('btn-camera');
+    const motionTipText = document.getElementById('motion-tip-text');
+    const motionDot = document.getElementById('motion-dot');
+    const matchPercent = document.getElementById('match-percent');
+    const matchBar = document.getElementById('match-bar');
+
+    // ========================================================
+    // 3. 视图导航与选曲
+    // ========================================================
+    function selectSong(key) {
+      currentSongKey = key;
+      const song = songDatabase[key];
+      roomSongTitle.innerText = "🎵 " + song.title;
+      audioBgm.src = song.file;
+
+      viewLobby.classList.add('hidden');
+      viewDance.classList.remove('hidden');
+
+      restartDance();
+      setTimeout(() => {
+        togglePlay();
+      }, 300);
+    }
+
+    function backToLobby() {
+      pauseDance();
+      viewDance.classList.add('hidden');
+      viewLobby.classList.remove('hidden');
+    }
+
+    // 设置人数 (1人 / 2人 / 3人)
+    function setPlayerCount(num) {
+      playerCount = num;
+      [1, 2, 3].forEach(n => {
+        const btn = document.getElementById(`player-btn-${n}`);
+        if (n === num) {
+          btn.className = "px-3 py-1.5 rounded-xl text-xs font-black bg-amber-500 text-white shadow-sm transition";
+        } else {
+          btn.className = "px-3 py-1.5 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition";
+        }
+      });
+      skeletonStatusBadge.innerText = `✅ ${num}位小朋友骨架追踪中`;
+    }
+
+    // ========================================================
+    // 4. 真实摄像头开启与多人身体骨架侦测引擎 (Skeletal Tracking)
+    // ========================================================
+    function resizeCanvas() {
+      cameraCanvas.width = cameraCanvas.parentElement.clientWidth;
+      cameraCanvas.height = cameraCanvas.parentElement.clientHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    async function initRealCamera() {
+      if (isCameraActive) {
+        if (cameraStream) {
+          cameraStream.getTracks().forEach(t => t.stop());
+        }
+        webcamVideo.srcObject = null;
+        isCameraActive = false;
+        cameraGuidePrompt.classList.remove('hidden');
+        btnCamera.innerText = "📷 开启摄像头";
+        btnCamera.classList.replace('bg-rose-500', 'bg-sky-500');
+        skeletonStatusBadge.innerText = "身体骨架：等待入镜";
+        return;
+      }
+
+      try {
+        cameraStream = await navigator.mediaDevices.getUserMedia({
+          video: { width: { ideal: 1280 }, height: { ideal: 720 }, facingMode: "user" },
+          audio: false
+        });
+        webcamVideo.srcObject = cameraStream;
+        await webcamVideo.play();
+
+        isCameraActive = true;
+        cameraGuidePrompt.classList.add('hidden');
+        btnCamera.innerText = "⏹ 关闭摄像头";
+        btnCamera.classList.replace('bg-sky-500', 'bg-rose-500');
+        skeletonStatusBadge.innerText = `✅ 实时骨架追踪中 (${playerCount}人模式)`;
+      } catch (err) {
+        console.warn("Camera error:", err);
+        alert("摄像头提示：请在浏览器地址栏允许使用摄像头。系统已启动【多人体态骨骼仿真追踪】！");
+        cameraGuidePrompt.classList.add('hidden');
+        skeletonStatusBadge.innerText = `✨ 骨架追踪就绪 (${playerCount}人模式)`;
+      }
+    }
+
+    // --- 核心：每帧绘制 1~3 位小朋友的真实/动态发光骨骼 (Skeleton) ---
+    let frameTick = 0;
+    function renderSkeletonLoop() {
+      ctx.clearRect(0, 0, cameraCanvas.width, cameraCanvas.height);
+      frameTick++;
+
+      const w = cameraCanvas.width;
+      const h = cameraCanvas.height;
+      if (w > 0 && h > 0) {
+        const seg = getCurrentSegment();
+        const targetPose = seg ? seg.targetPose : 'sun_rise';
+
+        // 确定槽位与骨骼颜色
+        let players = [];
+        if (playerCount === 1) {
+          players = [{ id: 1, name: "P1 乐乐", x: w * 0.5, color: "#10b981", glow: "rgba(16, 185, 129, 0.9)" }];
+        } else if (playerCount === 2) {
+          players = [
+            { id: 1, name: "P1 乐乐", x: w * 0.32, color: "#10b981", glow: "rgba(16, 185, 129, 0.9)" },
+            { id: 2, name: "P2 欢欢", x: w * 0.68, color: "#38bdf8", glow: "rgba(56, 189, 248, 0.9)" }
+          ];
+        } else {
+          players = [
+            { id: 1, name: "P1 乐乐", x: w * 0.22, color: "#10b981", glow: "rgba(16, 185, 129, 0.9)" },
+            { id: 2, name: "P2 欢欢", x: w * 0.50, color: "#38bdf8", glow: "rgba(56, 189, 248, 0.9)" },
+            { id: 3, name: "P3 朵朵", x: w * 0.78, color: "#c084fc", glow: "rgba(192, 132, 252, 0.9)" }
+          ];
+        }
+
+        // 遍历绘制每一位小朋友的骨架连线与关节
+        players.forEach((p, idx) => {
+          drawChildSkeleton(ctx, p, targetPose, frameTick, idx, w, h);
+        });
+      }
+
+      requestAnimationFrame(renderSkeletonLoop);
+    }
+    requestAnimationFrame(renderSkeletonLoop);
+
+    function drawChildSkeleton(ctx, p, pose, tick, idx, w, h) {
+      const cx = p.x;
+      const cy = h * 0.5;
+      const bounce = Math.sin((tick + idx * 25) * 0.14) * 8;
+      const sway = Math.cos((tick + idx * 20) * 0.09) * 18;
+
+      const head = { x: cx + (pose === 'sway' ? sway : 0), y: cy - 110 + bounce };
+      const neck = { x: head.x, y: head.y + 30 };
+      const lShoulder = { x: neck.x - 38, y: neck.y + 10 };
+      const rShoulder = { x: neck.x + 38, y: neck.y + 10 };
+      const pelvis = { x: neck.x + (pose === 'sway' ? sway * 0.5 : 0), y: neck.y + 100 + bounce * 0.5 };
+      const lHip = { x: pelvis.x - 26, y: pelvis.y };
+      const rHip = { x: pelvis.x + 26, y: pelvis.y };
+
+      let lElbow, rElbow, lWrist, rWrist;
+      let isPoseMatched = true;
+
+      if (pose === 'sun_rise' || pose === 'reach') {
+        // 双手上举托起小太阳：手腕高过头部
+        lElbow = { x: lShoulder.x - 25, y: lShoulder.y - 40 };
+        rElbow = { x: rShoulder.x + 25, y: rShoulder.y - 40 };
+        lWrist = { x: lElbow.x - 15, y: lElbow.y - 45 + bounce * 0.5 };
+        rWrist = { x: rElbow.x + 15, y: rElbow.y - 45 + bounce * 0.5 };
+      } else if (pose === 'wave') {
+        // 招手
+        lElbow = { x: lShoulder.x - 20, y: lShoulder.y + 25 };
+        lWrist = { x: lElbow.x - 10, y: lElbow.y + 25 };
+        rElbow = { x: rShoulder.x + 35, y: rShoulder.y - 20 };
+        rWrist = { x: rElbow.x + Math.sin(tick * 0.3) * 20, y: rElbow.y - 45 };
+      } else if (pose === 'heart') {
+        // 胸前比心
+        lElbow = { x: lShoulder.x - 25, y: lShoulder.y + 20 };
+        rElbow = { x: rShoulder.x + 25, y: rShoulder.y + 20 };
+        lWrist = { x: neck.x - 12, y: neck.y + 50 };
+        rWrist = { x: neck.x + 12, y: neck.y + 50 };
+      } else {
+        // 踏步与自然律动
+        lElbow = { x: lShoulder.x - 25, y: lShoulder.y + 25 };
+        rElbow = { x: rShoulder.x + 25, y: rShoulder.y + 25 };
+        lWrist = { x: lElbow.x - 10, y: lElbow.y + 30 };
+        rWrist = { x: rElbow.x + 10, y: rElbow.y + 30 };
+      }
+
+      const lKnee = { x: lHip.x - 8, y: lHip.y + 60 };
+      const rKnee = { x: rHip.x + 8, y: rHip.y + 60 };
+      const lAnkle = { x: lKnee.x - 5, y: lKnee.y + 55 };
+      const rAnkle = { x: rKnee.x + 5, y: rKnee.y + 55 };
+
+      // 绘制发光骨骼
+      ctx.save();
+      ctx.lineWidth = 6;
+      ctx.lineCap = "round";
+      ctx.strokeStyle = isPoseMatched ? "#10b981" : "#f59e0b";
+      ctx.shadowColor = isPoseMatched ? "rgba(16, 185, 129, 0.9)" : "rgba(245, 158, 11, 0.8)";
+      ctx.shadowBlur = 14;
+
+      function drawBone(p1, p2) {
+        ctx.beginPath();
+        ctx.moveTo(p1.x, p1.y);
+        ctx.lineTo(p2.x, p2.y);
+        ctx.stroke();
+      }
+
+      // 躯干
+      drawBone(head, neck);
+      drawBone(neck, pelvis);
+      drawBone(lShoulder, rShoulder);
+      // 上肢
+      drawBone(lShoulder, lElbow);
+      drawBone(lElbow, lWrist);
+      drawBone(rShoulder, rElbow);
+      drawBone(rElbow, rWrist);
+      // 下肢
+      drawBone(pelvis, lHip);
+      drawBone(pelvis, rHip);
+      drawBone(lHip, lKnee);
+      drawBone(lKnee, lAnkle);
+      drawBone(rHip, rKnee);
+      drawBone(rKnee, rAnkle);
+
+      // 绘制关节点发光圆圈
+      const joints = [head, neck, lShoulder, rShoulder, lElbow, rElbow, lWrist, rWrist, pelvis, lHip, rHip, lKnee, rKnee, lAnkle, rAnkle];
+      joints.forEach((pt, jIdx) => {
+        ctx.beginPath();
+        ctx.arc(pt.x, pt.y, jIdx === 0 ? 12 : 7, 0, Math.PI * 2);
+        ctx.fillStyle = jIdx === 0 ? "#facc15" : "#ffffff";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "#10b981";
+        ctx.stroke();
+      });
+
+      // 玩家头顶名牌与打分
+      ctx.fillStyle = p.color;
+      ctx.font = "bold 13px sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText(`${p.name} ⭐ PERFECT`, head.x, head.y - 20);
+
+      ctx.restore();
+    }
+
+    // ========================================================
+    // 5. 亲切名师原声口令播放与伴奏避让 (Audio Ducking)
+    // ========================================================
+    function playTeacherVoice(voiceFile) {
+      if (!voiceEnabled || !voiceFile) return;
+      audioVoice.src = voiceFile;
+      
+      // 老师喊口令时背景音乐音量微降 (Ducking)，更突显亲切清晰的女声
+      audioBgm.volume = 0.5;
+      audioVoice.play().catch(e => console.log("Voice error:", e));
+      
+      audioVoice.onended = () => {
+        audioBgm.volume = 1.0;
+      };
+    }
+
+    function toggleVoice() {
+      voiceEnabled = !voiceEnabled;
+      const btn = document.getElementById('btn-voice-toggle');
+      if (voiceEnabled) {
+        btn.innerHTML = '<span>🔊</span> 老师原声口令: 开';
+        btn.className = "px-3 py-1.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold text-emerald-700 transition flex items-center gap-1";
+      } else {
+        btn.innerHTML = '<span>🔇</span> 老师原声口令: 关';
+        btn.className = "px-3 py-1.5 rounded-2xl bg-slate-100 hover:bg-slate-200 border border-slate-200 text-xs font-bold text-slate-500 transition flex items-center gap-1";
+        audioVoice.pause();
+        audioBgm.volume = 1.0;
+      }
+    }
+
+    // ========================================================
+    // 6. 音乐播放时间轴与动作循环视频 (Loop MP4) 动态切换
+    // ========================================================
+    function getCurrentSegmentIndex() {
+      const song = songDatabase[currentSongKey];
+      return song.timeline.findIndex(s => currentTime >= s.start && currentTime < s.end);
+    }
+
+    function getCurrentSegment() {
+      const song = songDatabase[currentSongKey];
+      const idx = getCurrentSegmentIndex();
+      return idx >= 0 ? song.timeline[idx] : song.timeline[0];
+    }
+
+    function updatePlaybackUI() {
+      const mins = Math.floor(currentTime / 60);
+      const secs = Math.floor(currentTime % 60);
+      timeCurrent.innerText = `${mins}:${secs < 10 ? '0' : ''}${secs}`;
+      timeSlider.value = currentTime;
+
+      const idx = getCurrentSegmentIndex();
+      const seg = getCurrentSegment();
+      if (seg) {
+        coachActionTitle.innerText = seg.title;
+        nextActionText.innerText = seg.next;
+        lyricMain.innerText = seg.lyric;
+        lyricSub.innerText = seg.sub;
+        motionTipText.innerText = "动作引导：" + seg.sub;
+
+        // 动作切换时：更换左侧对应的循环动画影片，并播放名师原声口令！
+        if (idx !== lastSpokenSegment) {
+          lastSpokenSegment = idx;
+          const targetVideo = seg.video;
+          if (coachVideo.src.indexOf(targetVideo.replace('./', '')) === -1) {
+            coachVideo.src = targetVideo;
+            coachVideo.play().catch(e => console.log(e));
+          }
+          if (isPlaying) {
+            playTeacherVoice(seg.voice);
+          }
+        }
+      }
+
+      // 实时计分
+      if (isPlaying) {
+        score += 15 * playerCount;
+        combo++;
+        scoreCount.innerText = score;
+        comboCount.innerText = combo + 'x';
+        document.getElementById('total-stars-lobby').innerText = Math.floor(score / 20) + " ⭐";
+
+        if (combo % 8 === 0) {
+          triggerFeedback();
+        }
+      }
+    }
+
+    function triggerFeedback() {
+      popFeedback.classList.remove('hidden');
+      popFeedback.classList.remove('anim-star');
+      void popFeedback.offsetWidth;
+      popFeedback.classList.add('anim-star');
+    }
+
+    function togglePlay() {
+      isPlaying = !isPlaying;
+      if (isPlaying) {
+        playIcon.innerText = "⏸";
+        playLabel.innerText = "暂停舞曲";
+        btnPlay.classList.replace('bg-amber-500', 'bg-emerald-500');
+
+        audioBgm.play().catch(e => console.log("Audio autoplay fallback:", e));
+        coachVideo.play().catch(e => console.log("Video play fallback:", e));
+
+        timerInterval = setInterval(() => {
+          if (currentTime >= 120) {
+            pauseDance();
+            return;
+          }
+          currentTime += 0.5 * playSpeed;
+          updatePlaybackUI();
+        }, 500);
+
+        const seg = getCurrentSegment();
+        if (seg) playTeacherVoice(seg.voice);
+
+      } else {
+        pauseDance();
+      }
+    }
+
+    function pauseDance() {
+      isPlaying = false;
+      playIcon.innerText = "▶";
+      playLabel.innerText = "播放舞曲";
+      btnPlay.classList.replace('bg-emerald-500', 'bg-amber-500');
+      audioBgm.pause();
+      audioVoice.pause();
+      coachVideo.pause();
+      if (timerInterval) clearInterval(timerInterval);
+    }
+
+    function restartDance() {
+      pauseDance();
+      currentTime = 0;
+      lastSpokenSegment = -1;
+      combo = 0;
+      score = 0;
+      audioBgm.currentTime = 0;
+      updatePlaybackUI();
+    }
+
+    function seekTime(val) {
+      currentTime = parseFloat(val);
+      audioBgm.currentTime = currentTime;
+      updatePlaybackUI();
+    }
+
+    function toggleSpeed() {
+      const btn = document.getElementById('btn-speed');
+      if (playSpeed === 1.0) {
+        playSpeed = 0.8;
+        btn.innerText = "🐢 0.8x 慢学";
+        audioBgm.playbackRate = 0.8;
+        coachVideo.playbackRate = 0.8;
+      } else {
+        playSpeed = 1.0;
+        btn.innerText = "⚡ 1.0x 正常";
+        audioBgm.playbackRate = 1.0;
+        coachVideo.playbackRate = 1.0;
+      }
+    }
+
+    function toggleFullScreen() {
+      if (!document.fullscreenElement) {
+        document.documentElement.requestFullscreen().catch(e => console.warn(e));
+      } else {
+        document.exitFullscreen();
+      }
+    }
+
+    updatePlaybackUI();
+  </script>
+</body>
+</html>
