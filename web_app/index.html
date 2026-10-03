@@ -936,7 +936,7 @@
       // 无论是否全屏、普通窗口、离线等任何情况，100% 毫秒级锁定人体并附着火柴人！
 
       // ========================================================
-      // 增强型端侧计算机视觉骨骼引擎 (离线 / 零依赖 / 超高稳定性)
+      // 增强型端侧计算机视觉骨骼引擎 (支持 1~3 人独立多人体态侦测)
       // ========================================================
       const cw = cvCanvas.width;
       const ch = cvCanvas.height;
@@ -949,15 +949,32 @@
         for (let i = 0; i < currData.length; i++) bgCvFrameData[i] = currData[i];
       }
 
-      let activePixels = 0;
-      let sumScreenX = 0, sumY = 0;
-      let minScreenX = 1, maxScreenX = 0, minY = ch, maxY = 0;
+      // 多人独立扇区定义 (根据当前设定的玩家数量 1, 2, 3 进行屏幕空间独立解耦)
+      const sectors = [];
+      if (playerCount === 1) {
+        sectors.push({ id: 0, minX: 0.0, maxX: 1.0, defaultX: 0.50 });
+      } else if (playerCount === 2) {
+        sectors.push({ id: 0, minX: 0.0, maxX: 0.52, defaultX: 0.28 });
+        sectors.push({ id: 1, minX: 0.48, maxX: 1.0, defaultX: 0.72 });
+      } else {
+        sectors.push({ id: 0, minX: 0.0, maxX: 0.38, defaultX: 0.20 });
+        sectors.push({ id: 1, minX: 0.32, maxX: 0.68, defaultX: 0.50 });
+        sectors.push({ id: 2, minX: 0.62, maxX: 1.0, defaultX: 0.80 });
+      }
 
-      // 手部极值点 (以屏幕镜像坐标区分左手与右手)
-      // 屏幕左侧 (screenX < 0.46) 对应火柴人左手 (lWrist)
-      // 屏幕右侧 (screenX > 0.54) 对应火柴人右手 (rWrist)
-      let screenLeftHandY = ch, screenLeftHandX = 0.3;
-      let screenRightHandY = ch, screenRightHandX = 0.7;
+      sectors.forEach(s => {
+        s.activePixels = 0;
+        s.sumScreenX = 0;
+        s.sumY = 0;
+        s.minScreenX = s.maxX;
+        s.maxScreenX = s.minX;
+        s.minY = ch;
+        s.maxY = 0;
+        s.leftHandY = ch;
+        s.leftHandX = s.defaultX - 0.08;
+        s.rightHandY = ch;
+        s.rightHandX = s.defaultX + 0.08;
+      });
 
       for (let y = 8; y < ch - 8; y += 2) {
         for (let x = 8; x < cw - 8; x += 2) {
@@ -975,118 +992,167 @@
           bgCvFrameData[idx+2] += (currData[idx+2] - bgCvFrameData[idx+2]) * 0.006;
 
           if (diffBg > 22) {
-            activePixels++;
-            // 转换为屏幕镜像坐标系 (0.0 屏幕左侧, 1.0 屏幕右侧)
             const screenX = 1.0 - (x / cw);
-            sumScreenX += screenX;
-            sumY += y;
 
-            if (screenX < minScreenX) minScreenX = screenX;
-            if (screenX > maxScreenX) maxScreenX = screenX;
-            if (y < minY) minY = y;
-            if (y > maxY) maxY = y;
+            // 分配到各自独立的玩家扇区内
+            for (let i = 0; i < sectors.length; i++) {
+              const s = sectors[i];
+              if (screenX >= s.minX && screenX <= s.maxX) {
+                s.activePixels++;
+                s.sumScreenX += screenX;
+                s.sumY += y;
 
-            // 避开中间头部区域 (|screenX - 0.5| > 0.08)，分别侦测屏幕左侧与右侧的最高手部极值点！
-            if (screenX < 0.44 && y < screenLeftHandY) {
-              screenLeftHandY = y;
-              screenLeftHandX = screenX;
-            }
-            if (screenX > 0.56 && y < screenRightHandY) {
-              screenRightHandY = y;
-              screenRightHandX = screenX;
+                if (screenX < s.minScreenX) s.minScreenX = screenX;
+                if (screenX > s.maxScreenX) s.maxScreenX = screenX;
+                if (y < s.minY) s.minY = y;
+                if (y > s.maxY) s.maxY = y;
+
+                // 该玩家独立的左右手臂极值
+                const currentCenter = s.activePixels > 0 ? (s.sumScreenX / s.activePixels) : s.defaultX;
+                if (screenX < currentCenter - 0.03 && y < s.leftHandY) {
+                  s.leftHandY = y;
+                  s.leftHandX = screenX;
+                }
+                if (screenX > currentCenter + 0.03 && y < s.rightHandY) {
+                  s.rightHandY = y;
+                  s.rightHandX = screenX;
+                }
+                break;
+              }
             }
           }
         }
       }
 
-      // 置信度累积逻辑：当人物入镜时累加至100；当人物离开时缓慢降至0
-      if (activePixels > 38) {
-        presenceConfidence = Math.min(100, presenceConfidence + 8);
-      } else {
-        presenceConfidence = Math.max(0, presenceConfidence - 1.2);
-      }
+      // 分别对每个玩家进行独立的骨骼驱动与姿态更新
+      let detectedCount = 0;
 
-      if (presenceConfidence > 20) {
-        isHumanDetected = true;
-        stickmanStatusBadge.innerText = "🎉 小朋友已入镜！火柴人合体完成！";
-        stickmanStatusBadge.className = "bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full shadow";
+      sectors.forEach(s => {
+        const p = trackedPlayerPoses[s.id];
+        if (s.activePixels > 22) {
+          p.detected = true;
+          detectedCount++;
 
-        const centerScreenX = (activePixels > 0) ? (sumScreenX / activePixels) : 0.5;
-        const topY = Math.max(0.12, (minY / ch));
+          const centerScreenX = s.sumScreenX / s.activePixels;
+          const topY = Math.max(0.12, (s.minY / ch));
 
-        const p = trackedPlayerPoses[0];
-        p.detected = true;
+          // 头部与颈部平滑跟随对应小朋友
+          p.head.x += (centerScreenX - p.head.x) * 0.35;
+          p.head.y += (topY - p.head.y) * 0.35;
+          p.neck.x = p.head.x;
+          p.neck.y = p.head.y + 0.08;
 
-        // 头部与颈部平滑跟随人体
-        p.head.x += (centerScreenX - p.head.x) * 0.35;
-        p.head.y += (topY - p.head.y) * 0.35;
-        p.neck.x = p.head.x;
-        p.neck.y = p.head.y + 0.08;
+          // 肩部与躯干
+          p.lShoulder.x = p.neck.x - 0.07;
+          p.rShoulder.x = p.neck.x + 0.07;
+          p.lShoulder.y = p.neck.y + 0.02;
+          p.rShoulder.y = p.neck.y + 0.02;
 
-        // 肩部与躯干
-        p.lShoulder.x = p.neck.x - 0.08;
-        p.rShoulder.x = p.neck.x + 0.08;
-        p.lShoulder.y = p.neck.y + 0.02;
-        p.rShoulder.y = p.neck.y + 0.02;
+          p.pelvis.x = p.neck.x;
+          p.pelvis.y = Math.min(0.72, p.neck.y + 0.22);
+          p.lHip.x = p.pelvis.x - 0.05;
+          p.rHip.x = p.pelvis.x + 0.05;
+          p.lHip.y = p.pelvis.y;
+          p.rHip.y = p.pelvis.y;
 
-        p.pelvis.x = p.neck.x;
-        p.pelvis.y = Math.min(0.72, p.neck.y + 0.22);
-        p.lHip.x = p.pelvis.x - 0.05;
-        p.rHip.x = p.pelvis.x + 0.05;
-        p.lHip.y = p.pelvis.y;
-        p.rHip.y = p.pelvis.y;
+          // 手腕真实跟随独立极值点
+          const leftNormY = s.leftHandY / ch;
+          const rightNormY = s.rightHandY / ch;
 
-        // 手腕真实跟随 (修复镜像对应：屏幕左侧手 -> lWrist；屏幕右侧手 -> rWrist)
-        const leftHandNormY = screenLeftHandY / ch;
-        const rightHandNormY = screenRightHandY / ch;
+          // 左手
+          if (leftNormY < p.neck.y + 0.05) {
+            p.lWrist.y += (leftNormY - p.lWrist.y) * 0.45;
+            p.lWrist.x += (s.leftHandX - p.lWrist.x) * 0.45;
+            p.lElbow.x = (p.lShoulder.x + p.lWrist.x) / 2 - 0.03;
+            p.lElbow.y = (p.lShoulder.y + p.lWrist.y) / 2;
+          } else {
+            p.lWrist.y += (p.pelvis.y + 0.05 - p.lWrist.y) * 0.25;
+            p.lWrist.x += (p.lShoulder.x - 0.03 - p.lWrist.x) * 0.25;
+            p.lElbow.x = p.lShoulder.x - 0.03;
+            p.lElbow.y = p.lShoulder.y + 0.12;
+          }
 
-        // 屏幕左侧手臂
-        if (leftHandNormY < p.neck.y + 0.05) {
-          p.lWrist.y += (leftHandNormY - p.lWrist.y) * 0.45;
-          p.lWrist.x += (screenLeftHandX - p.lWrist.x) * 0.45;
-          p.lElbow.x = (p.lShoulder.x + p.lWrist.x) / 2 - 0.03;
-          p.lElbow.y = (p.lShoulder.y + p.lWrist.y) / 2;
+          // 右手
+          if (rightNormY < p.neck.y + 0.05) {
+            p.rWrist.y += (rightNormY - p.rWrist.y) * 0.45;
+            p.rWrist.x += (s.rightHandX - p.rWrist.x) * 0.45;
+            p.rElbow.x = (p.rShoulder.x + p.rWrist.x) / 2 + 0.03;
+            p.rElbow.y = (p.rShoulder.y + p.rWrist.y) / 2;
+          } else {
+            p.rWrist.y += (p.pelvis.y + 0.05 - p.rWrist.y) * 0.25;
+            p.rWrist.x += (p.rShoulder.x + 0.03 - p.rWrist.x) * 0.25;
+            p.rElbow.x = p.rShoulder.x + 0.03;
+            p.rElbow.y = p.rShoulder.y + 0.12;
+          }
+
+          p.lFinger.x = p.lWrist.x - 0.02;
+          p.lFinger.y = p.lWrist.y - 0.02;
+          p.rFinger.x = p.rWrist.x + 0.02;
+          p.rFinger.y = p.rWrist.y - 0.02;
+
+          // 下肢
+          p.lKnee.x = p.lHip.x - 0.02;
+          p.lKnee.y = p.pelvis.y + 0.14;
+          p.rKnee.x = p.rHip.x + 0.02;
+          p.rKnee.y = p.pelvis.y + 0.14;
+          p.lAnkle.x = p.lKnee.x - 0.01;
+          p.lAnkle.y = Math.min(0.96, p.lKnee.y + 0.14);
+          p.rAnkle.x = p.rKnee.x + 0.01;
+          p.rAnkle.y = Math.min(0.96, p.rKnee.y + 0.14);
+
+          // 动作达标判断 (该小朋友独自是否举高或招手)
+          p.isHandsHigh = (p.lWrist.y < p.head.y + 0.02 && p.rWrist.y < p.head.y + 0.02);
+          p.isWaving = (p.lWrist.y < p.head.y + 0.05 || p.rWrist.y < p.head.y + 0.05);
+
         } else {
-          p.lWrist.y += (p.pelvis.y + 0.05 - p.lWrist.y) * 0.25;
-          p.lWrist.x += (p.lShoulder.x - 0.03 - p.lWrist.x) * 0.25;
+          // 该区域未站人：平滑回归到专属站位，作为可爱的等待或伴舞状态
+          p.detected = false;
+          p.head.x += (s.defaultX - p.head.x) * 0.1;
+          p.head.y += (0.28 - p.head.y) * 0.1;
+          p.neck.x = p.head.x;
+          p.neck.y = p.head.y + 0.08;
+          p.lShoulder.x = p.neck.x - 0.07;
+          p.rShoulder.x = p.neck.x + 0.07;
+          p.lShoulder.y = p.neck.y + 0.02;
+          p.rShoulder.y = p.neck.y + 0.02;
+          p.pelvis.x = p.neck.x;
+          p.pelvis.y = 0.64;
+          p.lHip.x = p.pelvis.x - 0.05;
+          p.rHip.x = p.pelvis.x + 0.05;
+          p.lHip.y = p.pelvis.y;
+          p.rHip.y = p.pelvis.y;
           p.lElbow.x = p.lShoulder.x - 0.04;
           p.lElbow.y = p.lShoulder.y + 0.12;
-        }
-
-        // 屏幕右侧手臂
-        if (rightHandNormY < p.neck.y + 0.05) {
-          p.rWrist.y += (rightHandNormY - p.rWrist.y) * 0.45;
-          p.rWrist.x += (screenRightHandX - p.rWrist.x) * 0.45;
-          p.rElbow.x = (p.rShoulder.x + p.rWrist.x) / 2 + 0.03;
-          p.rElbow.y = (p.rShoulder.y + p.rWrist.y) / 2;
-        } else {
-          p.rWrist.y += (p.pelvis.y + 0.05 - p.rWrist.y) * 0.25;
-          p.rWrist.x += (p.rShoulder.x + 0.03 - p.rWrist.x) * 0.25;
           p.rElbow.x = p.rShoulder.x + 0.04;
           p.rElbow.y = p.rShoulder.y + 0.12;
+          p.lWrist.x = p.lShoulder.x - 0.05;
+          p.lWrist.y = p.pelvis.y + 0.03;
+          p.rWrist.x = p.rShoulder.x + 0.05;
+          p.rWrist.y = p.pelvis.y + 0.03;
+          p.lFinger.x = p.lWrist.x; p.lFinger.y = p.lWrist.y;
+          p.rFinger.x = p.rWrist.x; p.rFinger.y = p.rWrist.y;
+          p.lKnee.x = p.lHip.x - 0.02; p.lKnee.y = 0.78;
+          p.rKnee.x = p.rHip.x + 0.02; p.rKnee.y = 0.78;
+          p.lAnkle.x = p.lKnee.x - 0.01; p.lAnkle.y = 0.94;
+          p.rAnkle.x = p.rKnee.x + 0.01; p.rAnkle.y = 0.94;
+          p.isHandsHigh = false;
+          p.isWaving = false;
         }
+      });
 
-        p.lFinger.x = p.lWrist.x - 0.02;
-        p.lFinger.y = p.lWrist.y - 0.02;
-        p.rFinger.x = p.rWrist.x + 0.02;
-        p.rFinger.y = p.rWrist.y - 0.02;
-
-        // 下肢
-        p.lKnee.x = p.lHip.x - 0.02;
-        p.lKnee.y = p.pelvis.y + 0.14;
-        p.rKnee.x = p.rHip.x + 0.02;
-        p.rKnee.y = p.pelvis.y + 0.14;
-        p.lAnkle.x = p.lKnee.x - 0.01;
-        p.lAnkle.y = Math.min(0.96, p.lKnee.y + 0.14);
-        p.rAnkle.x = p.rKnee.x + 0.01;
-        p.rAnkle.y = Math.min(0.96, p.rKnee.y + 0.14);
-
-        // 动作特征比对
-        p.isHandsHigh = (p.lWrist.y < p.head.y + 0.02 && p.rWrist.y < p.head.y + 0.02);
-        p.isWaving = (p.lWrist.y < p.head.y + 0.05 || p.rWrist.y < p.head.y + 0.05);
-
+      if (detectedCount > 0) {
+        presenceConfidence = Math.min(100, presenceConfidence + 8);
+        isHumanDetected = true;
+        if (detectedCount > 1) {
+          stickmanStatusBadge.innerText = `🎉 已侦测到 ${detectedCount} 位小朋友独立舞动！`;
+        } else {
+          stickmanStatusBadge.innerText = "🎉 小朋友已入镜！火柴人合体完成！";
+        }
+        stickmanStatusBadge.className = "bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full shadow";
       } else {
-        if (!isHumanDetected) {
+        presenceConfidence = Math.max(0, presenceConfidence - 1.2);
+        if (presenceConfidence <= 10) {
+          isHumanDetected = false;
           stickmanStatusBadge.innerText = "👀 等待小朋友入镜变身火柴人...";
           stickmanStatusBadge.className = "bg-white/95 text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-sky-200 shadow-xs";
         }
@@ -1115,30 +1181,30 @@
         };
         const palette = skinPalette[currentSkin] || skinPalette.gold;
 
-        // 如果开启了摄像头但未检测到人物入镜，绘制友好的中心入镜虚线引导框
+        // 如果开启了摄像头但完全未检测到任何人物入镜，绘制友好的引导框
         if (isCameraActive && !isHumanDetected) {
           ctx.save();
           ctx.setLineDash([10, 8]);
           ctx.lineWidth = 3;
           ctx.strokeStyle = "rgba(250, 204, 21, 0.75)";
-          ctx.strokeRect(w * 0.28, h * 0.14, w * 0.44, h * 0.72);
+          ctx.strokeRect(w * 0.25, h * 0.14, w * 0.50, h * 0.72);
           ctx.fillStyle = "rgba(250, 204, 21, 0.95)";
           ctx.font = "bold 16px sans-serif";
           ctx.textAlign = "center";
           ctx.fillText("👋 小朋友站在这里，马上合体火柴人！", w * 0.5, h * 0.5);
           ctx.restore();
         } else {
-          // 确定绘制几位火柴人
+          // 确定绘制几位火柴人 (每位火柴人绑定独立姿态数据，绝非简单同动克隆)
           let playersToDraw = [];
           if (playerCount === 1) {
             playersToDraw.push({ id: 1, name: "P1 乐乐", color: palette.bone, glow: palette.glow, headBg: palette.headBg, poseData: trackedPlayerPoses[0] });
           } else if (playerCount === 2) {
-            playersToDraw.push({ id: 1, name: "P1 乐乐", color: palette.bone, glow: palette.glow, headBg: palette.headBg, poseData: trackedPlayerPoses[0], offsetX: -0.16 });
-            playersToDraw.push({ id: 2, name: "P2 欢欢", color: "#38bdf8", glow: "rgba(56, 189, 248, 0.95)", headBg: "#e0f2fe", poseData: trackedPlayerPoses[0], offsetX: 0.16 });
+            playersToDraw.push({ id: 1, name: "P1 乐乐 (左)", color: palette.bone, glow: palette.glow, headBg: palette.headBg, poseData: trackedPlayerPoses[0] });
+            playersToDraw.push({ id: 2, name: "P2 欢欢 (右)", color: "#38bdf8", glow: "rgba(56, 189, 248, 0.95)", headBg: "#e0f2fe", poseData: trackedPlayerPoses[1] });
           } else {
-            playersToDraw.push({ id: 1, name: "P1 乐乐", color: palette.bone, glow: palette.glow, headBg: palette.headBg, poseData: trackedPlayerPoses[0], offsetX: -0.24 });
-            playersToDraw.push({ id: 2, name: "P2 欢欢", color: "#38bdf8", glow: "rgba(56, 189, 248, 0.95)", headBg: "#e0f2fe", poseData: trackedPlayerPoses[0], offsetX: 0 });
-            playersToDraw.push({ id: 3, name: "P3 朵朵", color: "#c084fc", glow: "rgba(192, 132, 252, 0.95)", headBg: "#f3e8ff", poseData: trackedPlayerPoses[0], offsetX: 0.24 });
+            playersToDraw.push({ id: 1, name: "P1 乐乐 (左)", color: palette.bone, glow: palette.glow, headBg: palette.headBg, poseData: trackedPlayerPoses[0] });
+            playersToDraw.push({ id: 2, name: "P2 欢欢 (中)", color: "#38bdf8", glow: "rgba(56, 189, 248, 0.95)", headBg: "#e0f2fe", poseData: trackedPlayerPoses[1] });
+            playersToDraw.push({ id: 3, name: "P3 朵朵 (右)", color: "#c084fc", glow: "rgba(192, 132, 252, 0.95)", headBg: "#f3e8ff", poseData: trackedPlayerPoses[2] });
           }
 
           playersToDraw.forEach((p, idx) => {
@@ -1149,31 +1215,38 @@
 
       requestAnimationFrame(renderStickmanLoop);
     }
-    requestAnimationFrame(renderStickmanLoop);
+
+          playersToDraw.forEach((p, idx) => {
+            drawRealMatchstickMan(ctx, p, targetPose, frameTick, idx, w, h, palette);
+          });
+        }
+      }
+
+      requestAnimationFrame(renderStickmanLoop);
+    }
 
     // --- 真实依附小朋友身体节点的萌趣发光火柴人渲染 ---
     function drawRealMatchstickMan(ctx, p, pose, tick, idx, w, h, palette) {
       const d = p.poseData;
-      const offX = (p.offsetX || 0);
 
       // 将真实归一化坐标通过 object-cover 精确换算为 Canvas 物理像素
-      const head = toCanvasCoords(d.head.x + offX, d.head.y, w, h);
-      const neck = toCanvasCoords(d.neck.x + offX, d.neck.y, w, h);
-      const lSho = toCanvasCoords(d.lShoulder.x + offX, d.lShoulder.y, w, h);
-      const rSho = toCanvasCoords(d.rShoulder.x + offX, d.rShoulder.y, w, h);
-      const lElb = toCanvasCoords(d.lElbow.x + offX, d.lElbow.y, w, h);
-      const rElb = toCanvasCoords(d.rElbow.x + offX, d.rElbow.y, w, h);
-      const lWri = toCanvasCoords(d.lWrist.x + offX, d.lWrist.y, w, h);
-      const rWri = toCanvasCoords(d.rWrist.x + offX, d.rWrist.y, w, h);
-      const lFin = toCanvasCoords((d.lFinger ? d.lFinger.x : d.lWrist.x) + offX, (d.lFinger ? d.lFinger.y : d.lWrist.y), w, h);
-      const rFin = toCanvasCoords((d.rFinger ? d.rFinger.x : d.rWrist.x) + offX, (d.rFinger ? d.rFinger.y : d.rWrist.y), w, h);
-      const pelv = toCanvasCoords(d.pelvis.x + offX, d.pelvis.y, w, h);
-      const lHip = toCanvasCoords(d.lHip.x + offX, d.lHip.y, w, h);
-      const rHip = toCanvasCoords(d.rHip.x + offX, d.rHip.y, w, h);
-      const lKne = toCanvasCoords(d.lKnee.x + offX, d.lKnee.y, w, h);
-      const rKne = toCanvasCoords(d.rKnee.x + offX, d.rKnee.y, w, h);
-      const lAnk = toCanvasCoords(d.lAnkle.x + offX, d.lAnkle.y, w, h);
-      const rAnk = toCanvasCoords(d.rAnkle.x + offX, d.rAnkle.y, w, h);
+      const head = toCanvasCoords(d.head.x, d.head.y, w, h);
+      const neck = toCanvasCoords(d.neck.x, d.neck.y, w, h);
+      const lSho = toCanvasCoords(d.lShoulder.x, d.lShoulder.y, w, h);
+      const rSho = toCanvasCoords(d.rShoulder.x, d.rShoulder.y, w, h);
+      const lElb = toCanvasCoords(d.lElbow.x, d.lElbow.y, w, h);
+      const rElb = toCanvasCoords(d.rElbow.x, d.rElbow.y, w, h);
+      const lWri = toCanvasCoords(d.lWrist.x, d.lWrist.y, w, h);
+      const rWri = toCanvasCoords(d.rWrist.x, d.rWrist.y, w, h);
+      const lFin = toCanvasCoords(d.lFinger ? d.lFinger.x : d.lWrist.x, d.lFinger ? d.lFinger.y : d.lWrist.y, w, h);
+      const rFin = toCanvasCoords(d.rFinger ? d.rFinger.x : d.rWrist.x, d.rFinger ? d.rFinger.y : d.rWrist.y, w, h);
+      const pelv = toCanvasCoords(d.pelvis.x, d.pelvis.y, w, h);
+      const lHip = toCanvasCoords(d.lHip.x, d.lHip.y, w, h);
+      const rHip = toCanvasCoords(d.rHip.x, d.rHip.y, w, h);
+      const lKne = toCanvasCoords(d.lKnee.x, d.lKnee.y, w, h);
+      const rKne = toCanvasCoords(d.rKnee.x, d.rKnee.y, w, h);
+      const lAnk = toCanvasCoords(d.lAnkle.x, d.lAnkle.y, w, h);
+      const rAnk = toCanvasCoords(d.rAnkle.x, d.rAnkle.y, w, h);
 
       // 判断真实动作是否达标
       let isPoseMatched = false;
