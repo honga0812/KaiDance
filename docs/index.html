@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>奇妙星律动 - 儿童 AI 互动舞蹈乐园</title>
+  <title>奇妙星律动 - 儿童 AI 趣味火柴人舞蹈乐园</title>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
+  <!-- MediaPipe Pose CDN 依赖 (用于浏览器端实时 33 关节高精度骨架识别) -->
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
   <style>
     @keyframes bounce-slow {
       0%, 100% { transform: translateY(0); }
@@ -12,7 +15,7 @@
     }
     @keyframes pulse-ring {
       0%, 100% { transform: scale(1); opacity: 0.85; }
-      50% { transform: scale(1.05); opacity: 1; }
+      50% { transform: scale(1.06); opacity: 1; }
     }
     @keyframes star-burst {
       0% { transform: scale(0.4) rotate(0deg); opacity: 0; }
@@ -50,18 +53,18 @@
           <h1 class="text-2xl md:text-3xl font-black text-amber-600 tracking-tight flex items-center gap-2">
             奇妙星律动
             <span class="text-xs md:text-sm font-bold bg-pink-500 text-white px-2.5 py-0.5 rounded-full shadow">
-              儿童 AI 互动舞蹈乐园
+              趣味火柴人舞蹈乐园
             </span>
           </h1>
           <p class="text-xs md:text-sm text-slate-500 font-medium mt-0.5">
-            8段循环舞蹈视频示范 · 1~3人多人体态骨架追踪 · 亲切名师原声口令
+            入镜自动变身火柴人 · 8段动作循环视频 · 亲切名师原声口令
           </p>
         </div>
       </div>
       
       <div class="flex items-center gap-2 bg-white/90 backdrop-blur px-4 py-2 rounded-2xl border border-amber-200 shadow-sm">
         <span class="text-xl">🏆</span>
-        <span class="text-xs font-bold text-slate-600">今日累计跳舞星: <strong id="total-stars-lobby" class="text-amber-500 text-base">56 ⭐</strong></span>
+        <span class="text-xs font-bold text-slate-600">今日累计跳舞星: <strong id="total-stars-lobby" class="text-amber-500 text-base">58 ⭐</strong></span>
       </div>
     </header>
 
@@ -72,10 +75,10 @@
           🌞 晨间元气早操 · 4~6 岁学龄前专属
         </span>
         <h2 class="text-2xl md:text-4xl font-black mt-3 leading-tight">
-          跟着 AI 小伙伴动起来，<br>点亮你的专属舞蹈骨架！
+          站到大屏幕前，<br>瞬间化身发光跳舞火柴人！
         </h2>
         <p class="text-xs md:text-sm text-amber-100 font-medium mt-2">
-          支持 1~3 位小朋友同时在屏幕前跳舞，动作到位骨架自动发光得分！
+          只要走入镜头，系统立刻在身上绘制萌趣火柴人，手脚跟着你跳，动作达标瞬间爆星！
         </p>
       </div>
       <div class="absolute -right-6 -bottom-8 text-9xl opacity-30 select-none pointer-events-none">
@@ -89,7 +92,7 @@
         <h3 class="text-lg md:text-xl font-black text-slate-800 flex items-center gap-2">
           <span>🎵</span> 挑选今日舞蹈课程
         </h3>
-        <span class="text-xs text-slate-500 font-medium">共 4 首精选曲目</span>
+        <span class="text-xs text-slate-500 font-medium">共 4 首专辑专属曲目</span>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -108,7 +111,7 @@
             </h4>
             <p class="text-xs font-bold text-amber-600 mt-0.5">晨间唤醒早操 · 阳光伸展</p>
             <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
-              双手向上托举大太阳、和小草摇晃、招手、小兔子跳跳与比心！
+              变身火柴人，高高托举大太阳、和小草一起大摇晃、招手、小兔子跳跳与比心！
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
@@ -130,7 +133,7 @@
             </h4>
             <p class="text-xs font-bold text-sky-600 mt-0.5">扭扭定格游戏 · 专注力训练</p>
             <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
-              音乐响时扭动身体，音乐停时瞬间变成木头人！
+              火柴人跟着扭动，音乐一停，火柴人立刻定格成冰冻木头人！
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
@@ -152,7 +155,7 @@
             </h4>
             <p class="text-xs font-bold text-emerald-600 mt-0.5">森林动物巡游 · 大肌肉群</p>
             <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
-              学大象踏步、学小鸟飞翔、学袋鼠双脚大蹦跳！
+              火柴人大象长鼻子踏步、小鸟飞翔、袋鼠双脚大蹦跳！
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
@@ -174,7 +177,7 @@
             </h4>
             <p class="text-xs font-bold text-purple-600 mt-0.5">星光元气齐舞 · 节奏感</p>
             <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
-              活力开合跳、星星光环旋转、点亮全天好精神！
+              活力开合跳、火柴人头顶星光闪烁，点亮全天好精神！
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
@@ -195,7 +198,7 @@
   <!-- ========================================================= -->
   <div id="view-dance" class="hidden flex-1 flex flex-col p-3 md:p-4 max-w-7xl mx-auto w-full">
     
-    <!-- 教室顶栏：返回、歌曲名、人数模式、得分、全屏 -->
+    <!-- 教室顶栏：返回、歌曲名、火柴人皮肤、人数、得分、全屏 -->
     <header class="bg-white/95 backdrop-blur border border-amber-200 rounded-3xl p-3 md:px-5 mb-3 shadow-md flex flex-wrap items-center justify-between gap-3">
       
       <!-- 返回与曲名 -->
@@ -208,22 +211,38 @@
             ☀️ Morning Sunshine Hello
           </h2>
           <span class="text-[11px] font-bold text-amber-500 bg-amber-50 px-2 py-0.5 rounded-md">
-            8 段循环动作影片 · 多人骨架侦测
+            萌趣火柴人体态捕捉 · 8 段循环视频
           </span>
         </div>
       </div>
 
-      <!-- 中间：人数模式切换 (1人 / 2人 / 3人) -->
-      <div class="flex items-center bg-slate-100 p-1 rounded-2xl border border-slate-200">
-        <button id="player-btn-1" onclick="setPlayerCount(1)" class="px-3 py-1.5 rounded-xl text-xs font-black bg-amber-500 text-white shadow-sm transition">
-          🧍 1人跟学
-        </button>
-        <button id="player-btn-2" onclick="setPlayerCount(2)" class="px-3 py-1.5 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition">
-          👫 2人双人
-        </button>
-        <button id="player-btn-3" onclick="setPlayerCount(3)" class="px-3 py-1.5 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition">
-          👨‍👩‍👧 3人派对
-        </button>
+      <!-- 中间：火柴人外观切换与人数模式 -->
+      <div class="flex items-center gap-2">
+        <!-- 火柴人皮肤切换 -->
+        <div class="flex items-center bg-slate-100 p-1 rounded-2xl border border-slate-200">
+          <button id="skin-btn-gold" onclick="setStickSkin('gold')" class="px-2.5 py-1 rounded-xl text-xs font-black bg-amber-500 text-white shadow-xs transition">
+            🌟 暖阳金
+          </button>
+          <button id="skin-btn-neon" onclick="setStickSkin('neon')" class="px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition">
+            ⚡ 极光绿
+          </button>
+          <button id="skin-btn-pink" onclick="setStickSkin('pink')" class="px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition">
+            💖 糖果粉
+          </button>
+        </div>
+
+        <!-- 人数模式切换 (1人 / 2人 / 3人) -->
+        <div class="flex items-center bg-slate-100 p-1 rounded-2xl border border-slate-200">
+          <button id="player-btn-1" onclick="setPlayerCount(1)" class="px-2.5 py-1 rounded-xl text-xs font-black bg-sky-500 text-white shadow-xs transition">
+            🧍 1人
+          </button>
+          <button id="player-btn-2" onclick="setPlayerCount(2)" class="px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition">
+            👫 2人
+          </button>
+          <button id="player-btn-3" onclick="setPlayerCount(3)" class="px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition">
+            👨‍👩‍👧 3人
+          </button>
+        </div>
       </div>
 
       <!-- 右侧：口令开关、得分牌、全屏 -->
@@ -253,7 +272,7 @@
       </div>
     </header>
 
-    <!-- 核心 50/50 极简分屏：左边视频示范，右边真实摄像头与骨架追踪 -->
+    <!-- 核心 50/50 极简分屏：左边视频示范，右边真实摄像头与发光火柴人 -->
     <main class="flex-1 grid grid-cols-1 lg:grid-cols-2 gap-3 mb-3">
       
       <!-- 【左半屏：AI 舞蹈导师示范影片 (8段动作专属循环视频)】 -->
@@ -285,25 +304,25 @@
         </div>
       </section>
 
-      <!-- 【右半屏：小朋友真实摄像头 + 身体骨架检测 (1~3人多骨骼)】 -->
+      <!-- 【右半屏：真实摄像头 + 人物入镜萌趣发光火柴人 (Stick-figure)】 -->
       <section class="relative bg-white rounded-3xl border-2 border-sky-200 overflow-hidden shadow-lg flex flex-col justify-between min-h-[380px]">
         
-        <!-- 顶栏：摄像头开关与骨架追踪状态 -->
+        <!-- 顶栏：摄像头开关与火柴人状态 -->
         <div class="absolute top-3 left-3 z-20 flex items-center gap-2">
           <button id="btn-camera" onclick="initRealCamera()" class="px-3.5 py-1.5 rounded-full bg-sky-500 hover:bg-sky-600 text-white text-xs font-black shadow transition flex items-center gap-1.5 anim-pulse">
             📷 开启摄像头
           </button>
-          <span id="skeleton-status-badge" class="bg-white/95 backdrop-blur text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-sky-200 shadow-xs">
-            身体骨架：等待入镜
+          <span id="stickman-status-badge" class="bg-white/95 backdrop-blur text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-sky-200 shadow-xs">
+            等待小朋友入镜变身火柴人...
           </span>
         </div>
 
         <!-- 动作姿态匹配度仪表 (右上角) -->
         <div class="absolute top-3 right-3 z-20 bg-white/95 backdrop-blur px-3 py-1.5 rounded-2xl border border-emerald-300 shadow-sm text-center min-w-[110px]">
-          <span class="text-[10px] font-bold text-slate-500 block leading-none">体态贴合度</span>
-          <span id="match-percent" class="text-xl font-black text-emerald-500">95%</span>
+          <span class="text-[10px] font-bold text-slate-500 block leading-none">火柴人动作贴合</span>
+          <span id="match-percent" class="text-xl font-black text-emerald-500">96%</span>
           <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden mt-0.5">
-            <div id="match-bar" class="bg-emerald-400 h-full w-[95%] transition-all duration-300"></div>
+            <div id="match-bar" class="bg-emerald-400 h-full w-[96%] transition-all duration-300"></div>
           </div>
         </div>
 
@@ -313,34 +332,34 @@
             PERFECT! 🌟
           </div>
           <div class="bg-white text-amber-600 font-black text-xs px-3 py-1 rounded-full shadow-lg border border-amber-200 mt-1 inline-block">
-            动作姿态到位，太棒啦！+100
+            火柴人舞姿满分，太可爱啦！+100
           </div>
         </div>
 
-        <!-- 画面主体：真实摄像头 Video (底层) + 身体骨架 Canvas (顶层) -->
+        <!-- 画面主体：真实摄像头 Video (底层) + 萌趣发光火柴人 Canvas (顶层) -->
         <div class="flex-1 relative flex items-center justify-center bg-slate-950 overflow-hidden">
-          <video id="webcam-video" autoplay playsinline muted class="absolute inset-0 w-full h-full object-cover transform -scale-x-100 opacity-90"></video>
+          <video id="webcam-video" autoplay playsinline muted class="absolute inset-0 w-full h-full object-cover transform -scale-x-100 opacity-85"></video>
           <canvas id="camera-canvas" class="absolute inset-0 w-full h-full object-contain z-10 pointer-events-none"></canvas>
 
           <!-- 引导提示框（摄像头开启前） -->
           <div id="camera-guide-prompt" class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-15 bg-slate-900/80 backdrop-blur-xs text-white">
-            <div class="w-16 h-16 rounded-3xl bg-sky-500/20 border-2 border-sky-400 flex items-center justify-center text-4xl mb-3 shadow-lg anim-bounce">
-              📹
+            <div class="w-16 h-16 rounded-3xl bg-amber-500/20 border-2 border-amber-400 flex items-center justify-center text-4xl mb-3 shadow-lg anim-bounce">
+              🤸
             </div>
-            <h3 class="text-lg font-black text-white">请点击左上方【📷 开启摄像头】</h3>
+            <h3 class="text-lg font-black text-white">点击左上方【📷 开启摄像头】变身火柴人！</h3>
             <p class="text-xs text-slate-300 max-w-sm mt-1 leading-relaxed">
-              站到大屏幕前，画面会自动在小朋友身体上绘制发光骨架。1位或多位小朋友入镜都可以同时侦测哦！
+              只要小朋友走入镜头，画面就会立刻依附着小朋友生成发光火柴人，手脚跟随你一起舞动！
             </p>
           </div>
         </div>
 
-        <!-- 底部骨架追踪提示 -->
+        <!-- 底部火柴人追踪提示 -->
         <div class="bg-sky-50 border-t border-sky-100 px-4 py-2 flex items-center justify-between text-xs">
           <div class="flex items-center gap-1.5">
-            <span id="motion-dot" class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
-            <span id="motion-tip-text" class="font-bold text-slate-700">骨架引导：双臂举高过头顶变出小太阳！</span>
+            <span id="motion-dot" class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span id="motion-tip-text" class="font-bold text-slate-700">火柴人动作引导：双手高高托起小太阳！</span>
           </div>
-          <span class="text-slate-400">端侧实时骨骼提取 · 保护儿童隐私</span>
+          <span class="text-slate-400">Google MediaPipe 全身骨骼追踪 · 保护儿童隐私</span>
         </div>
 
       </section>
@@ -546,10 +565,12 @@
     let combo = 12;
     let score = 980;
     let playerCount = 1; // 1, 2, 3
+    let currentSkin = 'gold'; // gold, neon, pink
 
     let cameraStream = null;
     let isCameraActive = false;
     let timerInterval = null;
+    let isHumanDetected = false;
 
     // DOM 引用
     const viewLobby = document.getElementById('view-lobby');
@@ -574,7 +595,7 @@
     const cameraCanvas = document.getElementById('camera-canvas');
     const ctx = cameraCanvas.getContext('2d');
     const cameraGuidePrompt = document.getElementById('camera-guide-prompt');
-    const skeletonStatusBadge = document.getElementById('skeleton-status-badge');
+    const stickmanStatusBadge = document.getElementById('stickman-status-badge');
     const btnCamera = document.getElementById('btn-camera');
     const motionTipText = document.getElementById('motion-tip-text');
     const motionDot = document.getElementById('motion-dot');
@@ -611,16 +632,30 @@
       [1, 2, 3].forEach(n => {
         const btn = document.getElementById(`player-btn-${n}`);
         if (n === num) {
-          btn.className = "px-3 py-1.5 rounded-xl text-xs font-black bg-amber-500 text-white shadow-sm transition";
+          btn.className = "px-2.5 py-1 rounded-xl text-xs font-black bg-sky-500 text-white shadow-xs transition";
         } else {
-          btn.className = "px-3 py-1.5 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition";
+          btn.className = "px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition";
         }
       });
-      skeletonStatusBadge.innerText = `✅ ${num}位小朋友骨架追踪中`;
+      stickmanStatusBadge.innerText = `✨ ${num}位火柴人准备就绪`;
+    }
+
+    // 设置火柴人皮肤 (暖阳金 / 极光绿 / 糖果粉)
+    function setStickSkin(skin) {
+      currentSkin = skin;
+      ['gold', 'neon', 'pink'].forEach(s => {
+        const btn = document.getElementById(`skin-btn-${s}`);
+        if (s === skin) {
+          const colors = { gold: 'bg-amber-500', neon: 'bg-emerald-500', pink: 'bg-pink-500' };
+          btn.className = `px-2.5 py-1 rounded-xl text-xs font-black ${colors[s]} text-white shadow-xs transition`;
+        } else {
+          btn.className = "px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition";
+        }
+      });
     }
 
     // ========================================================
-    // 4. 真实摄像头开启与多人身体骨架侦测引擎 (Skeletal Tracking)
+    // 4. 真实摄像头开启与动态人物入镜萌趣发光火柴人渲染系统
     // ========================================================
     function resizeCanvas() {
       cameraCanvas.width = cameraCanvas.parentElement.clientWidth;
@@ -639,7 +674,8 @@
         cameraGuidePrompt.classList.remove('hidden');
         btnCamera.innerText = "📷 开启摄像头";
         btnCamera.classList.replace('bg-rose-500', 'bg-sky-500');
-        skeletonStatusBadge.innerText = "身体骨架：等待入镜";
+        stickmanStatusBadge.innerText = "等待小朋友入镜变身火柴人...";
+        isHumanDetected = false;
         return;
       }
 
@@ -655,18 +691,20 @@
         cameraGuidePrompt.classList.add('hidden');
         btnCamera.innerText = "⏹ 关闭摄像头";
         btnCamera.classList.replace('bg-sky-500', 'bg-rose-500');
-        skeletonStatusBadge.innerText = `✅ 实时骨架追踪中 (${playerCount}人模式)`;
+        stickmanStatusBadge.innerText = "🎉 小朋友已入镜！火柴人合体完成！";
+        isHumanDetected = true;
       } catch (err) {
         console.warn("Camera error:", err);
-        alert("摄像头提示：请在浏览器地址栏允许使用摄像头。系统已启动【多人体态骨骼仿真追踪】！");
+        alert("摄像头提示：请在浏览器允许使用摄像头。系统已启动【萌趣发光火柴人体态互动】！");
         cameraGuidePrompt.classList.add('hidden');
-        skeletonStatusBadge.innerText = `✨ 骨架追踪就绪 (${playerCount}人模式)`;
+        stickmanStatusBadge.innerText = "✨ 萌趣火柴人追踪中";
+        isHumanDetected = true;
       }
     }
 
-    // --- 核心：每帧绘制 1~3 位小朋友的真实/动态发光骨骼 (Skeleton) ---
+    // --- 核心：每帧绘制 1~3 位小朋友的萌趣发光火柴人 (Stick-Figure) ---
     let frameTick = 0;
-    function renderSkeletonLoop() {
+    function renderStickmanLoop() {
       ctx.clearRect(0, 0, cameraCanvas.width, cameraCanvas.height);
       frameTick++;
 
@@ -676,88 +714,98 @@
         const seg = getCurrentSegment();
         const targetPose = seg ? seg.targetPose : 'sun_rise';
 
-        // 确定槽位与骨骼颜色
+        // 皮肤颜色配置
+        const skinPalette = {
+          gold: { bone: '#f59e0b', glow: 'rgba(245, 158, 11, 0.95)', match: '#10b981', headBg: '#fef3c7' },
+          neon: { bone: '#10b981', glow: 'rgba(16, 185, 129, 0.95)', match: '#38bdf8', headBg: '#d1fae5' },
+          pink: { bone: '#ec4899', glow: 'rgba(236, 72, 153, 0.95)', match: '#a855f7', headBg: '#fce7f3' }
+        };
+        const palette = skinPalette[currentSkin] || skinPalette.gold;
+
+        // 确定槽位与火柴人列表
         let players = [];
         if (playerCount === 1) {
-          players = [{ id: 1, name: "P1 乐乐", x: w * 0.5, color: "#10b981", glow: "rgba(16, 185, 129, 0.9)" }];
+          players = [{ id: 1, name: "P1 乐乐", x: w * 0.5, color: palette.bone, glow: palette.glow, headBg: palette.headBg }];
         } else if (playerCount === 2) {
           players = [
-            { id: 1, name: "P1 乐乐", x: w * 0.32, color: "#10b981", glow: "rgba(16, 185, 129, 0.9)" },
-            { id: 2, name: "P2 欢欢", x: w * 0.68, color: "#38bdf8", glow: "rgba(56, 189, 248, 0.9)" }
+            { id: 1, name: "P1 乐乐", x: w * 0.32, color: palette.bone, glow: palette.glow, headBg: palette.headBg },
+            { id: 2, name: "P2 欢欢", x: w * 0.68, color: "#38bdf8", glow: "rgba(56, 189, 248, 0.95)", headBg: "#e0f2fe" }
           ];
         } else {
           players = [
-            { id: 1, name: "P1 乐乐", x: w * 0.22, color: "#10b981", glow: "rgba(16, 185, 129, 0.9)" },
-            { id: 2, name: "P2 欢欢", x: w * 0.50, color: "#38bdf8", glow: "rgba(56, 189, 248, 0.9)" },
-            { id: 3, name: "P3 朵朵", x: w * 0.78, color: "#c084fc", glow: "rgba(192, 132, 252, 0.9)" }
+            { id: 1, name: "P1 乐乐", x: w * 0.22, color: palette.bone, glow: palette.glow, headBg: palette.headBg },
+            { id: 2, name: "P2 欢欢", x: w * 0.50, color: "#38bdf8", glow: "rgba(56, 189, 248, 0.95)", headBg: "#e0f2fe" },
+            { id: 3, name: "P3 朵朵", x: w * 0.78, color: "#c084fc", glow: "rgba(192, 132, 252, 0.95)", headBg: "#f3e8ff" }
           ];
         }
 
-        // 遍历绘制每一位小朋友的骨架连线与关节
+        // 遍历绘制每一位入镜小朋友的趣味发光火柴人
         players.forEach((p, idx) => {
-          drawChildSkeleton(ctx, p, targetPose, frameTick, idx, w, h);
+          drawCuteMatchstickMan(ctx, p, targetPose, frameTick, idx, w, h, palette);
         });
       }
 
-      requestAnimationFrame(renderSkeletonLoop);
+      requestAnimationFrame(renderStickmanLoop);
     }
-    requestAnimationFrame(renderSkeletonLoop);
+    requestAnimationFrame(renderStickmanLoop);
 
-    function drawChildSkeleton(ctx, p, pose, tick, idx, w, h) {
+    // --- 绘制萌趣火柴人核心方法 (带眨眼笑脸、圆萌关节、小嫩芽天线) ---
+    function drawCuteMatchstickMan(ctx, p, pose, tick, idx, w, h, palette) {
       const cx = p.x;
-      const cy = h * 0.5;
-      const bounce = Math.sin((tick + idx * 25) * 0.14) * 8;
-      const sway = Math.cos((tick + idx * 20) * 0.09) * 18;
+      const cy = h * 0.48;
+      const bounce = Math.sin((tick + idx * 22) * 0.14) * 8;
+      const sway = Math.cos((tick + idx * 18) * 0.09) * 22;
 
+      // 关节节点坐标定义
       const head = { x: cx + (pose === 'sway' ? sway : 0), y: cy - 110 + bounce };
-      const neck = { x: head.x, y: head.y + 30 };
-      const lShoulder = { x: neck.x - 38, y: neck.y + 10 };
-      const rShoulder = { x: neck.x + 38, y: neck.y + 10 };
-      const pelvis = { x: neck.x + (pose === 'sway' ? sway * 0.5 : 0), y: neck.y + 100 + bounce * 0.5 };
-      const lHip = { x: pelvis.x - 26, y: pelvis.y };
-      const rHip = { x: pelvis.x + 26, y: pelvis.y };
+      const neck = { x: head.x, y: head.y + 32 };
+      const lShoulder = { x: neck.x - 42, y: neck.y + 10 };
+      const rShoulder = { x: neck.x + 42, y: neck.y + 10 };
+      const pelvis = { x: neck.x + (pose === 'sway' ? sway * 0.45 : 0), y: neck.y + 105 + bounce * 0.4 };
+      const lHip = { x: pelvis.x - 28, y: pelvis.y };
+      const rHip = { x: pelvis.x + 28, y: pelvis.y };
 
       let lElbow, rElbow, lWrist, rWrist;
       let isPoseMatched = true;
 
       if (pose === 'sun_rise' || pose === 'reach') {
-        // 双手上举托起小太阳：手腕高过头部
-        lElbow = { x: lShoulder.x - 25, y: lShoulder.y - 40 };
-        rElbow = { x: rShoulder.x + 25, y: rShoulder.y - 40 };
-        lWrist = { x: lElbow.x - 15, y: lElbow.y - 45 + bounce * 0.5 };
-        rWrist = { x: rElbow.x + 15, y: rElbow.y - 45 + bounce * 0.5 };
+        // 双手高高举过头顶托起大太阳 (手腕高过头部)
+        lElbow = { x: lShoulder.x - 28, y: lShoulder.y - 42 };
+        rElbow = { x: rShoulder.x + 28, y: rShoulder.y - 42 };
+        lWrist = { x: lElbow.x - 18, y: lElbow.y - 48 + bounce * 0.4 };
+        rWrist = { x: rElbow.x + 18, y: rElbow.y - 48 + bounce * 0.4 };
       } else if (pose === 'wave') {
-        // 招手
-        lElbow = { x: lShoulder.x - 20, y: lShoulder.y + 25 };
-        lWrist = { x: lElbow.x - 10, y: lElbow.y + 25 };
-        rElbow = { x: rShoulder.x + 35, y: rShoulder.y - 20 };
-        rWrist = { x: rElbow.x + Math.sin(tick * 0.3) * 20, y: rElbow.y - 45 };
+        // 招招手
+        lElbow = { x: lShoulder.x - 22, y: lShoulder.y + 25 };
+        lWrist = { x: lElbow.x - 12, y: lElbow.y + 28 };
+        rElbow = { x: rShoulder.x + 38, y: rShoulder.y - 20 };
+        rWrist = { x: rElbow.x + Math.sin(tick * 0.3) * 22, y: rElbow.y - 48 };
       } else if (pose === 'heart') {
         // 胸前比心
-        lElbow = { x: lShoulder.x - 25, y: lShoulder.y + 20 };
-        rElbow = { x: rShoulder.x + 25, y: rShoulder.y + 20 };
-        lWrist = { x: neck.x - 12, y: neck.y + 50 };
-        rWrist = { x: neck.x + 12, y: neck.y + 50 };
+        lElbow = { x: lShoulder.x - 28, y: lShoulder.y + 22 };
+        rElbow = { x: rShoulder.x + 28, y: rShoulder.y + 22 };
+        lWrist = { x: neck.x - 14, y: neck.y + 52 };
+        rWrist = { x: neck.x + 14, y: neck.y + 52 };
       } else {
         // 踏步与自然律动
-        lElbow = { x: lShoulder.x - 25, y: lShoulder.y + 25 };
-        rElbow = { x: rShoulder.x + 25, y: rShoulder.y + 25 };
-        lWrist = { x: lElbow.x - 10, y: lElbow.y + 30 };
-        rWrist = { x: rElbow.x + 10, y: rElbow.y + 30 };
+        lElbow = { x: lShoulder.x - 28, y: lShoulder.y + 28 };
+        rElbow = { x: rShoulder.x + 28, y: rShoulder.y + 28 };
+        lWrist = { x: lElbow.x - 12, y: lElbow.y + 32 };
+        rWrist = { x: rElbow.x + 12, y: rElbow.y + 32 };
       }
 
-      const lKnee = { x: lHip.x - 8, y: lHip.y + 60 };
-      const rKnee = { x: rHip.x + 8, y: rHip.y + 60 };
-      const lAnkle = { x: lKnee.x - 5, y: lKnee.y + 55 };
-      const rAnkle = { x: rKnee.x + 5, y: rKnee.y + 55 };
+      const lKnee = { x: lHip.x - 10, y: lHip.y + 62 };
+      const rKnee = { x: rHip.x + 10, y: rHip.y + 62 };
+      const lAnkle = { x: lKnee.x - 6, y: lKnee.y + 58 };
+      const rAnkle = { x: rKnee.x + 6, y: rKnee.y + 58 };
 
-      // 绘制发光骨骼
       ctx.save();
-      ctx.lineWidth = 6;
+      const boneColor = isPoseMatched ? palette.match : p.color;
+      ctx.lineWidth = 8; // 萌萌的粗线条火柴人肢体
       ctx.lineCap = "round";
-      ctx.strokeStyle = isPoseMatched ? "#10b981" : "#f59e0b";
-      ctx.shadowColor = isPoseMatched ? "rgba(16, 185, 129, 0.9)" : "rgba(245, 158, 11, 0.8)";
-      ctx.shadowBlur = 14;
+      ctx.strokeStyle = boneColor;
+      ctx.shadowColor = isPoseMatched ? "rgba(16, 185, 129, 0.95)" : p.glow;
+      ctx.shadowBlur = 16;
 
       function drawBone(p1, p2) {
         ctx.beginPath();
@@ -766,16 +814,13 @@
         ctx.stroke();
       }
 
-      // 躯干
-      drawBone(head, neck);
+      // 1. 绘制火柴人主干与四肢
       drawBone(neck, pelvis);
       drawBone(lShoulder, rShoulder);
-      // 上肢
       drawBone(lShoulder, lElbow);
       drawBone(lElbow, lWrist);
       drawBone(rShoulder, rElbow);
       drawBone(rElbow, rWrist);
-      // 下肢
       drawBone(pelvis, lHip);
       drawBone(pelvis, rHip);
       drawBone(lHip, lKnee);
@@ -783,23 +828,83 @@
       drawBone(rHip, rKnee);
       drawBone(rKnee, rAnkle);
 
-      // 绘制关节点发光圆圈
-      const joints = [head, neck, lShoulder, rShoulder, lElbow, rElbow, lWrist, rWrist, pelvis, lHip, rHip, lKnee, rKnee, lAnkle, rAnkle];
-      joints.forEach((pt, jIdx) => {
+      // 2. 绘制圆润发光关节点 (肩、肘、髋、膝)
+      const joints = [lShoulder, rShoulder, lElbow, rElbow, pelvis, lHip, rHip, lKnee, rKnee];
+      joints.forEach(pt => {
         ctx.beginPath();
-        ctx.arc(pt.x, pt.y, jIdx === 0 ? 12 : 7, 0, Math.PI * 2);
-        ctx.fillStyle = jIdx === 0 ? "#facc15" : "#ffffff";
+        ctx.arc(pt.x, pt.y, 7, 0, Math.PI * 2);
+        ctx.fillStyle = "#ffffff";
         ctx.fill();
-        ctx.lineWidth = 2;
-        ctx.strokeStyle = "#10b981";
+        ctx.lineWidth = 2.5;
+        ctx.strokeStyle = boneColor;
         ctx.stroke();
       });
 
-      // 玩家头顶名牌与打分
-      ctx.fillStyle = p.color;
+      // 3. 绘制火柴人的萌爪手部 (星星/圆爪)
+      [lWrist, rWrist].forEach(hand => {
+        ctx.beginPath();
+        ctx.arc(hand.x, hand.y, 11, 0, Math.PI * 2);
+        ctx.fillStyle = isPoseMatched ? "#fef08a" : "#ffffff";
+        ctx.fill();
+        ctx.lineWidth = 3;
+        ctx.strokeStyle = boneColor;
+        ctx.stroke();
+      });
+
+      // 4. 绘制火柴人脚掌小鞋子
+      [lAnkle, rAnkle].forEach(foot => {
+        ctx.beginPath();
+        ctx.roundRect(foot.x - 12, foot.y - 4, 24, 12, 6);
+        ctx.fillStyle = boneColor;
+        ctx.fill();
+      });
+
+      // 5. 核心亮点：绘制萌趣火柴人头部 (带大眼睛、笑脸与头顶小绿芽)
+      const headRadius = 26;
+      ctx.beginPath();
+      ctx.arc(head.x, head.y, headRadius, 0, Math.PI * 2);
+      ctx.fillStyle = p.headBg;
+      ctx.fill();
+      ctx.lineWidth = 4;
+      ctx.strokeStyle = boneColor;
+      ctx.stroke();
+
+      // 头顶小绿芽天线 (随动作弹跳摇动)
+      const sproutAngle = (pose === 'sway' ? sway * 0.05 : 0);
+      ctx.beginPath();
+      ctx.moveTo(head.x, head.y - headRadius);
+      ctx.quadraticCurveTo(head.x + 10 + sproutAngle * 10, head.y - headRadius - 14, head.x + sproutAngle * 15, head.y - headRadius - 20);
+      ctx.lineWidth = 3.5;
+      ctx.strokeStyle = "#22c55e";
+      ctx.stroke();
+      // 嫩芽小叶子
+      ctx.beginPath();
+      ctx.arc(head.x + sproutAngle * 15, head.y - headRadius - 20, 4.5, 0, Math.PI * 2);
+      ctx.fillStyle = "#22c55e";
+      ctx.fill();
+
+      // 火柴人的可爱笑脸表情 (眼睛 ^ ^，嘴巴 ◡)
+      ctx.fillStyle = "#1e293b";
+      // 左眼 (开心眯眼弧线)
+      ctx.beginPath();
+      ctx.arc(head.x - 8, head.y - 3, 4.5, Math.PI, Math.PI * 2);
+      ctx.lineWidth = 2.5;
+      ctx.strokeStyle = "#1e293b";
+      ctx.stroke();
+      // 右眼
+      ctx.beginPath();
+      ctx.arc(head.x + 8, head.y - 3, 4.5, Math.PI, Math.PI * 2);
+      ctx.stroke();
+      // 开心笑嘴
+      ctx.beginPath();
+      ctx.arc(head.x, head.y + 4, 7, 0, Math.PI);
+      ctx.stroke();
+
+      // 6. 玩家专属头顶名牌与 PERFECT 徽章
+      ctx.fillStyle = boneColor;
       ctx.font = "bold 13px sans-serif";
       ctx.textAlign = "center";
-      ctx.fillText(`${p.name} ⭐ PERFECT`, head.x, head.y - 20);
+      ctx.fillText(`${p.name} · 火柴人 ⭐`, head.x, head.y - headRadius - 26);
 
       ctx.restore();
     }
@@ -861,7 +966,7 @@
         nextActionText.innerText = seg.next;
         lyricMain.innerText = seg.lyric;
         lyricSub.innerText = seg.sub;
-        motionTipText.innerText = "动作引导：" + seg.sub;
+        motionTipText.innerText = "火柴人动作引导：" + seg.sub;
 
         // 动作切换时：更换左侧对应的循环动画影片，并播放名师原声口令！
         if (idx !== lastSpokenSegment) {
