@@ -350,17 +350,16 @@
         <!-- 画面主体：真实摄像头 Video (底层) + 萌趣发光火柴人 Canvas (顶层) -->
         <div id="camera-container" class="flex-1 relative flex items-center justify-center bg-slate-950 overflow-hidden min-h-[380px]">
           <video id="webcam-video" autoplay playsinline muted class="absolute inset-0 w-full h-full object-cover transform -scale-x-100 opacity-85"></video>
-          <canvas id="camera-canvas" class="absolute inset-0 w-full h-full z-10 pointer-events-none"></canvas>
+          <canvas id="camera-canvas" width="640" height="480" class="absolute inset-0 w-full h-full z-20 pointer-events-none"></canvas>
 
-          <!-- 引导提示框（摄像头开启前） -->
-          <div id="camera-guide-prompt" class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center z-15 bg-slate-900/80 backdrop-blur-xs text-white">
-            <div class="w-16 h-16 rounded-3xl bg-amber-500/20 border-2 border-amber-400 flex items-center justify-center text-4xl mb-3 shadow-lg anim-bounce">
-              🤸
+          <!-- 引导提示框（摄像头开启前，悬浮于底部，绝不遮挡火柴人舞台） -->
+          <div id="camera-guide-prompt" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-slate-900/85 backdrop-blur-md border border-amber-400/50 shadow-2xl text-white max-w-[90%]">
+            <span class="text-2xl anim-bounce">📷</span>
+            <div class="text-left text-xs">
+              <div class="font-black text-amber-300">点击【📷 开启摄像头】</div>
+              <div class="text-[11px] text-slate-300">小朋友入镜即可实时变身发光火柴人！</div>
             </div>
-            <h3 class="text-lg font-black text-white">点击左上方【📷 开启摄像头】变身火柴人！</h3>
-            <p class="text-xs text-slate-300 max-w-sm mt-1 leading-relaxed">
-              只要小朋友走入镜头，画面就会立刻依附着小朋友生成发光火柴人，无需全屏，即刻捕捉跟随！
-            </p>
+            <button onclick="initRealCamera()" class="ml-1 px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 text-white font-black text-xs shadow hover:scale-105 active:scale-95 transition whitespace-nowrap">开启镜头</button>
           </div>
         </div>
 
@@ -699,13 +698,16 @@
       playerCount = num;
       [1, 2, 3].forEach(n => {
         const btn = document.getElementById(`player-btn-${n}`);
-        if (n === num) {
-          btn.className = "px-2.5 py-1 rounded-xl text-xs font-black bg-sky-500 text-white shadow-xs transition";
-        } else {
-          btn.className = "px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition";
+        if (btn) {
+          if (n === num) {
+            btn.className = "px-2.5 py-1 rounded-xl text-xs font-black bg-sky-500 text-white shadow-xs transition";
+          } else {
+            btn.className = "px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition";
+          }
         }
       });
       stickmanStatusBadge.innerText = `✨ ${num}位火柴人准备就绪`;
+      updateIdlePoses();
     }
 
     function setStickSkin(skin) {
@@ -736,6 +738,9 @@
           cameraCanvas.width = w;
           cameraCanvas.height = h;
         }
+      } else if (!cameraCanvas.width || !cameraCanvas.height) {
+        cameraCanvas.width = 640;
+        cameraCanvas.height = 480;
       }
     }
     window.addEventListener('resize', resizeCanvas);
@@ -873,6 +878,17 @@
         return;
       }
 
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        console.warn("navigator.mediaDevices not available, activating fallback");
+        isCameraActive = true;
+        cameraGuidePrompt.classList.add('hidden');
+        btnCamera.innerText = "⏹ 摄像头已就绪";
+        stickmanStatusBadge.innerText = "✨ 萌趣火柴人准备就绪";
+        isHumanDetected = true;
+        presenceConfidence = 80;
+        return;
+      }
+
       try {
         cameraStream = await navigator.mediaDevices.getUserMedia({
           video: { width: { ideal: 1280 }, height: { ideal: 720 }, facingMode: "user" },
@@ -907,10 +923,73 @@
     webcamVideo.addEventListener('loadedmetadata', resizeCanvas);
     webcamVideo.addEventListener('play', resizeCanvas);
 
+    // 多人独立扇区定义 (根据当前设定的玩家数量 1, 2, 3 进行屏幕空间独立解耦)
+    function getSectors() {
+      if (playerCount === 1) {
+        return [{ id: 0, minX: 0.0, maxX: 1.0, defaultX: 0.50 }];
+      } else if (playerCount === 2) {
+        return [
+          { id: 0, minX: 0.0, maxX: 0.52, defaultX: 0.28 },
+          { id: 1, minX: 0.48, maxX: 1.0, defaultX: 0.72 }
+        ];
+      } else {
+        return [
+          { id: 0, minX: 0.0, maxX: 0.38, defaultX: 0.20 },
+          { id: 1, minX: 0.32, maxX: 0.68, defaultX: 0.50 },
+          { id: 2, minX: 0.62, maxX: 1.0, defaultX: 0.80 }
+        ];
+      }
+    }
+
+    // 默认或待命状态下的生动律动（在专属站位萌趣摇摆招手，永不消失）
+    function updateIdlePoses() {
+      const sectors = getSectors();
+      sectors.forEach(s => {
+        const p = trackedPlayerPoses[s.id];
+        if (!p) return;
+        p.detected = false;
+        const idleWave = Math.sin(frameTick * 0.07 + s.id * 1.5) * 0.03;
+        const bounce = Math.abs(Math.sin(frameTick * 0.05 + s.id * 0.8)) * 0.02;
+        p.head.x += (s.defaultX + idleWave * 0.5 - p.head.x) * 0.15;
+        p.head.y += (0.24 - bounce - p.head.y) * 0.15;
+        p.neck.x = p.head.x;
+        p.neck.y = p.head.y + 0.08;
+        p.lShoulder.x = p.neck.x - 0.07;
+        p.rShoulder.x = p.neck.x + 0.07;
+        p.lShoulder.y = p.neck.y + 0.02;
+        p.rShoulder.y = p.neck.y + 0.02;
+        p.pelvis.x = p.neck.x;
+        p.pelvis.y = 0.58;
+        p.lHip.x = p.pelvis.x - 0.05;
+        p.rHip.x = p.pelvis.x + 0.05;
+        p.lHip.y = p.pelvis.y;
+        p.rHip.y = p.pelvis.y;
+        p.lElbow.x = p.lShoulder.x - 0.04;
+        p.lElbow.y = p.lShoulder.y + 0.12;
+        p.rElbow.x = p.rShoulder.x + 0.04;
+        p.rElbow.y = p.rShoulder.y + 0.12;
+        p.lWrist.x = p.lShoulder.x - 0.04;
+        p.lWrist.y = p.pelvis.y + 0.02;
+        p.rWrist.x = p.rShoulder.x + 0.04;
+        p.rWrist.y = p.pelvis.y + 0.02 + idleWave;
+        p.lFinger.x = p.lWrist.x; p.lFinger.y = p.lWrist.y;
+        p.rFinger.x = p.rWrist.x; p.rFinger.y = p.rWrist.y;
+        p.lKnee.x = p.lHip.x - 0.02; p.lKnee.y = 0.74;
+        p.rKnee.x = p.rHip.x + 0.02; p.rKnee.y = 0.74;
+        p.lAnkle.x = p.lKnee.x - 0.01; p.lAnkle.y = 0.88;
+        p.rAnkle.x = p.rKnee.x + 0.01; p.rAnkle.y = 0.88;
+        p.isHandsHigh = false;
+        p.isWaving = true;
+      });
+    }
+
     // --- 核心：每帧从摄像头画面实时解析人体姿态 ---
     let cvFrameCounter = 0;
     async function processRealVideoFrame() {
-      if (!isCameraActive || webcamVideo.readyState < 2) return;
+      if (!isCameraActive || !webcamVideo || webcamVideo.readyState < 2) {
+        updateIdlePoses();
+        return;
+      }
       cvFrameCounter++;
 
       // 1. 如果 MediaPipe 可用，在后台非阻塞异步投递，绝对不卡顿或阻断主渲染流程！
@@ -943,18 +1022,8 @@
         for (let i = 0; i < currData.length; i++) bgCvFrameData[i] = currData[i];
       }
 
-      // 多人独立扇区定义 (根据当前设定的玩家数量 1, 2, 3 进行屏幕空间独立解耦)
-      const sectors = [];
-      if (playerCount === 1) {
-        sectors.push({ id: 0, minX: 0.0, maxX: 1.0, defaultX: 0.50 });
-      } else if (playerCount === 2) {
-        sectors.push({ id: 0, minX: 0.0, maxX: 0.52, defaultX: 0.28 });
-        sectors.push({ id: 1, minX: 0.48, maxX: 1.0, defaultX: 0.72 });
-      } else {
-        sectors.push({ id: 0, minX: 0.0, maxX: 0.38, defaultX: 0.20 });
-        sectors.push({ id: 1, minX: 0.32, maxX: 0.68, defaultX: 0.50 });
-        sectors.push({ id: 2, minX: 0.62, maxX: 1.0, defaultX: 0.80 });
-      }
+      // 多人独立扇区定义
+      const sectors = getSectors();
 
       sectors.forEach(s => {
         s.activePixels = 0;
@@ -1313,7 +1382,11 @@
       // 4. 绘制火柴人脚掌小鞋子
       [lAnk, rAnk].forEach(foot => {
         ctx.beginPath();
-        ctx.roundRect(foot.x - 14, foot.y - 4, 28, 14, 7);
+        if (typeof ctx.roundRect === 'function') {
+          ctx.roundRect(foot.x - 14, foot.y - 4, 28, 14, 7);
+        } else {
+          ctx.rect(foot.x - 14, foot.y - 4, 28, 14);
+        }
         ctx.fillStyle = boneColor;
         ctx.fill();
         ctx.lineWidth = 2;
@@ -1561,6 +1634,8 @@
     }
 
     updatePlaybackUI();
+    // 立即启动发光火柴人渲染主循环（常驻舞台，实时渲染）
+    renderStickmanLoop();
   </script>
 </body>
 </html>
