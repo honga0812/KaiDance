@@ -1216,15 +1216,6 @@
       requestAnimationFrame(renderStickmanLoop);
     }
 
-          playersToDraw.forEach((p, idx) => {
-            drawRealMatchstickMan(ctx, p, targetPose, frameTick, idx, w, h, palette);
-          });
-        }
-      }
-
-      requestAnimationFrame(renderStickmanLoop);
-    }
-
     // --- 真实依附小朋友身体节点的萌趣发光火柴人渲染 ---
     function drawRealMatchstickMan(ctx, p, pose, tick, idx, w, h, palette) {
       const d = p.poseData;
