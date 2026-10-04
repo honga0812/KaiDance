@@ -1708,12 +1708,13 @@
     }
 
     // ========================================================
-    // 5. 亲切名師原聲口令播放与伴奏避让 (Audio Ducking)
+    // 5. 親切名師原聲口令播放與伴奏避讓 (Audio Ducking)
     // ========================================================
+    const VOICE_CACHE_BUSTER = "v=" + Date.now();
     function playTeacherVoice(voiceFile) {
       if (!voiceEnabled || !voiceFile) return;
-      audioVoice.src = voiceFile;
-      audioBgm.volume = 0.5;
+      audioVoice.src = voiceFile + (voiceFile.indexOf('?') >= 0 ? '&' : '?') + VOICE_CACHE_BUSTER;
+      audioBgm.volume = 0.45;
       audioVoice.play().catch(e => console.log("Voice error:", e));
       audioVoice.onended = () => {
         audioBgm.volume = 1.0;
