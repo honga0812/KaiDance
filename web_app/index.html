@@ -437,7 +437,7 @@
 
   <script>
     // ========================================================
-    // 1. 全曲 8 大动作段落时钟谱：循环影片 (loop_*.mp4) 与原声口令
+    // 1. 全曲 15 大动作段落时钟谱：严格按照 4 小节 / 16 拍 (每段8秒) 黄金体能律动编排
     // ========================================================
     const songDatabase = {
       morning: {
@@ -447,12 +447,12 @@
         timeline: [
           {
             start: 0, end: 8,
-            title: "动作 01: 预备踏步",
+            title: "动作 01: 萌芽踏步",
             video: "./videos/loop_01_march.mp4",
             voice: "./voices/voice_01.mp3",
-            lyric: "[清脆鸟叫与微风风铃声响起 🍃]",
-            sub: "⏰ 准备倒数！3、2、1，早操开始！",
-            next: "小草迎风波浪摇摆 ➜",
+            lyric: "[清脆鸟叫与晨风风铃声响起 🍃]",
+            sub: "⏰ 4小节16拍准备！小脚原地踏步踩节拍，3-2-1 早操开始！",
+            next: "小草迎风左右大波浪 ➜",
             targetPose: "march"
           },
           {
@@ -460,79 +460,139 @@
             title: "动作 02: 小草迎风摆",
             video: "./videos/loop_02_sway_grass.mp4",
             voice: "./voices/voice_02.mp3",
-            lyric: "[欢快的钢琴旋律渐入 🎹]",
-            sub: "🌱 清晨的风轻轻吹，小草小花左右大波浪摇晃！",
-            next: "双手高举托起金色大太阳 ➜",
+            lyric: "[欢快的钢琴与木琴旋律渐入 🎹]",
+            sub: "🌱 清晨的风轻轻吹，双臂如小草左右波浪大摇晃（16拍）！",
+            next: "双手高高举起托出太阳 ➜",
             targetPose: "sway"
           },
           {
             start: 16, end: 24,
-            title: "动作 03: 小太阳升起",
+            title: "动作 03: 托起小太阳",
             video: "./videos/loop_03_sun_rise.mp4",
             voice: "./voices/voice_03.mp3",
             lyric: "\"Morning sunshine hello!\"",
-            sub: "☀️ 早安阳光！双手从胸前高高举起，头顶托出大太阳！",
-            next: "双手向两侧划出大彩虹 ➜",
+            sub: "☀️ 早安阳光！双手从胸前推向天空，头顶托出大太阳（16拍）！",
+            next: "双臂划出金色大彩虹 ➜",
             targetPose: "sun_rise"
           },
           {
             start: 24, end: 32,
-            title: "动作 04: 阳光普照",
+            title: "动作 04: 彩虹洒大地",
             video: "./videos/loop_04_rainbow.mp4",
             voice: "./voices/voice_04.mp3",
             lyric: "\"Waking up the sky so bright!\"",
-            sub: "🌈 彩虹洒在大地上，小手向两侧画大弧线！",
+            sub: "🌈 天空变明亮啦！双臂自头顶向两侧划出大圆弧降落！",
             next: "探头和好朋友招招手 ➜",
             targetPose: "rainbow"
           },
           {
-            start: 32, end: 48,
+            start: 32, end: 40,
             title: "动作 05: 招招手说早安",
             video: "./videos/loop_05_wave.mp4",
             voice: "./voices/voice_05.mp3",
-            lyric: "\"Say hello to friends, say hello to you and me!\"",
-            sub: "👋 看到好朋友啦！小手在耳旁高高大挥动说早安！",
-            next: "双脚垫起抓阳光 ➜",
+            lyric: "\"Say hello to friends near and far!\"",
+            sub: "👋 看到好朋友啦！小手在耳旁高高左右大招手说早安！",
+            next: "拍拍肩膀张开大怀抱 ➜",
             targetPose: "wave"
           },
           {
-            start: 48, end: 58,
-            title: "动作 06: 抓抓小阳光",
+            start: 40, end: 48,
+            title: "动作 06: 拍肩大拥抱",
+            video: "./videos/loop_05_wave.mp4",
+            voice: "./voices/voice_06.mp3",
+            lyric: "\"Say hello to you and me!\"",
+            sub: "🤗 你和我在一起！双手轻拍双肩，再向两侧展开大怀抱！",
+            next: "双脚垫起伸手抓白云 ➜",
+            targetPose: "wave"
+          },
+          {
+            start: 48, end: 56,
+            title: "动作 07: 垫脚摘白云",
             video: "./videos/loop_06_reach.mp4",
             voice: "./voices/voice_07.mp3",
-            lyric: "\"Reach up high to the clouds, grab a little ray of light!\"",
-            sub: "⭐ 伸手摸摸白云，抓一把闪闪发光的阳光放口袋！",
+            lyric: "\"Reach up high to the clouds!\"",
+            sub: "☁️ 垫起脚尖长高高！左手抓一把白云、右手抓一把白云！",
+            next: "把抓到的阳光装进口袋 ➜",
+            targetPose: "reach"
+          },
+          {
+            start: 56, end: 64,
+            title: "动作 08: 阳光装口袋",
+            video: "./videos/loop_06_reach.mp4",
+            voice: "./voices/voice_07.mp3",
+            lyric: "\"Grab a little ray of light, keep it bright!\"",
+            sub: "⭐ 抓一把闪闪发光的阳光，欢快放进肚子两边的小口袋！",
             next: "小兔子欢喜跳跳跳 ➜",
             targetPose: "reach"
           },
           {
-            start: 58, end: 82,
-            title: "动作 07: 小兔开合跳",
+            start: 64, end: 72,
+            title: "动作 09: 小兔蹦蹦跳",
             video: "./videos/loop_07_bunny_hop.mp4",
             voice: "./voices/voice_08.mp3",
-            lyric: "\"Jump jump jump with a smile! Dancing all around!\"",
-            sub: "🐰 蹦蹦跳跳小兔子，顺时针转个魔法大圈圈！",
-            next: "双手胸前比大爱心 ➜",
+            lyric: "\"Jump jump jump with a smile!\"",
+            sub: "🐰 头顶竖起长耳朵，双脚轻盈合拢开合跳（16拍）！",
+            next: "顺时针转个魔法大圈圈 ➜",
             targetPose: "jump"
           },
           {
-            start: 82, end: 108,
-            title: "动作 08: 爱心光波",
+            start: 72, end: 80,
+            title: "动作 10: 魔法转圈圈",
+            video: "./videos/loop_07_bunny_hop.mp4",
+            voice: "./voices/voice_09.mp3",
+            lyric: "\"Dancing all around the world!\"",
+            sub: "🌸 小碎步踩一踩，顺时针轻快旋转一圈，像花朵绽放！",
+            next: "双手胸前比出大爱心 ➜",
+            targetPose: "jump"
+          },
+          {
+            start: 80, end: 88,
+            title: "动作 11: 爱心大光波",
             video: "./videos/loop_08_heart.mp4",
             voice: "./voices/voice_10.mp3",
-            lyric: "\"Sunshine in my heart, sunshine in my happy feet!\"",
-            sub: "💖 阳光照进心里，双手胸前比心送给好朋友！",
-            next: "深呼吸收操致敬 ➜",
+            lyric: "\"Sunshine in my heart, shining everywhere!\"",
+            sub: "💖 阳光照进心里，胸前拼出大爱心向前送出爱心光波！",
+            next: "双手叉腰踢踢小脚丫 ➜",
             targetPose: "heart"
           },
           {
-            start: 108, end: 120,
-            title: "动作 09: 深呼吸定格",
+            start: 88, end: 96,
+            title: "动作 12: 快乐踢踢脚",
+            video: "./videos/loop_01_march.mp4",
+            voice: "./voices/voice_11.mp3",
+            lyric: "\"Sunshine in my happy dancing feet!\"",
+            sub: "👟 小脚丫也想跳舞！右脚踢踢、左脚踢踢，充满节奏感！",
+            next: "张开双臂像小鸟飞翔 ➜",
+            targetPose: "march"
+          },
+          {
+            start: 96, end: 104,
+            title: "动作 13: 微风小鸟飞",
+            video: "./videos/loop_02_sway_grass.mp4",
+            voice: "./voices/voice_04.mp3",
+            lyric: "\"Spin like a gentle breeze, soaring high!\"",
+            sub: "🕊️ 像清晨的微风与小鸟，张开小手臂在蓝天中轻快滑翔！",
+            next: "拍拍小手欢呼加油 ➜",
+            targetPose: "sway"
+          },
+          {
+            start: 104, end: 112,
+            title: "动作 14: 胜利拍手欢呼",
+            video: "./videos/loop_07_bunny_hop.mp4",
+            voice: "./voices/voice_09.mp3",
+            lyric: "\"Ready, set, have a wonderful day!\"",
+            sub: "👏 右上方拍手、左上方拍手，举起双手大欢呼棒极了！",
+            next: "深呼吸收操致敬 ➜",
+            targetPose: "jump"
+          },
+          {
+            start: 112, end: 120,
+            title: "动作 15: 深呼吸定格鞠躬",
             video: "./videos/action_09_finish.mp4",
             voice: "./voices/voice_12.mp3",
-            lyric: "\"Ready, set, have a wonderful day! Goodbye sunshine!\"",
-            sub: "🌟 深深吸一口气！今天也是元气满满的棒小孩！",
-            next: "早操完美完成！🎉",
+            lyric: "\"Goodbye morning sunshine, we shine so bright!\"",
+            sub: "🌟 深深吸气双臂划大圆，呼气双手合十胸前，微鞠躬微笑！",
+            next: "早操完美通关！🎉 获得 3 颗大金星！",
             targetPose: "finish"
           }
         ]

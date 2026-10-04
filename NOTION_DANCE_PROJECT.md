@@ -36,22 +36,49 @@
 
 ---
 
-## 🎬 二、 AI 舞蹈动作影片生成矩阵（已接入您的最新生成成果）
+## 🎬 二、 4小节/16拍 AI 舞蹈动作全曲编排矩阵（15大段落 · 8秒循环）
 
-我们已在系统中为您无缝对齐了已生成的真实 AI 舞蹈视频，并准备好剩余动作的生成标准：
+为完全符合 4~6 岁幼儿运动认知与体能节律，我们严格按照 **“4 个小节，16 拍换一个动作”**（每段时长刚好约 **8 秒**）的黄金节拍单位，将全曲 120 秒拆解为 **15 个紧密契合歌词意象、充满自然童趣的 AI 动作段落**：
 
-| 动作序号 | 动作名称与时长 | 对应歌词与动作要领 | 当前状态与视频路径 |
-| :---: | :---: | :---: | :---: |
-| **01** | **预备踏步 (5秒)** | 双手叉腰轻快原地踩点，“3-2-1 准备！” | ✅ **已接入** (`videos/loop_01_march.mp4`) |
-| **02** | **小草迎风摆 (10秒)** | 身体随清风大波浪向左、向右大摇动 | ✅ **已接入** (`videos/loop_02_sway_grass.mp4`) |
-| **03** | **小太阳升起 (5秒)** | 双手自胸前推高，在头顶托起金色大太阳 | ⏳ `videos/loop_03_sun_rise.mp4` |
-| **04** | **阳光普照 (5秒)** | 双臂自头顶向两侧划出大彩虹圆弧落下 | ⏳ `videos/loop_04_rainbow.mp4` |
-| **05** | **招招手说早安 (5秒)** | 单手耳旁高位欢快左右大幅度大挥手 | ⏳ `videos/loop_05_wave.mp4` |
-| **06** | **抓抓小阳光 (5秒)** | 垫起小脚尖，伸手摸摸白云抓阳光 | ⏳ `videos/loop_06_reach.mp4` |
-| **07** | **小兔欢喜跳 (5秒)** | 原地轻巧双脚开合跳，顺时针转大圈 | ⏳ `videos/loop_07_bunny_hop.mp4` |
-| **08** | **爱心光波 (5秒)** | 双手胸前比大爱心送光波，脚尖前点步 | ⏳ `videos/loop_08_heart.mp4` |
+### 1. 全曲 15 大动作与歌词契合度时钟谱
 
-> 💡 **后续生成小贴士**：当您用 AI 视频工具生成后续动作的 5 秒 `.mp4` 时，只需放入 `web_app/videos/new/`，系统即可一键同步上线！
+| 序号 | 动作名称 | 时长与节拍 | 对应歌词与意象关联 | 幼儿动作要领与名师口令 | AI 视频生成精准提示词 (Video Prompt) | 骨骼侦测重点 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **01** | **萌芽踏步**<br>*(Sprout March)* | **00:00 - 00:08**<br>(4小节/16拍/8s) | [清脆鸟叫与晨风风铃声]<br>*清晨苏醒，森林小草醒来* | 双手叉腰，随着节拍原地轻快踏步弹动。<br>🗣️ *“3-2-1 倒数准备，小脚踩踩节拍，早操开始啦！”* | `Full-body 9:16 vertical shot, adorable 3D animated preschool dance coach, cheerful cute boy/girl, hands on hips, marching in place with bouncy knee raises on 16 beats, smiling warmly, bright pastel kindergarten studio, seamless loop, 8 seconds, 60fps.` | 髋膝垂直位移<br>双手叉腰贴合 |
+| **02** | **小草迎风摆**<br>*(Swaying Grass)* | **00:08 - 00:16**<br>(4小节/16拍/8s) | [欢快钢琴与木琴渐入]<br>*微风吹拂，小草小花摇摆* | 双脚微分，双臂垂在身侧如柔软青草，随节奏左右大波浪摇曳（左4拍、右4拍，共2组）。<br>🗣️ *“微风轻轻吹，小草小花左右大波浪摇晃起来！”* | `Full-body 9:16 vertical shot, 3D animated cute kid dance coach, swaying torso and arms smoothly from left to right like gentle grass in the morning breeze, 16 beats rhythmic wave, happy expression, bright studio, seamless loop, 8s.` | 躯干中轴倾角<br>双臂左右波浪 |
+| **03** | **托起小太阳**<br>*(Rising Sun)* | **00:16 - 00:24**<br>(4小节/16拍/8s) | *"Morning sunshine hello!"*<br>*早安朝阳，光明唤醒大地* | 双手手心向上自腹前缓缓推向头顶，五指盛开托出金色大太阳，脚跟微提踵。<br>🗣️ *“早安阳光！双手从胸前高高举起，头顶托出大太阳！”* | `Full-body 9:16 vertical shot, 3D cute kid dance coach, bringing hands from chest up above head to hold a big imaginary glowing sun, fingers spread, tiptoe stretch, beaming joyful smile, seamless loop, 8 seconds, 60fps.` | **双手腕高过头部**<br>(`y_wrist < y_head`) |
+| **04** | **彩虹洒大地**<br>*(Rainbow Arch)* | **00:24 - 00:32**<br>(4小节/16拍/8s) | *"Waking up the sky so bright!"*<br>*天色大亮，金色光芒四射* | 双臂从头顶向两侧划出大圆弧，手指如细雨轻盈落至腰间，身体随之微下蹲起立。<br>🗣️ *“天空变得好明亮！双手划出一道美丽的七色彩虹！”* | `Full-body 9:16 vertical shot, 3D kid dance coach, sweeping arms down from high above to both sides forming a wide rainbow arc, gentle knee bounce, vibrant golden morning lighting, seamless loop, 8 seconds.` | 双臂肩肘向外划弧<br>双手外展对称 |
+| **05** | **招招手说早安**<br>*(Friendly Wave)* | **00:32 - 00:40**<br>(4小节/16拍/8s) | *"Say hello to friends near and far!"*<br>*向四面八方的小伙伴问好* | 转向右侧，右手在耳边大幅度挥动招手（8拍）；转向左侧换左手招手（8拍）。<br>🗣️ *“看到好朋友啦！小手在耳旁高高大挥动说早安！”* | `Full-body 9:16 vertical shot, 3D animated dance coach, enthusiastically waving right hand high beside ear to greet friends, then waving left hand, cheerful eye contact with viewer, energetic, seamless loop, 8 seconds.` | **高位手肘弯曲招手**<br>(`wrist.y < neck.y`) |
+| **06** | **拍肩大拥抱**<br>*(Shoulder Tap & Hug)* | **00:40 - 00:48**<br>(4小节/16拍/8s) | *"Say hello to you and me!"*<br>*友爱团结，你和我在一起* | 双手轻拍双肩2下（4拍），再向身体两侧张开大怀抱（4拍），重复2轮。<br>🗣️ *“你和我在一起！拍拍小肩膀，张开大大的拥抱！”* | `Full-body 9:16 vertical shot, 3D kid coach, tapping own shoulders twice with crossed hands then opening arms wide into a warm loving embrace, rhythmic, joyful cute face, studio lighting, seamless loop, 8 seconds.` | 双手腕向胸内交叠<br>双臂横向大展角 |
+| **07** | **垫脚摘白云**<br>*(Cloud Reach)* | **00:48 - 00:56**<br>(4小节/16拍/8s) | *"Reach up high to the clouds!"*<br>*伸长身体，够向云端小鸟* | 垫起右脚尖，右手向上抓白云（4拍）；换左脚垫起抓白云（4拍）；双手交替高抓（8拍）。<br>🗣️ *“垫起脚尖长高高！左手抓一把白云、右手抓一把白云！”* | `Full-body 9:16 vertical shot, 3D kid dance coach, stretching high up on tiptoes, alternating left and right hands reaching for fluffy white clouds above, full body stretch, playful and energetic, seamless loop, 8s.` | **左右手腕交替最高位**<br>下肢足踝提踵 |
+| **08** | **阳光装口袋**<br>*(Pockets of Light)* | **00:56 - 01:04**<br>(4小节/16拍/8s) | *"Grab a little ray of light, keep it bright!"*<br>*捕捉光芒，藏在温暖心窝* | 从高处握紧一把“金阳光”，双手欢快拍拍小肚子两边的魔法口袋，膝盖弹性微曲。<br>🗣️ *“抓一把闪闪发光的阳光，装进肚子两边的小口袋里！”* | `Full-body 9:16 vertical shot, 3D animated child, catching imaginary sunlight with fists then tucking hands into waist pockets with a happy rhythmic bounce, cute cheerful choreography, seamless loop, 8s.` | 双手由高位落至髋骨<br>(`wrist.y -> hip.y`) |
+| **09** | **小兔蹦蹦跳**<br>*(Bunny Hops)* | **01:04 - 01:12**<br>(4小节/16拍/8s) | *"Jump jump jump with a smile!"*<br>*副歌高潮，全场欢笑跳跃* | 双手食指中指在头顶比出长耳朵，双脚轻盈并拢，跟着16拍节奏向前、后、左、右小跳。<br>🗣️ *“小兔子跳跳跳！竖起长耳朵，双脚轻快蹦蹦跳！”* | `Full-body 9:16 vertical shot, 3D animated kid dance coach, bunny ears gesture with fingers on head, light bouncing jumps in place on the rhythm, bursting with preschool vitality, seamless loop, 8s, 60fps.` | 垂直起跳位移<br>双手固定在头部 |
+| **10** | **魔法转圈圈**<br>*(Twirl & Blossom)* | **01:12 - 01:20**<br>(4小节/16拍/8s) | *"Dancing all around the world!"*<br>*探索世界，快乐旋转绽放* | 双臂微展如小花裙，踏着16拍轻快小碎步顺时针转一个360度大圈，最后定格比花朵绽放。<br>🗣️ *“小碎步踩一踩，顺时针轻快旋转一圈，像花朵盛开！”* | `Full-body 9:16 vertical shot, 3D cute dance coach, spinning a full 360-degree circle with arms lightly extended, stepping gracefully, finishing with a blooming flower gesture under chin, smiling, seamless loop, 8s.` | 躯干连续侧移旋转<br>定格花朵托腮姿态 |
+| **11** | **爱心大光波**<br>*(Heart Beam Sparkle)* | **01:20 - 01:28**<br>(4小节/16拍/8s) | *"Sunshine in my heart, shining everywhere!"*<br>*温暖在心，向世界传递爱* | 双手大拇指食指在胸前拼大爱心，随节拍向前推出“爱心光波”，手指灵动闪烁。<br>🗣️ *“阳光照进心里，双手胸前比个大爱心，向前送出爱心光波！”* | `Full-body 9:16 vertical shot, 3D animated kid coach, forming a big heart shape with hands at chest level, then pushing it outward towards camera with magical sparkling gestures, warm loving face, seamless loop, 8s.` | **双手腕在胸骨前交汇**<br>(`dist(lWrist, rWrist) < 0.1`) |
+| **12** | **快乐踢踢脚**<br>*(Happy Feet Kicks)* | **01:28 - 01:36**<br>(4小节/16拍/8s) | *"Sunshine in my happy dancing feet!"*<br>*小脚丫跳舞，全身充满活力* | 双手叉腰，右脚尖向前轻快点地踢出（4拍），左脚尖向前轻快踢出（4拍），重复2轮。<br>🗣️ *“小脚丫也想跳舞！右脚踢踢、左脚踢踢，充满节奏感！”* | `Full-body 9:16 vertical shot, 3D kid dance coach, hands on waist, rhythmically kicking right foot forward then left foot forward with toes pointed, playful energetic dance, sunny room, seamless loop, 8s.` | 双脚尖交替前伸伸展<br>双手保持叉腰稳定 |
+| **13** | **微风小鸟飞**<br>*(Bird Wings Glide)* | **01:36 - 01:44**<br>(4小节/16拍/8s) | *"Spin like a gentle breeze, soaring high!"*<br>*如轻风飞翔，翱翔在蓝天* | 双臂水平展开如小鸟翅膀，随身体左右轻微倾斜上下柔和扇动，如在风中滑翔。<br>🗣️ *“像清晨的微风与小鸟，张开小手臂在蓝天中轻快滑翔！”* | `Full-body 9:16 vertical shot, 3D animated child, arms extended horizontally like bird wings, gently flapping up and down while gliding side to side, soaring gracefully, happy calm expression, seamless loop, 8s.` | **双臂水平展开扇动**<br>身体中轴小幅摆动 |
+| **14** | **胜利拍手欢呼**<br>*(Cheer & Clap)* | **01:44 - 01:52**<br>(4小节/16拍/8s) | *"Ready, set, have a wonderful day!"*<br>*迎接全新一天，自信满满* | 右上方拍手2下，左上方拍手2下，随后高高举起双手握拳欢呼“耶！”（重复2轮）。<br>🗣️ *“右边拍拍手、左边拍拍手，举起双手大欢呼，我们最棒啦！”* | `Full-body 9:16 vertical shot, 3D cute kid dance coach, clapping hands overhead to the right, then overhead to the left, pumping fists up in high celebration, ecstatic joyful expression, seamless loop, 8s, 60fps.` | 斜上方双手拍击对齐<br>双手高举欢呼 |
+| **15** | **深呼吸定格鞠躬**<br>*(Deep Breath & Bow)* | **01:52 - 02:00**<br>(4小节/16拍/8s) | *"Goodbye morning sunshine, we shine so bright!"*<br>*感谢阳光与伙伴，优雅收操* | 双臂自两侧深吸气划大圆上抬，呼气在胸前双手合十，身体微前倾鞠躬，定格灿烂微笑。<br>🗣️ *“深深吸气划大圆，双手胸前合十，鞠躬微笑！早操完美通关！”* | `Full-body 9:16 vertical shot, 3D kid coach, inhaling deeply while raising arms up in a grand circle, bringing palms together at chest in prayer pose, gentle bow with polite sweet smile, graceful finish, seamless loop, 8s.` | 双臂划大圆上扬<br>胸前合十收操定格 |
+
+---
+
+### 2. AI 视频批量生成参数与统一提示词模板（Runway Gen-3 / Luma / Kling / Minimax）
+
+为保证生成的 15 支 8 秒视频在人物外貌、服装、光影与背景画风上 **100% 保持一致**，生成时请直接套用以下 Master Prompt 模板：
+
+```text
+[Master Style Prompt]:
+Full-body 9:16 vertical framing, master animation 3D Disney Pixar style, a cheerful 5-year-old preschool dance coach named Leo (cute boy with short brown hair, wearing bright orange-blue athletic hoodie, white sneakers) OR Mia (sweet girl with twin pigtails, pink-yellow star tracksuit). Inside a warm, sunlit kindergarten dance studio with pastel rainbow floor and large floor-to-ceiling windows showing green trees and blue sky. Studio soft morning lighting, clean background, perfectly centered full body from head to shoes, child-friendly atmosphere.
+
+[Action Instruction]:
+{填入上方表格中的动作英文提示词}
+
+[Parameters]:
+- Duration: 8 seconds (Seamless Loop)
+- Aspect Ratio: 9:16 (Vertical)
+- Frame Rate: 60fps / 30fps
+- Negative Prompt: blurry, distorted limbs, extra fingers, deformed face, flickering, sudden cut, horizontal bars, cropped head, cropped feet, text, watermark.
+```
 
 ---
 
