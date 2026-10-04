@@ -38,32 +38,42 @@
 
 ## 🎬 二、 官方英文歌词与动作要领提示矩阵（对齐音乐结构与节拍）
 
-为实现动作与歌曲的紧密融合，我们直接采用《Morning Sunshine Hello》官方英文歌词与段落时钟谱，为每个歌词段落量身定制了**动作要领提示**与**AI 视频生成提示词**：
+为实现动作、口令语音与音乐的严密契合，我们基于官方字幕文件 `1.O.Morning Sunshine Hello.srt` 的真实时间标记，重构了**23 段全景动作要领与口令规划矩阵**。
 
-### 1. 官方歌词全景动作要领与生成矩阵表
+### 核心设计原则：
+1. **彻底解决口令撞车与拖沓**：将原来长达 5~7 秒的长句指令全部精简为 **4 ~ 6 个汉字的高能动词短语**（例如：“双手托太阳！”、“刷刷牙~笑一笑！”、“跳起来！喊万岁！”）。
+2. **预留充分动作留白（Action Headroom）**：语音播报时长严格限制在 **1.1 秒 ~ 1.4 秒**，在每个 3.5s ~ 4.0s 的乐句中，留出 **2.3 秒 ~ 10.8 秒** 的纯音乐动作跟跳时间，给小朋友充足的时间听清、反应并沉浸在音乐中！
+3. **元气童趣的引导情绪**：采用幼儿园金牌领操老师的自然活泼语气，抑扬顿挫，动词突出，富有节拍带动感。
 
-| 段落与序号 | 官方英文歌词 | 时间区间 | 动作名称与要领提示 (Movement Tips) | AI 视频生成精准提示词 (Video Prompt) | 骨骼捕捉识别重点 |
-| :---: | :---: | :---: | :---: | :---: | :---: |
-| **[Intro]<br>动作 01** | `[Intro] 🎵 Musical Awakening` | **00:00 - 00:08** | **萌芽踏步踩节拍**<br>⏰ 倒数准备！双手叉腰，随着节拍原地轻快踏步，身体微微弹动！ | `Full-body 9:16 vertical shot, 3D animated preschool dance coach, cheerful cute boy/girl, hands on hips, marching in place with bouncy knee raises on 16 beats, smiling warmly, bright pastel kindergarten studio, seamless loop, 8s, 60fps.` | 髋膝垂直位移<br>双手叉腰贴合 |
-| **[Intro]<br>动作 02** | `[Intro] 🍃 Morning breeze softly blowing` | **00:08 - 00:15** | **小草迎风大波浪**<br>🌱 微风吹拂！双脚站稳，身体和双臂如小草左右波浪大摇摆！ | `Full-body 9:16 vertical shot, 3D kid dance coach, swaying torso and arms smoothly from left to right like gentle grass in the morning breeze, rhythmic wave, happy expression, bright studio, seamless loop, 8s.` | 躯干中轴倾角<br>双臂左右波浪 |
-| **[Verse 1]<br>动作 03** | `"Good morning sun, up in the sky,"` | **00:15 - 00:22** | **托起天空小太阳**<br>☀️ 早安太阳！双手从胸前推向天空，掌心朝上托出金色大太阳！ | `Full-body 9:16 vertical shot, 3D cute kid dance coach, bringing hands from chest up above head to hold a big imaginary glowing sun in the sky, fingers spread, tiptoe stretch, smiling, seamless loop, 8s.` | **双手腕高过头部**<br>(`y_wrist < y_head`) |
-| **[Verse 1]<br>动作 04** | `"Waving your golden hands so high!"` | **00:22 - 00:28** | **金色大手高招手**<br>✨ 双臂高高举过头顶，像太阳的金色光芒一样向左向右大幅度招手！ | `Full-body 9:16 vertical shot, 3D animated dance coach, arms stretched high overhead, waving both hands energetically like golden sun rays across the sky, joyful expression, seamless loop, 8s.` | **双臂高举大幅招手**<br>左右对称大挥动 |
-| **[Verse 1]<br>动作 05** | `"Wake up, brush your teeth and smile,"` | **00:28 - 00:32** | **刷刷小牙大微笑**<br>🪥 揉揉小眼睛，小手握牙刷左右刷刷刷，露出灿烂大笑容！ | `Full-body 9:16 vertical shot, 3D cute preschool coach, rubbing eyes cutely, making fun toothbrush brushing gesture across teeth with one hand, pointing to a huge sunny smile, seamless loop, 8s.` | 单手近嘴部摆动<br>手指点向嘴角笑脸 |
-| **[Verse 1]<br>动作 06** | `"Let’s go learn and play a while!"` | **00:32 - 00:35** | **欢快踏步向前冲**<br>🎒 双手叉腰微屈膝，轻快抬腿踏步，准备出发去学本领、做游戏！ | `Full-body 9:16 vertical shot, 3D animated child coach, hands on hips, marching energetically forward with high knees, excited and ready to learn and play, bright studio, seamless loop, 8s.` | 膝盖高抬大踏步<br>身体前倾冲劲 |
-| **[Verse 1]<br>动作 07** | `"Birds are singing in the tree, Singing a morning song for me!"` | **00:35 - 00:40** | **树上小鸟展翅飞**<br>🐦 双臂如小鸟翅膀上下轻快扇动，手贴耳旁静静聆听早安鸟鸣！ | `Full-body 9:16 vertical shot, 3D animated kid, arms extended like bird wings flapping gracefully, then cupping one hand to ear to listen to birds singing, smiling gently, seamless loop, 8s.` | **双臂水平展开扇动**<br>单手贴耳聆听姿态 |
-| **[Chorus]<br>动作 08** | `"Hello, hello, it's a brand new day!"` | **00:40 - 00:45** | **招手问候新一天**<br>👋 身体微倾，左边挥挥手、右边挥挥手，热情大声说 Hello！ | `Full-body 9:16 vertical shot, 3D animated dance coach, enthusiastically waving right hand then left hand beside ears, dynamic body sway greeting a brand new day, seamless loop, 8s.` | **高位手肘弯曲招手**<br>(`wrist.y < neck.y`) |
-| **[Chorus]<br>动作 09** | `"Jump up and shout: Hip-hip-hooray!"` | **00:45 - 00:50** | **跳起欢呼万岁耶**<br>🌟 双脚用力向上蹦跳，双手握拳冲天欢呼：Hip-hip-hooray！ | `Full-body 9:16 vertical shot, 3D kid coach, jumping high with both feet off the ground, pumping fists up in high celebration shouting hooray, ecstatic joyful expression, seamless loop, 8s.` | **垂直起跳位移**<br>双手高举握拳 |
-| **[Chorus]<br>动作 10** | `"Put on your shoes and count to three, Come along and sing with me!"` | **00:50 - 00:55** | **穿上小鞋数一二三**<br>👟 弯腰做穿鞋动作，手指点数 1-2-3，张开双臂邀请大家一起唱！ | `Full-body 9:16 vertical shot, 3D animated coach, bending to tap shoes, counting 1-2-3 with fingers, then opening arms wide to invite everyone to sing along, seamless loop, 8s.` | 俯身触脚腕判定<br>双手前伸大开合 |
-| **[间奏]<br>动作 11** | `[Interlude] 🌸 Spinning happy dance` | **00:55 - 01:00** | **转个魔法快乐圈**<br>🌸 双手微提衣角踩小碎步，顺时针轻快旋转一圈，定格开出小花！ | `Full-body 9:16 vertical shot, 3D cute dance coach, spinning a full 360-degree circle with arms lightly extended, stepping gracefully, finishing with a blooming flower gesture under chin, seamless loop, 8s.` | 躯干连续侧移旋转<br>定格花朵托腮姿态 |
-| **[Verse 2]<br>动作 12** | `"Pack your bag and grab your hat,"` | **01:00 - 01:07** | **背上书包戴小帽**<br>🎒 双手拉拉小书包肩带，再双手高举在头顶戴上一顶可爱小圆帽！ | `Full-body 9:16 vertical shot, 3D animated kid, mimicking putting on backpack straps with both hands, then patting head to adjust an imaginary cute hat, proud posture, seamless loop, 8s.` | 双手拉肩带姿势<br>双手拍抚头部小帽 |
-| **[Verse 2]<br>动作 13** | `"Wave goodbye to the sleepy cat!"` | **01:07 - 01:12** | **告别贪睡小猫咪**<br>🐱 学小猫咪伸懒腰揉揉脸，轻手轻脚向贪睡的小猫招手说拜拜！ | `Full-body 9:16 vertical shot, 3D preschool coach, doing cute cat paw stretch, rubbing whiskers cutely, then waving gentle goodbye, playful and charming expression, seamless loop, 8s.` | 双手猫爪握拳揉颊<br>轻柔向斜下方挥手 |
-| **[Verse 2]<br>动作 14** | `"Look outside, the sky is blue, So many fun things waiting for you!"` | **01:12 - 01:17** | **眺望蓝天踢踢脚**<br>🌈 单手搭凉棚探头眺望蓝天，双脚欢快前踢点地，充满期待！ | `Full-body 9:16 vertical shot, 3D kid coach, hand over brow looking out at blue sky, kicking feet forward with rhythm, excited for fun adventures, seamless loop, 8s.` | 单手搭额前眺望<br>双腿交替前踢点地 |
-| **[Chorus]<br>动作 15** | `"Hello, hello, it's a brand new day!"` | **01:17 - 01:23** | **再度热情说早安**<br>👋 双脚跳跃踩点，双手在耳侧大幅度交替大招手，热情拉满！ | `Full-body 9:16 vertical shot, 3D animated dance coach, enthusiastically waving both hands beside ears, bouncing on feet, big joyful smile, seamless loop, 8s.` | **双耳侧连续大幅挥手**<br>双脚轻跳律动 |
-| **[Chorus]<br>动作 16** | `"Jump up and shout: Hip-hip-hooray!"` | **01:23 - 01:29** | **高空蹦跳大欢呼**<br>🐰 双脚轻盈高高跳起，双手向两侧绽放爆星：Hip-hip-hooray！ | `Full-body 9:16 vertical shot, 3D kid coach, bursting into an energetic high jump, throwing hands up in the air shouting hip-hip-hooray, celebration energy, seamless loop, 8s.` | **高跳位移峰值**<br>双臂放射状展臂 |
-| **[Chorus]<br>动作 17** | `"Put on your shoes and count to three, Come along and sing with me!"` | **01:29 - 01:35** | **点点脚尖爱心唱**<br>💖 脚尖向前点步，双手胸前拼出大爱心送光波，甜蜜大合唱！ | `Full-body 9:16 vertical shot, 3D animated child coach, tapping feet to the rhythm, forming a big heart shape at chest and pushing it forward warmly, singing along, seamless loop, 8s.` | **双手腕在胸骨前交汇**<br>(`dist(lWrist, rWrist) < 0.1`) |
-| **[Bridge]<br>动作 18** | `[Bridge] 🕊️ Soaring like a gentle breeze` | **01:35 - 01:43** | **微风滑翔大旋转**<br>🕊️ 双臂如翅膀展开在空中柔和滑翔，踩着节拍轻快转圈起伏！ | `Full-body 9:16 vertical shot, 3D cute dance coach, arms extended horizontally soaring like a bird in the gentle morning breeze, smooth glide and gentle spin, graceful, seamless loop, 8s.` | **双臂水平展开扇动**<br>身体中轴圆周位移 |
-| **[Outro]<br>动作 19** | `"Good morning, world! Let's have fun today!"` | **01:43 - 01:51** | **张开怀抱迎世界**<br>🌍 双臂向天空与大地划出最广阔的大怀抱，迎接新的一天！ | `Full-body 9:16 vertical shot, 3D kid coach, opening arms as wide as possible to embrace the whole world, smiling radiantly, chest open, full of happiness, seamless loop, 8s.` | 双臂向外展开最大夹角<br>头胸挺拔舒展 |
-| **[Outro]<br>动作 20** | `"Good morning, world! Let's have fun today!"` | **01:51 - 02:00** | **深呼吸合十定格**<br>🌟 深深吸气双臂划大圆上扬，呼气双手胸前合十，微鞠躬定格微笑！ | `Full-body 9:16 vertical shot, 3D kid coach, inhaling deeply while raising arms up in a grand circle, bringing palms together at chest in prayer pose, gentle bow with sweet smile, graceful finish, seamless loop, 8s.` | 双臂划大圆上扬<br>胸前合十收操定格 |
+---
+
+### 1. 《Morning Sunshine Hello》官方歌词、精准时间与精炼口令全景矩阵表
+
+| 序号与段落 | SRT 精确时间区间 | 段落时长 | 官方英文歌词 | 精炼名师口令 (4~6字) | 预计语音时长 | 动作留白时间 | 动作名称与要领提示 (Movement Tips) | 骨骼捕捉识别重点 |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **[Intro]<br>动作 01** | `00:00.00 - 00:07.87` | **7.87s** | `[Intro] 🎵 Musical Awakening` | **“预备！踏步走！”** | **1.2s** | **6.6s** | **晨光萌芽踏步**<br>⏰ 倒数准备！小手叉腰，随着欢快节拍原地轻快踏步！ | 髋膝垂直位移<br>双腿交替抬起 |
+| **[Verse 1]<br>动作 02** | `00:07.87 - 00:11.93` | **4.06s** | `"Good morning sun, up in the sky,"` | **“双手托起太阳！”** | **1.3s** | **2.7s** | **托起金色太阳**<br>☀️ 双手从胸前缓缓推向天空，托出金色大太阳！ | **双手腕高过头部**<br>(`y_wrist < y_head`) |
+| **[Verse 1]<br>动作 03** | `00:11.93 - 00:15.97` | **4.04s** | `"Waving your golden hands so high!"` | **“高高招招手！”** | **1.2s** | **2.8s** | **金色大手高招手**<br>✨ 双手高高举过头顶，像太阳光芒向左右大招手！ | **双臂高举大幅摆动**<br>(`y_wrist < y_head`) |
+| **[Verse 1]<br>动作 04** | `00:15.97 - 00:19.73` | **3.76s** | `"Wake up, brush your teeth and smile,"` | **“刷刷牙~ 笑一笑！”** | **1.4s** | **2.3s** | **刷刷小牙大微笑**<br>🪥 小拳头当牙刷左右刷刷刷，露出开心大笑脸！ | 单手近嘴部摆动<br>手指点向嘴角笑脸 |
+| **[Verse 1]<br>动作 05** | `00:19.73 - 00:23.77` | **4.04s** | `"Let’s go learn and play a while!"` | **“迈步做游戏！”** | **1.2s** | **2.8s** | **欢快迈步去玩耍**<br>🎒 双手叉腰微屈膝，大步踏起来，出发做游戏！ | 膝盖高抬踏步<br>双脚轻快交替 |
+| **[Verse 1]<br>动作 06** | `00:23.77 - 00:27.73` | **3.96s** | `"Birds are singing in the tree,"` | **“小鸟展翅飞！”** | **1.2s** | **2.7s** | **树上小鸟展翅飞**<br>🐦 双臂当小翅膀上下轻快飞动，模仿小鸟飞呀飞！ | **双臂水平展开扇动**<br>手腕轻柔起伏 |
+| **[Verse 1]<br>动作 07** | `00:27.73 - 00:33.37` | **5.64s** | `"Singing a morning song for me!"` | **“听听早安歌！”** | **1.2s** | **4.4s** | **聆听早安歌与蓄力**<br>🎵 单手拢在小耳朵旁倾听，身体随节拍轻轻摇摆蓄力！ | 躯干左右微倾<br>单手贴耳侧倾听 |
+| **[Chorus]<br>动作 08** | `00:33.37 - 00:37.80` | **4.43s** | `"Hello, hello, it's a brand new day!"` | **“大声说哈喽！”** | **1.2s** | **3.2s** | **招手问候新一天**<br>👋 一手叉腰，另一手从胸前向外大划圈招手说 Hello！ | **单侧手肘高位招手**<br>(`wrist.y < neck.y`) |
+| **[Chorus]<br>动作 09** | `00:37.80 - 00:41.60` | **3.80s** | `"Jump up and shout: Hip-hip-hooray!"` | **“跳起来！喊万岁！”** | **1.3s** | **2.5s** | **跳起欢呼万岁耶**<br>🌟 双脚并拢用力向上蹦跳，双手握拳冲天欢呼万岁！ | **垂直起跳位移**<br>双手高举欢呼 |
+| **[Chorus]<br>动作 10** | `00:41.60 - 00:45.70` | **4.10s** | `"Put on your shoes and count to three,"` | **“穿鞋数一二三！”** | **1.3s** | **2.8s** | **穿上小鞋数一二三**<br>👟 弯腰轻拍左右脚小鞋子，手指灵动比出 1、2、3！ | 俯身触踝动作<br>手指胸前比数字 |
+| **[Chorus]<br>动作 11** | `00:45.70 - 00:51.40` | **5.70s** | `"Come along and sing"` | **“大家一起唱！”** | **1.2s** | **4.5s** | **牵手齐唱早安曲**<br>🎶 双臂向两侧热情展开，邀请小伙伴们一起大合唱！ | 双手向前平举展开<br>掌心朝上热情相邀 |
+| **[间奏]<br>动作 12** | `00:51.40 - 00:59.87` | **8.47s** | `"with me!" [Interlude 旋律间奏]` | **“跟我转个圈！”** | **1.2s** | **7.2s** | **间奏小圆舞旋转**<br>🌸 双手叉腰，踩着轻快小碎步顺时针欢快转一个大圆圈！ | 躯干圆周位移<br>定格笑脸展开 |
+| **[Verse 2]<br>动作 13** | `00:59.87 - 01:03.93` | **4.06s** | `"Pack your bag and grab your hat,"` | **“背包戴小帽！”** | **1.2s** | **2.8s** | **背上书包戴小帽**<br>🎒 双手拉拉小书包肩带，再高高摸摸头戴好遮阳小帽！ | 双手拉肩带姿势<br>双手拍抚头部小帽 |
+| **[Verse 2]<br>动作 14** | `01:03.93 - 01:07.77` | **3.84s** | `"Wave goodbye to the sleepy cat!"` | **“和小猫拜拜！”** | **1.2s** | **2.6s** | **告别贪睡小懒猫**<br>🐱 单手学猫咪揉揉眼，另一只手轻柔招手跟小懒猫告别！ | 双手猫爪握拳揉颊<br>轻柔向斜下方挥手 |
+| **[Verse 2]<br>动作 15** | `01:07.77 - 01:11.57` | **3.80s** | `"Look outside, the sky is blue,"` | **“看！天空好蓝！”** | **1.2s** | **2.6s** | **远眺晴朗大蓝天**<br>🌈 单手搭在额头前眺望远方，左右轻轻探身看蓝天！ | 单手搭额前远眺<br>双腿交替前踢点地 |
+| **[Verse 2]<br>动作 16** | `01:11.57 - 01:17.33` | **5.76s** | `"So many fun things waiting for you!"` | **“好多好玩的！”** | **1.2s** | **4.5s** | **快乐爱心大拥抱**<br>💖 双臂向前环抱，双手在胸前比出一颗大大的跳动爱心！ | **双手腕在胸骨前交汇**<br>(`dist(lWrist, rWrist) < 0.1`) |
+| **[Chorus]<br>动作 17** | `01:17.33 - 01:21.87` | **4.54s** | `"Hello, hello, it's a brand new day!"` | **“再大声说哈喽！”** | **1.3s** | **3.2s** | **再度热情说早安**<br>👋 双脚踩节拍跳动，双手在耳侧交替大幅度热情招手！ | **双耳侧连续大幅挥手**<br>双脚轻跳律动 |
+| **[Chorus]<br>动作 18** | `01:21.87 - 01:25.60` | **3.73s** | `"Jump up and shout: Hip-hip-hooray!"` | **“跳！喊万岁！”** | **1.1s** | **2.6s** | **全力起跳大欢呼**<br>🌟 用力屈膝起跳，双臂举高比出 V 字大欢呼！ | **高跳位移峰值**<br>双臂高举欢呼 |
+| **[Chorus]<br>动作 19** | `01:25.60 - 01:29.80` | **4.20s** | `"Put on your shoes and count to three,"` | **“脚尖踢一点！”** | **1.2s** | **3.0s** | **动感脚尖踢踏步**<br>👟 双手叉腰，左右脚尖轻快向前交替点地踢一踢！ | 左右脚前踢点步<br>身体轻快律动 |
+| **[Chorus]<br>动作 20** | `01:29.80 - 01:35.37` | **5.57s** | `"Come along and sing"` | **“一起拍拍手！”** | **1.2s** | **4.3s** | **欢快拍手齐律动**<br>👏 随着轻快鼓点在胸前整齐大声拍手：啪！啪！啪！ | 胸前双手合拍碰触<br>节拍清晰响应 |
+| **[Bridge]<br>动作 21** | `01:35.37 - 01:43.87` | **8.50s** | `"with me!" [Bridge 宏大过门]` | **“像小鸟飞翔！”** | **1.2s** | **7.3s** | **白鸽展翅大飞翔**<br>🕊️ 双臂如白鸽翅膀展翅起伏，身体像微风一样轻柔滑翔！ | **双臂水平展开扇动**<br>身体中轴圆周位移 |
+| **[Outro]<br>动作 22** | `01:43.87 - 01:47.73` | **3.86s** | `"Good morning, world!"` | **“早安全世界！”** | **1.2s** | **2.6s** | **张开怀抱拥抱世界**<br>🌍 双臂向天空与大地划出最大最宽的金色怀抱拥抱世界！ | 双臂展开最大开角<br>头胸挺拔舒展 |
+| **[Outro]<br>动作 23** | `01:47.73 - 02:00.00` | **12.27s** | `"Let's have fun today!"` | **“今天超开心！耶！”** | **1.4s** | **10.8s** | **灿烂爱心定格微笑**<br>🌟 双手胸前合十或头顶比大爱心，大灿烂微笑定格！太棒啦！ | 双臂头顶合十比心<br>华丽定格笑脸 |
 
 ---
 
