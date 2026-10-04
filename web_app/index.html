@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>奇妙星律动 - 儿童 AI 趣味火柴人舞蹈乐园</title>
+  <title>奇妙星律動 - 兒童 AI 趣味火柴人舞蹈樂園</title>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
   <!-- MediaPipe Pose CDN (若有网络则自动增强，无网络自动回退到内置端侧计算机视觉引擎) -->
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
@@ -39,7 +39,7 @@
 <body class="bg-gradient-to-b from-amber-50 via-sky-50 to-pink-50 text-slate-800 antialiased min-h-screen flex flex-col font-sans select-none">
 
   <!-- ========================================================= -->
-  <!-- 页面 1：歌曲选单大厅 (Song Selection Lobby)                -->
+  <!-- 頁面 1：歌曲選單大廳 (Song Selection Lobby)                -->
   <!-- ========================================================= -->
   <div id="view-lobby" class="flex-1 flex flex-col p-4 md:p-8 max-w-6xl mx-auto w-full">
     
@@ -51,20 +51,20 @@
         </div>
         <div>
           <h1 class="text-2xl md:text-3xl font-black text-amber-600 tracking-tight flex items-center gap-2">
-            奇妙星律动
+            奇妙星律動
             <span class="text-xs md:text-sm font-bold bg-pink-500 text-white px-2.5 py-0.5 rounded-full shadow">
-              趣味火柴人舞蹈乐园
+              趣味火柴人舞蹈樂園
             </span>
           </h1>
           <p class="text-xs md:text-sm text-slate-500 font-medium mt-0.5">
-            真实入镜变身火柴人 · 动作节点真实响应 · 亲切名师原声口令
+            真實入鏡變身火柴人 · 動作節點真實響應 · 親切名師原聲口令
           </p>
         </div>
       </div>
       
       <div class="flex items-center gap-2 bg-white/90 backdrop-blur px-4 py-2 rounded-2xl border border-amber-200 shadow-sm">
         <span class="text-xl">🏆</span>
-        <span class="text-xs font-bold text-slate-600">今日累计跳舞星: <strong id="total-stars-lobby" class="text-amber-500 text-base">58 ⭐</strong></span>
+        <span class="text-xs font-bold text-slate-600">今日累計跳舞星: <strong id="total-stars-lobby" class="text-amber-500 text-base">58 ⭐</strong></span>
       </div>
     </header>
 
@@ -72,13 +72,13 @@
     <div class="bg-gradient-to-r from-amber-400 via-orange-400 to-pink-400 rounded-3xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden mb-8">
       <div class="relative z-10 max-w-xl">
         <span class="bg-white/20 backdrop-blur text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">
-          🌞 晨间元气早操 · 4~6 岁学龄前专属
+          🌞 晨間元氣早操 · 4~6 歲學齡前專屬
         </span>
         <h2 class="text-2xl md:text-4xl font-black mt-3 leading-tight">
-          站到大屏幕前，<br>瞬间化身发光跳舞火柴人！
+          站到大螢幕前，<br>瞬間化身發光跳舞火柴人！
         </h2>
         <p class="text-xs md:text-sm text-amber-100 font-medium mt-2">
-          镜头真实追踪你的双手与身体！你抬手火柴人就抬手，你跳跃火柴人就跳跃！
+          鏡頭真實追蹤你的雙手與身體！你抬手火柴人就抬手，你跳躍火柴人就跳躍！
         </p>
       </div>
       <div class="absolute -right-6 -bottom-8 text-9xl opacity-30 select-none pointer-events-none">
@@ -90,9 +90,9 @@
     <div>
       <div class="flex items-center justify-between mb-4">
         <h3 class="text-lg md:text-xl font-black text-slate-800 flex items-center gap-2">
-          <span>🎵</span> 挑选今日舞蹈课程
+          <span>🎵</span> 挑選今日舞蹈課程
         </h3>
-        <span class="text-xs text-slate-500 font-medium">共 4 首专辑专属曲目</span>
+        <span class="text-xs text-slate-500 font-medium">共 4 首專輯專屬曲目</span>
       </div>
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
@@ -100,7 +100,7 @@
         <!-- 歌曲 1：Morning Sunshine Hello -->
         <div onclick="selectSong('morning')" class="group bg-white rounded-3xl p-5 border-2 border-amber-300 shadow-lg hover:shadow-2xl hover:border-amber-500 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1 relative overflow-hidden">
           <div class="absolute top-3 right-3 bg-amber-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow">
-            首选推荐 🔥
+            首選推薦 🔥
           </div>
           <div>
             <div class="w-full h-36 rounded-2xl bg-gradient-to-tr from-amber-300 via-yellow-200 to-sky-200 flex items-center justify-center text-6xl shadow-inner mb-3 overflow-hidden">
@@ -109,15 +109,15 @@
             <h4 class="font-black text-base text-slate-900 group-hover:text-amber-600 transition-colors">
               Morning Sunshine Hello
             </h4>
-            <p class="text-xs font-bold text-amber-600 mt-0.5">晨间唤醒早操 · 阳光伸展</p>
+            <p class="text-xs font-bold text-amber-600 mt-0.5">晨間喚醒早操 · 陽光伸展</p>
             <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
-              变身发光火柴人，双手举过头顶托起大太阳、和小草一起摇晃与跳跃！
+              變身發光火柴人，雙手舉過頭頂托起大太陽、和小草一起搖晃與跳躍！
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · 难度 ⭐⭐</span>
+            <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · 難度 ⭐⭐</span>
             <button class="bg-amber-500 group-hover:bg-amber-600 text-white text-xs font-black px-3.5 py-1.5 rounded-xl shadow transition-colors">
-              开始跳 🚀
+              開始跳 🚀
             </button>
           </div>
         </div>
@@ -131,15 +131,15 @@
             <h4 class="font-black text-base text-slate-900 group-hover:text-sky-600 transition-colors">
               Wiggle & Freeze!
             </h4>
-            <p class="text-xs font-bold text-sky-600 mt-0.5">扭扭定格游戏 · 专注力训练</p>
+            <p class="text-xs font-bold text-sky-600 mt-0.5">扭扭定格遊戲 · 專注力訓練</p>
             <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
-              火柴人跟着扭动，音乐一停，火柴人立刻定格成冰冻木头人！
+              火柴人跟著扭動，音樂一停，火柴人立刻定格成冰凍木頭人！
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · 难度 ⭐⭐⭐</span>
+            <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · 難度 ⭐⭐⭐</span>
             <button class="bg-sky-500 group-hover:bg-sky-600 text-white text-xs font-black px-3.5 py-1.5 rounded-xl shadow transition-colors">
-              开始跳 🚀
+              開始跳 🚀
             </button>
           </div>
         </div>
@@ -153,15 +153,15 @@
             <h4 class="font-black text-base text-slate-900 group-hover:text-emerald-600 transition-colors">
               Animal Safari March
             </h4>
-            <p class="text-xs font-bold text-emerald-600 mt-0.5">森林动物巡游 · 大肌肉群</p>
+            <p class="text-xs font-bold text-emerald-600 mt-0.5">森林動物巡遊 · 大肌肉群</p>
             <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
-              火柴人大象长鼻子踏步、小鸟飞翔、袋鼠双脚大蹦跳！
+              火柴人大象長鼻子踏步、小鳥飛翔、袋鼠雙腳大蹦跳！
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · 难度 ⭐⭐</span>
+            <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · 難度 ⭐⭐</span>
             <button class="bg-emerald-500 group-hover:bg-emerald-600 text-white text-xs font-black px-3.5 py-1.5 rounded-xl shadow transition-colors">
-              开始跳 🚀
+              開始跳 🚀
             </button>
           </div>
         </div>
@@ -175,15 +175,15 @@
             <h4 class="font-black text-base text-slate-900 group-hover:text-purple-600 transition-colors">
               Ready, Set, Shine!
             </h4>
-            <p class="text-xs font-bold text-purple-600 mt-0.5">星光元气齐舞 · 节奏感</p>
+            <p class="text-xs font-bold text-purple-600 mt-0.5">星光元氣齊舞 · 節奏感</p>
             <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
-              活力开合跳、火柴人头顶星光闪烁，点亮全天好精神！
+              活力開合跳、火柴人頭頂星光閃爍，點亮全天好精神！
             </p>
           </div>
           <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · 难度 ⭐⭐⭐</span>
+            <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · 難度 ⭐⭐⭐</span>
             <button class="bg-purple-500 group-hover:bg-purple-600 text-white text-xs font-black px-3.5 py-1.5 rounded-xl shadow transition-colors">
-              开始跳 🚀
+              開始跳 🚀
             </button>
           </div>
         </div>
@@ -194,24 +194,24 @@
 
 
   <!-- ========================================================= -->
-  <!-- 页面 2：跳舞互动教室 (The Interactive Dance Classroom)       -->
+  <!-- 頁面 2：跳舞互動教室 (The Interactive Dance Classroom)       -->
   <!-- ========================================================= -->
   <div id="view-dance" class="hidden flex-1 flex flex-col p-3 md:p-4 max-w-7xl mx-auto w-full">
     
-    <!-- 教室顶栏：返回、歌曲名、火柴人皮肤、人数、得分、全屏 -->
+    <!-- 教室頂欄：返回、歌曲名、火柴人皮膚、人數、得分、全螢幕 -->
     <header class="bg-white/95 backdrop-blur border border-amber-200 rounded-3xl p-3 md:px-5 mb-3 shadow-md flex flex-wrap items-center justify-between gap-3">
       
       <!-- 返回与曲名 -->
       <div class="flex items-center gap-3">
         <button onclick="backToLobby()" class="px-3.5 py-1.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-xs font-black text-slate-700 transition flex items-center gap-1">
-          ◀ 返回选歌
+          ◀ 返回選歌
         </button>
         <div>
           <h2 id="room-song-title" class="text-base md:text-lg font-black text-slate-800">
             ☀️ Morning Sunshine Hello
           </h2>
           <span class="text-[11px] font-bold text-amber-500 bg-amber-50 px-2 py-0.5 rounded-md">
-            真实火柴人骨骼跟随 · 8 段循环视频
+            真實火柴人骨骼跟隨 · 23 段精準對齊動畫
           </span>
         </div>
       </div>
@@ -221,10 +221,10 @@
         <!-- 火柴人皮肤切换 -->
         <div class="flex items-center bg-slate-100 p-1 rounded-2xl border border-slate-200">
           <button id="skin-btn-gold" onclick="setStickSkin('gold')" class="px-2.5 py-1 rounded-xl text-xs font-black bg-amber-500 text-white shadow-xs transition">
-            🌟 暖阳金
+            🌟 暖陽金
           </button>
           <button id="skin-btn-neon" onclick="setStickSkin('neon')" class="px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition">
-            ⚡ 极光绿
+            ⚡ 極光綠
           </button>
           <button id="skin-btn-pink" onclick="setStickSkin('pink')" class="px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition">
             💖 糖果粉
@@ -249,24 +249,24 @@
       <div class="flex items-center gap-2 md:gap-3">
         <!-- 名师原声开关 -->
         <button id="btn-voice-toggle" onclick="toggleVoice()" class="px-3 py-1.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold text-emerald-700 transition flex items-center gap-1">
-          <span id="voice-icon">🔊</span> 老师原声口令: 开
+          <span id="voice-icon">🔊</span> 老師原聲口令: 開
         </button>
 
-        <!-- 连击与总分 -->
+        <!-- 連擊与总分 -->
         <div class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-4 py-1.5 rounded-2xl shadow-sm flex items-center gap-2.5">
           <div class="text-center">
-            <span class="text-[10px] font-bold opacity-80 leading-none block">连击</span>
+            <span class="text-[10px] font-bold opacity-80 leading-none block">連擊</span>
             <span id="combo-count" class="text-base font-black">12x</span>
           </div>
           <div class="h-5 w-px bg-white/30"></div>
           <div class="text-center">
-            <span class="text-[10px] font-bold opacity-80 leading-none block">星光积分</span>
+            <span class="text-[10px] font-bold opacity-80 leading-none block">星光積分</span>
             <span id="score-count" class="text-base font-black">980</span>
           </div>
         </div>
 
         <!-- 电视全屏按键 -->
-        <button onclick="toggleFullScreen()" class="w-9 h-9 rounded-2xl bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-indigo-600 font-bold flex items-center justify-center text-sm shadow-xs transition" title="电视大屏全屏">
+        <button onclick="toggleFullScreen()" class="w-9 h-9 rounded-2xl bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-indigo-600 font-bold flex items-center justify-center text-sm shadow-xs transition" title="電視大螢幕全螢幕">
           📺
         </button>
       </div>
@@ -275,20 +275,20 @@
     <!-- 核心分屏：左侧 1/3 示范视频 (9:16 长形原画裁剪，不压缩)；右侧 2/3 大屏摄像头与发光火柴人 -->
     <main class="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-3 mb-3">
       
-      <!-- 【左半屏：AI 舞蹈导师示范影片 (占 1/3 宽度，9:16 竖屏原画居中裁剪)】 -->
+      <!-- 【左半屏：AI 舞蹈导师示範影片 (占 1/3 宽度，9:16 竖屏原画居中裁剪)】 -->
       <section class="relative bg-white rounded-3xl border-2 border-amber-200 overflow-hidden shadow-lg flex flex-col justify-between min-h-[380px] lg:col-span-1">
         <!-- 顶栏状态 -->
         <div class="p-3 pb-2 z-20 flex items-center justify-between gap-2 border-b border-amber-100 bg-amber-50/70">
           <span class="bg-amber-500 text-white text-xs font-black px-2.5 py-1 rounded-full shadow flex items-center gap-1.5 shrink-0">
             <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
-            示范影片
+            示範影片
           </span>
           <span id="coach-action-title" class="bg-white text-slate-800 text-xs font-black px-2.5 py-1 rounded-full border border-amber-200 shadow-xs truncate">
-            动作 03: 小太阳升起
+            動作 02: 托起金色太陽
           </span>
         </div>
 
-        <!-- 动作循环视频播放器 (9:16 长形比例裁剪，使用 object-cover 保留原画比例，绝不横向压缩压扁) -->
+        <!-- 動作循環影片播放器 (9:16 長形比例裁剪，使用 object-cover 保留原畫比例，絕不橫向壓縮壓扁) -->
         <div class="flex-1 relative flex items-center justify-center bg-slate-950 p-2 overflow-hidden min-h-[340px]">
           <div class="relative w-full max-w-[260px] h-[370px] sm:h-[420px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-400/50 bg-black flex items-center justify-center">
             <video id="coach-video" 
@@ -299,10 +299,10 @@
             <!-- 9:16 裁剪标识 -->
             <div class="absolute bottom-2 left-2 right-2 flex items-center justify-between pointer-events-none px-1">
               <span class="bg-black/70 backdrop-blur text-[10px] text-amber-300 font-black px-2 py-0.5 rounded-full border border-amber-400/40">
-                📐 9:16 原画裁剪
+                📐 9:16 原畫裁剪
               </span>
               <span class="bg-black/70 backdrop-blur text-[10px] text-white/80 font-bold px-2 py-0.5 rounded-full">
-                不压扁 · 人物自然
+                不壓扁 · 人物自然
               </span>
             </div>
           </div>
@@ -310,27 +310,27 @@
 
         <!-- 底部动作进度提示 -->
         <div class="bg-amber-50 border-t border-amber-100 px-3 py-2 flex items-center justify-between text-xs">
-          <span class="font-bold text-amber-800 shrink-0">下个动作：</span>
-          <span id="next-action-text" class="font-black text-amber-600 truncate">双手向两侧划出大彩虹 ➜</span>
+          <span class="font-bold text-amber-800 shrink-0">下個動作：</span>
+          <span id="next-action-text" class="font-black text-amber-600 truncate">雙臂向兩側劃出大彩虹 ➜</span>
         </div>
       </section>
 
-      <!-- 【右半屏：大屏摄影镜头 + 人物入镜萌趣发光火柴人 (占 2/3 宽度)】 -->
+      <!-- 【右半屏：大螢幕攝影鏡頭 + 人物入鏡趣味發光火柴人 (占 2/3 宽度)】 -->
       <section class="relative bg-white rounded-3xl border-2 border-sky-200 overflow-hidden shadow-lg flex flex-col justify-between min-h-[380px] lg:col-span-2">
         
         <!-- 顶栏：摄像头开关与火柴人状态 -->
         <div class="absolute top-3 left-3 z-20 flex items-center gap-2">
           <button id="btn-camera" onclick="initRealCamera()" class="px-3.5 py-1.5 rounded-full bg-sky-500 hover:bg-sky-600 text-white text-xs font-black shadow transition flex items-center gap-1.5 anim-pulse">
-            📷 开启摄像头
+            📷 開啟攝影機
           </button>
           <span id="stickman-status-badge" class="bg-white/95 backdrop-blur text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-sky-200 shadow-xs">
-            等待小朋友入镜变身火柴人...
+            等待小朋友入鏡變身火柴人...
           </span>
         </div>
 
         <!-- 动作姿态匹配度仪表 (右上角) -->
         <div class="absolute top-3 right-3 z-20 bg-white/95 backdrop-blur px-3 py-1.5 rounded-2xl border border-emerald-300 shadow-sm text-center min-w-[110px]">
-          <span class="text-[10px] font-bold text-slate-500 block leading-none">火柴人动作贴合</span>
+          <span class="text-[10px] font-bold text-slate-500 block leading-none">火柴人動作貼合</span>
           <span id="match-percent" class="text-xl font-black text-emerald-500">96%</span>
           <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden mt-0.5">
             <div id="match-bar" class="bg-emerald-400 h-full w-[96%] transition-all duration-300"></div>
@@ -343,7 +343,7 @@
             PERFECT! 🌟
           </div>
           <div class="bg-white text-amber-600 font-black text-xs px-3 py-1 rounded-full shadow-lg border border-amber-200 mt-1 inline-block">
-            动作与火柴人完美同步，太棒啦！+100
+            動作與火柴人完美同步，太棒啦！+100
           </div>
         </div>
 
@@ -356,10 +356,10 @@
           <div id="camera-guide-prompt" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-slate-900/85 backdrop-blur-md border border-amber-400/50 shadow-2xl text-white max-w-[90%]">
             <span class="text-2xl anim-bounce">📷</span>
             <div class="text-left text-xs">
-              <div class="font-black text-amber-300">点击【📷 开启摄像头】</div>
-              <div class="text-[11px] text-slate-300">小朋友入镜即可实时变身发光火柴人！</div>
+              <div class="font-black text-amber-300">点击【📷 開啟攝影機】</div>
+              <div class="text-[11px] text-slate-300">小朋友入鏡即可即時變身發光火柴人！</div>
             </div>
-            <button onclick="initRealCamera()" class="ml-1 px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 text-white font-black text-xs shadow hover:scale-105 active:scale-95 transition whitespace-nowrap">开启镜头</button>
+            <button onclick="initRealCamera()" class="ml-1 px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 text-white font-black text-xs shadow hover:scale-105 active:scale-95 transition whitespace-nowrap">開啟鏡頭</button>
           </div>
         </div>
 
@@ -367,9 +367,9 @@
         <div class="bg-sky-50 border-t border-sky-100 px-4 py-2 flex items-center justify-between text-xs">
           <div class="flex items-center gap-1.5">
             <span id="motion-dot" class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span id="motion-tip-text" class="font-bold text-slate-700">火柴人动作引导：双手高高托起小太阳！</span>
+            <span id="motion-tip-text" class="font-bold text-slate-700">火柴人動作引導：雙手托起大太陽，暖洋洋！</span>
           </div>
-          <span class="text-slate-400">端侧实时视觉骨骼追踪 · 保护儿童隐私</span>
+          <span class="text-slate-400">端側即時視覺骨骼追蹤 · 保護兒童隱私</span>
         </div>
 
       </section>
@@ -379,15 +379,15 @@
     <!-- 【下方区域：专注呈现同步大歌词】 -->
     <footer class="bg-white/95 backdrop-blur border border-amber-200 rounded-3xl p-4 shadow-md flex flex-col gap-3">
       
-      <!-- 歌词卡拉OK大条 (主界面最醒目部分) -->
+      <!-- 歌詞卡拉OK大條 (主界面最醒目部分) -->
       <div class="bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-50 border border-amber-200 rounded-2xl py-3 px-4 text-center relative overflow-hidden shadow-inner">
-        <!-- 英文主歌词 (超大字号、欢快高亮) -->
+        <!-- 英文主歌詞 (超大字号、欢快高亮) -->
         <div id="lyric-main" class="text-xl md:text-3xl font-black text-amber-600 tracking-wide transition-all duration-300">
           "Morning sunshine hello! Waking up the sky so bright!"
         </div>
-        <!-- 中文对照与动作引导 (清晰易懂) -->
+        <!-- 中文對照與動作引導 (清晰易懂) -->
         <div id="lyric-sub" class="text-sm md:text-base font-extrabold text-slate-600 mt-1">
-          ☀️ 早安阳光！天空变得好明亮，小手托起大太阳！
+          ☀️ ☀️ 早安陽光！雙手托起大太陽，照亮天空暖洋洋！
         </div>
       </div>
 
@@ -418,11 +418,11 @@
 
         <!-- 快速跳转按钮 -->
         <div class="hidden md:flex items-center gap-1">
-          <button onclick="seekTime(0)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">01 预备</button>
-          <button onclick="seekTime(8)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">02 摇摆</button>
-          <button onclick="seekTime(16)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">03 升太阳</button>
+          <button onclick="seekTime(0)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">01 預備</button>
+          <button onclick="seekTime(8)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">02 搖擺</button>
+          <button onclick="seekTime(16)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">03 升太陽</button>
           <button onclick="seekTime(32)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">05 招招手</button>
-          <button onclick="seekTime(48)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">06 抓阳光</button>
+          <button onclick="seekTime(48)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">06 抓陽光</button>
           <button onclick="seekTime(58)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">07 小兔跳</button>
           <button onclick="seekTime(82)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">08 比心</button>
         </div>
@@ -447,255 +447,255 @@
         timeline: [
           {
             start: 0, end: 7.87,
-            title: "[Intro] 动作 01: 晨光萌芽踏步",
+            title: "[Intro] 動作 01: 晨光萌芽踏步",
             video: "./videos/loop_01_march.mp4",
             voice: "./voices/voice_01.mp3",
-            lyric: "[Intro] 🎵 Musical Awakening",
-            sub: "⏰ 准备倒数！小手叉腰，随着欢快节拍原地轻快踏步！",
-            promptText: "预备！踏步走！",
-            next: "双手托起太阳 ➜",
+            lyric: "[Intro] \ud83c\udfb5 Musical Awakening",
+            sub: "⏰ 倒數預備！小手插腰，像精神的小士兵踩著節拍原地踏步！",
+            promptText: "小手插腰，踩著拍子踏步走！",
+            next: "雙手托起大太陽 ➜",
             targetPose: "march"
           },
           {
             start: 7.87, end: 11.93,
-            title: "[Verse 1] 动作 02: 托起金色太阳",
+            title: "[Verse 1] 動作 02: 托起金色太陽",
             video: "./videos/loop_03_sun_rise.mp4",
             voice: "./voices/voice_03.mp3",
             lyric: "\"Good morning sun, up in the sky,\"",
-            sub: "☀️ 双手从胸前缓缓推向天空，托出金色大太阳！",
-            promptText: "双手托起太阳！",
-            next: "高高招招手 ➜",
+            sub: "☀️ 太陽升起啦！小手從胸口慢慢推上天空，捧出發光大太陽！",
+            promptText: "雙手托起大太陽，暖洋洋！",
+            next: "金色大光芒大招手 ➜",
             targetPose: "sun_rise"
           },
           {
             start: 11.93, end: 15.97,
-            title: "[Verse 1] 动作 03: 太阳金色大手招招手",
+            title: "[Verse 1] 動作 03: 太陽金色大手招招手",
             video: "./videos/loop_04_rainbow.mp4",
             voice: "./voices/voice_04.mp3",
             lyric: "\"Waving your golden hands so high!\"",
-            sub: "✨ 双手高高举过头顶，像太阳光芒向左右大招手！",
-            promptText: "高高招招手！",
-            next: "刷刷牙笑一笑 ➜",
+            sub: "✨ 我們是太陽的金色光芒！雙手高舉過頭頂，向左招手、向右招手！",
+            promptText: "金色大光芒，左右大招手！",
+            next: "小牙刷刷刷大笑臉 ➜",
             targetPose: "wave"
           },
           {
             start: 15.97, end: 19.73,
-            title: "[Verse 1] 动作 04: 刷刷小牙大微笑",
+            title: "[Verse 1] 動作 04: 刷刷小牙大微笑",
             video: "./videos/loop_05_wave.mp4",
             voice: "./voices/voice_05.mp3",
             lyric: "\"Wake up, brush your teeth and smile,\"",
-            sub: "🪥 小拳头当牙刷左右刷刷刷，露出开心大笑脸！",
-            promptText: "刷刷牙~ 笑一笑！",
-            next: "迈步做游戏 ➜",
+            sub: "🪥 小拳頭變身牙刷，上上下下刷乾淨，露出白白牙齒嘻嘻笑！",
+            promptText: "小牙刷刷刷刷，露出笑臉大聲笑！",
+            next: "邁開大步去探險 ➜",
             targetPose: "wave"
           },
           {
             start: 19.73, end: 23.77,
-            title: "[Verse 1] 动作 05: 欢快迈步去玩耍",
+            title: "[Verse 1] 動作 05: 歡快邁步去探險",
             video: "./videos/loop_01_march.mp4",
             voice: "./voices/voice_06.mp3",
-            lyric: "\"Let’s go learn and play a while!\"",
-            sub: "🎒 双手叉腰微屈膝，大步踏起来，出发做游戏！",
-            promptText: "迈步做游戏！",
-            next: "小鸟展翅飞 ➜",
+            lyric: "\"Let\u2019s go learn and play a while!\"",
+            sub: "🎒 精神抖擻！雙手插腰大步往前踏，準備出發學本領、玩遊戲！",
+            promptText: "邁開大步，出發去探險做遊戲！",
+            next: "小鳥展翅高高飛 ➜",
             targetPose: "march"
           },
           {
             start: 23.77, end: 27.73,
-            title: "[Verse 1] 动作 06: 树上小鸟展翅飞",
+            title: "[Verse 1] 動作 06: 樹上小鳥展翅飛",
             video: "./videos/loop_02_sway_grass.mp4",
             voice: "./voices/voice_07.mp3",
             lyric: "\"Birds are singing in the tree,\"",
-            sub: "🐦 双臂当小翅膀上下轻快飞动，模仿小鸟飞呀飞！",
-            promptText: "小鸟展翅飞！",
-            next: "听听早安歌 ➜",
+            sub: "🐦 手臂變成彩色羽毛翅膀，輕輕拍動，飛到大樹上跳舞！",
+            promptText: "雙臂輕輕拍，學小鳥展翅高飛！",
+            next: "小手貼耳聽晨曲 ➜",
             targetPose: "wave"
           },
           {
             start: 27.73, end: 33.37,
-            title: "[Verse 1] 动作 07: 聆听早安歌与蓄力",
+            title: "[Verse 1] 動作 07: 聆聽晨曲與蓄力",
             video: "./videos/loop_02_sway_grass.mp4",
             voice: "./voices/voice_02.mp3",
             lyric: "\"Singing a morning song for me!\"",
-            sub: "🎵 单手拢在小耳朵旁倾听，身体随节拍轻轻摇摆蓄力！",
-            promptText: "听听早安歌！",
-            next: "大声说哈喽 ➜",
+            sub: "🎶 一隻小手輕輕貼在耳邊，身體左右搖擺，靜靜聽小鳥唱歌！",
+            promptText: "小手貼耳朵，聽聽小鳥唱晨曲！",
+            next: "熱情招手說哈囉 ➜",
             targetPose: "sway"
           },
           {
-            start: 33.37, end: 37.80,
-            title: "[Chorus] 动作 08: 招手问候新一天",
+            start: 33.37, end: 37.8,
+            title: "[Chorus] 動作 08: 熱情招手說哈囉",
             video: "./videos/loop_05_wave.mp4",
             voice: "./voices/voice_05.mp3",
             lyric: "\"Hello, hello, it's a brand new day!\"",
-            sub: "👋 一手叉腰，另一手从胸前向外大划圈招手说 Hello！",
-            promptText: "大声说哈喽！",
-            next: "跳起来喊万岁 ➜",
+            sub: "👋 站直身體，一隻手叉腰，另一手向外大畫半圓大聲說 Hello！",
+            promptText: "熱情招招手，跟新的一天說哈囉！",
+            next: "用力蹦跳喊萬歲 ➜",
             targetPose: "wave"
           },
           {
-            start: 37.80, end: 41.60,
-            title: "[Chorus] 动作 09: 跳起欢呼万岁耶",
+            start: 37.8, end: 41.6,
+            title: "[Chorus] 動作 09: 歡呼起跳大萬歲",
             video: "./videos/loop_07_bunny_hop.mp4",
             voice: "./voices/voice_08.mp3",
             lyric: "\"Jump up and shout: Hip-hip-hooray!\"",
-            sub: "🌟 双脚并拢用力向上蹦跳，双手握拳冲天欢呼万岁！",
-            promptText: "跳起来！喊万岁！",
-            next: "穿鞋数一二三 ➜",
+            sub: "🌟 雙膝微彎蓄力，雙腳用力向上一跳，雙手衝天高喊萬歲！",
+            promptText: "用力蹦起來！雙手高舉喊萬歲！",
+            next: "彎腰摸鞋數一二三 ➜",
             targetPose: "jump"
           },
           {
-            start: 41.60, end: 45.70,
-            title: "[Chorus] 动作 10: 穿上小鞋数一二三",
+            start: 41.6, end: 45.7,
+            title: "[Chorus] 動作 10: 穿上小鞋數一二三",
             video: "./videos/loop_06_reach.mp4",
             voice: "./voices/voice_09.mp3",
             lyric: "\"Put on your shoes and count to three,\"",
-            sub: "👟 弯腰轻拍左右脚小鞋子，手指灵动比出 1、2、3！",
-            promptText: "穿鞋数一二三！",
-            next: "大家一起唱 ➜",
+            sub: "👟 彎腰輕拍左右小鞋子，站起來手指俏皮點數：一、二、三！",
+            promptText: "彎腰摸摸小鞋子，伸指數一二三！",
+            next: "張開雙手齊合唱 ➜",
             targetPose: "march"
           },
           {
-            start: 45.70, end: 51.40,
-            title: "[Chorus] 动作 11: 牵手齐唱早安曲",
+            start: 45.7, end: 51.4,
+            title: "[Chorus] 動作 11: 牽手齊唱早安曲",
             video: "./videos/loop_03_sun_rise.mp4",
             voice: "./voices/voice_10.mp3",
             lyric: "\"Come along and sing\"",
-            sub: "🎶 双臂向两侧热情展开，邀请小伙伴们一起大合唱！",
-            promptText: "大家一起唱！",
-            next: "跟我转个圈 ➜",
+            sub: "🎶 雙手像花朵向兩側熱情盛開，踩著節拍邀請好朋友一起唱！",
+            promptText: "張開雙手，邀請好朋友一起唱！",
+            next: "轉個歡樂大圓圈 ➜",
             targetPose: "reach"
           },
           {
-            start: 51.40, end: 59.87,
-            title: "[间奏] 动作 12: 间奏小圆舞旋转",
+            start: 51.4, end: 59.87,
+            title: "[間奏] 動作 12: 歡樂旋轉小圓舞",
             video: "./videos/loop_07_bunny_hop.mp4",
             voice: "./voices/voice_01.mp3",
-            lyric: "\"with me!\" [Interlude 旋律间奏]",
-            sub: "🌸 双手叉腰，踩着轻快小碎步顺时针欢快转一个大圆圈！",
-            promptText: "跟我转个圈！",
-            next: "背包戴小帽 ➜",
+            lyric: "\"with me!\" [Interlude \u65cb\u5f8b\u9593\u594f]",
+            sub: "🌸 雙手插腰踩小碎步，輕快轉一個大圓圈，轉完站定比朵花！",
+            promptText: "手叉小蠻腰，輕輕轉個歡樂圓圈！",
+            next: "背起書包戴小帽 ➜",
             targetPose: "sway"
           },
           {
             start: 59.87, end: 63.93,
-            title: "[Verse 2] 动作 13: 背上书包戴小帽",
+            title: "[Verse 2] 動作 13: 背起書包戴小帽",
             video: "./videos/loop_01_march.mp4",
             voice: "./voices/voice_10.mp3",
             lyric: "\"Pack your bag and grab your hat,\"",
-            sub: "🎒 双手拉拉小书包肩带，再高高摸摸头戴好遮阳小帽！",
-            promptText: "背包戴小帽！",
-            next: "和小猫拜拜 ➜",
+            sub: "🎒 雙手拉住書包背帶拍拍肩膀，再舉高雙手輕摸頭頂戴正帽子！",
+            promptText: "背起小書包，戴上遮陽小圓帽！",
+            next: "和小懶貓揮手拜拜 ➜",
             targetPose: "march"
           },
           {
             start: 63.93, end: 67.77,
-            title: "[Verse 2] 动作 14: 告别贪睡小懒猫",
+            title: "[Verse 2] 動作 14: 告別貪睡小懶貓",
             video: "./videos/loop_05_wave.mp4",
             voice: "./voices/voice_05.mp3",
             lyric: "\"Wave goodbye to the sleepy cat!\"",
-            sub: "🐱 单手学猫咪揉揉眼，另一只手轻柔招手跟小懒猫告别！",
-            promptText: "和小猫拜拜！",
-            next: "看天空好蓝 ➜",
+            sub: "🐱 雙手變貓爪揉揉小臉蛋，再向斜下方輕輕揮手跟懶貓咪說拜拜！",
+            promptText: "學貓咪揉揉眼，跟貪睡小貓說拜拜！",
+            next: "抓取白雲放口袋 ➜",
             targetPose: "wave"
           },
           {
             start: 67.77, end: 71.57,
-            title: "[Verse 2] 动作 15: 远眺晴朗大蓝天",
+            title: "[Verse 2] 動作 15: 抓取白雲放入口袋",
             video: "./videos/loop_06_reach.mp4",
             voice: "./voices/voice_11.mp3",
             lyric: "\"Look outside, the sky is blue,\"",
-            sub: "🌈 单手搭在额头前眺望远方，左右轻轻探身看蓝天！",
-            promptText: "看！天空好蓝！",
-            next: "好多好玩的 ➜",
+            sub: "☁️ 墊起腳尖伸手向上抓一把柔軟白雲塞進口袋，單手遮眉望藍天！",
+            promptText: "伸手向上抓取白雲放口袋，抬頭看藍天！",
+            next: "擁抱快樂大愛心 ➜",
             targetPose: "reach"
           },
           {
             start: 71.57, end: 77.33,
-            title: "[Verse 2] 动作 16: 快乐爱心大拥抱",
+            title: "[Verse 2] 動作 16: 快樂愛心大擁抱",
             video: "./videos/loop_08_heart.mp4",
             voice: "./voices/voice_07.mp3",
             lyric: "\"So many fun things waiting for you!\"",
-            sub: "💖 双臂向前环抱，双手在胸前比出一颗大大的跳动爱心！",
-            promptText: "好多好玩的！",
-            next: "再大声说哈喽 ➜",
+            sub: "💖 雙臂在空中環抱大自然，收在胸口拼出跳動的大愛心送出去！",
+            promptText: "雙臂畫大圓，胸前比出跳動大愛心！",
+            next: "再度熱情大招手 ➜",
             targetPose: "heart"
           },
           {
             start: 77.33, end: 81.87,
-            title: "[Chorus] 动作 17: 再度热情说早安",
+            title: "[Chorus] 動作 17: 再度熱情大招手",
             video: "./videos/loop_05_wave.mp4",
             voice: "./voices/voice_05.mp3",
             lyric: "\"Hello, hello, it's a brand new day!\"",
-            sub: "👋 双脚踩节拍跳动，双手在耳侧交替大幅度热情招手！",
-            promptText: "再大声说哈喽！",
-            next: "跳！喊万岁！ ➜",
+            sub: "👋 雙腳踩節奏踏跳，雙手在耳側交替像波浪一樣大幅度招手！",
+            promptText: "雙腳小跳步，雙手交替大招手！",
+            next: "深蹲起跳喊耶 ➜",
             targetPose: "wave"
           },
           {
-            start: 81.87, end: 85.60,
-            title: "[Chorus] 动作 18: 全力起跳大欢呼",
+            start: 81.87, end: 85.6,
+            title: "[Chorus] 動作 18: 深蹲起跳大爆發",
             video: "./videos/loop_07_bunny_hop.mp4",
             voice: "./voices/voice_08.mp3",
             lyric: "\"Jump up and shout: Hip-hip-hooray!\"",
-            sub: "🌟 用力屈膝起跳，双臂举高比出 V 字大欢呼！",
-            promptText: "跳！喊万岁！",
-            next: "脚尖踢一点 ➜",
+            sub: "🐰 蹲下蓄力、高高蹦跳！小拳頭在頭頂綻放爆米花，大喊耶！",
+            promptText: "深蹲彈跳起飛！雙手握拳喊耶！",
+            next: "小腳輕輕踢點步 ➜",
             targetPose: "jump"
           },
           {
-            start: 85.60, end: 89.80,
-            title: "[Chorus] 动作 19: 动感脚尖踢踏步",
+            start: 85.6, end: 89.8,
+            title: "[Chorus] 動作 19: 動感腳尖踢點步",
             video: "./videos/loop_01_march.mp4",
             voice: "./voices/voice_09.mp3",
             lyric: "\"Put on your shoes and count to three,\"",
-            sub: "👟 双手叉腰，左右脚尖轻快向前交替点地踢一踢！",
-            promptText: "脚尖踢一点！",
-            next: "一起拍拍手 ➜",
+            sub: "👟 雙手插腰站穩，左右腳尖輪流往前踩小水坑，踢一踢點一點！",
+            promptText: "小手插腰，左右小腳尖輕輕點地！",
+            next: "整齊歡樂拍拍手 ➜",
             targetPose: "march"
           },
           {
-            start: 89.80, end: 95.37,
-            title: "[Chorus] 动作 20: 欢快拍手齐律动",
+            start: 89.8, end: 95.37,
+            title: "[Chorus] 動作 20: 歡快齊聲拍拍手",
             video: "./videos/loop_04_rainbow.mp4",
             voice: "./voices/voice_10.mp3",
             lyric: "\"Come along and sing\"",
-            sub: "👏 随着轻快鼓点在胸前整齐大声拍手：啪！啪！啪！",
-            promptText: "一起拍拍手！",
-            next: "像小鸟飞翔 ➜",
+            sub: "👏 踩著歡樂重音在胸前大聲拍手：啪！啪！啪！身體快樂彈動！",
+            promptText: "跟著大重音，整整齊齊拍拍手！",
+            next: "白鴿展翅大滑翔 ➜",
             targetPose: "wave"
           },
           {
             start: 95.37, end: 103.87,
-            title: "[Bridge] 动作 21: 白鸽展翅大飞翔",
+            title: "[Bridge] 動作 21: 白鴿展翅大滑翔",
             video: "./videos/loop_02_sway_grass.mp4",
             voice: "./voices/voice_04.mp3",
-            lyric: "\"with me!\" [Bridge 宏大过门]",
-            sub: "🕊️ 双臂如白鸽翅膀展翅起伏，身体像微风一样轻柔滑翔！",
-            promptText: "像小鸟飞翔！",
-            next: "早安全世界 ➜",
+            lyric: "\"with me!\" [Bridge \u5b8f\u5927\u904e\u9580]",
+            sub: "🕊️ 雙手水平張開像大鳥滑翔，腳踩小碎步輕柔起伏，微風吹過來！",
+            promptText: "展開白鴿翅膀，像微風在天空滑翔！",
+            next: "張開懷抱迎世界 ➜",
             targetPose: "sway"
           },
           {
             start: 103.87, end: 107.73,
-            title: "[Outro] 动作 22: 张开怀抱拥抱世界",
+            title: "[Outro] 動作 22: 擁抱全世界早安",
             video: "./videos/loop_03_sun_rise.mp4",
             voice: "./voices/voice_12.mp3",
             lyric: "\"Good morning, world!\"",
-            sub: "🌍 双臂向天空与大地划出最大最宽的金色怀抱拥抱世界！",
-            promptText: "早安全世界！",
-            next: "今天超开心 ➜",
+            sub: "🌍 雙臂向外展開畫出最大的金色大圓，挺胸抬頭向世界道早安！",
+            promptText: "雙臂畫出大金色圓圈，擁抱全世界！",
+            next: "合十定格大微笑 ➜",
             targetPose: "sun_rise"
           },
           {
-            start: 107.73, end: 120.00,
-            title: "[Outro] 动作 23: 灿烂爱心定格微笑",
+            start: 107.73, end: 120.0,
+            title: "[Outro] 動作 23: 燦爛定格大比心",
             video: "./videos/action_09_finish.mp4",
             voice: "./voices/voice_12.mp3",
             lyric: "\"Let's have fun today!\"",
-            sub: "🌟 双手胸前合十或头顶比大爱心，大灿烂微笑定格！太棒啦！",
-            promptText: "今天超开心！耶！",
-            next: "早操完美通关！🎉 获得 3 颗大金星！",
+            sub: "🌟 深呼吸雙臂上揚，雙手胸前合十或頭頂大比心，燦爛微笑定格！",
+            promptText: "雙手合十胸前鞠躬，定格燦爛大微笑！",
+            next: "早操完美通關！🎉 獲得 3 顆大金星！",
             targetPose: "heart"
           }
         ]
@@ -705,7 +705,7 @@
         file: "./wiggle_freeze.mp3",
         duration: 120,
         timeline: [
-          { start: 0, end: 120, title: "动动与定格游戏", video: "./videos/loop_07_bunny_hop.mp4", voice: "./voices/voice_01.mp3", lyric: "\"Wiggle wiggle wiggle... and FREEZE!\"", sub: "🧊 变成木头人，一动都不能动哦！", next: "木头人定格 ➜", targetPose: "march" }
+          { start: 0, end: 120, title: "動動與定格遊戲", video: "./videos/loop_07_bunny_hop.mp4", voice: "./voices/voice_01.mp3", lyric: "\"Wiggle wiggle wiggle... and FREEZE!\"", sub: "🧊 變成木頭人，一動都不能動哦！", next: "木頭人定格 ➜", targetPose: "march" }
         ]
       },
       safari: {
@@ -713,7 +713,7 @@
         file: "./animal_safari.mp3",
         duration: 120,
         timeline: [
-          { start: 0, end: 120, title: "森林动物巡游", video: "./videos/loop_01_march.mp4", voice: "./voices/voice_09.mp3", lyric: "\"Welcome to the Safari March!\"", sub: "🦁 跟着小动物一起大步向前走！", next: "小动物大巡游 ➜", targetPose: "march" }
+          { start: 0, end: 120, title: "森林動物巡遊", video: "./videos/loop_01_march.mp4", voice: "./voices/voice_09.mp3", lyric: "\"Welcome to the Safari March!\"", sub: "🦁 跟著小動物一起大步向前走！", next: "小動物大巡遊 ➜", targetPose: "march" }
         ]
       },
       shine: {
@@ -721,7 +721,7 @@
         file: "./ready_set_shine.mp3",
         duration: 120,
         timeline: [
-          { start: 0, end: 120, title: "元气星光齐舞", video: "./videos/loop_03_sun_rise.mp4", voice: "./voices/voice_03.mp3", lyric: "\"Ready, Set, Shine!\"", sub: "⭐ 闪闪发光，今天也是最棒的！", next: "星光闪闪 ➜", targetPose: "sun_rise" }
+          { start: 0, end: 120, title: "元氣星光齊舞", video: "./videos/loop_03_sun_rise.mp4", voice: "./voices/voice_03.mp3", lyric: "\"Ready, Set, Shine!\"", sub: "⭐ 閃閃發光，今天也是最棒的！", next: "星光閃閃 ➜", targetPose: "sun_rise" }
         ]
       }
     };
@@ -971,7 +971,7 @@
       activeTrackingEngine = "MediaPipe AI";
       presenceConfidence = Math.min(100, presenceConfidence + 8);
       isHumanDetected = true;
-      stickmanStatusBadge.innerText = "🎉 小朋友已入镜！火柴人合体完成！";
+      stickmanStatusBadge.innerText = "🎉 小朋友已入鏡！火柴人合體完成！";
       stickmanStatusBadge.className = "bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full shadow";
 
       const lm = results.poseLandmarks;
@@ -1038,9 +1038,9 @@
         webcamVideo.srcObject = null;
         isCameraActive = false;
         cameraGuidePrompt.classList.remove('hidden');
-        btnCamera.innerText = "📷 开启摄像头";
+        btnCamera.innerText = "📷 開啟攝影機";
         btnCamera.classList.replace('bg-rose-500', 'bg-sky-500');
-        stickmanStatusBadge.innerText = "等待小朋友入镜变身火柴人...";
+        stickmanStatusBadge.innerText = "等待小朋友入鏡變身火柴人...";
         isHumanDetected = false;
         presenceConfidence = 0;
         return;
@@ -1050,8 +1050,8 @@
         console.warn("navigator.mediaDevices not available, activating fallback");
         isCameraActive = true;
         cameraGuidePrompt.classList.add('hidden');
-        btnCamera.innerText = "⏹ 摄像头已就绪";
-        stickmanStatusBadge.innerText = "✨ 萌趣火柴人准备就绪";
+        btnCamera.innerText = "⏹ 攝影機已就緒";
+        stickmanStatusBadge.innerText = "✨ 趣味火柴人準備就緒";
         isHumanDetected = true;
         presenceConfidence = 80;
         return;
@@ -1067,9 +1067,9 @@
 
         isCameraActive = true;
         cameraGuidePrompt.classList.add('hidden');
-        btnCamera.innerText = "⏹ 关闭摄像头";
+        btnCamera.innerText = "⏹ 關閉攝影機";
         btnCamera.classList.replace('bg-sky-500', 'bg-rose-500');
-        stickmanStatusBadge.innerText = "👀 正在侦测小朋友入镜...";
+        stickmanStatusBadge.innerText = "👀 正在偵測小朋友入鏡...";
 
         resizeCanvas();
         setTimeout(resizeCanvas, 80);
@@ -1081,8 +1081,8 @@
         console.warn("Camera fallback:", err);
         isCameraActive = true;
         cameraGuidePrompt.classList.add('hidden');
-        btnCamera.innerText = "⏹ 摄像头已就绪";
-        stickmanStatusBadge.innerText = "✨ 萌趣火柴人准备就绪";
+        btnCamera.innerText = "⏹ 攝影機已就緒";
+        stickmanStatusBadge.innerText = "✨ 趣味火柴人準備就緒";
         isHumanDetected = true;
         presenceConfidence = 80;
       }
@@ -1401,16 +1401,16 @@
         presenceConfidence = Math.min(100, presenceConfidence + 8);
         isHumanDetected = true;
         if (playerCount === 1) {
-          stickmanStatusBadge.innerText = "🎉 小朋友已入镜！火柴人合体完成！";
+          stickmanStatusBadge.innerText = "🎉 小朋友已入鏡！火柴人合體完成！";
         } else if (playerCount === 2) {
           if (detectedCount >= 2) {
-            stickmanStatusBadge.innerText = "🎉🎉 成功侦测到 2 位小朋友！左右火柴人独立齐舞！";
+            stickmanStatusBadge.innerText = "🎉🎉 成功偵測到 2 位小朋友！左右火柴人獨立齊舞！";
           } else {
-            stickmanStatusBadge.innerText = "🎉 已捕捉到 1 位小朋友！右侧等待另一位小伙伴入镜~";
+            stickmanStatusBadge.innerText = "🎉 已捕捉到 1 位小朋友！右側等待另一位小夥伴入鏡~";
           }
         } else {
           if (detectedCount >= 3) {
-            stickmanStatusBadge.innerText = "🎉🎉🎉 成功侦测到 3 位小朋友！全员火柴人独立齐舞！";
+            stickmanStatusBadge.innerText = "🎉🎉🎉 成功偵測到 3 位小朋友！全員火柴人獨立齊舞！";
           } else {
             stickmanStatusBadge.innerText = `🎉 已捕捉到 ${detectedCount} 位小朋友，等待其余小伙伴入镜~`;
           }
@@ -1421,11 +1421,11 @@
         if (presenceConfidence <= 10) {
           isHumanDetected = false;
           if (playerCount === 1) {
-            stickmanStatusBadge.innerText = "✨ 火柴人准备好啦，走进镜头一起跳！";
+            stickmanStatusBadge.innerText = "✨ 火柴人準備好啦，走進鏡頭一起跳！";
           } else if (playerCount === 2) {
-            stickmanStatusBadge.innerText = "✨ 请两位小朋友分别站到左右两边，火柴人即刻合体！";
+            stickmanStatusBadge.innerText = "✨ 請兩位小朋友分別站到左右兩邊，火柴人即刻合體！";
           } else {
-            stickmanStatusBadge.innerText = "✨ 请三位小朋友分别站到左、中、右，一起变身火柴人！";
+            stickmanStatusBadge.innerText = "✨ 請三位小朋友分別站到左、中、右，一起變身火柴人！";
           }
           stickmanStatusBadge.className = "bg-white/95 text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-sky-200 shadow-xs";
         }
@@ -1461,16 +1461,16 @@
           ctx.lineWidth = 2.5;
 
           const guideSlots = playerCount === 1 
-            ? [{ id: 0, minX: 0.20, width: 0.60, title: "👋 小朋友站在这里，马上合体火柴人！", color: "rgba(250, 204, 21, 0.65)", textColor: "rgba(250, 204, 21, 0.95)" }]
+            ? [{ id: 0, minX: 0.20, width: 0.60, title: "👋 小朋友站在這裡，馬上合體火柴人！", color: "rgba(250, 204, 21, 0.65)", textColor: "rgba(250, 204, 21, 0.95)" }]
             : (playerCount === 2 
                 ? [
-                    { id: 0, minX: 0.05, width: 0.42, title: "👋 P1 (左边小朋友请就位)", color: "rgba(245, 158, 11, 0.65)", textColor: "rgba(245, 158, 11, 0.95)" },
-                    { id: 1, minX: 0.53, width: 0.42, title: "👋 P2 (右边小朋友请就位)", color: "rgba(56, 189, 248, 0.65)", textColor: "rgba(56, 189, 248, 0.95)" }
+                    { id: 0, minX: 0.05, width: 0.42, title: "👋 P1 (左邊小朋友請就位)", color: "rgba(245, 158, 11, 0.65)", textColor: "rgba(245, 158, 11, 0.95)" },
+                    { id: 1, minX: 0.53, width: 0.42, title: "👋 P2 (右邊小朋友請就位)", color: "rgba(56, 189, 248, 0.65)", textColor: "rgba(56, 189, 248, 0.95)" }
                   ]
                 : [
-                    { id: 0, minX: 0.03, width: 0.29, title: "👋 P1 (左边)", color: "rgba(245, 158, 11, 0.65)", textColor: "rgba(245, 158, 11, 0.95)" },
-                    { id: 1, minX: 0.35, width: 0.30, title: "👋 P2 (中间)", color: "rgba(56, 189, 248, 0.65)", textColor: "rgba(56, 189, 248, 0.95)" },
-                    { id: 2, minX: 0.68, width: 0.29, title: "👋 P3 (右边)", color: "rgba(192, 132, 252, 0.65)", textColor: "rgba(192, 132, 252, 0.95)" }
+                    { id: 0, minX: 0.03, width: 0.29, title: "👋 P1 (左邊)", color: "rgba(245, 158, 11, 0.65)", textColor: "rgba(245, 158, 11, 0.95)" },
+                    { id: 1, minX: 0.35, width: 0.30, title: "👋 P2 (中間)", color: "rgba(56, 189, 248, 0.65)", textColor: "rgba(56, 189, 248, 0.95)" },
+                    { id: 2, minX: 0.68, width: 0.29, title: "👋 P3 (右邊)", color: "rgba(192, 132, 252, 0.65)", textColor: "rgba(192, 132, 252, 0.95)" }
                   ]
               );
 
@@ -1491,13 +1491,13 @@
         // 2. 发光火柴人【永远在场舞动】（入镜时实时抓取体态，未入镜时在专属站位招手待命，绝不消失）
         let playersToDraw = [];
         if (playerCount === 1) {
-          playersToDraw.push({ id: 1, name: "P1 乐乐", color: palette.bone, glow: palette.glow, headBg: palette.headBg, poseData: trackedPlayerPoses[0] });
+          playersToDraw.push({ id: 1, name: "P1 樂樂", color: palette.bone, glow: palette.glow, headBg: palette.headBg, poseData: trackedPlayerPoses[0] });
         } else if (playerCount === 2) {
-          playersToDraw.push({ id: 1, name: "P1 乐乐 (左)", color: palette.bone, glow: palette.glow, headBg: palette.headBg, poseData: trackedPlayerPoses[0] });
-          playersToDraw.push({ id: 2, name: "P2 欢欢 (右)", color: "#38bdf8", glow: "rgba(56, 189, 248, 0.95)", headBg: "#e0f2fe", poseData: trackedPlayerPoses[1] });
+          playersToDraw.push({ id: 1, name: "P1 樂樂 (左)", color: palette.bone, glow: palette.glow, headBg: palette.headBg, poseData: trackedPlayerPoses[0] });
+          playersToDraw.push({ id: 2, name: "P2 歡歡 (右)", color: "#38bdf8", glow: "rgba(56, 189, 248, 0.95)", headBg: "#e0f2fe", poseData: trackedPlayerPoses[1] });
         } else {
-          playersToDraw.push({ id: 1, name: "P1 乐乐 (左)", color: palette.bone, glow: palette.glow, headBg: palette.headBg, poseData: trackedPlayerPoses[0] });
-          playersToDraw.push({ id: 2, name: "P2 欢欢 (中)", color: "#38bdf8", glow: "rgba(56, 189, 248, 0.95)", headBg: "#e0f2fe", poseData: trackedPlayerPoses[1] });
+          playersToDraw.push({ id: 1, name: "P1 樂樂 (左)", color: palette.bone, glow: palette.glow, headBg: palette.headBg, poseData: trackedPlayerPoses[0] });
+          playersToDraw.push({ id: 2, name: "P2 歡歡 (中)", color: "#38bdf8", glow: "rgba(56, 189, 248, 0.95)", headBg: "#e0f2fe", poseData: trackedPlayerPoses[1] });
           playersToDraw.push({ id: 3, name: "P3 朵朵 (右)", color: "#c084fc", glow: "rgba(192, 132, 252, 0.95)", headBg: "#f3e8ff", poseData: trackedPlayerPoses[2] });
         }
 
@@ -1687,7 +1687,7 @@
       ctx.fillStyle = boneColor;
       ctx.font = "bold 13px sans-serif";
       ctx.textAlign = "center";
-      const statusText = (d && d.detected) ? (isPoseMatched ? "⭐ PERFECT" : "跟着跳~") : "等待入镜👋";
+      const statusText = (d && d.detected) ? (isPoseMatched ? "⭐ PERFECT" : "跟著跳~") : "等待入鏡👋";
       ctx.fillText(`${p.name} · ${statusText}`, head.x, head.y - headRadius - 28);
 
       ctx.restore();
@@ -1708,7 +1708,7 @@
     }
 
     // ========================================================
-    // 5. 亲切名师原声口令播放与伴奏避让 (Audio Ducking)
+    // 5. 亲切名師原聲口令播放与伴奏避让 (Audio Ducking)
     // ========================================================
     function playTeacherVoice(voiceFile) {
       if (!voiceEnabled || !voiceFile) return;
@@ -1724,10 +1724,10 @@
       voiceEnabled = !voiceEnabled;
       const btn = document.getElementById('btn-voice-toggle');
       if (voiceEnabled) {
-        btn.innerHTML = '<span>🔊</span> 老师原声口令: 开';
+        btn.innerHTML = '<span>🔊</span> 老師原聲口令: 開';
         btn.className = "px-3 py-1.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold text-emerald-700 transition flex items-center gap-1";
       } else {
-        btn.innerHTML = '<span>🔇</span> 老师原声口令: 关';
+        btn.innerHTML = '<span>🔇</span> 老師原聲口令: 關';
         btn.className = "px-3 py-1.5 rounded-2xl bg-slate-100 hover:bg-slate-200 border border-slate-200 text-xs font-bold text-slate-500 transition flex items-center gap-1";
         audioVoice.pause();
         audioBgm.volume = 1.0;
@@ -1767,7 +1767,7 @@
         nextActionText.innerText = seg.next;
         lyricMain.innerText = seg.lyric;
         lyricSub.innerText = seg.sub;
-        motionTipText.innerText = "火柴人动作引导：" + seg.sub;
+        motionTipText.innerText = "火柴人動作引導：" + seg.sub;
 
         if (idx !== lastSpokenSegment) {
           lastSpokenSegment = idx;
@@ -1806,7 +1806,7 @@
       isPlaying = !isPlaying;
       if (isPlaying) {
         playIcon.innerText = "⏸";
-        playLabel.innerText = "暂停舞曲";
+        playLabel.innerText = "暫停舞曲";
         btnPlay.classList.replace('bg-amber-500', 'bg-emerald-500');
 
         audioBgm.play().catch(e => console.log("Audio autoplay fallback:", e));
@@ -1865,7 +1865,7 @@
       const btn = document.getElementById('btn-speed');
       if (playSpeed === 1.0) {
         playSpeed = 0.8;
-        btn.innerText = "🐢 0.8x 慢学";
+        btn.innerText = "🐢 0.8x 慢學";
         audioBgm.playbackRate = 0.8;
         coachVideo.playbackRate = 0.8;
       } else {
