@@ -806,6 +806,11 @@
 
     function setPlayerCount(num) {
       playerCount = num;
+      if (num > 1) {
+        activeTrackingEngine = "Multi-Person Vision Engine";
+      } else {
+        activeTrackingEngine = "CV";
+      }
       [1, 2, 3].forEach(n => {
         const btn = document.getElementById(`player-btn-${n}`);
         if (btn) {
@@ -899,9 +904,9 @@
 
     let lastMediaPipeDetectTime = 0;
 
-    // 处理 MediaPipe 真实 33 身体关键节点
+    // 处理 MediaPipe 真实 33 身体关键节点 (仅在单人模式下使用)
     function onMediaPipePoseResults(results) {
-      if (!isCameraActive) return;
+      if (!isCameraActive || playerCount > 1) return;
 
       if (!results.poseLandmarks || results.poseLandmarks.length === 0) {
         // 如果此帧未捕捉，缓慢衰减置信度，由 Edge-CV 保持无缝衔接
@@ -1102,8 +1107,8 @@
       }
       cvFrameCounter++;
 
-      // 1. 如果 MediaPipe 可用，在后台非阻塞异步投递，绝对不卡顿或阻断主渲染流程！
-      if (mpPose && !isMpRunning) {
+      // 1. 如果是单人模式且 MediaPipe 可用，在后台非阻塞异步投递，绝对不卡顿或阻断主渲染流程！
+      if (playerCount === 1 && mpPose && !isMpRunning) {
         if (cvFrameCounter % 3 === 0) {
           isMpRunning = true;
           mpPose.send({ image: webcamVideo })
@@ -1112,13 +1117,14 @@
         }
       }
 
-      // 2. 如果 MediaPipe 最近 500ms 内持续有高精度 3D 骨骼输出，则继续由 MediaPipe 驱动
+      // 2. 如果是单人模式且 MediaPipe 最近 500ms 内持续有高精度 3D 骨骼输出，则单人由 MediaPipe 驱动
       const now = performance.now();
-      if (activeTrackingEngine === "MediaPipe AI" && (now - lastMediaPipeDetectTime < 500)) {
+      if (playerCount === 1 && activeTrackingEngine === "MediaPipe AI" && (now - lastMediaPipeDetectTime < 500)) {
         return;
       }
 
-      // 3. 否则毫秒级无缝由超灵敏端侧 Edge-CV 引擎全权接管！
+      // 3. 多人模式 (2人/3人) 或离线状态：毫秒级由超灵敏端侧多目标视觉骨骼引擎全权驱动！
+      activeTrackingEngine = playerCount > 1 ? "Multi-Person Vision Engine" : "Edge-CV";
       const cw = cvCanvas.width;
       const ch = cvCanvas.height;
       cvCtx.drawImage(webcamVideo, 0, 0, cw, ch);
@@ -1149,25 +1155,34 @@
         s.rightHandX = s.defaultX + 0.08;
       });
 
-      for (let y = 8; y < ch - 8; y += 2) {
-        for (let x = 8; x < cw - 8; x += 2) {
+      for (let y = 6; y < ch - 6; y += 2) {
+        for (let x = 6; x < cw - 6; x += 2) {
           const idx = (y * cw + x) * 4;
+          const r = currData[idx];
+          const g = currData[idx+1];
+          const b = currData[idx+2];
           
           // 1. 动态位移帧差 (Motion Diff) - 捕捉挥手、跳跃等任何运动
-          const dMotion = (Math.abs(currData[idx] - prevCvFrameData[idx]) +
-                           Math.abs(currData[idx+1] - prevCvFrameData[idx+1]) +
-                           Math.abs(currData[idx+2] - prevCvFrameData[idx+2])) / 3;
+          const dMotion = (Math.abs(r - prevCvFrameData[idx]) +
+                           Math.abs(g - prevCvFrameData[idx+1]) +
+                           Math.abs(b - prevCvFrameData[idx+2])) / 3;
 
           // 2. 背景模型差分 (Background Diff) - 站定不动时依然保持感知
-          const dBg = (Math.abs(currData[idx] - bgCvFrameData[idx]) +
-                       Math.abs(currData[idx+1] - bgCvFrameData[idx+1]) +
-                       Math.abs(currData[idx+2] - bgCvFrameData[idx+2])) / 3;
+          const dBg = (Math.abs(r - bgCvFrameData[idx]) +
+                       Math.abs(g - bgCvFrameData[idx+1]) +
+                       Math.abs(b - bgCvFrameData[idx+2])) / 3;
 
-          bgCvFrameData[idx] += (currData[idx] - bgCvFrameData[idx]) * 0.005;
-          bgCvFrameData[idx+1] += (currData[idx+1] - bgCvFrameData[idx+1]) * 0.005;
-          bgCvFrameData[idx+2] += (currData[idx+2] - bgCvFrameData[idx+2]) * 0.005;
+          bgCvFrameData[idx] += (r - bgCvFrameData[idx]) * 0.005;
+          bgCvFrameData[idx+1] += (g - bgCvFrameData[idx+1]) * 0.005;
+          bgCvFrameData[idx+2] += (b - bgCvFrameData[idx+2]) * 0.005;
 
-          if (dMotion > 10 || dBg > 16) {
+          // 3. 肤色多模态感知 (增强站立微动感知)
+          const isSkin = (r > 55 && g > 35 && b > 20 && r > g && (r - g) > 6 && (r - b) > 8);
+
+          // 综合人体特征像素判定 (门限降为 7 与 11，灵敏度大幅提升)
+          const isPersonPixel = (dMotion > 7 || dBg > 11 || (isSkin && y < ch * 0.75));
+
+          if (isPersonPixel) {
             const screenX = 1.0 - (x / cw);
 
             // 分配到各自独立的玩家扇区内
@@ -1183,15 +1198,24 @@
                 if (y < s.minY) s.minY = y;
                 if (y > s.maxY) s.maxY = y;
 
-                // 独立极值
-                const currentCenter = s.activePixels > 0 ? (s.sumScreenX / s.activePixels) : s.defaultX;
-                if (screenX < currentCenter - 0.02 && y < s.leftHandY) {
-                  s.leftHandY = y;
-                  s.leftHandX = screenX;
+                // 采用该玩家上一帧平滑中轴位置或默认站位，准确解耦左手与右手
+                const p = trackedPlayerPoses[s.id];
+                const refCenterX = (p && p.head && p.head.x) ? p.head.x : s.defaultX;
+
+                // 左侧手部探测 (在身体中心左侧 0.03 以外，且处于上身区域)
+                if (screenX < refCenterX - 0.03 && y < ch * 0.85) {
+                  if (y < s.leftHandY) {
+                    s.leftHandY = y;
+                    s.leftHandX = screenX;
+                  }
                 }
-                if (screenX > currentCenter + 0.02 && y < s.rightHandY) {
-                  s.rightHandY = y;
-                  s.rightHandX = screenX;
+
+                // 右侧手部探测 (在身体中心右侧 0.03 以外，且处于上身区域)
+                if (screenX > refCenterX + 0.03 && y < ch * 0.85) {
+                  if (y < s.rightHandY) {
+                    s.rightHandY = y;
+                    s.rightHandX = screenX;
+                  }
                 }
                 break;
               }
@@ -1206,14 +1230,17 @@
 
       sectors.forEach(s => {
         const p = trackedPlayerPoses[s.id];
-        if (s.activePixels > 8) {
+        if (!p) return;
+
+        // 只要扇区内累计有效人体特征像素达到 6 个，即可精准绑定
+        if (s.activePixels >= 6) {
           p.detected = true;
           detectedCount++;
 
           const centerScreenX = s.sumScreenX / s.activePixels;
-          const topY = Math.max(0.12, (s.minY / ch));
+          const topY = Math.max(0.10, (s.minY / ch));
 
-          // 头部跟随对应小朋友
+          // 头部跟随对应小朋友实际身体中心与高度
           p.head.x += (centerScreenX - p.head.x) * 0.35;
           p.head.y += (topY - p.head.y) * 0.35;
           p.neck.x = p.head.x;
@@ -1236,26 +1263,26 @@
           const rightNormY = s.rightHandY / ch;
 
           // 左手
-          if (leftNormY < p.neck.y + 0.05) {
+          if (leftNormY < p.pelvis.y) {
             p.lWrist.y += (leftNormY - p.lWrist.y) * 0.45;
             p.lWrist.x += (s.leftHandX - p.lWrist.x) * 0.45;
             p.lElbow.x = (p.lShoulder.x + p.lWrist.x) / 2 - 0.03;
             p.lElbow.y = (p.lShoulder.y + p.lWrist.y) / 2;
           } else {
-            p.lWrist.y += (p.pelvis.y + 0.05 - p.lWrist.y) * 0.25;
+            p.lWrist.y += (p.pelvis.y + 0.04 - p.lWrist.y) * 0.25;
             p.lWrist.x += (p.lShoulder.x - 0.03 - p.lWrist.x) * 0.25;
             p.lElbow.x = p.lShoulder.x - 0.03;
             p.lElbow.y = p.lShoulder.y + 0.12;
           }
 
           // 右手
-          if (rightNormY < p.neck.y + 0.05) {
+          if (rightNormY < p.pelvis.y) {
             p.rWrist.y += (rightNormY - p.rWrist.y) * 0.45;
             p.rWrist.x += (s.rightHandX - p.rWrist.x) * 0.45;
             p.rElbow.x = (p.rShoulder.x + p.rWrist.x) / 2 + 0.03;
             p.rElbow.y = (p.rShoulder.y + p.rWrist.y) / 2;
           } else {
-            p.rWrist.y += (p.pelvis.y + 0.05 - p.rWrist.y) * 0.25;
+            p.rWrist.y += (p.pelvis.y + 0.04 - p.rWrist.y) * 0.25;
             p.rWrist.x += (p.rShoulder.x + 0.03 - p.rWrist.x) * 0.25;
             p.rElbow.x = p.rShoulder.x + 0.03;
             p.rElbow.y = p.rShoulder.y + 0.12;
@@ -1266,7 +1293,7 @@
           p.rFinger.x = p.rWrist.x + 0.02;
           p.rFinger.y = p.rWrist.y - 0.02;
 
-          // 下肢
+          // 下肢随躯干动态响应
           p.lKnee.x = p.lHip.x - 0.02;
           p.lKnee.y = p.pelvis.y + 0.14;
           p.rKnee.x = p.rHip.x + 0.02;
@@ -1277,11 +1304,11 @@
           p.rAnkle.y = Math.min(0.94, p.rKnee.y + 0.14);
 
           // 动作判定
-          p.isHandsHigh = (p.lWrist.y < p.head.y + 0.02 && p.rWrist.y < p.head.y + 0.02);
-          p.isWaving = (p.lWrist.y < p.head.y + 0.05 || p.rWrist.y < p.head.y + 0.05);
+          p.isHandsHigh = (p.lWrist.y < p.head.y + 0.05 && p.rWrist.y < p.head.y + 0.05);
+          p.isWaving = (p.lWrist.y < p.head.y + 0.08 || p.rWrist.y < p.head.y + 0.08);
 
         } else {
-          // 该区域未站人：在专属站位保持可爱轻柔律动（永不消失，等待小朋友）
+          // 该区域未站人：在专属站位保持可爱轻柔律动（等待小朋友入镜）
           p.detected = false;
           const idleWave = Math.sin(frameTick * 0.06 + s.id * 1.5) * 0.02;
           p.head.x += (s.defaultX + idleWave - p.head.x) * 0.1;
@@ -1320,17 +1347,33 @@
       if (detectedCount > 0) {
         presenceConfidence = Math.min(100, presenceConfidence + 8);
         isHumanDetected = true;
-        if (detectedCount > 1) {
-          stickmanStatusBadge.innerText = `🎉 已侦测到 ${detectedCount} 位小朋友独立舞动！`;
-        } else {
+        if (playerCount === 1) {
           stickmanStatusBadge.innerText = "🎉 小朋友已入镜！火柴人合体完成！";
+        } else if (playerCount === 2) {
+          if (detectedCount >= 2) {
+            stickmanStatusBadge.innerText = "🎉🎉 成功侦测到 2 位小朋友！左右火柴人独立齐舞！";
+          } else {
+            stickmanStatusBadge.innerText = "🎉 已捕捉到 1 位小朋友！右侧等待另一位小伙伴入镜~";
+          }
+        } else {
+          if (detectedCount >= 3) {
+            stickmanStatusBadge.innerText = "🎉🎉🎉 成功侦测到 3 位小朋友！全员火柴人独立齐舞！";
+          } else {
+            stickmanStatusBadge.innerText = `🎉 已捕捉到 ${detectedCount} 位小朋友，等待其余小伙伴入镜~`;
+          }
         }
         stickmanStatusBadge.className = "bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full shadow";
       } else {
         presenceConfidence = Math.max(0, presenceConfidence - 0.8);
         if (presenceConfidence <= 10) {
           isHumanDetected = false;
-          stickmanStatusBadge.innerText = "✨ 火柴人准备好啦，走进镜头一起跳！";
+          if (playerCount === 1) {
+            stickmanStatusBadge.innerText = "✨ 火柴人准备好啦，走进镜头一起跳！";
+          } else if (playerCount === 2) {
+            stickmanStatusBadge.innerText = "✨ 请两位小朋友分别站到左右两边，火柴人即刻合体！";
+          } else {
+            stickmanStatusBadge.innerText = "✨ 请三位小朋友分别站到左、中、右，一起变身火柴人！";
+          }
           stickmanStatusBadge.className = "bg-white/95 text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-sky-200 shadow-xs";
         }
       }
@@ -1358,17 +1401,37 @@
         };
         const palette = skinPalette[currentSkin] || skinPalette.gold;
 
-        // 1. 如果开启了摄像头但未检测到人，叠加一层轻柔友好的入镜指引
-        if (isCameraActive && !isHumanDetected) {
+        // 1. 多人独立入镜站位指引 (未入镜的位置显示友好的虚线站位框与提示)
+        if (isCameraActive) {
           ctx.save();
           ctx.setLineDash([8, 6]);
           ctx.lineWidth = 2.5;
-          ctx.strokeStyle = "rgba(250, 204, 21, 0.65)";
-          ctx.strokeRect(w * 0.22, h * 0.12, w * 0.56, h * 0.74);
-          ctx.fillStyle = "rgba(250, 204, 21, 0.95)";
-          ctx.font = "bold 14px sans-serif";
-          ctx.textAlign = "center";
-          ctx.fillText("👋 小朋友站在这里，马上合体火柴人！", w * 0.5, h * 0.88);
+
+          const guideSlots = playerCount === 1 
+            ? [{ id: 0, minX: 0.20, width: 0.60, title: "👋 小朋友站在这里，马上合体火柴人！", color: "rgba(250, 204, 21, 0.65)", textColor: "rgba(250, 204, 21, 0.95)" }]
+            : (playerCount === 2 
+                ? [
+                    { id: 0, minX: 0.05, width: 0.42, title: "👋 P1 (左边小朋友请就位)", color: "rgba(245, 158, 11, 0.65)", textColor: "rgba(245, 158, 11, 0.95)" },
+                    { id: 1, minX: 0.53, width: 0.42, title: "👋 P2 (右边小朋友请就位)", color: "rgba(56, 189, 248, 0.65)", textColor: "rgba(56, 189, 248, 0.95)" }
+                  ]
+                : [
+                    { id: 0, minX: 0.03, width: 0.29, title: "👋 P1 (左边)", color: "rgba(245, 158, 11, 0.65)", textColor: "rgba(245, 158, 11, 0.95)" },
+                    { id: 1, minX: 0.35, width: 0.30, title: "👋 P2 (中间)", color: "rgba(56, 189, 248, 0.65)", textColor: "rgba(56, 189, 248, 0.95)" },
+                    { id: 2, minX: 0.68, width: 0.29, title: "👋 P3 (右边)", color: "rgba(192, 132, 252, 0.65)", textColor: "rgba(192, 132, 252, 0.95)" }
+                  ]
+              );
+
+          guideSlots.forEach(slot => {
+            const isDetected = trackedPlayerPoses[slot.id] && trackedPlayerPoses[slot.id].detected;
+            if (!isDetected) {
+              ctx.strokeStyle = slot.color;
+              ctx.strokeRect(w * slot.minX, h * 0.12, w * slot.width, h * 0.74);
+              ctx.fillStyle = slot.textColor;
+              ctx.font = "bold 13px sans-serif";
+              ctx.textAlign = "center";
+              ctx.fillText(slot.title, w * (slot.minX + slot.width / 2), h * 0.88);
+            }
+          });
           ctx.restore();
         }
 
@@ -1416,14 +1479,16 @@
       const lAnk = toCanvasCoords(d.lAnkle.x, d.lAnkle.y, w, h);
       const rAnk = toCanvasCoords(d.rAnkle.x, d.rAnkle.y, w, h);
 
-      // 判断真实动作是否达标
+      // 判断真实动作是否达标 (每位小朋友独立判定，严格基于本人的实际感知)
       let isPoseMatched = false;
-      if (pose === 'sun_rise' || pose === 'reach') {
-        isPoseMatched = d.isHandsHigh;
-      } else if (pose === 'wave') {
-        isPoseMatched = d.isWaving;
-      } else {
-        isPoseMatched = isHumanDetected;
+      if (d && d.detected) {
+        if (pose === 'sun_rise' || pose === 'reach' || pose === 'birds_fly' || pose === 'hands_high' || pose === 'jump_hooray') {
+          isPoseMatched = d.isHandsHigh;
+        } else if (pose === 'wave' || pose === 'brush_teeth' || pose === 'wave_goodbye') {
+          isPoseMatched = d.isWaving;
+        } else {
+          isPoseMatched = true;
+        }
       }
 
       ctx.save();
@@ -1569,7 +1634,7 @@
       ctx.fillStyle = boneColor;
       ctx.font = "bold 13px sans-serif";
       ctx.textAlign = "center";
-      const statusText = isPoseMatched ? "⭐ PERFECT" : "跟着跳~";
+      const statusText = (d && d.detected) ? (isPoseMatched ? "⭐ PERFECT" : "跟着跳~") : "等待入镜👋";
       ctx.fillText(`${p.name} · ${statusText}`, head.x, head.y - headRadius - 28);
 
       ctx.restore();
