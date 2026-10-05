@@ -236,8 +236,11 @@
           </button>
         </div>
 
-        <!-- 人数模式切换 (1人 / 2人 / 3人) -->
-        <div class="flex items-center bg-slate-100 p-1 rounded-2xl border border-slate-200">
+        <!-- 人数模式切换 (1人 / 2人 / 3人 智能自动感应) -->
+        <div class="flex items-center bg-slate-100 p-1 rounded-2xl border border-slate-200" title="鏡頭會根據入鏡人數自動切換 (1~3人)，亦可手動點擊鎖定">
+          <span class="text-[10px] font-bold text-slate-500 px-1 hidden md:inline-flex items-center gap-1">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>自動感應:
+          </span>
           <button id="player-btn-1" onclick="setPlayerCount(1)" class="px-2.5 py-1 rounded-xl text-xs font-black bg-sky-500 text-white shadow-xs transition">
             🧍 1人
           </button>
@@ -947,10 +950,45 @@
       });
     }
 
-    function setPlayerCount(num) {
-      playerCount = num;
-      updatePlayerCountUI(num);
-      stickmanStatusBadge.innerText = `✨ ${num}位火柴人準備就緒`;
+    let autoDetectBuffer = [];
+    let lastAutoSwitchTime = 0;
+    let manualPlayerCountOverrideUntil = 0; // 手動切換後的鎖定時間戳
+
+    function evaluateAutoPlayerCount(detectedCount) {
+      if (!isCameraActive || detectedCount <= 0) return;
+      const now = performance.now();
+      if (now < manualPlayerCountOverrideUntil) return; // 手動點選後 6 秒內不自動覆蓋
+
+      const target = Math.max(1, Math.min(3, Math.round(detectedCount)));
+      autoDetectBuffer.push(target);
+      if (autoDetectBuffer.length > 10) autoDetectBuffer.shift();
+
+      // 當最近 10 次檢測中有至少 7 次判定為相同人數時觸發自動切換
+      const countMatching = autoDetectBuffer.filter(c => c === target).length;
+      if (countMatching >= 7 && target !== playerCount) {
+        if (now - lastAutoSwitchTime > 1200) {
+          lastAutoSwitchTime = now;
+          console.log(`[Auto-Detect] 🎯 畫面人數自適應調整：${playerCount}人 ➜ ${target}人`);
+          setPlayerCount(target, false);
+        }
+      }
+    }
+
+    function setPlayerCount(num, isManual = true) {
+      playerCount = Math.max(1, Math.min(3, num));
+      updatePlayerCountUI(playerCount);
+      if (isManual) {
+        manualPlayerCountOverrideUntil = performance.now() + 6000; // 手動模式鎖定 6 秒
+        stickmanStatusBadge.innerText = `✨ 已手動鎖定為 ${playerCount} 位火柴人模式`;
+      } else {
+        if (playerCount === 1) {
+          stickmanStatusBadge.innerText = "👀 鏡頭感應到 1 位小朋友，火柴人合體就位！";
+        } else if (playerCount === 2) {
+          stickmanStatusBadge.innerText = "🎉 鏡頭感應到 2 位小朋友！已自動調整為雙人齊舞模式！";
+        } else {
+          stickmanStatusBadge.innerText = "🎉🎉🎉 鏡頭感應到 3 位小朋友！已自動調整為三人齊舞派對！";
+        }
+      }
       updateIdlePoses();
     }
 
@@ -1076,6 +1114,18 @@
 
       lastMoveNetDetectTime = performance.now();
       activeTrackingEngine = "MoveNet AI MultiPose";
+
+      // 🎯 核心：实时将 MoveNet 检测到的实际有效人体数送入自适应评估器
+      evaluateAutoPlayerCount(validPoses.length);
+
+      // 自适应多玩家：如果检测到 2 位或更多小朋友，立即在当前帧无缝扩展为多人模式！
+      if (validPoses.length >= 2 && playerCount < 2) {
+        playerCount = Math.min(3, validPoses.length);
+        updatePlayerCountUI(playerCount);
+      } else if (validPoses.length >= 3 && playerCount < 3) {
+        playerCount = 3;
+        updatePlayerCountUI(playerCount);
+      }
 
       // 计算每个人在屏幕上的水平中心点 (镜像后 1.0 - x/vw)
       validPoses.forEach(pose => {
@@ -1537,12 +1587,11 @@
         }
       }
 
-      if (playerCount === 1 && activeTrackingEngine === "MediaPipe AI" && (now - lastMediaPipeDetectTime < 500)) {
-        return;
-      }
+      const isSinglePersonMediaPipeActive = (playerCount === 1 && activeTrackingEngine === "MediaPipe AI" && (now - lastMediaPipeDetectTime < 500));
 
       // 3. 多人模式 (2人/3人) 或离线状态：毫秒级由超灵敏端侧多目标视觉骨骼引擎全权驱动！
-      activeTrackingEngine = playerCount > 1 ? "Multi-Person Vision Engine" : "Edge-CV";
+      // 即使单人模式由 MediaPipe 驱动，端侧视觉引擎依然在背景执行全画幅扫描，以便在第二位/第三位小朋友入镜时瞬间感应并自动切换！
+      activeTrackingEngine = isSinglePersonMediaPipeActive ? "MediaPipe AI" : (playerCount > 1 ? "Multi-Person Vision Engine" : "Edge-CV");
       const cw = cvCanvas.width;
       const ch = cvCanvas.height;
       cvCtx.drawImage(webcamVideo, 0, 0, cw, ch);
@@ -1555,6 +1604,11 @@
         bgCvFrameData = new Float32Array(currData.length);
         for (let i = 0; i < currData.length; i++) bgCvFrameData[i] = currData[i];
       }
+
+      // 全局 3 大物理站位感知计数 (用于无论当前处于几人模式，都能精准探测实际有几个小朋友在镜头前)
+      let leftZonePixels = 0;
+      let centerZonePixels = 0;
+      let rightZonePixels = 0;
 
       // 多人独立扇区定义
       const sectors = getSectors();
@@ -1603,6 +1657,11 @@
           if (isPersonPixel) {
             const screenX = 1.0 - (x / cw);
 
+            // 统计左、中、右三大物理空间的活跃人体像素
+            if (screenX >= 0.04 && screenX <= 0.40) leftZonePixels++;
+            if (screenX >= 0.35 && screenX <= 0.65) centerZonePixels++;
+            if (screenX >= 0.60 && screenX <= 0.96) rightZonePixels++;
+
             // 分配到各自独立的玩家扇区内
             for (let i = 0; i < sectors.length; i++) {
               const s = sectors[i];
@@ -1643,12 +1702,38 @@
       }
       prevCvFrameData = new Uint8ClampedArray(currData);
 
+      // 全局画面人数多模态自动评估 (基于 160x120 隔行采样的空间聚类)
+      const leftActive = leftZonePixels >= 10;
+      const centerActive = centerZonePixels >= 10;
+      const rightActive = rightZonePixels >= 10;
+
+      let cvDetectedPersons = 0;
+      if (leftActive && centerActive && rightActive) {
+        cvDetectedPersons = 3;
+      } else if ((leftActive && rightActive) || 
+                 (leftActive && centerActive && leftZonePixels >= 14 && centerZonePixels >= 14) || 
+                 (rightActive && centerActive && rightZonePixels >= 14 && centerZonePixels >= 14)) {
+        cvDetectedPersons = 2;
+      } else if (leftActive || centerActive || rightActive) {
+        cvDetectedPersons = 1;
+      }
+
+      if (cvDetectedPersons > 0) {
+        evaluateAutoPlayerCount(cvDetectedPersons);
+      }
+
       // 分别对每个玩家进行独立的骨骼驱动与姿态更新
       let detectedCount = 0;
 
       sectors.forEach(s => {
         const p = trackedPlayerPoses[s.id];
         if (!p) return;
+
+        // 如果单人模式由 MediaPipe 提供高精关键点，则跳过 P1 的端侧粗略关键点覆盖
+        if (isSinglePersonMediaPipeActive && s.id === 0) {
+          detectedCount++;
+          return;
+        }
 
         // 只要扇区内累计有效人体特征像素达到 6 个，即可精准绑定
         if (s.activePixels >= 6) {
