@@ -1950,7 +1950,11 @@
           }
 
           playersToDraw.forEach((p, idx) => {
-            drawRealMatchstickMan(ctx, p, targetPose, frameTick, idx, w, h);
+            try {
+              drawRealMatchstickMan(ctx, p, targetPose, frameTick, idx, w, h);
+            } catch (err) {
+              console.error(`Error drawing stickman player ${idx + 1}:`, err);
+            }
           });
         }
       } catch (err) {
@@ -2407,6 +2411,7 @@
       drawCustomCharacterHead(ctx, head, p.role, boneColor, p.headBg, isPoseMatched, tick);
 
       // 6. 玩家专属头顶名牌与 PERFECT 徽章
+      const headRadius = 27;
       ctx.fillStyle = boneColor;
       ctx.font = "bold 13px sans-serif";
       ctx.textAlign = "center";
