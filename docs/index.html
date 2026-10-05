@@ -5,7 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>奇妙星律動 - 兒童 AI 趣味火柴人舞蹈樂園</title>
   <script src="https://www.gstatic.com/antigravity/web/dev/tailwindcss.min.js"></script>
-  <!-- MediaPipe Pose CDN (若有网络则自动增强，无网络自动回退到内置端侧计算机视觉引擎) -->
+  <!-- TensorFlow.js & MoveNet MultiPose (支持 1~6 人实时多人骨骼与火柴人追踪) -->
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-core@4.20.0/dist/tf-core.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-converter@4.20.0/dist/tf-converter.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-backend-webgl@4.20.0/dist/tf-backend-webgl.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/pose-detection@2.1.3/dist/pose-detection.min.js"></script>
+  <!-- MediaPipe Pose CDN (单人备用) -->
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
   <style>
@@ -416,15 +421,16 @@
           <span id="time-total" class="text-xs font-mono font-bold text-slate-400">2:00</span>
         </div>
 
-        <!-- 快速跳转按钮 -->
+        <!-- 快速跳转按钮 (对齐 18 段合并后动作结构) -->
         <div class="hidden md:flex items-center gap-1">
           <button onclick="seekTime(0)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">01 預備</button>
-          <button onclick="seekTime(8)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">02 搖擺</button>
-          <button onclick="seekTime(16)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">03 升太陽</button>
-          <button onclick="seekTime(32)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">05 招招手</button>
-          <button onclick="seekTime(48)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">06 抓陽光</button>
-          <button onclick="seekTime(58)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">07 小兔跳</button>
-          <button onclick="seekTime(82)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">08 比心</button>
+          <button onclick="seekTime(7.87)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">02 托太陽</button>
+          <button onclick="seekTime(15.97)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">03 刷刷牙</button>
+          <button onclick="seekTime(23.77)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">04 小鳥飛</button>
+          <button onclick="seekTime(33.37)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">05 說哈囉</button>
+          <button onclick="seekTime(51.4)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">08 旋轉跳</button>
+          <button onclick="seekTime(59.87)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">09 背書包</button>
+          <button onclick="seekTime(107.73)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">18 燦爛比心</button>
         </div>
 
       </div>
@@ -444,111 +450,67 @@
         title: "Morning Sunshine Hello",
         file: "./morning_sunshine_hello.mp3",
         duration: 120,
-        timeline: [
+                timeline: [
           {
             start: 0, end: 7.87,
             title: "[Intro] 動作 01: 晨光萌芽踏步",
             video: "./videos/loop_01_march.mp4",
             voice: "./voices/voice_01.mp3",
-            lyric: "[Intro] \ud83c\udfb5 Musical Awakening",
+            lyric: "[Intro] 🎵 Musical Awakening",
             sub: "⏰ 倒數預備！小手插腰，像精神的小士兵踩著節拍原地踏步！",
             promptText: "小手插腰，踩著拍子踏步走！",
             next: "雙手托起大太陽 ➜",
             targetPose: "march"
           },
           {
-            start: 7.87, end: 11.93,
-            title: "[Verse 1] 動作 02: 托起金色太陽",
+            start: 7.87, end: 15.97,
+            title: "[Verse 1] 動作 02: 托起太陽高空大招手",
             video: "./videos/loop_03_sun_rise.mp4",
             voice: "./voices/voice_02.mp3",
-            lyric: "\"Good morning sun, up in the sky,\"",
-            sub: "☀️ 太陽升起啦！小手從胸口慢慢推上天空，捧出發光大太陽！",
-            promptText: "雙手托起大太陽，暖洋洋！",
-            next: "金色大光芒大招手 ➜",
+            lyric: "\"Good morning sun, up in the sky, Waving your golden hands so high!\"",
+            sub: "☀️ 雙手從胸前向上托起發光金太陽，雙手在天空左右大幅度歡快招手！",
+            promptText: "雙手托起大太陽，高高舉起左右大招手！",
+            next: "刷刷小牙大步走 ➜",
             targetPose: "sun_rise"
           },
           {
-            start: 11.93, end: 15.97,
-            title: "[Verse 1] 動作 03: 太陽金色大手招招手",
-            video: "./videos/loop_04_rainbow.mp4",
-            voice: "./voices/voice_03.mp3",
-            lyric: "\"Waving your golden hands so high!\"",
-            sub: "✨ 我們是太陽的金色光芒！雙手高舉過頭頂，向左招手、向右招手！",
-            promptText: "金色大光芒，左右大招手！",
-            next: "小牙刷刷刷大笑臉 ➜",
-            targetPose: "wave"
-          },
-          {
-            start: 15.97, end: 19.73,
-            title: "[Verse 1] 動作 04: 刷刷小牙大微笑",
-            video: "./videos/loop_05_wave.mp4",
-            voice: "./voices/voice_04.mp3",
-            lyric: "\"Wake up, brush your teeth and smile,\"",
-            sub: "🪥 小拳頭變身牙刷，上上下下刷乾淨，露出白白牙齒嘻嘻笑！",
-            promptText: "小牙刷刷刷刷，露出笑臉大聲笑！",
-            next: "邁開大步去探險 ➜",
-            targetPose: "wave"
-          },
-          {
-            start: 19.73, end: 23.77,
-            title: "[Verse 1] 動作 05: 歡快邁步去探險",
+            start: 15.97, end: 23.77,
+            title: "[Verse 1] 動作 03: 刷牙微笑大步走",
             video: "./videos/loop_01_march.mp4",
-            voice: "./voices/voice_05.mp3",
-            lyric: "\"Let\u2019s go learn and play a while!\"",
-            sub: "🎒 精神抖擻！雙手插腰大步往前踏，準備出發學本領、玩遊戲！",
-            promptText: "邁開大步，出發去探險做遊戲！",
-            next: "小鳥展翅高高飛 ➜",
+            voice: "./voices/voice_03.mp3",
+            lyric: "\"Wake up, brush your teeth and smile, Let’s go learn and play a while!\"",
+            sub: "🪥 小牙刷刷刷刷露出大笑臉，雙手插腰精神抖擻大步邁開去探險！",
+            promptText: "拿好小牙刷刷刷刷，露出笑臉大步走！",
+            next: "小鳥展翅聽晨曲 ➜",
             targetPose: "march"
           },
           {
-            start: 23.77, end: 27.73,
-            title: "[Verse 1] 動作 06: 樹上小鳥展翅飛",
+            start: 23.77, end: 33.37,
+            title: "[Verse 1] 動作 04: 小鳥展翅聽晨曲",
             video: "./videos/loop_02_sway_grass.mp4",
-            voice: "./voices/voice_06.mp3",
-            lyric: "\"Birds are singing in the tree,\"",
-            sub: "🐦 手臂變成彩色羽毛翅膀，輕輕拍動，飛到大樹上跳舞！",
-            promptText: "雙臂輕輕拍，學小鳥展翅高飛！",
-            next: "小手貼耳聽晨曲 ➜",
-            targetPose: "wave"
-          },
-          {
-            start: 27.73, end: 33.37,
-            title: "[Verse 1] 動作 07: 聆聽晨曲與蓄力",
-            video: "./videos/loop_02_sway_grass.mp4",
-            voice: "./voices/voice_07.mp3",
-            lyric: "\"Singing a morning song for me!\"",
-            sub: "🎶 一隻小手輕輕貼在耳邊，身體左右搖擺，靜靜聽小鳥唱歌！",
-            promptText: "小手貼耳朵，聽聽小鳥唱晨曲！",
-            next: "熱情招手說哈囉 ➜",
+            voice: "./voices/voice_04.mp3",
+            lyric: "\"Birds are singing in the tree, Singing a morning song for me!\"",
+            sub: "🐦 雙臂拍動學小鳥在樹梢滑翔，小手貼耳身體左右搖擺聽晨曲！",
+            promptText: "雙臂展翅學小鳥，小手貼耳聽晨曲！",
+            next: "熱情招手喊萬歲 ➜",
             targetPose: "sway"
           },
           {
-            start: 33.37, end: 37.8,
-            title: "[Chorus] 動作 08: 熱情招手說哈囉",
-            video: "./videos/loop_05_wave.mp4",
-            voice: "./voices/voice_08.mp3",
-            lyric: "\"Hello, hello, it's a brand new day!\"",
-            sub: "👋 站直身體，一隻手叉腰，另一手向外大畫半圓大聲說 Hello！",
-            promptText: "熱情招招手，跟新的一天說哈囉！",
-            next: "用力蹦跳喊萬歲 ➜",
-            targetPose: "wave"
-          },
-          {
-            start: 37.8, end: 41.6,
-            title: "[Chorus] 動作 09: 歡呼起跳大萬歲",
+            start: 33.37, end: 41.60,
+            title: "[Chorus] 動作 05: 熱情招手喊萬歲",
             video: "./videos/loop_07_bunny_hop.mp4",
-            voice: "./voices/voice_09.mp3",
-            lyric: "\"Jump up and shout: Hip-hip-hooray!\"",
-            sub: "🌟 雙膝微彎蓄力，雙腳用力向上一跳，雙手衝天高喊萬歲！",
-            promptText: "用力蹦起來！雙手高舉喊萬歲！",
-            next: "彎腰摸鞋數一二三 ➜",
+            voice: "./voices/voice_05.mp3",
+            lyric: "\"Hello, hello, it's a brand new day! Jump up and shout: Hip-hip-hooray!\"",
+            sub: "👋 招手大聲說 Hello，雙膝深蹲蓄力、用力起跳高喊萬歲！",
+            promptText: "熱情揮手說哈囉，用力高跳喊萬歲！",
+            next: "摸摸小鞋數一二三 ➜",
             targetPose: "jump"
           },
           {
-            start: 41.6, end: 45.7,
-            title: "[Chorus] 動作 10: 穿上小鞋數一二三",
+            start: 41.60, end: 45.70,
+            title: "[Chorus] 動作 06: 穿上小鞋數一二三",
             video: "./videos/loop_06_reach.mp4",
-            voice: "./voices/voice_10.mp3",
+            voice: "./voices/voice_06.mp3",
             lyric: "\"Put on your shoes and count to three,\"",
             sub: "👟 彎腰輕拍左右小鞋子，站起來手指俏皮點數：一、二、三！",
             promptText: "彎腰摸摸小鞋子，伸指數一二三！",
@@ -556,10 +518,10 @@
             targetPose: "march"
           },
           {
-            start: 45.7, end: 51.4,
-            title: "[Chorus] 動作 11: 牽手齊唱早安曲",
+            start: 45.70, end: 51.40,
+            title: "[Chorus] 動作 07: 牽手齊唱早安曲",
             video: "./videos/loop_03_sun_rise.mp4",
-            voice: "./voices/voice_11.mp3",
+            voice: "./voices/voice_07.mp3",
             lyric: "\"Come along and sing\"",
             sub: "🎶 雙手像花朵向兩側熱情盛開，踩著節拍邀請好朋友一起唱！",
             promptText: "張開雙手，邀請好朋友一起唱！",
@@ -567,43 +529,32 @@
             targetPose: "reach"
           },
           {
-            start: 51.4, end: 59.87,
-            title: "[間奏] 動作 12: 歡樂旋轉小圓舞",
+            start: 51.40, end: 59.87,
+            title: "[間奏] 動作 08: 歡樂旋轉小圓舞",
             video: "./videos/loop_07_bunny_hop.mp4",
-            voice: "./voices/voice_12.mp3",
-            lyric: "\"with me!\" [Interlude \u65cb\u5f8b\u9593\u594f]",
+            voice: "./voices/voice_08.mp3",
+            lyric: "\"with me!\" [Interlude 旋律間奏]",
             sub: "🌸 雙手插腰踩小碎步，輕快轉一個大圓圈，轉完站定比朵花！",
             promptText: "手叉小蠻腰，輕輕轉個歡樂圓圈！",
-            next: "背起書包戴小帽 ➜",
+            next: "背起書包貓咪拜拜 ➜",
             targetPose: "sway"
           },
           {
-            start: 59.87, end: 63.93,
-            title: "[Verse 2] 動作 13: 背起書包戴小帽",
-            video: "./videos/loop_01_march.mp4",
-            voice: "./voices/voice_13.mp3",
-            lyric: "\"Pack your bag and grab your hat,\"",
-            sub: "🎒 雙手拉住書包背帶拍拍肩膀，再舉高雙手輕摸頭頂戴正帽子！",
-            promptText: "背起小書包，戴上遮陽小圓帽！",
-            next: "和小懶貓揮手拜拜 ➜",
-            targetPose: "march"
-          },
-          {
-            start: 63.93, end: 67.77,
-            title: "[Verse 2] 動作 14: 告別貪睡小懶貓",
+            start: 59.87, end: 67.77,
+            title: "[Verse 2] 動作 09: 背好書包貓咪拜拜",
             video: "./videos/loop_05_wave.mp4",
-            voice: "./voices/voice_14.mp3",
-            lyric: "\"Wave goodbye to the sleepy cat!\"",
-            sub: "🐱 雙手變貓爪揉揉小臉蛋，再向斜下方輕輕揮手跟懶貓咪說拜拜！",
-            promptText: "學貓咪揉揉眼，跟貪睡小貓說拜拜！",
+            voice: "./voices/voice_09.mp3",
+            lyric: "\"Pack your bag and grab your hat, Wave goodbye to the sleepy cat!\"",
+            sub: "🎒 背起小書包、摸摸小圓帽，雙手揉眼學貓爪，跟貪睡小貓說拜拜！",
+            promptText: "背上小書包戴正小帽子，跟貪睡小貓說拜拜！",
             next: "抓取白雲放口袋 ➜",
             targetPose: "wave"
           },
           {
             start: 67.77, end: 71.57,
-            title: "[Verse 2] 動作 15: 抓取白雲放入口袋",
+            title: "[Verse 2] 動作 10: 抓取白雲放入口袋",
             video: "./videos/loop_06_reach.mp4",
-            voice: "./voices/voice_15.mp3",
+            voice: "./voices/voice_10.mp3",
             lyric: "\"Look outside, the sky is blue,\"",
             sub: "☁️ 墊起腳尖伸手向上抓一把柔軟白雲塞進口袋，單手遮眉望藍天！",
             promptText: "伸手向上抓取白雲放口袋，抬頭看藍天！",
@@ -612,9 +563,9 @@
           },
           {
             start: 71.57, end: 77.33,
-            title: "[Verse 2] 動作 16: 快樂愛心大擁抱",
+            title: "[Verse 2] 動作 11: 快樂愛心大擁抱",
             video: "./videos/loop_08_heart.mp4",
-            voice: "./voices/voice_16.mp3",
+            voice: "./voices/voice_11.mp3",
             lyric: "\"So many fun things waiting for you!\"",
             sub: "💖 雙臂在空中環抱大自然，收在胸口拼出跳動的大愛心送出去！",
             promptText: "雙臂畫大圓，胸前比出跳動大愛心！",
@@ -623,9 +574,9 @@
           },
           {
             start: 77.33, end: 81.87,
-            title: "[Chorus] 動作 17: 再度熱情大招手",
+            title: "[Chorus] 動作 12: 再度熱情大招手",
             video: "./videos/loop_05_wave.mp4",
-            voice: "./voices/voice_17.mp3",
+            voice: "./voices/voice_12.mp3",
             lyric: "\"Hello, hello, it's a brand new day!\"",
             sub: "👋 雙腳踩節奏踏跳，雙手在耳側交替像波浪一樣大幅度招手！",
             promptText: "雙腳小跳步，雙手交替大招手！",
@@ -633,10 +584,10 @@
             targetPose: "wave"
           },
           {
-            start: 81.87, end: 85.6,
-            title: "[Chorus] 動作 18: 深蹲起跳大爆發",
+            start: 81.87, end: 85.60,
+            title: "[Chorus] 動作 13: 深蹲起跳大爆發",
             video: "./videos/loop_07_bunny_hop.mp4",
-            voice: "./voices/voice_18.mp3",
+            voice: "./voices/voice_13.mp3",
             lyric: "\"Jump up and shout: Hip-hip-hooray!\"",
             sub: "🐰 蹲下蓄力、高高蹦跳！小拳頭在頭頂綻放爆米花，大喊耶！",
             promptText: "深蹲彈跳起飛！雙手握拳喊耶！",
@@ -644,10 +595,10 @@
             targetPose: "jump"
           },
           {
-            start: 85.6, end: 89.8,
-            title: "[Chorus] 動作 19: 動感腳尖踢點步",
+            start: 85.60, end: 89.80,
+            title: "[Chorus] 動作 14: 動感腳尖踢點步",
             video: "./videos/loop_01_march.mp4",
-            voice: "./voices/voice_19.mp3",
+            voice: "./voices/voice_14.mp3",
             lyric: "\"Put on your shoes and count to three,\"",
             sub: "👟 雙手插腰站穩，左右腳尖輪流往前踩小水坑，踢一踢點一點！",
             promptText: "小手插腰，左右小腳尖輕輕點地！",
@@ -655,10 +606,10 @@
             targetPose: "march"
           },
           {
-            start: 89.8, end: 95.37,
-            title: "[Chorus] 動作 20: 歡快齊聲拍拍手",
+            start: 89.80, end: 95.37,
+            title: "[Chorus] 動作 15: 歡快齊聲拍拍手",
             video: "./videos/loop_04_rainbow.mp4",
-            voice: "./voices/voice_20.mp3",
+            voice: "./voices/voice_15.mp3",
             lyric: "\"Come along and sing\"",
             sub: "👏 踩著歡樂重音在胸前大聲拍手：啪！啪！啪！身體快樂彈動！",
             promptText: "跟著大重音，整整齊齊拍拍手！",
@@ -667,10 +618,10 @@
           },
           {
             start: 95.37, end: 103.87,
-            title: "[Bridge] 動作 21: 白鴿展翅大滑翔",
+            title: "[Bridge] 動作 16: 白鴿展翅大滑翔",
             video: "./videos/loop_02_sway_grass.mp4",
-            voice: "./voices/voice_21.mp3",
-            lyric: "\"with me!\" [Bridge \u5b8f\u5927\u904e\u9580]",
+            voice: "./voices/voice_16.mp3",
+            lyric: "\"with me!\" [Bridge 宏大過門]",
             sub: "🕊️ 雙手水平張開像大鳥滑翔，腳踩小碎步輕柔起伏，微風吹過來！",
             promptText: "展開白鴿翅膀，像微風在天空滑翔！",
             next: "張開懷抱迎世界 ➜",
@@ -678,9 +629,9 @@
           },
           {
             start: 103.87, end: 107.73,
-            title: "[Outro] 動作 22: 擁抱全世界早安",
+            title: "[Outro] 動作 17: 擁抱全世界早安",
             video: "./videos/loop_03_sun_rise.mp4",
-            voice: "./voices/voice_22.mp3",
+            voice: "./voices/voice_17.mp3",
             lyric: "\"Good morning, world!\"",
             sub: "🌍 雙臂向外展開畫出最大的金色大圓，挺胸抬頭向世界道早安！",
             promptText: "雙臂畫出大金色圓圈，擁抱全世界！",
@@ -688,10 +639,10 @@
             targetPose: "sun_rise"
           },
           {
-            start: 107.73, end: 120.0,
-            title: "[Outro] 動作 23: 燦爛定格大比心",
+            start: 107.73, end: 120.00,
+            title: "[Outro] 動作 18: 燦爛定格大比心",
             video: "./videos/action_09_finish.mp4",
-            voice: "./voices/voice_23.mp3",
+            voice: "./voices/voice_18.mp3",
             lyric: "\"Let's have fun today!\"",
             sub: "🌟 深呼吸雙臂上揚，雙手胸前合十或頭頂大比心，燦爛微笑定格！",
             promptText: "雙手合十胸前鞠躬，定格燦爛大微笑！",
@@ -857,13 +808,7 @@
       viewLobby.classList.remove('hidden');
     }
 
-    function setPlayerCount(num) {
-      playerCount = num;
-      if (num > 1) {
-        activeTrackingEngine = "Multi-Person Vision Engine";
-      } else {
-        activeTrackingEngine = "CV";
-      }
+    function updatePlayerCountUI(num) {
       [1, 2, 3].forEach(n => {
         const btn = document.getElementById(`player-btn-${n}`);
         if (btn) {
@@ -874,7 +819,12 @@
           }
         }
       });
-      stickmanStatusBadge.innerText = `✨ ${num}位火柴人准备就绪`;
+    }
+
+    function setPlayerCount(num) {
+      playerCount = num;
+      updatePlayerCountUI(num);
+      stickmanStatusBadge.innerText = `✨ ${num}位火柴人準備就緒`;
       updateIdlePoses();
     }
 
@@ -930,6 +880,198 @@
         x: clampedX * cw,
         y: clampedY * ch
       };
+    }
+
+    // MoveNet MultiPose 深度学习多人骨骼检测引擎状态
+    let moveNetDetector = null;
+    let isMoveNetLoading = false;
+    let isMoveNetRunning = false;
+    let lastMoveNetDetectTime = 0;
+
+    // 初始化 MoveNet MultiPose AI 引擎 (支持 1~6 人实时多人骨骼与火柴人绑定)
+    async function tryInitMoveNet() {
+      if (typeof poseDetection !== 'undefined' && !moveNetDetector && !isMoveNetLoading) {
+        isMoveNetLoading = true;
+        try {
+          if (typeof tf !== 'undefined') {
+            try {
+              await tf.setBackend('webgl');
+            } catch (e) {
+              console.warn("WebGL 后端不可用，采用默认计算后端:", e);
+            }
+            await tf.ready();
+          }
+          moveNetDetector = await poseDetection.createDetector(
+            poseDetection.SupportedModels.MoveNet,
+            {
+              modelType: poseDetection.movenet.modelType.MULTIPOSE_LIGHTNING,
+              enableTracking: true,
+              trackerType: poseDetection.TrackerType.BoundingBox
+            }
+          );
+          console.log("🎉 MoveNet MultiPose AI 多人骨骼引擎初始化成功！");
+        } catch (err) {
+          console.warn("MoveNet MultiPose 初始化降级至备用引擎:", err);
+          moveNetDetector = null;
+        } finally {
+          isMoveNetLoading = false;
+        }
+      }
+    }
+
+    // 处理 MoveNet MultiPose 检测到的多人真实 17 骨骼关节点数据
+    function handleMoveNetPoses(poses) {
+      if (!isCameraActive || !webcamVideo) return;
+      const vw = webcamVideo.videoWidth || 640;
+      const vh = webcamVideo.videoHeight || 480;
+      if (vw <= 0 || vh <= 0) return;
+
+      // 过滤有效检测人体 (置信度阈值 0.16，或至少 4 个关键点置信度 > 0.25)
+      const validPoses = (poses || []).filter(p => {
+        if (p.score && p.score > 0.16) return true;
+        if (p.keypoints) {
+          const highConf = p.keypoints.filter(k => k.score > 0.25).length;
+          return highConf >= 4;
+        }
+        return false;
+      });
+
+      if (validPoses.length === 0) {
+        if (presenceConfidence > 0) presenceConfidence -= 1.0;
+        return;
+      }
+
+      lastMoveNetDetectTime = performance.now();
+      activeTrackingEngine = "MoveNet AI MultiPose";
+      presenceConfidence = Math.min(100, presenceConfidence + 10);
+      isHumanDetected = true;
+
+      // 计算每个人在屏幕上的水平中心点 (镜像后 1.0 - x/vw)
+      validPoses.forEach(pose => {
+        let sumX = 0;
+        let count = 0;
+        pose.keypoints.forEach(k => {
+          if (k.score > 0.15) {
+            sumX += k.x;
+            count++;
+          }
+        });
+        const rawX = count > 0 ? (sumX / count) : ((pose.box ? (pose.box.xMin + pose.box.xMax) / 2 : vw / 2));
+        pose.screenCenterX = 1.0 - (rawX / vw);
+      });
+
+      // 从左至右排序：左边的小朋友 -> P1，右边的小朋友 -> P2，最右边 -> P3
+      validPoses.sort((a, b) => a.screenCenterX - b.screenCenterX);
+
+      const detectedCount = validPoses.length;
+
+      // 自适应多玩家：如果检测到 2 位或更多小朋友，自动扩展为多人齐舞模式！
+      if (detectedCount >= 2 && playerCount < 2) {
+        playerCount = Math.min(3, detectedCount);
+        updatePlayerCountUI(playerCount);
+      } else if (detectedCount >= 3 && playerCount < 3) {
+        playerCount = 3;
+        updatePlayerCountUI(playerCount);
+      }
+
+      // 更新徽章提示文字
+      if (detectedCount === 1) {
+        stickmanStatusBadge.innerText = "🎉 偵測到 1 位小朋友！火柴人合體完成！";
+      } else if (detectedCount === 2) {
+        stickmanStatusBadge.innerText = "🎉🎉 成功偵測到 2 位小朋友！左右火柴人同步齊舞！";
+      } else {
+        stickmanStatusBadge.innerText = `🎉🎉🎉 成功偵測到 ${detectedCount} 位小朋友！全員火柴人熱力齊舞！`;
+      }
+      stickmanStatusBadge.className = "bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full shadow";
+
+      const alpha = 0.45; // EMA 平滑系数
+
+      // 将检测到的骨骼绑定到对应的玩家槽位 (最多 3 位)
+      for (let i = 0; i < 3; i++) {
+        const p = trackedPlayerPoses[i];
+        if (!p) continue;
+
+        if (i < validPoses.length && i < playerCount) {
+          p.detected = true;
+          const pose = validPoses[i];
+          const kpMap = {};
+          pose.keypoints.forEach(k => { kpMap[k.name] = k; });
+
+          function updateNodeFromKp(node, kp, fallbackX, fallbackY) {
+            if (kp && kp.score > 0.15) {
+              const targetX = 1.0 - (kp.x / vw);
+              const targetY = kp.y / vh;
+              node.x += (targetX - node.x) * alpha;
+              node.y += (targetY - node.y) * alpha;
+            } else if (fallbackX !== undefined && fallbackY !== undefined) {
+              node.x += (fallbackX - node.x) * (alpha * 0.5);
+              node.y += (fallbackY - node.y) * (alpha * 0.5);
+            }
+          }
+
+          const nose = kpMap['nose'];
+          const lEye = kpMap['left_eye'];
+          const rEye = kpMap['right_eye'];
+          const lSho = kpMap['left_shoulder'];
+          const rSho = kpMap['right_shoulder'];
+          const lElb = kpMap['left_elbow'];
+          const rElb = kpMap['right_elbow'];
+          const lWri = kpMap['left_wrist'];
+          const rWri = kpMap['right_wrist'];
+          const lHip = kpMap['left_hip'];
+          const rHip = kpMap['right_hip'];
+          const lKne = kpMap['left_knee'];
+          const rKne = kpMap['right_knee'];
+          const lAnk = kpMap['left_ankle'];
+          const rAnk = kpMap['right_ankle'];
+
+          // 1. 头部 (鼻尖或两眼中心)
+          if (nose && nose.score > 0.15) {
+            updateNodeFromKp(p.head, nose);
+          } else if (lEye && rEye && lEye.score > 0.15 && rEye.score > 0.15) {
+            const avgX = 1.0 - (((lEye.x + rEye.x) / 2) / vw);
+            const avgY = ((lEye.y + rEye.y) / 2) / vh;
+            p.head.x += (avgX - p.head.x) * alpha;
+            p.head.y += (avgY - p.head.y) * alpha;
+          }
+
+          // 2. 双肩与颈部
+          updateNodeFromKp(p.lShoulder, lSho, p.head.x - 0.08, p.head.y + 0.10);
+          updateNodeFromKp(p.rShoulder, rSho, p.head.x + 0.08, p.head.y + 0.10);
+          p.neck.x = (p.lShoulder.x + p.rShoulder.x) / 2;
+          p.neck.y = (p.lShoulder.y + p.rShoulder.y) / 2 - 0.02;
+
+          // 3. 肘部与手腕
+          updateNodeFromKp(p.lElbow, lElb, p.lShoulder.x - 0.05, p.lShoulder.y + 0.12);
+          updateNodeFromKp(p.rElbow, rElb, p.rShoulder.x + 0.05, p.rShoulder.y + 0.12);
+          updateNodeFromKp(p.lWrist, lWri, p.lElbow.x - 0.03, p.lElbow.y + 0.12);
+          updateNodeFromKp(p.rWrist, rWri, p.rElbow.x + 0.03, p.rElbow.y + 0.12);
+
+          // 4. 手指 (由手腕沿小臂方向延伸)
+          p.lFinger.x = p.lWrist.x + (p.lWrist.x - p.lElbow.x) * 0.25;
+          p.lFinger.y = p.lWrist.y + (p.lWrist.y - p.lElbow.y) * 0.25;
+          p.rFinger.x = p.rWrist.x + (p.rWrist.x - p.rElbow.x) * 0.25;
+          p.rFinger.y = p.rWrist.y + (p.rWrist.y - p.rElbow.y) * 0.25;
+
+          // 5. 髋部与骨盆
+          updateNodeFromKp(p.lHip, lHip, p.neck.x - 0.05, p.neck.y + 0.24);
+          updateNodeFromKp(p.rHip, rHip, p.neck.x + 0.05, p.neck.y + 0.24);
+          p.pelvis.x = (p.lHip.x + p.rHip.x) / 2;
+          p.pelvis.y = (p.lHip.y + p.rHip.y) / 2;
+
+          // 6. 膝盖与脚踝
+          updateNodeFromKp(p.lKnee, lKne, p.lHip.x - 0.02, p.pelvis.y + 0.16);
+          updateNodeFromKp(p.rKnee, rKne, p.rHip.x + 0.02, p.pelvis.y + 0.16);
+          updateNodeFromKp(p.lAnkle, lAnk, p.lKnee.x - 0.01, p.lKnee.y + 0.16);
+          updateNodeFromKp(p.rAnkle, rAnk, p.rKnee.x + 0.01, p.rKnee.y + 0.16);
+
+          // 姿态判别 (双手举高 / 招手)
+          p.isHandsHigh = (p.lWrist.y < p.head.y + 0.06 || p.rWrist.y < p.head.y + 0.06);
+          p.isWaving = (p.lWrist.y < p.neck.y || p.rWrist.y < p.neck.y);
+        } else {
+          p.detected = false;
+        }
+      }
     }
 
     // 初始化 MediaPipe AI 姿态识别引擎
@@ -1075,7 +1217,8 @@
         setTimeout(resizeCanvas, 80);
         setTimeout(resizeCanvas, 250);
 
-        // 尝试激活 MediaPipe
+        // 尝试激活 MoveNet MultiPose 及 MediaPipe
+        tryInitMoveNet();
         tryInitMediaPipe();
       } catch (err) {
         console.warn("Camera fallback:", err);
@@ -1160,7 +1303,30 @@
       }
       cvFrameCounter++;
 
-      // 1. 如果是单人模式且 MediaPipe 可用，在后台非阻塞异步投递，绝对不卡顿或阻断主渲染流程！
+      // 1. 优先使用 MoveNet MultiPose 深度学习 AI 多人骨骼引擎 (支持 1~6 人实时追踪)
+      if (moveNetDetector && !isMoveNetRunning) {
+        if (cvFrameCounter % 2 === 0) {
+          isMoveNetRunning = true;
+          moveNetDetector.estimatePoses(webcamVideo, { maxPoses: 6, flipHorizontal: false })
+            .then(poses => {
+              handleMoveNetPoses(poses);
+            })
+            .catch(err => {
+              console.warn("MoveNet 推理异常:", err);
+            })
+            .finally(() => {
+              isMoveNetRunning = false;
+            });
+        }
+      }
+
+      // 如果 MoveNet 最近 600ms 内有稳定多人骨骼输出，则直接由 MoveNet 驱动，跳过低阶 CV！
+      const now = performance.now();
+      if (activeTrackingEngine === "MoveNet AI MultiPose" && (now - lastMoveNetDetectTime < 600)) {
+        return;
+      }
+
+      // 2. 如果 MoveNet 仍在载入中，单人模式下尝试使用 MediaPipe AI
       if (playerCount === 1 && mpPose && !isMpRunning) {
         if (cvFrameCounter % 3 === 0) {
           isMpRunning = true;
@@ -1170,8 +1336,6 @@
         }
       }
 
-      // 2. 如果是单人模式且 MediaPipe 最近 500ms 内持续有高精度 3D 骨骼输出，则单人由 MediaPipe 驱动
-      const now = performance.now();
       if (playerCount === 1 && activeTrackingEngine === "MediaPipe AI" && (now - lastMediaPipeDetectTime < 500)) {
         return;
       }

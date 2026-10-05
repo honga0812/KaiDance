@@ -2,7 +2,7 @@
 
 > 💡 **項目簡介**：專為 4~6 歲（幼兒園中大班、家庭親子）設計的全場景體感舞蹈教學系統。融合 **入鏡自動變身趣味發光火柴人**、**23 支動作專屬循環示範動畫影片**、**1~3 人多人員體態骨架追蹤**、**名師原聲童趣引導口令** 與 **卡拉OK式同步歌詞**，支援電視大螢幕全螢幕跟跳與動作自動評分，並已完全就緒支援部署到 GitHub Pages 公開使用。
 > 
-> 📅 **最新更新**：2026-10-05 (v3.8.0 - 繁體中文全介面適配、8-12拍具象動作引導、SRT精準毫秒對齊、AI影片提示詞全景矩陣)  
+> 📅 **最新更新**：2026-10-05 (v4.0.0 - 動作精簡合併至 18 段（16拍充裕律動）、MoveNet MultiPose 深度學習 AI 多人骨骼即時追蹤)  
 > 🏷️ **標籤**：`兒童教育` `AI編舞` `發光火柴人` `骨架追蹤` `AI影片生成` `GitHubPages` `Kai_Music` `繁體中文`  
 > 📁 **本地運行服務**：`http://localhost:8080/`
 
@@ -10,29 +10,11 @@
 
 ## 🤸 一、 趣味發光火柴人（Cute Stickman Avatar）體態捕捉系統
 
-針對低齡兒童特別喜歡的「火柴人」形象，徹底改造了視覺骨骼渲染邏輯：
-
-```
-┌────────────────────────────────────────────────────────┐
-│  【攝影機鏡頭畫面（鏡像）】                              │
-│                                                        │
-│                    🌿 (小嫩芽天線，隨身體搖晃)           │
-│                  ╭──────╮                              │
-│                  │ ^  ^ │  <-- 萌萌的大眼睛 (笑臉頭部)    │
-│                  │  ◡   │                              │
-│                  ╰──────╯                              │
-│                   / || \                               │
-│        (左手星星) ★  ||  ★ (右手星星，舉高發翡翠綠光)     │
-│                    /  \                                │
-│                   d    b   <-- 圓潤發光小鞋子          │
-│                                                        │
-│   核心機制：                                            │
-│   1. 當畫面無小朋友時，提示「快站到鏡頭前變身火柴人！」；       │
-│   2. 小朋友一入鏡，火柴人立刻依附在身體上，四肢完全跟隨運動； │
-│   3. 手臂舉高托起太陽或左右擺動時，火柴人瞬間綻放綠光與星星！ │
-│   4. 支援【暖陽金 / 極光綠 / 糖果粉】三套炫酷火柴人皮膚！     │
-└────────────────────────────────────────────────────────┘
-```
+專為 4~6 歲幼兒園教室與家庭親子設計，全面升級為 **Google MoveNet MultiPose 深度學習多人骨骼追蹤架構**：
+- **真正的多目標 17 關節深度學習 AI 識別**：原生支援 1~6 位小朋友同時入鏡，由神經網路直接精準輸出每位小朋友的真實骨骼（鼻子、肩、肘、腕、髖、膝、踝）。
+- **水平空間自動排序與靈敏綁定**：小朋友走進鏡頭，系統依水平位置自左至右自動匹配為 P1（樂樂）、P2（歡歡）、P3（朵朵），左右火柴人同步齊舞！
+- **自適應人數模式**：無論使用者是否有手動切換 1人/2人/3人，一旦偵測到多位小朋友，火柴人自動即刻合體展開多隊形！
+- **高穩健三層降級容災架構**：MoveNet MultiPose (首選 AI) ➜ MediaPipe Pose (單人極速) ➜ Multi-Sector Edge-CV (離線純端側視覺)，任何設備皆保證 60FPS 絲滑流暢！
 
 ---
 
@@ -56,10 +38,30 @@
 
 ---
 
-### 3. 《Morning Sunshine Hello》官方歌詞、精準時間、具象口令與 AI 影片提示詞全景矩陣表（23 段）
+### 3. 《Morning Sunshine Hello》官方歌詞、精準時間、具象口令與 AI 影片提示詞全景矩陣表（18 段精簡合併版）
 
-| 序號與段落 | SRT 精確時間 | 節拍數與長度 | 官方英文歌詞 | 具象童趣名師口令 (8-12拍清晰引導) | 動作要領引導說明 (Movement Tips) | 配合影片動畫製作提示詞 (Video Prompts) | 骨骼捕捉識別重點 |
+| 序號與段落 | SRT 精確時間 | 節拍數與長度 | 官方英文歌詞 | 具象童趣名師口令 (8-16拍充裕引導) | 動作要領引導說明 (Movement Tips) | 配合影片動畫製作提示詞 (Video Prompts) | 骨骼捕捉識別重點 |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| **[Intro]<br>動作 01** | `00:00.00 - 00:07.87` | **16 拍**<br>(7.87s) | `[Intro] 🎵 Musical Awakening` | **「小手插腰，踩著拍子踏步走！」** | **晨光萌芽踏步**<br>⏰ 倒數預備！小手插腰，像精神的小士兵踩著節拍原地踏步！ | `Full-body 9:16 vertical shot, 3D animated preschool dance coach Leo in bright sunny tracksuit, marching energetically on place with hands on hips, bouncy knee lifts to 120 BPM tempo, warm smile, bright kindergarten studio, seamless loop, 8s.` | 髖膝垂直位移<br>雙腿交替抬起 |
+| **[Verse 1]<br>動作 02<br>*(合併2+3)* | `00:07.87 - 00:15.97` | **16 拍**<br>(8.10s) | `"Good morning sun, up in the sky, Waving your golden hands so high!"` | **「雙手托起大太陽，高高舉起左右大招手！」** | **托起太陽高空大招手**<br>☀️ 前 8 拍雙手從胸前向上托起發光金太陽；後 8 拍雙手高舉過頭頂，像金色光芒左右大幅度歡快招手！ | `Full-body 9:16 vertical shot, 3D animated preschool dance coach, brings hands from chest up high overhead holding a giant radiant glowing sun, then energetically waves both hands high in the sky left and right like shining golden sunbeams, cheerful morning lighting, seamless loop, 8s.` | **雙手腕高過頭部**<br>高空左右大幅擺動 |
+| **[Verse 1]<br>動作 03<br>*(合併4+5)* | `00:15.97 - 00:23.77` | **16 拍**<br>(7.80s) | `"Wake up, brush your teeth and smile, Let’s go learn and play a while!"` | **「拿好小牙刷刷刷刷，露出笑臉大步走！」** | **刷牙微笑大步走**<br>🪥 前 8 拍單手握牙刷上下輕快刷牙並雙手點臉頰大笑；後 8 拍小手插腰，膝蓋高抬踩著拍子大步前踏去探險！ | `Full-body 9:16 vertical shot, 3D cute kid dance coach, holds imaginary toothbrush brushing teeth rhythmically, points to cheeks with a dazzling beaming smile, then puts hands on hips and does energetic high-knee marching, colorful preschool studio, seamless loop, 8s.` | 單手近嘴刷動<br>雙膝高抬踏步 |
+| **[Verse 1]<br>動作 04<br>*(合併6+7)* | `00:23.77 - 00:33.37` | **19 拍**<br>(9.60s) | `"Birds are singing in the tree, Singing a morning song for me!"` | **「雙臂展翅學小鳥，小手貼耳聽晨曲！」** | **小鳥展翅聽晨曲**<br>🐦 前 8 拍雙臂水平展開如羽翼上下輕快拍動；後 11 拍單手貼耳側傾聽，身體隨旋律左右優雅搖擺！ | `Full-body 9:16 vertical shot, 3D animated dance coach, extends arms like bird wings flapping gently on tiptoes, then cups one hand behind ear swaying torso softly left and right listening to birds singing, magical musical notes floating, seamless loop, 8s.` | **雙臂水平扇動**<br>單手貼耳軀幹搖擺 |
+| **[Chorus]<br>動作 05<br>*(合併8+9)* | `00:33.37 - 00:41.60` | **16 拍**<br>(8.23s) | `"Hello, hello, it's a brand new day! Jump up and shout: Hip-hip-hooray!"` | **「熱情揮手說哈囉，用力高跳喊萬歲！」** | **熱情招手喊萬歲**<br>👋 前 8 拍單手畫大圓向大家招手說 Hello；後 8 拍雙膝深蹲蓄力，跟隨重音雙腿用力向上高跳，雙臂衝天喊萬歲！ | `Full-body 9:16 vertical shot, 3D animated kid, waves right hand drawing an enthusiastic giant arc greeting friends, then bends knees and leaps high into the air with both hands punching sky in a huge V-shape cheering hip-hip-hooray, confetti, seamless loop, 8s.` | **單側肘腕高位揮手**<br>深蹲起跳垂直爆發 |
+| **[Chorus]<br>動作 06** | `00:41.60 - 00:45.70` | **8 拍**<br>(4.10s) | `"Put on your shoes and count to three,"` | **「彎腰摸摸小鞋子，伸指數一二三！」** | **穿上小鞋數一二三**<br>👟 彎腰輕拍左右小鞋子，站起來手指俏皮點數：一、二、三！ | `Full-body 9:16 vertical shot, 3D animated coach, bending smoothly to touch left shoe then right shoe, popping back up and counting 1-2-3 with cute finger gestures, cheerful and lively, seamless loop, 8s.` | 俯身觸踝動作<br>手指胸前比數字 |
+| **[Chorus]<br>動作 07** | `00:45.70 - 00:51.40` | **12 拍**<br>(5.70s) | `"Come along and sing"` | **「張開雙手，邀請好朋友一起唱！」** | **牽手齊唱早安曲**<br>🎶 雙手像花朵向兩側熱情盛開，踩著節拍邀請好朋友一起唱！ | `Full-body 9:16 vertical shot, 3D kid coach, extending both arms wide forward in a warm welcoming embrace gesture, inviting everyone to sing along, gentle torso sway, seamless loop, 8s.` | 雙手向前平舉展開<br>掌心朝上熱情相邀 |
+| **[間奏]<br>動作 08** | `00:51.40 - 00:59.87` | **16 拍**<br>(8.47s) | `"with me!" [Interlude 旋律間奏]` | **「手叉小蠻腰，輕輕轉個歡樂圓圈！」** | **歡樂旋轉小圓舞**<br>🌸 雙手插腰踩小碎步，輕快轉一個大圓圈，轉完站定比朵花！ | `Full-body 9:16 vertical shot, 3D animated coach, spinning a full graceful 360-degree circle with hands on hips and light tiptoes, striking a cute blooming flower pose under chin at the finish, seamless loop, 8s.` | 軀幹圓周位移<br>定格笑臉展開 |
+| **[Verse 2]<br>動作 09<br>*(合併13+14)* | `00:59.87 - 01:07.77` | **16 拍**<br>(7.90s) | `"Pack your bag and grab your hat, Wave goodbye to the sleepy cat!"` | **「背上小書包戴正小帽子，跟貪睡小貓說拜拜！」** | **背好書包貓咪拜拜**<br>🎒 前 8 拍雙手拉書包背帶輕跳、摸摸小帽子；後 8 拍雙手變貓爪揉頰，向斜下方揮手跟貪睡貓咪拜拜！ | `Full-body 9:16 vertical shot, 3D preschool coach, miming pulling backpack straps and patting sunhat on head, then rubbing cheeks like a soft kitten with cute paws and waving goodbye diagonally downward to a sleeping cat, cozy morning light, seamless loop, 8s.` | 雙手拉肩帶撫帽<br>雙手貓爪揉頰揮手 |
+| **[Verse 2]<br>動作 10** | `01:07.77 - 01:11.57` | **8 拍**<br>(3.80s) | `"Look outside, the sky is blue,"` | **「伸手向上抓取白雲放口袋，抬頭看藍天！」** | **抓取白雲放入口袋**<br>☁️ 墊起腳尖伸手向上抓一把柔軟白雲塞進口袋，單手遮眉望藍天！ | `Full-body 9:16 vertical shot, 3D animated kid, reaching high overhead on tiptoes to grab fluffy imaginary white clouds and tucking them into clothes pocket, then shielding brow to look up at blue sky, joyful wonder, seamless loop, 8s.` | 單手搭額前遠眺<br>單手高舉抓雲塞口袋 |
+| **[Verse 2]<br>動作 11** | `01:11.57 - 01:17.33` | **12 拍**<br>(5.76s) | `"So many fun things waiting for you!"` | **「雙臂畫大圓，胸前比出跳動大愛心！」** | **快樂愛心大擁抱**<br>💖 雙臂在空中環抱大自然，收在胸口拼出跳動的大愛心送出去！ | `Full-body 9:16 vertical shot, 3D kid coach, gathering arms in a wide circle embracing the world, bringing hands together at chest to form a glowing heart shape, pulsing with joy, seamless loop, 8s.` | **雙手腕在胸骨前交匯**<br>(`dist(lWrist, rWrist) < 0.1`) |
+| **[Chorus]<br>動作 12** | `01:17.33 - 01:21.87` | **8 拍**<br>(4.54s) | `"Hello, hello, it's a brand new day!"` | **「雙腳小跳步，雙手交替大招手！」** | **再度熱情大招手**<br>👋 雙腳踩節奏踏跳，雙手在耳側交替像波浪一樣大幅度招手！ | `Full-body 9:16 vertical shot, 3D animated dance coach, bouncing lightly on balls of feet, waving both hands alternately beside ears with huge energy and contagious laughter, seamless loop, 8s.` | **雙耳側連續大幅揮手**<br>雙腳輕跳律動 |
+| **[Chorus]<br>動作 13** | `01:21.87 - 01:25.60` | **8 拍**<br>(3.73s) | `"Jump up and shout: Hip-hip-hooray!"` | **「深蹲彈跳起飛！雙手握拳喊耶！」** | **深蹲起跳大爆發**<br>🐰 蹲下蓄力、高高蹦跳！小拳頭在頭頂綻放爆米花，大喊耶！ | `Full-body 9:16 vertical shot, 3D preschool coach, performing a deep energetic crouch and springing up into a star jump in the air, shouting with pure delight, confetti effect, seamless loop, 8s.` | **高跳位移峰值**<br>雙臂高舉歡呼 |
+| **[Chorus]<br>動作 14** | `01:25.60 - 01:29.80` | **8 拍**<br>(4.20s) | `"Put on your shoes and count to three,"` | **「小手插腰，左右小腳尖輕輕點地！」** | **動感腳尖踢點步**<br>👟 雙手插腰站穩，左右腳尖輪流往前踩小水坑，踢一踢點一點！ | `Full-body 9:16 vertical shot, 3D animated kid, hands firmly on hips, playfully tapping alternating toes forward on the ground to 120 BPM drum beats, charming and rhythmic, seamless loop, 8s.` | 左右腳前踢點步<br>身體輕快律動 |
+| **[Chorus]<br>動作 15** | `01:29.80 - 01:35.37` | **12 拍**<br>(5.57s) | `"Come along and sing"` | **「跟著大重音，整整齊齊拍拍手！」** | **歡快齊聲拍拍手**<br>👏 踩著歡樂重音在胸前大聲拍手：啪！啪！啪！身體快樂彈動！ | `Full-body 9:16 vertical shot, 3D animated coach, clapping hands right in front of chest in sync with snappy snare beats, laughing and bouncing happily, seamless loop, 8s.` | 胸前雙手合拍碰觸<br>節拍清晰響應 |
+| **[Bridge]<br>動作 16** | `01:35.37 - 01:43.87` | **16 拍**<br>(8.50s) | `"with me!" [Bridge 宏大過門]` | **「展開白鴿翅膀，像微風在天空滑翔！」** | **白鴿展翅大滑翔**<br>🕊️ 雙手水平張開像大鳥滑翔，腳踩小碎步輕柔起伏，微風吹過來！ | `Full-body 9:16 vertical shot, 3D kid coach, arms stretched wide like a majestic soaring dove gliding in the gentle breeze, floating on light tiptoes, cinematic studio light, seamless loop, 8s.` | **雙臂水平展開扇動**<br>身體中軸圓周位移 |
+| **[Outro]<br>動作 17** | `01:43.87 - 01:47.73` | **8 拍**<br>(3.86s) | `"Good morning, world!"` | **「雙臂畫出大金色圓圈，擁抱全世界！」** | **擁抱全世界早安**<br>🌍 雙臂向外展開畫出最大的金色大圓，挺胸抬頭向世界道早安！ | `Full-body 9:16 vertical shot, 3D animated dance coach, sweeping arms out and up in a massive welcoming circle embracing the universe, chest high, radiant joyful expression, seamless loop, 8s.` | 雙臂展開最大開角<br>頭胸挺拔舒展 |
+| **[Outro]<br>動作 18** | `01:47.73 - 02:00.00` | **24 拍**<br>(12.27s) | `"Let's have fun today!"` | **「雙手合十胸前鞠躬，定格燦爛大微笑！」** | **燦爛定格大比心**<br>🌟 深呼吸雙臂上揚，雙手胸前合十或頭頂大比心，燦爛微笑定格！ | `Full-body 9:16 vertical shot, 3D preschool coach, inhaling and raising arms in a grand finish arc, bringing palms together at heart with a sweet gentle bow and winning smile, golden star sparkle finish, seamless loop, 8s.` | 雙臂頭頂合十比心<br>華麗定格笑臉 |
+
+---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | **[Intro]<br>動作 01** | `00:00.00 - 00:07.87` | **16 拍**<br>(7.87s) | `[Intro] 🎵 Musical Awakening` | **「小手插腰，踩著拍子踏步走！」** | **晨光萌芽踏步**<br>⏰ 倒數預備！小手插腰，像精神的小士兵踩著節拍原地踏步！ | `Full-body 9:16 vertical shot, 3D animated preschool dance coach Leo in bright sunny tracksuit, marching energetically on place with hands on hips, bouncy knee lifts to 120 BPM tempo, warm smile, bright kindergarten studio, seamless loop, 8s.` | 髖膝垂直位移<br>雙腿交替抬起 |
 | **[Verse 1]<br>動作 02** | `00:07.87 - 00:11.93` | **8 拍**<br>(4.06s) | `"Good morning sun, up in the sky,"` | **「雙手托起大太陽，暖洋洋！」** | **托起金色太陽**<br>☀️ 太陽升起啦！小手從胸口慢慢推上天空，捧出發光大太陽！ | `Full-body 9:16 vertical shot, 3D cute kid dance coach, bringing hands from chest up above head to hold a big imaginary glowing sun in the sky, fingers spread wide, tiptoe stretch, smiling radiantly, seamless loop, 8s.` | **雙手腕高過頭部**<br>(`y_wrist < y_head`) |
 | **[Verse 1]<br>動作 03** | `00:11.93 - 00:15.97` | **8 拍**<br>(4.04s) | `"Waving your golden hands so high!"` | **「金色大光芒，左右大招手！」** | **金色大手高招手**<br>✨ 我們是太陽的金色光芒！雙手高舉過頭頂，向左招手、向右招手！ | `Full-body 9:16 vertical shot, 3D animated dance coach, arms stretched high overhead, waving both hands energetically from side to side like golden rays shining across the morning sky, joyful expression, seamless loop, 8s.` | **雙臂高舉大幅擺動**<br>(`y_wrist < y_head`) |
