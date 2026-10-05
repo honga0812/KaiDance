@@ -1031,13 +1031,16 @@
             }
             await tf.ready();
           }
+          const detectorConfig = {
+            modelType: poseDetection.movenet.modelType.MULTIPOSE_LIGHTNING,
+            enableTracking: true
+          };
+          if (poseDetection.TrackerType && poseDetection.TrackerType.Keypoint) {
+            detectorConfig.trackerType = poseDetection.TrackerType.Keypoint;
+          }
           moveNetDetector = await poseDetection.createDetector(
             poseDetection.SupportedModels.MoveNet,
-            {
-              modelType: poseDetection.movenet.modelType.MULTIPOSE_LIGHTNING,
-              enableTracking: true,
-              trackerType: poseDetection.TrackerType.BoundingBox
-            }
+            detectorConfig
           );
           console.log("🎉 MoveNet MultiPose AI 多人骨骼引擎初始化成功！");
         } catch (err) {
@@ -1073,8 +1076,6 @@
 
       lastMoveNetDetectTime = performance.now();
       activeTrackingEngine = "MoveNet AI MultiPose";
-      presenceConfidence = Math.min(100, presenceConfidence + 10);
-      isHumanDetected = true;
 
       // 计算每个人在屏幕上的水平中心点 (镜像后 1.0 - x/vw)
       validPoses.forEach(pose => {
@@ -1090,29 +1091,65 @@
         pose.screenCenterX = 1.0 - (rawX / vw);
       });
 
-      // 从左至右排序：左边的小朋友 -> P1，右边的小朋友 -> P2，最右边 -> P3
-      validPoses.sort((a, b) => a.screenCenterX - b.screenCenterX);
+      // 多人独立扇区站位匹配：根据小朋友水平位置智能匹配 P1, P2, P3 槽位
+      const sectors = getSectors();
+      const assignedPoses = new Array(playerCount).fill(null);
+      const usedPoses = new Set();
 
-      const detectedCount = validPoses.length;
-
-      // 自适应多玩家：如果检测到 2 位或更多小朋友，自动扩展为多人齐舞模式！
-      if (detectedCount >= 2 && playerCount < 2) {
-        playerCount = Math.min(3, detectedCount);
-        updatePlayerCountUI(playerCount);
-      } else if (detectedCount >= 3 && playerCount < 3) {
-        playerCount = 3;
-        updatePlayerCountUI(playerCount);
+      for (let sIdx = 0; sIdx < playerCount; sIdx++) {
+        const targetX = sectors[sIdx].defaultX;
+        let bestDist = Infinity;
+        let bestPoseIdx = -1;
+        validPoses.forEach((pose, pIdx) => {
+          if (!usedPoses.has(pIdx)) {
+            const dist = Math.abs(pose.screenCenterX - targetX);
+            if (dist < bestDist) {
+              bestDist = dist;
+              bestPoseIdx = pIdx;
+            }
+          }
+        });
+        // 只要在对应站位合理距离内 (0.42 以内) 即可完美认领
+        if (bestPoseIdx !== -1 && bestDist < 0.42) {
+          assignedPoses[sIdx] = validPoses[bestPoseIdx];
+          usedPoses.add(bestPoseIdx);
+        }
       }
 
-      // 更新徽章提示文字
-      if (detectedCount === 1) {
-        stickmanStatusBadge.innerText = "🎉 偵測到 1 位小朋友！火柴人合體完成！";
-      } else if (detectedCount === 2) {
-        stickmanStatusBadge.innerText = "🎉🎉 成功偵測到 2 位小朋友！左右火柴人同步齊舞！";
-      } else {
-        stickmanStatusBadge.innerText = `🎉🎉🎉 成功偵測到 ${detectedCount} 位小朋友！全員火柴人熱力齊舞！`;
+      // 如果有小朋友入镜但未落入已知扇区（例如单人自由站位），优先填充空槽位
+      validPoses.forEach((pose, pIdx) => {
+        if (!usedPoses.has(pIdx)) {
+          for (let sIdx = 0; sIdx < playerCount; sIdx++) {
+            if (!assignedPoses[sIdx]) {
+              assignedPoses[sIdx] = pose;
+              usedPoses.add(pIdx);
+              break;
+            }
+          }
+        }
+      });
+
+      const trackedActiveCount = assignedPoses.filter(p => p !== null).length;
+      if (trackedActiveCount > 0) {
+        presenceConfidence = Math.min(100, presenceConfidence + 8);
+        isHumanDetected = true;
+        if (playerCount === 1) {
+          stickmanStatusBadge.innerText = "🎉 小朋友已入鏡！火柴人合體完成！";
+        } else if (playerCount === 2) {
+          if (trackedActiveCount >= 2) {
+            stickmanStatusBadge.innerText = "🎉🎉 成功偵測到 2 位小朋友！左右火柴人同步齊舞！";
+          } else {
+            stickmanStatusBadge.innerText = "🎉 已捕捉到 1 位小朋友！等待另一位小夥伴入鏡~";
+          }
+        } else {
+          if (trackedActiveCount >= 3) {
+            stickmanStatusBadge.innerText = "🎉🎉🎉 成功偵測到 3 位小朋友！全員火柴人熱力齊舞！";
+          } else {
+            stickmanStatusBadge.innerText = `🎉 已捕捉到 ${trackedActiveCount} 位小朋友，等待其餘小夥伴入鏡~`;
+          }
+        }
+        stickmanStatusBadge.className = "bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full shadow";
       }
-      stickmanStatusBadge.className = "bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full shadow";
 
       const alpha = 0.45; // EMA 平滑系数
 
@@ -1121,11 +1158,12 @@
         const p = trackedPlayerPoses[i];
         if (!p) continue;
 
-        if (i < validPoses.length && i < playerCount) {
+        const assignedPose = (i < playerCount) ? assignedPoses[i] : null;
+
+        if (assignedPose) {
           p.detected = true;
-          const pose = validPoses[i];
           const kpMap = {};
-          pose.keypoints.forEach(k => { kpMap[k.name] = k; });
+          assignedPose.keypoints.forEach(k => { kpMap[k.name] = k; });
 
           function updateNodeFromKp(node, kp, fallbackX, fallbackY) {
             if (kp && kp.score > 0.15) {
@@ -1199,7 +1237,40 @@
           p.isHandsHigh = (p.lWrist.y < p.head.y + 0.06 || p.rWrist.y < p.head.y + 0.06);
           p.isWaving = (p.lWrist.y < p.neck.y || p.rWrist.y < p.neck.y);
         } else {
+          // 该玩家未入镜：保持该站位的轻柔律动等待
           p.detected = false;
+          const s = (sectors && sectors[i]) || { defaultX: 0.5 };
+          const idleWave = Math.sin(frameTick * 0.06 + i * 1.5) * 0.02;
+          p.head.x += (s.defaultX + idleWave - p.head.x) * 0.1;
+          p.head.y += (0.24 - p.head.y) * 0.1;
+          p.neck.x = p.head.x;
+          p.neck.y = p.head.y + 0.08;
+          p.lShoulder.x = p.neck.x - 0.07;
+          p.rShoulder.x = p.neck.x + 0.07;
+          p.lShoulder.y = p.neck.y + 0.02;
+          p.rShoulder.y = p.neck.y + 0.02;
+          p.pelvis.x = p.neck.x;
+          p.pelvis.y = 0.58;
+          p.lHip.x = p.pelvis.x - 0.05;
+          p.rHip.x = p.pelvis.x + 0.05;
+          p.lHip.y = p.pelvis.y;
+          p.rHip.y = p.pelvis.y;
+          p.lElbow.x = p.lShoulder.x - 0.04;
+          p.lElbow.y = p.lShoulder.y + 0.12;
+          p.rElbow.x = p.rShoulder.x + 0.04;
+          p.rElbow.y = p.rShoulder.y + 0.12;
+          p.lWrist.x = p.lShoulder.x - 0.04;
+          p.lWrist.y = p.pelvis.y + 0.02;
+          p.rWrist.x = p.rShoulder.x + 0.04;
+          p.rWrist.y = p.pelvis.y + 0.02 + idleWave;
+          p.lFinger.x = p.lWrist.x; p.lFinger.y = p.lWrist.y;
+          p.rFinger.x = p.rWrist.x; p.rFinger.y = p.rWrist.y;
+          p.lKnee.x = p.lHip.x - 0.02; p.lKnee.y = 0.74;
+          p.rKnee.x = p.rHip.x + 0.02; p.rKnee.y = 0.74;
+          p.lAnkle.x = p.lKnee.x - 0.01; p.lAnkle.y = 0.88;
+          p.rAnkle.x = p.rKnee.x + 0.01; p.rAnkle.y = 0.88;
+          p.isHandsHigh = false;
+          p.isWaving = false;
         }
       }
     }
@@ -1427,7 +1498,7 @@
     // --- 核心：每帧从摄像头画面实时解析人体姿态 ---
     let cvFrameCounter = 0;
     async function processRealVideoFrame() {
-      if (!isCameraActive || !webcamVideo || webcamVideo.readyState < 2) {
+      if (!isCameraActive || !webcamVideo || webcamVideo.readyState < 2 || !webcamVideo.videoWidth || webcamVideo.videoWidth <= 0) {
         updateIdlePoses();
         return;
       }
@@ -1729,83 +1800,79 @@
     // --- 核心：每帧绘制萌趣发光火柴人 (Stick-Figure) ---
     let frameTick = 0;
     function renderStickmanLoop() {
-      resizeCanvas();
-      processRealVideoFrame();
-      ctx.clearRect(0, 0, cameraCanvas.width, cameraCanvas.height);
-      frameTick++;
+      try {
+        resizeCanvas();
+        processRealVideoFrame();
+        ctx.clearRect(0, 0, cameraCanvas.width, cameraCanvas.height);
+        frameTick++;
 
-      const w = cameraCanvas.width;
-      const h = cameraCanvas.height;
-      if (w > 0 && h > 0) {
-        const seg = getCurrentSegment();
-        const targetPose = seg ? seg.targetPose : 'sun_rise';
+        const w = cameraCanvas.width;
+        const h = cameraCanvas.height;
+        if (w > 0 && h > 0) {
+          const seg = getCurrentSegment();
+          const targetPose = seg ? seg.targetPose : 'sun_rise';
 
-        // 皮肤颜色配置
-        const skinPalette = {
-          gold: { bone: '#f59e0b', glow: 'rgba(245, 158, 11, 0.95)', match: '#10b981', headBg: '#fef3c7' },
-          neon: { bone: '#10b981', glow: 'rgba(16, 185, 129, 0.95)', match: '#38bdf8', headBg: '#d1fae5' },
-          pink: { bone: '#ec4899', glow: 'rgba(236, 72, 153, 0.95)', match: '#a855f7', headBg: '#fce7f3' }
-        };
-        const palette = skinPalette[currentSkin] || skinPalette.gold;
+          // 1. 多人独立入镜站位指引 (未入镜的位置显示友好的虚线站位框与提示)
+          if (isCameraActive) {
+            ctx.save();
+            ctx.setLineDash([8, 6]);
+            ctx.lineWidth = 2.5;
 
-        // 1. 多人独立入镜站位指引 (未入镜的位置显示友好的虚线站位框与提示)
-        if (isCameraActive) {
-          ctx.save();
-          ctx.setLineDash([8, 6]);
-          ctx.lineWidth = 2.5;
+            const guideSlots = playerCount === 1 
+              ? [{ id: 0, minX: 0.20, width: 0.60, title: "👋 小朋友站在這裡，馬上合體火柴人！", color: "rgba(250, 204, 21, 0.65)", textColor: "rgba(250, 204, 21, 0.95)" }]
+              : (playerCount === 2 
+                  ? [
+                      { id: 0, minX: 0.05, width: 0.42, title: "👋 P1 (左邊小朋友請就位)", color: "rgba(245, 158, 11, 0.65)", textColor: "rgba(245, 158, 11, 0.95)" },
+                      { id: 1, minX: 0.53, width: 0.42, title: "👋 P2 (右邊小朋友請就位)", color: "rgba(56, 189, 248, 0.65)", textColor: "rgba(56, 189, 248, 0.95)" }
+                    ]
+                  : [
+                      { id: 0, minX: 0.03, width: 0.29, title: "👋 P1 (左邊)", color: "rgba(245, 158, 11, 0.65)", textColor: "rgba(245, 158, 11, 0.95)" },
+                      { id: 1, minX: 0.35, width: 0.30, title: "👋 P2 (中間)", color: "rgba(56, 189, 248, 0.65)", textColor: "rgba(56, 189, 248, 0.95)" },
+                      { id: 2, minX: 0.68, width: 0.29, title: "👋 P3 (右邊)", color: "rgba(192, 132, 252, 0.65)", textColor: "rgba(192, 132, 252, 0.95)" }
+                    ]
+                );
 
-          const guideSlots = playerCount === 1 
-            ? [{ id: 0, minX: 0.20, width: 0.60, title: "👋 小朋友站在這裡，馬上合體火柴人！", color: "rgba(250, 204, 21, 0.65)", textColor: "rgba(250, 204, 21, 0.95)" }]
-            : (playerCount === 2 
-                ? [
-                    { id: 0, minX: 0.05, width: 0.42, title: "👋 P1 (左邊小朋友請就位)", color: "rgba(245, 158, 11, 0.65)", textColor: "rgba(245, 158, 11, 0.95)" },
-                    { id: 1, minX: 0.53, width: 0.42, title: "👋 P2 (右邊小朋友請就位)", color: "rgba(56, 189, 248, 0.65)", textColor: "rgba(56, 189, 248, 0.95)" }
-                  ]
-                : [
-                    { id: 0, minX: 0.03, width: 0.29, title: "👋 P1 (左邊)", color: "rgba(245, 158, 11, 0.65)", textColor: "rgba(245, 158, 11, 0.95)" },
-                    { id: 1, minX: 0.35, width: 0.30, title: "👋 P2 (中間)", color: "rgba(56, 189, 248, 0.65)", textColor: "rgba(56, 189, 248, 0.95)" },
-                    { id: 2, minX: 0.68, width: 0.29, title: "👋 P3 (右邊)", color: "rgba(192, 132, 252, 0.65)", textColor: "rgba(192, 132, 252, 0.95)" }
-                  ]
-              );
+            guideSlots.forEach(slot => {
+              const isDetected = trackedPlayerPoses[slot.id] && trackedPlayerPoses[slot.id].detected;
+              if (!isDetected) {
+                ctx.strokeStyle = slot.color;
+                ctx.strokeRect(w * slot.minX, h * 0.12, w * slot.width, h * 0.74);
+                ctx.fillStyle = slot.textColor;
+                ctx.font = "bold 13px sans-serif";
+                ctx.textAlign = "center";
+                ctx.fillText(slot.title, w * (slot.minX + slot.width / 2), h * 0.88);
+              }
+            });
+            ctx.restore();
+          }
 
-          guideSlots.forEach(slot => {
-            const isDetected = trackedPlayerPoses[slot.id] && trackedPlayerPoses[slot.id].detected;
-            if (!isDetected) {
-              ctx.strokeStyle = slot.color;
-              ctx.strokeRect(w * slot.minX, h * 0.12, w * slot.width, h * 0.74);
-              ctx.fillStyle = slot.textColor;
-              ctx.font = "bold 13px sans-serif";
-              ctx.textAlign = "center";
-              ctx.fillText(slot.title, w * (slot.minX + slot.width / 2), h * 0.88);
-            }
-          });
-          ctx.restore();
-        }
+          // 2. 發光火柴人【永遠在場舞動】（依據所選的頭部類型：人物類/野生動物類/農場動物類，賦予對應造型）
+          const themeProfiles = CHARACTER_PROFILES[currentHeadTheme] || CHARACTER_PROFILES.human;
+          let playersToDraw = [];
 
-        // 2. 發光火柴人【永遠在場舞動】（依據所選的頭部類型：人物類/野生動物類/農場動物類，賦予對應造型）
-        const themeProfiles = CHARACTER_PROFILES[currentHeadTheme] || CHARACTER_PROFILES.human;
-        let playersToDraw = [];
+          for (let i = 0; i < playerCount; i++) {
+            const prof = themeProfiles[i] || themeProfiles[0];
+            playersToDraw.push({
+              id: i + 1,
+              role: prof.role,
+              name: prof.name,
+              color: prof.color,
+              glow: prof.glow,
+              headBg: prof.headBg,
+              match: prof.match,
+              poseData: trackedPlayerPoses[i]
+            });
+          }
 
-        for (let i = 0; i < playerCount; i++) {
-          const prof = themeProfiles[i] || themeProfiles[0];
-          playersToDraw.push({
-            id: i + 1,
-            role: prof.role,
-            name: prof.name,
-            color: prof.color,
-            glow: prof.glow,
-            headBg: prof.headBg,
-            match: prof.match,
-            poseData: trackedPlayerPoses[i]
+          playersToDraw.forEach((p, idx) => {
+            drawRealMatchstickMan(ctx, p, targetPose, frameTick, idx, w, h);
           });
         }
-
-        playersToDraw.forEach((p, idx) => {
-          drawRealMatchstickMan(ctx, p, targetPose, frameTick, idx, w, h);
-        });
+      } catch (err) {
+        console.error("renderStickmanLoop error:", err);
+      } finally {
+        requestAnimationFrame(renderStickmanLoop);
       }
-
-      requestAnimationFrame(renderStickmanLoop);
     }
 
     // --- 9 大個性化角色頭部繪製系統 (純 Canvas 向量貝茲曲線繪製，生動立體) ---
@@ -2460,6 +2527,12 @@
     // 立即启动发光火柴人渲染主循环（常驻舞台，实时渲染）
     renderStickmanLoop();
     initFloatingPlayDock();
+
+    // 页面加载完成后后台异步预热多人姿态 AI 引擎
+    window.addEventListener('load', () => {
+      setTimeout(tryInitMoveNet, 500);
+      setTimeout(tryInitMediaPipe, 1200);
+    });
   </script>
 </body>
 </html>
