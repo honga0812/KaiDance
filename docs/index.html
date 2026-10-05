@@ -223,16 +223,16 @@
 
       <!-- 中间：火柴人外观切换与人数模式 -->
       <div class="flex items-center gap-2">
-        <!-- 火柴人皮肤切换 -->
+        <!-- 火柴人頭部造型切換 (人物類 / 野生動物類 / 農場動物類) -->
         <div class="flex items-center bg-slate-100 p-1 rounded-2xl border border-slate-200">
-          <button id="skin-btn-gold" onclick="setStickSkin('gold')" class="px-2.5 py-1 rounded-xl text-xs font-black bg-amber-500 text-white shadow-xs transition">
-            🌟 暖陽金
+          <button id="theme-btn-human" onclick="setHeadTheme('human')" class="px-2.5 py-1 rounded-xl text-xs font-black bg-amber-500 text-white shadow-xs transition" title="P1小男孩 · P2小女孩 · P3老爺爺">
+            🧑 人物類
           </button>
-          <button id="skin-btn-neon" onclick="setStickSkin('neon')" class="px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition">
-            ⚡ 極光綠
+          <button id="theme-btn-wild" onclick="setHeadTheme('wild')" class="px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition" title="P1獅子 · P2兔子 · P3猴子">
+            🦁 野生動物類
           </button>
-          <button id="skin-btn-pink" onclick="setStickSkin('pink')" class="px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition">
-            💖 糖果粉
+          <button id="theme-btn-farm" onclick="setHeadTheme('farm')" class="px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition" title="P1小豬 · P2乳牛 · P3小馬">
+            🐷 農場動物類
           </button>
         </div>
 
@@ -278,50 +278,51 @@
     </header>
 
     <!-- 核心分屏：左侧 1/3 示范视频 (9:16 长形原画裁剪，不压缩)；右侧 2/3 大屏摄像头与发光火柴人 -->
-    <main class="flex-1 grid grid-cols-1 lg:grid-cols-3 gap-3 mb-3">
+    <!-- 核心分屏：左側精簡示範卡片 (無黑底、無邊框設計，原畫 9:16)；右側超大螢幕攝影機與火柴人 (佔 75%) -->
+    <main class="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-3 mb-3">
       
-      <!-- 【左半屏：AI 舞蹈导师示範影片 (占 1/3 宽度，9:16 竖屏原画居中裁剪)】 -->
-      <section class="relative bg-white rounded-3xl border-2 border-amber-200 overflow-hidden shadow-lg flex flex-col justify-between min-h-[380px] lg:col-span-1">
-        <!-- 顶栏状态 -->
-        <div class="p-3 pb-2 z-20 flex items-center justify-between gap-2 border-b border-amber-100 bg-amber-50/70">
-          <span class="bg-amber-500 text-white text-xs font-black px-2.5 py-1 rounded-full shadow flex items-center gap-1.5 shrink-0">
-            <span class="w-2 h-2 rounded-full bg-white animate-ping"></span>
+      <!-- 【左半屏：AI 舞蹈導師示範影片 (佔 3/12 = 25% 寬度，無黑底框、無邊框設計，精緻小巧)】 -->
+      <section class="relative bg-gradient-to-b from-amber-50/90 via-white to-amber-50/60 rounded-3xl border border-amber-200/60 shadow-md flex flex-col justify-between overflow-hidden min-h-[360px] lg:col-span-3">
+        <!-- 頂欄狀態 -->
+        <div class="p-2.5 px-3 z-20 flex items-center justify-between gap-1.5 border-b border-amber-100 bg-amber-100/50">
+          <span class="bg-amber-500 text-white text-[11px] font-black px-2 py-0.5 rounded-full shadow flex items-center gap-1 shrink-0">
+            <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
             示範影片
           </span>
-          <span id="coach-action-title" class="bg-white text-slate-800 text-xs font-black px-2.5 py-1 rounded-full border border-amber-200 shadow-xs truncate">
+          <span id="coach-action-title" class="bg-white/95 text-slate-800 text-[11px] font-black px-2 py-0.5 rounded-full border border-amber-200/80 shadow-xs truncate max-w-[140px]">
             動作 02: 托起金色太陽
           </span>
         </div>
 
-        <!-- 動作循環影片播放器 (9:16 長形比例裁剪，使用 object-cover 保留原畫比例，絕不橫向壓縮壓扁) -->
-        <div class="flex-1 relative flex items-center justify-center bg-slate-950 p-2 overflow-hidden min-h-[340px]">
-          <div class="relative w-full max-w-[260px] h-[370px] sm:h-[420px] aspect-[9/16] rounded-2xl overflow-hidden shadow-2xl border-2 border-amber-400/50 bg-black flex items-center justify-center">
+        <!-- 動作循環影片播放器 (無黑底、無黑框，純淨圓角卡片展示) -->
+        <div class="flex-1 relative flex items-center justify-center p-2 overflow-hidden">
+          <div class="relative w-full max-w-[210px] h-[330px] sm:h-[370px] aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-amber-300/50 bg-amber-100/40 flex items-center justify-center">
             <video id="coach-video" 
                    src="./videos/loop_03_sun_rise.mp4" 
                    autoplay loop muted playsinline 
                    class="w-full h-full object-cover object-center select-none">
             </video>
-            <!-- 9:16 裁剪标识 -->
-            <div class="absolute bottom-2 left-2 right-2 flex items-center justify-between pointer-events-none px-1">
-              <span class="bg-black/70 backdrop-blur text-[10px] text-amber-300 font-black px-2 py-0.5 rounded-full border border-amber-400/40">
-                📐 9:16 原畫裁剪
+            <!-- 9:16 輕量標籤 -->
+            <div class="absolute bottom-1.5 left-1.5 right-1.5 flex items-center justify-between pointer-events-none px-1">
+              <span class="bg-black/50 backdrop-blur text-[9px] text-amber-300 font-bold px-1.5 py-0.5 rounded-full">
+                📐 9:16
               </span>
-              <span class="bg-black/70 backdrop-blur text-[10px] text-white/80 font-bold px-2 py-0.5 rounded-full">
-                不壓扁 · 人物自然
+              <span class="bg-black/50 backdrop-blur text-[9px] text-white/90 font-bold px-1.5 py-0.5 rounded-full">
+                示範循環
               </span>
             </div>
           </div>
         </div>
 
-        <!-- 底部动作进度提示 -->
-        <div class="bg-amber-50 border-t border-amber-100 px-3 py-2 flex items-center justify-between text-xs">
+        <!-- 底部動作進度提示 -->
+        <div class="bg-amber-100/40 border-t border-amber-100 px-3 py-1.5 flex items-center justify-between text-[11px]">
           <span class="font-bold text-amber-800 shrink-0">下個動作：</span>
-          <span id="next-action-text" class="font-black text-amber-600 truncate">雙臂向兩側劃出大彩虹 ➜</span>
+          <span id="next-action-text" class="font-black text-amber-600 truncate">刷牙微笑大步走 ➜</span>
         </div>
       </section>
 
-      <!-- 【右半屏：大螢幕攝影鏡頭 + 人物入鏡趣味發光火柴人 (占 2/3 宽度)】 -->
-      <section class="relative bg-white rounded-3xl border-2 border-sky-200 overflow-hidden shadow-lg flex flex-col justify-between min-h-[380px] lg:col-span-2">
+      <!-- 【右半屏：大螢幕攝影鏡頭 + 人物入鏡趣味發光火柴人 (佔 9/12 = 75% 寬度，超大視角舞台)】 -->
+      <section class="relative bg-white rounded-3xl border-2 border-sky-200 overflow-hidden shadow-lg flex flex-col justify-between min-h-[440px] lg:col-span-9">
         
         <!-- 顶栏：摄像头开关与火柴人状态 -->
         <div class="absolute top-3 left-3 z-20 flex items-center gap-2">
@@ -435,6 +436,19 @@
 
       </div>
     </footer>
+
+        <!-- 🧲 磁吸式可拖曳懸浮播放/暫停小按鈕 (跟隨畫面、自動吸附螢幕邊緣) -->
+    <div id="floating-play-dock" 
+         class="fixed z-50 flex items-center gap-2 bg-white/95 backdrop-blur-md px-3 py-2 rounded-full shadow-2xl border-2 border-amber-400 cursor-grab active:cursor-grabbing select-none transition-all duration-300 hover:scale-105"
+         style="bottom: 80px; right: 24px; touch-action: none;">
+      <button id="float-btn-toggle" onclick="togglePlay()" class="w-9 h-9 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white flex items-center justify-center font-black shadow-md text-sm transition transform active:scale-90">
+        <span id="float-play-icon">▶</span>
+      </button>
+      <div class="text-xs pr-1">
+        <div id="float-play-label" class="font-black text-slate-800 leading-tight">開始跟跳</div>
+        <div class="text-[9px] text-slate-400 font-bold">可拖曳吸附邊緣 🧲</div>
+      </div>
+    </div>
 
     <!-- 本地背景音乐与真人名师口令播放器 -->
     <audio id="audio-bgm" src="./morning_sunshine_hello.mp3" preload="auto"></audio>
@@ -689,7 +703,26 @@
     let combo = 12;
     let score = 980;
     let playerCount = 1; // 1, 2, 3
-    let currentSkin = 'gold'; // gold, neon, pink
+    let currentHeadTheme = 'human'; // 'human' (小男孩,小女孩,老爺爺), 'wild' (獅子,兔子,猴子), 'farm' (小豬,牛,馬)
+
+    // 三大類型與三位玩家頭部造型特徵配置
+    const CHARACTER_PROFILES = {
+      human: [
+        { role: 'boy', name: '👦 樂樂 (小男孩)', color: '#f59e0b', glow: 'rgba(245, 158, 11, 0.95)', headBg: '#fef3c7', match: '#10b981' },
+        { role: 'girl', name: '👧 美美 (小女孩)', color: '#ec4899', glow: 'rgba(236, 72, 153, 0.95)', headBg: '#fce7f3', match: '#38bdf8' },
+        { role: 'grandpa', name: '👴 智爺 (老爺爺)', color: '#0d9488', glow: 'rgba(13, 148, 136, 0.95)', headBg: '#f0fdfa', match: '#a855f7' }
+      ],
+      wild: [
+        { role: 'lion', name: '🦁 辛巴 (小獅子)', color: '#f59e0b', glow: 'rgba(245, 158, 11, 0.95)', headBg: '#fef3c7', match: '#10b981' },
+        { role: 'rabbit', name: '🐰 兔寶 (小萌兔)', color: '#a855f7', glow: 'rgba(168, 85, 247, 0.95)', headBg: '#faf5ff', match: '#ec4899' },
+        { role: 'monkey', name: '🐵 皮皮 (小頑猴)', color: '#ea580c', glow: 'rgba(234, 88, 12, 0.95)', headBg: '#fff7ed', match: '#38bdf8' }
+      ],
+      farm: [
+        { role: 'pig', name: '🐷 嘟嘟 (小萌豬)', color: '#f43f5e', glow: 'rgba(244, 63, 94, 0.95)', headBg: '#ffe4e6', match: '#10b981' },
+        { role: 'cow', name: '🐮 哞哞 (花斑牛)', color: '#10b981', glow: 'rgba(16, 185, 129, 0.95)', headBg: '#ecfdf5', match: '#38bdf8' },
+        { role: 'horse', name: '🐴 奔奔 (小駿馬)', color: '#b45309', glow: 'rgba(180, 83, 9, 0.95)', headBg: '#fef3c7', match: '#eab308' }
+      ]
+    };
 
     let cameraStream = null;
     let isCameraActive = false;
@@ -772,6 +805,99 @@
     const matchPercent = document.getElementById('match-percent');
     const matchBar = document.getElementById('match-bar');
 
+        // --- 磁吸式浮動播放/暫停控制器 ---
+    function initFloatingPlayDock() {
+      const dock = document.getElementById('floating-play-dock');
+      if (!dock) return;
+
+      let isDragging = false;
+      let startX = 0, startY = 0;
+      let initialLeft = 0, initialTop = 0;
+      let hasMoved = false;
+
+      function onStart(clientX, clientY) {
+        isDragging = true;
+        hasMoved = false;
+        startX = clientX;
+        startY = clientY;
+        const rect = dock.getBoundingClientRect();
+        initialLeft = rect.left;
+        initialTop = rect.top;
+        dock.style.transition = 'none';
+      }
+
+      function onMove(clientX, clientY) {
+        if (!isDragging) return;
+        const dx = clientX - startX;
+        const dy = clientY - startY;
+        if (Math.abs(dx) > 4 || Math.abs(dy) > 4) {
+          hasMoved = true;
+        }
+        let newLeft = initialLeft + dx;
+        let newTop = initialTop + dy;
+
+        const pad = 12;
+        const maxLeft = window.innerWidth - dock.offsetWidth - pad;
+        const maxTop = window.innerHeight - dock.offsetHeight - pad;
+        newLeft = Math.max(pad, Math.min(maxLeft, newLeft));
+        newTop = Math.max(pad, Math.min(maxTop, newTop));
+
+        dock.style.left = `${newLeft}px`;
+        dock.style.top = `${newTop}px`;
+        dock.style.bottom = 'auto';
+        dock.style.right = 'auto';
+      }
+
+      function onEnd() {
+        if (!isDragging) return;
+        isDragging = false;
+        dock.style.transition = 'all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
+
+        const rect = dock.getBoundingClientRect();
+        const screenWidth = window.innerWidth;
+        const dockWidth = dock.offsetWidth;
+        const pad = 16;
+
+        // 磁吸到最近的左側或右側邊緣
+        const midX = rect.left + dockWidth / 2;
+        if (midX < screenWidth / 2) {
+          dock.style.left = `${pad}px`;
+        } else {
+          dock.style.left = `${screenWidth - dockWidth - pad}px`;
+        }
+
+        const maxTop = window.innerHeight - dock.offsetHeight - 65;
+        const clampedTop = Math.max(65, Math.min(maxTop, rect.top));
+        dock.style.top = `${clampedTop}px`;
+      }
+
+      dock.addEventListener('mousedown', (e) => {
+        if (e.target.closest('#float-btn-toggle') && !hasMoved) return;
+        onStart(e.clientX, e.clientY);
+        e.preventDefault();
+      });
+      window.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+          onMove(e.clientX, e.clientY);
+          e.preventDefault();
+        }
+      });
+      window.addEventListener('mouseup', onEnd);
+
+      dock.addEventListener('touchstart', (e) => {
+        const touch = e.touches[0];
+        onStart(touch.clientX, touch.clientY);
+      }, { passive: false });
+      window.addEventListener('touchmove', (e) => {
+        if (isDragging) {
+          const touch = e.touches[0];
+          onMove(touch.clientX, touch.clientY);
+          e.preventDefault();
+        }
+      }, { passive: false });
+      window.addEventListener('touchend', onEnd);
+    }
+
     // ========================================================
     // 3. 视图导航与选曲
     // ========================================================
@@ -828,17 +954,21 @@
       updateIdlePoses();
     }
 
-    function setStickSkin(skin) {
-      currentSkin = skin;
-      ['gold', 'neon', 'pink'].forEach(s => {
-        const btn = document.getElementById(`skin-btn-${s}`);
-        if (s === skin) {
-          const colors = { gold: 'bg-amber-500', neon: 'bg-emerald-500', pink: 'bg-pink-500' };
-          btn.className = `px-2.5 py-1 rounded-xl text-xs font-black ${colors[s]} text-white shadow-xs transition`;
-        } else {
-          btn.className = "px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition";
+    function setHeadTheme(theme) {
+      currentHeadTheme = theme;
+      ['human', 'wild', 'farm'].forEach(t => {
+        const btn = document.getElementById(`theme-btn-${t}`);
+        if (btn) {
+          if (t === theme) {
+            const colors = { human: 'bg-amber-500', wild: 'bg-emerald-500', farm: 'bg-rose-500' };
+            btn.className = `px-2.5 py-1 rounded-xl text-xs font-black ${colors[t]} text-white shadow-xs transition`;
+          } else {
+            btn.className = "px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition";
+          }
         }
       });
+      const names = { human: '人物類 (小男孩、小女孩、老爺爺)', wild: '野生動物類 (獅子、兔子、猴子)', farm: '農場動物類 (小豬、牛、馬)' };
+      stickmanStatusBadge.innerText = `✨ 已切換至：${names[theme]}`;
     }
 
     // ========================================================
@@ -1652,29 +1782,364 @@
           ctx.restore();
         }
 
-        // 2. 发光火柴人【永远在场舞动】（入镜时实时抓取体态，未入镜时在专属站位招手待命，绝不消失）
+        // 2. 發光火柴人【永遠在場舞動】（依據所選的頭部類型：人物類/野生動物類/農場動物類，賦予對應造型）
+        const themeProfiles = CHARACTER_PROFILES[currentHeadTheme] || CHARACTER_PROFILES.human;
         let playersToDraw = [];
-        if (playerCount === 1) {
-          playersToDraw.push({ id: 1, name: "P1 樂樂", color: palette.bone, glow: palette.glow, headBg: palette.headBg, poseData: trackedPlayerPoses[0] });
-        } else if (playerCount === 2) {
-          playersToDraw.push({ id: 1, name: "P1 樂樂 (左)", color: palette.bone, glow: palette.glow, headBg: palette.headBg, poseData: trackedPlayerPoses[0] });
-          playersToDraw.push({ id: 2, name: "P2 歡歡 (右)", color: "#38bdf8", glow: "rgba(56, 189, 248, 0.95)", headBg: "#e0f2fe", poseData: trackedPlayerPoses[1] });
-        } else {
-          playersToDraw.push({ id: 1, name: "P1 樂樂 (左)", color: palette.bone, glow: palette.glow, headBg: palette.headBg, poseData: trackedPlayerPoses[0] });
-          playersToDraw.push({ id: 2, name: "P2 歡歡 (中)", color: "#38bdf8", glow: "rgba(56, 189, 248, 0.95)", headBg: "#e0f2fe", poseData: trackedPlayerPoses[1] });
-          playersToDraw.push({ id: 3, name: "P3 朵朵 (右)", color: "#c084fc", glow: "rgba(192, 132, 252, 0.95)", headBg: "#f3e8ff", poseData: trackedPlayerPoses[2] });
+
+        for (let i = 0; i < playerCount; i++) {
+          const prof = themeProfiles[i] || themeProfiles[0];
+          playersToDraw.push({
+            id: i + 1,
+            role: prof.role,
+            name: prof.name,
+            color: prof.color,
+            glow: prof.glow,
+            headBg: prof.headBg,
+            match: prof.match,
+            poseData: trackedPlayerPoses[i]
+          });
         }
 
         playersToDraw.forEach((p, idx) => {
-          drawRealMatchstickMan(ctx, p, targetPose, frameTick, idx, w, h, palette);
+          drawRealMatchstickMan(ctx, p, targetPose, frameTick, idx, w, h);
         });
       }
 
       requestAnimationFrame(renderStickmanLoop);
     }
 
+    // --- 9 大個性化角色頭部繪製系統 (純 Canvas 向量貝茲曲線繪製，生動立體) ---
+    function drawCustomCharacterHead(ctx, head, role, boneColor, headBg, isMatched, tick) {
+      const R = 27; // 基礎頭部半徑
+
+      // 1. 動物/角色背後裝飾 (獅子鬃毛、猴子大耳、老爺爺頭髮等)
+      if (role === 'lion') {
+        // 🦁 獅子萬獸之王蓬鬆金黃鬃毛
+        ctx.save();
+        for (let a = 0; a < Math.PI * 2; a += Math.PI / 6) {
+          const mx = head.x + Math.cos(a) * (R + 7);
+          const my = head.y + Math.sin(a) * (R + 7);
+          ctx.beginPath();
+          ctx.arc(mx, my, 10, 0, Math.PI * 2);
+          ctx.fillStyle = isMatched ? "#10b981" : "#f59e0b";
+          ctx.shadowColor = "rgba(245, 158, 11, 0.8)";
+          ctx.shadowBlur = 10;
+          ctx.fill();
+        }
+        ctx.restore();
+      } else if (role === 'monkey') {
+        // 🐵 猴子兩側圓圓大耳朵
+        [-1, 1].forEach(side => {
+          const ex = head.x + side * (R + 5);
+          const ey = head.y - 2;
+          ctx.beginPath();
+          ctx.arc(ex, ey, 12, 0, Math.PI * 2);
+          ctx.fillStyle = "#ea580c";
+          ctx.fill();
+          ctx.lineWidth = 2.5;
+          ctx.strokeStyle = boneColor;
+          ctx.stroke();
+          // 內耳粉紅
+          ctx.beginPath();
+          ctx.arc(ex, ey, 6.5, 0, Math.PI * 2);
+          ctx.fillStyle = "#fed7aa";
+          ctx.fill();
+        });
+      } else if (role === 'rabbit') {
+        // 🐰 兔子長長萌跳大耳朵 (帶微風律動)
+        const earWiggle = Math.sin(tick * 0.12) * 3;
+        [-1, 1].forEach((side, i) => {
+          const rot = side * 0.14 + (i === 0 ? earWiggle * 0.03 : -earWiggle * 0.03);
+          ctx.save();
+          ctx.translate(head.x + side * 12, head.y - R + 2);
+          ctx.rotate(rot);
+          // 外耳
+          ctx.beginPath();
+          ctx.ellipse(0, -22, 7.5, 23, 0, 0, Math.PI * 2);
+          ctx.fillStyle = "#faf5ff";
+          ctx.fill();
+          ctx.lineWidth = 3;
+          ctx.strokeStyle = boneColor;
+          ctx.stroke();
+          // 內耳粉嫩
+          ctx.beginPath();
+          ctx.ellipse(0, -22, 3.8, 16, 0, 0, Math.PI * 2);
+          ctx.fillStyle = "#f472b6";
+          ctx.fill();
+          ctx.restore();
+        });
+      } else if (role === 'girl') {
+        // 👧 小女孩彈跳雙馬尾與大蝴蝶結
+        const ponyWiggle = Math.sin(tick * 0.15) * 4;
+        [-1, 1].forEach(side => {
+          const px = head.x + side * (R + 6);
+          const py = head.y - 4 + side * ponyWiggle;
+          // 馬尾
+          ctx.beginPath();
+          ctx.ellipse(px, py, 9, 16, side * 0.35, 0, Math.PI * 2);
+          ctx.fillStyle = "#ec4899";
+          ctx.fill();
+          ctx.lineWidth = 2.5;
+          ctx.strokeStyle = boneColor;
+          ctx.stroke();
+          // 蝴蝶結
+          ctx.beginPath();
+          ctx.arc(head.x + side * (R - 2), head.y - 12, 5, 0, Math.PI * 2);
+          ctx.fillStyle = "#f43f5e";
+          ctx.fill();
+        });
+      } else if (role === 'cow') {
+        // 🐮 花斑牛彎彎金色小牛角與垂耳
+        [-1, 1].forEach(side => {
+          // 金色牛角
+          ctx.beginPath();
+          ctx.moveTo(head.x + side * 10, head.y - R + 5);
+          ctx.quadraticCurveTo(head.x + side * 22, head.y - R - 14, head.x + side * 15, head.y - R - 18);
+          ctx.quadraticCurveTo(head.x + side * 8, head.y - R - 8, head.x + side * 5, head.y - R + 5);
+          ctx.fillStyle = "#fde047";
+          ctx.fill();
+          ctx.lineWidth = 2;
+          ctx.strokeStyle = "#ca8a04";
+          ctx.stroke();
+          // 垂下小牛耳
+          ctx.beginPath();
+          ctx.ellipse(head.x + side * (R + 3), head.y - 6, 10, 6, side * -0.3, 0, Math.PI * 2);
+          ctx.fillStyle = "#ecfdf5";
+          ctx.fill();
+          ctx.lineWidth = 2;
+          ctx.strokeStyle = boneColor;
+          ctx.stroke();
+        });
+      } else if (role === 'pig') {
+        // 🐷 小萌豬可愛折耳
+        [-1, 1].forEach(side => {
+          ctx.beginPath();
+          ctx.moveTo(head.x + side * 12, head.y - R + 4);
+          ctx.lineTo(head.x + side * 24, head.y - R - 12);
+          ctx.lineTo(head.x + side * 28, head.y - R + 2);
+          ctx.closePath();
+          ctx.fillStyle = "#fb7185";
+          ctx.fill();
+          ctx.lineWidth = 2;
+          ctx.strokeStyle = boneColor;
+          ctx.stroke();
+        });
+      } else if (role === 'horse') {
+        // 🐴 小駿馬直挺小馬耳與飄逸馬鬃
+        [-1, 1].forEach(side => {
+          ctx.beginPath();
+          ctx.moveTo(head.x + side * 8, head.y - R + 5);
+          ctx.lineTo(head.x + side * 15, head.y - R - 16);
+          ctx.lineTo(head.x + side * 22, head.y - R + 4);
+          ctx.closePath();
+          ctx.fillStyle = "#b45309";
+          ctx.fill();
+          ctx.lineWidth = 2;
+          ctx.strokeStyle = boneColor;
+          ctx.stroke();
+        });
+        // 頭頂飄逸鬃毛
+        ctx.beginPath();
+        ctx.arc(head.x, head.y - R - 2, 7, 0, Math.PI * 2);
+        ctx.arc(head.x - 3, head.y - R + 4, 6, 0, Math.PI * 2);
+        ctx.fillStyle = "#78350f";
+        ctx.fill();
+      }
+
+      // 2. 繪製頭部基底圓形 (圓潤臉蛋)
+      ctx.beginPath();
+      ctx.arc(head.x, head.y, R, 0, Math.PI * 2);
+      ctx.fillStyle = headBg;
+      ctx.fill();
+      ctx.lineWidth = 4;
+      ctx.strokeStyle = boneColor;
+      ctx.stroke();
+
+      // 3. 角色特色頭部前方飾品 (小男孩帽子、老爺爺眼鏡、小豬鼻子、牛口吻、馬口吻)
+      if (role === 'boy') {
+        // 👦 帥氣運動棒球帽 (帽身 + 朝右俏皮帽舌)
+        ctx.beginPath();
+        ctx.arc(head.x, head.y, R, Math.PI * 1.05, 0);
+        ctx.fillStyle = "#3b82f6";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "#1d4ed8";
+        ctx.stroke();
+        // 帽舌
+        ctx.beginPath();
+        ctx.moveTo(head.x + 8, head.y - 12);
+        ctx.quadraticCurveTo(head.x + 34, head.y - 18, head.x + 36, head.y - 7);
+        ctx.quadraticCurveTo(head.x + 20, head.y - 4, head.x + 8, head.y - 6);
+        ctx.fillStyle = "#2563eb";
+        ctx.fill();
+        ctx.stroke();
+        // 帽頂小鈕扣
+        ctx.beginPath();
+        ctx.arc(head.x, head.y - R - 1, 3.5, 0, Math.PI * 2);
+        ctx.fillStyle = "#fde047";
+        ctx.fill();
+      } else if (role === 'grandpa') {
+        // 👴 老爺爺圓框眼鏡 + 慈祥白眉白鬍
+        // 圓眼鏡
+        ctx.lineWidth = 2.5;
+        ctx.strokeStyle = "#334155";
+        [-1, 1].forEach(side => {
+          ctx.beginPath();
+          ctx.arc(head.x + side * 9.5, head.y - 2, 7.5, 0, Math.PI * 2);
+          ctx.stroke();
+        });
+        // 鏡架橫樑
+        ctx.beginPath();
+        ctx.moveTo(head.x - 2, head.y - 2);
+        ctx.lineTo(head.x + 2, head.y - 2);
+        ctx.stroke();
+        // 雪白小鬍子 (Moustache)
+        ctx.beginPath();
+        ctx.moveTo(head.x, head.y + 6);
+        ctx.quadraticCurveTo(head.x - 10, head.y + 5, head.x - 14, head.y + 13);
+        ctx.quadraticCurveTo(head.x - 5, head.y + 14, head.x, head.y + 8);
+        ctx.quadraticCurveTo(head.x + 5, head.y + 14, head.x + 14, head.y + 13);
+        ctx.quadraticCurveTo(head.x + 10, head.y + 5, head.x, head.y + 6);
+        ctx.fillStyle = "#ffffff";
+        ctx.fill();
+        ctx.lineWidth = 1.5;
+        ctx.strokeStyle = "#94a3b8";
+        ctx.stroke();
+      } else if (role === 'pig') {
+        // 🐷 招牌粉紅大豬鼻 (帶兩個黑黑小鼻孔)
+        ctx.beginPath();
+        ctx.ellipse(head.x, head.y + 4, 12, 8.5, 0, 0, Math.PI * 2);
+        ctx.fillStyle = "#fb7185";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "#e11d48";
+        ctx.stroke();
+        // 鼻孔
+        [-1, 1].forEach(side => {
+          ctx.beginPath();
+          ctx.ellipse(head.x + side * 4.5, head.y + 4, 2, 3, 0, 0, Math.PI * 2);
+          ctx.fillStyle = "#9f1239";
+          ctx.fill();
+        });
+      } else if (role === 'cow') {
+        // 🐮 花斑牛大口吻
+        ctx.beginPath();
+        ctx.ellipse(head.x, head.y + 10, 16, 9.5, 0, 0, Math.PI * 2);
+        ctx.fillStyle = "#fed7aa";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "#ea580c";
+        ctx.stroke();
+        // 鼻孔
+        [-1, 1].forEach(side => {
+          ctx.beginPath();
+          ctx.arc(head.x + side * 5.5, head.y + 10, 2, 0, Math.PI * 2);
+          ctx.fillStyle = "#9a3412";
+          ctx.fill();
+        });
+      } else if (role === 'horse') {
+        // 🐴 小駿馬長口吻
+        ctx.beginPath();
+        ctx.ellipse(head.x, head.y + 9, 13, 10, 0, 0, Math.PI * 2);
+        ctx.fillStyle = "#fed7aa";
+        ctx.fill();
+        ctx.lineWidth = 2;
+        ctx.strokeStyle = "#b45309";
+        ctx.stroke();
+        // 鼻孔
+        [-1, 1].forEach(side => {
+          ctx.beginPath();
+          ctx.arc(head.x + side * 4.5, head.y + 10, 2, 0, Math.PI * 2);
+          ctx.fillStyle = "#78350f";
+          ctx.fill();
+        });
+      } else if (role === 'lion') {
+        // 🦁 獅子可愛小黑鼻與鬍鬚
+        ctx.beginPath();
+        ctx.moveTo(head.x - 5, head.y + 2);
+        ctx.lineTo(head.x + 5, head.y + 2);
+        ctx.lineTo(head.x, head.y + 7);
+        ctx.closePath();
+        ctx.fillStyle = "#1e293b";
+        ctx.fill();
+        // 左右鬍鬚
+        ctx.lineWidth = 1.5;
+        ctx.strokeStyle = "#64748b";
+        [-1, 1].forEach(side => {
+          ctx.beginPath();
+          ctx.moveTo(head.x + side * 6, head.y + 5);
+          ctx.lineTo(head.x + side * 18, head.y + 3);
+          ctx.moveTo(head.x + side * 6, head.y + 8);
+          ctx.lineTo(head.x + side * 17, head.y + 9);
+          ctx.stroke();
+        });
+      } else if (role === 'rabbit') {
+        // 🐰 兔寶三撇鬍鬚與粉紅小鼻
+        ctx.beginPath();
+        ctx.arc(head.x, head.y + 3, 3.5, 0, Math.PI * 2);
+        ctx.fillStyle = "#f43f5e";
+        ctx.fill();
+        ctx.lineWidth = 1.2;
+        ctx.strokeStyle = "#94a3b8";
+        [-1, 1].forEach(side => {
+          ctx.beginPath();
+          ctx.moveTo(head.x + side * 5, head.y + 3);
+          ctx.lineTo(head.x + side * 16, head.y + 1);
+          ctx.moveTo(head.x + side * 5, head.y + 5);
+          ctx.lineTo(head.x + side * 15, head.y + 7);
+          ctx.stroke();
+        });
+      }
+
+      // 4. 腮紅 (所有人與動物通用，萌度拉滿)
+      ctx.beginPath();
+      ctx.arc(head.x - 14, head.y + 5, 4, 0, Math.PI * 2);
+      ctx.arc(head.x + 14, head.y + 5, 4, 0, Math.PI * 2);
+      ctx.fillStyle = "rgba(244, 114, 182, 0.65)";
+      ctx.fill();
+
+      // 5. 眼睛與笑容 (動作達標變閃亮金星 ★ ★)
+      if (isMatched) {
+        ctx.fillStyle = "#10b981";
+        ctx.font = "bold 14px sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText("★", head.x - 9, head.y + (role === 'boy' ? 4 : 2));
+        ctx.fillText("★", head.x + 9, head.y + (role === 'boy' ? 4 : 2));
+        // 大笑嘴
+        if (role !== 'pig' && role !== 'cow' && role !== 'horse' && role !== 'grandpa') {
+          ctx.beginPath();
+          ctx.arc(head.x, head.y + 7, 8, 0, Math.PI);
+          ctx.strokeStyle = "#10b981";
+          ctx.lineWidth = 2.5;
+          ctx.stroke();
+        }
+      } else {
+        // 萌萌大眼睛
+        [-1, 1].forEach(side => {
+          const eyeY = head.y + (role === 'boy' ? 2 : 0);
+          ctx.beginPath();
+          ctx.arc(head.x + side * 9, eyeY, 3.5, 0, Math.PI * 2);
+          ctx.fillStyle = "#1e293b";
+          ctx.fill();
+          // 眼神光
+          ctx.beginPath();
+          ctx.arc(head.x + side * 9 - 1, eyeY - 1, 1.2, 0, Math.PI * 2);
+          ctx.fillStyle = "#ffffff";
+          ctx.fill();
+        });
+        // 微笑嘴
+        if (role !== 'pig' && role !== 'cow' && role !== 'horse' && role !== 'grandpa') {
+          ctx.beginPath();
+          ctx.arc(head.x, head.y + 7, 6.5, 0, Math.PI);
+          ctx.strokeStyle = "#1e293b";
+          ctx.lineWidth = 2;
+          ctx.stroke();
+        }
+      }
+    }
+
     // --- 真实依附小朋友身体节点的萌趣发光火柴人渲染 ---
-    function drawRealMatchstickMan(ctx, p, pose, tick, idx, w, h, palette) {
+    function drawRealMatchstickMan(ctx, p, pose, tick, idx, w, h) {
       const d = p.poseData;
 
       // 将真实归一化坐标通过 object-cover 精确换算为 Canvas 物理像素
@@ -1709,7 +2174,7 @@
       }
 
       ctx.save();
-      const boneColor = isPoseMatched ? palette.match : p.color;
+      const boneColor = isPoseMatched ? p.match : p.color;
       ctx.lineWidth = 10; // 饱满萌趣的火柴人粗线条
       ctx.lineCap = "round";
       ctx.lineJoin = "round";
@@ -1786,66 +2251,8 @@
         ctx.stroke();
       });
 
-      // 5. 核心亮点：绘制萌趣火柴人头部 (带大眼睛、笑脸与头顶小绿芽)
-      const headRadius = 28;
-      ctx.beginPath();
-      ctx.arc(head.x, head.y, headRadius, 0, Math.PI * 2);
-      ctx.fillStyle = p.headBg;
-      ctx.fill();
-      ctx.lineWidth = 4.5;
-      ctx.strokeStyle = boneColor;
-      ctx.stroke();
-
-      // 头顶小绿芽天线 (随动作弹跳摇动)
-      const sproutWiggle = Math.sin(tick * 0.12) * 5;
-      ctx.beginPath();
-      ctx.moveTo(head.x, head.y - headRadius);
-      ctx.quadraticCurveTo(head.x + 8 + sproutWiggle, head.y - headRadius - 14, head.x + sproutWiggle, head.y - headRadius - 22);
-      ctx.lineWidth = 3.5;
-      ctx.strokeStyle = "#22c55e";
-      ctx.stroke();
-      // 嫩芽小叶子
-      ctx.beginPath();
-      ctx.arc(head.x + sproutWiggle, head.y - headRadius - 22, 5.5, 0, Math.PI * 2);
-      ctx.fillStyle = "#22c55e";
-      ctx.fill();
-
-      // 火柴人的可爱表情 (动作达标变星星眼 ★ ★，带红晕腮红！)
-      // 腮红
-      ctx.beginPath();
-      ctx.arc(head.x - 13, head.y + 4, 4, 0, Math.PI * 2);
-      ctx.arc(head.x + 13, head.y + 4, 4, 0, Math.PI * 2);
-      ctx.fillStyle = "rgba(244, 114, 182, 0.65)";
-      ctx.fill();
-
-      if (isPoseMatched) {
-        ctx.fillStyle = "#10b981";
-        ctx.font = "bold 15px sans-serif";
-        ctx.textAlign = "center";
-        ctx.fillText("★", head.x - 9, head.y + 1);
-        ctx.fillText("★", head.x + 9, head.y + 1);
-        // 大笑嘴
-        ctx.beginPath();
-        ctx.arc(head.x, head.y + 6, 9, 0, Math.PI);
-        ctx.strokeStyle = "#10b981";
-        ctx.lineWidth = 2.5;
-        ctx.stroke();
-      } else {
-        // 开心眯眼弧线
-        ctx.fillStyle = "#1e293b";
-        ctx.beginPath();
-        ctx.arc(head.x - 9, head.y - 2, 5, Math.PI, Math.PI * 2);
-        ctx.lineWidth = 2.5;
-        ctx.strokeStyle = "#1e293b";
-        ctx.stroke();
-        ctx.beginPath();
-        ctx.arc(head.x + 9, head.y - 2, 5, Math.PI, Math.PI * 2);
-        ctx.stroke();
-        // 微笑嘴
-        ctx.beginPath();
-        ctx.arc(head.x, head.y + 5, 8, 0, Math.PI);
-        ctx.stroke();
-      }
+      // 5. 核心亮點：繪製 9 大主題個性化萌趣火柴人頭部 (人物類: 男孩/女孩/爺爺; 野生動物: 獅子/兔子/猴子; 農場動物: 豬/牛/馬)
+      drawCustomCharacterHead(ctx, head, p.role, boneColor, p.headBg, isPoseMatched, tick);
 
       // 6. 玩家专属头顶名牌与 PERFECT 徽章
       ctx.fillStyle = boneColor;
@@ -2052,6 +2459,7 @@
     updatePlaybackUI();
     // 立即启动发光火柴人渲染主循环（常驻舞台，实时渲染）
     renderStickmanLoop();
+    initFloatingPlayDock();
   </script>
 </body>
 </html>
