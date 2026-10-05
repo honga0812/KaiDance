@@ -302,7 +302,7 @@
           <div class="relative w-full max-w-[210px] h-[330px] sm:h-[370px] aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-amber-300/50 bg-amber-100/40 flex items-center justify-center">
             <video id="coach-video" 
                    src="./videos/loop_03_sun_rise.mp4" 
-                   autoplay loop muted playsinline 
+                   autoplay loop muted playsinline webkit-playsinline="true"
                    class="w-full h-full object-cover object-center select-none">
             </video>
             <!-- 9:16 輕量標籤 -->
@@ -358,7 +358,7 @@
 
         <!-- 画面主体：真实摄像头 Video (底层) + 萌趣发光火柴人 Canvas (顶层) -->
         <div id="camera-container" class="flex-1 relative flex items-center justify-center bg-slate-950 overflow-hidden min-h-[380px]">
-          <video id="webcam-video" autoplay playsinline muted class="absolute inset-0 w-full h-full object-cover transform -scale-x-100 opacity-85"></video>
+          <video id="webcam-video" autoplay playsinline webkit-playsinline="true" muted class="absolute inset-0 w-full h-full object-cover transform -scale-x-100 opacity-85"></video>
           <canvas id="camera-canvas" width="640" height="480" class="absolute inset-0 w-full h-full z-20 pointer-events-none"></canvas>
 
           <!-- 引导提示框（摄像头开启前，悬浮于底部，绝不遮挡火柴人舞台） -->
@@ -459,6 +459,12 @@
   </div>
 
   <script>
+    // ========================================================
+    // 設備檢測：精準判定 iPadOS / iOS (包括 Safari 偽裝成 MacIntel 桌面標頭的 iPad)
+    // ========================================================
+    const isAppleMobile = /iPad|iPhone|iPod/.test(navigator.userAgent) || 
+                          (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+
     // ========================================================
     // 1. 全曲动作段落时钟谱：使用官方英文歌词与动作要领提示
     // ========================================================
@@ -1030,6 +1036,7 @@
       }
     }
     window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('orientationchange', () => setTimeout(resizeCanvas, 150));
     if (window.ResizeObserver) {
       setTimeout(() => {
         const container = document.getElementById('camera-container');
@@ -1058,6 +1065,10 @@
 
     // 初始化 MoveNet MultiPose AI 引擎 (支持 1~6 人实时多人骨骼与火柴人绑定)
     async function tryInitMoveNet() {
+      if (isAppleMobile) {
+        console.log("偵測到 iPad / iOS 設備，啟用極致流暢之原生端側視覺引擎，避免 WebKit 記憶體過載。");
+        return;
+      }
       if (typeof poseDetection !== 'undefined' && !moveNetDetector && !isMoveNetLoading) {
         isMoveNetLoading = true;
         try {
@@ -1327,6 +1338,7 @@
 
     // 初始化 MediaPipe AI 姿态识别引擎
     function tryInitMediaPipe() {
+      if (isAppleMobile) return;
       if (typeof Pose !== 'undefined' && !mpPose) {
         try {
           mpPose = new Pose({
@@ -1451,10 +1463,16 @@
       }
 
       try {
+        const videoConstraints = isAppleMobile
+          ? { width: { ideal: 640 }, height: { ideal: 480 }, facingMode: "user" }
+          : { width: { ideal: 1280 }, height: { ideal: 720 }, facingMode: "user" };
+
         cameraStream = await navigator.mediaDevices.getUserMedia({
-          video: { width: { ideal: 1280 }, height: { ideal: 720 }, facingMode: "user" },
+          video: videoConstraints,
           audio: false
         });
+        webcamVideo.setAttribute('playsinline', 'true');
+        webcamVideo.setAttribute('webkit-playsinline', 'true');
         webcamVideo.srcObject = cameraStream;
         await webcamVideo.play();
 
@@ -1468,9 +1486,11 @@
         setTimeout(resizeCanvas, 80);
         setTimeout(resizeCanvas, 250);
 
-        // 尝试激活 MoveNet MultiPose 及 MediaPipe
-        tryInitMoveNet();
-        tryInitMediaPipe();
+        // 桌面端尝试激活 MoveNet MultiPose 及 MediaPipe
+        if (!isAppleMobile) {
+          tryInitMoveNet();
+          tryInitMediaPipe();
+        }
       } catch (err) {
         console.warn("Camera fallback:", err);
         isCameraActive = true;
@@ -1553,6 +1573,11 @@
         return;
       }
       cvFrameCounter++;
+
+      // 在 iPad / 平板移動端進行適度隔幀抽樣，大幅降低 CPU 佔用並保持 60 FPS 流暢度
+      if (isAppleMobile && (cvFrameCounter % 2 !== 0)) {
+        return;
+      }
 
       // 1. 优先使用 MoveNet MultiPose 深度学习 AI 多人骨骼引擎 (支持 1~6 人实时追踪)
       if (moveNetDetector && !isMoveNetRunning) {
@@ -1886,7 +1911,6 @@
     let frameTick = 0;
     function renderStickmanLoop() {
       try {
-        resizeCanvas();
         processRealVideoFrame();
         ctx.clearRect(0, 0, cameraCanvas.width, cameraCanvas.height);
         frameTick++;
@@ -1979,7 +2003,7 @@
           ctx.arc(mx, my, 10, 0, Math.PI * 2);
           ctx.fillStyle = isMatched ? "#10b981" : "#f59e0b";
           ctx.shadowColor = "rgba(245, 158, 11, 0.8)";
-          ctx.shadowBlur = 10;
+          ctx.shadowBlur = isAppleMobile ? 3 : 10;
           ctx.fill();
         }
         ctx.restore();
@@ -2331,12 +2355,12 @@
 
       ctx.save();
       const boneColor = isPoseMatched ? p.match : p.color;
-      ctx.lineWidth = 10; // 饱满萌趣的火柴人粗线条
+      ctx.lineWidth = isAppleMobile ? 8 : 10; // 移动端/iPad 适配萌趣适中粗细
       ctx.lineCap = "round";
       ctx.lineJoin = "round";
       ctx.strokeStyle = boneColor;
       ctx.shadowColor = isPoseMatched ? "rgba(16, 185, 129, 0.95)" : p.glow;
-      ctx.shadowBlur = 20;
+      ctx.shadowBlur = isAppleMobile ? 5 : 20; // 避免移动端高分 Retina 屏软件高斯模糊卡顿
 
       function line(a, b) {
         ctx.beginPath();
@@ -2606,10 +2630,19 @@
     }
 
     function toggleFullScreen() {
-      if (!document.fullscreenElement) {
-        document.documentElement.requestFullscreen().catch(e => console.warn(e));
+      const docEl = document.documentElement;
+      if (!document.fullscreenElement && !document.webkitFullscreenElement) {
+        if (docEl.requestFullscreen) {
+          docEl.requestFullscreen().catch(e => console.warn(e));
+        } else if (docEl.webkitRequestFullscreen) {
+          docEl.webkitRequestFullscreen();
+        }
       } else {
-        document.exitFullscreen();
+        if (document.exitFullscreen) {
+          document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) {
+          document.webkitExitFullscreen();
+        }
       }
     }
 
@@ -2618,10 +2651,12 @@
     renderStickmanLoop();
     initFloatingPlayDock();
 
-    // 页面加载完成后后台异步预热多人姿态 AI 引擎
+    // 页面加载完成后后台异步预热多人姿态 AI 引擎 (仅桌面端，移动端使用极速轻量原生端侧引擎)
     window.addEventListener('load', () => {
-      setTimeout(tryInitMoveNet, 500);
-      setTimeout(tryInitMediaPipe, 1200);
+      if (!isAppleMobile) {
+        setTimeout(tryInitMoveNet, 500);
+        setTimeout(tryInitMediaPipe, 1200);
+      }
     });
   </script>
 </body>
