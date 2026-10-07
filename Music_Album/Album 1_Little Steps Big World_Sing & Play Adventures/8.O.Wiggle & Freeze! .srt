@@ -1,0 +1,108 @@
+1
+00:00:00,000 --> 00:00:01,900
+beat beat beat beat
+
+2
+00:00:07,166 --> 00:00:09,466
+Funky drum beat and whistle
+
+3
+00:00:10,900 --> 00:00:14,600
+Wiggle your body... and don't forget to freeze!
+
+4
+00:00:14,600 --> 00:00:18,100
+Shake your little shoulders, shake your little knees,
+
+5
+00:00:18,366 --> 00:00:21,966
+Blow around like autumn leaves in the breeze!
+
+6
+00:00:22,366 --> 00:00:25,866
+Jump up high, touch the ceiling and the floor,
+
+7
+00:00:26,166 --> 00:00:29,600
+Run in place, run a little bit more!
+
+8
+00:00:29,866 --> 00:00:33,300
+Now listen closely, stop in your track...
+
+9
+00:00:33,366 --> 00:00:36,966
+Three, two, one... FREEZE like a statue back!
+
+10
+00:00:37,133 --> 00:00:40,066
+Sudden silence for 2 beats
+
+11
+00:00:42,766 --> 00:00:46,400
+Wiggle, wiggle, wiggle, dance all around!
+
+12
+00:00:46,400 --> 00:00:50,266
+Stomp your feet upon the ground!
+
+13
+00:00:50,266 --> 00:00:53,800
+Wiggle to the left, wiggle to the right,
+
+14
+00:00:53,966 --> 00:00:56,400
+Dancing with all your might!
+
+15
+00:00:59,566 --> 00:01:03,266
+Spin like a top, spinning round and round,
+
+16
+00:01:03,466 --> 00:01:07,000
+Tiptoe softly without making a sound!
+
+17
+00:01:07,066 --> 00:01:10,866
+Flap your arms like an eagle in the sky,
+
+18
+00:01:10,966 --> 00:01:14,266
+Wave both hands up way up high!
+
+19
+00:01:14,866 --> 00:01:18,266
+Get ready, get steady, hold your pose...
+
+20
+00:01:18,366 --> 00:01:22,133
+Three, two, one... FREEZE and touch your nose!
+
+21
+00:01:22,133 --> 00:01:25,066
+Sudden silence for 2 beats
+
+22
+00:01:27,800 --> 00:01:31,366
+Wiggle, wiggle, wiggle, dance all around!
+
+23
+00:01:31,366 --> 00:01:35,200
+Stomp your feet upon the ground!
+
+24
+00:01:35,200 --> 00:01:38,766
+Wiggle to the left, wiggle to the right,
+
+25
+00:01:38,966 --> 00:01:41,333
+Dancing with all your might!
+
+26
+00:01:44,900 --> 00:01:47,533
+You didn't move! You win!
+
+27
+00:01:47,966 --> 00:01:51,066
+Everybody sit down and breathe
+

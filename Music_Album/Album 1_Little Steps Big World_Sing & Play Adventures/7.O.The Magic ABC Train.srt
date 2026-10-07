@@ -1,0 +1,100 @@
+1
+00:00:08,200 --> 00:00:12,500
+All aboard the ABC Train!
+
+2
+00:00:16,333 --> 00:00:20,266
+A for Apple, B for Ball,
+
+3
+00:00:20,333 --> 00:00:24,166
+C for Cat climbing up the wall!
+
+4
+00:00:24,533 --> 00:00:28,300
+D for Dog, E for Elephant gray,
+
+5
+00:00:28,866 --> 00:00:32,333
+F for Fish swimming away!
+
+6
+00:00:32,600 --> 00:00:36,366
+G, H, I, J, K and L,
+
+7
+00:00:36,600 --> 00:00:40,333
+Hear the shiny train whistle and bell!
+
+8
+00:00:40,333 --> 00:00:44,566
+Letter M is smiling bright,
+
+9
+00:00:44,933 --> 00:00:48,566
+Guiding the train into the light!
+
+10
+00:00:48,866 --> 00:00:52,666
+Chugga-chugga choo-choo, hear the bell ring,
+
+11
+00:00:52,800 --> 00:00:56,766
+Singing out our letters while we sing, sing, sing!
+
+12
+00:00:56,966 --> 00:01:00,666
+Riding down the track from A to Z,
+
+13
+00:01:01,066 --> 00:01:04,700
+Learning all the letters happily!
+
+14
+00:01:05,566 --> 00:01:08,900
+N for Nest, O for Owl so wise,
+
+15
+00:01:09,166 --> 00:01:13,166
+P for Panda with round black eyes!
+
+16
+00:01:13,366 --> 00:01:17,000
+Q, R, S, T, moving fast,
+
+17
+00:01:17,300 --> 00:01:21,300
+Watching all the pretty letters pass!
+
+18
+00:01:21,566 --> 00:01:29,300
+U, V, W, X, Y, Z, Now we know the letters, you and me!
+
+19
+00:01:29,666 --> 00:01:33,366
+Every letter has a friendly sound,
+
+20
+00:01:33,466 --> 00:01:37,366
+Spelling all the magic words around!
+
+21
+00:01:37,600 --> 00:01:41,533
+Chugga-chugga choo-choo, hear the bell ring,
+
+22
+00:01:41,600 --> 00:01:44,666
+Singing out our letters while we sing, sing, sing!
+
+23
+00:01:45,766 --> 00:01:49,466
+Riding down the track from A to Z,
+
+24
+00:01:49,866 --> 00:01:53,666
+Learning all the letters happily!
+
+25
+00:01:53,933 --> 00:01:58,300
+Next stop: Reading Station! Choo-choo! Ding-ding!
+

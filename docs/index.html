@@ -13,6 +13,8 @@
   <!-- MediaPipe Pose CDN (单人备用) -->
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
+  <!-- KaiDance 完整多專輯音樂與動作資料庫 (Album 1 十首全曲 & Album 2 搶先體驗) -->
+  <script src="./album_data.js"></script>
   <style>
     @keyframes bounce-slow {
       0%, 100% { transform: translateY(0); }
@@ -27,9 +29,26 @@
       50% { transform: scale(1.3) rotate(12deg); opacity: 1; }
       100% { transform: scale(1) rotate(0deg); opacity: 0.95; }
     }
+    @keyframes coach-breathe {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+    @keyframes sound-wave {
+      0%, 100% { height: 4px; }
+      50% { height: 16px; }
+    }
+    @keyframes slide-drawer {
+      from { transform: translateX(100%); }
+      to { transform: translateX(0); }
+    }
     .anim-bounce { animation: bounce-slow 1.8s infinite ease-in-out; }
     .anim-pulse { animation: pulse-ring 1.1s infinite ease-in-out; }
     .anim-star { animation: star-burst 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+    .anim-coach-breathe { animation: coach-breathe 4s infinite ease-in-out; }
+    .wave-bar-1 { animation: sound-wave 0.8s infinite ease-in-out; }
+    .wave-bar-2 { animation: sound-wave 0.8s infinite ease-in-out 0.2s; }
+    .wave-bar-3 { animation: sound-wave 0.8s infinite ease-in-out 0.4s; }
+    .animate-slide-left { animation: slide-drawer 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
     
     input[type=range]::-webkit-slider-thumb {
       -webkit-appearance: none;
@@ -73,127 +92,72 @@
       </div>
     </header>
 
-    <!-- 欢迎大横幅 -->
-    <div class="bg-gradient-to-r from-amber-400 via-orange-400 to-pink-400 rounded-3xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden mb-8">
+    <!-- 專輯切換標籤 (Tablet & Kids 優化：大圓角觸控鈕、清晰視覺辨識) -->
+    <div class="mb-5">
+      <div class="flex items-center gap-3 overflow-x-auto pb-1">
+        <button id="tab-album-1" onclick="switchAlbum('album_1')" class="px-5 py-3 rounded-2xl md:rounded-3xl font-black text-sm md:text-base flex items-center gap-2.5 transition-all shadow-md bg-gradient-to-r from-amber-500 to-orange-500 text-white transform active:scale-95 shrink-0">
+          <span class="text-2xl">🌟</span>
+          <div class="text-left">
+            <div class="leading-none text-white">第 1 集：探索生活大冒險</div>
+            <div class="text-[10px] md:text-xs text-amber-100 font-medium mt-1">10 首全曲收錄 · 動作引導同步</div>
+          </div>
+        </button>
+        <button id="tab-album-2" onclick="switchAlbum('album_2')" class="px-5 py-3 rounded-2xl md:rounded-3xl font-black text-sm md:text-base flex items-center gap-2.5 transition-all shadow-xs bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transform active:scale-95 shrink-0">
+          <span class="text-2xl">🚀</span>
+          <div class="text-left">
+            <div class="leading-none text-slate-800">第 2 集：歡樂節奏派對篇</div>
+            <div class="text-[10px] md:text-xs text-slate-500 font-medium mt-1">10 首新曲就緒 · 搶先試聽跟跳</div>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <!-- 歡迎大橫幅 (隨當前專輯動態切換) -->
+    <div id="album-banner" class="bg-gradient-to-r from-amber-400 via-orange-400 to-pink-400 rounded-3xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden mb-6 transition-all duration-300">
       <div class="relative z-10 max-w-xl">
-        <span class="bg-white/20 backdrop-blur text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider">
-          🌞 晨間元氣早操 · 4~6 歲學齡前專屬
+        <span id="album-banner-badge" class="bg-white/20 backdrop-blur text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider inline-block">
+          🌞 幼兒園必備 10 首晨操與生活常規大冒險
         </span>
-        <h2 class="text-2xl md:text-4xl font-black mt-3 leading-tight">
-          站到大螢幕前，<br>瞬間化身發光跳舞火柴人！
+        <h2 id="album-banner-title" class="text-2xl md:text-4xl font-black mt-3 leading-tight">
+          Little Steps Big World<br>站到大螢幕前，瞬間化身發光火柴人！
         </h2>
-        <p class="text-xs md:text-sm text-amber-100 font-medium mt-2">
-          鏡頭真實追蹤你的雙手與身體！你抬手火柴人就抬手，你跳躍火柴人就跳躍！
+        <p id="album-banner-desc" class="text-xs md:text-sm text-amber-100 font-medium mt-2">
+          每一首歌都可以單獨跟跳，也可以點擊「整張專輯連續播放」，讓小朋友暢快跳完全套！
         </p>
       </div>
-      <div class="absolute -right-6 -bottom-8 text-9xl opacity-30 select-none pointer-events-none">
+      <div id="album-banner-emoji" class="absolute -right-6 -bottom-8 text-9xl opacity-30 select-none pointer-events-none">
         ☀️
       </div>
     </div>
 
-    <!-- 歌曲卡片网格列表 -->
-    <div>
-      <div class="flex items-center justify-between mb-4">
-        <h3 class="text-lg md:text-xl font-black text-slate-800 flex items-center gap-2">
-          <span>🎵</span> 挑選今日舞蹈課程
-        </h3>
-        <span class="text-xs text-slate-500 font-medium">共 4 首專輯專屬曲目</span>
+    <!-- 專輯功能列：全專輯連續播放按鈕 + 隨機播放 -->
+    <div class="bg-white/95 backdrop-blur rounded-2xl p-4 border border-amber-200/80 shadow-md flex flex-wrap items-center justify-between gap-3 mb-6">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-2xl bg-amber-100 flex items-center justify-center text-xl">
+          💿
+        </div>
+        <div>
+          <h3 id="album-section-title" class="text-base font-black text-slate-800">
+            第一集曲目選單 (共 10 首)
+          </h3>
+          <p id="album-section-desc" class="text-xs text-slate-500 font-medium">
+            點選卡片單獨跟跳，或點右側「整張專輯循環播放」無縫連播！
+          </p>
+        </div>
       </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
-        
-        <!-- 歌曲 1：Morning Sunshine Hello -->
-        <div onclick="selectSong('morning')" class="group bg-white rounded-3xl p-5 border-2 border-amber-300 shadow-lg hover:shadow-2xl hover:border-amber-500 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1 relative overflow-hidden">
-          <div class="absolute top-3 right-3 bg-amber-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow">
-            首選推薦 🔥
-          </div>
-          <div>
-            <div class="w-full h-36 rounded-2xl bg-gradient-to-tr from-amber-300 via-yellow-200 to-sky-200 flex items-center justify-center text-6xl shadow-inner mb-3 overflow-hidden">
-              <span class="transform group-hover:scale-110 transition-transform duration-300">☀️</span>
-            </div>
-            <h4 class="font-black text-base text-slate-900 group-hover:text-amber-600 transition-colors">
-              Morning Sunshine Hello
-            </h4>
-            <p class="text-xs font-bold text-amber-600 mt-0.5">晨間喚醒早操 · 陽光伸展</p>
-            <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
-              變身發光火柴人，雙手舉過頭頂托起大太陽、和小草一起搖晃與跳躍！
-            </p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · 難度 ⭐⭐</span>
-            <button class="bg-amber-500 group-hover:bg-amber-600 text-white text-xs font-black px-3.5 py-1.5 rounded-xl shadow transition-colors">
-              開始跳 🚀
-            </button>
-          </div>
-        </div>
-
-        <!-- 歌曲 2：Wiggle & Freeze! -->
-        <div onclick="selectSong('freeze')" class="group bg-white rounded-3xl p-5 border border-sky-100 shadow hover:shadow-2xl hover:border-sky-400 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
-          <div>
-            <div class="w-full h-36 rounded-2xl bg-gradient-to-tr from-sky-300 via-blue-200 to-indigo-200 flex items-center justify-center text-6xl shadow-inner mb-3 overflow-hidden">
-              <span class="transform group-hover:scale-110 transition-transform duration-300">🧊</span>
-            </div>
-            <h4 class="font-black text-base text-slate-900 group-hover:text-sky-600 transition-colors">
-              Wiggle & Freeze!
-            </h4>
-            <p class="text-xs font-bold text-sky-600 mt-0.5">扭扭定格遊戲 · 專注力訓練</p>
-            <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
-              火柴人跟著扭動，音樂一停，火柴人立刻定格成冰凍木頭人！
-            </p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · 難度 ⭐⭐⭐</span>
-            <button class="bg-sky-500 group-hover:bg-sky-600 text-white text-xs font-black px-3.5 py-1.5 rounded-xl shadow transition-colors">
-              開始跳 🚀
-            </button>
-          </div>
-        </div>
-
-        <!-- 歌曲 3：Animal Safari March -->
-        <div onclick="selectSong('safari')" class="group bg-white rounded-3xl p-5 border border-emerald-100 shadow hover:shadow-2xl hover:border-emerald-400 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
-          <div>
-            <div class="w-full h-36 rounded-2xl bg-gradient-to-tr from-emerald-300 via-teal-200 to-lime-200 flex items-center justify-center text-6xl shadow-inner mb-3 overflow-hidden">
-              <span class="transform group-hover:scale-110 transition-transform duration-300">🦁</span>
-            </div>
-            <h4 class="font-black text-base text-slate-900 group-hover:text-emerald-600 transition-colors">
-              Animal Safari March
-            </h4>
-            <p class="text-xs font-bold text-emerald-600 mt-0.5">森林動物巡遊 · 大肌肉群</p>
-            <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
-              火柴人大象長鼻子踏步、小鳥飛翔、袋鼠雙腳大蹦跳！
-            </p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · 難度 ⭐⭐</span>
-            <button class="bg-emerald-500 group-hover:bg-emerald-600 text-white text-xs font-black px-3.5 py-1.5 rounded-xl shadow transition-colors">
-              開始跳 🚀
-            </button>
-          </div>
-        </div>
-
-        <!-- 歌曲 4：Ready, Set, Shine! -->
-        <div onclick="selectSong('shine')" class="group bg-white rounded-3xl p-5 border border-purple-100 shadow hover:shadow-2xl hover:border-purple-400 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1">
-          <div>
-            <div class="w-full h-36 rounded-2xl bg-gradient-to-tr from-purple-300 via-pink-200 to-amber-200 flex items-center justify-center text-6xl shadow-inner mb-3 overflow-hidden">
-              <span class="transform group-hover:scale-110 transition-transform duration-300">✨</span>
-            </div>
-            <h4 class="font-black text-base text-slate-900 group-hover:text-purple-600 transition-colors">
-              Ready, Set, Shine!
-            </h4>
-            <p class="text-xs font-bold text-purple-600 mt-0.5">星光元氣齊舞 · 節奏感</p>
-            <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
-              活力開合跳、火柴人頭頂星光閃爍，點亮全天好精神！
-            </p>
-          </div>
-          <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
-            <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · 難度 ⭐⭐⭐</span>
-            <button class="bg-purple-500 group-hover:bg-purple-600 text-white text-xs font-black px-3.5 py-1.5 rounded-xl shadow transition-colors">
-              開始跳 🚀
-            </button>
-          </div>
-        </div>
-
+      <div class="flex items-center gap-2">
+        <button onclick="playCurrentAlbumAll()" class="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-black text-sm shadow-md transition flex items-center gap-2 active:scale-95 anim-pulse">
+          <span>▶</span> 整張專輯循環播放
+        </button>
+        <button onclick="playRandomSongInAlbum()" class="px-4 py-2.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs shadow-xs transition flex items-center gap-1.5 active:scale-95">
+          <span>🎲</span> 隨機跳一首
+        </button>
       </div>
+    </div>
+
+    <!-- 歌曲卡片網格容器 (動態渲染) -->
+    <div id="song-cards-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5">
+      <!-- 由 JS 動態注入 10 首曲目卡片 -->
     </div>
   </div>
 
@@ -208,16 +172,21 @@
       
       <!-- 返回与曲名 -->
       <div class="flex items-center gap-3">
-        <button onclick="backToLobby()" class="px-3.5 py-1.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-xs font-black text-slate-700 transition flex items-center gap-1">
+        <button onclick="backToLobby()" class="px-3.5 py-1.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-xs font-black text-slate-700 transition flex items-center gap-1 active:scale-95">
           ◀ 返回選歌
         </button>
         <div>
-          <h2 id="room-song-title" class="text-base md:text-lg font-black text-slate-800">
+          <h2 id="room-song-title" class="text-base md:text-lg font-black text-slate-800 flex items-center gap-1.5">
             ☀️ Morning Sunshine Hello
           </h2>
-          <span class="text-[11px] font-bold text-amber-500 bg-amber-50 px-2 py-0.5 rounded-md">
-            真實火柴人骨骼跟隨 · 23 段精準對齊動畫
-          </span>
+          <div class="flex items-center gap-1.5 mt-0.5">
+            <span id="room-album-badge" class="text-[11px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200">
+              第 1 集 #01
+            </span>
+            <button onclick="togglePlaylistDrawer()" class="text-[11px] font-black text-sky-600 bg-sky-50 hover:bg-sky-100 px-2.5 py-0.5 rounded-md border border-sky-200 transition flex items-center gap-1">
+              📜 全專輯歌單 (10首)
+            </button>
+          </div>
         </div>
       </div>
 
@@ -297,21 +266,27 @@
           </span>
         </div>
 
-        <!-- 動作循環影片播放器 (無黑底、無黑框，純淨圓角卡片展示) -->
+        <!-- 動作示範播放器 (支援示範影片與教練寫真圖片無縫切換) -->
         <div class="flex-1 relative flex items-center justify-center p-2 overflow-hidden">
           <div class="relative w-full max-w-[210px] h-[330px] sm:h-[370px] aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-amber-300/50 bg-amber-100/40 flex items-center justify-center">
+            <!-- 示範影片 (第 1 首已更新兩段及基礎循環) -->
             <video id="coach-video" 
                    src="./videos/loop_03_sun_rise.mp4" 
                    autoplay loop muted playsinline webkit-playsinline="true"
                    class="w-full h-full object-cover object-center select-none">
             </video>
-            <!-- 9:16 輕量標籤 -->
+            <!-- 示範寫真 (第 2~10 首先放置小男孩小女孩生成寫真) -->
+            <img id="coach-image" 
+                 src="./images/boy_dance_coach_1790908303698.jpg" 
+                 alt="示範動作" 
+                 class="hidden w-full h-full object-cover object-center select-none anim-coach-breathe">
+            <!-- 動作模式標籤 -->
             <div class="absolute bottom-1.5 left-1.5 right-1.5 flex items-center justify-between pointer-events-none px-1">
-              <span class="bg-black/50 backdrop-blur text-[9px] text-amber-300 font-bold px-1.5 py-0.5 rounded-full">
-                📐 9:16
+              <span id="coach-type-badge" class="bg-black/60 backdrop-blur text-[9px] text-amber-300 font-bold px-1.5 py-0.5 rounded-full">
+                🎬 示範影片
               </span>
-              <span class="bg-black/50 backdrop-blur text-[9px] text-white/90 font-bold px-1.5 py-0.5 rounded-full">
-                示範循環
+              <span class="bg-black/60 backdrop-blur text-[9px] text-white/90 font-bold px-1.5 py-0.5 rounded-full">
+                跟著教練跳
               </span>
             </div>
           </div>
@@ -403,17 +378,33 @@
       <!-- 播放控制行 -->
       <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
         
-        <div class="flex items-center gap-2">
+        <div class="flex items-center gap-1.5 md:gap-2">
+          <!-- 上一首 -->
+          <button id="btn-prev" onclick="prevSong()" class="w-9 h-9 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-black text-sm transition flex items-center justify-center shadow-xs active:scale-95" title="上一首">
+            ⏮
+          </button>
           <!-- 播放/暂停 -->
           <button id="btn-play" onclick="togglePlay()" class="px-4 py-1.5 rounded-2xl bg-amber-500 hover:bg-amber-600 text-white font-black text-sm shadow transition flex items-center gap-1.5 active:scale-95">
             <span id="play-icon">▶</span> <span id="play-label">播放舞曲</span>
           </button>
+          <!-- 下一首 -->
+          <button id="btn-next" onclick="nextSong()" class="w-9 h-9 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-black text-sm transition flex items-center justify-center shadow-xs active:scale-95" title="下一首">
+            ⏭
+          </button>
+          <!-- 循環模式切換 -->
+          <button id="btn-loop-mode" onclick="toggleLoopMode()" class="px-3 py-1.5 rounded-2xl bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-xs font-black text-indigo-700 transition flex items-center gap-1 shadow-xs active:scale-95" title="切換循環模式">
+            <span id="loop-mode-icon">🔁</span> <span id="loop-mode-label">全專輯連播</span>
+          </button>
+          <!-- 歌單按鈕 -->
+          <button onclick="togglePlaylistDrawer()" class="px-3 py-1.5 rounded-2xl bg-sky-50 hover:bg-sky-100 border border-sky-200 text-xs font-black text-sky-700 transition flex items-center gap-1 shadow-xs active:scale-95">
+            📜 專輯歌單
+          </button>
           <!-- 重新开始 -->
-          <button onclick="restartDance()" class="px-3 py-1.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700 transition">
+          <button onclick="restartDance()" class="px-2.5 py-1.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-xs font-bold text-slate-700 transition" title="重新開始本曲">
             🔄 重跳
           </button>
           <!-- 0.8x 慢学 -->
-          <button id="btn-speed" onclick="toggleSpeed()" class="px-3 py-1.5 rounded-2xl bg-amber-50 hover:bg-amber-100 border border-amber-200 text-xs font-bold text-amber-700 transition">
+          <button id="btn-speed" onclick="toggleSpeed()" class="px-2.5 py-1.5 rounded-2xl bg-amber-50 hover:bg-amber-100 border border-amber-200 text-xs font-bold text-amber-700 transition">
             🐢 1.0x
           </button>
         </div>
@@ -425,31 +416,68 @@
           <span id="time-total" class="text-xs font-mono font-bold text-slate-400">2:00</span>
         </div>
 
-        <!-- 快速跳转按钮 (对齐 18 段合并后动作结构) -->
-        <div class="hidden md:flex items-center gap-1">
-          <button onclick="seekTime(0)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">01 預備</button>
-          <button onclick="seekTime(7.87)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">02 托太陽</button>
-          <button onclick="seekTime(15.97)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">03 刷刷牙</button>
-          <button onclick="seekTime(23.77)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">04 小鳥飛</button>
-          <button onclick="seekTime(33.37)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">05 說哈囉</button>
-          <button onclick="seekTime(51.4)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">08 旋轉跳</button>
-          <button onclick="seekTime(59.87)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">09 背書包</button>
-          <button onclick="seekTime(107.73)" class="px-2.5 py-1 text-xs font-bold rounded-lg bg-slate-100 hover:bg-slate-200 text-slate-600">18 燦爛比心</button>
-        </div>
-
       </div>
     </footer>
 
-        <!-- 🧲 磁吸式可拖曳懸浮播放/暫停小按鈕 (跟隨畫面、自動吸附螢幕邊緣) -->
+    <!-- 🧲 磁吸式可拖曳懸浮播放/暫停小按鈕 (跟隨畫面、自動吸附螢幕邊緣) -->
     <div id="floating-play-dock" 
-         class="fixed z-50 flex items-center gap-2 bg-white/95 backdrop-blur-md px-3 py-2 rounded-full shadow-2xl border-2 border-amber-400 cursor-grab active:cursor-grabbing select-none transition-all duration-300 hover:scale-105"
+         class="fixed z-40 flex items-center gap-2 bg-white/95 backdrop-blur-md px-3 py-2 rounded-full shadow-2xl border-2 border-amber-400 cursor-grab active:cursor-grabbing select-none transition-all duration-300 hover:scale-105"
          style="bottom: 80px; right: 24px; touch-action: none;">
-      <button id="float-btn-toggle" onclick="togglePlay()" class="w-9 h-9 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white flex items-center justify-center font-black shadow-md text-sm transition transform active:scale-90">
+      <button onclick="prevSong()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center font-black text-xs transition active:scale-90" title="上一首">
+        ⏮
+      </button>
+      <button id="float-btn-toggle" onclick="togglePlay()" class="w-10 h-10 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white flex items-center justify-center font-black shadow-md text-base transition transform active:scale-90">
         <span id="float-play-icon">▶</span>
+      </button>
+      <button onclick="nextSong()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center font-black text-xs transition active:scale-90" title="下一首">
+        ⏭
       </button>
       <div class="text-xs pr-1">
         <div id="float-play-label" class="font-black text-slate-800 leading-tight">開始跟跳</div>
-        <div class="text-[9px] text-slate-400 font-bold">可拖曳吸附邊緣 🧲</div>
+        <div id="float-song-name" class="text-[9px] text-slate-500 font-bold truncate max-w-[90px]">Morning Sunshine</div>
+      </div>
+    </div>
+
+    <!-- 📜 全專輯 10 首歌單抽屜 (Drawer Panel，平板與幼兒專屬大卡片設計) -->
+    <div id="album-playlist-drawer" class="hidden fixed inset-0 z-50 bg-black/40 backdrop-blur-xs flex justify-end" onclick="handleDrawerBackdropClick(event)">
+      <div class="w-full max-w-md bg-white h-full shadow-2xl flex flex-col p-4 md:p-6 overflow-hidden animate-slide-left">
+        <div class="flex items-center justify-between pb-3 border-b border-slate-100 mb-3">
+          <div class="flex items-center gap-2.5">
+            <span class="text-2xl">📜</span>
+            <div>
+              <h3 id="drawer-album-title" class="font-black text-base text-slate-900 leading-tight">
+                第一集：探索生活大冒險
+              </h3>
+              <span id="drawer-album-subtitle" class="text-xs text-slate-500 font-bold">
+                全專輯循環播放中 · 共 10 首曲目
+              </span>
+            </div>
+          </div>
+          <button onclick="togglePlaylistDrawer()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-600 font-black text-sm flex items-center justify-center transition active:scale-95">
+            ✕
+          </button>
+        </div>
+
+        <!-- 循環狀態提示與開關 -->
+        <div class="flex items-center justify-between bg-amber-50 border border-amber-200 rounded-2xl p-3 mb-3">
+          <div class="text-xs text-amber-800 font-bold flex items-center gap-1.5">
+            <span id="drawer-loop-icon">🔁</span>
+            <span id="drawer-loop-hint">播完自動換下一首 (全專輯連播)</span>
+          </div>
+          <button onclick="toggleLoopMode()" id="drawer-loop-btn" class="text-xs font-black px-2.5 py-1 rounded-xl bg-amber-500 text-white shadow-xs active:scale-95 transition">
+            全專輯連播: 開
+          </button>
+        </div>
+
+        <!-- 歌曲清單 (滾動區域) -->
+        <div id="drawer-song-list" class="flex-1 overflow-y-auto space-y-2 pr-1">
+          <!-- Dynamically populated via JS -->
+        </div>
+
+        <div class="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-400">
+          <span>點選任一首即可立即切換跟跳</span>
+          <button onclick="togglePlaylistDrawer()" class="font-bold text-amber-600 hover:text-amber-700">收起歌單 ▾</button>
+        </div>
       </div>
     </div>
 
@@ -466,244 +494,46 @@
                           (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
 
     // ========================================================
-    // 1. 全曲动作段落时钟谱：使用官方英文歌词与动作要领提示
+    // 1. 全曲动作段落时钟谱：从 KAI_ALBUM_DATABASE 动态载入多专辑曲目
     // ========================================================
-    const songDatabase = {
-      morning: {
-        title: "Morning Sunshine Hello",
-        file: "./morning_sunshine_hello.mp3",
-        duration: 120,
-                timeline: [
-          {
-            start: 0, end: 7.87,
-            title: "[Intro] 動作 01: 晨光萌芽踏步",
-            video: "./videos/loop_01_march.mp4",
-            voice: "./voices/voice_01.mp3",
-            lyric: "[Intro] 🎵 Musical Awakening",
-            sub: "⏰ 倒數預備！小手插腰，像精神的小士兵踩著節拍原地踏步！",
-            promptText: "小手插腰，踩著拍子踏步走！",
-            next: "雙手托起大太陽 ➜",
-            targetPose: "march"
-          },
-          {
-            start: 7.87, end: 15.97,
-            title: "[Verse 1] 動作 02: 托起太陽高空大招手",
-            video: "./videos/loop_03_sun_rise.mp4",
-            voice: "./voices/voice_02.mp3",
-            lyric: "\"Good morning sun, up in the sky, Waving your golden hands so high!\"",
-            sub: "☀️ 雙手從胸前向上托起發光金太陽，雙手在天空左右大幅度歡快招手！",
-            promptText: "雙手托起大太陽，高高舉起左右大招手！",
-            next: "刷刷小牙大步走 ➜",
-            targetPose: "sun_rise"
-          },
-          {
-            start: 15.97, end: 23.77,
-            title: "[Verse 1] 動作 03: 刷牙微笑大步走",
-            video: "./videos/loop_01_march.mp4",
-            voice: "./voices/voice_03.mp3",
-            lyric: "\"Wake up, brush your teeth and smile, Let’s go learn and play a while!\"",
-            sub: "🪥 小牙刷刷刷刷露出大笑臉，雙手插腰精神抖擻大步邁開去探險！",
-            promptText: "拿好小牙刷刷刷刷，露出笑臉大步走！",
-            next: "小鳥展翅聽晨曲 ➜",
-            targetPose: "march"
-          },
-          {
-            start: 23.77, end: 33.37,
-            title: "[Verse 1] 動作 04: 小鳥展翅聽晨曲",
-            video: "./videos/loop_02_sway_grass.mp4",
-            voice: "./voices/voice_04.mp3",
-            lyric: "\"Birds are singing in the tree, Singing a morning song for me!\"",
-            sub: "🐦 雙臂拍動學小鳥在樹梢滑翔，小手貼耳身體左右搖擺聽晨曲！",
-            promptText: "雙臂展翅學小鳥，小手貼耳聽晨曲！",
-            next: "熱情招手喊萬歲 ➜",
-            targetPose: "sway"
-          },
-          {
-            start: 33.37, end: 41.60,
-            title: "[Chorus] 動作 05: 熱情招手喊萬歲",
-            video: "./videos/loop_07_bunny_hop.mp4",
-            voice: "./voices/voice_05.mp3",
-            lyric: "\"Hello, hello, it's a brand new day! Jump up and shout: Hip-hip-hooray!\"",
-            sub: "👋 招手大聲說 Hello，雙膝深蹲蓄力、用力起跳高喊萬歲！",
-            promptText: "熱情揮手說哈囉，用力高跳喊萬歲！",
-            next: "摸摸小鞋數一二三 ➜",
-            targetPose: "jump"
-          },
-          {
-            start: 41.60, end: 45.70,
-            title: "[Chorus] 動作 06: 穿上小鞋數一二三",
-            video: "./videos/loop_06_reach.mp4",
-            voice: "./voices/voice_06.mp3",
-            lyric: "\"Put on your shoes and count to three,\"",
-            sub: "👟 彎腰輕拍左右小鞋子，站起來手指俏皮點數：一、二、三！",
-            promptText: "彎腰摸摸小鞋子，伸指數一二三！",
-            next: "張開雙手齊合唱 ➜",
-            targetPose: "march"
-          },
-          {
-            start: 45.70, end: 51.40,
-            title: "[Chorus] 動作 07: 牽手齊唱早安曲",
-            video: "./videos/loop_03_sun_rise.mp4",
-            voice: "./voices/voice_07.mp3",
-            lyric: "\"Come along and sing\"",
-            sub: "🎶 雙手像花朵向兩側熱情盛開，踩著節拍邀請好朋友一起唱！",
-            promptText: "張開雙手，邀請好朋友一起唱！",
-            next: "轉個歡樂大圓圈 ➜",
-            targetPose: "reach"
-          },
-          {
-            start: 51.40, end: 59.87,
-            title: "[間奏] 動作 08: 歡樂旋轉小圓舞",
-            video: "./videos/loop_07_bunny_hop.mp4",
-            voice: "./voices/voice_08.mp3",
-            lyric: "\"with me!\" [Interlude 旋律間奏]",
-            sub: "🌸 雙手插腰踩小碎步，輕快轉一個大圓圈，轉完站定比朵花！",
-            promptText: "手叉小蠻腰，輕輕轉個歡樂圓圈！",
-            next: "背起書包貓咪拜拜 ➜",
-            targetPose: "sway"
-          },
-          {
-            start: 59.87, end: 67.77,
-            title: "[Verse 2] 動作 09: 背好書包貓咪拜拜",
-            video: "./videos/loop_05_wave.mp4",
-            voice: "./voices/voice_09.mp3",
-            lyric: "\"Pack your bag and grab your hat, Wave goodbye to the sleepy cat!\"",
-            sub: "🎒 背起小書包、摸摸小圓帽，雙手揉眼學貓爪，跟貪睡小貓說拜拜！",
-            promptText: "背上小書包戴正小帽子，跟貪睡小貓說拜拜！",
-            next: "抓取白雲放口袋 ➜",
-            targetPose: "wave"
-          },
-          {
-            start: 67.77, end: 71.57,
-            title: "[Verse 2] 動作 10: 抓取白雲放入口袋",
-            video: "./videos/loop_06_reach.mp4",
-            voice: "./voices/voice_10.mp3",
-            lyric: "\"Look outside, the sky is blue,\"",
-            sub: "☁️ 墊起腳尖伸手向上抓一把柔軟白雲塞進口袋，單手遮眉望藍天！",
-            promptText: "伸手向上抓取白雲放口袋，抬頭看藍天！",
-            next: "擁抱快樂大愛心 ➜",
-            targetPose: "reach"
-          },
-          {
-            start: 71.57, end: 77.33,
-            title: "[Verse 2] 動作 11: 快樂愛心大擁抱",
-            video: "./videos/loop_08_heart.mp4",
-            voice: "./voices/voice_11.mp3",
-            lyric: "\"So many fun things waiting for you!\"",
-            sub: "💖 雙臂在空中環抱大自然，收在胸口拼出跳動的大愛心送出去！",
-            promptText: "雙臂畫大圓，胸前比出跳動大愛心！",
-            next: "再度熱情大招手 ➜",
-            targetPose: "heart"
-          },
-          {
-            start: 77.33, end: 81.87,
-            title: "[Chorus] 動作 12: 再度熱情大招手",
-            video: "./videos/loop_05_wave.mp4",
-            voice: "./voices/voice_12.mp3",
-            lyric: "\"Hello, hello, it's a brand new day!\"",
-            sub: "👋 雙腳踩節奏踏跳，雙手在耳側交替像波浪一樣大幅度招手！",
-            promptText: "雙腳小跳步，雙手交替大招手！",
-            next: "深蹲起跳喊耶 ➜",
-            targetPose: "wave"
-          },
-          {
-            start: 81.87, end: 85.60,
-            title: "[Chorus] 動作 13: 深蹲起跳大爆發",
-            video: "./videos/loop_07_bunny_hop.mp4",
-            voice: "./voices/voice_13.mp3",
-            lyric: "\"Jump up and shout: Hip-hip-hooray!\"",
-            sub: "🐰 蹲下蓄力、高高蹦跳！小拳頭在頭頂綻放爆米花，大喊耶！",
-            promptText: "深蹲彈跳起飛！雙手握拳喊耶！",
-            next: "小腳輕輕踢點步 ➜",
-            targetPose: "jump"
-          },
-          {
-            start: 85.60, end: 89.80,
-            title: "[Chorus] 動作 14: 動感腳尖踢點步",
-            video: "./videos/loop_01_march.mp4",
-            voice: "./voices/voice_14.mp3",
-            lyric: "\"Put on your shoes and count to three,\"",
-            sub: "👟 雙手插腰站穩，左右腳尖輪流往前踩小水坑，踢一踢點一點！",
-            promptText: "小手插腰，左右小腳尖輕輕點地！",
-            next: "整齊歡樂拍拍手 ➜",
-            targetPose: "march"
-          },
-          {
-            start: 89.80, end: 95.37,
-            title: "[Chorus] 動作 15: 歡快齊聲拍拍手",
-            video: "./videos/loop_04_rainbow.mp4",
-            voice: "./voices/voice_15.mp3",
-            lyric: "\"Come along and sing\"",
-            sub: "👏 踩著歡樂重音在胸前大聲拍手：啪！啪！啪！身體快樂彈動！",
-            promptText: "跟著大重音，整整齊齊拍拍手！",
-            next: "白鴿展翅大滑翔 ➜",
-            targetPose: "wave"
-          },
-          {
-            start: 95.37, end: 103.87,
-            title: "[Bridge] 動作 16: 白鴿展翅大滑翔",
-            video: "./videos/loop_02_sway_grass.mp4",
-            voice: "./voices/voice_16.mp3",
-            lyric: "\"with me!\" [Bridge 宏大過門]",
-            sub: "🕊️ 雙手水平張開像大鳥滑翔，腳踩小碎步輕柔起伏，微風吹過來！",
-            promptText: "展開白鴿翅膀，像微風在天空滑翔！",
-            next: "張開懷抱迎世界 ➜",
-            targetPose: "sway"
-          },
-          {
-            start: 103.87, end: 107.73,
-            title: "[Outro] 動作 17: 擁抱全世界早安",
-            video: "./videos/loop_03_sun_rise.mp4",
-            voice: "./voices/voice_17.mp3",
-            lyric: "\"Good morning, world!\"",
-            sub: "🌍 雙臂向外展開畫出最大的金色大圓，挺胸抬頭向世界道早安！",
-            promptText: "雙臂畫出大金色圓圈，擁抱全世界！",
-            next: "合十定格大微笑 ➜",
-            targetPose: "sun_rise"
-          },
-          {
-            start: 107.73, end: 120.00,
-            title: "[Outro] 動作 18: 燦爛定格大比心",
-            video: "./videos/action_09_finish.mp4",
-            voice: "./voices/voice_18.mp3",
-            lyric: "\"Let's have fun today!\"",
-            sub: "🌟 深呼吸雙臂上揚，雙手胸前合十或頭頂大比心，燦爛微笑定格！",
-            promptText: "雙手合十胸前鞠躬，定格燦爛大微笑！",
-            next: "早操完美通關！🎉 獲得 3 顆大金星！",
-            targetPose: "heart"
-          }
-        ]
-      },
-      freeze: {
-        title: "Wiggle & Freeze!",
-        file: "./wiggle_freeze.mp3",
-        duration: 120,
-        timeline: [
-          { start: 0, end: 120, title: "動動與定格遊戲", video: "./videos/loop_07_bunny_hop.mp4", voice: "./voices/voice_01.mp3", lyric: "\"Wiggle wiggle wiggle... and FREEZE!\"", sub: "🧊 變成木頭人，一動都不能動哦！", next: "木頭人定格 ➜", targetPose: "march" }
-        ]
-      },
-      safari: {
-        title: "Animal Safari March",
-        file: "./animal_safari.mp3",
-        duration: 120,
-        timeline: [
-          { start: 0, end: 120, title: "森林動物巡遊", video: "./videos/loop_01_march.mp4", voice: "./voices/voice_09.mp3", lyric: "\"Welcome to the Safari March!\"", sub: "🦁 跟著小動物一起大步向前走！", next: "小動物大巡遊 ➜", targetPose: "march" }
-        ]
-      },
-      shine: {
-        title: "Ready, Set, Shine!",
-        file: "./ready_set_shine.mp3",
-        duration: 120,
-        timeline: [
-          { start: 0, end: 120, title: "元氣星光齊舞", video: "./videos/loop_03_sun_rise.mp4", voice: "./voices/voice_03.mp3", lyric: "\"Ready, Set, Shine!\"", sub: "⭐ 閃閃發光，今天也是最棒的！", next: "星光閃閃 ➜", targetPose: "sun_rise" }
-        ]
+    const songDatabase = {};
+    let currentAlbumId = 'album_1';
+    let currentSongKey = 'a1_s01';
+    let isAlbumContinuousPlay = true; // 預設開啟全專輯連續循環播放
+
+    function initSongDatabase() {
+      if (window.KAI_ALBUM_DATABASE) {
+        Object.values(window.KAI_ALBUM_DATABASE).forEach(album => {
+          album.songs.forEach(song => {
+            songDatabase[song.id] = {
+              id: song.id,
+              albumId: album.id,
+              trackNumber: song.trackNumber,
+              title: song.title,
+              zhTitle: song.zhTitle,
+              emoji: song.emoji,
+              tag: song.tag,
+              difficulty: song.difficulty,
+              duration: song.duration,
+              file: song.audioFile,
+              coachImage: song.coachImage,
+              description: song.description,
+              timeline: song.timeline
+            };
+          });
+        });
       }
-    };
+      // 兼容歷史自訂 key
+      if (songDatabase['a1_s01']) songDatabase['morning'] = songDatabase['a1_s01'];
+      if (songDatabase['a1_s08']) songDatabase['freeze'] = songDatabase['a1_s08'];
+      if (songDatabase['a1_s04']) songDatabase['safari'] = songDatabase['a1_s04'];
+      if (songDatabase['a2_s01']) songDatabase['shine'] = songDatabase['a2_s01'];
+    }
+    initSongDatabase();
 
     // ========================================================
     // 2. 全局状态
     // ========================================================
-    let currentSongKey = 'morning';
     let isPlaying = false;
     let currentTime = 0;
     let playSpeed = 1.0;
@@ -908,18 +738,302 @@
     }
 
     // ========================================================
-    // 3. 视图导航与选曲
+    // 3. 視圖導航、多專輯選單與全專輯連續播放
     // ========================================================
+    let isPlaylistDrawerOpen = false;
+
+    // 切換當前檢視專輯 (第 1 集 vs 第 2 集)
+    function switchAlbum(albumId) {
+      if (!window.KAI_ALBUM_DATABASE || !window.KAI_ALBUM_DATABASE[albumId]) return;
+      currentAlbumId = albumId;
+      const album = window.KAI_ALBUM_DATABASE[albumId];
+
+      // 更新 Tab 樣式
+      const tab1 = document.getElementById('tab-album-1');
+      const tab2 = document.getElementById('tab-album-2');
+      if (tab1 && tab2) {
+        if (albumId === 'album_1') {
+          tab1.className = "px-5 py-3 rounded-2xl md:rounded-3xl font-black text-sm md:text-base flex items-center gap-2.5 transition-all shadow-md bg-gradient-to-r from-amber-500 to-orange-500 text-white transform active:scale-95 shrink-0";
+          tab1.querySelector('div div:first-child').className = "leading-none text-white";
+          tab1.querySelector('div div:last-child').className = "text-[10px] md:text-xs text-amber-100 font-medium mt-1";
+          tab2.className = "px-5 py-3 rounded-2xl md:rounded-3xl font-black text-sm md:text-base flex items-center gap-2.5 transition-all shadow-xs bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transform active:scale-95 shrink-0";
+          tab2.querySelector('div div:first-child').className = "leading-none text-slate-800";
+          tab2.querySelector('div div:last-child').className = "text-[10px] md:text-xs text-slate-500 font-medium mt-1";
+        } else {
+          tab2.className = "px-5 py-3 rounded-2xl md:rounded-3xl font-black text-sm md:text-base flex items-center gap-2.5 transition-all shadow-md bg-gradient-to-r from-purple-600 to-pink-500 text-white transform active:scale-95 shrink-0";
+          tab2.querySelector('div div:first-child').className = "leading-none text-white";
+          tab2.querySelector('div div:last-child').className = "text-[10px] md:text-xs text-purple-100 font-medium mt-1";
+          tab1.className = "px-5 py-3 rounded-2xl md:rounded-3xl font-black text-sm md:text-base flex items-center gap-2.5 transition-all shadow-xs bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transform active:scale-95 shrink-0";
+          tab1.querySelector('div div:first-child').className = "leading-none text-slate-800";
+          tab1.querySelector('div div:last-child').className = "text-[10px] md:text-xs text-slate-500 font-medium mt-1";
+        }
+      }
+
+      // 更新大橫幅
+      const banner = document.getElementById('album-banner');
+      const bBadge = document.getElementById('album-banner-badge');
+      const bTitle = document.getElementById('album-banner-title');
+      const bDesc = document.getElementById('album-banner-desc');
+      const bEmoji = document.getElementById('album-banner-emoji');
+      const sTitle = document.getElementById('album-section-title');
+
+      if (banner) {
+        banner.className = `bg-gradient-to-r ${album.themeGradient} rounded-3xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden mb-6 transition-all duration-300`;
+      }
+      if (bBadge) bBadge.innerText = album.badge;
+      if (bTitle) bTitle.innerHTML = `${album.zhTitle}<br>${album.title}`;
+      if (bDesc) bDesc.innerText = album.subtitle + " · 每一首歌都可獨立單曲跟跳，也可點選「整張專輯循環播放」自動連播！";
+      if (bEmoji) bEmoji.innerText = albumId === 'album_1' ? '☀️' : '🚀';
+      if (sTitle) sTitle.innerText = `${album.zhTitle} (共 ${album.songs.length} 首)`;
+
+      renderLobbySongs(albumId);
+    }
+
+    // 動態渲染大廳歌曲卡片
+    function renderLobbySongs(albumId) {
+      const container = document.getElementById('song-cards-container');
+      if (!container || !window.KAI_ALBUM_DATABASE) return;
+      const album = window.KAI_ALBUM_DATABASE[albumId] || window.KAI_ALBUM_DATABASE['album_1'];
+      if (!album) return;
+
+      container.innerHTML = album.songs.map((song) => {
+        const isCurrentActive = song.id === currentSongKey;
+        const coachBadge = song.timeline && song.timeline.some(s => s.video) 
+          ? '<span class="bg-amber-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow">🎬 3D 示範影片</span>'
+          : '<span class="bg-sky-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow">📸 動作引導寫真</span>';
+
+        return `
+          <div onclick="selectSong('${song.id}')" 
+               class="group bg-white rounded-3xl p-5 border-2 ${isCurrentActive ? 'border-amber-400 shadow-xl' : 'border-slate-100'} shadow-sm hover:shadow-2xl hover:border-amber-400 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1 relative overflow-hidden">
+            
+            <div class="absolute top-3 left-3 bg-slate-900/70 backdrop-blur text-white text-[11px] font-black px-2.5 py-0.5 rounded-full shadow z-10">
+              #${String(song.trackNumber).padStart(2, '0')}
+            </div>
+
+            <div class="absolute top-3 right-3 z-10">
+              ${coachBadge}
+            </div>
+
+            <div>
+              <div class="w-full h-36 rounded-2xl bg-gradient-to-tr ${song.themeColor} flex items-center justify-center text-6xl shadow-inner mb-3 overflow-hidden relative group-hover:scale-[1.02] transition-transform">
+                <span class="transform group-hover:scale-110 transition-transform duration-300 drop-shadow-md select-none">${song.emoji}</span>
+              </div>
+              <h4 class="font-black text-base text-slate-900 group-hover:text-amber-600 transition-colors line-clamp-1">
+                ${song.title}
+              </h4>
+              <p class="text-xs font-black ${song.textColor} mt-0.5 flex items-center gap-1.5">
+                <span>${song.zhTitle}</span> · <span class="opacity-90 font-bold">${song.tag}</span>
+              </p>
+              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+                ${song.description}
+              </p>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+              <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · ${song.difficulty}</span>
+              <button class="bg-gradient-to-r from-amber-500 to-orange-500 group-hover:from-amber-600 group-hover:to-orange-600 text-white text-xs font-black px-4 py-2 rounded-xl shadow transition-all active:scale-95 flex items-center gap-1">
+                <span>▶</span> 開始跳
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // 一鍵全專輯連續循環播放
+    function playCurrentAlbumAll() {
+      const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
+      if (!album || !album.songs.length) return;
+      isAlbumContinuousPlay = true;
+      updateLoopModeUI();
+      selectSong(album.songs[0].id);
+    }
+
+    // 隨機跳一首
+    function playRandomSongInAlbum() {
+      const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
+      if (!album || !album.songs.length) return;
+      const randIdx = Math.floor(Math.random() * album.songs.length);
+      selectSong(album.songs[randIdx].id);
+    }
+
+    // 切換全專輯播放清單抽屜
+    function togglePlaylistDrawer() {
+      const drawer = document.getElementById('album-playlist-drawer');
+      if (!drawer) return;
+      isPlaylistDrawerOpen = !isPlaylistDrawerOpen;
+      if (isPlaylistDrawerOpen) {
+        renderPlaylistDrawer();
+        drawer.classList.remove('hidden');
+      } else {
+        drawer.classList.add('hidden');
+      }
+    }
+
+    function handleDrawerBackdropClick(e) {
+      if (e.target.id === 'album-playlist-drawer') {
+        togglePlaylistDrawer();
+      }
+    }
+
+    // 渲染歌單抽屜
+    function renderPlaylistDrawer() {
+      const listContainer = document.getElementById('drawer-song-list');
+      const dTitle = document.getElementById('drawer-album-title');
+      const dSub = document.getElementById('drawer-album-subtitle');
+      if (!listContainer || !window.KAI_ALBUM_DATABASE) return;
+
+      const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
+      if (dTitle) dTitle.innerText = album.zhTitle;
+      if (dSub) dSub.innerText = `${isAlbumContinuousPlay ? '全專輯連播開啟中' : '單曲模式'} · 共 ${album.songs.length} 首曲目`;
+
+      updateLoopModeUI();
+
+      listContainer.innerHTML = album.songs.map(song => {
+        const isCurrent = song.id === currentSongKey;
+        return `
+          <div onclick="selectSong('${song.id}')" 
+               class="p-3 rounded-2xl flex items-center justify-between transition-all cursor-pointer border ${isCurrent ? 'bg-amber-50/90 border-amber-300 shadow-sm' : 'bg-slate-50/70 border-slate-100 hover:bg-slate-100'}">
+            <div class="flex items-center gap-3">
+              <span class="w-8 h-8 rounded-xl bg-white shadow-xs flex items-center justify-center font-black text-xs ${isCurrent ? 'text-amber-600 ring-2 ring-amber-400' : 'text-slate-500'}">
+                ${isCurrent ? '🎵' : '#' + String(song.trackNumber).padStart(2, '0')}
+              </span>
+              <div>
+                <h4 class="text-xs md:text-sm font-black ${isCurrent ? 'text-amber-700' : 'text-slate-800'} line-clamp-1">
+                  ${song.emoji} ${song.title}
+                </h4>
+                <p class="text-[11px] text-slate-500 font-bold">${song.zhTitle} · ${song.tag}</p>
+              </div>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+              ${isCurrent ? `
+                <div class="flex items-end gap-0.5 h-4 px-2">
+                  <span class="w-1 bg-amber-500 rounded-full wave-bar-1"></span>
+                  <span class="w-1 bg-amber-500 rounded-full wave-bar-2"></span>
+                  <span class="w-1 bg-amber-500 rounded-full wave-bar-3"></span>
+                </div>
+              ` : `
+                <span class="text-[11px] text-slate-400 font-mono">2:00</span>
+                <span class="text-xs text-amber-500 font-black">▶</span>
+              `}
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // 切換全專輯循環 / 單曲循環
+    function toggleLoopMode() {
+      isAlbumContinuousPlay = !isAlbumContinuousPlay;
+      updateLoopModeUI();
+    }
+
+    function updateLoopModeUI() {
+      const btnIcon = document.getElementById('loop-mode-icon');
+      const btnLabel = document.getElementById('loop-mode-label');
+      const drawerBtn = document.getElementById('drawer-loop-btn');
+      const drawerHint = document.getElementById('drawer-loop-hint');
+      const drawerIcon = document.getElementById('drawer-loop-icon');
+
+      if (isAlbumContinuousPlay) {
+        if (btnIcon) btnIcon.innerText = "🔁";
+        if (btnLabel) btnLabel.innerText = "全專輯連播";
+        if (drawerBtn) {
+          drawerBtn.innerText = "全專輯連播: 開";
+          drawerBtn.className = "text-xs font-black px-2.5 py-1 rounded-xl bg-amber-500 text-white shadow-xs active:scale-95 transition";
+        }
+        if (drawerHint) drawerHint.innerText = "播完自動換下一首 (全專輯循環)";
+        if (drawerIcon) drawerIcon.innerText = "🔁";
+      } else {
+        if (btnIcon) btnIcon.innerText = "🔂";
+        if (btnLabel) btnLabel.innerText = "單曲循環";
+        if (drawerBtn) {
+          drawerBtn.innerText = "單曲循環模式";
+          drawerBtn.className = "text-xs font-black px-2.5 py-1 rounded-xl bg-slate-200 text-slate-700 shadow-xs active:scale-95 transition";
+        }
+        if (drawerHint) drawerHint.innerText = "本曲播完後停在結尾 (單曲模式)";
+        if (drawerIcon) drawerIcon.innerText = "🔂";
+      }
+    }
+
+    // 上一首
+    function prevSong() {
+      const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
+      if (!album || !album.songs.length) return;
+      const curIdx = album.songs.findIndex(s => s.id === currentSongKey);
+      const prevIdx = (curIdx - 1 + album.songs.length) % album.songs.length;
+      selectSong(album.songs[prevIdx].id);
+    }
+
+    // 下一首
+    function nextSong() {
+      const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
+      if (!album || !album.songs.length) return;
+      const curIdx = album.songs.findIndex(s => s.id === currentSongKey);
+      const nextIdx = (curIdx + 1) % album.songs.length;
+      selectSong(album.songs[nextIdx].id);
+    }
+
     function selectSong(key) {
       currentSongKey = key;
       const song = songDatabase[key];
-      roomSongTitle.innerText = "🎵 " + song.title;
+      if (!song) {
+        console.warn("Song not found:", key);
+        return;
+      }
+
+      // 若該曲屬於特定專輯，更新 currentAlbumId
+      if (song.albumId && song.albumId !== currentAlbumId) {
+        currentAlbumId = song.albumId;
+      }
+
+      roomSongTitle.innerHTML = `${song.emoji || '🎵'} ${song.title}`;
+      const albumBadge = document.getElementById('room-album-badge');
+      if (albumBadge) {
+        albumBadge.innerText = `${currentAlbumId === 'album_1' ? '第 1 集' : '第 2 集'} #${String(song.trackNumber || 1).padStart(2, '0')}`;
+      }
+      const floatSongName = document.getElementById('float-song-name');
+      if (floatSongName) {
+        floatSongName.innerText = song.title;
+      }
+
       audioBgm.src = song.file;
+      currentTime = 0;
+      lastSpokenSegment = -1;
+
+      // 切換初始動作示範媒體 (如果有影片則顯示影片，否則切換至教練寫真照)
+      const firstSeg = (song.timeline && song.timeline[0]) || null;
+      const coachVideo = document.getElementById('coach-video');
+      const coachImage = document.getElementById('coach-image');
+      const coachTypeBadge = document.getElementById('coach-type-badge');
+
+      if (firstSeg && firstSeg.video) {
+        if (coachImage) coachImage.classList.add('hidden');
+        if (coachVideo) {
+          coachVideo.classList.remove('hidden');
+          coachVideo.src = firstSeg.video;
+        }
+        if (coachTypeBadge) coachTypeBadge.innerText = "🎬 示範影片";
+      } else {
+        if (coachVideo) {
+          coachVideo.pause();
+          coachVideo.classList.add('hidden');
+        }
+        if (coachImage) {
+          coachImage.classList.remove('hidden');
+          coachImage.src = (firstSeg && firstSeg.image) || song.coachImage || './images/boy_dance_coach_1790908303698.jpg';
+        }
+        if (coachTypeBadge) coachTypeBadge.innerText = "📸 動作引導寫真";
+      }
 
       viewLobby.classList.add('hidden');
       viewDance.classList.remove('hidden');
 
-      // 切换视图后立即强制刷新多重自适应尺寸 (无论是否全屏，普通窗口模式毫秒级自适应)
+      if (isPlaylistDrawerOpen) {
+        renderPlaylistDrawer();
+      }
+
+      // 切换视图后立即强制刷新多重自适应尺寸
       resizeCanvas();
       requestAnimationFrame(resizeCanvas);
       setTimeout(resizeCanvas, 50);
@@ -931,7 +1045,7 @@
         togglePlay();
       }, 300);
 
-      // 进入互动舞台自动开启摄像头，无需手动点击全屏或开启按钮
+      // 进入互动舞台自动开启摄像头
       if (!isCameraActive) {
         initRealCamera();
       }
@@ -941,6 +1055,7 @@
       pauseDance();
       viewDance.classList.add('hidden');
       viewLobby.classList.remove('hidden');
+      renderLobbySongs(currentAlbumId);
     }
 
     function updatePlayerCountUI(num) {
@@ -2524,11 +2639,35 @@
 
         if (idx !== lastSpokenSegment) {
           lastSpokenSegment = idx;
-          const targetVideo = seg.video;
-          if (coachVideo.src.indexOf(targetVideo.replace('./', '')) === -1) {
-            coachVideo.src = targetVideo;
-            coachVideo.play().catch(e => console.log(e));
+          const coachVideo = document.getElementById('coach-video');
+          const coachImage = document.getElementById('coach-image');
+          const coachTypeBadge = document.getElementById('coach-type-badge');
+
+          if (seg.video) {
+            if (coachImage) coachImage.classList.add('hidden');
+            if (coachVideo) {
+              coachVideo.classList.remove('hidden');
+              if (coachVideo.src.indexOf(seg.video.replace('./', '')) === -1) {
+                coachVideo.src = seg.video;
+                if (isPlaying) coachVideo.play().catch(e => console.log(e));
+              }
+            }
+            if (coachTypeBadge) coachTypeBadge.innerText = "🎬 示範影片";
+          } else {
+            if (coachVideo) {
+              coachVideo.pause();
+              coachVideo.classList.add('hidden');
+            }
+            if (coachImage) {
+              coachImage.classList.remove('hidden');
+              const targetImg = seg.image || (songDatabase[currentSongKey] && songDatabase[currentSongKey].coachImage) || './images/boy_dance_coach_1790908303698.jpg';
+              if (coachImage.src.indexOf(targetImg.replace('./', '')) === -1) {
+                coachImage.src = targetImg;
+              }
+            }
+            if (coachTypeBadge) coachTypeBadge.innerText = "📸 動作引導寫真";
           }
+
           if (isPlaying) {
             playTeacherVoice(seg.voice);
           }
@@ -2545,7 +2684,11 @@
     });
 
     audioBgm.addEventListener('ended', () => {
-      pauseDance();
+      if (isAlbumContinuousPlay) {
+        nextSong();
+      } else {
+        pauseDance();
+      }
     });
 
     function triggerFeedback() {
@@ -2647,6 +2790,8 @@
     }
 
     updatePlaybackUI();
+    renderLobbySongs(currentAlbumId);
+    updateLoopModeUI();
     // 立即启动发光火柴人渲染主循环（常驻舞台，实时渲染）
     renderStickmanLoop();
     initFloatingPlayDock();
