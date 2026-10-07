@@ -190,7 +190,7 @@
   <div id="view-dance" class="hidden flex-1 flex flex-col p-3 md:p-4 max-w-7xl mx-auto w-full">
     
     <!-- 教室頂欄：返回、歌曲名、火柴人皮膚、人數、得分、全螢幕 -->
-    <header class="bg-white/95 backdrop-blur border border-amber-200 rounded-3xl p-3 md:px-5 mb-3 shadow-md flex items-center justify-between gap-3 overflow-x-auto min-h-[64px]">
+    <header class="bg-white/95 backdrop-blur border border-amber-200 rounded-3xl p-3 md:px-5 mb-3 shadow-md flex items-center justify-between gap-3 overflow-x-auto min-h-[68px] shrink-0">
       
       <!-- 返回与曲名 -->
       <div class="flex items-center gap-3 shrink-0">
@@ -198,7 +198,7 @@
           ◀ 返回選歌
         </button>
         <div>
-          <h2 id="room-song-title" class="text-base md:text-lg font-black text-slate-800 flex items-center gap-1.5 truncate max-w-[200px] sm:max-w-xs md:max-w-sm">
+          <h2 id="room-song-title" class="text-base md:text-lg font-black text-slate-800 flex items-center gap-1.5 truncate max-w-[190px] sm:max-w-xs md:max-w-sm">
             ☀️ Morning Sunshine Hello
           </h2>
           <div class="flex items-center gap-1.5 mt-0.5">
@@ -244,23 +244,23 @@
         </div>
       </div>
 
-      <!-- 右侧：口令开关、得分牌、全屏 -->
+      <!-- 右侧：口令开关、得分牌、全屏 (固定寬高容器，跳動時絕不擠壓排版) -->
       <div class="flex items-center gap-2 md:gap-3 shrink-0">
         <!-- 名师原声开关 -->
         <button id="btn-voice-toggle" onclick="toggleVoice()" class="px-3 py-1.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold text-emerald-700 transition flex items-center gap-1 shrink-0">
           <span id="voice-icon">🔊</span> 老師原聲口令: 開
         </button>
 
-        <!-- 連擊与总分 -->
-        <div class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-4 py-1.5 rounded-2xl shadow-sm flex items-center gap-2.5 shrink-0">
-          <div class="text-center">
-            <span class="text-[10px] font-bold opacity-80 leading-none block">連擊</span>
-            <span id="combo-count" class="text-base font-black">12x</span>
+        <!-- 連擊与总分 (鎖定固定尺寸 w-[148px] h-[44px]、數字等寬 tabular-nums，數字增加時零跳動) -->
+        <div class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3.5 py-1.5 rounded-2xl shadow-sm flex items-center justify-between gap-2 shrink-0 w-[148px] h-[44px] select-none">
+          <div class="text-center w-[54px] shrink-0">
+            <span class="text-[10px] font-bold opacity-85 leading-none block">連擊</span>
+            <span id="combo-count" class="text-base font-black tabular-nums font-mono leading-tight block truncate">12x</span>
           </div>
-          <div class="h-5 w-px bg-white/30"></div>
-          <div class="text-center">
-            <span class="text-[10px] font-bold opacity-80 leading-none block">星光積分</span>
-            <span id="score-count" class="text-base font-black">980</span>
+          <div class="h-6 w-px bg-white/30 shrink-0"></div>
+          <div class="text-center w-[66px] shrink-0">
+            <span class="text-[10px] font-bold opacity-85 leading-none block">星光積分</span>
+            <span id="score-count" class="text-base font-black tabular-nums font-mono leading-tight block truncate">980</span>
           </div>
         </div>
 
@@ -341,10 +341,10 @@
             <span id="camera-fs-text" class="hidden sm:inline">鏡頭全螢幕</span>
           </button>
 
-          <!-- 动作姿态匹配度仪表 (右上角) -->
-          <div class="bg-white/95 backdrop-blur px-3 py-1.5 rounded-2xl border border-emerald-300 shadow-sm text-center min-w-[90px] shrink-0">
+          <!-- 动作姿态匹配度仪表 (右上角，固定尺寸與等寬數字，防止數字切換時晃動) -->
+          <div class="bg-white/95 backdrop-blur px-3 py-1.5 rounded-2xl border border-emerald-300 shadow-sm text-center w-[92px] shrink-0 select-none">
             <span class="text-[10px] font-bold text-slate-500 block leading-none">動作貼合</span>
-            <span id="match-percent" class="text-xl font-black text-emerald-500">96%</span>
+            <span id="match-percent" class="text-xl font-black text-emerald-500 tabular-nums font-mono block leading-tight">96%</span>
             <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden mt-0.5">
               <div id="match-bar" class="bg-emerald-400 h-full w-[96%] transition-all duration-300"></div>
             </div>
@@ -588,6 +588,7 @@
     let lastSpokenSegment = -1;
     let combo = 12;
     let score = 980;
+    let lastScoreUpdateTime = 0;
     let playerCount = 1; // 1, 2, 3
     let currentHeadTheme = 'human'; // 'human' (小男孩,小女孩,老爺爺), 'wild' (獅子,兔子,猴子), 'farm' (小豬,牛,馬)
 
@@ -2618,16 +2619,19 @@
 
       ctx.restore();
 
-      // 动作达标即时反馈与计分
-      if (isPoseMatched && isPlaying) {
-        matchPercent.innerText = "98%";
-        matchBar.style.width = "98%";
-        if (Math.random() > 0.7) {
+      // 动作达标即时反馈与计分 (僅由主玩家 P1 結算並以時間戳平滑防抖，防止高頻微調引發介面重排)
+      if (idx === 0 && isPoseMatched && isPlaying) {
+        const now = Date.now();
+        if (now - lastScoreUpdateTime > 500) {
+          lastScoreUpdateTime = now;
+          matchPercent.innerText = "98%";
+          matchBar.style.width = "98%";
           score += 15;
           combo++;
           scoreCount.innerText = score;
           comboCount.innerText = combo + 'x';
-          document.getElementById('total-stars-lobby').innerText = Math.floor(score / 20) + " ⭐";
+          const starsLobby = document.getElementById('total-stars-lobby');
+          if (starsLobby) starsLobby.innerText = Math.floor(score / 20) + " ⭐";
           if (combo % 8 === 0) triggerFeedback();
         }
       }
