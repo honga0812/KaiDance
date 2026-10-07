@@ -58,6 +58,28 @@
       background: #f59e0b;
       cursor: pointer;
     }
+
+    /* 鏡頭獨立全螢幕模式樣式 (相容桌面與 iPad/Safari) */
+    .camera-fullscreen-active {
+      position: fixed !important;
+      inset: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      max-width: 100vw !important;
+      max-height: 100vh !important;
+      z-index: 9999 !important;
+      border-radius: 0 !important;
+      border: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      background-color: #020617 !important;
+    }
+    .camera-fullscreen-active #camera-container {
+      min-h: 100vh !important;
+      height: 100% !important;
+      width: 100% !important;
+      border-radius: 0 !important;
+    }
   </style>
 </head>
 <body class="bg-gradient-to-b from-amber-50 via-sky-50 to-pink-50 text-slate-800 antialiased min-h-screen flex flex-col font-sans select-none">
@@ -299,10 +321,10 @@
       </section>
 
       <!-- 【右半屏：大螢幕攝影鏡頭 + 人物入鏡趣味發光火柴人 (佔 9/12 = 75% 寬度，超大視角舞台)】 -->
-      <section class="relative bg-white rounded-3xl border-2 border-sky-200 overflow-hidden shadow-lg flex flex-col justify-between h-[460px] sm:h-[500px] lg:h-auto lg:min-h-[460px] lg:col-span-9">
+      <section id="camera-section" class="relative bg-white rounded-3xl border-2 border-sky-200 overflow-hidden shadow-lg flex flex-col justify-between h-[460px] sm:h-[500px] lg:h-auto lg:min-h-[460px] lg:col-span-9 transition-all duration-300">
         
         <!-- 顶栏：摄像头开关与火柴人状态 (固定高宽，绝对不会因文字变动挤压画布布局) -->
-        <div class="absolute top-3 left-3 z-20 flex items-center gap-2 max-w-[70%] pointer-events-auto">
+        <div class="absolute top-3 left-3 z-30 flex items-center gap-2 max-w-[65%] pointer-events-auto">
           <button id="btn-camera" onclick="initRealCamera()" class="px-3.5 py-1.5 rounded-full bg-sky-500 hover:bg-sky-600 text-white text-xs font-black shadow transition flex items-center gap-1.5 shrink-0 active:scale-95">
             📷 開啟攝影機
           </button>
@@ -311,12 +333,21 @@
           </span>
         </div>
 
-        <!-- 动作姿态匹配度仪表 (右上角) -->
-        <div class="absolute top-3 right-3 z-20 bg-white/95 backdrop-blur px-3 py-1.5 rounded-2xl border border-emerald-300 shadow-sm text-center min-w-[100px] shrink-0">
-          <span class="text-[10px] font-bold text-slate-500 block leading-none">動作貼合</span>
-          <span id="match-percent" class="text-xl font-black text-emerald-500">96%</span>
-          <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden mt-0.5">
-            <div id="match-bar" class="bg-emerald-400 h-full w-[96%] transition-all duration-300"></div>
+        <!-- 頂欄右側：鏡頭全螢幕按鍵與動作貼合度儀表 -->
+        <div class="absolute top-3 right-3 z-30 flex items-center gap-2 pointer-events-auto">
+          <!-- 獨立鏡頭全螢幕按鍵 -->
+          <button id="btn-camera-fullscreen" onclick="toggleCameraFullscreen()" class="px-3 py-1.5 rounded-2xl bg-white/95 hover:bg-sky-50 border border-sky-300 text-sky-700 font-black text-xs shadow-sm transition flex items-center gap-1.5 active:scale-95" title="單獨將攝影機與火柴人切換為大螢幕全螢幕">
+            <span id="camera-fs-icon">🔲</span>
+            <span id="camera-fs-text" class="hidden sm:inline">鏡頭全螢幕</span>
+          </button>
+
+          <!-- 动作姿态匹配度仪表 (右上角) -->
+          <div class="bg-white/95 backdrop-blur px-3 py-1.5 rounded-2xl border border-emerald-300 shadow-sm text-center min-w-[90px] shrink-0">
+            <span class="text-[10px] font-bold text-slate-500 block leading-none">動作貼合</span>
+            <span id="match-percent" class="text-xl font-black text-emerald-500">96%</span>
+            <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden mt-0.5">
+              <div id="match-bar" class="bg-emerald-400 h-full w-[96%] transition-all duration-300"></div>
+            </div>
           </div>
         </div>
 
@@ -335,6 +366,23 @@
           <video id="webcam-video" autoplay playsinline webkit-playsinline="true" muted class="absolute inset-0 w-full h-full object-cover transform -scale-x-100 opacity-85"></video>
           <canvas id="camera-canvas" width="640" height="480" class="absolute inset-0 w-full h-full z-20 pointer-events-none"></canvas>
 
+          <!-- 全螢幕退出懸浮按鈕 (全螢幕時置頂最右側，便於隨時一鍵返回雙屏教室) -->
+          <button id="btn-camera-exit-fs" onclick="toggleCameraFullscreen()" class="hidden absolute top-4 right-4 z-40 px-4 py-2 rounded-2xl bg-black/75 hover:bg-black/90 text-white font-black text-xs border border-white/30 backdrop-blur-md shadow-2xl flex items-center gap-1.5 transition active:scale-95">
+            <span>✕</span> 退出全螢幕
+          </button>
+
+          <!-- 🌟 KTV 風格歌詞浮層字幕條 (鏡頭全螢幕專屬，壓在影像畫面下方) 🌟 -->
+          <div id="camera-ktv-subtitle-bar" class="hidden absolute bottom-5 left-1/2 -translate-x-1/2 z-30 w-[94%] max-w-4xl bg-slate-950/85 backdrop-blur-md border border-amber-400/60 rounded-3xl py-3 px-5 text-center shadow-2xl pointer-events-none transition-all duration-300">
+            <!-- 第一行：KTV 歡唱英文大歌詞 (金色發光、清晰大字) -->
+            <div id="ktv-lyric-main" class="text-xl sm:text-2xl md:text-3xl font-black text-amber-300 tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              "Morning sunshine hello! Waking up the sky so bright!"
+            </div>
+            <!-- 第二行：中文對照與動作口令 (明亮純白、動作要領) -->
+            <div id="ktv-lyric-sub" class="text-xs sm:text-sm md:text-base font-extrabold text-white/95 mt-1 drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
+              ☀️ 早安陽光！雙手托起大太陽，照亮天空暖洋洋！
+            </div>
+          </div>
+
           <!-- 引导提示框（摄像头开启前，悬浮于底部，绝不遮挡火柴人舞台） -->
           <div id="camera-guide-prompt" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-slate-900/85 backdrop-blur-md border border-amber-400/50 shadow-2xl text-white max-w-[90%]">
             <span class="text-2xl anim-bounce">📷</span>
@@ -347,7 +395,7 @@
         </div>
 
         <!-- 底部火柴人追踪提示 -->
-        <div class="bg-sky-50 border-t border-sky-100 px-4 py-2 flex items-center justify-between text-xs">
+        <div id="camera-bottom-bar" class="bg-sky-50 border-t border-sky-100 px-4 py-2 flex items-center justify-between text-xs">
           <div class="flex items-center gap-1.5">
             <span id="motion-dot" class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
             <span id="motion-tip-text" class="font-bold text-slate-700">火柴人動作引導：雙手托起大太陽，暖洋洋！</span>
@@ -642,6 +690,14 @@
     const motionDot = document.getElementById('motion-dot');
     const matchPercent = document.getElementById('match-percent');
     const matchBar = document.getElementById('match-bar');
+    const cameraSection = document.getElementById('camera-section');
+    const cameraKtvSubtitleBar = document.getElementById('camera-ktv-subtitle-bar');
+    const ktvLyricMain = document.getElementById('ktv-lyric-main');
+    const ktvLyricSub = document.getElementById('ktv-lyric-sub');
+    const btnCameraFullscreen = document.getElementById('btn-camera-fullscreen');
+    const btnCameraExitFs = document.getElementById('btn-camera-exit-fs');
+    const cameraFsText = document.getElementById('camera-fs-text');
+    let isCameraFullscreen = false;
 
         // --- 磁吸式浮動播放/暫停控制器 ---
     function initFloatingPlayDock() {
@@ -2578,7 +2634,7 @@
     }
 
     // ========================================================
-    // 5. 親切名師原聲口令播放與伴奏避讓 (Audio Ducking)
+    // 5. 親切名師原聲口令播放 (保持音樂100%飽滿播放，不壓低背景音樂)
     // ========================================================
     const VOICE_CACHE_BUSTER = "v=" + Date.now();
     function playTeacherVoice(voiceFile) {
@@ -2588,7 +2644,8 @@
         audioVoice.currentTime = 0;
       } catch(e) {}
       audioVoice.src = voiceFile + (voiceFile.indexOf('?') >= 0 ? '&' : '?') + VOICE_CACHE_BUSTER;
-      audioBgm.volume = 0.45;
+      // 保持背景音樂飽滿播放 (移除 Ducking 避讓降音，讓伴奏與老師聲音同時清晰明亮)
+      audioBgm.volume = 1.0;
       audioVoice.play().catch(e => console.log("Voice error:", e));
       audioVoice.onended = () => {
         audioBgm.volume = 1.0;
@@ -2643,6 +2700,10 @@
         lyricMain.innerText = seg.lyric;
         lyricSub.innerText = seg.sub;
         motionTipText.innerText = "火柴人動作引導：" + seg.sub;
+
+        // 同步更新鏡頭全螢幕下的 KTV 字幕
+        if (ktvLyricMain) ktvLyricMain.innerText = seg.lyric;
+        if (ktvLyricSub) ktvLyricSub.innerText = seg.sub;
 
         if (idx !== lastSpokenSegment) {
           lastSpokenSegment = idx;
@@ -2795,6 +2856,82 @@
         }
       }
     }
+
+    // ========================================================
+    // 7. 鏡頭與火柴人獨立全螢幕模式 (Camera Solo Fullscreen)
+    //    壓上 KTV 風格發光大字幕，支援 iPad/Safari/Chrome
+    // ========================================================
+    function toggleCameraFullscreen() {
+      isCameraFullscreen = !isCameraFullscreen;
+      const cameraSec = document.getElementById('camera-section');
+      const ktvBar = document.getElementById('camera-ktv-subtitle-bar');
+      const btnExitFs = document.getElementById('btn-camera-exit-fs');
+      const fsIcon = document.getElementById('camera-fs-icon');
+      const fsText = document.getElementById('camera-fs-text');
+      const cameraBottomBar = document.getElementById('camera-bottom-bar');
+
+      if (isCameraFullscreen) {
+        if (cameraSec) cameraSec.classList.add('camera-fullscreen-active');
+        if (ktvBar) ktvBar.classList.remove('hidden');
+        if (btnExitFs) btnExitFs.classList.remove('hidden');
+        if (cameraBottomBar) cameraBottomBar.classList.add('hidden');
+        if (fsIcon) fsIcon.innerText = "✖";
+        if (fsText) fsText.innerText = "退出全螢幕";
+
+        // 更新 KTV 字幕內容為當前段落
+        const seg = getCurrentSegment();
+        if (seg) {
+          if (ktvLyricMain) ktvLyricMain.innerText = seg.lyric;
+          if (ktvLyricSub) ktvLyricSub.innerText = seg.sub;
+        }
+
+        // 嘗試 HTML5 原生 Element Fullscreen（桌面端與支援的平板）
+        if (cameraSec && (cameraSec.requestFullscreen || cameraSec.webkitRequestFullscreen)) {
+          try {
+            if (cameraSec.requestFullscreen) {
+              cameraSec.requestFullscreen().catch(() => {});
+            } else if (cameraSec.webkitRequestFullscreen) {
+              cameraSec.webkitRequestFullscreen();
+            }
+          } catch(e) {}
+        }
+      } else {
+        if (cameraSec) cameraSec.classList.remove('camera-fullscreen-active');
+        if (ktvBar) ktvBar.classList.add('hidden');
+        if (btnExitFs) btnExitFs.classList.add('hidden');
+        if (cameraBottomBar) cameraBottomBar.classList.remove('hidden');
+        if (fsIcon) fsIcon.innerText = "🔲";
+        if (fsText) fsText.innerText = "鏡頭全螢幕";
+
+        // 退出 HTML5 全螢幕
+        if (document.fullscreenElement || document.webkitFullscreenElement) {
+          try {
+            if (document.exitFullscreen) {
+              document.exitFullscreen().catch(() => {});
+            } else if (document.webkitExitFullscreen) {
+              document.webkitExitFullscreen();
+            }
+          } catch(e) {}
+        }
+      }
+
+      // 重新校正相機畫布大小，確保火柴人座標映射 100% 精準無失真
+      resizeCanvas();
+      requestAnimationFrame(resizeCanvas);
+      setTimeout(resizeCanvas, 50);
+      setTimeout(resizeCanvas, 150);
+      setTimeout(resizeCanvas, 300);
+    }
+
+    // 監聽 ESC 鍵或原生全螢幕退出事件
+    function handleFullscreenChange() {
+      const isNativeFs = !!(document.fullscreenElement || document.webkitFullscreenElement);
+      if (!isNativeFs && isCameraFullscreen) {
+        toggleCameraFullscreen();
+      }
+    }
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
 
     updatePlaybackUI();
     renderLobbySongs(currentAlbumId);
