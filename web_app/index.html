@@ -2583,6 +2583,10 @@
     const VOICE_CACHE_BUSTER = "v=" + Date.now();
     function playTeacherVoice(voiceFile) {
       if (!voiceEnabled || !voiceFile) return;
+      try {
+        audioVoice.pause();
+        audioVoice.currentTime = 0;
+      } catch(e) {}
       audioVoice.src = voiceFile + (voiceFile.indexOf('?') >= 0 ? '&' : '?') + VOICE_CACHE_BUSTER;
       audioBgm.volume = 0.45;
       audioVoice.play().catch(e => console.log("Voice error:", e));

@@ -38,8 +38,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⏰ 精神小士兵，原地踩著節拍踏步走！",
             "next": "good morning sun up  ➜",
             "targetPose": "march",
-            "voiceScript": "小朋友們站好囉！雙手插腰，跟著歡樂音樂踩踩拍子踏步走！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '[前奏] 晨光萌芽踏步'. ⏰ 精神小士兵，原地踩著節拍踏步走！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "小朋友站好，原地踏步走！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '[前奏] 晨光萌芽踏步'. ⏰ 精神小士兵，原地踩著節拍踏步走！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.93
           },
           {
             "start": 7.87,
@@ -53,8 +54,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "☀️ 雙手從胸前托起大太陽高高升起！",
             "next": "金色小手大招手 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 01 節: 托起太陽高高舉'. ☀️ 雙手從胸前托起大太陽高高升起！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手推高，托起金色大太陽！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 01 節: 托起太陽高高舉'. ☀️ 雙手從胸前托起大太陽高高升起！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.07
           },
           {
             "start": 11.93,
@@ -68,8 +70,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👋 雙手在天空左右大弧度歡快招手！",
             "next": "刷刷小牙笑一笑 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 02 節: 金色小手大招手'. 👋 雙手在天空左右大弧度歡快招手！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手在天空，左右大招手！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 02 節: 金色小手大招手'. 👋 雙手在天空左右大弧度歡快招手！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.81
           },
           {
             "start": 15.97,
@@ -83,8 +86,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🪥 小牙刷刷刷刷，露出最燦爛笑容！",
             "next": "邁開大步出發囉 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 03 節: 刷刷小牙笑一笑'. 🪥 小牙刷刷刷刷，露出最燦爛笑容！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "小牙刷刷刷，露出笑臉大步走！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 03 節: 刷刷小牙笑一笑'. 🪥 小牙刷刷刷刷，露出最燦爛笑容！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.14
           },
           {
             "start": 19.73,
@@ -98,8 +102,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👟 雙手插腰精神抖擻，大步邁開去探險！",
             "next": "樹梢小鳥展翅飛 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 04 節: 邁開大步出發囉'. 👟 雙手插腰精神抖擻，大步邁開去探險！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手插腰，精神抖擻向前走！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 04 節: 邁開大步出發囉'. 👟 雙手插腰精神抖擻，大步邁開去探險！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.07
           },
           {
             "start": 23.77,
@@ -113,8 +118,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐦 雙臂輕快拍動，學小鳥在樹梢滑翔！",
             "next": "貼耳聽清晨鳥鳴 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 05 節: 樹梢小鳥展翅飛'. 🐦 雙臂輕快拍動，學小鳥在樹梢滑翔！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙臂拍動，學小鳥在樹梢飛！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 05 節: 樹梢小鳥展翅飛'. 🐦 雙臂輕快拍動，學小鳥在樹梢滑翔！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.1
           },
           {
             "start": 27.73,
@@ -128,8 +134,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎶 小手貼耳，身體左右輕輕搖擺聽晨曲！",
             "next": "熱情招手說哈囉 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 06 節: 貼耳聽清晨鳥鳴'. 🎶 小手貼耳，身體左右輕輕搖擺聽晨曲！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "小手貼耳朵，輕輕搖擺聽鳥鳴！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 06 節: 貼耳聽清晨鳥鳴'. 🎶 小手貼耳，身體左右輕輕搖擺聽晨曲！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.36
           },
           {
             "start": 33.37,
@@ -143,8 +150,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👋 揮舞雙手大聲喊 Hello，全新一天開始！",
             "next": "活力蹦跳喊萬歲 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 07 節: 熱情招手說哈囉'. 👋 揮舞雙手大聲喊 Hello，全新一天開始！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "揮揮手說哈囉，新的一天開始！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 07 節: 熱情招手說哈囉'. 👋 揮舞雙手大聲喊 Hello，全新一天開始！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.31
           },
           {
             "start": 37.8,
@@ -158,8 +166,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⭐ 雙膝下蹲蓄力，高高跳起喊萬歲！",
             "next": "穿上小鞋數一二三 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 08 節: 活力蹦跳喊萬歲'. ⭐ 雙膝下蹲蓄力，高高跳起喊萬歲！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "深蹲蓄力，用力跳起來喊耶！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 08 節: 活力蹦跳喊萬歲'. ⭐ 雙膝下蹲蓄力，高高跳起喊萬歲！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.02
           },
           {
             "start": 41.6,
@@ -173,8 +182,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👟 摸摸左右小鞋子，伸指數：一、二、三！",
             "next": "張開雙手齊邀請 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 09 節: 穿上小鞋數一二三'. 👟 摸摸左右小鞋子，伸指數：一、二、三！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "摸摸小鞋子，伸指數一二三！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 09 節: 穿上小鞋數一二三'. 👟 摸摸左右小鞋子，伸指數：一、二、三！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.1
           },
           {
             "start": 45.7,
@@ -188,8 +198,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎶 雙手像花朵向外盛開，邀請好朋友唱歌！",
             "next": "同唱早安小圓舞 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 10 節: 張開雙手齊邀請'. 🎶 雙手像花朵向外盛開，邀請好朋友唱歌！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手向外盛開，邀請大家唱歌！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 10 節: 張開雙手齊邀請'. 🎶 雙手像花朵向外盛開，邀請好朋友唱歌！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.41
           },
           {
             "start": 51.4,
@@ -203,8 +214,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌸 雙手插腰轉個歡樂大圓圈，站定比個花！",
             "next": "背起書包戴正帽 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 11 節: 同唱早安小圓舞'. 🌸 雙手插腰轉個歡樂大圓圈，站定比個花！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手插小蠻腰，輕快轉個小圓圈！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 11 節: 同唱早安小圓舞'. 🌸 雙手插腰轉個歡樂大圓圈，站定比個花！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.38
           },
           {
             "start": 59.87,
@@ -218,8 +230,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎒 背起小書包、摸摸小帽子，準備好！",
             "next": "跟貪睡小貓說拜拜 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 12 節: 背起書包戴正帽'. 🎒 背起小書包、摸摸小帽子，準備好！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "背好小書包，摸摸小帽子！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 12 節: 背起書包戴正帽'. 🎒 背起小書包、摸摸小帽子，準備好！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.81
           },
           {
             "start": 63.93,
@@ -233,8 +246,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐱 雙手揉揉眼睛學小貓咪，俏皮說拜拜！",
             "next": "抬頭看天空好藍 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 13 節: 跟貪睡小貓說拜拜'. 🐱 雙手揉揉眼睛學小貓咪，俏皮說拜拜！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "揉揉小眼睛，跟貪睡貓咪拜拜！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 13 節: 跟貪睡小貓說拜拜'. 🐱 雙手揉揉眼睛學小貓咪，俏皮說拜拜！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.19
           },
           {
             "start": 67.77,
@@ -248,8 +262,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "☁️ 墊起腳尖手遮額頭，抬頭仰望美麗藍天！",
             "next": "精彩探險等著你 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 14 節: 抬頭看天空好藍'. ☁️ 墊起腳尖手遮額頭，抬頭仰望美麗藍天！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "墊起小腳尖，抬頭看藍天！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 14 節: 抬頭看天空好藍'. ☁️ 墊起腳尖手遮額頭，抬頭仰望美麗藍天！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.88
           },
           {
             "start": 71.57,
@@ -263,8 +278,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "💖 雙手在胸前比個大愛心，滿滿期待！",
             "next": "再次熱情大招手 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 15 節: 精彩探險等著你'. 💖 雙手在胸前比個大愛心，滿滿期待！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "胸前比出大愛心，滿滿期待！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 15 節: 精彩探險等著你'. 💖 雙手在胸前比個大愛心，滿滿期待！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.14
           },
           {
             "start": 77.33,
@@ -278,8 +294,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👋 雙腳踩節奏，雙手像波浪歡樂招手！",
             "next": "深蹲起跳歡呼耶 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 16 節: 再次熱情大招手'. 👋 雙腳踩節奏，雙手像波浪歡樂招手！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "踩著節奏，雙手像波浪大招手！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 16 節: 再次熱情大招手'. 👋 雙腳踩節奏，雙手像波浪歡樂招手！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.29
           },
           {
             "start": 81.87,
@@ -293,8 +310,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐰 蹲下蓄力、高高起飛，小拳頭喊耶！",
             "next": "動感腳尖踢點步 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 17 節: 深蹲起跳歡呼耶'. 🐰 蹲下蓄力、高高起飛，小拳頭喊耶！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "蹲下跳起來，揮起小拳頭喊耶！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 17 節: 深蹲起跳歡呼耶'. 🐰 蹲下蓄力、高高起飛，小拳頭喊耶！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.14
           },
           {
             "start": 85.6,
@@ -308,8 +326,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👟 雙手插腰，左右小腳尖輕輕點地數數！",
             "next": "歡樂拍手合唱曲 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 18 節: 動感腳尖踢點步'. 👟 雙手插腰，左右小腳尖輕輕點地數數！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "小手插腰，腳尖輕輕點地數數！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 18 節: 動感腳尖踢點步'. 👟 雙手插腰，左右小腳尖輕輕點地數數！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.34
           },
           {
             "start": 89.8,
@@ -323,8 +342,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👏 胸前大聲拍手：啪啪啪，身體彈動！",
             "next": "白鴿展翅大滑翔 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 19 節: 歡樂拍手合唱曲'. 👏 胸前大聲拍手：啪啪啪，身體彈動！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "胸前大聲拍拍手，身體跳一跳！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 19 節: 歡樂拍手合唱曲'. 👏 胸前大聲拍手：啪啪啪，身體彈動！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.43
           },
           {
             "start": 95.37,
@@ -338,8 +358,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🕊️ 雙手水平展開像大鳥，隨微風滑翔！",
             "next": "擁抱世界道早安 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 20 節: 白鴿展翅大滑翔'. 🕊️ 雙手水平展開像大鳥，隨微風滑翔！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "展開白鴿翅膀，隨微風滑翔！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 20 節: 白鴿展翅大滑翔'. 🕊️ 雙手水平展開像大鳥，隨微風滑翔！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.22
           },
           {
             "start": 103.87,
@@ -353,8 +374,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌍 雙臂向外畫大圓，擁抱美麗全世界！",
             "next": "定格燦爛大微笑 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 21 節: 擁抱世界道早安'. 🌍 雙臂向外畫大圓，擁抱美麗全世界！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手畫個大圓，擁抱全世界！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 21 節: 擁抱世界道早安'. 🌍 雙臂向外畫大圓，擁抱美麗全世界！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.1
           },
           {
             "start": 107.73,
@@ -368,8 +390,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌟 雙手胸前比心鞠躬，定格燦爛笑容！",
             "next": "🎉 完美通關！獲得 3 顆大金星！",
             "targetPose": "heart",
-            "voiceScript": "哇！跳得太完美了！雙手比出大愛心，給自己拍拍手，超級棒！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 22 節: 定格燦爛大微笑'. 🌟 雙手胸前比心鞠躬，定格燦爛笑容！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手比心鞠躬，定格燦爛大微笑！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Morning Sunshine Hello', Action '第 22 節: 定格燦爛大微笑'. 🌟 雙手胸前比心鞠躬，定格燦爛笑容！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.5
           }
         ]
       },
@@ -402,8 +425,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🔢 準備好小手小腳，踩出節拍踏步走！",
             "next": "One little apple han ➜",
             "targetPose": "march",
-            "voiceScript": "小朋友們站好囉！雙手插腰，跟著歡樂音樂踩踩拍子踏步走！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '[前奏] 數字小士兵預備踏步'. 🔢 準備好小手小腳，踩出節拍踏步走！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "小朋友站好，踩著節拍踏步走！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '[前奏] 數字小士兵預備踏步'. 🔢 準備好小手小腳，踩出節拍踏步走！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.26
           },
           {
             "start": 9.57,
@@ -417,8 +441,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🍎 右手比 1 摘樹上紅蘋果！",
             "next": "伸指比 2 學小鳥 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 01 節: 伸指比 1 摸蘋果'. 🍎 右手比 1 摘樹上紅蘋果！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "右手比一，摘樹上的紅蘋果！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 01 節: 伸指比 1 摸蘋果'. 🍎 右手比 1 摘樹上紅蘋果！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.0
           },
           {
             "start": 13.7,
@@ -432,8 +457,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐦 雙手比 2 當小鳥翅膀搧呀搧！",
             "next": "伸指比 3 滾滾球 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 02 節: 伸指比 2 學小鳥'. 🐦 雙手比 2 當小鳥翅膀搧呀搧！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手比二，學小鳥搧翅膀！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 02 節: 伸指比 2 學小鳥'. 🐦 雙手比 2 當小鳥翅膀搧呀搧！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.95
           },
           {
             "start": 17.87,
@@ -447,8 +473,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⚽ 雙手比 3 在地面滾滾彩色小球！",
             "next": "伸指比 4 敲敲門 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 03 節: 伸指比 3 滾滾球'. ⚽ 雙手比 3 在地面滾滾彩色小球！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手比三，地上滾滾彩色球！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 03 節: 伸指比 3 滾滾球'. ⚽ 雙手比 3 在地面滾滾彩色小球！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.19
           },
           {
             "start": 21.97,
@@ -462,8 +489,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐱 伸出 4 隻手指學小貓敲門咚咚咚！",
             "next": "伸出 5 指小蜜蜂 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 04 節: 伸指比 4 敲敲門'. 🐱 伸出 4 隻手指學小貓敲門咚咚咚！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "伸出四指，學小貓敲敲門！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 04 節: 伸指比 4 敲敲門'. 🐱 伸出 4 隻手指學小貓敲門咚咚咚！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.98
           },
           {
             "start": 26.1,
@@ -477,8 +505,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐝 張開 5 隻手指學蜜蜂嗡嗡飛！",
             "next": "數數朋友 1 到 5 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 05 節: 伸出 5 指小蜜蜂'. 🐝 張開 5 隻手指學蜜蜂嗡嗡飛！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "張開五指，小蜜蜂嗡嗡飛！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 05 節: 伸出 5 指小蜜蜂'. 🐝 張開 5 隻手指學蜜蜂嗡嗡飛！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.86
           },
           {
             "start": 30.27,
@@ -492,8 +521,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🔢 伸出手指數一數身邊好朋友！",
             "next": "節奏拍手 1 2 3 4 5 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 06 節: 數數朋友 1 到 5'. 🔢 伸出手指數一數身邊好朋友！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "數數好朋友！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 06 節: 數數朋友 1 到 5'. 🔢 伸出手指數一數身邊好朋友！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 1.87
           },
           {
             "start": 32.3,
@@ -507,8 +537,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👏 跟著重音連拍 5 下：1、2、3、4、5！",
             "next": "數字寶寶動起來 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 07 節: 節奏拍手 1 2 3 4 5'. 👏 跟著重音連拍 5 下：1、2、3、4、5！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "連拍五下：一二三四五！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 07 節: 節奏拍手 1 2 3 4 5'. 👏 跟著重音連拍 5 下：1、2、3、4、5！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.74
           },
           {
             "start": 38.53,
@@ -522,8 +553,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "✨ 雙手插腰身體左右快樂扭一扭！",
             "next": "拍拍雙手踩踩鞋 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 08 節: 數字寶寶動起來'. ✨ 雙手插腰身體左右快樂扭一扭！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手插腰，身體左右扭一扭！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 08 節: 數字寶寶動起來'. ✨ 雙手插腰身體左右快樂扭一扭！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.86
           },
           {
             "start": 42.67,
@@ -537,8 +569,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👟 胸前大聲拍手，腳尖輕快踏地！",
             "next": "大家數數真開心 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 09 節: 拍拍雙手踩踩鞋'. 👟 胸前大聲拍手，腳尖輕快踏地！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "胸前拍手，腳尖踩踩地！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 09 節: 拍拍雙手踩踩鞋'. 👟 胸前大聲拍手，腳尖輕快踏地！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.78
           },
           {
             "start": 46.8,
@@ -552,8 +585,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌟 雙手高舉揮舞，數數越數越開心！",
             "next": "伸指比 6 游水鴨 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 10 節: 大家數數真開心'. 🌟 雙手高舉揮舞，數數越數越開心！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手高舉揮舞，數數真開心！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 10 節: 大家數數真開心'. 🌟 雙手高舉揮舞，數數越數越開心！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.17
           },
           {
             "start": 57.1,
@@ -567,8 +601,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🦆 雙手比 6 學小鴨搖擺游游水！",
             "next": "伸指比 7 吹蠟燭 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 11 節: 伸指比 6 游水鴨'. 🦆 雙手比 6 學小鴨搖擺游游水！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手比六，學小鴨搖擺游游水！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 11 節: 伸指比 6 游水鴨'. 🦆 雙手比 6 學小鴨搖擺游游水！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.22
           },
           {
             "start": 61.27,
@@ -582,8 +617,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎂 雙手比 7 當生日蛋糕上的閃亮蠟燭！",
             "next": "伸指比 8 划小船 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 12 節: 伸指比 7 吹蠟燭'. 🎂 雙手比 7 當生日蛋糕上的閃亮蠟燭！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手比七，當生日蛋糕小蠟燭！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 12 節: 伸指比 7 吹蠟燭'. 🎂 雙手比 7 當生日蛋糕上的閃亮蠟燭！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.38
           },
           {
             "start": 65.47,
@@ -597,8 +633,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⛵ 雙手比 8 當小帆船雙手划槳！",
             "next": "伸指比 9 升氣球 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 13 節: 伸指比 8 划小船'. ⛵ 雙手比 8 當小帆船雙手划槳！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手比八，小帆船划划水！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 13 節: 伸指比 8 划小船'. ⛵ 雙手比 8 當小帆船雙手划槳！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.0
           },
           {
             "start": 69.47,
@@ -612,8 +649,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎈 伸指比 9 抬頭看彩色氣球飄上天！",
             "next": "十顆星星閃亮亮 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 14 節: 伸指比 9 升氣球'. 🎈 伸指比 9 抬頭看彩色氣球飄上天！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "伸指比九，看氣球飄上天！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 14 節: 伸指比 9 升氣球'. 🎈 伸指比 9 抬頭看彩色氣球飄上天！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.14
           },
           {
             "start": 73.8,
@@ -627,8 +665,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⭐ 雙手高舉十指張開，像繁星閃爍！",
             "next": "點亮夜空數數星 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 15 節: 十顆星星閃亮亮'. ⭐ 雙手高舉十指張開，像繁星閃爍！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手高舉，十顆星星閃亮亮！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 15 節: 十顆星星閃亮亮'. ⭐ 雙手高舉十指張開，像繁星閃爍！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.1
           },
           {
             "start": 77.8,
@@ -642,8 +681,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "✨ 左右輕柔擺手，繁星照亮整片天空！",
             "next": "大家齊數 1 到 10 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 16 節: 點亮夜空數數星'. ✨ 左右輕柔擺手，繁星照亮整片天空！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "輕輕擺動，星星照亮夜空！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 16 節: 點亮夜空數數星'. ✨ 左右輕柔擺手，繁星照亮整片天空！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.95
           },
           {
             "start": 82.1,
@@ -657,8 +697,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🔢 伸出十根手指頭，大聲數 1 到 10！",
             "next": "全體高聲齊歡唱 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 17 節: 大家齊數 1 到 10'. 🔢 伸出十根手指頭，大聲數 1 到 10！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "伸出雙手，大聲數一到十！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 17 節: 大家齊數 1 到 10'. 🔢 伸出十根手指頭，大聲數 1 到 10！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.12
           },
           {
             "start": 90.27,
@@ -672,8 +713,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎶 張開雙臂放聲歌唱，整齊踩步！",
             "next": "動感拍手踩踩鞋 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 18 節: 全體高聲齊歡唱'. 🎶 張開雙臂放聲歌唱，整齊踩步！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "張開雙臂，大家一起大聲唱！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 18 節: 全體高聲齊歡唱'. 🎶 張開雙臂放聲歌唱，整齊踩步！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.9
           },
           {
             "start": 94.4,
@@ -687,8 +729,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👟 拍拍手拍拍膝蓋，小腳踏踏踏！",
             "next": "數數大師好神氣 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 19 節: 動感拍手踩踩鞋'. 👟 拍拍手拍拍膝蓋，小腳踏踏踏！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "拍拍雙手，小腳輕輕踏步！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 19 節: 動感拍手踩踩鞋'. 👟 拍拍手拍拍膝蓋，小腳踏踏踏！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.98
           },
           {
             "start": 104.7,
@@ -702,8 +745,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎉 雙手叉腰挺胸，我們都是數數小神童！",
             "next": "完美的 10 大定格 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 20 節: 數數大師好神氣'. 🎉 雙手叉腰挺胸，我們都是數數小神童！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手叉腰，我們都是數數小神童！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 20 節: 數數大師好神氣'. 🎉 雙手叉腰挺胸，我們都是數數小神童！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.53
           },
           {
             "start": 112.3,
@@ -717,8 +761,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⭐ 雙手比出十全十美大招手定格！",
             "next": "🎉 完美通關！獲得 3 顆大金星！",
             "targetPose": "sun_rise",
-            "voiceScript": "哇！跳得太完美了！雙手比出大愛心，給自己拍拍手，超級棒！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 21 節: 完美的 10 大定格'. ⭐ 雙手比出十全十美大招手定格！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手大招手，十全十美大定格！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Count with Me 1 to 10', Action '第 21 節: 完美的 10 大定格'. ⭐ 雙手比出十全十美大招手定格！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.41
           }
         ]
       },
@@ -751,8 +796,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎨 拿起神奇彩色畫筆，準備為天空塗鴉！",
             "next": "Red like a cherry, r ➜",
             "targetPose": "march",
-            "voiceScript": "小朋友們站好囉！雙手插腰，跟著歡樂音樂踩踩拍子踏步走！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '[前奏] 彩虹畫筆小預備'. 🎨 拿起神奇彩色畫筆，準備為天空塗鴉！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "拿起大畫筆，準備給天空塗鴉！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '[前奏] 彩虹畫筆小預備'. 🎨 拿起神奇彩色畫筆，準備為天空塗鴉！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.24
           },
           {
             "start": 15.1,
@@ -766,8 +812,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🍒 雙手胸前抱大圓，比出紅紅甜櫻桃！",
             "next": "紅紅按鈕小鼻子 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 01 節: 紅紅櫻桃與玫瑰'. 🍒 雙手胸前抱大圓，比出紅紅甜櫻桃！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手抱圓圈，比出紅紅甜櫻桃！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 01 節: 紅紅櫻桃與玫瑰'. 🍒 雙手胸前抱大圓，比出紅紅甜櫻桃！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.48
           },
           {
             "start": 19.37,
@@ -781,8 +828,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👃 食指輕輕點點小鼻子，俏皮笑一笑！",
             "next": "暖暖金黃大太陽 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 02 節: 紅紅按鈕小鼻子'. 👃 食指輕輕點點小鼻子，俏皮笑一笑！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "伸出小食指，輕輕點點小鼻子！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 02 節: 紅紅按鈕小鼻子'. 👃 食指輕輕點點小鼻子，俏皮笑一笑！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.48
           },
           {
             "start": 23.8,
@@ -796,8 +844,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "☀️ 雙手向外劃出金色大圓圈，暖洋洋！",
             "next": "夜空星星黃澄澄 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 03 節: 暖暖金黃大太陽'. ☀️ 雙手向外劃出金色大圓圈，暖洋洋！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手向外畫大圓，金黃大太陽！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 03 節: 暖暖金黃大太陽'. ☀️ 雙手向外劃出金色大圓圈，暖洋洋！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.41
           },
           {
             "start": 28.1,
@@ -811,8 +860,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⭐ 雙手向上摘星星，小手指眨呀眨！",
             "next": "大海蔚藍又寬廣 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 04 節: 夜空星星黃澄澄'. ⭐ 雙手向上摘星星，小手指眨呀眨！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手向上伸，小星星眨眨眼！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 04 節: 夜空星星黃澄澄'. ⭐ 雙手向上摘星星，小手指眨呀眨！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.22
           },
           {
             "start": 32.5,
@@ -826,8 +876,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌊 雙臂像波浪左右推動，學大海起伏！",
             "next": "藍色浪花向前衝 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 05 節: 大海蔚藍又寬廣'. 🌊 雙臂像波浪左右推動，學大海起伏！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙臂像波浪，學大海起伏搖擺！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 05 節: 大海蔚藍又寬廣'. 🌊 雙臂像波浪左右推動，學大海起伏！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.22
           },
           {
             "start": 36.53,
@@ -841,8 +892,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🏄 身體微蹲向前划水，浪花四濺！",
             "next": "紅黃綠藍齊點名 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 06 節: 藍色浪花向前衝'. 🏄 身體微蹲向前划水，浪花四濺！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "微蹲划划水，浪花向前衝！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 06 節: 藍色浪花向前衝'. 🏄 身體微蹲向前划水，浪花四濺！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.05
           },
           {
             "start": 42.93,
@@ -856,8 +908,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎨 雙手輪流前推點出四種神奇顏色！",
             "next": "搭起彩色大虹橋 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 07 節: 紅黃綠藍齊點名'. 🎨 雙手輪流前推點出四種神奇顏色！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "伸出小手，點出四種神奇顏色！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 07 節: 紅黃綠藍齊點名'. 🎨 雙手輪流前推點出四種神奇顏色！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.36
           },
           {
             "start": 46.97,
@@ -871,8 +924,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌈 雙臂在頭頂畫出橫跨天空的彩虹橋！",
             "next": "色彩魔法融合轉 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 08 節: 搭起彩色大虹橋'. 🌈 雙臂在頭頂畫出橫跨天空的彩虹橋！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "頭頂畫大弧線，搭起彩虹橋！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 08 節: 搭起彩色大虹橋'. 🌈 雙臂在頭頂畫出橫跨天空的彩虹橋！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.26
           },
           {
             "start": 51.53,
@@ -886,8 +940,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🔄 雙手交疊攪拌魔法色彩，轉個小圈！",
             "next": "閃亮色彩好耀眼 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 09 節: 色彩魔法融合轉'. 🔄 雙手交疊攪拌魔法色彩，轉個小圈！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "攪拌魔法色彩，轉個小圈！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 09 節: 色彩魔法融合轉'. 🔄 雙手交疊攪拌魔法色彩，轉個小圈！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.95
           },
           {
             "start": 55.77,
@@ -901,8 +956,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "✨ 雙手十指向外綻放，像煙火閃爍！",
             "next": "青青小草小兔跳 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 10 節: 閃亮色彩好耀眼'. ✨ 雙手十指向外綻放，像煙火閃爍！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手十指盛開，閃閃發光！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 10 節: 閃亮色彩好耀眼'. ✨ 雙手十指向外綻放，像煙火閃爍！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.1
           },
           {
             "start": 64.37,
@@ -916,8 +972,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐰 雙手放頭頂當兔耳，輕快蹦蹦跳！",
             "next": "綠綠大樹參天長 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 11 節: 青青小草小兔跳'. 🐰 雙手放頭頂當兔耳，輕快蹦蹦跳！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "放頭頂當兔耳，草地蹦蹦跳！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 11 節: 青青小草小兔跳'. 🐰 雙手放頭頂當兔耳，輕快蹦蹦跳！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.14
           },
           {
             "start": 68.7,
@@ -931,8 +988,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌲 雙腳站穩雙手上伸，像大樹高高生長！",
             "next": "圓圓南瓜甜又香 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 12 節: 綠綠大樹參天長'. 🌲 雙腳站穩雙手上伸，像大樹高高生長！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手向上伸，大樹高高長！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 12 節: 綠綠大樹參天長'. 🌲 雙腳站穩雙手上伸，像大樹高高生長！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.95
           },
           {
             "start": 73.0,
@@ -946,8 +1004,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎃 雙臂胸前抱出圓滾滾大南瓜！",
             "next": "紫色葡萄摘一串 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 13 節: 圓圓南瓜甜又香'. 🎃 雙臂胸前抱出圓滾滾大南瓜！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "胸前抱一抱，圓滾滾大南瓜！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 13 節: 圓圓南瓜甜又香'. 🎃 雙臂胸前抱出圓滾滾大南瓜！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.12
           },
           {
             "start": 77.27,
@@ -961,8 +1020,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🍇 伸手向上摘葡萄，大口吃進嘴裡！",
             "next": "畫筆蘸色轉一轉 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 14 節: 紫色葡萄摘一串'. 🍇 伸手向上摘葡萄，大口吃進嘴裡！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "伸手摘葡萄，大口吃進嘴巴裡！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 14 節: 紫色葡萄摘一串'. 🍇 伸手向上摘葡萄，大口吃進嘴裡！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.43
           },
           {
             "start": 81.53,
@@ -976,8 +1036,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🖌️ 手握大畫筆在空中旋轉畫圈圈！",
             "next": "彩繪快樂全世界 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 15 節: 畫筆蘸色轉一轉'. 🖌️ 手握大畫筆在空中旋轉畫圈圈！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手拿大畫筆，空中旋轉畫圈圈！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 15 節: 畫筆蘸色轉一轉'. 🖌️ 手握大畫筆在空中旋轉畫圈圈！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.48
           },
           {
             "start": 85.8,
@@ -991,8 +1052,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌍 雙手大幅度揮灑，給全世界塗上色彩！",
             "next": "紅黃綠藍唱彩虹 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 16 節: 彩繪快樂全世界'. 🌍 雙手大幅度揮灑，給全世界塗上色彩！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手大力揮灑，彩繪全世界！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 16 節: 彩繪快樂全世界'. 🌍 雙手大幅度揮灑，給全世界塗上色彩！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.29
           },
           {
             "start": 92.13,
@@ -1006,8 +1068,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎶 跟著節拍拍拍手，唱響彩虹之歌！",
             "next": "友情彩虹永相連 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 17 節: 紅黃綠藍唱彩虹'. 🎶 跟著節拍拍拍手，唱響彩虹之歌！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "跟著節拍拍拍手，唱彩虹歌！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 17 節: 紅黃綠藍唱彩虹'. 🎶 跟著節拍拍拍手，唱響彩虹之歌！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.07
           },
           {
             "start": 96.3,
@@ -1021,8 +1084,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🤝 雙手向兩側伸出，搭起友誼橋樑！",
             "next": "魔法色彩閃閃光 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 18 節: 友情彩虹永相連'. 🤝 雙手向兩側伸出，搭起友誼橋樑！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手向兩邊伸，搭起友誼橋！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 18 節: 友情彩虹永相連'. 🤝 雙手向兩側伸出，搭起友誼橋樑！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.17
           },
           {
             "start": 100.8,
@@ -1036,8 +1100,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "✨ 身體輕快彈動，十指閃爍小星星！",
             "next": "繽紛色彩你和我 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 19 節: 魔法色彩閃閃光'. ✨ 身體輕快彈動，十指閃爍小星星！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "身體輕快彈跳，閃爍小星星！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 19 節: 魔法色彩閃閃光'. ✨ 身體輕快彈動，十指閃爍小星星！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.17
           },
           {
             "start": 105.1,
@@ -1051,8 +1116,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "💖 雙手收回胸前比愛心，相親相愛！",
             "next": "天空彩虹好美麗 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 20 節: 繽紛色彩你和我'. 💖 雙手收回胸前比愛心，相親相愛！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "胸前比愛心，相親相愛！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 20 節: 繽紛色彩你和我'. 💖 雙手收回胸前比愛心，相親相愛！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.93
           },
           {
             "start": 110.07,
@@ -1066,8 +1132,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌈 雙手由兩側向上畫大彩虹，定格微笑！",
             "next": "🎉 完美通關！獲得 3 顆大金星！",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 21 節: 天空彩虹好美麗'. 🌈 雙手由兩側向上畫大彩虹，定格微笑！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手畫大彩虹，定格燦爛微笑！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Rainbow Color Splash', Action '第 21 節: 天空彩虹好美麗'. 🌈 雙手由兩側向上畫大彩虹，定格微笑！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.41
           }
         ]
       },
@@ -1100,8 +1167,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎺 聽號角吹響！雙手插腰，膝蓋抬高大步踏走！",
             "next": "Tweet-tweet! One, tw ➜",
             "targetPose": "march",
-            "voiceScript": "小朋友們站好囉！雙手插腰，跟著歡樂音樂踩踩拍子踏步走！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '[前奏] 森林號角精神踏步'. 🎺 聽號角吹響！雙手插腰，膝蓋抬高大步踏走！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "聽號角響起，抬高膝蓋大步踏步！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '[前奏] 森林號角精神踏步'. 🎺 聽號角吹響！雙手插腰，膝蓋抬高大步踏走！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.41
           },
           {
             "start": 5.77,
@@ -1115,8 +1183,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🥁 喊出一二一二，整齊精神原地踏步！",
             "next": "大象重重踏步走 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 01 節: 一二踏步進行曲'. 🥁 喊出一二一二，整齊精神原地踏步！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "喊出一二一二，精神原地踏步！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 01 節: 一二踏步進行曲'. 🥁 喊出一二一二，整齊精神原地踏步！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.14
           },
           {
             "start": 9.53,
@@ -1130,8 +1199,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "轉個小圓圈，等待下一句歌詞！",
             "next": "大象重重踏步走 ➜",
             "targetPose": "sway",
-            "voiceScript": "太棒啦！小腳步輕輕踏，轉個漂亮的小圓圈，準備聽下一句囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '[旋律間奏] 動作接續歡樂跳'. 🔄 雙手插腰踩小碎步，轉個歡樂大圓圈，保持微笑！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手插小蠻腰，轉個圈等下一句！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '[旋律間奏] 動作接續歡樂跳'. 🔄 雙手插腰踩小碎步，轉個歡樂大圓圈，保持微笑！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.38
           },
           {
             "start": 24.73,
@@ -1145,8 +1215,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐘 雙手放鼻子前做長長鼻子，重重踏步！",
             "next": "粉紅小豬泥巴滾 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 02 節: 大象重重踏步走'. 🐘 雙手放鼻子前做長長鼻子，重重踏步！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手做長鼻子，學大象重重踏步！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 02 節: 大象重重踏步走'. 🐘 雙手放鼻子前做長長鼻子，重重踏步！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.43
           },
           {
             "start": 28.73,
@@ -1160,8 +1231,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐷 雙手小拳揉鼻鼻，學小豬拱拱叫！",
             "next": "猴子樹梢盪鞦韆 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 03 節: 粉紅小豬泥巴滾'. 🐷 雙手小拳揉鼻鼻，學小豬拱拱叫！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "小拳頭揉鼻鼻，學小豬拱拱叫！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 03 節: 粉紅小豬泥巴滾'. 🐷 雙手小拳揉鼻鼻，學小豬拱拱叫！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.26
           },
           {
             "start": 32.47,
@@ -1175,8 +1247,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐵 雙手交替向上攀爬樹枝，身體擺盪！",
             "next": "叢林高處真自在 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 04 節: 猴子樹梢盪鞦韆'. 🐵 雙手交替向上攀爬樹枝，身體擺盪！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手向上爬，小猴子盪鞦韆！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 04 節: 猴子樹梢盪鞦韆'. 🐵 雙手交替向上攀爬樹枝，身體擺盪！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.14
           },
           {
             "start": 36.2,
@@ -1190,8 +1263,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌴 展開雙手左右搖晃，像猴子自由快樂！",
             "next": "小狗汪汪小貓喵 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 05 節: 叢林高處真自在'. 🌴 展開雙手左右搖晃，像猴子自由快樂！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手展開左右晃！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 05 節: 叢林高處真自在'. 🌴 展開雙手左右搖晃，像猴子自由快樂！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.02
           },
           {
             "start": 39.57,
@@ -1205,8 +1279,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐶 雙手放在耳邊搖搖，伸出小貓爪抓抓！",
             "next": "大家一起學叫聲 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 06 節: 小狗汪汪小貓喵'. 🐶 雙手放在耳邊搖搖，伸出小貓爪抓抓！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "小手放耳朵，學貓狗抓抓空氣！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 06 節: 小狗汪汪小貓喵'. 🐶 雙手放在耳邊搖搖，伸出小貓爪抓抓！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.36
           },
           {
             "start": 43.8,
@@ -1220,8 +1295,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐾 拍拍小手，開開心心模仿動物叫！",
             "next": "齊步走過綠叢林 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 07 節: 大家一起學叫聲'. 🐾 拍拍小手，開開心心模仿動物叫！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "大家拍拍手，開開心心學叫聲！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 07 節: 大家一起學叫聲'. 🐾 拍拍小手，開開心心模仿動物叫！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.17
           },
           {
             "start": 47.6,
@@ -1235,8 +1311,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌿 挺起胸膛踏步前進，穿過茂密森林！",
             "next": "最開心的動物群 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 08 節: 齊步走過綠叢林'. 🌿 挺起胸膛踏步前進，穿過茂密森林！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "挺起胸膛，齊步走過大森林！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 08 節: 齊步走過綠叢林'. 🌿 挺起胸膛踏步前進，穿過茂密森林！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.05
           },
           {
             "start": 51.3,
@@ -1250,8 +1327,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⭐ 歡樂轉個圈圈，每隻動物都笑嘻嘻！",
             "next": "搖搖尾巴拍拍翅 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 09 節: 最開心的動物群'. ⭐ 歡樂轉個圈圈，每隻動物都笑嘻嘻！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "歡樂轉個圈，每隻動物都笑了！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 09 節: 最開心的動物群'. ⭐ 歡樂轉個圈圈，每隻動物都笑嘻嘻！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.07
           },
           {
             "start": 55.3,
@@ -1265,8 +1343,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🦚 雙手放背後扭動尾巴，雙臂輕拍翅膀！",
             "next": "森林合唱團開唱 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 10 節: 搖搖尾巴拍拍翅'. 🦚 雙手放背後扭動尾巴，雙臂輕拍翅膀！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手放背後扭尾巴，拍拍小翅膀！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 10 節: 搖搖尾巴拍拍翅'. 🦚 雙手放背後扭動尾巴，雙臂輕拍翅膀！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.34
           },
           {
             "start": 59.17,
@@ -1280,8 +1359,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎶 雙手像花朵盛開，全體高聲齊合唱！",
             "next": "小兔草地蹦蹦跳 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 11 節: 森林合唱團開唱'. 🎶 雙手像花朵盛開，全體高聲齊合唱！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手向外盛開，森林大合唱！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 11 節: 森林合唱團開唱'. 🎶 雙手像花朵盛開，全體高聲齊合唱！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.12
           },
           {
             "start": 62.53,
@@ -1295,8 +1375,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "轉個小圓圈，等待下一句歌詞！",
             "next": "小兔草地蹦蹦跳 ➜",
             "targetPose": "sway",
-            "voiceScript": "太棒啦！小腳步輕輕踏，轉個漂亮的小圓圈，準備聽下一句囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '[旋律間奏] 動作接續歡樂跳'. 🔄 雙手插腰踩小碎步，轉個歡樂大圓圈，保持微笑！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手插腰踩小步，轉個歡樂圓圈！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '[旋律間奏] 動作接續歡樂跳'. 🔄 雙手插腰踩小碎步，轉個歡樂大圓圈，保持微笑！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.41
           },
           {
             "start": 70.5,
@@ -1310,8 +1391,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐰 雙手放頭頂比兔耳，雙腳輕輕彈跳！",
             "next": "高高長頸鹿走過 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 12 節: 小兔草地蹦蹦跳'. 🐰 雙手放頭頂比兔耳，雙腳輕輕彈跳！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "頭頂比兔耳，草地蹦蹦跳！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 12 節: 小兔草地蹦蹦跳'. 🐰 雙手放頭頂比兔耳，雙腳輕輕彈跳！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.86
           },
           {
             "start": 74.27,
@@ -1325,8 +1407,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🦒 單手高高舉過頭頂，脖子長長漫步！",
             "next": "獅子大王威武吼 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 13 節: 高高長頸鹿走過'. 🦒 單手高高舉過頭頂，脖子長長漫步！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "單手高高舉起，長頸鹿散步！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 13 節: 高高長頸鹿走過'. 🦒 單手高高舉過頭頂，脖子長長漫步！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.05
           },
           {
             "start": 78.1,
@@ -1340,8 +1423,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🦁 雙手張開成尖爪胸前用力一吼：Roar！",
             "next": "小企鵝搖擺招手 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 14 節: 獅子大王威武吼'. 🦁 雙手張開成尖爪胸前用力一吼：Roar！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "做大尖爪，向前一吼：Roar！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 14 節: 獅子大王威武吼'. 🦁 雙手張開成尖爪胸前用力一吼：Roar！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.0
           },
           {
             "start": 81.93,
@@ -1355,8 +1439,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐧 雙臂貼大腿內側，左右小碎步搖擺招手！",
             "next": "小鴨嘎嘎叫不停 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 15 節: 小企鵝搖擺招手'. 🐧 雙臂貼大腿內側，左右小碎步搖擺招手！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "左右搖擺，企鵝大招手！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 15 節: 小企鵝搖擺招手'. 🐧 雙臂貼大腿內側，左右小碎步搖擺招手！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.62
           },
           {
             "start": 85.77,
@@ -1370,8 +1455,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🦆 雙手在嘴前開合做鴨嘴巴：嘎嘎嘎！",
             "next": "小青蛙呱呱大跳 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 16 節: 小鴨嘎嘎叫不停'. 🦆 雙手在嘴前開合做鴨嘴巴：嘎嘎嘎！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "鴨子叫！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 16 節: 小鴨嘎嘎叫不停'. 🦆 雙手在嘴前開合做鴨嘴巴：嘎嘎嘎！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 0.41
           },
           {
             "start": 87.6,
@@ -1385,8 +1471,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐸 蹲下雙手撐地，用力蹦起呱呱叫！",
             "next": "池塘濺起小水花 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 17 節: 小青蛙呱呱大跳'. 🐸 蹲下雙手撐地，用力蹦起呱呱叫！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "青蛙呱呱跳！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 17 節: 小青蛙呱呱大跳'. 🐸 蹲下雙手撐地，用力蹦起呱呱叫！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 0.77
           },
           {
             "start": 89.57,
@@ -1400,8 +1487,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "💦 雙腳輕輕踩踏，雙手拍水花四濺！",
             "next": "動物大軍向前進 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 18 節: 池塘濺起小水花'. 💦 雙腳輕輕踩踏，雙手拍水花四濺！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙腳踩踩水，池塘濺起小水花！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 18 節: 池塘濺起小水花'. 💦 雙腳輕輕踩踏，雙手拍水花四濺！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.41
           },
           {
             "start": 93.33,
@@ -1415,8 +1503,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🥁 踩著堅定有力的節拍，精神大步邁！",
             "next": "歡樂巡遊最精彩 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 19 節: 動物大軍向前進'. 🥁 踩著堅定有力的節拍，精神大步邁！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "踩著節奏，動物大軍向前進！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 19 節: 動物大軍向前進'. 🥁 踩著堅定有力的節拍，精神大步邁！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.9
           },
           {
             "start": 97.0,
@@ -1430,8 +1519,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "✨ 雙手高高揮舞，全場動物熱情巡遊！",
             "next": "擺尾拍翅再齊舞 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 20 節: 歡樂巡遊最精彩'. ✨ 雙手高高揮舞，全場動物熱情巡遊！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手高高揮舞，熱情大巡遊！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 20 節: 歡樂巡遊最精彩'. ✨ 雙手高高揮舞，全場動物熱情巡遊！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.12
           },
           {
             "start": 100.97,
@@ -1445,8 +1535,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐾 左右快速搖擺，拍動翅膀一起跳！",
             "next": "森林大合奏吼叫 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 21 節: 擺尾拍翅再齊舞'. 🐾 左右快速搖擺，拍動翅膀一起跳！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "左右快速搖擺，拍動翅膀一起跳！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 21 節: 擺尾拍翅再齊舞'. 🐾 左右快速搖擺，拍動翅膀一起跳！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.31
           },
           {
             "start": 104.87,
@@ -1460,8 +1551,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🦁 獅子吼！鴨子叫！小貓喵！全場合奏！",
             "next": "軍鼓重響定格秀 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 22 節: 森林大合奏吼叫'. 🦁 獅子吼！鴨子叫！小貓喵！全場合奏！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "獅子吼小貓叫，動物大合奏！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 22 節: 森林大合奏吼叫'. 🦁 獅子吼！鴨子叫！小貓喵！全場合奏！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.17
           },
           {
             "start": 114.4,
@@ -1475,8 +1567,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌟 雙手叉腰胸前定格，最棒動物探險家！",
             "next": "🎉 完美通關！獲得 3 顆大金星！",
             "targetPose": "sun_rise",
-            "voiceScript": "哇！跳得太完美了！雙手比出大愛心，給自己拍拍手，超級棒！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 23 節: 軍鼓重響定格秀'. 🌟 雙手叉腰胸前定格，最棒動物探險家！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手叉腰胸前定格，最棒探險家！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Animal Safari March', Action '第 23 節: 軍鼓重響定格秀'. 🌟 雙手叉腰胸前定格，最棒動物探險家！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.62
           }
         ]
       },
@@ -1509,8 +1602,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⏰ 時鐘滴答走，玩具小幫手挽起袖子集合！",
             "next": "Playtime is finished ➜",
             "targetPose": "march",
-            "voiceScript": "小朋友們站好囉！雙手插腰，跟著歡樂音樂踩踩拍子踏步走！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '[前奏] 時鐘滴答整理預備'. ⏰ 時鐘滴答走，玩具小幫手挽起袖子集合！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "時鐘滴答走，玩具小幫手集合囉！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '[前奏] 時鐘滴答整理預備'. ⏰ 時鐘滴答走，玩具小幫手挽起袖子集合！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.53
           },
           {
             "start": 7.7,
@@ -1524,8 +1618,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⏰ 雙手叉腰身體跟著時鐘左右擺動！",
             "next": "收拾積木排排隊 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 01 節: 遊戲結束時鐘響'. ⏰ 雙手叉腰身體跟著時鐘左右擺動！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手叉腰，跟著時鐘左右晃！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 01 節: 遊戲結束時鐘響'. ⏰ 雙手叉腰身體跟著時鐘左右擺動！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.1
           },
           {
             "start": 11.4,
@@ -1539,8 +1634,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🧱 彎下腰撿起積木，輕輕放進收納籃！",
             "next": "鉛筆蠟筆回小盒 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 02 節: 收拾積木排排隊'. 🧱 彎下腰撿起積木，輕輕放進收納籃！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "彎下腰撿積木，輕輕放進收納籃！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 02 節: 收拾積木排排隊'. 🧱 彎下腰撿起積木，輕輕放進收納籃！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.43
           },
           {
             "start": 15.3,
@@ -1554,8 +1650,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "✏️ 雙手捧著筆筒，把彩色蠟筆放進盒子！",
             "next": "幫小熊襪子配對 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 03 節: 鉛筆蠟筆回小盒'. ✏️ 雙手捧著筆筒，把彩色蠟筆放進盒子！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手捧筆筒，蠟筆收進盒子！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 03 節: 鉛筆蠟筆回小盒'. ✏️ 雙手捧著筆筒，把彩色蠟筆放進盒子！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.05
           },
           {
             "start": 19.4,
@@ -1569,8 +1666,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🧸 雙手拍拍小腳踝，幫小熊摺好小襪子！",
             "next": "看看桌子看看毯 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 04 節: 幫小熊襪子配對'. 🧸 雙手拍拍小腳踝，幫小熊摺好小襪子！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "拍拍小腳踝，幫小熊摺好小襪子！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 04 節: 幫小熊襪子配對'. 🧸 雙手拍拍小腳踝，幫小熊摺好小襪子！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.35
           },
           {
             "start": 22.97,
@@ -1584,8 +1682,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👀 彎腰轉頭找一找，桌面地毯都乾淨！",
             "next": "給房間一個大擁抱 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 05 節: 看看桌子看看毯'. 👀 彎腰轉頭找一找，桌面地毯都乾淨！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "轉頭找一找，桌面地毯都乾淨！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 05 節: 看看桌子看看毯'. 👀 彎腰轉頭找一找，桌面地毯都乾淨！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.05
           },
           {
             "start": 26.8,
@@ -1599,8 +1698,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "💖 雙臂張開大大環抱，給房間滿滿愛！",
             "next": "動作快快收乾淨 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 06 節: 給房間一個大擁抱'. 💖 雙臂張開大大環抱，給房間滿滿愛！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙臂大大環抱，給房間滿滿的愛！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 06 節: 給房間一個大擁抱'. 💖 雙臂張開大大環抱，給房間滿滿愛！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.38
           },
           {
             "start": 32.23,
@@ -1614,8 +1714,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⚡ 腳步輕快小碎步，快快收拾小房間！",
             "next": "人人幫忙好計畫 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 07 節: 動作快快收乾淨'. ⚡ 腳步輕快小碎步，快快收拾小房間！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "腳步輕快，快快收拾小房間！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 07 節: 動作快快收乾淨'. ⚡ 腳步輕快小碎步，快快收拾小房間！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.22
           },
           {
             "start": 36.6,
@@ -1629,8 +1730,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🤝 拍拍雙手豎起大拇指，大家都是小幫手！",
             "next": "物歸原位放整齊 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 08 節: 人人幫忙好計畫'. 🤝 拍拍雙手豎起大拇指，大家都是小幫手！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "拍小手豎大拇指，小幫手最棒！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 08 節: 人人幫忙好計畫'. 🤝 拍拍雙手豎起大拇指，大家都是小幫手！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.17
           },
           {
             "start": 40.23,
@@ -1644,8 +1746,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "📦 雙手由低到高把物品整齊歸位！",
             "next": "迎接快樂新一天 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 09 節: 物歸原位放整齊'. 📦 雙手由低到高把物品整齊歸位！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手由低到高，玩具整齊擺放！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 09 節: 物歸原位放整齊'. 📦 雙手由低到高把物品整齊歸位！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.24
           },
           {
             "start": 44.03,
@@ -1659,8 +1762,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "☀️ 雙手高舉托起朝陽，迎接全新明天！",
             "next": "圖書立在書架上 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 10 節: 迎接快樂新一天'. ☀️ 雙手高舉托起朝陽，迎接全新明天！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手高高舉起，迎接新的一天！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 10 節: 迎接快樂新一天'. ☀️ 雙手高舉托起朝陽，迎接全新明天！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.29
           },
           {
             "start": 48.6,
@@ -1674,8 +1778,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "轉個小圓圈，等待下一句歌詞！",
             "next": "圖書立在書架上 ➜",
             "targetPose": "sway",
-            "voiceScript": "太棒啦！小腳步輕輕踏，轉個漂亮的小圓圈，準備聽下一句囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '[旋律間奏] 動作接續歡樂跳'. 🔄 雙手插腰踩小碎步，轉個歡樂大圓圈，保持微笑！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "轉個圈踩踩步，休息一下再整理！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '[旋律間奏] 動作接續歡樂跳'. 🔄 雙手插腰踩小碎步，轉個歡樂大圓圈，保持微笑！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.46
           },
           {
             "start": 55.63,
@@ -1689,8 +1794,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "📚 雙手合十像小書本，整齊排排站好！",
             "next": "玩具小車回小籃 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 11 節: 圖書立在書架上'. 📚 雙手合十像小書本，整齊排排站好！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手合十像小書，整齊排在書架上！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 11 節: 圖書立在書架上'. 📚 雙手合十像小書本，整齊排排站好！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.61
           },
           {
             "start": 59.43,
@@ -1704,8 +1810,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🚗 雙手握方向盤轉轉，開進玩具籃！",
             "next": "一二三樣樣乾淨 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 12 節: 玩具小車回小籃'. 🚗 雙手握方向盤轉轉，開進玩具籃！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "轉方向盤，玩具車開回籃！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 12 節: 玩具小車回小籃'. 🚗 雙手握方向盤轉轉，開進玩具籃！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.1
           },
           {
             "start": 65.2,
@@ -1719,8 +1826,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "✨ 數數一二三，房間變得整整齊齊！",
             "next": "擊掌好朋友拍個手 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 13 節: 一二三樣樣乾淨'. ✨ 數數一二三，房間變得整整齊齊！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "數數一二三，房間整整齊齊！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 13 節: 一二三樣樣乾淨'. ✨ 數數一二三，房間變得整整齊齊！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.31
           },
           {
             "start": 71.1,
@@ -1734,8 +1842,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "✋ 伸出雙手向同伴高高擊掌：High-Five！",
             "next": "整齊任務大成功 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 14 節: 擊掌好朋友拍個手'. ✋ 伸出雙手向同伴高高擊掌：High-Five！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "跟好朋友擊掌：High-Five！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 14 節: 擊掌好朋友拍個手'. ✋ 伸出雙手向同伴高高擊掌：High-Five！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.57
           },
           {
             "start": 74.8,
@@ -1749,8 +1858,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎉 歡快原地小跳步，任務順利通關！",
             "next": "收拾乾淨速度快 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 15 節: 整齊任務大成功'. 🎉 歡快原地小跳步，任務順利通關！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "原地小跳步，任務順利通關！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 15 節: 整齊任務大成功'. 🎉 歡快原地小跳步，任務順利通關！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.12
           },
           {
             "start": 80.1,
@@ -1764,8 +1874,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⚡ 雙手左右揮舞，保持乾淨不落後！",
             "next": "大家團結力量大 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 16 節: 收拾乾淨速度快'. ⚡ 雙手左右揮舞，保持乾淨不落後！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手插小蠻腰，轉個歡樂小圈圈！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 16 節: 收拾乾淨速度快'. ⚡ 雙手左右揮舞，保持乾淨不落後！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.41
           },
           {
             "start": 84.6,
@@ -1779,8 +1890,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🤝 握緊小拳頭胸前一拉，團結第一名！",
             "next": "撿起放好不亂丟 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 17 節: 大家團結力量大'. 🤝 握緊小拳頭胸前一拉，團結第一名！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手左右揮動，收拾乾淨不落後！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 17 節: 大家團結力量大'. 🤝 握緊小拳頭胸前一拉，團結第一名！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.34
           },
           {
             "start": 88.23,
@@ -1794,8 +1906,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "📦 彎腰再放好，地板乾乾淨淨！",
             "next": "天天都是開心天 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 18 節: 撿起放好不亂丟'. 📦 彎腰再放好，地板乾乾淨淨！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "握緊小拳頭用力拉，團結力量大！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 18 節: 撿起放好不亂丟'. 📦 彎腰再放好，地板乾乾淨淨！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.24
           },
           {
             "start": 92.03,
@@ -1809,8 +1922,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌟 雙手比出大愛心，每天都開心！",
             "next": "超級幫手大明星 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 19 節: 天天都是開心天'. 🌟 雙手比出大愛心，每天都開心！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "彎腰撿玩具，地板乾乾淨淨！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 19 節: 天天都是開心天'. 🌟 雙手比出大愛心，每天都開心！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.05
           },
           {
             "start": 96.57,
@@ -1824,8 +1938,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "轉個小圓圈，等待下一句歌詞！",
             "next": "超級幫手大明星 ➜",
             "targetPose": "sway",
-            "voiceScript": "太棒啦！小腳步輕輕踏，轉個漂亮的小圓圈，準備聽下一句囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '[旋律間奏] 動作接續歡樂跳'. 🔄 雙手插腰踩小碎步，轉個歡樂大圓圈，保持微笑！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手比大愛心，天天都開心！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '[旋律間奏] 動作接續歡樂跳'. 🔄 雙手插腰踩小碎步，轉個歡樂大圓圈，保持微笑！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.1
           },
           {
             "start": 107.33,
@@ -1839,8 +1954,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⭐ 雙手高高舉起，我們是家務大明星！",
             "next": "歡呼 Oh Oh 再跳躍 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 20 節: 超級幫手大明星'. ⭐ 雙手高高舉起，我們是家務大明星！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "轉個大圈，我們是家務大明星！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 20 節: 超級幫手大明星'. ⭐ 雙手高高舉起，我們是家務大明星！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.17
           },
           {
             "start": 112.77,
@@ -1854,8 +1970,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎶 再喊一聲 Oh Oh，拍拍小手！",
             "next": "歡呼 Oh Oh 燦爛定格 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 22 節: 歡呼 Oh Oh 再跳躍'. 🎶 再喊一聲 Oh Oh，拍拍小手！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "大明星真棒！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 22 節: 歡呼 Oh Oh 再跳躍'. 🎶 再喊一聲 Oh Oh，拍拍小手！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 1.87
           },
           {
             "start": 114.8,
@@ -1869,8 +1986,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌟 雙手叉腰豎大拇指，完美定格大笑容！",
             "next": "OH OH ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "哇！跳得太完美了！雙手比出大愛心，給自己拍拍手，超級棒！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 23 節: 歡呼 Oh Oh 燦爛定格'. 🌟 雙手叉腰豎大拇指，完美定格大笑容！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "喊聲 Oh！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 23 節: 歡呼 Oh Oh 燦爛定格'. 🌟 雙手叉腰豎大拇指，完美定格大笑容！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 0.37
           },
           {
             "start": 116.63,
@@ -1884,8 +2002,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌟 雙手叉腰豎大拇指，完美定格大笑容！",
             "next": "🎉 完美通關！獲得 3 顆大金星！",
             "targetPose": "sun_rise",
-            "voiceScript": "哇！跳得太完美了！雙手比出大愛心，給自己拍拍手，超級棒！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 24 節: 歡呼 Oh Oh 燦爛定格'. 🌟 雙手叉腰豎大拇指，完美定格大笑容！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "再喊聲 Oh！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Clean Up Little Helpers', Action '第 24 節: 歡呼 Oh Oh 燦爛定格'. 🌟 雙手叉腰豎大拇指，完美定格大笑容！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 1.87
           }
         ]
       },
@@ -1918,8 +2037,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "📡 嗶嗶嗶！戴上太空頭盔，發射台準備完畢！",
             "next": "Cosmic bleeps, ➜",
             "targetPose": "march",
-            "voiceScript": "小朋友們站好囉！雙手插腰，跟著歡樂音樂踩踩拍子踏步走！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '[前奏] 宇宙電波呼叫訊號'. 📡 嗶嗶嗶！戴上太空頭盔，發射台準備完畢！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "聽電波！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '[前奏] 宇宙電波呼叫訊號'. 📡 嗶嗶嗶！戴上太空頭盔，發射台準備完畢！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 0.39
           },
           {
             "start": 1.67,
@@ -1933,8 +2053,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🛸 小手放耳邊，接收太空站訊號！",
             "next": "太空任務準備好 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 01 節: 宇宙電波嗶嗶響'. 🛸 小手放耳邊，接收太空站訊號！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手插腰站穩，等待指令！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 01 節: 宇宙電波嗶嗶響'. 🛸 小手放耳邊，接收太空站訊號！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.76
           },
           {
             "start": 7.83,
@@ -1948,8 +2069,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👨‍🚀 雙手叉腰立正站好，準備起飛！",
             "next": "五四三二一倒數 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 02 節: 太空任務準備好'. 👨‍🚀 雙手叉腰立正站好，準備起飛！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "立正準備！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 02 節: 太空任務準備好'. 👨‍🚀 雙手叉腰立正站好，準備起飛！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 0.54
           },
           {
             "start": 9.63,
@@ -1963,8 +2085,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🚀 雙膝微蹲蓄力，跟著大聲倒數：5 4 3 2 1！",
             "next": "穿好太空服太空靴 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 03 節: 五四三二一倒數'. 🚀 雙膝微蹲蓄力，跟著大聲倒數：5 4 3 2 1！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙腿下蹲倒數：五四三二一！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 03 節: 五四三二一倒數'. 🚀 雙膝微蹲蓄力，跟著大聲倒數：5 4 3 2 1！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.26
           },
           {
             "start": 15.73,
@@ -1978,8 +2101,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👢 摸摸雙腿穿上太空靴，拉緊拉鍊！",
             "next": "扣緊銀色安全帶 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 04 節: 穿好太空服太空靴'. 👢 摸摸雙腿穿上太空靴，拉緊拉鍊！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "穿上太空靴，拉緊拉鍊！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 04 節: 穿好太空服太空靴'. 👢 摸摸雙腿穿上太空靴，拉緊拉鍊！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.71
           },
           {
             "start": 19.27,
@@ -1993,8 +2117,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "💺 雙手交叉胸前扣緊安全帶，穩穩坐好！",
             "next": "檢查紅綠儀表板 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 05 節: 扣緊銀色安全帶'. 💺 雙手交叉胸前扣緊安全帶，穩穩坐好！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "交叉胸前，扣緊安全帶坐好！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 05 節: 扣緊銀色安全帶'. 💺 雙手交叉胸前扣緊安全帶，穩穩坐好！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.17
           },
           {
             "start": 23.83,
@@ -2008,8 +2133,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎛️ 手指在前方點擊紅燈與綠燈按鈕！",
             "next": "最酷銀河太空船 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 06 節: 檢查紅綠儀表板'. 🎛️ 手指在前方點擊紅燈與綠燈按鈕！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手指在前方，點點儀表按鈕！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 06 節: 檢查紅綠儀表板'. 🎛️ 手指在前方點擊紅燈與綠燈按鈕！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.02
           },
           {
             "start": 27.77,
@@ -2023,8 +2149,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "✨ 雙臂張開像銀色機翼，左右平穩滑動！",
             "next": "引擎轟鳴準備點火 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 07 節: 最酷銀河太空船'. ✨ 雙臂張開像銀色機翼，左右平穩滑動！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "展開像銀色機翼，平穩滑動！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 07 節: 最酷銀河太空船'. ✨ 雙臂張開像銀色機翼，左右平穩滑動！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.95
           },
           {
             "start": 31.73,
@@ -2038,8 +2165,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🔥 雙手握拳身旁蓄力震動，引擎啟動！",
             "next": "衝入燦爛星空中 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 08 節: 引擎轟鳴準備點火'. 🔥 雙手握拳身旁蓄力震動，引擎啟動！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "握拳身旁震動，引擎啟動囉！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 08 節: 引擎轟鳴準備點火'. 🔥 雙手握拳身旁蓄力震動，引擎啟動！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.98
           },
           {
             "start": 35.07,
@@ -2053,8 +2181,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⭐ 雙手向上發射，直衝燦爛星空！",
             "next": "咻咻咻急速出發 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 09 節: 衝入燦爛星空中'. ⭐ 雙手向上發射，直衝燦爛星空！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手向上發射，直衝星空！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 09 節: 衝入燦爛星空中'. ⭐ 雙手向上發射，直衝燦爛星空！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.9
           },
           {
             "start": 39.2,
@@ -2068,8 +2197,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🚀 雙手在頭頂合攏成火箭尖，用力高跳！",
             "next": "閃耀神秘宇宙光 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 10 節: 咻咻咻急速出發'. 🚀 雙手在頭頂合攏成火箭尖，用力高跳！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手頭頂合攏，用力高跳！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 10 節: 咻咻咻急速出發'. 🚀 雙手在頭頂合攏成火箭尖，用力高跳！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.88
           },
           {
             "start": 42.63,
@@ -2083,8 +2213,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌌 雙手在身側輕輕波浪搖動，沐浴星光！",
             "next": "飛越月球比天高 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 11 節: 閃耀神秘宇宙光'. 🌌 雙手在身側輕輕波浪搖動，沐浴星光！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手輕輕波浪搖動，沐浴在星光裡！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 11 節: 閃耀神秘宇宙光'. 🌌 雙手在身側輕輕波浪搖動，沐浴星光！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.55
           },
           {
             "start": 46.93,
@@ -2098,8 +2229,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌙 腳尖點地伸手飛越圓圓大月亮！",
             "next": "銀色小火箭穿黑夜 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 12 節: 飛越月球比天高'. 🌙 腳尖點地伸手飛越圓圓大月亮！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "腳尖點地伸手，飛越圓圓大月亮！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 12 節: 飛越月球比天高'. 🌙 腳尖點地伸手飛越圓圓大月亮！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.29
           },
           {
             "start": 50.83,
@@ -2113,8 +2245,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🚀 身體前傾平穩飛行，穿越黑夜！",
             "next": "看火星緩緩轉動 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 13 節: 銀色小火箭穿黑夜'. 🚀 身體前傾平穩飛行，穿越黑夜！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "身體前傾平穩飛行，穿越黑夜！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 13 節: 銀色小火箭穿黑夜'. 🚀 身體前傾平穩飛行，穿越黑夜！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.24
           },
           {
             "start": 54.8,
@@ -2128,8 +2261,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "轉個小圓圈，等待下一句歌詞！",
             "next": "看火星緩緩轉動 ➜",
             "targetPose": "sway",
-            "voiceScript": "太棒啦！小腳步輕輕踏，轉個漂亮的小圓圈，準備聽下一句囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '[旋律間奏] 動作接續歡樂跳'. 🔄 雙手插腰踩小碎步，轉個歡樂大圓圈，保持微笑！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "在太空裡轉個歡樂小圈圈！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '[旋律間奏] 動作接續歡樂跳'. 🔄 雙手插腰踩小碎步，轉個歡樂大圓圈，保持微笑！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.86
           },
           {
             "start": 63.13,
@@ -2143,8 +2277,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🪐 雙臂在身前畫出旋轉的火星大球！",
             "next": "太空安靜無聲息 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 14 節: 看火星緩緩轉動'. 🪐 雙臂在身前畫出旋轉的火星大球！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "胸前畫出旋轉的火星大球！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 14 節: 看火星緩緩轉動'. 🪐 雙臂在身前畫出旋轉的火星大球！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.88
           },
           {
             "start": 66.97,
@@ -2158,8 +2293,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🤫 食指放嘴唇輕輕噓，感受安靜！",
             "next": "跟土星光環大招手 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 15 節: 太空安靜無聲息'. 🤫 食指放嘴唇輕輕噓，感受安靜！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "食指放嘴唇輕噓，太空好安靜！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 15 節: 太空安靜無聲息'. 🤫 食指放嘴唇輕輕噓，感受安靜！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.29
           },
           {
             "start": 71.13,
@@ -2173,8 +2309,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🪐 伸出雙手向美麗土星光環大招手！",
             "next": "無線電滴答唱歌 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 16 節: 跟土星光環大招手'. 🪐 伸出雙手向美麗土星光環大招手！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "伸出雙手，向土星光環大招手！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 16 節: 跟土星光環大招手'. 🪐 伸出雙手向美麗土星光環大招手！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.29
           },
           {
             "start": 74.97,
@@ -2188,8 +2325,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "📻 小手放耳邊，跟著無線電節奏拍手！",
             "next": "無重力漂浮漫步 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 17 節: 無線電滴答唱歌'. 📻 小手放耳邊，跟著無線電節奏拍手！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "小手貼耳，跟著無線電拍拍手！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 17 節: 無線電滴答唱歌'. 📻 小手放耳邊，跟著無線電節奏拍手！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.14
           },
           {
             "start": 78.87,
@@ -2203,8 +2341,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎈 雙腳緩慢踩步，像失重一樣輕飄飄！",
             "next": "抓一把星塵閃光 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 18 節: 無重力漂浮漫步'. 🎈 雙腳緩慢踩步，像失重一樣輕飄飄！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "緩慢踩步，像失重一樣輕飄飄！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 18 節: 無重力漂浮漫步'. 🎈 雙腳緩慢踩步，像失重一樣輕飄飄！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.26
           },
           {
             "start": 82.37,
@@ -2218,8 +2357,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "✨ 雙手在空中抓取閃亮星光放進口袋！",
             "next": "咻咻咻再次衝刺 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 19 節: 抓一把星塵閃光'. ✨ 雙手在空中抓取閃亮星光放進口袋！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "抓取閃亮星光，放進口袋裡！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 19 節: 抓一把星塵閃光'. ✨ 雙手在空中抓取閃亮星光放進口袋！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.98
           },
           {
             "start": 86.4,
@@ -2233,8 +2373,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🚀 火箭尖尖再次指向宇宙，全力加速！",
             "next": "穿越銀河大光芒 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 20 節: 咻咻咻再次衝刺'. 🚀 火箭尖尖再次指向宇宙，全力加速！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "火箭尖指向宇宙，全力加速！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 20 節: 咻咻咻再次衝刺'. 🚀 火箭尖尖再次指向宇宙，全力加速！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.12
           },
           {
             "start": 89.83,
@@ -2248,8 +2389,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌌 雙手由內向外綻放，穿過光芒！",
             "next": "飛越高山與月球 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 21 節: 穿越銀河大光芒'. 🌌 雙手由內向外綻放，穿過光芒！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手向外盛開，穿過銀河光芒！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 21 節: 穿越銀河大光芒'. 🌌 雙手由內向外綻放，穿過光芒！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.43
           },
           {
             "start": 94.17,
@@ -2263,8 +2405,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌙 單腿微抬雙臂翱翔，比天空更高！",
             "next": "最棒火箭在夜空 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 22 節: 飛越高山與月球'. 🌙 單腿微抬雙臂翱翔，比天空更高！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "單腿微抬翱翔，比天空更高！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 22 節: 飛越高山與月球'. 🌙 單腿微抬雙臂翱翔，比天空更高！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.98
           },
           {
             "start": 98.07,
@@ -2278,8 +2421,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⭐ 雙手向上托起星空，神氣無比！",
             "next": "太空任務大成功 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 23 節: 最棒火箭在夜空'. ⭐ 雙手向上托起星空，神氣無比！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手托起星空，神氣無比！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 23 節: 最棒火箭在夜空'. ⭐ 雙手向上托起星空，神氣無比！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.1
           },
           {
             "start": 106.93,
@@ -2293,8 +2437,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎉 雙手叉腰歡呼大喊：任務完成！",
             "next": "平穩降落回地球 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 24 節: 太空任務大成功'. 🎉 雙手叉腰歡呼大喊：任務完成！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "任務大成功！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 24 節: 太空任務大成功'. 🎉 雙手叉腰歡呼大喊：任務完成！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 0.64
           },
           {
             "start": 108.87,
@@ -2308,8 +2453,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌍 雙手緩慢下落，平穩降落藍色地球！",
             "next": "外星朋友揮手告別 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 25 節: 平穩降落回地球'. 🌍 雙手緩慢下落，平穩降落藍色地球！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "平穩降落地球！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 25 節: 平穩降落回地球'. 🌍 雙手緩慢下落，平穩降落藍色地球！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 1.87
           },
           {
             "start": 112.07,
@@ -2323,8 +2469,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👽 雙手放頭頂比外星觸角，定格大笑！",
             "next": "🎉 完美通關！獲得 3 顆大金星！",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 26 節: 外星朋友揮手告別'. 👽 雙手放頭頂比外星觸角，定格大笑！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "比外星觸角，定格哈哈大笑！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Space Rocket Countdown', Action '第 26 節: 外星朋友揮手告別'. 👽 雙手放頭頂比外星觸角，定格大笑！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.22
           }
         ]
       },
@@ -2357,8 +2504,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🚂 嗚嗚！拉響火車汽笛，ABC 字母列車準備開動！",
             "next": "All aboard the ABC T ➜",
             "targetPose": "march",
-            "voiceScript": "小朋友們站好囉！雙手插腰，跟著歡樂音樂踩踩拍子踏步走！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '[前奏] 蒸汽火車汽笛響起'. 🚂 嗚嗚！拉響火車汽笛，ABC 字母列車準備開動！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "拉響火車汽笛，字母列車開動囉！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '[前奏] 蒸汽火車汽笛響起'. 🚂 嗚嗚！拉響火車汽笛，ABC 字母列車準備開動！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.53
           },
           {
             "start": 8.2,
@@ -2372,8 +2520,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎫 揮手招呼大家快上車，踩著節拍小碎步！",
             "next": "A 是蘋果 B 是皮球 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 01 節: ABC 列車全員上車'. 🎫 揮手招呼大家快上車，踩著節拍小碎步！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "踩著節奏轉個圈，列車準備出發！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 01 節: ABC 列車全員上車'. 🎫 揮手招呼大家快上車，踩著節拍小碎步！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.53
           },
           {
             "start": 16.33,
@@ -2387,8 +2536,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🍎 右手比圓圓大蘋果，左手拍拍小皮球！",
             "next": "C 是小貓爬上牆 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 02 節: A 是蘋果 B 是皮球'. 🍎 右手比圓圓大蘋果，左手拍拍小皮球！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "揮手招呼大家快上車，踩小碎步！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 02 節: A 是蘋果 B 是皮球'. 🍎 右手比圓圓大蘋果，左手拍拍小皮球！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.41
           },
           {
             "start": 20.33,
@@ -2402,8 +2552,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐱 雙手像貓咪爪爪，交替向上抓抓爬牆！",
             "next": "D 是小狗 E 是大象 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 03 節: C 是小貓爬上牆'. 🐱 雙手像貓咪爪爪，交替向上抓抓爬牆！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "右手比大蘋果，左手拍小皮球！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 03 節: C 是小貓爬上牆'. 🐱 雙手像貓咪爪爪，交替向上抓抓爬牆！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.41
           },
           {
             "start": 24.53,
@@ -2417,8 +2568,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐘 雙手放耳朵搖搖，雙手做長長大象鼻！",
             "next": "F 是小魚游向前 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 04 節: D 是小狗 E 是大象'. 🐘 雙手放耳朵搖搖，雙手做長長大象鼻！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "像小貓爪，交替向上爬牆！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 04 節: D 是小狗 E 是大象'. 🐘 雙手放耳朵搖搖，雙手做長長大象鼻！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.05
           },
           {
             "start": 28.87,
@@ -2432,8 +2584,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐟 雙手合十左右擺動，像小魚游水！",
             "next": "G H I J K L 六字母 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 05 節: F 是小魚游向前'. 🐟 雙手合十左右擺動，像小魚游水！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手放耳朵搖搖，雙手做大象長鼻！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 05 節: F 是小魚游向前'. 🐟 雙手合十左右擺動，像小魚游水！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.46
           },
           {
             "start": 32.6,
@@ -2447,8 +2600,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🔢 伸出手指跟著節拍有節奏地點一點！",
             "next": "聽火車汽笛鈴聲 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 06 節: G H I J K L 六字母'. 🔢 伸出手指跟著節拍有節奏地點一點！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手合十左右擺，小魚游水！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 06 節: G H I J K L 六字母'. 🔢 伸出手指跟著節拍有節奏地點一點！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.12
           },
           {
             "start": 36.6,
@@ -2462,8 +2616,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🔔 單手拉響汽笛：嗚嗚！聽車鈴叮噹響！",
             "next": "字母 M 露出微笑 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 07 節: 聽火車汽笛鈴聲'. 🔔 單手拉響汽笛：嗚嗚！聽車鈴叮噹響！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "伸出手指跟節拍，有節奏點一點！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 07 節: 聽火車汽笛鈴聲'. 🔔 單手拉響汽笛：嗚嗚！聽車鈴叮噹響！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.36
           },
           {
             "start": 40.33,
@@ -2477,8 +2632,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "😊 雙手在嘴角畫出最甜的微笑波浪！",
             "next": "指引列車迎向光明 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 08 節: 字母 M 露出微笑'. 😊 雙手在嘴角畫出最甜的微笑波浪！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "拉響汽笛：嗚嗚，車鈴叮噹響！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 08 節: 字母 M 露出微笑'. 😊 雙手在嘴角畫出最甜的微笑波浪！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.43
           },
           {
             "start": 44.93,
@@ -2492,8 +2648,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "✨ 雙臂向前上方伸出，指引光明方向！",
             "next": "咔嚓咔嚓車輪滾 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 09 節: 指引列車迎向光明'. ✨ 雙臂向前上方伸出，指引光明方向！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "嘴角畫波浪，露出甜甜微笑！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 09 節: 指引列車迎向光明'. ✨ 雙臂向前上方伸出，指引光明方向！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.98
           },
           {
             "start": 48.87,
@@ -2507,8 +2664,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🚂 雙手在腰側做車輪旋轉動作向前滾！",
             "next": "字母歌聲唱呀唱 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 10 節: 咔嚓咔嚓車輪滾'. 🚂 雙手在腰側做車輪旋轉動作向前滾！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙臂向前上方伸，迎接光芒！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 10 節: 咔嚓咔嚓車輪滾'. 🚂 雙手在腰側做車輪旋轉動作向前滾！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.1
           },
           {
             "start": 52.8,
@@ -2522,8 +2680,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎶 張開雙臂放聲歌唱，身體輕快彈動！",
             "next": "鐵軌從 A 開到 Z ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 11 節: 字母歌聲唱呀唱'. 🎶 張開雙臂放聲歌唱，身體輕快彈動！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "腰側做車輪轉動，向前滾動！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 11 節: 字母歌聲唱呀唱'. 🎶 張開雙臂放聲歌唱，身體輕快彈動！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.0
           },
           {
             "start": 56.97,
@@ -2537,8 +2696,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🛤️ 雙手臂向兩側平展，像長長鐵軌！",
             "next": "快快樂樂學字母 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 12 節: 鐵軌從 A 開到 Z'. 🛤️ 雙手臂向兩側平展，像長長鐵軌！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "張開雙臂歌唱，身體輕快彈跳！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 12 節: 鐵軌從 A 開到 Z'. 🛤️ 雙手臂向兩側平展，像長長鐵軌！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.22
           },
           {
             "start": 61.07,
@@ -2552,8 +2712,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎉 歡快原地踏步拍拍手，學習好快樂！",
             "next": "N 是鳥巢 O 是貓頭鷹 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 13 節: 快快樂樂學字母'. 🎉 歡快原地踏步拍拍手，學習好快樂！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙臂向兩邊平展，像長長鐵軌！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 13 節: 快快樂樂學字母'. 🎉 歡快原地踏步拍拍手，學習好快樂！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.48
           },
           {
             "start": 65.57,
@@ -2567,8 +2728,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🦉 雙手捧起溫暖鳥巢，雙手圈眼睛當大眼！",
             "next": "P 是圓圓黑眼大熊貓 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 14 節: N 是鳥巢 O 是貓頭鷹'. 🦉 雙手捧起溫暖鳥巢，雙手圈眼睛當大眼！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "原地踏步拍手，學字母真快樂！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 14 節: N 是鳥巢 O 是貓頭鷹'. 🦉 雙手捧起溫暖鳥巢，雙手圈眼睛當大眼！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.22
           },
           {
             "start": 69.17,
@@ -2582,8 +2744,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐼 雙手揉揉黑眼圈，學小熊貓吃竹子！",
             "next": "Q R S T 快快衝 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 15 節: P 是圓圓黑眼大熊貓'. 🐼 雙手揉揉黑眼圈，學小熊貓吃竹子！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "捧起小鳥巢，手圈眼睛當大眼！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 15 節: P 是圓圓黑眼大熊貓'. 🐼 雙手揉揉黑眼圈，學小熊貓吃竹子！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.36
           },
           {
             "start": 73.37,
@@ -2597,8 +2760,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⚡ 雙腳加速踩踏步，列車飛速奔馳！",
             "next": "看美麗字母飛過 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 16 節: Q R S T 快快衝'. ⚡ 雙腳加速踩踏步，列車飛速奔馳！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "揉揉黑眼圈，學熊貓吃竹子！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 16 節: Q R S T 快快衝'. ⚡ 雙腳加速踩踏步，列車飛速奔馳！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.05
           },
           {
             "start": 77.3,
@@ -2612,8 +2776,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👀 伸手指向窗外，欣賞美麗字母飄過！",
             "next": "U V W X Y Z 全學會 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 17 節: 看美麗字母飛過'. 👀 伸手指向窗外，欣賞美麗字母飄過！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙腳加速踩步，列車飛速奔馳！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 17 節: 看美麗字母飛過'. 👀 伸手指向窗外，欣賞美麗字母飄過！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.48
           },
           {
             "start": 81.57,
@@ -2627,8 +2792,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌟 雙手高舉揮舞，26 個字母全認識啦！",
             "next": "每個字母都有聲音 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 18 節: U V W X Y Z 全學會'. 🌟 雙手高舉揮舞，26 個字母全認識啦！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手指指向窗外，看美麗字母飛過！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 18 節: U V W X Y Z 全學會'. 🌟 雙手高舉揮舞，26 個字母全認識啦！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.5
           },
           {
             "start": 89.67,
@@ -2642,8 +2808,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👂 小手貼耳仔細聽，每個發音都動聽！",
             "next": "拼出魔法奇妙單字 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 19 節: 每個字母都有聲音'. 👂 小手貼耳仔細聽，每個發音都動聽！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "高舉揮舞，二十六個字母全學會！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 19 節: 每個字母都有聲音'. 👂 小手貼耳仔細聽，每個發音都動聽！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.36
           },
           {
             "start": 93.47,
@@ -2657,8 +2824,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "✨ 雙手像施魔法在前方抓一抓灑一灑！",
             "next": "咔嚓咔嚓鈴兒響 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 20 節: 拼出魔法奇妙單字'. ✨ 雙手像施魔法在前方抓一抓灑一灑！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "貼耳仔細聽，每個發音都好聽！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 20 節: 拼出魔法奇妙單字'. ✨ 雙手像施魔法在前方抓一抓灑一灑！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.05
           },
           {
             "start": 97.6,
@@ -2672,8 +2840,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🔔 再次轉動火車小輪子，聽鈴鐺叮叮！",
             "next": "字母歌聲唱呀唱 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 21 節: 咔嚓咔嚓鈴兒響'. 🔔 再次轉動火車小輪子，聽鈴鐺叮叮！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "像施魔法，前方抓一把灑一灑！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 21 節: 咔嚓咔嚓鈴兒響'. 🔔 再次轉動火車小輪子，聽鈴鐺叮叮！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.22
           },
           {
             "start": 101.6,
@@ -2687,8 +2856,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎶 大聲齊聲合唱：Sing! Sing! Sing!",
             "next": "沿著軌道 A 到 Z ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 22 節: 字母歌聲唱呀唱'. 🎶 大聲齊聲合唱：Sing! Sing! Sing!. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "再次轉動小輪子，聽鈴鐺叮叮響！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 22 節: 字母歌聲唱呀唱'. 🎶 大聲齊聲合唱：Sing! Sing! Sing!. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.38
           },
           {
             "start": 105.77,
@@ -2702,8 +2872,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🛤️ 雙臂大幅度擺動，列車一路暢通！",
             "next": "字母列車真好玩 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 23 節: 沿著軌道 A 到 Z'. 🛤️ 雙臂大幅度擺動，列車一路暢通！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "大聲合唱：Sing! Sing! Sing!",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 23 節: 沿著軌道 A 到 Z'. 🛤️ 雙臂大幅度擺動，列車一路暢通！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.96
           },
           {
             "start": 109.87,
@@ -2717,8 +2888,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⭐ 雙手胸前比心，身體快樂搖晃！",
             "next": "閱讀車站到站啦定格 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 24 節: 字母列車真好玩'. ⭐ 雙手胸前比心，身體快樂搖晃！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "大幅度擺動，列車一路暢通！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 24 節: 字母列車真好玩'. ⭐ 雙手胸前比心，身體快樂搖晃！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.9
           },
           {
             "start": 113.93,
@@ -2732,8 +2904,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🚉 敬禮拉汽笛：叮叮！全劇歡樂定格！",
             "next": "🎉 完美通關！獲得 3 顆大金星！",
             "targetPose": "sun_rise",
-            "voiceScript": "哇！跳得太完美了！雙手比出大愛心，給自己拍拍手，超級棒！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 25 節: 閱讀車站到站啦定格'. 🚉 敬禮拉汽笛：叮叮！全劇歡樂定格！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "敬禮拉汽笛：叮叮！歡樂定格！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'The Magic ABC Train', Action '第 25 節: 閱讀車站到站啦定格'. 🚉 敬禮拉汽笛：叮叮！全劇歡樂定格！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.94
           }
         ]
       },
@@ -2766,8 +2939,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🥁 腳尖踩拍子，雙手輕快拍拍大腿！",
             "next": "口哨響起準備扭 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 01 節: 節奏鼓點咚咚咚'. 🥁 腳尖踩拍子，雙手輕快拍拍大腿！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "腳尖踩拍子，輕快拍拍小腿！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 01 節: 節奏鼓點咚咚咚'. 🥁 腳尖踩拍子，雙手輕快拍拍大腿！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.24
           },
           {
             "start": 7.17,
@@ -2781,8 +2955,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎶 雙手插腰，肩膀跟著旋律左右擺動！",
             "next": "全身扭動別忘定格 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 02 節: 口哨響起準備扭'. 🎶 雙手插腰，肩膀跟著旋律左右擺動！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手插腰，肩膀跟旋律左右擺！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 02 節: 口哨響起準備扭'. 🎶 雙手插腰，肩膀跟著旋律左右擺動！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.24
           },
           {
             "start": 10.9,
@@ -2796,8 +2971,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "💃 全身快樂扭動，耳朵豎起聽指令！",
             "next": "搖搖肩膀搖搖膝蓋 ➜",
             "targetPose": "sway",
-            "voiceScript": "哇！跳得太完美了！雙手比出大愛心，給自己拍拍手，超級棒！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 03 節: 全身扭動別忘定格'. 💃 全身快樂扭動，耳朵豎起聽指令！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手插腰轉個圈，聽口哨響起來！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 03 節: 全身扭動別忘定格'. 💃 全身快樂扭動，耳朵豎起聽指令！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.29
           },
           {
             "start": 14.6,
@@ -2811,8 +2987,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🦵 左右肩膀抖一抖，膝蓋跟著彈一彈！",
             "next": "像秋天落葉隨風飄 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 04 節: 搖搖肩膀搖搖膝蓋'. 🦵 左右肩膀抖一抖，膝蓋跟著彈一彈！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "全身扭扭動，耳朵注意聽指令！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 04 節: 搖搖肩膀搖搖膝蓋'. 🦵 左右肩膀抖一抖，膝蓋跟著彈一彈！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.1
           },
           {
             "start": 18.37,
@@ -2826,8 +3003,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🍂 雙手像樹葉在微風中輕輕飄落！",
             "next": "高高跳起摸摸天地 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 05 節: 像秋天落葉隨風飄'. 🍂 雙手像樹葉在微風中輕輕飄落！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "肩膀抖一抖，膝蓋跟著彈一彈！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 05 節: 像秋天落葉隨風飄'. 🍂 雙手像樹葉在微風中輕輕飄落！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.14
           },
           {
             "start": 22.37,
@@ -2841,8 +3019,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⭐ 向上跳摸天花板，下蹲摸摸小地板！",
             "next": "原地小跑步跑起來 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 06 節: 高高跳起摸摸天地'. ⭐ 向上跳摸天花板，下蹲摸摸小地板！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手像樹葉，微風中輕輕飄落！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 06 節: 高高跳起摸摸天地'. ⭐ 向上跳摸天花板，下蹲摸摸小地板！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.29
           },
           {
             "start": 26.17,
@@ -2856,8 +3035,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🏃 原地快速小碎步跑步，越跑越快！",
             "next": "仔細聽停下腳步 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 07 節: 原地小跑步跑起來'. 🏃 原地快速小碎步跑步，越跑越快！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "向上摸天花板，下蹲摸摸小地板！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 07 節: 原地小跑步跑起來'. 🏃 原地快速小碎步跑步，越跑越快！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.38
           },
           {
             "start": 29.87,
@@ -2871,8 +3051,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👂 停下腳步站穩，準備倒數！",
             "next": "三二一定格成雕像 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 08 節: 仔細聽停下腳步'. 👂 停下腳步站穩，準備倒數！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "原地小碎步，越跑越快！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 08 節: 仔細聽停下腳步'. 👂 停下腳步站穩，準備倒數！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.74
           },
           {
             "start": 33.37,
@@ -2886,8 +3067,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🗿 3 2 1... 定格！像雕像一樣一動不動！",
             "next": "安靜定格不許動 ➜",
             "targetPose": "reach",
-            "voiceScript": "哇！跳得太完美了！雙手比出大愛心，給自己拍拍手，超級棒！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 09 節: 三二一定格成雕像'. 🗿 3 2 1... 定格！像雕像一樣一動不動！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "停下腳步站穩，準備倒數囉！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 09 節: 三二一定格成雕像'. 🗿 3 2 1... 定格！像雕像一樣一動不動！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.95
           },
           {
             "start": 37.13,
@@ -2901,8 +3083,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🤫 憋住笑不許動，維持雕像姿勢！",
             "next": "扭扭扭動跳舞囉 ➜",
             "targetPose": "reach",
-            "voiceScript": "哇！跳得太完美了！雙手比出大愛心，給自己拍拍手，超級棒！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 10 節: 安靜定格不許動'. 🤫 憋住笑不許動，維持雕像姿勢！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "三二一定格！像雕像一動不動！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 10 節: 安靜定格不許動'. 🤫 憋住笑不許動，維持雕像姿勢！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.7
           },
           {
             "start": 42.77,
@@ -2916,8 +3099,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎉 解凍啦！扭動全身，滿場飛舞！",
             "next": "大腳重重踏地上 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 11 節: 扭扭扭動跳舞囉'. 🎉 解凍啦！扭動全身，滿場飛舞！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "維持雕像造型，忍住笑不能動！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 11 節: 扭扭扭動跳舞囉'. 🎉 解凍啦！扭動全身，滿場飛舞！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.05
           },
           {
             "start": 46.4,
@@ -2931,8 +3115,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👣 雙腳大踏步：咚！咚！咚！踏在地上！",
             "next": "往左扭扭往右扭扭 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 12 節: 大腳重重踏地上'. 👣 雙腳大踏步：咚！咚！咚！踏在地上！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "解凍啦！全身扭動，滿場飛舞！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 12 節: 大腳重重踏地上'. 👣 雙腳大踏步：咚！咚！咚！踏在地上！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.71
           },
           {
             "start": 50.27,
@@ -2946,8 +3131,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "↔️ 身體向左扭一扭，向右扭一扭！",
             "next": "使出全力快樂跳 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 13 節: 往左扭扭往右扭扭'. ↔️ 身體向左扭一扭，向右扭一扭！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "大踏步咚咚咚，重重踏在地上！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 13 節: 往左扭扭往右扭扭'. ↔️ 身體向左扭一扭，向右扭一扭！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.07
           },
           {
             "start": 53.97,
@@ -2961,8 +3147,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🔥 使出全身力氣，跳出最帥舞蹈！",
             "next": "像陀螺旋轉轉圈 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 14 節: 使出全力快樂跳'. 🔥 使出全身力氣，跳出最帥舞蹈！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "身體向左扭一扭，向右扭一扭！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 14 節: 使出全力快樂跳'. 🔥 使出全身力氣，跳出最帥舞蹈！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.29
           },
           {
             "start": 59.57,
@@ -2976,8 +3163,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🔄 雙手平展像小陀螺，旋轉轉個圈！",
             "next": "墊起腳尖悄悄走 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 15 節: 像陀螺旋轉轉圈'. 🔄 雙手平展像小陀螺，旋轉轉個圈！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "使出全身力氣，跳出最帥舞蹈！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 15 節: 像陀螺旋轉轉圈'. 🔄 雙手平展像小陀螺，旋轉轉個圈！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.29
           },
           {
             "start": 63.47,
@@ -2991,8 +3179,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐾 墊起腳尖輕輕走，一點聲音都沒有！",
             "next": "雄鷹展翅翱翔天 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 16 節: 墊起腳尖悄悄走'. 🐾 墊起腳尖輕輕走，一點聲音都沒有！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手插小蠻腰，輕輕轉個小圈圈！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 16 節: 墊起腳尖悄悄走'. 🐾 墊起腳尖輕輕走，一點聲音都沒有！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.26
           },
           {
             "start": 67.07,
@@ -3006,8 +3195,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🦅 雙臂像雄鷹拍打翅膀，飛上天空！",
             "next": "雙手舉高高大招手 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 17 節: 雄鷹展翅翱翔天'. 🦅 雙臂像雄鷹拍打翅膀，飛上天空！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "像小陀螺，旋轉轉個圈！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 17 節: 雄鷹展翅翱翔天'. 🦅 雙臂像雄鷹拍打翅膀，飛上天空！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.81
           },
           {
             "start": 70.97,
@@ -3021,8 +3211,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👋 雙手舉過頭頂，熱情大幅度招手！",
             "next": "準備好擺好姿勢 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 18 節: 雙手舉高高大招手'. 👋 雙手舉過頭頂，熱情大幅度招手！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "墊起腳尖走，一點聲音都沒有！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 18 節: 雙手舉高高大招手'. 👋 雙手舉過頭頂，熱情大幅度招手！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.05
           },
           {
             "start": 74.87,
@@ -3036,8 +3227,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎯 保持好平衡姿勢，馬上要定格啦！",
             "next": "三二一定格摸鼻子 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 19 節: 準備好擺好姿勢'. 🎯 保持好平衡姿勢，馬上要定格啦！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "像雄鷹拍打翅膀，飛上天空！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 19 節: 準備好擺好姿勢'. 🎯 保持好平衡姿勢，馬上要定格啦！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.02
           },
           {
             "start": 78.37,
@@ -3051,8 +3243,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👃 3 2 1... 定格！食指摸著小鼻子！",
             "next": "安靜定格摸鼻子 ➜",
             "targetPose": "reach",
-            "voiceScript": "哇！跳得太完美了！雙手比出大愛心，給自己拍拍手，超級棒！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 20 節: 三二一定格摸鼻子'. 👃 3 2 1... 定格！食指摸著小鼻子！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手舉過頭頂，熱情大招手！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 20 節: 三二一定格摸鼻子'. 👃 3 2 1... 定格！食指摸著小鼻子！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.0
           },
           {
             "start": 82.13,
@@ -3066,8 +3259,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🤫 保持摸鼻子的造型，一動也不動！",
             "next": "解凍繼續扭扭跳 ➜",
             "targetPose": "reach",
-            "voiceScript": "哇！跳得太完美了！雙手比出大愛心，給自己拍拍手，超級棒！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 21 節: 安靜定格摸鼻子'. 🤫 保持摸鼻子的造型，一動也不動！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "擺好平衡姿勢，馬上要定格囉！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 21 節: 安靜定格摸鼻子'. 🤫 保持摸鼻子的造型，一動也不動！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.22
           },
           {
             "start": 87.8,
@@ -3081,8 +3275,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎉 解凍！滿場歡跳，跟著節奏搖擺！",
             "next": "大腳踏地震天響 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 22 節: 解凍繼續扭扭跳'. 🎉 解凍！滿場歡跳，跟著節奏搖擺！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "定格摸鼻子！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 22 節: 解凍繼續扭扭跳'. 🎉 解凍！滿場歡跳，跟著節奏搖擺！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 1.87
           },
           {
             "start": 91.37,
@@ -3096,8 +3291,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👣 跟著大鼓重重踩踩腳，地面咚咚響！",
             "next": "向左向右齊搖擺 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 23 節: 大腳踏地震天響'. 👣 跟著大鼓重重踩踩腳，地面咚咚響！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "保持摸鼻子造型，不能動喔！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 23 節: 大腳踏地震天響'. 👣 跟著大鼓重重踩踩腳，地面咚咚響！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.9
           },
           {
             "start": 95.2,
@@ -3111,8 +3307,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "↔️ 雙手左右擺動，身體快樂起伏！",
             "next": "盡情釋放活力跳 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 24 節: 向左向右齊搖擺'. ↔️ 雙手左右擺動，身體快樂起伏！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "解凍繼續跳！滿場跟著節奏搖！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 24 節: 向左向右齊搖擺'. ↔️ 雙手左右擺動，身體快樂起伏！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.62
           },
           {
             "start": 98.97,
@@ -3126,8 +3323,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⚡ 雙臂高舉甩動，活力拉滿！",
             "next": "你完全沒動！你贏了 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 25 節: 盡情釋放活力跳'. ⚡ 雙臂高舉甩動，活力拉滿！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "重重踩踩腳，地面咚咚響！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 25 節: 盡情釋放活力跳'. ⚡ 雙臂高舉甩動，活力拉滿！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.02
           },
           {
             "start": 104.9,
@@ -3141,8 +3339,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🏆 太厲害啦！你一動都沒動，大獲全勝！",
             "next": "坐下深呼吸大定格 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 26 節: 你完全沒動！你贏了'. 🏆 太厲害啦！你一動都沒動，大獲全勝！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手左右擺！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 26 節: 你完全沒動！你贏了'. 🏆 太厲害啦！你一動都沒動，大獲全勝！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 1.87
           },
           {
             "start": 107.97,
@@ -3156,8 +3355,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🧘 雙手慢慢撫胸，做個深呼吸，微笑定格！",
             "next": "🎉 完美通關！獲得 3 顆大金星！",
             "targetPose": "sun_rise",
-            "voiceScript": "哇！跳得太完美了！雙手比出大愛心，給自己拍拍手，超級棒！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 27 節: 坐下深呼吸大定格'. 🧘 雙手慢慢撫胸，做個深呼吸，微笑定格！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "深呼吸坐下來，微笑大定格！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Wiggle & Freeze!', Action '第 27 節: 坐下深呼吸大定格'. 🧘 雙手慢慢撫胸，做個深呼吸，微笑定格！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.26
           }
         ]
       },
@@ -3190,8 +3390,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🥣 肚子咕嚕嚕！戴上小廚師帽，健康點心開動囉！",
             "next": "Crunchy orange carro ➜",
             "targetPose": "march",
-            "voiceScript": "小朋友們站好囉！雙手插腰，跟著歡樂音樂踩踩拍子踏步走！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '[前奏] 肚子咕嚕嚕美食預備'. 🥣 肚子咕嚕嚕！戴上小廚師帽，健康點心開動囉！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "肚子咕嚕嚕，健康點心開動囉！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '[前奏] 肚子咕嚕嚕美食預備'. 🥣 肚子咕嚕嚕！戴上小廚師帽，健康點心開動囉！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.22
           },
           {
             "start": 8.37,
@@ -3205,8 +3406,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🥕 雙手拿著胡蘿蔔，喀嚓喀嚓大口咬！",
             "next": "綠色花椰菜好好吃 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 01 節: 脆脆橘色甜胡蘿蔔'. 🥕 雙手拿著胡蘿蔔，喀嚓喀嚓大口咬！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "拿著胡蘿蔔，喀嚓大口咬！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 01 節: 脆脆橘色甜胡蘿蔔'. 🥕 雙手拿著胡蘿蔔，喀嚓喀嚓大口咬！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.83
           },
           {
             "start": 12.53,
@@ -3220,8 +3422,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🥦 雙手像綠色小樹，嚼一嚼真美味！",
             "next": "肥皂清水把手洗淨 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 02 節: 綠色花椰菜好好吃'. 🥦 雙手像綠色小樹，嚼一嚼真美味！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "像綠色小樹，嚼一嚼真好吃！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 02 節: 綠色花椰菜好好吃'. 🥦 雙手像綠色小樹，嚼一嚼真美味！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.22
           },
           {
             "start": 16.87,
@@ -3235,8 +3438,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🧼 雙手手心搓搓手背搓搓，洗乾淨！",
             "next": "最棒的小廚師登場 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 03 節: 肥皂清水把手洗淨'. 🧼 雙手手心搓搓手背搓搓，洗乾淨！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手心手背搓搓，肥皂洗乾淨！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 03 節: 肥皂清水把手洗淨'. 🧼 雙手手心搓搓手背搓搓，洗乾淨！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.17
           },
           {
             "start": 21.1,
@@ -3250,8 +3454,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👨‍🍳 摸摸高高廚師帽，豎起大拇指！",
             "next": "咬一小口慢慢嚼 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 04 節: 最棒的小廚師登場'. 👨‍🍳 摸摸高高廚師帽，豎起大拇指！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "摸摸廚師帽，豎起大拇指！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 04 節: 最棒的小廚師登場'. 👨‍🍳 摸摸高高廚師帽，豎起大拇指！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.93
           },
           {
             "start": 25.37,
@@ -3265,8 +3470,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🍎 一口一口慢慢咬，細嚼慢嚥最健康！",
             "next": "健康食物幫忙長高 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 05 節: 咬一小口慢慢嚼'. 🍎 一口一口慢慢咬，細嚼慢嚥最健康！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "一口一口慢慢咬，細嚼慢嚥！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 05 節: 咬一小口慢慢嚼'. 🍎 一口一口慢慢咬，細嚼慢嚥最健康！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.1
           },
           {
             "start": 29.57,
@@ -3280,8 +3486,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌱 雙腳踩直向上拔高，天天長高長壯！",
             "next": "阿姆阿姆大口嚼 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 06 節: 健康食物幫忙長高'. 🌱 雙腳踩直向上拔高，天天長高長壯！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙腳向上拔高，天天長高長壯！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 06 節: 健康食物幫忙長高'. 🌱 雙腳踩直向上拔高，天天長高長壯！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.38
           },
           {
             "start": 36.13,
@@ -3295,8 +3502,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "😋 雙手摸肚肚，嘴巴嚼呀嚼真香！",
             "next": "營養食物身體棒 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 07 節: 阿姆阿姆大口嚼'. 😋 雙手摸肚肚，嘴巴嚼呀嚼真香！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手插小蠻腰，轉個圈等點心上桌！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 07 節: 阿姆阿姆大口嚼'. 😋 雙手摸肚肚，嘴巴嚼呀嚼真香！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.41
           },
           {
             "start": 40.17,
@@ -3310,8 +3518,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "💪 雙臂展示小肌肉，身體強壯壯！",
             "next": "盤子盛滿蔬果盤 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 08 節: 營養食物身體棒'. 💪 雙臂展示小肌肉，身體強壯壯！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "摸摸小肚肚，嘴巴嚼一嚼真香！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 08 節: 營養食物身體棒'. 💪 雙臂展示小肌肉，身體強壯壯！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.22
           },
           {
             "start": 44.47,
@@ -3325,8 +3534,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🥗 雙手在胸前端起五彩繽紛蔬果盤！",
             "next": "吃下彩虹身體好棒 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 09 節: 盤子盛滿蔬果盤'. 🥗 雙手在胸前端起五彩繽紛蔬果盤！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙臂展現小肌肉，身體強壯壯！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 09 節: 盤子盛滿蔬果盤'. 🥗 雙手在胸前端起五彩繽紛蔬果盤！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.41
           },
           {
             "start": 48.73,
@@ -3340,8 +3550,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌈 雙臂在空中畫出大彩虹，精神好！",
             "next": "紅紅蘋果香蕉笑臉 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 10 節: 吃下彩虹身體好棒'. 🌈 雙臂在空中畫出大彩虹，精神好！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "胸前端起五彩蔬果盤！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 10 節: 吃下彩虹身體好棒'. 🌈 雙臂在空中畫出大彩虹，精神好！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.64
           },
           {
             "start": 53.87,
@@ -3355,8 +3566,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "轉個小圓圈，等待下一句歌詞！",
             "next": "紅紅蘋果香蕉笑臉 ➜",
             "targetPose": "sway",
-            "voiceScript": "太棒啦！小腳步輕輕踏，轉個漂亮的小圓圈，準備聽下一句囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '[旋律間奏] 動作接續歡樂跳'. 🔄 雙手插腰踩小碎步，轉個歡樂大圓圈，保持微笑！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "空中畫大彩虹，精神百倍！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '[旋律間奏] 動作接續歡樂跳'. 🔄 雙手插腰踩小碎步，轉個歡樂大圓圈，保持微笑！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.05
           },
           {
             "start": 61.37,
@@ -3370,8 +3582,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🍌 雙手托起紅蘋果，嘴角揚起香蕉大笑！",
             "next": "喝杯牛奶歇一歇 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 11 節: 紅紅蘋果香蕉笑臉'. 🍌 雙手托起紅蘋果，嘴角揚起香蕉大笑！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "小碎步，輕快轉個小圈圈！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 11 節: 紅紅蘋果香蕉笑臉'. 🍌 雙手托起紅蘋果，嘴角揚起香蕉大笑！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.07
           },
           {
             "start": 65.67,
@@ -3385,8 +3598,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🥛 雙手捧杯咕嚕咕嚕喝牛奶，休息一下！",
             "next": "碗裡草莓閃亮亮 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 12 節: 喝杯牛奶歇一歇'. 🥛 雙手捧杯咕嚕咕嚕喝牛奶，休息一下！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手托紅蘋果，露出香蕉大微笑！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 12 節: 喝杯牛奶歇一歇'. 🥛 雙手捧杯咕嚕咕嚕喝牛奶，休息一下！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.41
           },
           {
             "start": 69.9,
@@ -3400,8 +3614,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🍓 伸手進碗裡抓一把小草莓放嘴裡！",
             "next": "健康點心營養滿分 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 13 節: 碗裡草莓閃亮亮'. 🍓 伸手進碗裡抓一把小草莓放嘴裡！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手捧杯喝牛奶，歇一歇！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 13 節: 碗裡草莓閃亮亮'. 🍓 伸手進碗裡抓一把小草莓放嘴裡！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.98
           },
           {
             "start": 74.17,
@@ -3415,8 +3630,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⭐ 拍拍雙手，全身元氣滿滿！",
             "next": "揉揉肚肚說好好吃 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 14 節: 健康點心營養滿分'. ⭐ 拍拍雙手，全身元氣滿滿！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "抓一把小草莓，放進嘴巴裡！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 14 節: 健康點心營養滿分'. ⭐ 拍拍雙手，全身元氣滿滿！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.1
           },
           {
             "start": 78.53,
@@ -3430,8 +3646,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "😋 雙手揉揉圓滾滾肚肚，說聲好好吃！",
             "next": "滿滿活力玩遊戲 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 15 節: 揉揉肚肚說好好吃'. 😋 雙手揉揉圓滾滾肚肚，說聲好好吃！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "拍拍雙手，全身元氣滿滿！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 15 節: 揉揉肚肚說好好吃'. 😋 雙手揉揉圓滾滾肚肚，說聲好好吃！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.07
           },
           {
             "start": 82.9,
@@ -3445,8 +3662,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🏃 雙腳原地快速跑動，隨時去玩耍！",
             "next": "阿姆阿姆大口嚼 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 16 節: 滿滿活力玩遊戲'. 🏃 雙腳原地快速跑動，隨時去玩耍！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "揉圓滾滾肚肚，說聲好好吃！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 16 節: 滿滿活力玩遊戲'. 🏃 雙腳原地快速跑動，隨時去玩耍！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.19
           },
           {
             "start": 89.13,
@@ -3460,8 +3678,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🍽️ 跟著節奏大口大口吃點心！",
             "next": "健康食物最美味 ➜",
             "targetPose": "march",
-            "voiceScript": "小手插腰，像勇敢的小士兵一樣，一、二、一、二，踩起小腳步！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 17 節: 阿姆阿姆大口嚼'. 🍽️ 跟著節奏大口大口吃點心！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "原地快速跑，精神飽滿玩遊戲！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 17 節: 阿姆阿姆大口嚼'. 🍽️ 跟著節奏大口大口吃點心！. The character is marching in place energetically, hands on hips, knees lifting high in rhythmic bounce, enthusiastic happy smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.31
           },
           {
             "start": 93.33,
@@ -3475,8 +3694,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "💪 雙臂再次展現健康活力！",
             "next": "蔬果吃光盤子空 ➜",
             "targetPose": "jump",
-            "voiceScript": "雙膝蹲低低蓄力，預備——用力跳起來，喊一聲耶！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 18 節: 健康食物最美味'. 💪 雙臂再次展現健康活力！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "跟著節奏，大口大口吃點心！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 18 節: 健康食物最美味'. 💪 雙臂再次展現健康活力！. The character is squatting down and bursting into a high happy jump, feet kicking joyfully in mid-air, both fists punching the sky in victory. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.02
           },
           {
             "start": 97.57,
@@ -3490,8 +3710,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🥗 把蔬菜水果吃光光，營養好寶寶！",
             "next": "彩色營養能量足 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 19 節: 蔬果吃光盤子空'. 🥗 把蔬菜水果吃光光，營養好寶寶！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙臂再次展現健康好活力！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 19 節: 蔬果吃光盤子空'. 🥗 把蔬菜水果吃光光，營養好寶寶！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.93
           },
           {
             "start": 101.87,
@@ -3505,8 +3726,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "✨ 雙手向上綻放金色光芒！",
             "next": "全吃完啦太美味 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 20 節: 彩色營養能量足'. ✨ 雙手向上綻放金色光芒！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "把蔬菜水果吃光光，真棒！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 20 節: 彩色營養能量足'. ✨ 雙手向上綻放金色光芒！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.02
           },
           {
             "start": 108.5,
@@ -3520,8 +3742,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👏 拍拍小手舔舔嘴唇，美味滿分！",
             "next": "謝謝美味健康點心 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 21 節: 全吃完啦太美味'. 👏 拍拍小手舔舔嘴唇，美味滿分！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手向外盛開，營養活力足！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 21 節: 全吃完啦太美味'. 👏 拍拍小手舔舔嘴唇，美味滿分！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.1
           },
           {
             "start": 111.9,
@@ -3535,8 +3758,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🙏 雙手合十胸前鞠躬，定格感恩大微笑！",
             "next": "🎉 完美通關！獲得 3 顆大金星！",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 22 節: 謝謝美味健康點心'. 🙏 雙手合十胸前鞠躬，定格感恩大微笑！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手合十鞠躬，謝謝美味點心！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Yummy Healthy Snack', Action '第 22 節: 謝謝美味健康點心'. 🙏 雙手合十胸前鞠躬，定格感恩大微笑！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.36
           }
         ]
       },
@@ -3569,8 +3793,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌙 月亮升起，微風吹拂，輕輕左右搖擺放鬆身體！",
             "next": "Close your sleepy ey ➜",
             "targetPose": "sway",
-            "voiceScript": "小朋友們站好囉！雙手插腰，跟著歡樂音樂踩踩拍子踏步走！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '[前奏] 夜幕低垂搖籃曲'. 🌙 月亮升起，微風吹拂，輕輕左右搖擺放鬆身體！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "月亮升起微風吹，輕輕左右搖擺！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '[前奏] 夜幕低垂搖籃曲'. 🌙 月亮升起，微風吹拂，輕輕左右搖擺放鬆身體！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.55
           },
           {
             "start": 5.77,
@@ -3584,8 +3809,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌅 雙手在眼前輕輕抹過，溫柔閉上雙眼！",
             "next": "太陽身後靜靜歇 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 01 節: 閉上雙眼日光落'. 🌅 雙手在眼前輕輕抹過，溫柔閉上雙眼！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手在眼前輕抹，溫柔閉上眼！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 01 節: 閉上雙眼日光落'. 🌅 雙手在眼前輕輕抹過，溫柔閉上雙眼！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.29
           },
           {
             "start": 11.57,
@@ -3599,8 +3825,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "☀️ 雙手慢慢下落，像夕陽落到山後！",
             "next": "紫夜繁星眨眼睛 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 02 節: 太陽身後靜靜歇'. ☀️ 雙手慢慢下落，像夕陽落到山後！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手插腰，隨搖籃曲輕輕搖晃！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 02 節: 太陽身後靜靜歇'. ☀️ 雙手慢慢下落，像夕陽落到山後！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.26
           },
           {
             "start": 17.47,
@@ -3614,8 +3841,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "⭐ 雙手抬至夜空，小手指如星星眨眼！",
             "next": "小熊緊抱在胸前 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 03 節: 紫夜繁星眨眼睛'. ⭐ 雙手抬至夜空，小手指如星星眨眼！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手慢慢下落，夕陽落到山後！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 03 節: 紫夜繁星眨眼睛'. ⭐ 雙手抬至夜空，小手指如星星眨眼！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.36
           },
           {
             "start": 23.33,
@@ -3629,8 +3857,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🧸 雙臂胸前緊緊抱住心愛的小熊玩偶！",
             "next": "疲憊雙眼歇一歇 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 05 節: 小熊緊抱在胸前'. 🧸 雙臂胸前緊緊抱住心愛的小熊玩偶！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手抬至夜空，星星眨眨眼！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 05 節: 小熊緊抱在胸前'. 🧸 雙臂胸前緊緊抱住心愛的小熊玩偶！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.22
           },
           {
             "start": 28.6,
@@ -3644,8 +3873,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "😴 雙手合十貼在右臉頰，輕輕閉目！",
             "next": "安睡吧小腦袋 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 06 節: 疲憊雙眼歇一歇'. 😴 雙手合十貼在右臉頰，輕輕閉目！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "像水波在胸前，輕柔滑動！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 06 節: 疲憊雙眼歇一歇'. 😴 雙手合十貼在右臉頰，輕輕閉目！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.1
           },
           {
             "start": 34.37,
@@ -3659,8 +3889,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🛏️ 頭部輕靠在左側枕頭，身體放鬆！",
             "next": "柔軟被窩好溫暖 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 07 節: 安睡吧小腦袋'. 🛏️ 頭部輕靠在左側枕頭，身體放鬆！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "抱在胸前，摟住心愛小玩偶！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 07 節: 安睡吧小腦袋'. 🛏️ 頭部輕靠在左側枕頭，身體放鬆！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.12
           },
           {
             "start": 40.2,
@@ -3674,8 +3905,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🛌 雙手向上拉起被角，縮進溫暖被窩！",
             "next": "雲朵之上輕漂浮 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 08 節: 柔軟被窩好溫暖'. 🛌 雙手向上拉起被角，縮進溫暖被窩！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙手合十貼右臉頰，閉目休息！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 08 節: 柔軟被窩好溫暖'. 🛌 雙手向上拉起被角，縮進溫暖被窩！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.34
           },
           {
             "start": 43.87,
@@ -3689,8 +3921,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "☁️ 雙臂平展，身體像在雲朵上漂浮！",
             "next": "小天使晚安好夢 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 09 節: 雲朵之上輕漂浮'. ☁️ 雙臂平展，身體像在雲朵上漂浮！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "頭輕靠枕頭，身體完全放鬆！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 09 節: 雲朵之上輕漂浮'. ☁️ 雙臂平展，身體像在雲朵上漂浮！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.14
           },
           {
             "start": 47.57,
@@ -3704,8 +3937,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "👼 雙手在胸口化作小翅膀輕拍，晚安！",
             "next": "月光透過窗櫺照 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 10 節: 小天使晚安好夢'. 👼 雙手在胸口化作小翅膀輕拍，晚安！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "踩著夢境小碎步，轉個小圈圈！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 10 節: 小天使晚安好夢'. 👼 雙手在胸口化作小翅膀輕拍，晚安！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.36
           },
           {
             "start": 52.0,
@@ -3719,8 +3953,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌕 抬頭望向窗外銀色月光，手撫窗櫺！",
             "next": "銀色雨滴小巷跳 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 11 節: 月光透過窗櫺照'. 🌕 抬頭望向窗外銀色月光，手撫窗櫺！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "拉起被角，縮進溫暖被窩！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 11 節: 月光透過窗櫺照'. 🌕 抬頭望向窗外銀色月光，手撫窗櫺！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.95
           },
           {
             "start": 61.4,
@@ -3734,8 +3969,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "💧 手指輕柔如細雨從空中緩緩落下！",
             "next": "快樂思緒飄入夢 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 12 節: 銀色雨滴小巷跳'. 💧 手指輕柔如細雨從空中緩緩落下！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "雙臂平展，像在雲朵上漂浮！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 12 節: 銀色雨滴小巷跳'. 💧 手指輕柔如細雨從空中緩緩落下！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.24
           },
           {
             "start": 67.17,
@@ -3749,8 +3985,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "💭 雙手由胸前向外輕撫，放飛好夢！",
             "next": "數數跳跳毛毛羊 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 13 節: 快樂思緒飄入夢'. 💭 雙手由胸前向外輕撫，放飛好夢！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "胸前化作翅膀輕拍，晚安好夢！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 13 節: 快樂思緒飄入夢'. 💭 雙手由胸前向外輕撫，放飛好夢！. The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.53
           },
           {
             "start": 72.3,
@@ -3764,8 +4001,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🐑 食指輕輕點數：一隻羊、兩隻羊...",
             "next": "明天晴天再來玩 ➜",
             "targetPose": "reach",
-            "voiceScript": "墊起小腳尖，雙手伸得高高的，一起向上摘星星囉！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 14 節: 數數跳跳毛毛羊'. 🐑 食指輕輕點數：一隻羊、兩隻羊.... The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手插腰輕輕搖擺，夜晚好安詳！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 14 節: 數數跳跳毛毛羊'. 🐑 食指輕輕點數：一隻羊、兩隻羊.... The character is stretching arms up high to reach floating elements, standing on tiptoes, joyful posture, looking up with wonder. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.38
           },
           {
             "start": 78.17,
@@ -3779,8 +4017,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "☀️ 嘴角泛起微笑，期待明天的晴朗！",
             "next": "夢幻泡泡飛向遠 ➜",
             "targetPose": "sun_rise",
-            "voiceScript": "雙手從胸前向上推，畫出最大最金黃的太陽，全身暖洋洋！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 15 節: 明天晴天再來玩'. ☀️ 嘴角泛起微笑，期待明天的晴朗！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "望向窗外月光，手撫窗櫺！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 15 節: 明天晴天再來玩'. ☀️ 嘴角泛起微笑，期待明天的晴朗！. The character is lifting arms from heart to sky creating a big golden sun circle, chest open, radiant beaming joyful smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 2.98
           },
           {
             "start": 84.0,
@@ -3794,8 +4033,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🎈 雙手輕輕吹出夢想泡泡，隨風飛走！",
             "next": "安睡吧小腦袋 ➜",
             "targetPose": "wave",
-            "voiceScript": "揮揮你的小手，左右大力招手打招呼，露出最甜的笑容！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 16 節: 夢幻泡泡飛向遠'. 🎈 雙手輕輕吹出夢想泡泡，隨風飛走！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "手指向下輕點，像細雨緩緩落！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 16 節: 夢幻泡泡飛向遠'. 🎈 雙手輕輕吹出夢想泡泡，隨風飛走！. The character is waving both hands overhead in friendly wide arcs, swaying gently from side to side, sparkling excited eyes. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.43
           },
           {
             "start": 89.9,
@@ -3809,8 +4049,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "😴 雙手再次合十貼在臉頰，輕輕搖曳！",
             "next": "柔軟被窩好安全 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 17 節: 安睡吧小腦袋'. 😴 雙手再次合十貼在臉頰，輕輕搖曳！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "胸前向外輕撫，放飛甜甜好夢！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 17 節: 安睡吧小腦袋'. 😴 雙手再次合十貼在臉頰，輕輕搖曳！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.5
           },
           {
             "start": 95.77,
@@ -3824,8 +4065,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🛌 雙手收於胸前，感受平靜與安穩！",
             "next": "雲朵之上軟綿綿 ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 18 節: 柔軟被窩好安全'. 🛌 雙手收於胸前，感受平靜與安穩！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "食指輕點數：一隻羊、兩隻羊！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 18 節: 柔軟被窩好安全'. 🛌 雙手收於胸前，感受平靜與安穩！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.5
           },
           {
             "start": 99.47,
@@ -3839,8 +4081,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "☁️ 身體緩緩微晃，像睡在羽毛雲朵上！",
             "next": "甜美夢鄉祝晚安 ➜",
             "targetPose": "sway",
-            "voiceScript": "像微風中的小柳樹一樣，雙臂展開，跟著音樂輕輕搖擺！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 19 節: 雲朵之上軟綿綿'. ☁️ 身體緩緩微晃，像睡在羽毛雲朵上！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "嘴角露微笑，期待明天的晴朗！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 19 節: 雲朵之上軟綿綿'. ☁️ 身體緩緩微晃，像睡在羽毛雲朵上！. The character is swaying hips and arms like a breeze, smooth fluid body roll, playful rhythmic dancing, friendly warm smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.1
           },
           {
             "start": 103.13,
@@ -3854,8 +4097,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌟 雙手合十胸前，輕輕定格，祝大家晚安！",
             "next": "Sweet dreams, little angel, sleep goodnight. ➜",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 20 節: 甜美夢鄉祝晚安'. 🌟 雙手合十胸前，輕輕定格，祝大家晚安！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "合十輕貼臉頰，縮進柔軟被窩！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 20 節: 甜美夢鄉祝晚安'. 🌟 雙手合十胸前，輕輕定格，祝大家晚安！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.36
           },
           {
             "start": 107.6,
@@ -3869,8 +4113,9 @@ window.KAI_ALBUM_DATABASE = {
             "promptText": "🌟 雙手合十胸前，輕輕定格，祝大家晚安！",
             "next": "🎉 完美通關！獲得 3 顆大金星！",
             "targetPose": "heart",
-            "voiceScript": "雙手在胸口比出跳動的大愛心，把滿滿的愛送給好朋友！",
-            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 21 節: 甜美夢鄉祝晚安'. 🌟 雙手合十胸前，輕輕定格，祝大家晚安！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style."
+            "voiceScript": "胸前輕輕定格，祝大家晚安好夢！",
+            "videoPrompt": "3D Pixar Disney style cheerful toddler dance coach, smooth playful animation, vibrant kindergarten studio, soft bright volumetric lighting, clean studio background, highly expressive face, full body dynamic camera shot: Song 'Soft Pillow Goodnight', Action '第 21 節: 甜美夢鄉祝晚安'. 🌟 雙手合十胸前，輕輕定格，祝大家晚安！. The character is bringing hands together at the chest forming an adorable glowing heart shape, leaning slightly forward, loving gentle smile. 4k resolution, 60fps, Disney Pixar render, joyful preschool music video style.",
+            "audioDuration": 3.6
           }
         ]
       }
