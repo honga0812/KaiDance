@@ -168,22 +168,22 @@
   <div id="view-dance" class="hidden flex-1 flex flex-col p-3 md:p-4 max-w-7xl mx-auto w-full">
     
     <!-- 教室頂欄：返回、歌曲名、火柴人皮膚、人數、得分、全螢幕 -->
-    <header class="bg-white/95 backdrop-blur border border-amber-200 rounded-3xl p-3 md:px-5 mb-3 shadow-md flex flex-wrap items-center justify-between gap-3">
+    <header class="bg-white/95 backdrop-blur border border-amber-200 rounded-3xl p-3 md:px-5 mb-3 shadow-md flex items-center justify-between gap-3 overflow-x-auto min-h-[64px]">
       
       <!-- 返回与曲名 -->
-      <div class="flex items-center gap-3">
-        <button onclick="backToLobby()" class="px-3.5 py-1.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-xs font-black text-slate-700 transition flex items-center gap-1 active:scale-95">
+      <div class="flex items-center gap-3 shrink-0">
+        <button onclick="backToLobby()" class="px-3.5 py-1.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-xs font-black text-slate-700 transition flex items-center gap-1 active:scale-95 shrink-0">
           ◀ 返回選歌
         </button>
         <div>
-          <h2 id="room-song-title" class="text-base md:text-lg font-black text-slate-800 flex items-center gap-1.5">
+          <h2 id="room-song-title" class="text-base md:text-lg font-black text-slate-800 flex items-center gap-1.5 truncate max-w-[200px] sm:max-w-xs md:max-w-sm">
             ☀️ Morning Sunshine Hello
           </h2>
           <div class="flex items-center gap-1.5 mt-0.5">
-            <span id="room-album-badge" class="text-[11px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200">
+            <span id="room-album-badge" class="text-[11px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200 shrink-0">
               第 1 集 #01
             </span>
-            <button onclick="togglePlaylistDrawer()" class="text-[11px] font-black text-sky-600 bg-sky-50 hover:bg-sky-100 px-2.5 py-0.5 rounded-md border border-sky-200 transition flex items-center gap-1">
+            <button onclick="togglePlaylistDrawer()" class="text-[11px] font-black text-sky-600 bg-sky-50 hover:bg-sky-100 px-2.5 py-0.5 rounded-md border border-sky-200 transition flex items-center gap-1 shrink-0">
               📜 全專輯歌單 (10首)
             </button>
           </div>
@@ -191,9 +191,9 @@
       </div>
 
       <!-- 中间：火柴人外观切换与人数模式 -->
-      <div class="flex items-center gap-2">
+      <div class="flex items-center gap-2 shrink-0">
         <!-- 火柴人頭部造型切換 (人物類 / 野生動物類 / 農場動物類) -->
-        <div class="flex items-center bg-slate-100 p-1 rounded-2xl border border-slate-200">
+        <div class="flex items-center bg-slate-100 p-1 rounded-2xl border border-slate-200 shrink-0">
           <button id="theme-btn-human" onclick="setHeadTheme('human')" class="px-2.5 py-1 rounded-xl text-xs font-black bg-amber-500 text-white shadow-xs transition" title="P1小男孩 · P2小女孩 · P3老爺爺">
             🧑 人物類
           </button>
@@ -206,7 +206,7 @@
         </div>
 
         <!-- 人数模式切换 (1人 / 2人 / 3人 智能自动感应) -->
-        <div class="flex items-center bg-slate-100 p-1 rounded-2xl border border-slate-200" title="鏡頭會根據入鏡人數自動切換 (1~3人)，亦可手動點擊鎖定">
+        <div class="flex items-center bg-slate-100 p-1 rounded-2xl border border-slate-200 shrink-0" title="鏡頭會根據入鏡人數自動切換 (1~3人)，亦可手動點擊鎖定">
           <span class="text-[10px] font-bold text-slate-500 px-1 hidden md:inline-flex items-center gap-1">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>自動感應:
           </span>
@@ -223,14 +223,14 @@
       </div>
 
       <!-- 右侧：口令开关、得分牌、全屏 -->
-      <div class="flex items-center gap-2 md:gap-3">
+      <div class="flex items-center gap-2 md:gap-3 shrink-0">
         <!-- 名师原声开关 -->
-        <button id="btn-voice-toggle" onclick="toggleVoice()" class="px-3 py-1.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold text-emerald-700 transition flex items-center gap-1">
+        <button id="btn-voice-toggle" onclick="toggleVoice()" class="px-3 py-1.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold text-emerald-700 transition flex items-center gap-1 shrink-0">
           <span id="voice-icon">🔊</span> 老師原聲口令: 開
         </button>
 
         <!-- 連擊与总分 -->
-        <div class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-4 py-1.5 rounded-2xl shadow-sm flex items-center gap-2.5">
+        <div class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-4 py-1.5 rounded-2xl shadow-sm flex items-center gap-2.5 shrink-0">
           <div class="text-center">
             <span class="text-[10px] font-bold opacity-80 leading-none block">連擊</span>
             <span id="combo-count" class="text-base font-black">12x</span>
@@ -243,18 +243,17 @@
         </div>
 
         <!-- 电视全屏按键 -->
-        <button onclick="toggleFullScreen()" class="w-9 h-9 rounded-2xl bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-indigo-600 font-bold flex items-center justify-center text-sm shadow-xs transition" title="電視大螢幕全螢幕">
+        <button onclick="toggleFullScreen()" class="w-9 h-9 rounded-2xl bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-indigo-600 font-bold flex items-center justify-center text-sm shadow-xs transition shrink-0" title="電視大螢幕全螢幕">
           📺
         </button>
       </div>
     </header>
 
-    <!-- 核心分屏：左侧 1/3 示范视频 (9:16 长形原画裁剪，不压缩)；右侧 2/3 大屏摄像头与发光火柴人 -->
     <!-- 核心分屏：左側精簡示範卡片 (無黑底、無邊框設計，原畫 9:16)；右側超大螢幕攝影機與火柴人 (佔 75%) -->
-    <main class="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-3 mb-3">
+    <main class="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-3 mb-3 items-stretch">
       
       <!-- 【左半屏：AI 舞蹈導師示範影片 (佔 3/12 = 25% 寬度，無黑底框、無邊框設計，精緻小巧)】 -->
-      <section class="relative bg-gradient-to-b from-amber-50/90 via-white to-amber-50/60 rounded-3xl border border-amber-200/60 shadow-md flex flex-col justify-between overflow-hidden min-h-[360px] lg:col-span-3">
+      <section class="relative bg-gradient-to-b from-amber-50/90 via-white to-amber-50/60 rounded-3xl border border-amber-200/60 shadow-md flex flex-col justify-between overflow-hidden h-[460px] sm:h-[500px] lg:h-auto lg:min-h-[460px] lg:col-span-3 shrink-0">
         <!-- 頂欄狀態 -->
         <div class="p-2.5 px-3 z-20 flex items-center justify-between gap-1.5 border-b border-amber-100 bg-amber-100/50">
           <span class="bg-amber-500 text-white text-[11px] font-black px-2 py-0.5 rounded-full shadow flex items-center gap-1 shrink-0">
@@ -300,21 +299,21 @@
       </section>
 
       <!-- 【右半屏：大螢幕攝影鏡頭 + 人物入鏡趣味發光火柴人 (佔 9/12 = 75% 寬度，超大視角舞台)】 -->
-      <section class="relative bg-white rounded-3xl border-2 border-sky-200 overflow-hidden shadow-lg flex flex-col justify-between min-h-[440px] lg:col-span-9">
+      <section class="relative bg-white rounded-3xl border-2 border-sky-200 overflow-hidden shadow-lg flex flex-col justify-between h-[460px] sm:h-[500px] lg:h-auto lg:min-h-[460px] lg:col-span-9">
         
-        <!-- 顶栏：摄像头开关与火柴人状态 -->
-        <div class="absolute top-3 left-3 z-20 flex items-center gap-2">
-          <button id="btn-camera" onclick="initRealCamera()" class="px-3.5 py-1.5 rounded-full bg-sky-500 hover:bg-sky-600 text-white text-xs font-black shadow transition flex items-center gap-1.5 anim-pulse">
+        <!-- 顶栏：摄像头开关与火柴人状态 (固定高宽，绝对不会因文字变动挤压画布布局) -->
+        <div class="absolute top-3 left-3 z-20 flex items-center gap-2 max-w-[70%] pointer-events-auto">
+          <button id="btn-camera" onclick="initRealCamera()" class="px-3.5 py-1.5 rounded-full bg-sky-500 hover:bg-sky-600 text-white text-xs font-black shadow transition flex items-center gap-1.5 shrink-0 active:scale-95">
             📷 開啟攝影機
           </button>
-          <span id="stickman-status-badge" class="bg-white/95 backdrop-blur text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-sky-200 shadow-xs">
+          <span id="stickman-status-badge" class="bg-white/95 backdrop-blur text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-sky-200 shadow-xs truncate block max-w-xs md:max-w-md">
             等待小朋友入鏡變身火柴人...
           </span>
         </div>
 
         <!-- 动作姿态匹配度仪表 (右上角) -->
-        <div class="absolute top-3 right-3 z-20 bg-white/95 backdrop-blur px-3 py-1.5 rounded-2xl border border-emerald-300 shadow-sm text-center min-w-[110px]">
-          <span class="text-[10px] font-bold text-slate-500 block leading-none">火柴人動作貼合</span>
+        <div class="absolute top-3 right-3 z-20 bg-white/95 backdrop-blur px-3 py-1.5 rounded-2xl border border-emerald-300 shadow-sm text-center min-w-[100px] shrink-0">
+          <span class="text-[10px] font-bold text-slate-500 block leading-none">動作貼合</span>
           <span id="match-percent" class="text-xl font-black text-emerald-500">96%</span>
           <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden mt-0.5">
             <div id="match-bar" class="bg-emerald-400 h-full w-[96%] transition-all duration-300"></div>
@@ -1082,14 +1081,14 @@
 
       const target = Math.max(1, Math.min(3, Math.round(detectedCount)));
       autoDetectBuffer.push(target);
-      if (autoDetectBuffer.length > 10) autoDetectBuffer.shift();
+      if (autoDetectBuffer.length > 18) autoDetectBuffer.shift();
 
-      // 當最近 10 次檢測中有至少 7 次判定為相同人數時觸發自動切換
+      // 當最近 18 次檢測中有至少 14 次判定為相同人數時才平穩切換，徹底消除來回跳動
       const countMatching = autoDetectBuffer.filter(c => c === target).length;
-      if (countMatching >= 7 && target !== playerCount) {
-        if (now - lastAutoSwitchTime > 1200) {
+      if (countMatching >= 14 && target !== playerCount) {
+        if (now - lastAutoSwitchTime > 2500) {
           lastAutoSwitchTime = now;
-          console.log(`[Auto-Detect] 🎯 畫面人數自適應調整：${playerCount}人 ➜ ${target}人`);
+          console.log(`[Auto-Detect] 🎯 畫面人數自適應平穩切換：${playerCount}人 ➜ ${target}人`);
           setPlayerCount(target, false);
         }
       }
@@ -1990,34 +1989,38 @@
       if (detectedCount > 0) {
         presenceConfidence = Math.min(100, presenceConfidence + 8);
         isHumanDetected = true;
+        let newMsg = "";
         if (playerCount === 1) {
-          stickmanStatusBadge.innerText = "🎉 小朋友已入鏡！火柴人合體完成！";
+          newMsg = "🎉 小朋友已入鏡！火柴人合體完成！";
         } else if (playerCount === 2) {
-          if (detectedCount >= 2) {
-            stickmanStatusBadge.innerText = "🎉🎉 成功偵測到 2 位小朋友！左右火柴人獨立齊舞！";
-          } else {
-            stickmanStatusBadge.innerText = "🎉 已捕捉到 1 位小朋友！右側等待另一位小夥伴入鏡~";
-          }
+          newMsg = (detectedCount >= 2) ? "🎉 2 位小朋友入鏡！雙人齊舞中！" : "🎉 捕捉到 1 位小朋友，等待小夥伴入鏡~";
         } else {
-          if (detectedCount >= 3) {
-            stickmanStatusBadge.innerText = "🎉🎉🎉 成功偵測到 3 位小朋友！全員火柴人獨立齊舞！";
-          } else {
-            stickmanStatusBadge.innerText = `🎉 已捕捉到 ${detectedCount} 位小朋友，等待其余小伙伴入镜~`;
-          }
+          newMsg = (detectedCount >= 3) ? "🎉 3 位小朋友入鏡！三人舞動派對！" : `🎉 已捕捉到 ${detectedCount} 位小朋友入鏡~`;
         }
-        stickmanStatusBadge.className = "bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full shadow";
+        if (stickmanStatusBadge.innerText !== newMsg) {
+          stickmanStatusBadge.innerText = newMsg;
+        }
+        if (!stickmanStatusBadge.classList.contains('bg-emerald-500')) {
+          stickmanStatusBadge.className = "bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full shadow truncate block max-w-xs md:max-w-md";
+        }
       } else {
         presenceConfidence = Math.max(0, presenceConfidence - 0.8);
         if (presenceConfidence <= 10) {
           isHumanDetected = false;
+          let emptyMsg = "";
           if (playerCount === 1) {
-            stickmanStatusBadge.innerText = "✨ 火柴人準備好啦，走進鏡頭一起跳！";
+            emptyMsg = "✨ 火柴人準備好啦，走進鏡頭一起跳！";
           } else if (playerCount === 2) {
-            stickmanStatusBadge.innerText = "✨ 請兩位小朋友分別站到左右兩邊，火柴人即刻合體！";
+            emptyMsg = "✨ 請兩位小朋友站到左右兩邊，火柴人即刻合體！";
           } else {
-            stickmanStatusBadge.innerText = "✨ 請三位小朋友分別站到左、中、右，一起變身火柴人！";
+            emptyMsg = "✨ 請三位小朋友站到左中右，一起變身火柴人！";
           }
-          stickmanStatusBadge.className = "bg-white/95 text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-sky-200 shadow-xs";
+          if (stickmanStatusBadge.innerText !== emptyMsg) {
+            stickmanStatusBadge.innerText = emptyMsg;
+          }
+          if (!stickmanStatusBadge.classList.contains('bg-white/95')) {
+            stickmanStatusBadge.className = "bg-white/95 backdrop-blur text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-sky-200 shadow-xs truncate block max-w-xs md:max-w-md";
+          }
         }
       }
     }
@@ -2712,7 +2715,7 @@
           if (!audioBgm.paused && audioBgm.currentTime > 0) {
             currentTime = audioBgm.currentTime;
           } else {
-            currentTime += 0.25 * playSpeed;
+            currentTime += 0.1 * playSpeed;
           }
           const maxDur = songDatabase[currentSongKey].duration || 120;
           if (currentTime >= maxDur) {
@@ -2720,7 +2723,7 @@
             return;
           }
           updatePlaybackUI();
-        }, 250);
+        }, 100);
 
         const seg = getCurrentSegment();
         if (seg) playTeacherVoice(seg.voice);
