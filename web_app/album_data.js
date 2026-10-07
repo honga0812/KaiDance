@@ -23,7 +23,7 @@ window.KAI_ALBUM_DATABASE = {
         "badgeColor": "bg-amber-500",
         "textColor": "text-amber-600",
         "borderColor": "border-amber-400",
-        "coachImage": "./images/boy_sun_stretch_1790914097504.jpg",
+        "coachImage": "./images/a1_s01_seg01_boy.jpg",
         "description": "變身發光火柴人，托起金色大太陽、高空大招手、刷牙大步走！幼兒晨操經典！",
         "timeline": [
           {
@@ -31,7 +31,7 @@ window.KAI_ALBUM_DATABASE = {
             "end": 7.87,
             "title": "[前奏] 晨光萌芽踏步",
             "video": "./videos/loop_01_march.mp4",
-            "image": "./images/boy_dance_coach_1790908303698.jpg",
+            "image": "./images/a1_s01_seg01_boy.jpg",
             "voice": "./voices/album1/voice_track_01_seg_01.mp3",
             "lyric": "[Intro 🎵 歡樂前奏]",
             "sub": "⏰ 精神小士兵，原地踩著節拍踏步走！",
@@ -410,7 +410,7 @@ window.KAI_ALBUM_DATABASE = {
         "badgeColor": "bg-sky-500",
         "textColor": "text-sky-600",
         "borderColor": "border-sky-400",
-        "coachImage": "./images/girl_dance_coach_1790908344383.jpg",
+        "coachImage": "./images/a1_s02_seg01_girl.jpg",
         "description": "跟著活潑旋律伸出手指頭比 1 到 10，小手拍拍、小腳踩踩，數字越數越開心！",
         "timeline": [
           {
@@ -418,7 +418,7 @@ window.KAI_ALBUM_DATABASE = {
             "end": 9.57,
             "title": "[前奏] 數字小士兵預備踏步",
             "video": null,
-            "image": "./images/girl_dance_coach_1790908344383.jpg",
+            "image": "./images/a1_s02_seg01_girl.jpg",
             "voice": "./voices/album1/voice_track_02_seg_01.mp3",
             "lyric": "[Intro 🎵 歡樂前奏]",
             "sub": "🔢 準備好小手小腳，踩出節拍踏步走！",
@@ -781,7 +781,7 @@ window.KAI_ALBUM_DATABASE = {
         "badgeColor": "bg-pink-500",
         "textColor": "text-pink-600",
         "borderColor": "border-pink-400",
-        "coachImage": "./images/girl_jump_dance_1790912250093.jpg",
+        "coachImage": "./images/a1_s03_seg01_girl.jpg",
         "description": "拿起魔法大畫筆！畫出紅櫻桃、黃太陽、藍海洋與綠草地，在天空搭起彩虹橋！",
         "timeline": [
           {
@@ -789,7 +789,7 @@ window.KAI_ALBUM_DATABASE = {
             "end": 15.1,
             "title": "[前奏] 彩虹畫筆小預備",
             "video": null,
-            "image": "./images/boy_dance_coach_1790908303698.jpg",
+            "image": "./images/a1_s03_seg01_girl.jpg",
             "voice": "./voices/album1/voice_track_03_seg_01.mp3",
             "lyric": "[Intro 🎵 歡樂前奏]",
             "sub": "🎨 拿起神奇彩色畫筆，準備為天空塗鴉！",
@@ -1152,7 +1152,7 @@ window.KAI_ALBUM_DATABASE = {
         "badgeColor": "bg-emerald-500",
         "textColor": "text-emerald-600",
         "borderColor": "border-emerald-400",
-        "coachImage": "./images/boy_dance_coach_1790908303698.jpg",
+        "coachImage": "./images/a1_s04_seg01_boy.jpg",
         "description": "走進非洲大草原！學大象重重踏步、小猴擺盪、獅子吼叫、小企鵝搖擺！最燃肢體課！",
         "timeline": [
           {
@@ -1160,7 +1160,7 @@ window.KAI_ALBUM_DATABASE = {
             "end": 5.77,
             "title": "[前奏] 森林號角精神踏步",
             "video": null,
-            "image": "./images/boy_dance_coach_1790908303698.jpg",
+            "image": "./images/a1_s04_seg01_boy.jpg",
             "voice": "./voices/album1/voice_track_04_seg_01.mp3",
             "lyric": "[Intro 🎵 歡樂前奏]",
             "sub": "🎺 聽號角吹響！雙手插腰，膝蓋抬高大步踏走！",
@@ -1587,7 +1587,7 @@ window.KAI_ALBUM_DATABASE = {
         "badgeColor": "bg-amber-500",
         "textColor": "text-amber-700",
         "borderColor": "border-amber-400",
-        "coachImage": "./images/girl_dance_coach_1790908344383.jpg",
+        "coachImage": "./images/a1_s05_seg01_girl.jpg",
         "description": "積木排排隊、畫筆收盒子、跟好朋友大擊掌！在玩樂中養成超棒的收納好習慣！",
         "timeline": [
           {
@@ -1595,7 +1595,7 @@ window.KAI_ALBUM_DATABASE = {
             "end": 7.7,
             "title": "[前奏] 時鐘滴答整理預備",
             "video": null,
-            "image": "./images/boy_dance_coach_1790908303698.jpg",
+            "image": "./images/a1_s05_seg01_girl.jpg",
             "voice": "./voices/album1/voice_track_05_seg_01.mp3",
             "lyric": "[Intro 🎵 歡樂前奏]",
             "sub": "⏰ 時鐘滴答走，玩具小幫手挽起袖子集合！",
@@ -2022,7 +2022,7 @@ window.KAI_ALBUM_DATABASE = {
         "badgeColor": "bg-indigo-600",
         "textColor": "text-indigo-600",
         "borderColor": "border-indigo-400",
-        "coachImage": "./images/boy_sun_stretch_1790914097504.jpg",
+        "coachImage": "./images/a1_s06_seg01_boy.jpg",
         "description": "穿上宇航服、檢查控制台！5-4-3-2-1 點火起飛！繞過火星與土星，抓取神秘星塵！",
         "timeline": [
           {
@@ -2030,7 +2030,7 @@ window.KAI_ALBUM_DATABASE = {
             "end": 1.67,
             "title": "[前奏] 宇宙電波呼叫訊號",
             "video": null,
-            "image": "./images/boy_dance_coach_1790908303698.jpg",
+            "image": "./images/a1_s06_seg01_boy.jpg",
             "voice": "./voices/album1/voice_track_06_seg_01.mp3",
             "lyric": "[Intro 🎵 歡樂前奏]",
             "sub": "📡 嗶嗶嗶！戴上太空頭盔，發射台準備完畢！",
@@ -2489,7 +2489,7 @@ window.KAI_ALBUM_DATABASE = {
         "badgeColor": "bg-cyan-500",
         "textColor": "text-cyan-600",
         "borderColor": "border-cyan-400",
-        "coachImage": "./images/girl_dance_coach_1790908344383.jpg",
+        "coachImage": "./images/a1_s07_seg01_girl.jpg",
         "description": "卡嚓卡嚓嘟嘟！搭上字母小火車，從 A 的大蘋果一路唱到 Z，字母拼出奇妙世界！",
         "timeline": [
           {
@@ -2497,7 +2497,7 @@ window.KAI_ALBUM_DATABASE = {
             "end": 8.2,
             "title": "[前奏] 蒸汽火車汽笛響起",
             "video": null,
-            "image": "./images/boy_dance_coach_1790908303698.jpg",
+            "image": "./images/a1_s07_seg01_girl.jpg",
             "voice": "./voices/album1/voice_track_07_seg_01.mp3",
             "lyric": "[Intro 🎵 歡樂前奏]",
             "sub": "🚂 嗚嗚！拉響火車汽笛，ABC 字母列車準備開動！",
@@ -2924,7 +2924,7 @@ window.KAI_ALBUM_DATABASE = {
         "badgeColor": "bg-violet-600",
         "textColor": "text-violet-600",
         "borderColor": "border-violet-400",
-        "coachImage": "./images/girl_jump_dance_1790912250093.jpg",
+        "coachImage": "./images/a1_s08_seg01_boy.jpg",
         "description": "搖晃肩膀、抖動膝蓋、大扭特扭！口令一出 3-2-1 瞬間結冰定格！看誰是最穩木頭人！",
         "timeline": [
           {
@@ -2932,7 +2932,7 @@ window.KAI_ALBUM_DATABASE = {
             "end": 7.17,
             "title": "第 01 節: 節奏鼓點咚咚咚",
             "video": null,
-            "image": "./images/boy_dance_coach_1790908303698.jpg",
+            "image": "./images/a1_s08_seg01_boy.jpg",
             "voice": "./voices/album1/voice_track_08_seg_01.mp3",
             "lyric": "\"beat beat beat beat\"",
             "sub": "🥁 腳尖踩拍子，雙手輕快拍拍大腿！",
@@ -3375,7 +3375,7 @@ window.KAI_ALBUM_DATABASE = {
         "badgeColor": "bg-lime-500",
         "textColor": "text-lime-700",
         "borderColor": "border-lime-400",
-        "coachImage": "./images/boy_dance_coach_1790908303698.jpg",
+        "coachImage": "./images/a1_s09_seg01_boy.jpg",
         "description": "吃甜甜紅蘿蔔、嚼綠花椰菜、大口喝牛奶！飯前洗香香，摸摸肚子健康長高高！",
         "timeline": [
           {
@@ -3383,7 +3383,7 @@ window.KAI_ALBUM_DATABASE = {
             "end": 8.37,
             "title": "[前奏] 肚子咕嚕嚕美食預備",
             "video": null,
-            "image": "./images/boy_dance_coach_1790908303698.jpg",
+            "image": "./images/a1_s09_seg01_boy.jpg",
             "voice": "./voices/album1/voice_track_09_seg_01.mp3",
             "lyric": "[Intro 🎵 歡樂前奏]",
             "sub": "🥣 肚子咕嚕嚕！戴上小廚師帽，健康點心開動囉！",
@@ -3778,7 +3778,7 @@ window.KAI_ALBUM_DATABASE = {
         "badgeColor": "bg-indigo-700",
         "textColor": "text-indigo-400",
         "borderColor": "border-indigo-500",
-        "coachImage": "./images/girl_dance_coach_1790908344383.jpg",
+        "coachImage": "./images/a1_s10_seg01_girl.jpg",
         "description": "星光閃閃月兒彎，抱緊心愛泰迪熊。輕柔搖籃擺動、數著雲朵小綿羊，做個香甜美夢！",
         "timeline": [
           {
@@ -3786,7 +3786,7 @@ window.KAI_ALBUM_DATABASE = {
             "end": 5.77,
             "title": "[前奏] 夜幕低垂搖籃曲",
             "video": null,
-            "image": "./images/boy_sway_pose_1790914141304.jpg",
+            "image": "./images/a1_s10_seg01_girl.jpg",
             "voice": "./voices/album1/voice_track_10_seg_01.mp3",
             "lyric": "[Intro 🎵 歡樂前奏]",
             "sub": "🌙 月亮升起，微風吹拂，輕輕左右搖擺放鬆身體！",
