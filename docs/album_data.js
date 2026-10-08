@@ -62,7 +62,7 @@ window.KAI_ALBUM_DATABASE = {
             "start": 11.93,
             "end": 15.97,
             "title": "第 02 節: 金色小手大招手",
-            "video": "./videos/T1/t1_seg_03.mp4",
+            "video": "./videos/T1/t1_seg_06.mp4",
             "image": "./images/track_01/a1_s01_seg03_boy.jpg",
             "voice": "./voices/album1/voice_track_01_seg_03.mp3",
             "lyric": "\"waving your golden hands so high\"",
