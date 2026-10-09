@@ -14,7 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
   <!-- KaiDance 完整多專輯音樂與動作資料庫 (Album 1 十首全曲 & Album 2 搶先體驗) -->
-  <script src="./album_data.js?v=20261009_0835"></script>
+  <script src="./album_data.js?v=20261009_1435"></script>
   <style>
     @keyframes bounce-slow {
       0%, 100% { transform: translateY(0); }
@@ -657,6 +657,7 @@
     const cvCtx = cvCanvas.getContext('2d', { willReadFrequently: true });
     cvCanvas.width = 160;
     cvCanvas.height = 120;
+    const presenceBuffer = new Float32Array(160 * 120); // 空間長效人體存在熱圖 (防定格與微動時消失)
     let bgCvFrameData = null; // 自适应背景模型，实现站定静止时火柴人依然稳固锁住
     let prevCvFrameData = null;
     let mpPose = null;
@@ -1236,10 +1237,6 @@
 
     // 初始化 MoveNet MultiPose AI 引擎 (支持 1~6 人实时多人骨骼与火柴人绑定)
     async function tryInitMoveNet() {
-      if (isAppleMobile) {
-        console.log("偵測到 iPad / iOS 設備，啟用極致流暢之原生端側視覺引擎，避免 WebKit 記憶體過載。");
-        return;
-      }
       if (typeof poseDetection !== 'undefined' && !moveNetDetector && !isMoveNetLoading) {
         isMoveNetLoading = true;
         try {
@@ -1509,7 +1506,6 @@
 
     // 初始化 MediaPipe AI 姿态识别引擎
     function tryInitMediaPipe() {
-      if (isAppleMobile) return;
       if (typeof Pose !== 'undefined' && !mpPose) {
         try {
           mpPose = new Pose({
@@ -1519,13 +1515,13 @@
             modelComplexity: 0, // 0 运行速度极快 (60FPS)，完美适配低功耗平板与电脑
             smoothLandmarks: true,
             enableSegmentation: false,
-            minDetectionConfidence: 0.45,
-            minTrackingConfidence: 0.45
+            minDetectionConfidence: 0.35,
+            minTrackingConfidence: 0.35
           });
           mpPose.onResults(onMediaPipePoseResults);
-          console.log("MediaPipe Pose AI 引擎启动完成");
+          console.log("🎉 MediaPipe Pose AI 姿態引擎啟動完成！");
         } catch (e) {
-          console.warn("MediaPipe Pose 初始化回退至端侧视觉引擎:", e);
+          console.warn("MediaPipe Pose 初始化回退至端側視覺引擎:", e);
           mpPose = null;
         }
       }
@@ -1610,6 +1606,7 @@
       if (isCameraActive) {
         if (cameraStream) {
           cameraStream.getTracks().forEach(t => t.stop());
+          cameraStream = null;
         }
         webcamVideo.srcObject = null;
         isCameraActive = false;
@@ -1623,29 +1620,51 @@
       }
 
       if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
-        console.warn("navigator.mediaDevices not available, activating fallback");
-        isCameraActive = true;
-        cameraGuidePrompt.classList.add('hidden');
-        btnCamera.innerText = "⏹ 攝影機已就緒";
-        stickmanStatusBadge.innerText = "✨ 趣味火柴人準備就緒";
-        isHumanDetected = true;
-        presenceConfidence = 80;
+        alert("此平板瀏覽器不支援相機存取，請使用 Safari 或 Chrome 並確認在 HTTPS 環境下開啟。");
         return;
       }
 
       try {
-        const videoConstraints = isAppleMobile
-          ? { width: { ideal: 640 }, height: { ideal: 480 }, facingMode: "user" }
-          : { width: { ideal: 1280 }, height: { ideal: 720 }, facingMode: "user" };
+        let stream = null;
+        // 平板與行動端多級自適應攝影機請求 (優先前置鏡頭 user，兼顧橫屏與直屏)
+        try {
+          stream = await navigator.mediaDevices.getUserMedia({
+            video: {
+              facingMode: "user",
+              width: { ideal: 1280, min: 480 },
+              height: { ideal: 720, min: 360 }
+            },
+            audio: false
+          });
+        } catch (e1) {
+          try {
+            stream = await navigator.mediaDevices.getUserMedia({
+              video: { facingMode: "user" },
+              audio: false
+            });
+          } catch (e2) {
+            stream = await navigator.mediaDevices.getUserMedia({
+              video: true,
+              audio: false
+            });
+          }
+        }
 
-        cameraStream = await navigator.mediaDevices.getUserMedia({
-          video: videoConstraints,
-          audio: false
-        });
+        cameraStream = stream;
+        webcamVideo.muted = true;
+        webcamVideo.defaultMuted = true;
+        webcamVideo.playsInline = true;
         webcamVideo.setAttribute('playsinline', 'true');
         webcamVideo.setAttribute('webkit-playsinline', 'true');
+        webcamVideo.setAttribute('muted', 'true');
         webcamVideo.srcObject = cameraStream;
-        await webcamVideo.play();
+
+        try {
+          await webcamVideo.play();
+        } catch (playErr) {
+          console.warn("webcamVideo.play() 初次等待交互:", playErr);
+          webcamVideo.play().catch(e => console.warn("Retry play error:", e));
+        }
 
         isCameraActive = true;
         cameraGuidePrompt.classList.add('hidden');
@@ -1657,19 +1676,16 @@
         setTimeout(resizeCanvas, 80);
         setTimeout(resizeCanvas, 250);
 
-        // 桌面端尝试激活 MoveNet MultiPose 及 MediaPipe
-        if (!isAppleMobile) {
-          tryInitMoveNet();
-          tryInitMediaPipe();
-        }
+        // 啟動 MoveNet MultiPose 及 MediaPipe (平板與各平台通用)
+        tryInitMoveNet();
+        tryInitMediaPipe();
       } catch (err) {
-        console.warn("Camera fallback:", err);
-        isCameraActive = true;
-        cameraGuidePrompt.classList.add('hidden');
-        btnCamera.innerText = "⏹ 攝影機已就緒";
-        stickmanStatusBadge.innerText = "✨ 趣味火柴人準備就緒";
-        isHumanDetected = true;
-        presenceConfidence = 80;
+        console.error("Camera access error:", err);
+        isCameraActive = false;
+        cameraGuidePrompt.classList.remove('hidden');
+        btnCamera.innerText = "📷 重新嘗試鏡頭";
+        stickmanStatusBadge.innerText = "⚠️ 未取得鏡頭權限，請點擊允許或在平板設定中開啟相機";
+        stickmanStatusBadge.className = "bg-rose-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow";
       }
     }
 
@@ -1745,10 +1761,7 @@
       }
       cvFrameCounter++;
 
-      // 在 iPad / 平板移動端進行適度隔幀抽樣，大幅降低 CPU 佔用並保持 60 FPS 流暢度
-      if (isAppleMobile && (cvFrameCounter % 2 !== 0)) {
-        return;
-      }
+      const now = performance.now();
 
       // 1. 优先使用 MoveNet MultiPose 深度学习 AI 多人骨骼引擎 (支持 1~6 人实时追踪)
       if (moveNetDetector && !isMoveNetRunning) {
@@ -1768,14 +1781,13 @@
       }
 
       // 如果 MoveNet 最近 600ms 内有稳定多人骨骼输出，则直接由 MoveNet 驱动，跳过低阶 CV！
-      const now = performance.now();
       if (activeTrackingEngine === "MoveNet AI MultiPose" && (now - lastMoveNetDetectTime < 600)) {
         return;
       }
 
-      // 2. 如果 MoveNet 仍在载入中，单人模式下尝试使用 MediaPipe AI
+      // 2. 单人模式下尝试使用 MediaPipe AI (平板/手机/电脑通用)
       if (playerCount === 1 && mpPose && !isMpRunning) {
-        if (cvFrameCounter % 3 === 0) {
+        if (cvFrameCounter % 2 === 0) {
           isMpRunning = true;
           mpPose.send({ image: webcamVideo })
             .catch(() => {})
@@ -1783,11 +1795,10 @@
         }
       }
 
-      const isSinglePersonMediaPipeActive = (playerCount === 1 && activeTrackingEngine === "MediaPipe AI" && (now - lastMediaPipeDetectTime < 500));
+      const isSinglePersonMediaPipeActive = (playerCount === 1 && activeTrackingEngine === "MediaPipe AI" && (now - lastMediaPipeDetectTime < 600));
 
-      // 3. 多人模式 (2人/3人) 或离线状态：毫秒级由超灵敏端侧多目标视觉骨骼引擎全权驱动！
-      // 即使单人模式由 MediaPipe 驱动，端侧视觉引擎依然在背景执行全画幅扫描，以便在第二位/第三位小朋友入镜时瞬间感应并自动切换！
-      activeTrackingEngine = isSinglePersonMediaPipeActive ? "MediaPipe AI" : (playerCount > 1 ? "Multi-Person Vision Engine" : "Edge-CV");
+      // 3. 多人模式 (2人/3人) 或离线/AI載入狀態：毫秒级由超灵敏平板自适应多目标视觉骨骼引擎全权驱动！
+      activeTrackingEngine = isSinglePersonMediaPipeActive ? "MediaPipe AI" : (playerCount > 1 ? "Multi-Person Vision Engine" : "Tablet Vision Engine");
       const cw = cvCanvas.width;
       const ch = cvCanvas.height;
       cvCtx.drawImage(webcamVideo, 0, 0, cw, ch);
@@ -1801,12 +1812,11 @@
         for (let i = 0; i < currData.length; i++) bgCvFrameData[i] = currData[i];
       }
 
-      // 全局 3 大物理站位感知计数 (用于无论当前处于几人模式，都能精准探测实际有几个小朋友在镜头前)
+      // 全局三大物理站位感知
       let leftZonePixels = 0;
       let centerZonePixels = 0;
       let rightZonePixels = 0;
 
-      // 多人独立扇区定义
       const sectors = getSectors();
 
       sectors.forEach(s => {
@@ -1826,39 +1836,52 @@
       for (let y = 6; y < ch - 6; y += 2) {
         for (let x = 6; x < cw - 6; x += 2) {
           const idx = (y * cw + x) * 4;
+          const pIdx = y * cw + x;
           const r = currData[idx];
           const g = currData[idx+1];
           const b = currData[idx+2];
-          
-          // 1. 动态位移帧差 (Motion Diff) - 捕捉挥手、跳跃等任何运动
+
+          // 1. 動態幀差 (運動捕捉，揮手、跳躍、踏步)
           const dMotion = (Math.abs(r - prevCvFrameData[idx]) +
                            Math.abs(g - prevCvFrameData[idx+1]) +
                            Math.abs(b - prevCvFrameData[idx+2])) / 3;
 
-          // 2. 背景模型差分 (Background Diff) - 站定不动时依然保持感知
+          // 2. 背景差分 (站定時的形體反差)
           const dBg = (Math.abs(r - bgCvFrameData[idx]) +
                        Math.abs(g - bgCvFrameData[idx+1]) +
                        Math.abs(b - bgCvFrameData[idx+2])) / 3;
 
-          bgCvFrameData[idx] += (r - bgCvFrameData[idx]) * 0.005;
-          bgCvFrameData[idx+1] += (g - bgCvFrameData[idx+1]) * 0.005;
-          bgCvFrameData[idx+2] += (b - bgCvFrameData[idx+2]) * 0.005;
+          bgCvFrameData[idx] += (r - bgCvFrameData[idx]) * 0.003;
+          bgCvFrameData[idx+1] += (g - bgCvFrameData[idx+1]) * 0.003;
+          bgCvFrameData[idx+2] += (b - bgCvFrameData[idx+2]) * 0.003;
 
-          // 3. 肤色多模态感知 (增强站立微动感知)
-          const isSkin = (r > 55 && g > 35 && b > 20 && r > g && (r - g) > 6 && (r - b) > 8);
+          // 3. 超靈敏高動態膚色與人體面部/手部特徵 (YCbCr + Normalized RGB 雙模態，全面適應平板各類環境光)
+          const Y = 0.299 * r + 0.587 * g + 0.114 * b;
+          const Cr = (r - Y) * 0.713 + 128;
+          const Cb = (b - Y) * 0.564 + 128;
+          const isSkinYCbCr = (Cr >= 125 && Cr <= 180 && Cb >= 75 && Cb <= 135 && Y > 25);
+          const isSkinRGB = (r > 45 && g > 30 && b > 18 && (r >= g) && (r - g >= 2) && (r - b >= 4));
+          const isHumanFeature = isSkinYCbCr || isSkinRGB;
 
-          // 综合人体特征像素判定 (门限降为 7 与 11，灵敏度大幅提升)
-          const isPersonPixel = (dMotion > 7 || dBg > 11 || (isSkin && y < ch * 0.75));
+          // 4. 熱圖累積與衰減 (Presence Heatmap: 小朋友暫停或定格時保持長效存在)
+          if (dMotion > 4 || (isHumanFeature && y < ch * 0.85) || dBg > 8) {
+            presenceBuffer[pIdx] = Math.min(1.0, presenceBuffer[pIdx] + 0.35);
+          } else {
+            presenceBuffer[pIdx] *= 0.96;
+          }
+
+          // 綜合人體有效像素判定 (運動、背景差分、人體特徵、長效熱圖)
+          const isPersonPixel = (dMotion > 4 || dBg > 8 || (isHumanFeature && y < ch * 0.85) || presenceBuffer[pIdx] > 0.20);
 
           if (isPersonPixel) {
             const screenX = 1.0 - (x / cw);
 
-            // 统计左、中、右三大物理空间的活跃人体像素
+            // 統計三大物理空間活躍度
             if (screenX >= 0.04 && screenX <= 0.40) leftZonePixels++;
             if (screenX >= 0.35 && screenX <= 0.65) centerZonePixels++;
             if (screenX >= 0.60 && screenX <= 0.96) rightZonePixels++;
 
-            // 分配到各自独立的玩家扇区内
+            // 分配至玩家扇區
             for (let i = 0; i < sectors.length; i++) {
               const s = sectors[i];
               if (screenX >= s.minX && screenX <= s.maxX) {
@@ -1871,11 +1894,10 @@
                 if (y < s.minY) s.minY = y;
                 if (y > s.maxY) s.maxY = y;
 
-                // 采用该玩家上一帧平滑中轴位置或默认站位，准确解耦左手与右手
                 const p = trackedPlayerPoses[s.id];
                 const refCenterX = (p && p.head && p.head.x) ? p.head.x : s.defaultX;
 
-                // 左侧手部探测 (在身体中心左侧 0.03 以外，且处于上身区域)
+                // 左手判定 (中軸左側，上身區域)
                 if (screenX < refCenterX - 0.03 && y < ch * 0.85) {
                   if (y < s.leftHandY) {
                     s.leftHandY = y;
@@ -1883,7 +1905,7 @@
                   }
                 }
 
-                // 右侧手部探测 (在身体中心右侧 0.03 以外，且处于上身区域)
+                // 右手判定 (中軸右側，上身區域)
                 if (screenX > refCenterX + 0.03 && y < ch * 0.85) {
                   if (y < s.rightHandY) {
                     s.rightHandY = y;
@@ -1898,17 +1920,17 @@
       }
       prevCvFrameData = new Uint8ClampedArray(currData);
 
-      // 全局画面人数多模态自动评估 (基于 160x120 隔行采样的空间聚类)
-      const leftActive = leftZonePixels >= 10;
-      const centerActive = centerZonePixels >= 10;
-      const rightActive = rightZonePixels >= 10;
+      // 全局畫面人數空間聚類 (自適應判定 1/2/3 人)
+      const leftActive = leftZonePixels >= 8;
+      const centerActive = centerZonePixels >= 8;
+      const rightActive = rightZonePixels >= 8;
 
       let cvDetectedPersons = 0;
       if (leftActive && centerActive && rightActive) {
         cvDetectedPersons = 3;
       } else if ((leftActive && rightActive) || 
-                 (leftActive && centerActive && leftZonePixels >= 14 && centerZonePixels >= 14) || 
-                 (rightActive && centerActive && rightZonePixels >= 14 && centerZonePixels >= 14)) {
+                 (leftActive && centerActive && leftZonePixels >= 12 && centerZonePixels >= 12) || 
+                 (rightActive && centerActive && rightZonePixels >= 12 && centerZonePixels >= 12)) {
         cvDetectedPersons = 2;
       } else if (leftActive || centerActive || rightActive) {
         cvDetectedPersons = 1;
@@ -1918,28 +1940,33 @@
         evaluateAutoPlayerCount(cvDetectedPersons);
       }
 
-      // 分别对每个玩家进行独立的骨骼驱动与姿态更新
+      // 玩家骨骼驅動與狀態更新 (加入 PresenceTimer 鎖定與滯後記憶，消除抽搐與誤判)
       let detectedCount = 0;
 
       sectors.forEach(s => {
         const p = trackedPlayerPoses[s.id];
         if (!p) return;
+        p.presenceTimer = p.presenceTimer || 0;
 
-        // 如果单人模式由 MediaPipe 提供高精关键点，则跳过 P1 的端侧粗略关键点覆盖
+        // 若單人由 MediaPipe 高精關鍵點驅動，跳過覆蓋
         if (isSinglePersonMediaPipeActive && s.id === 0) {
+          p.detected = true;
           detectedCount++;
           return;
         }
 
-        // 只要扇区内累计有效人体特征像素达到 6 个，即可精准绑定
-        if (s.activePixels >= 6) {
+        // 只要有效特徵像素 >= 4，或處於記憶鎖定幀內 (防止定格/微動時誤判消失)
+        const isCurrentlyActive = s.activePixels >= 4;
+
+        if (isCurrentlyActive) {
+          p.presenceTimer = 45; // 刷新長效存在計時器 (~1.5 秒記憶保護)
           p.detected = true;
           detectedCount++;
 
           const centerScreenX = s.sumScreenX / s.activePixels;
-          const topY = Math.max(0.10, (s.minY / ch));
+          const topY = Math.max(0.08, (s.minY / ch));
 
-          // 头部跟随对应小朋友实际身体中心与高度
+          // 平滑跟隨頭部
           p.head.x += (centerScreenX - p.head.x) * 0.35;
           p.head.y += (topY - p.head.y) * 0.35;
           p.neck.x = p.head.x;
@@ -1957,7 +1984,7 @@
           p.lHip.y = p.pelvis.y;
           p.rHip.y = p.pelvis.y;
 
-          // 手腕跟随
+          // 手腕跟隨
           const leftNormY = s.leftHandY / ch;
           const rightNormY = s.rightHandY / ch;
 
@@ -1992,7 +2019,6 @@
           p.rFinger.x = p.rWrist.x + 0.02;
           p.rFinger.y = p.rWrist.y - 0.02;
 
-          // 下肢随躯干动态响应
           p.lKnee.x = p.lHip.x - 0.02;
           p.lKnee.y = p.pelvis.y + 0.14;
           p.rKnee.x = p.rHip.x + 0.02;
@@ -2002,12 +2028,17 @@
           p.rAnkle.x = p.rKnee.x + 0.01;
           p.rAnkle.y = Math.min(0.94, p.rKnee.y + 0.14);
 
-          // 动作判定
+          // 動作判定 (雙手舉高或招手)
           p.isHandsHigh = (p.lWrist.y < p.head.y + 0.05 && p.rWrist.y < p.head.y + 0.05);
           p.isWaving = (p.lWrist.y < p.head.y + 0.08 || p.rWrist.y < p.head.y + 0.08);
 
+        } else if (p.presenceTimer > 0) {
+          // 短暫靜止/微動期間：記憶保持在當前站姿，不中斷
+          p.presenceTimer--;
+          p.detected = true;
+          detectedCount++;
         } else {
-          // 该区域未站人：在专属站位保持可爱轻柔律动（等待小朋友入镜）
+          // 完全無人：返回該扇區待命律動
           p.detected = false;
           const idleWave = Math.sin(frameTick * 0.06 + s.id * 1.5) * 0.02;
           p.head.x += (s.defaultX + idleWave - p.head.x) * 0.1;
@@ -2944,12 +2975,10 @@
     renderStickmanLoop();
     initFloatingPlayDock();
 
-    // 页面加载完成后后台异步预热多人姿态 AI 引擎 (仅桌面端，移动端使用极速轻量原生端侧引擎)
+    // 页面加载完成后后台异步预热多人姿态 AI 引擎 (平板与各平台通用)
     window.addEventListener('load', () => {
-      if (!isAppleMobile) {
-        setTimeout(tryInitMoveNet, 500);
-        setTimeout(tryInitMediaPipe, 1200);
-      }
+      setTimeout(tryInitMoveNet, 500);
+      setTimeout(tryInitMediaPipe, 1200);
     });
   </script>
 </body>
