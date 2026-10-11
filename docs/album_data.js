@@ -1152,7 +1152,7 @@ window.KAI_ALBUM_DATABASE = {
         "badgeColor": "bg-emerald-500",
         "textColor": "text-emerald-600",
         "borderColor": "border-emerald-400",
-        "coachImage": "./images/track_04/a1_s04_seg01_boy.jpg",
+        "coachImage": "./images/track_04/a1_s04_seg01_girl.jpg",
         "description": "走進非洲大草原！學大象重重踏步、小猴擺盪、獅子吼叫、小企鵝搖擺！最燃肢體課！",
         "timeline": [
           {
@@ -1160,7 +1160,7 @@ window.KAI_ALBUM_DATABASE = {
             "end": 5.77,
             "title": "[前奏] 森林號角精神踏步",
             "video": null,
-            "image": "./images/track_04/a1_s04_seg01_boy.jpg",
+            "image": "./images/track_04/a1_s04_seg01_girl.jpg",
             "voice": "./voices/album1/voice_track_04_seg_01.mp3",
             "lyric": "[Intro 🎵 歡樂前奏]",
             "sub": "🎺 聽號角吹響！雙手插腰，膝蓋抬高大步踏走！",
