@@ -76,6 +76,8 @@ for s_num in range(1, 11):
         video_summary = " · 🎬 影片: 20 支就緒，2 支缺漏暫以寫真代替 (T2 目錄)"
     elif s_num == 3:
         video_summary = " · 🎬 影片: 22/22 支全就緒 (T3 目錄)"
+    elif s_num == 4:
+        video_summary = " · 🎬 影片: 26/26 支全就緒 (T4 目錄)"
     else:
         video_summary = " · 📸 導引模式: 9:16 高畫質角色寫真"
 
