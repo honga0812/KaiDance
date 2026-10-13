@@ -74,9 +74,61 @@
       0%, 100% { opacity: 0.3; transform: scale(0.8); }
       50% { opacity: 1; transform: scale(1.2); }
     }
-    .anim-star { animation: star-twinkle 3s ease-in-out infinite; }
-    .anim-float-planet { animation: float-gentle 5s ease-in-out infinite; }
-    .anim-pulse-subtle { animation: pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
+    /* ======================================================== */
+    /* 3D 黏土擬物風格 (Pure Claymorphism & SVG Components)     */
+    /* ======================================================== */
+    .clay-sphere-morning {
+      background: radial-gradient(circle at 35% 30%, #fef08a 0%, #f59e0b 45%, #d97706 75%, #b45309 100%);
+      box-shadow: 
+        inset -10px -10px 22px rgba(146, 64, 14, 0.6),
+        inset 12px 12px 25px rgba(254, 240, 138, 0.8),
+        0 20px 35px -5px rgba(245, 158, 11, 0.45);
+    }
+    .clay-sphere-groove {
+      background: radial-gradient(circle at 35% 30%, #f472b6 0%, #c084fc 40%, #8b5cf6 70%, #6d28d9 100%);
+      box-shadow: 
+        inset -10px -10px 22px rgba(88, 28, 135, 0.7),
+        inset 12px 12px 25px rgba(244, 114, 182, 0.8),
+        0 20px 35px -5px rgba(192, 132, 252, 0.45);
+    }
+    .clay-mascot-head {
+      background: radial-gradient(circle at 35% 30%, #ffffff 0%, #f1f5f9 50%, #e2e8f0 80%, #cbd5e1 100%);
+      box-shadow: 
+        inset -6px -6px 14px rgba(100, 116, 139, 0.4),
+        inset 8px 8px 16px rgba(255, 255, 255, 0.9),
+        0 12px 24px -4px rgba(0, 0, 0, 0.4);
+    }
+    .clay-ring-orbit {
+      filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.4));
+    }
+    .clay-capsule-btn {
+      background: linear-gradient(90deg, #fef08a 0%, #fed7aa 25%, #fbcfe8 60%, #bae6fd 100%);
+      color: #1e1b4b;
+      box-shadow: 
+        inset 0 2px 4px rgba(255, 255, 255, 0.9),
+        inset 0 -3px 6px rgba(244, 114, 182, 0.4),
+        0 14px 28px -4px rgba(251, 207, 232, 0.5),
+        0 6px 12px -2px rgba(0, 0, 0, 0.3);
+    }
+    .clay-capsule-btn:active {
+      transform: scale(0.96) translateY(2px);
+      box-shadow: 
+        inset 0 3px 6px rgba(0, 0, 0, 0.2),
+        0 6px 14px -2px rgba(251, 207, 232, 0.4);
+    }
+    .clay-tile-card {
+      background: radial-gradient(circle at 35% 25%, #ffffff 0%, #f8fafc 45%, #e2e8f0 100%);
+      box-shadow: 
+        inset 0 2px 4px rgba(255, 255, 255, 0.9),
+        inset 0 -4px 8px rgba(148, 163, 184, 0.4),
+        0 10px 20px -3px rgba(0, 0, 0, 0.35);
+    }
+    .clay-tile-card:hover {
+      box-shadow: 
+        inset 0 2px 4px rgba(255, 255, 255, 0.9),
+        inset 0 -4px 8px rgba(245, 158, 11, 0.4),
+        0 16px 28px -3px rgba(245, 158, 11, 0.35);
+    }
     
     input[type=range]::-webkit-slider-thumb {
       -webkit-appearance: none;
@@ -160,15 +212,15 @@
       </div>
     </header>
 
-    <!-- 中央雙星球與中間導師主舞台 (iPad 橫向黃金比例，完全依據參考圖 00005) -->
-    <div class="relative z-10 my-auto py-4 grid grid-cols-1 md:grid-cols-3 items-center gap-4 md:gap-2">
+    <!-- 中央雙星球與中間導師主舞台 (iPad 橫向黃金比例，純向量與 CSS 黏土元件構建) -->
+    <div class="relative z-10 my-auto py-6 grid grid-cols-1 md:grid-cols-3 items-center gap-6 md:gap-4 max-w-5xl mx-auto w-full">
 
       <!-- ========================================== -->
       <!-- 左側：第一專輯【Planet 1: Morning Adventure】 -->
       <!-- ========================================== -->
-      <div class="flex flex-col items-center text-center group cursor-pointer select-none transition-all duration-300 transform hover:-translate-y-1.5" onclick="openAlbumView('album_1')">
-        <!-- 標題文字 (白色粗體，依照參考圖樣式) -->
-        <div class="mb-1 text-center">
+      <div class="flex flex-col items-center text-center group cursor-pointer select-none transition-all duration-300 transform hover:-translate-y-2" onclick="openAlbumView('album_1')">
+        <!-- 標題文字 (完全參照參考圖格式) -->
+        <div class="mb-2 text-center">
           <h2 class="text-xl md:text-2xl font-black text-white tracking-tight drop-shadow-md">
             Planet 1: Morning Adventure
           </h2>
@@ -177,16 +229,58 @@
           </p>
         </div>
 
-        <!-- 星球本體卡片 (使用精美黏土星球圖檔 + 立體光暈) -->
-        <div class="relative w-56 h-56 md:w-64 md:h-64 flex items-center justify-center my-1">
-          <!-- 背景背光日冕 -->
-          <div class="absolute inset-0 bg-amber-500/20 rounded-full blur-2xl group-hover:bg-amber-400/30 transition-all pointer-events-none"></div>
+        <!-- 3D 黏土星球 1 元件本體 (Pure Clay & SVG Elements) -->
+        <div class="relative w-56 h-56 md:w-64 md:h-64 flex items-center justify-center my-2">
+          
+          <!-- 背後小日冕光芒與漂浮星星 -->
+          <div class="absolute -top-3 w-16 h-10 flex items-center justify-center z-10">
+            <div class="w-10 h-10 rounded-full bg-gradient-to-t from-yellow-300 to-amber-400 shadow-lg flex items-center justify-center text-xl anim-glow-sun">☀️</div>
+          </div>
+          <div class="absolute top-2 -right-2 text-amber-300 text-lg anim-star">✦</div>
+          <div class="absolute bottom-6 -left-3 text-yellow-200 text-sm anim-star" style="animation-delay: 1.4s;">✨</div>
 
-          <!-- 星球 1 黏土高畫質圖檔 (帶浮動跳動動畫) -->
-          <img src="./images/ui/planet1_card.png" alt="Planet 1: Morning Adventure" class="w-full h-full object-contain filter drop-shadow-[0_12px_24px_rgba(245,158,11,0.35)] anim-float-planet group-hover:scale-105 transition-transform duration-300 pointer-events-none">
+          <!-- 環繞星環 (前端與後端立體層疊) -->
+          <svg class="absolute w-72 h-32 pointer-events-none clay-ring-orbit z-30" viewBox="0 0 280 120" style="transform: rotate(-12deg);">
+            <!-- 環身厚度漸層 -->
+            <defs>
+              <linearGradient id="ringGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#fef08a" />
+                <stop offset="50%" stop-color="#f59e0b" />
+                <stop offset="100%" stop-color="#d97706" />
+              </linearGradient>
+            </defs>
+            <ellipse cx="140" cy="60" rx="130" ry="24" fill="none" stroke="url(#ringGrad1)" stroke-width="14" stroke-linecap="round" />
+            <ellipse cx="140" cy="58" rx="130" ry="24" fill="none" stroke="#fff" stroke-width="2" opacity="0.6" />
+          </svg>
 
-          <!-- 探索提示懸浮小徽章 -->
-          <div class="absolute bottom-1 bg-amber-500 text-slate-950 font-black text-[11px] px-3 py-1 rounded-full shadow-lg border border-yellow-200 group-hover:scale-110 transition-transform">
+          <!-- 3D 黏土球體本體 -->
+          <div class="relative w-44 h-44 md:w-48 md:h-48 rounded-full clay-sphere-morning flex items-center justify-center overflow-hidden z-20 group-hover:scale-105 transition-transform duration-300">
+            <!-- 表面可愛小綠黏土島嶼 (生活萌芽) -->
+            <div class="absolute top-6 left-6 w-12 h-10 rounded-full bg-emerald-400/90 shadow-inner transform -rotate-12"></div>
+            <div class="absolute bottom-7 right-8 w-14 h-9 rounded-full bg-emerald-500/80 shadow-inner transform rotate-15"></div>
+            <div class="absolute top-12 right-6 w-8 h-8 rounded-full bg-emerald-400/70 shadow-inner"></div>
+
+            <!-- 可愛表情 (黏土五官) -->
+            <div class="relative z-10 flex flex-col items-center">
+              <div class="flex items-center gap-7 mb-1">
+                <div class="w-3.5 h-3.5 rounded-full bg-slate-900 shadow-sm"></div>
+                <div class="w-3.5 h-3.5 rounded-full bg-slate-900 shadow-sm"></div>
+              </div>
+              <!-- 腮紅 -->
+              <div class="flex items-center gap-12 -mt-1.5 mb-0.5">
+                <div class="w-4 h-2 rounded-full bg-pink-400/80 blur-[0.5px]"></div>
+                <div class="w-4 h-2 rounded-full bg-pink-400/80 blur-[0.5px]"></div>
+              </div>
+              <!-- 彎彎微笑嘴巴 -->
+              <div class="w-5 h-2.5 border-b-3 border-slate-900 rounded-b-full"></div>
+            </div>
+
+            <!-- 球體高光 -->
+            <div class="absolute top-2 left-6 w-14 h-8 rounded-full bg-white/40 blur-xs transform -rotate-30 pointer-events-none"></div>
+          </div>
+
+          <!-- 星球下方探索徽章 -->
+          <div class="absolute -bottom-2 z-30 bg-gradient-to-r from-amber-400 to-orange-400 text-slate-950 font-black text-xs px-4 py-1.5 rounded-full shadow-lg border-2 border-yellow-200 group-hover:scale-110 transition-transform">
             <span>探索 10 關 ➜</span>
           </div>
         </div>
@@ -196,23 +290,55 @@
       <!-- 中央：可愛立體白黏土小導師 (Mascot Guide)     -->
       <!-- ========================================== -->
       <div class="flex flex-col items-center text-center relative z-20 select-none py-2">
-        <div class="relative w-40 md:w-48 h-56 md:h-64 flex items-center justify-center">
-          <!-- 導師背後立體發光光環 -->
-          <div class="absolute inset-0 bg-gradient-to-t from-pink-500/20 via-sky-400/20 to-transparent rounded-full blur-2xl"></div>
+        <!-- 導師背後立體發光光環 -->
+        <div class="absolute inset-0 bg-gradient-to-t from-pink-500/20 via-sky-400/20 to-transparent rounded-full blur-2xl"></div>
 
-          <!-- 小白人導師立牌 (依據參考圖圖檔) -->
-          <div class="relative w-full h-full flex items-center justify-center anim-float">
-            <img src="./images/ui/mascot_card.png" alt="Little Guide Mascot" class="max-w-full max-h-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]">
-            
-            <!-- 小導師互動語音氣泡 -->
-            <div class="absolute -top-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-2xl border border-white/60 shadow-lg text-[11px] font-black text-slate-800 animate-bounce">
-              <span>👋 來和我一起跳舞吧！</span>
+        <!-- 小導師 3D 元件 -->
+        <div class="relative w-44 h-60 flex flex-col items-center justify-center anim-float cursor-pointer group" onclick="alert('小導師：歡迎來到 KaiDance 奇妙律動！選個星球一起跳！')">
+          
+          <!-- 對話氣泡 (Speech Bubble) -->
+          <div class="absolute -top-4 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-2xl border-2 border-white/80 shadow-xl text-xs font-black text-slate-800 animate-bounce z-30">
+            <span>👋 來和我一起跳舞吧！</span>
+          </div>
+
+          <!-- 3D 白黏土頭部 -->
+          <div class="relative w-28 h-28 rounded-full clay-mascot-head flex flex-col items-center justify-center z-20">
+            <!-- 眼睛 -->
+            <div class="flex items-center gap-7 mb-1 mt-1">
+              <div class="w-3.5 h-3.5 rounded-full bg-slate-900 shadow-xs"></div>
+              <div class="w-3.5 h-3.5 rounded-full bg-slate-900 shadow-xs"></div>
             </div>
+            <!-- 粉嫩腮紅 -->
+            <div class="flex items-center gap-10 -mt-1.5 mb-1">
+              <div class="w-3.5 h-2 rounded-full bg-pink-400/90 blur-[0.5px]"></div>
+              <div class="w-3.5 h-2 rounded-full bg-pink-400/90 blur-[0.5px]"></div>
+            </div>
+            <!-- 圓圓開朗嘴巴 -->
+            <div class="w-4 h-3.5 bg-slate-900 rounded-full flex items-end justify-center overflow-hidden">
+              <div class="w-3 h-1.5 bg-pink-400 rounded-t-full"></div>
+            </div>
+            <!-- 高光 -->
+            <div class="absolute top-2 left-4 w-7 h-4 rounded-full bg-white/60 blur-[1px] transform -rotate-30"></div>
+          </div>
+
+          <!-- 3D 黏土身體與揮手動作 -->
+          <div class="relative -mt-2 flex items-center justify-center z-10">
+            <!-- 左手招手 (Wave Hand) -->
+            <div class="w-7 h-14 rounded-full bg-slate-100 shadow-md transform -rotate-45 -mr-2 origin-bottom-right" style="box-shadow: inset -2px -2px 6px rgba(100,116,139,0.3);"></div>
+            <!-- 軀幹 -->
+            <div class="w-16 h-20 rounded-3xl bg-slate-100 shadow-md" style="box-shadow: inset -3px -3px 8px rgba(100,116,139,0.3), inset 3px 3px 8px #fff;"></div>
+            <!-- 右手自然下垂 -->
+            <div class="w-7 h-14 rounded-full bg-slate-100 shadow-md transform rotate-20 -ml-2 origin-top-left" style="box-shadow: inset -2px -2px 6px rgba(100,116,139,0.3);"></div>
+          </div>
+
+          <!-- 雙腳 -->
+          <div class="flex items-center gap-4 -mt-2 z-10">
+            <div class="w-8 h-6 rounded-full bg-slate-100 shadow-md" style="box-shadow: inset -2px -2px 5px rgba(100,116,139,0.3);"></div>
+            <div class="w-8 h-6 rounded-full bg-slate-100 shadow-md" style="box-shadow: inset -2px -2px 5px rgba(100,116,139,0.3);"></div>
           </div>
         </div>
 
-        <!-- 導師角色切換快捷開關 (樂樂 / 美美 / 小精靈) -->
-        <div class="mt-2 flex items-center gap-1.5 bg-slate-800/90 backdrop-blur px-3 py-1 rounded-full border border-slate-600/80 text-[11px] text-slate-300 shadow">
+        <div class="mt-1 flex items-center gap-1.5 bg-slate-800/80 px-3.5 py-1 rounded-full border border-slate-700 text-[11px] text-slate-300 shadow">
           <span class="text-amber-300 font-bold">✨ 小導師已就緒</span>
         </div>
       </div>
@@ -220,9 +346,9 @@
       <!-- ========================================== -->
       <!-- 右側：第二專輯【Planet 2: Groove Party】      -->
       <!-- ========================================== -->
-      <div class="flex flex-col items-center text-center group cursor-pointer select-none transition-all duration-300 transform hover:-translate-y-1.5" onclick="openAlbumView('album_2')">
-        <!-- 標題文字 (白色粗體，依照參考圖樣式) -->
-        <div class="mb-1 text-center">
+      <div class="flex flex-col items-center text-center group cursor-pointer select-none transition-all duration-300 transform hover:-translate-y-2" onclick="openAlbumView('album_2')">
+        <!-- 標題文字 (完全參照參考圖格式) -->
+        <div class="mb-2 text-center">
           <h2 class="text-xl md:text-2xl font-black text-white tracking-tight drop-shadow-md">
             Planet 2: Groove Party
           </h2>
@@ -231,16 +357,61 @@
           </p>
         </div>
 
-        <!-- 星球本體卡片 (使用精美霓虹耳機星球圖檔 + 立體光暈) -->
-        <div class="relative w-56 h-56 md:w-64 md:h-64 flex items-center justify-center my-1">
-          <!-- 背景背光霓虹光暈 -->
-          <div class="absolute inset-0 bg-fuchsia-600/20 rounded-full blur-2xl group-hover:bg-fuchsia-500/35 transition-all pointer-events-none"></div>
+        <!-- 3D 黏土星球 2 元件本體 (Pure Clay & SVG Elements) -->
+        <div class="relative w-56 h-56 md:w-64 md:h-64 flex items-center justify-center my-2">
+          
+          <!-- 音符小裝飾與星光 -->
+          <div class="absolute -top-2 left-6 text-pink-400 text-2xl animate-bounce">🎵</div>
+          <div class="absolute top-4 -right-2 text-fuchsia-300 text-sm anim-star">✦</div>
+          <div class="absolute bottom-6 -right-3 text-pink-300 text-base anim-star" style="animation-delay: 0.9s;">✨</div>
 
-          <!-- 星球 2 黏土高畫質圖檔 (帶浮動跳動動畫) -->
-          <img src="./images/ui/planet2_card.png" alt="Planet 2: Groove Party" class="w-full h-full object-contain filter drop-shadow-[0_12px_24px_rgba(217,70,239,0.35)] anim-float-planet group-hover:scale-105 transition-transform duration-300 pointer-events-none" style="animation-delay: 1.5s;">
+          <!-- 立體 DJ 耳機頭戴橫樑 (Headphone Arc) -->
+          <div class="absolute -top-3 w-40 h-28 rounded-t-full border-t-8 border-x-8 border-sky-400 shadow-lg pointer-events-none z-30" style="filter: drop-shadow(0 6px 12px rgba(56, 189, 248, 0.5));"></div>
+          <!-- 左右耳罩 -->
+          <div class="absolute top-16 left-3 w-8 h-14 rounded-2xl bg-gradient-to-br from-sky-400 via-indigo-500 to-pink-500 shadow-xl z-30"></div>
+          <div class="absolute top-16 right-3 w-8 h-14 rounded-2xl bg-gradient-to-bl from-sky-400 via-indigo-500 to-pink-500 shadow-xl z-30"></div>
 
-          <!-- 探索提示懸浮小徽章 -->
-          <div class="absolute bottom-1 bg-pink-500 text-white font-black text-[11px] px-3 py-1 rounded-full shadow-lg border border-pink-200 group-hover:scale-110 transition-transform">
+          <!-- 環繞霓虹粉星環 -->
+          <svg class="absolute w-72 h-32 pointer-events-none clay-ring-orbit z-30" viewBox="0 0 280 120" style="transform: rotate(10deg);">
+            <defs>
+              <linearGradient id="ringGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#f472b6" />
+                <stop offset="50%" stop-color="#fbcfe8" />
+                <stop offset="100%" stop-color="#ec4899" />
+              </linearGradient>
+            </defs>
+            <ellipse cx="140" cy="60" rx="130" ry="24" fill="none" stroke="url(#ringGrad2)" stroke-width="14" stroke-linecap="round" />
+            <ellipse cx="140" cy="58" rx="130" ry="24" fill="none" stroke="#fff" stroke-width="2" opacity="0.6" />
+          </svg>
+
+          <!-- 3D 黏土球體本體 (霓虹紫粉) -->
+          <div class="relative w-44 h-44 md:w-48 md:h-48 rounded-full clay-sphere-groove flex items-center justify-center overflow-hidden z-20 group-hover:scale-105 transition-transform duration-300">
+            <!-- 表面波點星斑 (Clay Spots) -->
+            <div class="absolute top-6 right-8 w-8 h-8 rounded-full bg-pink-300/80 shadow-inner"></div>
+            <div class="absolute bottom-8 left-8 w-9 h-9 rounded-full bg-pink-300/80 shadow-inner"></div>
+            <div class="absolute top-14 left-7 w-6 h-6 rounded-full bg-purple-300/70 shadow-inner"></div>
+
+            <!-- 可愛表情 (黏土五官) -->
+            <div class="relative z-10 flex flex-col items-center">
+              <div class="flex items-center gap-7 mb-1">
+                <div class="w-3.5 h-3.5 rounded-full bg-slate-950 shadow-sm"></div>
+                <div class="w-3.5 h-3.5 rounded-full bg-slate-950 shadow-sm"></div>
+              </div>
+              <!-- 腮紅 -->
+              <div class="flex items-center gap-12 -mt-1.5 mb-0.5">
+                <div class="w-4 h-2 rounded-full bg-pink-300 blur-[0.5px]"></div>
+                <div class="w-4 h-2 rounded-full bg-pink-300 blur-[0.5px]"></div>
+              </div>
+              <!-- 歡樂微笑 -->
+              <div class="w-5 h-2.5 border-b-3 border-slate-950 rounded-b-full"></div>
+            </div>
+
+            <!-- 球體高光 -->
+            <div class="absolute top-2 left-6 w-14 h-8 rounded-full bg-white/40 blur-xs transform -rotate-30 pointer-events-none"></div>
+          </div>
+
+          <!-- 星球下方探索徽章 -->
+          <div class="absolute -bottom-2 z-30 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-black text-xs px-4 py-1.5 rounded-full shadow-lg border-2 border-pink-200 group-hover:scale-110 transition-transform">
             <span>派對 10 關 ➜</span>
           </div>
         </div>
@@ -260,7 +431,7 @@
       </button>
 
       <!-- Launch Adventure 主按鈕 (完全採用參考圖的米白-粉黃-水藍漸層與深藍大字) -->
-      <button onclick="playCurrentAlbumAll()" class="px-12 md:px-20 py-3.5 md:py-4 rounded-full font-black text-base md:text-xl tracking-tight transition-all duration-300 transform active:scale-95 hover:scale-[1.02] shadow-2xl flex items-center justify-center gap-3 border-2 border-white/60" style="background: linear-gradient(90deg, #fef08a 0%, #fed7aa 25%, #fbcfe8 60%, #bae6fd 100%); color: #1e1b4b; box-shadow: 0 10px 30px -5px rgba(251, 207, 232, 0.5);">
+      <button onclick="playCurrentAlbumAll()" class="clay-capsule-btn px-12 md:px-20 py-3.5 md:py-4 rounded-full font-black text-base md:text-xl tracking-tight transition-all duration-300 transform flex items-center justify-center gap-3 border-2 border-white/80">
         <span>Launch Adventure</span>
         <span class="text-sm md:text-base font-black opacity-80">(全專連播)</span>
       </button>
