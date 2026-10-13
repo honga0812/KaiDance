@@ -135,16 +135,16 @@
     </div>
 
     <!-- 歡迎大橫幅 (隨當前專輯動態切換) -->
-    <div id="album-banner" class="bg-gradient-to-r from-amber-400 via-orange-400 to-pink-400 rounded-3xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden mb-6 transition-all duration-300">
+    <div id="album-banner" class="bg-gradient-to-r from-amber-500 via-orange-400 to-rose-400 rounded-3xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden mb-6 transition-all duration-300">
       <div class="relative z-10 max-w-xl">
         <span id="album-banner-badge" class="bg-white/20 backdrop-blur text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider inline-block">
-          🌞 幼兒園必備 10 首晨操與生活常規大冒險
+          🌟 第一集 10 首全曲收錄 · 動作引導同步
         </span>
         <h2 id="album-banner-title" class="text-2xl md:text-4xl font-black mt-3 leading-tight">
-          Little Steps Big World<br>站到大螢幕前，瞬間化身發光火柴人！
+          第一集：探索生活大冒險<br>Little Steps Big World: Sing & Play Adventures
         </h2>
         <p id="album-banner-desc" class="text-xs md:text-sm text-amber-100 font-medium mt-2">
-          每一首歌都可以單獨跟跳，也可以點擊「整張專輯連續播放」，讓小朋友暢快跳完全套！
+          幼兒園必備 10 首晨操與生活常規大冒險 · 每一首歌都可獨立單曲跟跳，也可點選「整張專輯循環播放」自動連播！
         </p>
       </div>
       <div id="album-banner-emoji" class="absolute -right-6 -bottom-8 text-9xl opacity-30 select-none pointer-events-none">
@@ -1099,7 +1099,7 @@
 
       restartDance();
       setTimeout(() => {
-        togglePlay();
+        startDance();
       }, 300);
 
       // 进入互动舞台自动开启摄像头
@@ -2794,6 +2794,13 @@
       }
     });
 
+    audioBgm.addEventListener('error', (e) => {
+      console.warn("audioBgm playback error:", e);
+      if (isAlbumContinuousPlay) {
+        setTimeout(nextSong, 500);
+      }
+    });
+
     function triggerFeedback() {
       popFeedback.classList.remove('hidden');
       popFeedback.classList.remove('anim-star');
@@ -2802,35 +2809,46 @@
     }
 
     function togglePlay() {
-      isPlaying = !isPlaying;
       if (isPlaying) {
-        playIcon.innerText = "⏸";
-        playLabel.innerText = "暫停舞曲";
-        btnPlay.classList.replace('bg-amber-500', 'bg-emerald-500');
-
-        audioBgm.play().catch(e => console.log("Audio autoplay fallback:", e));
-        coachVideo.play().catch(e => console.log("Video play fallback:", e));
-
-        timerInterval = setInterval(() => {
-          if (!audioBgm.paused && audioBgm.currentTime > 0) {
-            currentTime = audioBgm.currentTime;
-          } else {
-            currentTime += 0.1 * playSpeed;
-          }
-          const maxDur = songDatabase[currentSongKey].duration || 120;
-          if (currentTime >= maxDur) {
-            pauseDance();
-            return;
-          }
-          updatePlaybackUI();
-        }, 100);
-
-        const seg = getCurrentSegment();
-        if (seg) playTeacherVoice(seg.voice);
-
-      } else {
         pauseDance();
+      } else {
+        startDance();
       }
+    }
+
+    function startDance() {
+      isPlaying = true;
+      playIcon.innerText = "⏸";
+      playLabel.innerText = "暫停舞曲";
+      btnPlay.classList.replace('bg-amber-500', 'bg-emerald-500');
+
+      if (timerInterval) clearInterval(timerInterval);
+
+      audioBgm.play().catch(e => {
+        console.log("Audio autoplay fallback:", e);
+      });
+      coachVideo.play().catch(e => console.log("Video play fallback:", e));
+
+      timerInterval = setInterval(() => {
+        if (!audioBgm.paused && audioBgm.currentTime > 0) {
+          currentTime = audioBgm.currentTime;
+        } else {
+          currentTime += 0.1 * playSpeed;
+        }
+        const maxDur = (songDatabase[currentSongKey] && songDatabase[currentSongKey].duration) || 120;
+        if (currentTime >= maxDur) {
+          if (isAlbumContinuousPlay) {
+            nextSong();
+          } else {
+            pauseDance();
+          }
+          return;
+        }
+        updatePlaybackUI();
+      }, 100);
+
+      const seg = getCurrentSegment();
+      if (seg) playTeacherVoice(seg.voice);
     }
 
     function pauseDance() {
@@ -2969,7 +2987,7 @@
     document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
 
     updatePlaybackUI();
-    renderLobbySongs(currentAlbumId);
+    switchAlbum(currentAlbumId);
     updateLoopModeUI();
     // 立即启动发光火柴人渲染主循环（常驻舞台，实时渲染）
     renderStickmanLoop();
