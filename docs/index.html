@@ -130,6 +130,34 @@
         0 16px 28px -3px rgba(245, 158, 11, 0.35);
     }
     
+    /* 專屬星球關卡選單風格 (00007 晨光島環形樂園 vs 00012 星光彩虹軌道) */
+    .planet-levels-p1 {
+      background: radial-gradient(circle at 50% 15%, rgba(56, 189, 248, 0.28) 0%, rgba(15, 23, 42, 0.88) 70%, #020617 100%),
+                  url('./images/ui/p1_levels_bg.jpg') center center / cover no-repeat;
+      background-blend-mode: overlay;
+    }
+    .planet-levels-p2 {
+      background: radial-gradient(circle at 50% 15%, rgba(168, 85, 247, 0.35) 0%, rgba(15, 23, 42, 0.9) 70%, #020617 100%),
+                  url('./images/ui/p2_levels_bg.jpg') center center / cover no-repeat;
+      background-blend-mode: overlay;
+    }
+    .card-clay-morning {
+      background: radial-gradient(circle at 25% 20%, rgba(255,255,255,0.95) 0%, rgba(254,243,199,0.9) 55%, rgba(253,230,138,0.85) 100%);
+      box-shadow: 
+        inset 0 3px 5px rgba(255,255,255,0.9),
+        inset 0 -4px 8px rgba(217,119,6,0.3),
+        0 12px 24px -4px rgba(245,158,11,0.35);
+      border: 2px solid rgba(252,211,77,0.7);
+    }
+    .card-clay-groove {
+      background: radial-gradient(circle at 25% 20%, rgba(255,255,255,0.95) 0%, rgba(250,232,255,0.9) 55%, rgba(243,232,255,0.85) 100%);
+      box-shadow: 
+        inset 0 3px 5px rgba(255,255,255,0.9),
+        inset 0 -4px 8px rgba(192,38,211,0.3),
+        0 12px 24px -4px rgba(217,70,239,0.35);
+      border: 2px solid rgba(240,171,252,0.7);
+    }
+    
     input[type=range]::-webkit-slider-thumb {
       -webkit-appearance: none;
       height: 18px;
@@ -189,22 +217,20 @@
       <!-- 左側隱形平衡佔位 -->
       <div class="w-10 md:w-28"></div>
 
-      <!-- 正中央：Apple 風格標誌與標題膠囊 [  KaiDance  ✦  👤  + ] -->
+      <!-- 正中央：Apple 風格標誌與標題膠囊 [  KaiDance 奇妙律動 ✦ ] -->
       <div class="flex items-center gap-2.5 bg-slate-800/80 hover:bg-slate-800 backdrop-blur-xl px-5 py-2 rounded-full border border-slate-600/60 shadow-lg text-white transition">
         <span class="text-base select-none"></span>
         <span class="font-black text-sm md:text-base tracking-tight text-white select-none">KaiDance</span>
         <span class="text-amber-300 text-sm select-none">✦</span>
-        <button onclick="alert('小朋友舞者切換：支援多位小舞者存檔！')" class="text-slate-300 hover:text-white transition text-xs flex items-center gap-1 ml-1" title="小舞者帳戶">
-          <span>👤</span>
-          <span class="text-[10px] font-bold text-slate-400">+</span>
-        </button>
+        <span class="text-xs font-bold text-pink-400 select-none">奇妙星律動</span>
       </div>
 
-      <!-- 右側：今日獎勵星與家長設定 -->
+      <!-- 右側：累計總積分 (9位數不斷累積) 與家長設定 -->
       <div class="flex items-center gap-2">
-        <div class="hidden sm:flex items-center gap-1.5 bg-slate-800/70 backdrop-blur-md border border-slate-700/80 px-3.5 py-1.5 rounded-full text-xs font-black text-amber-300 shadow-sm">
-          <span>⭐</span>
-          <span id="total-stars-lobby">58</span>
+        <div class="flex items-center gap-1.5 bg-slate-800/85 backdrop-blur-md border border-amber-400/50 px-4 py-1.5 rounded-full text-xs font-black text-amber-300 shadow-md" title="全宇宙跳舞總積分 (最多累計至 9 位數)">
+          <span>🏆</span>
+          <span class="text-[10px] text-slate-400 font-bold hidden sm:inline">總積分:</span>
+          <strong id="total-score-lobby" class="text-amber-400 text-xs sm:text-sm font-mono tracking-wider tabular-nums">000,000,980</strong>
         </div>
         <button onclick="alert('家長與教練設定：支援音量配比、鏡頭靈敏度與關卡鎖定！')" class="w-9 h-9 rounded-full bg-slate-800/80 hover:bg-slate-700 border border-slate-600/60 flex items-center justify-center text-sm text-slate-200 shadow-md transition active:scale-95" title="設定與家長控制">
           ⚙️
@@ -217,9 +243,10 @@
 
       <!-- ========================================== -->
       <!-- 左側：第一專輯【Planet 1: Morning Adventure】 -->
+      <!-- (完全採用範例圖檔樣式與比例大小)             -->
       <!-- ========================================== -->
       <div class="flex flex-col items-center text-center group cursor-pointer select-none transition-all duration-300 transform hover:-translate-y-2" onclick="openAlbumView('album_1')">
-        <!-- 標題文字 (完全參照參考圖格式) -->
+        <!-- 標題文字 (完全參照範例圖格式) -->
         <div class="mb-2 text-center">
           <h2 class="text-xl md:text-2xl font-black text-white tracking-tight drop-shadow-md">
             Planet 1: Morning Adventure
@@ -229,125 +256,85 @@
           </p>
         </div>
 
-        <!-- 3D 黏土星球 1 元件本體 (Pure Clay & SVG Elements) -->
-        <div class="relative w-56 h-56 md:w-64 md:h-64 flex items-center justify-center my-2">
-          
-          <!-- 背後小日冕光芒與漂浮星星 -->
-          <div class="absolute -top-3 w-16 h-10 flex items-center justify-center z-10">
-            <div class="w-10 h-10 rounded-full bg-gradient-to-t from-yellow-300 to-amber-400 shadow-lg flex items-center justify-center text-xl anim-glow-sun">☀️</div>
-          </div>
-          <div class="absolute top-2 -right-2 text-amber-300 text-lg anim-star">✦</div>
-          <div class="absolute bottom-6 -left-3 text-yellow-200 text-sm anim-star" style="animation-delay: 1.4s;">✨</div>
+        <!-- 星球 1 範例圖檔實體 (原汁原味範例圖比例與細節) -->
+        <div class="relative w-60 h-60 md:w-72 md:h-72 flex items-center justify-center my-1">
+          <!-- 背後金光日冕光暈 -->
+          <div class="absolute inset-4 bg-amber-500/25 rounded-full blur-2xl group-hover:bg-amber-400/40 transition-all pointer-events-none"></div>
 
-          <!-- 環繞星環 (前端與後端立體層疊) -->
-          <svg class="absolute w-72 h-32 pointer-events-none clay-ring-orbit z-30" viewBox="0 0 280 120" style="transform: rotate(-12deg);">
-            <!-- 環身厚度漸層 -->
-            <defs>
-              <linearGradient id="ringGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#fef08a" />
-                <stop offset="50%" stop-color="#f59e0b" />
-                <stop offset="100%" stop-color="#d97706" />
-              </linearGradient>
-            </defs>
-            <ellipse cx="140" cy="60" rx="130" ry="24" fill="none" stroke="url(#ringGrad1)" stroke-width="14" stroke-linecap="round" />
-            <ellipse cx="140" cy="58" rx="130" ry="24" fill="none" stroke="#fff" stroke-width="2" opacity="0.6" />
-          </svg>
+          <!-- 精確截取自範例圖的高解析度星球本體 -->
+          <img src="./images/ui/p1_morning_exact.png" alt="Planet 1: Morning Adventure" class="w-full h-full object-contain filter drop-shadow-[0_16px_28px_rgba(245,158,11,0.45)] anim-float-planet group-hover:scale-105 transition-transform duration-300 pointer-events-none">
 
-          <!-- 3D 黏土球體本體 -->
-          <div class="relative w-44 h-44 md:w-48 md:h-48 rounded-full clay-sphere-morning flex items-center justify-center overflow-hidden z-20 group-hover:scale-105 transition-transform duration-300">
-            <!-- 表面可愛小綠黏土島嶼 (生活萌芽) -->
-            <div class="absolute top-6 left-6 w-12 h-10 rounded-full bg-emerald-400/90 shadow-inner transform -rotate-12"></div>
-            <div class="absolute bottom-7 right-8 w-14 h-9 rounded-full bg-emerald-500/80 shadow-inner transform rotate-15"></div>
-            <div class="absolute top-12 right-6 w-8 h-8 rounded-full bg-emerald-400/70 shadow-inner"></div>
-
-            <!-- 可愛表情 (黏土五官) -->
-            <div class="relative z-10 flex flex-col items-center">
-              <div class="flex items-center gap-7 mb-1">
-                <div class="w-3.5 h-3.5 rounded-full bg-slate-900 shadow-sm"></div>
-                <div class="w-3.5 h-3.5 rounded-full bg-slate-900 shadow-sm"></div>
-              </div>
-              <!-- 腮紅 -->
-              <div class="flex items-center gap-12 -mt-1.5 mb-0.5">
-                <div class="w-4 h-2 rounded-full bg-pink-400/80 blur-[0.5px]"></div>
-                <div class="w-4 h-2 rounded-full bg-pink-400/80 blur-[0.5px]"></div>
-              </div>
-              <!-- 彎彎微笑嘴巴 -->
-              <div class="w-5 h-2.5 border-b-3 border-slate-900 rounded-b-full"></div>
-            </div>
-
-            <!-- 球體高光 -->
-            <div class="absolute top-2 left-6 w-14 h-8 rounded-full bg-white/40 blur-xs transform -rotate-30 pointer-events-none"></div>
-          </div>
-
-          <!-- 星球下方探索徽章 -->
-          <div class="absolute -bottom-2 z-30 bg-gradient-to-r from-amber-400 to-orange-400 text-slate-950 font-black text-xs px-4 py-1.5 rounded-full shadow-lg border-2 border-yellow-200 group-hover:scale-110 transition-transform">
-            <span>探索 10 關 ➜</span>
+          <!-- 探索提示懸浮小徽章 -->
+          <div class="absolute bottom-1 bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-black text-xs px-4 py-1.5 rounded-full shadow-xl border-2 border-yellow-200 group-hover:scale-110 transition-transform">
+            <span>探索晨光星球 (10關) ➜</span>
           </div>
         </div>
       </div>
 
       <!-- ========================================== -->
-      <!-- 中央：可愛立體白黏土小導師 (Mascot Guide)     -->
+      <!-- 中央：5 首歌 3D 舞蹈天團歡迎小隊 (Dance Team) -->
+      <!-- (小隊長、隊員環形圍繞，揮手歡迎大家來跳舞)    -->
       <!-- ========================================== -->
       <div class="flex flex-col items-center text-center relative z-20 select-none py-2">
-        <!-- 導師背後立體發光光環 -->
-        <div class="absolute inset-0 bg-gradient-to-t from-pink-500/20 via-sky-400/20 to-transparent rounded-full blur-2xl"></div>
+        <!-- 導師背後立體發光舞台光環 -->
+        <div class="absolute inset-0 bg-gradient-to-t from-pink-500/25 via-sky-400/20 to-transparent rounded-full blur-2xl"></div>
 
-        <!-- 小導師 3D 元件 -->
-        <div class="relative w-44 h-60 flex flex-col items-center justify-center anim-float cursor-pointer group" onclick="alert('小導師：歡迎來到 KaiDance 奇妙律動！選個星球一起跳！')">
+        <!-- 歡迎舞團舞台容器 -->
+        <div class="relative w-56 h-64 md:w-64 md:h-72 flex items-center justify-center anim-float cursor-pointer group" onclick="alert('🌟 KaiDance 舞蹈天團：樂樂、美美、小陽、小花、糖糖 歡迎大家一起來跳舞！')">
           
-          <!-- 對話氣泡 (Speech Bubble) -->
-          <div class="absolute -top-4 bg-white/95 backdrop-blur-md px-4 py-1.5 rounded-2xl border-2 border-white/80 shadow-xl text-xs font-black text-slate-800 animate-bounce z-30">
-            <span>👋 來和我一起跳舞吧！</span>
+          <!-- 頂部歡樂跳舞氣泡 -->
+          <div class="absolute -top-3 z-30 bg-gradient-to-r from-amber-300 via-pink-400 to-purple-400 p-[2px] rounded-2xl shadow-xl animate-bounce">
+            <div class="bg-slate-950/90 backdrop-blur px-3 py-1 rounded-2xl text-[11px] font-black text-white flex items-center gap-1.5">
+              <span>🎉</span>
+              <span>舞蹈天團歡迎大家來跳舞！</span>
+            </div>
           </div>
 
-          <!-- 3D 白黏土頭部 -->
-          <div class="relative w-28 h-28 rounded-full clay-mascot-head flex flex-col items-center justify-center z-20">
-            <!-- 眼睛 -->
-            <div class="flex items-center gap-7 mb-1 mt-1">
-              <div class="w-3.5 h-3.5 rounded-full bg-slate-900 shadow-xs"></div>
-              <div class="w-3.5 h-3.5 rounded-full bg-slate-900 shadow-xs"></div>
+          <!-- 舞團隊形：中央領舞小導師 (大立牌) + 四周 4 位伴舞小隊員 (環繞小立牌) -->
+          <!-- 1. 中央隊長 (Track 01: 樂樂) -->
+          <div class="relative z-20 w-28 h-40 md:w-32 md:h-44 rounded-3xl overflow-hidden border-3 border-amber-300 shadow-2xl bg-slate-900 group-hover:scale-105 transition-transform">
+            <img id="main-crew-leader" src="./images/ui/coach_team_t1.jpg" alt="隊長樂樂" class="w-full h-full object-cover object-top">
+            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent py-1 text-center">
+              <span class="text-[10px] font-black text-amber-300">★ 隊長樂樂</span>
             </div>
-            <!-- 粉嫩腮紅 -->
-            <div class="flex items-center gap-10 -mt-1.5 mb-1">
-              <div class="w-3.5 h-2 rounded-full bg-pink-400/90 blur-[0.5px]"></div>
-              <div class="w-3.5 h-2 rounded-full bg-pink-400/90 blur-[0.5px]"></div>
-            </div>
-            <!-- 圓圓開朗嘴巴 -->
-            <div class="w-4 h-3.5 bg-slate-900 rounded-full flex items-end justify-center overflow-hidden">
-              <div class="w-3 h-1.5 bg-pink-400 rounded-t-full"></div>
-            </div>
-            <!-- 高光 -->
-            <div class="absolute top-2 left-4 w-7 h-4 rounded-full bg-white/60 blur-[1px] transform -rotate-30"></div>
           </div>
 
-          <!-- 3D 黏土身體與揮手動作 -->
-          <div class="relative -mt-2 flex items-center justify-center z-10">
-            <!-- 左手招手 (Wave Hand) -->
-            <div class="w-7 h-14 rounded-full bg-slate-100 shadow-md transform -rotate-45 -mr-2 origin-bottom-right" style="box-shadow: inset -2px -2px 6px rgba(100,116,139,0.3);"></div>
-            <!-- 軀幹 -->
-            <div class="w-16 h-20 rounded-3xl bg-slate-100 shadow-md" style="box-shadow: inset -3px -3px 8px rgba(100,116,139,0.3), inset 3px 3px 8px #fff;"></div>
-            <!-- 右手自然下垂 -->
-            <div class="w-7 h-14 rounded-full bg-slate-100 shadow-md transform rotate-20 -ml-2 origin-top-left" style="box-shadow: inset -2px -2px 6px rgba(100,116,139,0.3);"></div>
+          <!-- 2. 左上伴舞 (Track 02: 小美) -->
+          <div class="absolute -left-1 top-6 z-10 w-16 h-16 md:w-18 md:h-18 rounded-2xl overflow-hidden border-2 border-pink-300 shadow-lg bg-slate-900 transform -rotate-12 group-hover:-translate-x-1 transition-transform" title="T2 小美">
+            <img src="./images/ui/coach_team_t2.jpg" alt="小美" class="w-full h-full object-cover object-top">
           </div>
 
-          <!-- 雙腳 -->
-          <div class="flex items-center gap-4 -mt-2 z-10">
-            <div class="w-8 h-6 rounded-full bg-slate-100 shadow-md" style="box-shadow: inset -2px -2px 5px rgba(100,116,139,0.3);"></div>
-            <div class="w-8 h-6 rounded-full bg-slate-100 shadow-md" style="box-shadow: inset -2px -2px 5px rgba(100,116,139,0.3);"></div>
+          <!-- 3. 右上伴舞 (Track 03: 小陽) -->
+          <div class="absolute -right-1 top-6 z-10 w-16 h-16 md:w-18 md:h-18 rounded-2xl overflow-hidden border-2 border-sky-300 shadow-lg bg-slate-900 transform rotate-12 group-hover:translate-x-1 transition-transform" title="T3 小陽">
+            <img src="./images/ui/coach_team_t3.jpg" alt="小陽" class="w-full h-full object-cover object-top">
           </div>
+
+          <!-- 4. 左下伴舞 (Track 04: 小花) -->
+          <div class="absolute left-1 bottom-4 z-10 w-14 h-14 md:w-16 md:h-16 rounded-2xl overflow-hidden border-2 border-emerald-300 shadow-lg bg-slate-900 transform -rotate-6 group-hover:-translate-x-1 transition-transform" title="T4 小花">
+            <img src="./images/ui/coach_team_t4.jpg" alt="小花" class="w-full h-full object-cover object-top">
+          </div>
+
+          <!-- 5. 右下伴舞 (Track 05: 糖糖) -->
+          <div class="absolute right-1 bottom-4 z-10 w-14 h-14 md:w-16 md:h-16 rounded-2xl overflow-hidden border-2 border-purple-300 shadow-lg bg-slate-900 transform rotate-6 group-hover:translate-x-1 transition-transform" title="T5 糖糖">
+            <img src="./images/ui/coach_team_t5.jpg" alt="糖糖" class="w-full h-full object-cover object-top">
+          </div>
+
         </div>
 
-        <div class="mt-1 flex items-center gap-1.5 bg-slate-800/80 px-3.5 py-1 rounded-full border border-slate-700 text-[11px] text-slate-300 shadow">
-          <span class="text-amber-300 font-bold">✨ 小導師已就緒</span>
+        <!-- 舞團稱號膠囊 -->
+        <div class="mt-1 flex items-center gap-1.5 bg-slate-800/85 px-4 py-1 rounded-full border border-slate-700 text-[11px] text-slate-300 shadow">
+          <span class="text-amber-300 font-bold">✨ 5大曲目舞團集結</span>
+          <span class="text-slate-500">·</span>
+          <span class="text-sky-300">隨時為你示範跳</span>
         </div>
       </div>
 
       <!-- ========================================== -->
       <!-- 右側：第二專輯【Planet 2: Groove Party】      -->
+      <!-- (完全採用範例圖檔樣式與比例大小)             -->
       <!-- ========================================== -->
       <div class="flex flex-col items-center text-center group cursor-pointer select-none transition-all duration-300 transform hover:-translate-y-2" onclick="openAlbumView('album_2')">
-        <!-- 標題文字 (完全參照參考圖格式) -->
+        <!-- 標題文字 (完全參照範例圖格式) -->
         <div class="mb-2 text-center">
           <h2 class="text-xl md:text-2xl font-black text-white tracking-tight drop-shadow-md">
             Planet 2: Groove Party
@@ -357,62 +344,17 @@
           </p>
         </div>
 
-        <!-- 3D 黏土星球 2 元件本體 (Pure Clay & SVG Elements) -->
-        <div class="relative w-56 h-56 md:w-64 md:h-64 flex items-center justify-center my-2">
-          
-          <!-- 音符小裝飾與星光 -->
-          <div class="absolute -top-2 left-6 text-pink-400 text-2xl animate-bounce">🎵</div>
-          <div class="absolute top-4 -right-2 text-fuchsia-300 text-sm anim-star">✦</div>
-          <div class="absolute bottom-6 -right-3 text-pink-300 text-base anim-star" style="animation-delay: 0.9s;">✨</div>
+        <!-- 星球 2 範例圖檔實體 (原汁原味範例圖比例與細節) -->
+        <div class="relative w-60 h-60 md:w-72 md:h-72 flex items-center justify-center my-1">
+          <!-- 背後霓虹紫粉光暈 -->
+          <div class="absolute inset-4 bg-fuchsia-600/25 rounded-full blur-2xl group-hover:bg-fuchsia-500/40 transition-all pointer-events-none"></div>
 
-          <!-- 立體 DJ 耳機頭戴橫樑 (Headphone Arc) -->
-          <div class="absolute -top-3 w-40 h-28 rounded-t-full border-t-8 border-x-8 border-sky-400 shadow-lg pointer-events-none z-30" style="filter: drop-shadow(0 6px 12px rgba(56, 189, 248, 0.5));"></div>
-          <!-- 左右耳罩 -->
-          <div class="absolute top-16 left-3 w-8 h-14 rounded-2xl bg-gradient-to-br from-sky-400 via-indigo-500 to-pink-500 shadow-xl z-30"></div>
-          <div class="absolute top-16 right-3 w-8 h-14 rounded-2xl bg-gradient-to-bl from-sky-400 via-indigo-500 to-pink-500 shadow-xl z-30"></div>
+          <!-- 精確截取自範例圖的高解析度星球本體 -->
+          <img src="./images/ui/p2_groove_exact.png" alt="Planet 2: Groove Party" class="w-full h-full object-contain filter drop-shadow-[0_16px_28px_rgba(217,70,239,0.45)] anim-float-planet group-hover:scale-105 transition-transform duration-300 pointer-events-none" style="animation-delay: 1.5s;">
 
-          <!-- 環繞霓虹粉星環 -->
-          <svg class="absolute w-72 h-32 pointer-events-none clay-ring-orbit z-30" viewBox="0 0 280 120" style="transform: rotate(10deg);">
-            <defs>
-              <linearGradient id="ringGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#f472b6" />
-                <stop offset="50%" stop-color="#fbcfe8" />
-                <stop offset="100%" stop-color="#ec4899" />
-              </linearGradient>
-            </defs>
-            <ellipse cx="140" cy="60" rx="130" ry="24" fill="none" stroke="url(#ringGrad2)" stroke-width="14" stroke-linecap="round" />
-            <ellipse cx="140" cy="58" rx="130" ry="24" fill="none" stroke="#fff" stroke-width="2" opacity="0.6" />
-          </svg>
-
-          <!-- 3D 黏土球體本體 (霓虹紫粉) -->
-          <div class="relative w-44 h-44 md:w-48 md:h-48 rounded-full clay-sphere-groove flex items-center justify-center overflow-hidden z-20 group-hover:scale-105 transition-transform duration-300">
-            <!-- 表面波點星斑 (Clay Spots) -->
-            <div class="absolute top-6 right-8 w-8 h-8 rounded-full bg-pink-300/80 shadow-inner"></div>
-            <div class="absolute bottom-8 left-8 w-9 h-9 rounded-full bg-pink-300/80 shadow-inner"></div>
-            <div class="absolute top-14 left-7 w-6 h-6 rounded-full bg-purple-300/70 shadow-inner"></div>
-
-            <!-- 可愛表情 (黏土五官) -->
-            <div class="relative z-10 flex flex-col items-center">
-              <div class="flex items-center gap-7 mb-1">
-                <div class="w-3.5 h-3.5 rounded-full bg-slate-950 shadow-sm"></div>
-                <div class="w-3.5 h-3.5 rounded-full bg-slate-950 shadow-sm"></div>
-              </div>
-              <!-- 腮紅 -->
-              <div class="flex items-center gap-12 -mt-1.5 mb-0.5">
-                <div class="w-4 h-2 rounded-full bg-pink-300 blur-[0.5px]"></div>
-                <div class="w-4 h-2 rounded-full bg-pink-300 blur-[0.5px]"></div>
-              </div>
-              <!-- 歡樂微笑 -->
-              <div class="w-5 h-2.5 border-b-3 border-slate-950 rounded-b-full"></div>
-            </div>
-
-            <!-- 球體高光 -->
-            <div class="absolute top-2 left-6 w-14 h-8 rounded-full bg-white/40 blur-xs transform -rotate-30 pointer-events-none"></div>
-          </div>
-
-          <!-- 星球下方探索徽章 -->
-          <div class="absolute -bottom-2 z-30 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-black text-xs px-4 py-1.5 rounded-full shadow-lg border-2 border-pink-200 group-hover:scale-110 transition-transform">
-            <span>派對 10 關 ➜</span>
+          <!-- 探索提示懸浮小徽章 -->
+          <div class="absolute bottom-1 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-black text-xs px-4 py-1.5 rounded-full shadow-xl border-2 border-pink-200 group-hover:scale-110 transition-transform">
+            <span>進入派對星球 (10關) ➜</span>
           </div>
         </div>
       </div>
@@ -630,8 +572,17 @@
           </span>
         </div>
 
-        <!-- 頂欄右側：鏡頭全螢幕按鍵與動作貼合度儀表 -->
-        <div class="absolute top-3 right-3 z-30 flex items-center gap-2 pointer-events-auto">
+        <!-- 頂欄右側：數位縮放 (Zoom In/Out)、鏡頭全螢幕按鍵與動作貼合度儀表 -->
+        <div class="absolute top-3 right-3 z-30 flex items-center gap-1.5 md:gap-2 pointer-events-auto">
+          <!-- 鏡頭遠近縮放控制 (針對站得遠的小朋友支援 1.0x ~ 2.2x 放大，遠距離精準辨識) -->
+          <div class="flex items-center bg-white/95 backdrop-blur px-2 py-1 rounded-2xl border border-sky-300 shadow-sm text-xs font-black text-sky-800 shrink-0" title="鏡頭放大縮小：站較遠時可點選 🔍+ 放大畫面提升辨識精準度">
+            <span class="text-[10px] text-slate-500 mr-1 hidden sm:inline">鏡頭:</span>
+            <button onclick="adjustCameraZoom(-0.25)" class="w-6 h-6 rounded-lg bg-sky-100 hover:bg-sky-200 flex items-center justify-center text-xs active:scale-95" title="縮小 (廣角)">➖</button>
+            <span id="camera-zoom-val" class="px-1.5 text-[11px] font-mono font-black text-sky-700 min-w-[34px] text-center">1.0x</span>
+            <button onclick="adjustCameraZoom(0.25)" class="w-6 h-6 rounded-lg bg-sky-100 hover:bg-sky-200 flex items-center justify-center text-xs active:scale-95" title="放大 (特寫遠方人物)">➕</button>
+            <button onclick="resetCameraZoom()" class="text-[10px] text-slate-400 hover:text-sky-600 ml-1 underline active:scale-95">重設</button>
+          </div>
+
           <!-- 獨立鏡頭全螢幕按鍵 -->
           <button id="btn-camera-fullscreen" onclick="toggleCameraFullscreen()" class="px-3 py-1.5 rounded-2xl bg-white/95 hover:bg-sky-50 border border-sky-300 text-sky-700 font-black text-xs shadow-sm transition flex items-center gap-1.5 active:scale-95" title="單獨將攝影機與火柴人切換為大螢幕全螢幕">
             <span id="camera-fs-icon">🔲</span>
@@ -889,6 +840,15 @@
     let playerCount = 1; // 1, 2, 3
     let currentHeadTheme = 'human'; // 'human' (小男孩,小女孩,老爺爺), 'wild' (獅子,兔子,猴子), 'farm' (小豬,牛,馬)
 
+    // 初始化讀取 9 位數累計總積分
+    try {
+      const savedTotal = parseInt(localStorage.getItem('kaidance_total_score') || '980', 10);
+      const totalScoreLobby = document.getElementById('total-score-lobby');
+      if (totalScoreLobby) {
+        totalScoreLobby.innerText = String(savedTotal).padStart(9, '0').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+      }
+    } catch(e) {}
+
     // 三大類型與三位玩家頭部造型特徵配置
     const CHARACTER_PROFILES = {
       human: [
@@ -1110,11 +1070,26 @@
 
       const aTitle = document.getElementById('album-view-title');
       const aDesc = document.getElementById('album-view-desc');
-      if (aTitle) aTitle.innerHTML = `${album.id === 'album_1' ? '☀️' : '🚀'} ${album.zhTitle}`;
-      if (aDesc) aDesc.innerText = `${album.subtitle} · 共 10 個趣味關卡`;
+      if (aTitle) {
+        if (album.id === 'album_1') {
+          aTitle.innerHTML = `<span class="text-amber-300">☀️ Planet 1:</span> ${album.zhTitle}`;
+        } else {
+          aTitle.innerHTML = `<span class="text-fuchsia-300">🪐 Planet 2:</span> ${album.zhTitle}`;
+        }
+      }
+      if (aDesc) aDesc.innerText = `${album.subtitle} · 共 10 個趣味動態關卡`;
+
+      // 依星球切換專屬主題背景 (Planet 1 晨光島樂園 vs Planet 2 星光彩虹軌道)
+      if (viewAlbumLevels) {
+        if (albumId === 'album_1') {
+          viewAlbumLevels.className = "flex-1 flex flex-col p-4 md:p-6 max-w-6xl mx-auto w-full min-h-[580px] md:min-h-[640px] rounded-3xl overflow-hidden border-2 border-amber-400/50 shadow-2xl my-2 relative planet-levels-p1";
+        } else {
+          viewAlbumLevels.className = "flex-1 flex flex-col p-4 md:p-6 max-w-6xl mx-auto w-full min-h-[580px] md:min-h-[640px] rounded-3xl overflow-hidden border-2 border-fuchsia-400/50 shadow-2xl my-2 relative planet-levels-p2";
+        }
+        viewAlbumLevels.classList.remove('hidden');
+      }
 
       viewLobby.classList.add('hidden');
-      if (viewAlbumLevels) viewAlbumLevels.classList.remove('hidden');
       renderLobbySongs(albumId);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -1153,12 +1128,14 @@
       renderLobbySongs(albumId);
     }
 
-    // 動態渲染大廳歌曲卡片
+    // 動態渲染大廳歌曲卡片 (針對 Planet 1 與 Planet 2 提供專屬關卡造型)
     function renderLobbySongs(albumId) {
       const container = document.getElementById('song-cards-container');
       if (!container || !window.KAI_ALBUM_DATABASE) return;
       const album = window.KAI_ALBUM_DATABASE[albumId] || window.KAI_ALBUM_DATABASE['album_1'];
       if (!album) return;
+
+      const isP1 = albumId === 'album_1';
 
       container.innerHTML = album.songs.map((song) => {
         const isCurrentActive = song.id === currentSongKey;
@@ -1166,11 +1143,23 @@
           ? '<span class="bg-amber-400 text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded-full shadow">🎬 3D 示範影片</span>'
           : '<span class="bg-sky-400 text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded-full shadow">📸 動作引導寫真</span>';
 
+        const cardThemeClass = isP1 
+          ? (isCurrentActive ? 'border-amber-400 ring-4 ring-amber-400/30 card-clay-morning shadow-2xl' : 'border-amber-200/50 hover:border-amber-400 bg-white/90 backdrop-blur-md hover:bg-white shadow-xl')
+          : (isCurrentActive ? 'border-fuchsia-400 ring-4 ring-fuchsia-400/30 card-clay-groove shadow-2xl' : 'border-purple-300/50 hover:border-fuchsia-400 bg-white/90 backdrop-blur-md hover:bg-white shadow-xl');
+
+        const btnGrad = isP1
+          ? 'from-amber-400 to-orange-400 hover:from-amber-300 hover:to-orange-300 text-slate-950'
+          : 'from-fuchsia-500 to-indigo-600 hover:from-fuchsia-400 hover:to-indigo-500 text-white';
+
+        const numberBadge = isP1
+          ? 'bg-amber-500 text-slate-950 border-amber-300'
+          : 'bg-fuchsia-600 text-white border-fuchsia-400';
+
         return `
           <div onclick="selectSong('${song.id}')" 
-               class="group relative bg-slate-800/80 hover:bg-slate-800/95 backdrop-blur-md rounded-3xl p-5 border-2 ${isCurrentActive ? 'border-amber-400 ring-4 ring-amber-400/20 shadow-2xl' : 'border-slate-700/70 hover:border-amber-400/80'} shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1 overflow-hidden select-none">
+               class="group relative ${cardThemeClass} rounded-3xl p-5 border-2 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1.5 overflow-hidden select-none">
             
-            <div class="absolute top-3 left-3 bg-slate-900/85 backdrop-blur text-white text-[11px] font-black px-2.5 py-0.5 rounded-full shadow z-10 border border-slate-700">
+            <div class="absolute top-3 left-3 ${numberBadge} backdrop-blur text-[11px] font-black px-2.5 py-0.5 rounded-full shadow-md z-10 border">
               #${String(song.trackNumber).padStart(2, '0')}
             </div>
 
@@ -1179,23 +1168,23 @@
             </div>
 
             <div>
-              <div class="w-full h-36 rounded-2xl bg-gradient-to-tr ${song.themeColor} flex items-center justify-center text-6xl shadow-inner mb-3 overflow-hidden relative group-hover:scale-[1.02] transition-transform">
+              <div class="w-full h-36 rounded-2xl bg-gradient-to-tr ${song.themeColor} flex items-center justify-center text-6xl shadow-inner mb-3 overflow-hidden relative group-hover:scale-[1.03] transition-transform">
                 <span class="transform group-hover:scale-110 transition-transform duration-300 drop-shadow-md select-none">${song.emoji}</span>
               </div>
-              <h4 class="font-black text-base text-white group-hover:text-amber-300 transition-colors line-clamp-1">
+              <h4 class="font-black text-base text-slate-900 group-hover:text-amber-700 transition-colors line-clamp-1">
                 ${song.title}
               </h4>
-              <p class="text-xs font-black ${song.textColor} mt-0.5 flex items-center gap-1.5 brightness-125">
-                <span>${song.zhTitle}</span> · <span class="opacity-90 font-bold">${song.tag}</span>
+              <p class="text-xs font-black ${isP1 ? 'text-amber-700' : 'text-purple-700'} mt-0.5 flex items-center gap-1.5">
+                <span>${song.zhTitle}</span> · <span class="opacity-80 font-bold">${song.tag}</span>
               </p>
-              <p class="text-xs text-slate-300/80 mt-2 line-clamp-2 leading-relaxed">
+              <p class="text-xs text-slate-600 mt-2 line-clamp-2 leading-relaxed font-medium">
                 ${song.description}
               </p>
             </div>
 
-            <div class="mt-4 pt-3 border-t border-slate-700/60 flex items-center justify-between">
-              <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · ${song.difficulty}</span>
-              <button class="bg-gradient-to-r from-amber-400 to-orange-400 group-hover:from-amber-300 group-hover:to-orange-300 text-slate-950 text-xs font-black px-4 py-2 rounded-xl shadow transition-all active:scale-95 flex items-center gap-1">
+            <div class="mt-4 pt-3 border-t border-slate-200/80 flex items-center justify-between">
+              <span class="text-xs text-slate-500 font-bold">⏱ 2:00 · ${song.difficulty}</span>
+              <button class="bg-gradient-to-r ${btnGrad} text-xs font-black px-4 py-2 rounded-xl shadow-md transition-all active:scale-95 flex items-center gap-1">
                 <span>▶</span> 開始跳
               </button>
             </div>
@@ -1538,10 +1527,41 @@
     }
     resizeCanvas();
 
+    // 鏡頭數位縮放狀態 (支援 1.0x ~ 2.25x 放大，讓站得遠、人物小的小朋友也能被特寫並精準鎖定)
+    let cameraZoomLevel = 1.0;
+
+    function adjustCameraZoom(delta) {
+      cameraZoomLevel = Math.max(1.0, Math.min(2.25, Math.round((cameraZoomLevel + delta) * 100) / 100));
+      updateCameraZoomUI();
+    }
+
+    function resetCameraZoom() {
+      cameraZoomLevel = 1.0;
+      updateCameraZoomUI();
+    }
+
+    function updateCameraZoomUI() {
+      const zoomValEl = document.getElementById('camera-zoom-val');
+      if (zoomValEl) zoomValEl.innerText = cameraZoomLevel.toFixed(1) + 'x';
+      if (webcamVideo) {
+        // 保持水平鏡像 (-scale-x)，同時依據縮放級別放大中央區域
+        webcamVideo.style.transform = `scaleX(-1) scale(${cameraZoomLevel})`;
+        webcamVideo.style.transformOrigin = 'center center';
+      }
+    }
+
     // 辅助：将归一化骨骼坐标换算为 Canvas 物理像素（安全边距内完美呈现，永不出界）
+    // 支援 cameraZoomLevel 縮放換算，使火柴人完美貼合數位放大後的影像中心
     function toCanvasCoords(normX, normY, cw, ch) {
-      const clampedX = Math.max(0.06, Math.min(0.94, normX));
-      const clampedY = Math.max(0.08, Math.min(0.94, normY));
+      let x = normX;
+      let y = normY;
+      if (cameraZoomLevel > 1.001) {
+        // 圍繞中央 (0.5, 0.5) 進行縮放換算
+        x = 0.5 + (normX - 0.5) * cameraZoomLevel;
+        y = 0.5 + (normY - 0.5) * cameraZoomLevel;
+      }
+      const clampedX = Math.max(0.04, Math.min(0.96, x));
+      const clampedY = Math.max(0.06, Math.min(0.96, y));
       return {
         x: clampedX * cw,
         y: clampedY * ch
@@ -1595,12 +1615,12 @@
       const vh = webcamVideo.videoHeight || 480;
       if (vw <= 0 || vh <= 0) return;
 
-      // 过滤有效检测人体 (置信度阈值 0.16，或至少 4 个关键点置信度 > 0.25)
+      // 过滤有效检测人体 (置信度阈值 0.12，或至少 3 个关键点置信度 > 0.18，让远距离小人体也能灵敏捕捉)
       const validPoses = (poses || []).filter(p => {
-        if (p.score && p.score > 0.16) return true;
+        if (p.score && p.score > 0.10) return true;
         if (p.keypoints) {
-          const highConf = p.keypoints.filter(k => k.score > 0.25).length;
-          return highConf >= 4;
+          const highConf = p.keypoints.filter(k => k.score > 0.16).length;
+          return highConf >= 3;
         }
         return false;
       });
@@ -1707,9 +1727,9 @@
           const kpMap = {};
           assignedPose.keypoints.forEach(k => { kpMap[k.name] = k; });
 
-          // 🧠 智慧死區（Deadzone）防抖濾波器：微小抖動不更新，大幅移動立即平滑跟隨
+          // 🧠 智慧死區（Deadzone）防抖濾波器：微小抖動不更新，大幅移動立即平滑跟隨 (放寬至 0.10 兼顧遠距人物)
           function updateNodeFromKp(node, kp, fallbackX, fallbackY) {
-            if (kp && kp.score > 0.16) {
+            if (kp && kp.score > 0.10) {
               const targetX = 1.0 - (kp.x / vw);
               const targetY = kp.y / vh;
               const dx = targetX - node.x;
@@ -2986,6 +3006,18 @@
           combo++;
           scoreCount.innerText = score;
           comboCount.innerText = combo + 'x';
+          
+          // 🏆 9 位數總積分累積 (如 000,000,995)，並儲存至 localStorage 持續累積
+          try {
+            let totalCumulativeScore = parseInt(localStorage.getItem('kaidance_total_score') || '980', 10);
+            totalCumulativeScore += 15;
+            localStorage.setItem('kaidance_total_score', totalCumulativeScore);
+            const totalScoreLobby = document.getElementById('total-score-lobby');
+            if (totalScoreLobby) {
+              totalScoreLobby.innerText = String(totalCumulativeScore).padStart(9, '0').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+            }
+          } catch(e) {}
+
           const starsLobby = document.getElementById('total-stars-lobby');
           if (starsLobby) starsLobby.innerText = Math.floor(score / 20) + " ⭐";
           if (combo % 8 === 0) triggerFeedback();
