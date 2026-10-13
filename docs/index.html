@@ -74,6 +74,8 @@
       0%, 100% { opacity: 0.3; transform: scale(0.8); }
       50% { opacity: 1; transform: scale(1.2); }
     }
+    .anim-float { animation: float-gentle 3.6s infinite ease-in-out; }
+    .anim-float-planet { animation: float-gentle 4.8s infinite ease-in-out; }
     /* ======================================================== */
     /* 3D 黏土擬物風格 (Pure Claymorphism & SVG Components)     */
     /* ======================================================== */
@@ -212,17 +214,18 @@
       <div class="absolute -bottom-24 left-1/2 -translate-x-1/2 w-[850px] h-[220px] bg-gradient-to-t from-sky-900/30 via-indigo-950/20 to-transparent rounded-full blur-3xl"></div>
     </div>
 
-    <!-- 頂部 Apple Arcade 風格深色半透明膠囊狀態列 (完全參照圖檔膠囊) -->
+    <!-- 頂部 Apple Arcade 風格深色半透明膠囊狀態列 (搭配全新 3D KaiDance Logo) -->
     <header class="relative z-20 flex items-center justify-between pb-2">
       <!-- 左側隱形平衡佔位 -->
       <div class="w-10 md:w-28"></div>
 
-      <!-- 正中央：Apple 風格標誌與標題膠囊 [  KaiDance 奇妙律動 ✦ ] -->
-      <div class="flex items-center gap-2.5 bg-slate-800/80 hover:bg-slate-800 backdrop-blur-xl px-5 py-2 rounded-full border border-slate-600/60 shadow-lg text-white transition">
-        <span class="text-base select-none"></span>
-        <span class="font-black text-sm md:text-base tracking-tight text-white select-none">KaiDance</span>
-        <span class="text-amber-300 text-sm select-none">✦</span>
-        <span class="text-xs font-bold text-pink-400 select-none">奇妙星律動</span>
+      <!-- 正中央：全新 3D 立體品牌 Logo 膠囊 [ KaiDance 奇妙星律動 ] -->
+      <div class="flex items-center gap-3 bg-slate-900/85 hover:bg-slate-900/95 backdrop-blur-xl px-5 py-1.5 rounded-full border border-slate-700/70 shadow-xl transition-all duration-300 hover:border-amber-400/50 group cursor-default">
+        <img src="./images/ui/kaidance_logo.png" alt="KaiDance 奇妙星律動" class="h-10 md:h-12 w-auto object-contain drop-shadow-[0_4px_10px_rgba(251,191,36,0.35)] group-hover:scale-105 transition-transform">
+        <div class="flex flex-col text-left">
+          <span class="font-black text-xs md:text-sm tracking-tight text-white select-none">KaiDance</span>
+          <span class="text-[10px] md:text-xs font-bold bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 bg-clip-text text-transparent select-none">奇妙星律動</span>
+        </div>
       </div>
 
       <!-- 右側：累計總積分 (9位數不斷累積) 與家長設定 -->
@@ -238,15 +241,15 @@
       </div>
     </header>
 
-    <!-- 中央雙星球與中間導師主舞台 (iPad 橫向黃金比例，純向量與 CSS 黏土元件構建) -->
-    <div class="relative z-10 my-auto py-6 grid grid-cols-1 md:grid-cols-3 items-center gap-6 md:gap-4 max-w-5xl mx-auto w-full">
+    <!-- 中央雙星球與中間導師主舞台 (iPad 橫向黃金比例，全新高畫質透明圖檔編排) -->
+    <div class="relative z-10 my-auto py-4 md:py-6 grid grid-cols-1 md:grid-cols-3 items-center gap-6 md:gap-4 max-w-5xl mx-auto w-full">
 
       <!-- ========================================== -->
       <!-- 左側：第一專輯【Planet 1: Morning Adventure】 -->
-      <!-- (完全採用範例圖檔樣式與比例大小)             -->
+      <!-- (全新透明高清晨光小島與 7 條金黃放射光)      -->
       <!-- ========================================== -->
       <div class="flex flex-col items-center text-center group cursor-pointer select-none transition-all duration-300 transform hover:-translate-y-2" onclick="openAlbumView('album_1')">
-        <!-- 標題文字 (完全參照範例圖格式) -->
+        <!-- 標題文字 -->
         <div class="mb-2 text-center">
           <h2 class="text-xl md:text-2xl font-black text-white tracking-tight drop-shadow-md">
             Planet 1: Morning Adventure
@@ -256,16 +259,16 @@
           </p>
         </div>
 
-        <!-- 星球 1 範例圖檔實體 (原汁原味範例圖比例與細節) -->
-        <div class="relative w-60 h-60 md:w-72 md:h-72 flex items-center justify-center my-1">
+        <!-- 星球 1 高清透明實體 -->
+        <div class="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 flex items-center justify-center my-1">
           <!-- 背後金光日冕光暈 -->
-          <div class="absolute inset-4 bg-amber-500/25 rounded-full blur-2xl group-hover:bg-amber-400/40 transition-all pointer-events-none"></div>
+          <div class="absolute inset-6 bg-amber-500/25 rounded-full blur-2xl group-hover:bg-amber-400/40 transition-all pointer-events-none"></div>
 
-          <!-- 精確截取自範例圖的高解析度星球本體 -->
-          <img src="./images/ui/p1_morning_exact.png" alt="Planet 1: Morning Adventure" class="w-full h-full object-contain filter drop-shadow-[0_16px_28px_rgba(245,158,11,0.45)] anim-float-planet group-hover:scale-105 transition-transform duration-300 pointer-events-none">
+          <!-- 精確去背透明晨光大地星球 (綠島樹木 + 放射陽光) -->
+          <img src="./images/ui/planet1_morning.png" alt="Planet 1: Morning Adventure" class="w-full h-full object-contain filter drop-shadow-[0_16px_28px_rgba(245,158,11,0.5)] anim-float-planet group-hover:scale-105 transition-transform duration-300 pointer-events-none">
 
           <!-- 探索提示懸浮小徽章 -->
-          <div class="absolute bottom-1 bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-black text-xs px-4 py-1.5 rounded-full shadow-xl border-2 border-yellow-200 group-hover:scale-110 transition-transform">
+          <div class="absolute bottom-2 bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-black text-xs px-4 py-1.5 rounded-full shadow-xl border-2 border-yellow-200 group-hover:scale-110 transition-transform">
             <span>探索晨光星球 (10關) ➜</span>
           </div>
         </div>
@@ -273,14 +276,14 @@
 
       <!-- ========================================== -->
       <!-- 中央：5 首歌 3D 舞蹈天團歡迎小隊 (Dance Team) -->
-      <!-- (小隊長、隊員環形圍繞，揮手歡迎大家來跳舞)    -->
+      <!-- (全新 5 位小朋友一體成型全身立繪，歡樂揮手迎賓) -->
       <!-- ========================================== -->
       <div class="flex flex-col items-center text-center relative z-20 select-none py-2">
         <!-- 導師背後立體發光舞台光環 -->
         <div class="absolute inset-0 bg-gradient-to-t from-pink-500/25 via-sky-400/20 to-transparent rounded-full blur-2xl"></div>
 
         <!-- 歡迎舞團舞台容器 -->
-        <div class="relative w-56 h-64 md:w-64 md:h-72 flex items-center justify-center anim-float cursor-pointer group" onclick="alert('🌟 KaiDance 舞蹈天團：樂樂、美美、小陽、小花、糖糖 歡迎大家一起來跳舞！')">
+        <div class="relative w-full max-w-[320px] md:max-w-[340px] h-64 md:h-72 flex flex-col items-center justify-center anim-float cursor-pointer group" onclick="alert('🌟 KaiDance 舞蹈天團：全體 5 位夥伴歡迎大家一起來跳舞！')">
           
           <!-- 頂部歡樂跳舞氣泡 -->
           <div class="absolute -top-3 z-30 bg-gradient-to-r from-amber-300 via-pink-400 to-purple-400 p-[2px] rounded-2xl shadow-xl animate-bounce">
@@ -290,51 +293,29 @@
             </div>
           </div>
 
-          <!-- 舞團隊形：中央領舞小導師 (大立牌) + 四周 4 位伴舞小隊員 (環繞小立牌) -->
-          <!-- 1. 中央隊長 (Track 01: 樂樂) -->
-          <div class="relative z-20 w-28 h-40 md:w-32 md:h-44 rounded-3xl overflow-hidden border-3 border-amber-300 shadow-2xl bg-slate-900 group-hover:scale-105 transition-transform">
-            <img id="main-crew-leader" src="./images/ui/coach_team_t1.jpg" alt="隊長樂樂" class="w-full h-full object-cover object-top">
-            <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-black/80 to-transparent py-1 text-center">
-              <span class="text-[10px] font-black text-amber-300">★ 隊長樂樂</span>
-            </div>
+          <!-- 全新高畫質去背透明 5 位小朋友舞蹈團隊立繪 -->
+          <div class="relative z-10 w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
+            <img src="./images/ui/dance_team_kids.png" alt="KaiDance 舞蹈天團" class="w-full h-full object-contain filter drop-shadow-[0_12px_24px_rgba(56,189,248,0.35)] drop-shadow-[0_4px_12px_rgba(244,114,182,0.4)] pointer-events-none">
           </div>
 
-          <!-- 2. 左上伴舞 (Track 02: 小美) -->
-          <div class="absolute -left-1 top-6 z-10 w-16 h-16 md:w-18 md:h-18 rounded-2xl overflow-hidden border-2 border-pink-300 shadow-lg bg-slate-900 transform -rotate-12 group-hover:-translate-x-1 transition-transform" title="T2 小美">
-            <img src="./images/ui/coach_team_t2.jpg" alt="小美" class="w-full h-full object-cover object-top">
-          </div>
-
-          <!-- 3. 右上伴舞 (Track 03: 小陽) -->
-          <div class="absolute -right-1 top-6 z-10 w-16 h-16 md:w-18 md:h-18 rounded-2xl overflow-hidden border-2 border-sky-300 shadow-lg bg-slate-900 transform rotate-12 group-hover:translate-x-1 transition-transform" title="T3 小陽">
-            <img src="./images/ui/coach_team_t3.jpg" alt="小陽" class="w-full h-full object-cover object-top">
-          </div>
-
-          <!-- 4. 左下伴舞 (Track 04: 小花) -->
-          <div class="absolute left-1 bottom-4 z-10 w-14 h-14 md:w-16 md:h-16 rounded-2xl overflow-hidden border-2 border-emerald-300 shadow-lg bg-slate-900 transform -rotate-6 group-hover:-translate-x-1 transition-transform" title="T4 小花">
-            <img src="./images/ui/coach_team_t4.jpg" alt="小花" class="w-full h-full object-cover object-top">
-          </div>
-
-          <!-- 5. 右下伴舞 (Track 05: 糖糖) -->
-          <div class="absolute right-1 bottom-4 z-10 w-14 h-14 md:w-16 md:h-16 rounded-2xl overflow-hidden border-2 border-purple-300 shadow-lg bg-slate-900 transform rotate-6 group-hover:translate-x-1 transition-transform" title="T5 糖糖">
-            <img src="./images/ui/coach_team_t5.jpg" alt="糖糖" class="w-full h-full object-cover object-top">
-          </div>
-
+          <!-- 舞台底部柔和星光底座 -->
+          <div class="absolute bottom-1 w-48 h-6 bg-gradient-to-r from-pink-500/40 via-amber-300/60 to-sky-400/40 rounded-full blur-md -z-10"></div>
         </div>
 
         <!-- 舞團稱號膠囊 -->
-        <div class="mt-1 flex items-center gap-1.5 bg-slate-800/85 px-4 py-1 rounded-full border border-slate-700 text-[11px] text-slate-300 shadow">
+        <div class="mt-2 flex items-center gap-1.5 bg-slate-900/85 px-4 py-1 rounded-full border border-slate-700/80 text-[11px] text-slate-300 shadow-md">
           <span class="text-amber-300 font-bold">✨ 5大曲目舞團集結</span>
           <span class="text-slate-500">·</span>
-          <span class="text-sky-300">隨時為你示範跳</span>
+          <span class="text-sky-300">示範歡樂跟跳</span>
         </div>
       </div>
 
       <!-- ========================================== -->
       <!-- 右側：第二專輯【Planet 2: Groove Party】      -->
-      <!-- (完全採用範例圖檔樣式與比例大小)             -->
+      <!-- (全新透明高清派對耳機土星與粉紅星環)          -->
       <!-- ========================================== -->
       <div class="flex flex-col items-center text-center group cursor-pointer select-none transition-all duration-300 transform hover:-translate-y-2" onclick="openAlbumView('album_2')">
-        <!-- 標題文字 (完全參照範例圖格式) -->
+        <!-- 標題文字 -->
         <div class="mb-2 text-center">
           <h2 class="text-xl md:text-2xl font-black text-white tracking-tight drop-shadow-md">
             Planet 2: Groove Party
@@ -344,16 +325,16 @@
           </p>
         </div>
 
-        <!-- 星球 2 範例圖檔實體 (原汁原味範例圖比例與細節) -->
-        <div class="relative w-60 h-60 md:w-72 md:h-72 flex items-center justify-center my-1">
+        <!-- 星球 2 高清透明實體 -->
+        <div class="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 flex items-center justify-center my-1">
           <!-- 背後霓虹紫粉光暈 -->
-          <div class="absolute inset-4 bg-fuchsia-600/25 rounded-full blur-2xl group-hover:bg-fuchsia-500/40 transition-all pointer-events-none"></div>
+          <div class="absolute inset-6 bg-fuchsia-600/25 rounded-full blur-2xl group-hover:bg-fuchsia-500/40 transition-all pointer-events-none"></div>
 
-          <!-- 精確截取自範例圖的高解析度星球本體 -->
-          <img src="./images/ui/p2_groove_exact.png" alt="Planet 2: Groove Party" class="w-full h-full object-contain filter drop-shadow-[0_16px_28px_rgba(217,70,239,0.45)] anim-float-planet group-hover:scale-105 transition-transform duration-300 pointer-events-none" style="animation-delay: 1.5s;">
+          <!-- 精確去背透明派對耳機土星 (耳機橫樑 + 星環音符) -->
+          <img src="./images/ui/planet2_groove.png" alt="Planet 2: Groove Party" class="w-full h-full object-contain filter drop-shadow-[0_16px_28px_rgba(217,70,239,0.5)] anim-float-planet group-hover:scale-105 transition-transform duration-300 pointer-events-none" style="animation-delay: 1.5s;">
 
           <!-- 探索提示懸浮小徽章 -->
-          <div class="absolute bottom-1 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-black text-xs px-4 py-1.5 rounded-full shadow-xl border-2 border-pink-200 group-hover:scale-110 transition-transform">
+          <div class="absolute bottom-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-black text-xs px-4 py-1.5 rounded-full shadow-xl border-2 border-pink-200 group-hover:scale-110 transition-transform">
             <span>進入派對星球 (10關) ➜</span>
           </div>
         </div>
