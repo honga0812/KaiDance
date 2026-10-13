@@ -50,6 +50,37 @@
     .wave-bar-3 { animation: sound-wave 0.8s infinite ease-in-out 0.4s; }
     .animate-slide-left { animation: slide-drawer 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards; }
     
+    @keyframes orbit-cw {
+      from { transform: rotate(0deg) translateX(105px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(105px) rotate(-360deg); }
+    }
+    @keyframes orbit-ccw {
+      from { transform: rotate(0deg) translateX(90px) rotate(0deg); }
+      to { transform: rotate(-360deg) translateX(90px) rotate(360deg); }
+    }
+    @keyframes orbit-fast {
+      from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
+      to { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
+    }
+    @keyframes float-gentle {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(1.5deg); }
+    }
+    @keyframes glow-sun-pulse {
+      0%, 100% { filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.45)); }
+      50% { filter: drop-shadow(0 0 35px rgba(251, 191, 36, 0.85)); }
+    }
+    @keyframes glow-neon-pulse {
+      0%, 100% { filter: drop-shadow(0 0 15px rgba(217, 70, 239, 0.45)); }
+      50% { filter: drop-shadow(0 0 35px rgba(217, 70, 239, 0.85)); }
+    }
+    .anim-orbit-cw { animation: orbit-cw 12s linear infinite; }
+    .anim-orbit-ccw { animation: orbit-ccw 9s linear infinite; }
+    .anim-orbit-fast { animation: orbit-fast 7s linear infinite; }
+    .anim-float { animation: float-gentle 4s ease-in-out infinite; }
+    .anim-glow-sun { animation: glow-sun-pulse 3s infinite ease-in-out; }
+    .anim-glow-neon { animation: glow-neon-pulse 3s infinite ease-in-out; }
+    
     input[type=range]::-webkit-slider-thumb {
       -webkit-appearance: none;
       height: 18px;
@@ -87,99 +118,200 @@
   <!-- ========================================================= -->
   <!-- 頁面 1：歌曲選單大廳 (Song Selection Lobby)                -->
   <!-- ========================================================= -->
-  <div id="view-lobby" class="flex-1 flex flex-col p-4 md:p-8 max-w-6xl mx-auto w-full">
+  <!-- 頁面 1：宇宙雙星球冒險選單 (KaiDance Cosmic Dual-Planet Hub) -->
+  <!-- ========================================================= -->
+  <div id="view-lobby" class="flex-1 flex flex-col p-3 md:p-6 max-w-6xl mx-auto w-full justify-between">
     
-    <!-- 大厅顶栏 -->
-    <header class="flex items-center justify-between pb-6 border-b border-amber-200/80 mb-6">
-      <div class="flex items-center gap-3">
-        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-orange-400 flex items-center justify-center text-3xl shadow-lg shadow-amber-300/50 anim-bounce">
-          🌟
-        </div>
-        <div>
-          <h1 class="text-2xl md:text-3xl font-black text-amber-600 tracking-tight flex items-center gap-2">
-            奇妙星律動
-            <span class="text-xs md:text-sm font-bold bg-pink-500 text-white px-2.5 py-0.5 rounded-full shadow">
-              趣味火柴人舞蹈樂園
-            </span>
-          </h1>
-          <p class="text-xs md:text-sm text-slate-500 font-medium mt-0.5">
-            真實入鏡變身火柴人 · 動作節點真實響應 · 親切名師原聲口令
-          </p>
-        </div>
+    <!-- 頂部 Apple Arcade 風格狀態膠囊列 -->
+    <header class="flex items-center justify-between z-20 pb-4 border-b border-amber-200/50">
+      <!-- 品牌標籤 -->
+      <div class="flex items-center gap-2.5 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-amber-200 shadow-sm">
+        <span class="text-xl">🍎</span>
+        <span class="font-black text-slate-800 text-sm md:text-base tracking-tight">KaiDance</span>
+        <span class="text-xs font-bold bg-pink-500 text-white px-2.5 py-0.5 rounded-full shadow-xs">
+          奇妙星律動
+        </span>
       </div>
-      
-      <div class="flex items-center gap-2 bg-white/90 backdrop-blur px-4 py-2 rounded-2xl border border-amber-200 shadow-sm">
-        <span class="text-xl">🏆</span>
-        <span class="text-xs font-bold text-slate-600">今日累計跳舞星: <strong id="total-stars-lobby" class="text-amber-500 text-base">58 ⭐</strong></span>
+
+      <!-- 獎勵星星與家長設定 -->
+      <div class="flex items-center gap-3">
+        <div class="flex items-center gap-2 bg-amber-500/15 backdrop-blur-md border border-amber-400/40 px-4 py-1.5 rounded-full text-xs md:text-sm font-black text-amber-700 shadow-xs">
+          <span class="text-base">⭐</span>
+          <span>今日冒險星: <strong id="total-stars-lobby" class="text-amber-600 text-base">58</strong></span>
+        </div>
+        <button onclick="alert('家長與教練設定：支援音量配比、鏡頭靈敏度與關卡鎖定！')" class="w-9 h-9 rounded-full bg-white/90 hover:bg-white border border-slate-200 flex items-center justify-center text-sm text-slate-600 shadow-sm transition active:scale-95" title="設定與家長控制">
+          ⚙️
+        </button>
       </div>
     </header>
 
-    <!-- 專輯切換標籤 (Tablet & Kids 優化：大圓角觸控鈕、清晰視覺辨識) -->
-    <div class="mb-5">
-      <div class="flex items-center gap-3 overflow-x-auto pb-1">
-        <button id="tab-album-1" onclick="switchAlbum('album_1')" class="px-5 py-3 rounded-2xl md:rounded-3xl font-black text-sm md:text-base flex items-center gap-2.5 transition-all shadow-md bg-gradient-to-r from-amber-500 to-orange-500 text-white transform active:scale-95 shrink-0">
-          <span class="text-2xl">🌟</span>
-          <div class="text-left">
-            <div class="leading-none text-white">第 1 集：探索生活大冒險</div>
-            <div class="text-[10px] md:text-xs text-amber-100 font-medium mt-1">10 首全曲收錄 · 動作引導同步</div>
-          </div>
-        </button>
-        <button id="tab-album-2" onclick="switchAlbum('album_2')" class="px-5 py-3 rounded-2xl md:rounded-3xl font-black text-sm md:text-base flex items-center gap-2.5 transition-all shadow-xs bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transform active:scale-95 shrink-0">
-          <span class="text-2xl">🚀</span>
-          <div class="text-left">
-            <div class="leading-none text-slate-800">第 2 集：歡樂節奏派對篇</div>
-            <div class="text-[10px] md:text-xs text-slate-500 font-medium mt-1">10 首新曲就緒 · 搶先試聽跟跳</div>
-          </div>
-        </button>
-      </div>
-    </div>
+    <!-- 中央雙星球與中間角色小導師主舞台 (iPad 橫向黃金比例) -->
+    <div class="my-auto py-6 grid grid-cols-1 md:grid-cols-3 items-center gap-6 md:gap-4 relative z-10">
 
-    <!-- 歡迎大橫幅 (隨當前專輯動態切換) -->
-    <div id="album-banner" class="bg-gradient-to-r from-amber-500 via-orange-400 to-rose-400 rounded-3xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden mb-6 transition-all duration-300">
-      <div class="relative z-10 max-w-xl">
-        <span id="album-banner-badge" class="bg-white/20 backdrop-blur text-xs font-black px-3 py-1 rounded-full uppercase tracking-wider inline-block">
-          🌟 第一集 10 首全曲收錄 · 動作引導同步
-        </span>
-        <h2 id="album-banner-title" class="text-2xl md:text-4xl font-black mt-3 leading-tight">
-          第一集：探索生活大冒險<br>Little Steps Big World: Sing & Play Adventures
-        </h2>
-        <p id="album-banner-desc" class="text-xs md:text-sm text-amber-100 font-medium mt-2">
-          幼兒園必備 10 首晨操與生活常規大冒險 · 每一首歌都可獨立單曲跟跳，也可點選「整張專輯循環播放」自動連播！
-        </p>
-      </div>
-      <div id="album-banner-emoji" class="absolute -right-6 -bottom-8 text-9xl opacity-30 select-none pointer-events-none">
-        ☀️
-      </div>
-    </div>
-
-    <!-- 專輯功能列：全專輯連續播放按鈕 + 隨機播放 -->
-    <div class="bg-white/95 backdrop-blur rounded-2xl p-4 border border-amber-200/80 shadow-md flex flex-wrap items-center justify-between gap-3 mb-6">
-      <div class="flex items-center gap-3">
-        <div class="w-10 h-10 rounded-2xl bg-amber-100 flex items-center justify-center text-xl">
-          💿
+      <!-- 左側：第一專輯【晨光生活星】(帶公轉小物件) -->
+      <div class="flex flex-col items-center text-center group cursor-pointer bg-white/70 hover:bg-white/90 backdrop-blur-md p-6 rounded-3xl border-2 border-amber-300/80 hover:border-amber-400 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" onclick="openAlbumView('album_1')">
+        <div class="mb-2">
+          <span class="text-[11px] font-black uppercase tracking-wider text-amber-700 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">
+            🌟 第 1 專輯 · 探索日常
+          </span>
+          <h3 class="text-xl font-black text-slate-900 mt-2.5">Planet 1: Morning</h3>
+          <p class="text-xs text-amber-700 font-bold mt-0.5">晨操生活常規大冒險 (共 10 關)</p>
         </div>
+
+        <!-- 星球本體 + 環繞公轉物件容器 -->
+        <div class="relative w-44 h-44 flex items-center justify-center my-2">
+          <!-- 公轉物件 1: 金色小太陽 -->
+          <div class="absolute w-8 h-8 rounded-full bg-amber-400 flex items-center justify-center text-base shadow-lg shadow-amber-400/50 anim-orbit-cw z-20" title="金色太陽">
+            ☀️
+          </div>
+          <!-- 公轉物件 2: 綠葉漂浮島 -->
+          <div class="absolute w-7 h-7 rounded-full bg-emerald-400 flex items-center justify-center text-xs shadow-md shadow-emerald-400/40 anim-orbit-ccw z-20" title="生活萌芽">
+            🌱
+          </div>
+          <!-- 公轉物件 3: 晨起小積木 -->
+          <div class="absolute w-6 h-6 rounded-lg bg-orange-400 flex items-center justify-center text-xs shadow-sm anim-orbit-fast z-10" title="整理收納">
+            🧱
+          </div>
+
+          <!-- 星球主體球 (3D 黏土漸層與發光日冕) -->
+          <div class="w-32 h-32 rounded-full bg-gradient-to-tr from-amber-500 via-orange-400 to-yellow-300 shadow-2xl anim-glow-sun anim-float flex items-center justify-center relative overflow-hidden border-2 border-yellow-200/50 transition-transform group-hover:scale-105">
+            <div class="text-4xl filter drop-shadow select-none">😊</div>
+            <div class="absolute -top-3 -right-3 w-14 h-14 rounded-full bg-white/40 blur-md pointer-events-none"></div>
+            <div class="absolute bottom-2 left-2 w-7 h-7 rounded-full bg-emerald-500/30 blur-xs pointer-events-none"></div>
+          </div>
+        </div>
+
+        <!-- 星球專屬按鈕 -->
+        <button class="mt-3 px-6 py-2.5 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-black text-xs md:text-sm shadow-md transition-all transform active:scale-95 group-hover:scale-105 flex items-center gap-1.5">
+          <span>🚀</span> 進入晨光冒險 (10關)
+        </button>
+      </div>
+
+      <!-- 中央：真實角色 3D 舞蹈小導師 (小男孩樂樂 / 小女孩美美) -->
+      <div class="flex flex-col items-center text-center relative z-20">
+        <div class="relative w-44 md:w-52 h-64 md:h-72 flex items-center justify-center">
+          
+          <!-- 導師背後立體發光光環 -->
+          <div class="absolute inset-0 bg-gradient-to-t from-pink-500/25 via-sky-400/20 to-transparent rounded-full blur-2xl"></div>
+
+          <!-- 角色影像卡片 (使用真實 3D 小教練，帶呼吸跳躍動畫) -->
+          <div class="relative w-40 md:w-48 h-56 md:h-64 rounded-3xl overflow-hidden border-3 border-white shadow-2xl anim-float bg-slate-900 group">
+            <img id="coach-img-main" src="./images/track_01/a1_s01_seg01_boy.jpg" alt="小導師" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105">
+            
+            <!-- 導師頭像切換徽章 -->
+            <div class="absolute bottom-2 left-2 right-2 bg-black/65 backdrop-blur-md px-2.5 py-1.5 rounded-xl border border-white/20 flex items-center justify-between text-[11px] font-bold">
+              <span id="coach-name-main" class="text-amber-300">👦 導師：樂樂</span>
+              <button onclick="toggleCoachCharacterMain(event)" class="text-sky-300 hover:text-white underline text-[10px] active:scale-95">
+                切換美美 👧
+              </button>
+            </div>
+          </div>
+
+          <!-- 環繞小導師的拍子音符動態 -->
+          <div class="absolute -top-1 right-2 text-xl animate-bounce">🎶</div>
+          <div class="absolute top-10 -left-3 text-lg animate-pulse text-amber-400">✨</div>
+        </div>
+
+        <div class="mt-2">
+          <span class="text-xs font-black text-slate-700 bg-white/90 px-3.5 py-1 rounded-full border border-amber-200/80 shadow-xs backdrop-blur">
+            👋 歡迎來到奇妙星，選個星球一起跳！
+          </span>
+        </div>
+      </div>
+
+      <!-- 右側：第二專輯【星光狂歡星】(帶公轉小物件) -->
+      <div class="flex flex-col items-center text-center group cursor-pointer bg-white/70 hover:bg-white/90 backdrop-blur-md p-6 rounded-3xl border-2 border-purple-300/80 hover:border-purple-400 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" onclick="openAlbumView('album_2')">
+        <div class="mb-2">
+          <span class="text-[11px] font-black uppercase tracking-wider text-purple-700 bg-purple-100 px-3 py-1 rounded-full border border-purple-300">
+            🚀 第 2 專輯 · 節奏派對
+          </span>
+          <h3 class="text-xl font-black text-slate-900 mt-2.5">Planet 2: Groove</h3>
+          <p class="text-xs text-purple-700 font-bold mt-0.5">超燃星光狂歡新舞曲 (共 10 關)</p>
+        </div>
+
+        <!-- 星球本體 + 環繞公轉物件容器 -->
+        <div class="relative w-44 h-44 flex items-center justify-center my-2">
+          <!-- 公轉物件 1: 霓虹耳機 -->
+          <div class="absolute w-8 h-8 rounded-full bg-pink-500 flex items-center justify-center text-base shadow-lg shadow-pink-500/50 anim-orbit-cw z-20" title="DJ耳機">
+            🎧
+          </div>
+          <!-- 公轉物件 2: 旋轉音符星 -->
+          <div class="absolute w-7 h-7 rounded-full bg-cyan-400 flex items-center justify-center text-xs shadow-md shadow-cyan-400/40 anim-orbit-ccw z-20" title="星光節拍">
+            🎵
+          </div>
+          <!-- 公轉物件 3: 迪斯可水晶球 -->
+          <div class="absolute w-6 h-6 rounded-full bg-purple-400 flex items-center justify-center text-xs shadow-sm anim-orbit-fast z-10" title="派對水晶">
+            🪩
+          </div>
+
+          <!-- 星球主體球 (3D 霓虹紫粉色 + 星環) -->
+          <div class="relative flex items-center justify-center">
+            <!-- 土星環立體傾斜光環 -->
+            <div class="absolute w-40 h-12 rounded-full border-3 border-pink-400/70 transform -rotate-12 shadow-lg shadow-pink-500/30 pointer-events-none z-20"></div>
+
+            <div class="w-32 h-32 rounded-full bg-gradient-to-tr from-purple-600 via-pink-500 to-indigo-500 shadow-2xl anim-glow-neon anim-float flex items-center justify-center relative overflow-hidden border-2 border-pink-200/50 transition-transform group-hover:scale-105">
+              <div class="text-4xl filter drop-shadow select-none">😜</div>
+              <div class="absolute -top-3 -right-3 w-14 h-14 rounded-full bg-white/40 blur-md pointer-events-none"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 星球專屬按鈕 -->
+        <button class="mt-3 px-6 py-2.5 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-500 hover:to-pink-400 text-white font-black text-xs md:text-sm shadow-md transition-all transform active:scale-95 group-hover:scale-105 flex items-center gap-1.5">
+          <span>🎉</span> 進入派對星球 (10關)
+        </button>
+      </div>
+
+    </div>
+
+    <!-- 底部快捷功能大按鈕 (Apple Arcade 幼兒觸控大鍵) -->
+    <footer class="flex flex-wrap items-center justify-center gap-3 pt-2 pb-1">
+      <button onclick="playRandomSongInAlbum()" class="px-6 py-3 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 font-black text-xs md:text-sm shadow-md transition-all transform active:scale-95 flex items-center gap-2 border border-slate-200">
+        <span class="text-lg">🎲</span>
+        <span>隨機跳舞大冒險</span>
+      </button>
+
+      <button onclick="playCurrentAlbumAll()" class="px-8 py-3 rounded-2xl bg-gradient-to-r from-amber-500 via-orange-500 to-pink-500 hover:opacity-95 text-white font-black text-xs md:text-sm shadow-lg shadow-orange-400/30 transition-all transform active:scale-95 flex items-center gap-2">
+        <span class="text-lg">▶</span>
+        <span>Launch Adventure (全專循環跟跳)</span>
+      </button>
+    </footer>
+
+  </div>
+
+
+  <!-- ========================================================= -->
+  <!-- 頁面 1-B：單一星球闖關選單 (Single Planet 10-Levels Hub)   -->
+  <!-- ========================================================= -->
+  <div id="view-album-levels" class="hidden flex-1 flex flex-col p-4 md:p-8 max-w-6xl mx-auto w-full">
+    
+    <!-- 返回雙星球母艦與星球標題列 -->
+    <header class="flex items-center justify-between pb-4 border-b border-amber-200/80 mb-5">
+      <div class="flex items-center gap-3">
+        <button onclick="backToPlanetHub()" class="px-4 py-2 rounded-2xl bg-white hover:bg-slate-100 border border-slate-200 text-xs md:text-sm font-black text-slate-700 transition flex items-center gap-1.5 active:scale-95 shadow-xs">
+          ◀ 返回雙星球
+        </button>
         <div>
-          <h3 id="album-section-title" class="text-base font-black text-slate-800">
-            第一集曲目選單 (共 10 首)
-          </h3>
-          <p id="album-section-desc" class="text-xs text-slate-500 font-medium">
-            點選卡片單獨跟跳，或點右側「整張專輯循環播放」無縫連播！
+          <h2 id="album-view-title" class="text-lg md:text-xl font-black text-slate-900 flex items-center gap-2">
+            第一集：探索生活大冒險
+          </h2>
+          <p id="album-view-desc" class="text-xs text-slate-500 font-medium">
+            共 10 個趣味關卡 · 點選任一關卡出發跟跳！
           </p>
         </div>
       </div>
+
+      <!-- 連續播放按鈕 -->
       <div class="flex items-center gap-2">
-        <button onclick="playCurrentAlbumAll()" class="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-black text-sm shadow-md transition flex items-center gap-2 active:scale-95 anim-pulse">
-          <span>▶</span> 整張專輯循環播放
-        </button>
-        <button onclick="playRandomSongInAlbum()" class="px-4 py-2.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-bold text-xs shadow-xs transition flex items-center gap-1.5 active:scale-95">
-          <span>🎲</span> 隨機跳一首
+        <button onclick="playCurrentAlbumAll()" class="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-black text-xs md:text-sm shadow-md transition flex items-center gap-2 active:scale-95 anim-pulse">
+          <span>▶</span> 全星球 10 關循環播放
         </button>
       </div>
-    </div>
+    </header>
 
-    <!-- 歌曲卡片網格容器 (動態渲染) -->
+    <!-- 歌曲關卡卡片網格 (動態渲染 10 關) -->
     <div id="song-cards-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5">
-      <!-- 由 JS 動態注入 10 首曲目卡片 -->
+      <!-- 由 JS 動態注入 10 首曲目關卡卡片 -->
     </div>
   </div>
 
@@ -804,54 +936,59 @@
     }
 
     // ========================================================
-    // 3. 視圖導航、多專輯選單與全專輯連續播放
+    // 3. 視圖導航：雙星球大選單 vs 單一星球 10 關地圖 vs 教室
     // ========================================================
     let isPlaylistDrawerOpen = false;
+    const viewAlbumLevels = document.getElementById('view-album-levels');
 
-    // 切換當前檢視專輯 (第 1 集 vs 第 2 集)
-    function switchAlbum(albumId) {
+    // 打開單一星球的 10 關選單
+    function openAlbumView(albumId) {
       if (!window.KAI_ALBUM_DATABASE || !window.KAI_ALBUM_DATABASE[albumId]) return;
       currentAlbumId = albumId;
       const album = window.KAI_ALBUM_DATABASE[albumId];
 
-      // 更新 Tab 樣式
-      const tab1 = document.getElementById('tab-album-1');
-      const tab2 = document.getElementById('tab-album-2');
-      if (tab1 && tab2) {
-        if (albumId === 'album_1') {
-          tab1.className = "px-5 py-3 rounded-2xl md:rounded-3xl font-black text-sm md:text-base flex items-center gap-2.5 transition-all shadow-md bg-gradient-to-r from-amber-500 to-orange-500 text-white transform active:scale-95 shrink-0";
-          tab1.querySelector('div div:first-child').className = "leading-none text-white";
-          tab1.querySelector('div div:last-child').className = "text-[10px] md:text-xs text-amber-100 font-medium mt-1";
-          tab2.className = "px-5 py-3 rounded-2xl md:rounded-3xl font-black text-sm md:text-base flex items-center gap-2.5 transition-all shadow-xs bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transform active:scale-95 shrink-0";
-          tab2.querySelector('div div:first-child').className = "leading-none text-slate-800";
-          tab2.querySelector('div div:last-child').className = "text-[10px] md:text-xs text-slate-500 font-medium mt-1";
+      const aTitle = document.getElementById('album-view-title');
+      const aDesc = document.getElementById('album-view-desc');
+      if (aTitle) aTitle.innerHTML = `${album.id === 'album_1' ? '☀️' : '🚀'} ${album.zhTitle}`;
+      if (aDesc) aDesc.innerText = `${album.subtitle} · 共 10 個趣味關卡`;
+
+      viewLobby.classList.add('hidden');
+      if (viewAlbumLevels) viewAlbumLevels.classList.remove('hidden');
+      renderLobbySongs(albumId);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 從單一星球返回雙星球首頁選單
+    function backToPlanetHub() {
+      if (viewAlbumLevels) viewAlbumLevels.classList.add('hidden');
+      viewLobby.classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 首頁中央小導師切換 (樂樂 / 美美)
+    let isMainCoachBoy = true;
+    function toggleCoachCharacterMain(e) {
+      if (e) e.stopPropagation();
+      isMainCoachBoy = !isMainCoachBoy;
+      const img = document.getElementById('coach-img-main');
+      const name = document.getElementById('coach-name-main');
+      if (img && name) {
+        if (isMainCoachBoy) {
+          img.src = "./images/track_01/a1_s01_seg01_boy.jpg";
+          name.innerText = "👦 導師：樂樂";
+          name.className = "text-amber-300";
         } else {
-          tab2.className = "px-5 py-3 rounded-2xl md:rounded-3xl font-black text-sm md:text-base flex items-center gap-2.5 transition-all shadow-md bg-gradient-to-r from-purple-600 to-pink-500 text-white transform active:scale-95 shrink-0";
-          tab2.querySelector('div div:first-child').className = "leading-none text-white";
-          tab2.querySelector('div div:last-child').className = "text-[10px] md:text-xs text-purple-100 font-medium mt-1";
-          tab1.className = "px-5 py-3 rounded-2xl md:rounded-3xl font-black text-sm md:text-base flex items-center gap-2.5 transition-all shadow-xs bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transform active:scale-95 shrink-0";
-          tab1.querySelector('div div:first-child').className = "leading-none text-slate-800";
-          tab1.querySelector('div div:last-child').className = "text-[10px] md:text-xs text-slate-500 font-medium mt-1";
+          img.src = "./images/track_05/a1_s05_seg01_girl.jpg";
+          name.innerText = "👧 導師：美美";
+          name.className = "text-pink-300";
         }
       }
+    }
 
-      // 更新大橫幅
-      const banner = document.getElementById('album-banner');
-      const bBadge = document.getElementById('album-banner-badge');
-      const bTitle = document.getElementById('album-banner-title');
-      const bDesc = document.getElementById('album-banner-desc');
-      const bEmoji = document.getElementById('album-banner-emoji');
-      const sTitle = document.getElementById('album-section-title');
-
-      if (banner) {
-        banner.className = `bg-gradient-to-r ${album.themeGradient} rounded-3xl p-6 md:p-8 text-white shadow-xl relative overflow-hidden mb-6 transition-all duration-300`;
-      }
-      if (bBadge) bBadge.innerText = album.badge;
-      if (bTitle) bTitle.innerHTML = `${album.zhTitle}<br>${album.title}`;
-      if (bDesc) bDesc.innerText = album.subtitle + " · 每一首歌都可獨立單曲跟跳，也可點選「整張專輯循環播放」自動連播！";
-      if (bEmoji) bEmoji.innerText = albumId === 'album_1' ? '☀️' : '🚀';
-      if (sTitle) sTitle.innerText = `${album.zhTitle} (共 ${album.songs.length} 首)`;
-
+    // 切換當前檢視專輯
+    function switchAlbum(albumId) {
+      if (!window.KAI_ALBUM_DATABASE || !window.KAI_ALBUM_DATABASE[albumId]) return;
+      currentAlbumId = albumId;
       renderLobbySongs(albumId);
     }
 
@@ -1126,8 +1263,12 @@
     function backToLobby() {
       pauseDance();
       viewDance.classList.add('hidden');
-      viewLobby.classList.remove('hidden');
-      renderLobbySongs(currentAlbumId);
+      if (viewAlbumLevels) {
+        viewAlbumLevels.classList.remove('hidden');
+        renderLobbySongs(currentAlbumId);
+      } else {
+        viewLobby.classList.remove('hidden');
+      }
     }
 
     function updatePlayerCountUI(num) {
