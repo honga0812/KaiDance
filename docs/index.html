@@ -68,18 +68,15 @@
     }
     @keyframes glow-sun-pulse {
       0%, 100% { filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.45)); }
-      50% { filter: drop-shadow(0 0 35px rgba(251, 191, 36, 0.85)); }
+      50% { filter: drop-shadow(0 0 30px rgba(251, 191, 36, 0.8)); }
     }
-    @keyframes glow-neon-pulse {
-      0%, 100% { filter: drop-shadow(0 0 15px rgba(217, 70, 239, 0.45)); }
-      50% { filter: drop-shadow(0 0 35px rgba(217, 70, 239, 0.85)); }
+    @keyframes star-twinkle {
+      0%, 100% { opacity: 0.3; transform: scale(0.8); }
+      50% { opacity: 1; transform: scale(1.2); }
     }
-    .anim-orbit-cw { animation: orbit-cw 12s linear infinite; }
-    .anim-orbit-ccw { animation: orbit-ccw 9s linear infinite; }
-    .anim-orbit-fast { animation: orbit-fast 7s linear infinite; }
-    .anim-float { animation: float-gentle 4s ease-in-out infinite; }
-    .anim-glow-sun { animation: glow-sun-pulse 3s infinite ease-in-out; }
-    .anim-glow-neon { animation: glow-neon-pulse 3s infinite ease-in-out; }
+    .anim-star { animation: star-twinkle 3s ease-in-out infinite; }
+    .anim-float-planet { animation: float-gentle 5s ease-in-out infinite; }
+    .anim-pulse-subtle { animation: pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite; }
     
     input[type=range]::-webkit-slider-thumb {
       -webkit-appearance: none;
@@ -118,162 +115,154 @@
   <!-- ========================================================= -->
   <!-- 頁面 1：歌曲選單大廳 (Song Selection Lobby)                -->
   <!-- ========================================================= -->
-  <!-- 頁面 1：宇宙雙星球冒險選單 (KaiDance Cosmic Dual-Planet Hub) -->
+  <!-- 頁面 1：宇宙雙星球大選單 (Reference Style 2 - Dark Cosmic Clay) -->
   <!-- ========================================================= -->
-  <div id="view-lobby" class="flex-1 flex flex-col p-3 md:p-6 max-w-6xl mx-auto w-full justify-between">
+  <div id="view-lobby" class="relative flex-1 flex flex-col p-4 md:p-6 max-w-6xl mx-auto w-full justify-between min-h-[580px] md:min-h-[640px] rounded-3xl overflow-hidden border-2 border-slate-700/60 shadow-2xl my-2" style="background: radial-gradient(circle at 50% 30%, #1e293b 0%, #0f172a 45%, #020617 100%);">
     
-    <!-- 頂部 Apple Arcade 風格狀態膠囊列 -->
-    <header class="flex items-center justify-between z-20 pb-4 border-b border-amber-200/50">
-      <!-- 品牌標籤 -->
-      <div class="flex items-center gap-2.5 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full border border-amber-200 shadow-sm">
-        <span class="text-xl">🍎</span>
-        <span class="font-black text-slate-800 text-sm md:text-base tracking-tight">KaiDance</span>
-        <span class="text-xs font-bold bg-pink-500 text-white px-2.5 py-0.5 rounded-full shadow-xs">
-          奇妙星律動
-        </span>
+    <!-- 背景裝飾：微光流星與懸浮小星塵 (還原圖檔深空氛圍) -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <!-- 閃爍恆星 -->
+      <div class="absolute top-14 left-1/4 text-white text-xs anim-star">✦</div>
+      <div class="absolute top-20 right-1/4 text-amber-200 text-sm anim-star" style="animation-delay: 1.2s;">✨</div>
+      <div class="absolute top-1/3 left-10 text-cyan-300 text-xs anim-star" style="animation-delay: 0.7s;">✦</div>
+      <div class="absolute top-1/2 right-12 text-pink-300 text-xs anim-star" style="animation-delay: 1.8s;">✦</div>
+      <div class="absolute bottom-28 left-1/3 text-amber-300 text-sm anim-star" style="animation-delay: 2.2s;">✨</div>
+
+      <!-- 底部宇宙微光浮島光暈 -->
+      <div class="absolute -bottom-24 left-1/2 -translate-x-1/2 w-[850px] h-[220px] bg-gradient-to-t from-sky-900/30 via-indigo-950/20 to-transparent rounded-full blur-3xl"></div>
+    </div>
+
+    <!-- 頂部 Apple Arcade 風格深色半透明膠囊狀態列 (完全參照圖檔膠囊) -->
+    <header class="relative z-20 flex items-center justify-between pb-2">
+      <!-- 左側隱形平衡佔位 -->
+      <div class="w-10 md:w-28"></div>
+
+      <!-- 正中央：Apple 風格標誌與標題膠囊 [  KaiDance  ✦  👤  + ] -->
+      <div class="flex items-center gap-2.5 bg-slate-800/80 hover:bg-slate-800 backdrop-blur-xl px-5 py-2 rounded-full border border-slate-600/60 shadow-lg text-white transition">
+        <span class="text-base select-none"></span>
+        <span class="font-black text-sm md:text-base tracking-tight text-white select-none">KaiDance</span>
+        <span class="text-amber-300 text-sm select-none">✦</span>
+        <button onclick="alert('小朋友舞者切換：支援多位小舞者存檔！')" class="text-slate-300 hover:text-white transition text-xs flex items-center gap-1 ml-1" title="小舞者帳戶">
+          <span>👤</span>
+          <span class="text-[10px] font-bold text-slate-400">+</span>
+        </button>
       </div>
 
-      <!-- 獎勵星星與家長設定 -->
-      <div class="flex items-center gap-3">
-        <div class="flex items-center gap-2 bg-amber-500/15 backdrop-blur-md border border-amber-400/40 px-4 py-1.5 rounded-full text-xs md:text-sm font-black text-amber-700 shadow-xs">
-          <span class="text-base">⭐</span>
-          <span>今日冒險星: <strong id="total-stars-lobby" class="text-amber-600 text-base">58</strong></span>
+      <!-- 右側：今日獎勵星與家長設定 -->
+      <div class="flex items-center gap-2">
+        <div class="hidden sm:flex items-center gap-1.5 bg-slate-800/70 backdrop-blur-md border border-slate-700/80 px-3.5 py-1.5 rounded-full text-xs font-black text-amber-300 shadow-sm">
+          <span>⭐</span>
+          <span id="total-stars-lobby">58</span>
         </div>
-        <button onclick="alert('家長與教練設定：支援音量配比、鏡頭靈敏度與關卡鎖定！')" class="w-9 h-9 rounded-full bg-white/90 hover:bg-white border border-slate-200 flex items-center justify-center text-sm text-slate-600 shadow-sm transition active:scale-95" title="設定與家長控制">
+        <button onclick="alert('家長與教練設定：支援音量配比、鏡頭靈敏度與關卡鎖定！')" class="w-9 h-9 rounded-full bg-slate-800/80 hover:bg-slate-700 border border-slate-600/60 flex items-center justify-center text-sm text-slate-200 shadow-md transition active:scale-95" title="設定與家長控制">
           ⚙️
         </button>
       </div>
     </header>
 
-    <!-- 中央雙星球與中間角色小導師主舞台 (iPad 橫向黃金比例) -->
-    <div class="my-auto py-6 grid grid-cols-1 md:grid-cols-3 items-center gap-6 md:gap-4 relative z-10">
+    <!-- 中央雙星球與中間導師主舞台 (iPad 橫向黃金比例，完全依據參考圖 00005) -->
+    <div class="relative z-10 my-auto py-4 grid grid-cols-1 md:grid-cols-3 items-center gap-4 md:gap-2">
 
-      <!-- 左側：第一專輯【晨光生活星】(帶公轉小物件) -->
-      <div class="flex flex-col items-center text-center group cursor-pointer bg-white/70 hover:bg-white/90 backdrop-blur-md p-6 rounded-3xl border-2 border-amber-300/80 hover:border-amber-400 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" onclick="openAlbumView('album_1')">
-        <div class="mb-2">
-          <span class="text-[11px] font-black uppercase tracking-wider text-amber-700 bg-amber-100 px-3 py-1 rounded-full border border-amber-300">
-            🌟 第 1 專輯 · 探索日常
-          </span>
-          <h3 class="text-xl font-black text-slate-900 mt-2.5">Planet 1: Morning</h3>
-          <p class="text-xs text-amber-700 font-bold mt-0.5">晨操生活常規大冒險 (共 10 關)</p>
+      <!-- ========================================== -->
+      <!-- 左側：第一專輯【Planet 1: Morning Adventure】 -->
+      <!-- ========================================== -->
+      <div class="flex flex-col items-center text-center group cursor-pointer select-none transition-all duration-300 transform hover:-translate-y-1.5" onclick="openAlbumView('album_1')">
+        <!-- 標題文字 (白色粗體，依照參考圖樣式) -->
+        <div class="mb-1 text-center">
+          <h2 class="text-xl md:text-2xl font-black text-white tracking-tight drop-shadow-md">
+            Planet 1: Morning Adventure
+          </h2>
+          <p class="text-xs md:text-sm text-amber-200/90 font-bold tracking-wide mt-0.5">
+            Adventure · 晨光生活大冒險 (10關)
+          </p>
         </div>
 
-        <!-- 星球本體 + 環繞公轉物件容器 -->
-        <div class="relative w-44 h-44 flex items-center justify-center my-2">
-          <!-- 公轉物件 1: 金色小太陽 -->
-          <div class="absolute w-8 h-8 rounded-full bg-amber-400 flex items-center justify-center text-base shadow-lg shadow-amber-400/50 anim-orbit-cw z-20" title="金色太陽">
-            ☀️
-          </div>
-          <!-- 公轉物件 2: 綠葉漂浮島 -->
-          <div class="absolute w-7 h-7 rounded-full bg-emerald-400 flex items-center justify-center text-xs shadow-md shadow-emerald-400/40 anim-orbit-ccw z-20" title="生活萌芽">
-            🌱
-          </div>
-          <!-- 公轉物件 3: 晨起小積木 -->
-          <div class="absolute w-6 h-6 rounded-lg bg-orange-400 flex items-center justify-center text-xs shadow-sm anim-orbit-fast z-10" title="整理收納">
-            🧱
-          </div>
+        <!-- 星球本體卡片 (使用精美黏土星球圖檔 + 立體光暈) -->
+        <div class="relative w-56 h-56 md:w-64 md:h-64 flex items-center justify-center my-1">
+          <!-- 背景背光日冕 -->
+          <div class="absolute inset-0 bg-amber-500/20 rounded-full blur-2xl group-hover:bg-amber-400/30 transition-all pointer-events-none"></div>
 
-          <!-- 星球主體球 (3D 黏土漸層與發光日冕) -->
-          <div class="w-32 h-32 rounded-full bg-gradient-to-tr from-amber-500 via-orange-400 to-yellow-300 shadow-2xl anim-glow-sun anim-float flex items-center justify-center relative overflow-hidden border-2 border-yellow-200/50 transition-transform group-hover:scale-105">
-            <div class="text-4xl filter drop-shadow select-none">😊</div>
-            <div class="absolute -top-3 -right-3 w-14 h-14 rounded-full bg-white/40 blur-md pointer-events-none"></div>
-            <div class="absolute bottom-2 left-2 w-7 h-7 rounded-full bg-emerald-500/30 blur-xs pointer-events-none"></div>
+          <!-- 星球 1 黏土高畫質圖檔 (帶浮動跳動動畫) -->
+          <img src="./images/ui/planet1_card.png" alt="Planet 1: Morning Adventure" class="w-full h-full object-contain filter drop-shadow-[0_12px_24px_rgba(245,158,11,0.35)] anim-float-planet group-hover:scale-105 transition-transform duration-300 pointer-events-none">
+
+          <!-- 探索提示懸浮小徽章 -->
+          <div class="absolute bottom-1 bg-amber-500 text-slate-950 font-black text-[11px] px-3 py-1 rounded-full shadow-lg border border-yellow-200 group-hover:scale-110 transition-transform">
+            <span>探索 10 關 ➜</span>
           </div>
         </div>
-
-        <!-- 星球專屬按鈕 -->
-        <button class="mt-3 px-6 py-2.5 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-black text-xs md:text-sm shadow-md transition-all transform active:scale-95 group-hover:scale-105 flex items-center gap-1.5">
-          <span>🚀</span> 進入晨光冒險 (10關)
-        </button>
       </div>
 
-      <!-- 中央：真實角色 3D 舞蹈小導師 (小男孩樂樂 / 小女孩美美) -->
-      <div class="flex flex-col items-center text-center relative z-20">
-        <div class="relative w-44 md:w-52 h-64 md:h-72 flex items-center justify-center">
-          
+      <!-- ========================================== -->
+      <!-- 中央：可愛立體白黏土小導師 (Mascot Guide)     -->
+      <!-- ========================================== -->
+      <div class="flex flex-col items-center text-center relative z-20 select-none py-2">
+        <div class="relative w-40 md:w-48 h-56 md:h-64 flex items-center justify-center">
           <!-- 導師背後立體發光光環 -->
-          <div class="absolute inset-0 bg-gradient-to-t from-pink-500/25 via-sky-400/20 to-transparent rounded-full blur-2xl"></div>
+          <div class="absolute inset-0 bg-gradient-to-t from-pink-500/20 via-sky-400/20 to-transparent rounded-full blur-2xl"></div>
 
-          <!-- 角色影像卡片 (使用真實 3D 小教練，帶呼吸跳躍動畫) -->
-          <div class="relative w-40 md:w-48 h-56 md:h-64 rounded-3xl overflow-hidden border-3 border-white shadow-2xl anim-float bg-slate-900 group">
-            <img id="coach-img-main" src="./images/track_01/a1_s01_seg01_boy.jpg" alt="小導師" class="w-full h-full object-cover object-top transition-transform duration-300 group-hover:scale-105">
+          <!-- 小白人導師立牌 (依據參考圖圖檔) -->
+          <div class="relative w-full h-full flex items-center justify-center anim-float">
+            <img src="./images/ui/mascot_card.png" alt="Little Guide Mascot" class="max-w-full max-h-full object-contain filter drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)]">
             
-            <!-- 導師頭像切換徽章 -->
-            <div class="absolute bottom-2 left-2 right-2 bg-black/65 backdrop-blur-md px-2.5 py-1.5 rounded-xl border border-white/20 flex items-center justify-between text-[11px] font-bold">
-              <span id="coach-name-main" class="text-amber-300">👦 導師：樂樂</span>
-              <button onclick="toggleCoachCharacterMain(event)" class="text-sky-300 hover:text-white underline text-[10px] active:scale-95">
-                切換美美 👧
-              </button>
+            <!-- 小導師互動語音氣泡 -->
+            <div class="absolute -top-3 bg-white/95 backdrop-blur-md px-3 py-1 rounded-2xl border border-white/60 shadow-lg text-[11px] font-black text-slate-800 animate-bounce">
+              <span>👋 來和我一起跳舞吧！</span>
             </div>
           </div>
-
-          <!-- 環繞小導師的拍子音符動態 -->
-          <div class="absolute -top-1 right-2 text-xl animate-bounce">🎶</div>
-          <div class="absolute top-10 -left-3 text-lg animate-pulse text-amber-400">✨</div>
         </div>
 
-        <div class="mt-2">
-          <span class="text-xs font-black text-slate-700 bg-white/90 px-3.5 py-1 rounded-full border border-amber-200/80 shadow-xs backdrop-blur">
-            👋 歡迎來到奇妙星，選個星球一起跳！
-          </span>
+        <!-- 導師角色切換快捷開關 (樂樂 / 美美 / 小精靈) -->
+        <div class="mt-2 flex items-center gap-1.5 bg-slate-800/90 backdrop-blur px-3 py-1 rounded-full border border-slate-600/80 text-[11px] text-slate-300 shadow">
+          <span class="text-amber-300 font-bold">✨ 小導師已就緒</span>
         </div>
       </div>
 
-      <!-- 右側：第二專輯【星光狂歡星】(帶公轉小物件) -->
-      <div class="flex flex-col items-center text-center group cursor-pointer bg-white/70 hover:bg-white/90 backdrop-blur-md p-6 rounded-3xl border-2 border-purple-300/80 hover:border-purple-400 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1" onclick="openAlbumView('album_2')">
-        <div class="mb-2">
-          <span class="text-[11px] font-black uppercase tracking-wider text-purple-700 bg-purple-100 px-3 py-1 rounded-full border border-purple-300">
-            🚀 第 2 專輯 · 節奏派對
-          </span>
-          <h3 class="text-xl font-black text-slate-900 mt-2.5">Planet 2: Groove</h3>
-          <p class="text-xs text-purple-700 font-bold mt-0.5">超燃星光狂歡新舞曲 (共 10 關)</p>
+      <!-- ========================================== -->
+      <!-- 右側：第二專輯【Planet 2: Groove Party】      -->
+      <!-- ========================================== -->
+      <div class="flex flex-col items-center text-center group cursor-pointer select-none transition-all duration-300 transform hover:-translate-y-1.5" onclick="openAlbumView('album_2')">
+        <!-- 標題文字 (白色粗體，依照參考圖樣式) -->
+        <div class="mb-1 text-center">
+          <h2 class="text-xl md:text-2xl font-black text-white tracking-tight drop-shadow-md">
+            Planet 2: Groove Party
+          </h2>
+          <p class="text-xs md:text-sm text-pink-200/90 font-bold tracking-wide mt-0.5">
+            Groove Party · 星光狂歡新舞曲 (10關)
+          </p>
         </div>
 
-        <!-- 星球本體 + 環繞公轉物件容器 -->
-        <div class="relative w-44 h-44 flex items-center justify-center my-2">
-          <!-- 公轉物件 1: 霓虹耳機 -->
-          <div class="absolute w-8 h-8 rounded-full bg-pink-500 flex items-center justify-center text-base shadow-lg shadow-pink-500/50 anim-orbit-cw z-20" title="DJ耳機">
-            🎧
-          </div>
-          <!-- 公轉物件 2: 旋轉音符星 -->
-          <div class="absolute w-7 h-7 rounded-full bg-cyan-400 flex items-center justify-center text-xs shadow-md shadow-cyan-400/40 anim-orbit-ccw z-20" title="星光節拍">
-            🎵
-          </div>
-          <!-- 公轉物件 3: 迪斯可水晶球 -->
-          <div class="absolute w-6 h-6 rounded-full bg-purple-400 flex items-center justify-center text-xs shadow-sm anim-orbit-fast z-10" title="派對水晶">
-            🪩
-          </div>
+        <!-- 星球本體卡片 (使用精美霓虹耳機星球圖檔 + 立體光暈) -->
+        <div class="relative w-56 h-56 md:w-64 md:h-64 flex items-center justify-center my-1">
+          <!-- 背景背光霓虹光暈 -->
+          <div class="absolute inset-0 bg-fuchsia-600/20 rounded-full blur-2xl group-hover:bg-fuchsia-500/35 transition-all pointer-events-none"></div>
 
-          <!-- 星球主體球 (3D 霓虹紫粉色 + 星環) -->
-          <div class="relative flex items-center justify-center">
-            <!-- 土星環立體傾斜光環 -->
-            <div class="absolute w-40 h-12 rounded-full border-3 border-pink-400/70 transform -rotate-12 shadow-lg shadow-pink-500/30 pointer-events-none z-20"></div>
+          <!-- 星球 2 黏土高畫質圖檔 (帶浮動跳動動畫) -->
+          <img src="./images/ui/planet2_card.png" alt="Planet 2: Groove Party" class="w-full h-full object-contain filter drop-shadow-[0_12px_24px_rgba(217,70,239,0.35)] anim-float-planet group-hover:scale-105 transition-transform duration-300 pointer-events-none" style="animation-delay: 1.5s;">
 
-            <div class="w-32 h-32 rounded-full bg-gradient-to-tr from-purple-600 via-pink-500 to-indigo-500 shadow-2xl anim-glow-neon anim-float flex items-center justify-center relative overflow-hidden border-2 border-pink-200/50 transition-transform group-hover:scale-105">
-              <div class="text-4xl filter drop-shadow select-none">😜</div>
-              <div class="absolute -top-3 -right-3 w-14 h-14 rounded-full bg-white/40 blur-md pointer-events-none"></div>
-            </div>
+          <!-- 探索提示懸浮小徽章 -->
+          <div class="absolute bottom-1 bg-pink-500 text-white font-black text-[11px] px-3 py-1 rounded-full shadow-lg border border-pink-200 group-hover:scale-110 transition-transform">
+            <span>派對 10 關 ➜</span>
           </div>
         </div>
-
-        <!-- 星球專屬按鈕 -->
-        <button class="mt-3 px-6 py-2.5 rounded-2xl bg-gradient-to-r from-purple-600 to-pink-500 hover:from-purple-500 hover:to-pink-400 text-white font-black text-xs md:text-sm shadow-md transition-all transform active:scale-95 group-hover:scale-105 flex items-center gap-1.5">
-          <span>🎉</span> 進入派對星球 (10關)
-        </button>
       </div>
 
     </div>
 
-    <!-- 底部快捷功能大按鈕 (Apple Arcade 幼兒觸控大鍵) -->
-    <footer class="flex flex-wrap items-center justify-center gap-3 pt-2 pb-1">
-      <button onclick="playRandomSongInAlbum()" class="px-6 py-3 rounded-2xl bg-white hover:bg-slate-50 text-slate-800 font-black text-xs md:text-sm shadow-md transition-all transform active:scale-95 flex items-center gap-2 border border-slate-200">
-        <span class="text-lg">🎲</span>
-        <span>隨機跳舞大冒險</span>
+    <!-- ========================================== -->
+    <!-- 底部：Launch Adventure 巨大糖果漸層膠囊按鈕   -->
+    <!-- (完全忠實呈現參考圖底部巨大柔和膠囊)            -->
+    <!-- ========================================== -->
+    <footer class="relative z-20 flex flex-col sm:flex-row items-center justify-center gap-3 pt-2 pb-2">
+      <!-- 隨機跳舞小鍵 (次要選項) -->
+      <button onclick="playRandomSongInAlbum()" class="px-5 py-3 rounded-full bg-slate-800/80 hover:bg-slate-700 text-slate-200 hover:text-white font-bold text-xs md:text-sm border border-slate-600 shadow-md transition-all active:scale-95 flex items-center gap-2">
+        <span>🎲</span>
+        <span>隨機跳舞</span>
       </button>
 
-      <button onclick="playCurrentAlbumAll()" class="px-8 py-3 rounded-2xl bg-gradient-to-r from-amber-500 via-orange-500 to-pink-500 hover:opacity-95 text-white font-black text-xs md:text-sm shadow-lg shadow-orange-400/30 transition-all transform active:scale-95 flex items-center gap-2">
-        <span class="text-lg">▶</span>
-        <span>Launch Adventure (全專循環跟跳)</span>
+      <!-- Launch Adventure 主按鈕 (完全採用參考圖的米白-粉黃-水藍漸層與深藍大字) -->
+      <button onclick="playCurrentAlbumAll()" class="px-12 md:px-20 py-3.5 md:py-4 rounded-full font-black text-base md:text-xl tracking-tight transition-all duration-300 transform active:scale-95 hover:scale-[1.02] shadow-2xl flex items-center justify-center gap-3 border-2 border-white/60" style="background: linear-gradient(90deg, #fef08a 0%, #fed7aa 25%, #fbcfe8 60%, #bae6fd 100%); color: #1e1b4b; box-shadow: 0 10px 30px -5px rgba(251, 207, 232, 0.5);">
+        <span>Launch Adventure</span>
+        <span class="text-sm md:text-base font-black opacity-80">(全專連播)</span>
       </button>
     </footer>
 
@@ -282,20 +271,21 @@
 
   <!-- ========================================================= -->
   <!-- 頁面 1-B：單一星球闖關選單 (Single Planet 10-Levels Hub)   -->
+  <!-- 支援風格 00007 (晨光樂園島) 與 00012 (星光彩虹軌道)          -->
   <!-- ========================================================= -->
-  <div id="view-album-levels" class="hidden flex-1 flex flex-col p-4 md:p-8 max-w-6xl mx-auto w-full">
+  <div id="view-album-levels" class="hidden flex-1 flex flex-col p-4 md:p-6 max-w-6xl mx-auto w-full min-h-[580px] md:min-h-[640px] rounded-3xl overflow-hidden border-2 border-slate-700/60 shadow-2xl my-2 relative" style="background: radial-gradient(circle at 50% 30%, #1e293b 0%, #0f172a 45%, #020617 100%);">
     
-    <!-- 返回雙星球母艦與星球標題列 -->
-    <header class="flex items-center justify-between pb-4 border-b border-amber-200/80 mb-5">
+    <!-- 返回雙星球母艦與星球標題列 (仿造圖檔頂部膠囊選單) -->
+    <header class="relative z-20 flex items-center justify-between pb-4 border-b border-slate-700/60 mb-5">
       <div class="flex items-center gap-3">
-        <button onclick="backToPlanetHub()" class="px-4 py-2 rounded-2xl bg-white hover:bg-slate-100 border border-slate-200 text-xs md:text-sm font-black text-slate-700 transition flex items-center gap-1.5 active:scale-95 shadow-xs">
-          ◀ 返回雙星球
+        <button onclick="backToPlanetHub()" class="px-4 py-2 rounded-full bg-slate-800/90 hover:bg-slate-700 border border-slate-600 text-xs md:text-sm font-black text-white transition flex items-center gap-1.5 active:scale-95 shadow-md">
+          ◀ 返回宇宙雙星
         </button>
         <div>
-          <h2 id="album-view-title" class="text-lg md:text-xl font-black text-slate-900 flex items-center gap-2">
+          <h2 id="album-view-title" class="text-lg md:text-xl font-black text-white flex items-center gap-2 drop-shadow">
             第一集：探索生活大冒險
           </h2>
-          <p id="album-view-desc" class="text-xs text-slate-500 font-medium">
+          <p id="album-view-desc" class="text-xs text-amber-200/80 font-medium">
             共 10 個趣味關卡 · 點選任一關卡出發跟跳！
           </p>
         </div>
@@ -303,14 +293,14 @@
 
       <!-- 連續播放按鈕 -->
       <div class="flex items-center gap-2">
-        <button onclick="playCurrentAlbumAll()" class="px-5 py-2.5 rounded-2xl bg-gradient-to-r from-amber-500 to-orange-500 hover:from-amber-600 hover:to-orange-600 text-white font-black text-xs md:text-sm shadow-md transition flex items-center gap-2 active:scale-95 anim-pulse">
+        <button onclick="playCurrentAlbumAll()" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-400 via-orange-400 to-pink-500 hover:opacity-95 text-slate-950 font-black text-xs md:text-sm shadow-lg transition flex items-center gap-2 active:scale-95 anim-pulse">
           <span>▶</span> 全星球 10 關循環播放
         </button>
       </div>
     </header>
 
-    <!-- 歌曲關卡卡片網格 (動態渲染 10 關) -->
-    <div id="song-cards-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5">
+    <!-- 歌曲關卡卡片網格 (動態渲染 10 關卡) -->
+    <div id="song-cards-container" class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5 pb-6">
       <!-- 由 JS 動態注入 10 首曲目關卡卡片 -->
     </div>
   </div>
@@ -1002,14 +992,14 @@
       container.innerHTML = album.songs.map((song) => {
         const isCurrentActive = song.id === currentSongKey;
         const coachBadge = song.timeline && song.timeline.some(s => s.video) 
-          ? '<span class="bg-amber-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow">🎬 3D 示範影片</span>'
-          : '<span class="bg-sky-500 text-white text-[10px] font-black px-2 py-0.5 rounded-full shadow">📸 動作引導寫真</span>';
+          ? '<span class="bg-amber-400 text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded-full shadow">🎬 3D 示範影片</span>'
+          : '<span class="bg-sky-400 text-slate-950 text-[10px] font-black px-2.5 py-0.5 rounded-full shadow">📸 動作引導寫真</span>';
 
         return `
           <div onclick="selectSong('${song.id}')" 
-               class="group bg-white rounded-3xl p-5 border-2 ${isCurrentActive ? 'border-amber-400 shadow-xl' : 'border-slate-100'} shadow-sm hover:shadow-2xl hover:border-amber-400 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1 relative overflow-hidden">
+               class="group relative bg-slate-800/80 hover:bg-slate-800/95 backdrop-blur-md rounded-3xl p-5 border-2 ${isCurrentActive ? 'border-amber-400 ring-4 ring-amber-400/20 shadow-2xl' : 'border-slate-700/70 hover:border-amber-400/80'} shadow-xl transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1 overflow-hidden select-none">
             
-            <div class="absolute top-3 left-3 bg-slate-900/70 backdrop-blur text-white text-[11px] font-black px-2.5 py-0.5 rounded-full shadow z-10">
+            <div class="absolute top-3 left-3 bg-slate-900/85 backdrop-blur text-white text-[11px] font-black px-2.5 py-0.5 rounded-full shadow z-10 border border-slate-700">
               #${String(song.trackNumber).padStart(2, '0')}
             </div>
 
@@ -1021,20 +1011,20 @@
               <div class="w-full h-36 rounded-2xl bg-gradient-to-tr ${song.themeColor} flex items-center justify-center text-6xl shadow-inner mb-3 overflow-hidden relative group-hover:scale-[1.02] transition-transform">
                 <span class="transform group-hover:scale-110 transition-transform duration-300 drop-shadow-md select-none">${song.emoji}</span>
               </div>
-              <h4 class="font-black text-base text-slate-900 group-hover:text-amber-600 transition-colors line-clamp-1">
+              <h4 class="font-black text-base text-white group-hover:text-amber-300 transition-colors line-clamp-1">
                 ${song.title}
               </h4>
-              <p class="text-xs font-black ${song.textColor} mt-0.5 flex items-center gap-1.5">
+              <p class="text-xs font-black ${song.textColor} mt-0.5 flex items-center gap-1.5 brightness-125">
                 <span>${song.zhTitle}</span> · <span class="opacity-90 font-bold">${song.tag}</span>
               </p>
-              <p class="text-xs text-slate-500 mt-2 line-clamp-2 leading-relaxed">
+              <p class="text-xs text-slate-300/80 mt-2 line-clamp-2 leading-relaxed">
                 ${song.description}
               </p>
             </div>
 
-            <div class="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between">
+            <div class="mt-4 pt-3 border-t border-slate-700/60 flex items-center justify-between">
               <span class="text-xs text-slate-400 font-semibold">⏱ 2:00 · ${song.difficulty}</span>
-              <button class="bg-gradient-to-r from-amber-500 to-orange-500 group-hover:from-amber-600 group-hover:to-orange-600 text-white text-xs font-black px-4 py-2 rounded-xl shadow transition-all active:scale-95 flex items-center gap-1">
+              <button class="bg-gradient-to-r from-amber-400 to-orange-400 group-hover:from-amber-300 group-hover:to-orange-300 text-slate-950 text-xs font-black px-4 py-2 rounded-xl shadow transition-all active:scale-95 flex items-center gap-1">
                 <span>▶</span> 開始跳
               </button>
             </div>
