@@ -290,17 +290,21 @@
         <!-- 動作示範播放器 (支援示範影片與教練寫真圖片無縫切換) -->
         <div class="flex-1 relative flex items-center justify-center p-2 overflow-hidden">
           <div class="relative w-full max-w-[210px] h-[330px] sm:h-[370px] aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-amber-300/50 bg-amber-100/40 flex items-center justify-center">
-            <!-- 示範影片 (第 1 首已更新兩段及基礎循環) -->
-            <video id="coach-video" 
+            <!-- 雙緩衝無縫交替播放器 (Dual-buffered Video Architecture: 徹底消除黑屏與卡頓) -->
+            <video id="coach-video-a" 
                    src="./videos/loop_03_sun_rise.mp4" 
-                   autoplay loop muted playsinline webkit-playsinline="true"
-                   class="w-full h-full object-cover object-center select-none">
+                   autoplay loop muted playsinline webkit-playsinline="true" preload="auto"
+                   class="absolute inset-0 w-full h-full object-cover object-center select-none transition-opacity duration-300 opacity-100 z-10">
             </video>
-            <!-- 示範寫真 (第 2~10 首先放置小男孩小女孩生成寫真) -->
+            <video id="coach-video-b" 
+                   autoplay loop muted playsinline webkit-playsinline="true" preload="auto"
+                   class="absolute inset-0 w-full h-full object-cover object-center select-none transition-opacity duration-300 opacity-0 z-10 pointer-events-none">
+            </video>
+            <!-- 示範寫真 (無影片段落時切換) -->
             <img id="coach-image" 
                  src="./images/boy_dance_coach_1790908303698.jpg" 
                  alt="示範動作" 
-                 class="hidden w-full h-full object-cover object-center select-none anim-coach-breathe">
+                 class="hidden absolute inset-0 w-full h-full object-cover object-center select-none anim-coach-breathe z-10">
             <!-- 動作模式標籤 -->
             <div class="absolute bottom-1.5 left-1.5 right-1.5 flex items-center justify-between pointer-events-none px-1">
               <span id="coach-type-badge" class="bg-black/60 backdrop-blur text-[9px] text-amber-300 font-bold px-1.5 py-0.5 rounded-full">
@@ -667,7 +671,12 @@
     const viewLobby = document.getElementById('view-lobby');
     const viewDance = document.getElementById('view-dance');
     const roomSongTitle = document.getElementById('room-song-title');
-    const coachVideo = document.getElementById('coach-video');
+    const coachVideoA = document.getElementById('coach-video-a');
+    const coachVideoB = document.getElementById('coach-video-b');
+    let activeVideoSlot = 'a'; // 'a' 或 'b'
+    const coachImage = document.getElementById('coach-image');
+    const coachTypeBadge = document.getElementById('coach-type-badge');
+    const videoBlobCache = new Map(); // 快取 blob 或 preloaded 標籤
     const coachActionTitle = document.getElementById('coach-action-title');
     const nextActionText = document.getElementById('next-action-text');
     const lyricMain = document.getElementById('lyric-main');
@@ -1058,24 +1067,30 @@
       currentTime = 0;
       lastSpokenSegment = -1;
 
+      // 智慧預加載：當前曲全段落背景預取 + 次段落提早載入
+      prefetchSongVideos(song);
+
       // 切換初始動作示範媒體 (如果有影片則顯示影片，否則切換至教練寫真照)
       const firstSeg = (song.timeline && song.timeline[0]) || null;
-      const coachVideo = document.getElementById('coach-video');
-      const coachImage = document.getElementById('coach-image');
-      const coachTypeBadge = document.getElementById('coach-type-badge');
-
       if (firstSeg && firstSeg.video) {
         if (coachImage) coachImage.classList.add('hidden');
-        if (coachVideo) {
-          coachVideo.classList.remove('hidden');
-          coachVideo.src = firstSeg.video;
-        }
+        activeVideoSlot = 'a';
+        coachVideoA.classList.remove('opacity-0', 'pointer-events-none');
+        coachVideoA.classList.add('opacity-100');
+        coachVideoB.classList.add('opacity-0', 'pointer-events-none');
+        coachVideoB.classList.remove('opacity-100');
+
+        coachVideoA.src = firstSeg.video;
         if (coachTypeBadge) coachTypeBadge.innerText = "🎬 示範影片";
-      } else {
-        if (coachVideo) {
-          coachVideo.pause();
-          coachVideo.classList.add('hidden');
+
+        // 預載第二段影片到 coachVideoB
+        if (song.timeline && song.timeline[1] && song.timeline[1].video) {
+          coachVideoB.src = song.timeline[1].video;
+          coachVideoB.load();
         }
+      } else {
+        if (coachVideoA) { coachVideoA.pause(); coachVideoA.classList.add('opacity-0'); }
+        if (coachVideoB) { coachVideoB.pause(); coachVideoB.classList.add('opacity-0'); }
         if (coachImage) {
           coachImage.classList.remove('hidden');
           coachImage.src = (firstSeg && firstSeg.image) || song.coachImage || './images/boy_dance_coach_1790908303698.jpg';
@@ -2721,6 +2736,118 @@
       return (idx >= 0 && idx < song.timeline.length) ? song.timeline[idx] : song.timeline[0];
     }
 
+    // ========================================================
+    // 6. 智慧背景預加載 (Prefetch) 與 雙緩衝無縫交替播放 (Dual-buffered Crossfade)
+    // ========================================================
+    let currentPrefetchAbort = null;
+    function prefetchSongVideos(song) {
+      if (!song || !song.timeline) return;
+      // 收集該曲目所有影片路徑
+      const videoUrls = [];
+      song.timeline.forEach(seg => {
+        if (seg.video && !videoUrls.includes(seg.video)) {
+          videoUrls.push(seg.video);
+        }
+      });
+      if (videoUrls.length === 0) return;
+
+      // 1. 優先確保前 3 段影片立刻進入快取 (Link rel=preload 或 fetch blob)
+      videoUrls.slice(0, 3).forEach(url => {
+        if (!videoBlobCache.has(url)) {
+          try {
+            const link = document.createElement('link');
+            link.rel = 'preload';
+            link.as = 'video';
+            link.href = url;
+            document.head.appendChild(link);
+            videoBlobCache.set(url, true);
+          } catch(e) {}
+        }
+      });
+
+      // 2. 序列背景預載後續所有影片 (不阻塞當前播放，完全消除切換延遲)
+      let idx = 0;
+      function fetchNext() {
+        if (idx >= videoUrls.length) return;
+        const url = videoUrls[idx++];
+        if (!videoBlobCache.has(url)) {
+          fetch(url, { cache: 'force-cache' })
+            .then(res => res.blob())
+            .then(() => {
+              videoBlobCache.set(url, true);
+              setTimeout(fetchNext, 120); // 錯開頻寬，保持主播放絕對順暢
+            })
+            .catch(() => {
+              setTimeout(fetchNext, 200);
+            });
+        } else {
+          fetchNext();
+        }
+      }
+      setTimeout(fetchNext, 300);
+    }
+
+    function switchCoachVideoSeamlessly(targetVideoUrl, nextVideoUrl) {
+      if (!coachVideoA || !coachVideoB) return;
+      const currentActive = activeVideoSlot === 'a' ? coachVideoA : coachVideoB;
+      const standbySlot = activeVideoSlot === 'a' ? coachVideoB : coachVideoA;
+      const standbyName = activeVideoSlot === 'a' ? 'b' : 'a';
+
+      // 若目前播放的正是這支影片，僅確保播放
+      if (currentActive.src && currentActive.src.indexOf(targetVideoUrl.replace('./', '')) !== -1) {
+        if (isPlaying && currentActive.paused) currentActive.play().catch(e => console.log(e));
+        // 預先載入下一段到 standbySlot
+        if (nextVideoUrl && (!standbySlot.src || standbySlot.src.indexOf(nextVideoUrl.replace('./', '')) === -1)) {
+          standbySlot.src = nextVideoUrl;
+          standbySlot.load();
+        }
+        return;
+      }
+
+      // 如果備用槽 (standbySlot) 已經載好這支影片，執行無縫 300ms 交叉漸變！
+      standbySlot.src = targetVideoUrl;
+      if (isPlaying) {
+        standbySlot.playbackRate = playSpeed;
+        const playPromise = standbySlot.play();
+        if (playPromise !== undefined) {
+          playPromise.then(() => {
+            // 新影片已開始解碼播放，立即可見度翻轉 (無黑屏、無等待！)
+            standbySlot.classList.remove('opacity-0', 'pointer-events-none');
+            standbySlot.classList.add('opacity-100');
+            currentActive.classList.remove('opacity-100');
+            currentActive.classList.add('opacity-0', 'pointer-events-none');
+            setTimeout(() => {
+              try { currentActive.pause(); } catch(e) {}
+            }, 300);
+            activeVideoSlot = standbyName;
+
+            // 切換完成後，立即將下一個段落的影片預備進現在的空閒槽中！
+            if (nextVideoUrl) {
+              setTimeout(() => {
+                const idleVideo = activeVideoSlot === 'a' ? coachVideoB : coachVideoA;
+                if (!idleVideo.src || idleVideo.src.indexOf(nextVideoUrl.replace('./', '')) === -1) {
+                  idleVideo.src = nextVideoUrl;
+                  idleVideo.load();
+                }
+              }, 400);
+            }
+          }).catch(e => {
+            console.log("Video switch play error:", e);
+            // 降級直接顯示
+            standbySlot.classList.remove('opacity-0');
+            standbySlot.classList.add('opacity-100');
+            currentActive.classList.add('opacity-0');
+            activeVideoSlot = standbyName;
+          });
+        }
+      } else {
+        standbySlot.classList.remove('opacity-0');
+        standbySlot.classList.add('opacity-100');
+        currentActive.classList.add('opacity-0');
+        activeVideoSlot = standbyName;
+      }
+    }
+
     function updatePlaybackUI() {
       const mins = Math.floor(currentTime / 60);
       const secs = Math.floor(currentTime % 60);
@@ -2729,6 +2856,9 @@
 
       const idx = getCurrentSegmentIndex();
       const seg = getCurrentSegment();
+      const song = songDatabase[currentSongKey];
+      const nextSeg = (song && song.timeline && song.timeline[idx + 1]) ? song.timeline[idx + 1] : null;
+
       if (seg) {
         coachActionTitle.innerText = seg.title;
         nextActionText.innerText = seg.next;
@@ -2742,25 +2872,14 @@
 
         if (idx !== lastSpokenSegment) {
           lastSpokenSegment = idx;
-          const coachVideo = document.getElementById('coach-video');
-          const coachImage = document.getElementById('coach-image');
-          const coachTypeBadge = document.getElementById('coach-type-badge');
 
           if (seg.video) {
             if (coachImage) coachImage.classList.add('hidden');
-            if (coachVideo) {
-              coachVideo.classList.remove('hidden');
-              if (coachVideo.src.indexOf(seg.video.replace('./', '')) === -1) {
-                coachVideo.src = seg.video;
-                if (isPlaying) coachVideo.play().catch(e => console.log(e));
-              }
-            }
+            switchCoachVideoSeamlessly(seg.video, nextSeg ? nextSeg.video : null);
             if (coachTypeBadge) coachTypeBadge.innerText = "🎬 示範影片";
           } else {
-            if (coachVideo) {
-              coachVideo.pause();
-              coachVideo.classList.add('hidden');
-            }
+            if (coachVideoA) { coachVideoA.pause(); coachVideoA.classList.add('opacity-0'); }
+            if (coachVideoB) { coachVideoB.pause(); coachVideoB.classList.add('opacity-0'); }
             if (coachImage) {
               coachImage.classList.remove('hidden');
               const targetImg = seg.image || (songDatabase[currentSongKey] && songDatabase[currentSongKey].coachImage) || './images/boy_dance_coach_1790908303698.jpg';
@@ -2827,7 +2946,11 @@
       audioBgm.play().catch(e => {
         console.log("Audio autoplay fallback:", e);
       });
-      coachVideo.play().catch(e => console.log("Video play fallback:", e));
+      if (activeVideoSlot === 'a') {
+        coachVideoA.play().catch(e => console.log("Video A play fallback:", e));
+      } else {
+        coachVideoB.play().catch(e => console.log("Video B play fallback:", e));
+      }
 
       timerInterval = setInterval(() => {
         if (!audioBgm.paused && audioBgm.currentTime > 0) {
@@ -2858,7 +2981,8 @@
       btnPlay.classList.replace('bg-emerald-500', 'bg-amber-500');
       audioBgm.pause();
       audioVoice.pause();
-      coachVideo.pause();
+      if (coachVideoA) coachVideoA.pause();
+      if (coachVideoB) coachVideoB.pause();
       if (timerInterval) clearInterval(timerInterval);
     }
 
@@ -2884,12 +3008,14 @@
         playSpeed = 0.8;
         btn.innerText = "🐢 0.8x 慢學";
         audioBgm.playbackRate = 0.8;
-        coachVideo.playbackRate = 0.8;
+        if (coachVideoA) coachVideoA.playbackRate = 0.8;
+        if (coachVideoB) coachVideoB.playbackRate = 0.8;
       } else {
         playSpeed = 1.0;
         btn.innerText = "⚡ 1.0x 正常";
         audioBgm.playbackRate = 1.0;
-        coachVideo.playbackRate = 1.0;
+        if (coachVideoA) coachVideoA.playbackRate = 1.0;
+        if (coachVideoB) coachVideoB.playbackRate = 1.0;
       }
     }
 
