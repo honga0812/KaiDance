@@ -486,27 +486,30 @@
       background-color: #020617 !important;
     }
     .camera-fullscreen-active #camera-container {
-      min-h: 100vh !important;
+      min-height: 100vh !important;
       height: 100% !important;
       width: 100% !important;
       border-radius: 0 !important;
     }
 
-    /* 平板與所有螢幕：全畫面鎖定尺寸，禁止雙指縮放、拖曳晃動、下拉重整 */
-    html, body {
+    /* 平板與所有螢幕基礎重置 */
+    html {
       width: 100%;
-      height: 100%;
+      min-height: 100%;
       margin: 0;
       padding: 0;
-      overflow: hidden !important;
-      position: fixed;
-      inset: 0;
-      touch-action: none !important;
-      -webkit-touch-callout: none !important;
-      -webkit-user-select: none !important;
-      user-select: none !important;
-      overscroll-behavior: none !important;
-      -webkit-overscroll-behavior: none !important;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+      padding: 0;
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+      touch-action: pan-y; /* 核心：預設全面放行垂直原生滑動 */
     }
 
     /* 允許垂直滑動的區域 (星球關卡選單、抽屜、設定彈窗) */
@@ -523,38 +526,63 @@
       -webkit-overflow-scrolling: touch !important;
     }
 
-    /* 允許垂直滑動的區域 (手機端界面與關卡列表) */
-    .allow-touch-scroll, .touch-scroll-y {
-      touch-action: pan-y !important;
-      overflow-y: auto !important;
-      -webkit-overflow-scrolling: touch !important;
-    }
-
-    /* 手機與直立螢幕適配 (畫面放不下時全面放行縱向滑動) */
-    @media (max-width: 1023px), (max-height: 700px) {
-      body {
+    /* 手機與直立螢幕適配 (畫面放不下時全面放行原生縱向滑動，杜絕鎖死) */
+    @media (max-width: 1023px), (max-height: 720px), (orientation: portrait) {
+      html, body {
+        position: static !important;
+        inset: auto !important;
         height: auto !important;
-        min-height: 100vh !important;
-        overflow-y: auto !important;
+        min-height: 100% !important;
         overflow-x: hidden !important;
+        overflow-y: auto !important;
+        touch-action: auto !important; /* 手機端原生流暢滑動 */
+        -webkit-overflow-scrolling: touch !important;
+        overscroll-behavior: auto !important;
+      }
+      body {
         justify-content: flex-start !important;
+        min-height: 100vh !important;
       }
       #view-lobby {
         min-height: auto !important;
         height: auto !important;
         overflow: visible !important;
+        padding-bottom: 5.5rem !important;
       }
       #view-dance {
         min-height: auto !important;
         height: auto !important;
-        overflow-y: auto !important;
-        -webkit-overflow-scrolling: touch !important;
-        padding-bottom: 6rem !important;
+        overflow-y: visible !important;
+        padding-bottom: 6.5rem !important;
       }
       #view-album-levels {
         height: auto !important;
         min-height: calc(100vh - 1rem) !important;
         max-height: none !important;
+        overflow-y: visible !important;
+        padding-bottom: 5rem !important;
+      }
+    }
+
+    /* 僅在桌面大螢幕或橫向黃金比例視圖，才鎖定單屏無滾動條版型 */
+    @media (min-width: 1024px) and (min-height: 721px) and (orientation: landscape) {
+      html, body {
+        height: 100%;
+        overflow: hidden !important;
+        touch-action: none;
+      }
+      body {
+        justify-content: center !important;
+      }
+      #view-lobby {
+        height: 100%;
+        max-height: 96vh;
+        overflow: hidden !important;
+      }
+      #view-dance {
+        height: calc(100vh - 1.5rem);
+        max-height: calc(100vh - 1.5rem);
+        overflow: hidden !important;
       }
     }
   </style>
@@ -1112,7 +1140,7 @@
     <main class="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-2 md:gap-3 mb-2 md:mb-3 items-stretch min-h-0 overflow-visible lg:overflow-hidden">
       
       <!-- 【左半屏：AI 舞蹈導師示範影片 (佔 3/12 = 25% 寬度，無黑底框、無邊框設計，精緻小巧)】 -->
-      <section class="relative bg-gradient-to-b from-amber-50/90 via-white to-amber-50/60 rounded-3xl border border-amber-200/60 shadow-md flex flex-col justify-between overflow-hidden h-[360px] sm:h-[420px] lg:h-full lg:col-span-3 shrink-0">
+      <section class="relative bg-gradient-to-b from-amber-50/90 via-white to-amber-50/60 rounded-3xl border border-amber-200/60 shadow-md flex flex-col justify-between overflow-hidden h-[280px] sm:h-[350px] lg:h-full lg:col-span-3 shrink-0">
         <!-- 頂欄狀態 -->
         <div class="p-2 md:p-2.5 px-3 z-20 flex items-center justify-between gap-1.5 border-b border-amber-100 bg-amber-100/50 shrink-0">
           <span class="bg-amber-500 text-white text-[10px] md:text-[11px] font-black px-2 py-0.5 rounded-full shadow flex items-center gap-1 shrink-0">
@@ -1125,23 +1153,23 @@
         </div>
 
         <!-- 動作示範播放器 (支援示範影片與教練寫真圖片無縫切換，自適應剩餘空間) -->
-        <div class="flex-1 relative flex items-center justify-center p-1 md:p-2 overflow-hidden min-h-0">
-          <div class="relative w-full max-w-[210px] h-full max-h-[360px] aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-amber-300/50 bg-amber-100/40 flex items-center justify-center">
+        <div class="flex-1 relative flex items-center justify-center p-1 md:p-2 overflow-hidden min-h-0 bg-amber-100/30">
+          <div class="relative w-full max-w-[210px] h-full max-h-[360px] aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-amber-300/50 bg-slate-900 flex items-center justify-center">
             <!-- 雙緩衝無縫交替播放器 (Dual-buffered Video Architecture: 徹底消除黑屏與卡頓) -->
             <video id="coach-video-a" 
                    src="./videos/loop_03_sun_rise.mp4" 
                    autoplay loop muted playsinline webkit-playsinline="true" preload="auto"
-                   class="absolute inset-0 w-full h-full object-cover object-center select-none transition-opacity duration-300 opacity-100 z-10">
+                   class="absolute inset-0 w-full h-full object-contain object-center select-none transition-opacity duration-300 opacity-100 z-10">
             </video>
             <video id="coach-video-b" 
                    autoplay loop muted playsinline webkit-playsinline="true" preload="auto"
-                   class="absolute inset-0 w-full h-full object-cover object-center select-none transition-opacity duration-300 opacity-0 z-10 pointer-events-none">
+                   class="absolute inset-0 w-full h-full object-contain object-center select-none transition-opacity duration-300 opacity-0 z-10 pointer-events-none">
             </video>
             <!-- 示範寫真 (無影片段落時切換) -->
             <img id="coach-image" 
                  src="./images/boy_dance_coach_1790908303698.jpg" 
                  alt="示範動作" 
-                 class="hidden absolute inset-0 w-full h-full object-cover object-center select-none anim-coach-breathe z-10">
+                 class="hidden absolute inset-0 w-full h-full object-contain object-center select-none anim-coach-breathe z-10">
             <!-- 動作模式標籤 -->
             <div class="absolute bottom-1.5 left-1.5 right-1.5 flex items-center justify-between pointer-events-none px-1">
               <span id="coach-type-badge" class="bg-black/60 backdrop-blur text-[9px] text-amber-300 font-bold px-1.5 py-0.5 rounded-full">
@@ -1162,41 +1190,37 @@
       </section>
 
       <!-- 【右半屏：大螢幕攝影鏡頭 + 人物入鏡趣味發光火柴人 (佔 9/12 = 75% 寬度，超大視角舞台)】 -->
-      <section id="camera-section" class="relative bg-white rounded-3xl border-2 border-sky-200 overflow-hidden shadow-lg flex flex-col justify-between h-[380px] sm:h-[450px] lg:h-full lg:col-span-9 transition-all duration-300 min-h-0">
+      <section id="camera-section" class="relative bg-white rounded-3xl border-2 border-sky-200 overflow-hidden shadow-lg flex flex-col justify-between h-[340px] sm:h-[420px] lg:h-full lg:col-span-9 transition-all duration-300 min-h-0">
         
-        <!-- 顶栏：摄像头开关与火柴人状态 (固定高宽，絕對不會因文字變動擠壓畫布佈局) -->
-        <div class="absolute top-2.5 left-3 z-30 flex items-center gap-2 max-w-[65%] pointer-events-auto">
-          <button id="btn-camera" onclick="initRealCamera()" class="px-3 md:px-3.5 py-1 md:py-1.5 rounded-full bg-sky-500 hover:bg-sky-600 text-white text-[11px] md:text-xs font-black shadow transition flex items-center gap-1.5 shrink-0 active:scale-95">
-            📷 開啟攝影機
-          </button>
-          <span id="stickman-status-badge" class="bg-white/95 backdrop-blur text-slate-700 text-[11px] md:text-xs font-bold px-2.5 py-1 rounded-full border border-sky-200 shadow-xs truncate block max-w-xs md:max-w-md">
-            等待小朋友入鏡變身火柴人...
-          </span>
-        </div>
-
-        <!-- 頂欄右側：數位縮放 (Zoom In/Out)、鏡頭全螢幕按鍵與動作貼合度儀表 -->
-        <div class="absolute top-2.5 right-3 z-30 flex items-center gap-1.5 md:gap-2 pointer-events-auto">
-          <!-- 鏡頭遠近縮放控制 (針對站得遠的小朋友支援 1.0x ~ 2.2x 放大，遠距離精準辨識) -->
-          <div class="flex items-center bg-white/95 backdrop-blur px-2 py-0.5 md:py-1 rounded-2xl border border-sky-300 shadow-sm text-xs font-black text-sky-800 shrink-0" title="鏡頭放大縮小：站較遠時可點選 🔍+ 放大畫面提升辨識精準度">
-            <span class="text-[10px] text-slate-500 mr-1 hidden sm:inline">鏡頭:</span>
-            <button onclick="adjustCameraZoom(-0.25)" class="w-5 h-5 md:w-6 md:h-6 rounded-lg bg-sky-100 hover:bg-sky-200 flex items-center justify-center text-xs active:scale-95" title="縮小 (廣角)">➖</button>
-            <span id="camera-zoom-val" class="px-1 text-[11px] font-mono font-black text-sky-700 min-w-[32px] text-center">1.0x</span>
-            <button onclick="adjustCameraZoom(0.25)" class="w-5 h-5 md:w-6 md:h-6 rounded-lg bg-sky-100 hover:bg-sky-200 flex items-center justify-center text-xs active:scale-95" title="放大 (特寫遠方人物)">➕</button>
-            <button onclick="resetCameraZoom()" class="text-[10px] text-slate-400 hover:text-sky-600 ml-1 underline active:scale-95">重設</button>
+        <!-- 頂欄：自適應整合狀態列 (手機端單行優雅對齊，絕不重疊遮擋視訊) -->
+        <div class="p-2 md:p-2.5 px-3 z-30 flex flex-wrap items-center justify-between gap-1.5 border-b border-sky-100 bg-sky-50/90 shrink-0">
+          <div class="flex items-center gap-1.5 min-w-0">
+            <button id="btn-camera" onclick="initRealCamera()" class="px-2.5 sm:px-3.5 py-1 rounded-full bg-sky-500 hover:bg-sky-600 text-white text-[11px] md:text-xs font-black shadow transition flex items-center gap-1 shrink-0 active:scale-95">
+              📷 開啟攝影機
+            </button>
+            <span id="stickman-status-badge" class="bg-white/95 backdrop-blur text-slate-700 text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full border border-sky-200 shadow-xs truncate max-w-[130px] sm:max-w-xs">
+              等待小朋友入鏡...
+            </span>
           </div>
 
-          <!-- 獨立鏡頭全螢幕按鍵 -->
-          <button id="btn-camera-fullscreen" onclick="toggleCameraFullscreen()" class="px-2.5 md:px-3 py-1 md:py-1.5 rounded-2xl bg-white/95 hover:bg-sky-50 border border-sky-300 text-sky-700 font-black text-xs shadow-sm transition flex items-center gap-1.5 active:scale-95" title="單獨將攝影機與火柴人切換為大螢幕全螢幕">
-            <span id="camera-fs-icon">🔲</span>
-            <span id="camera-fs-text" class="hidden sm:inline">鏡頭全螢幕</span>
-          </button>
+          <div class="flex items-center gap-1.5 shrink-0 ml-auto">
+            <!-- 鏡頭遠近縮放控制 (針對站得遠的小朋友支援 1.0x ~ 2.2x 放大) -->
+            <div class="flex items-center bg-white/95 px-1.5 py-0.5 rounded-xl border border-sky-300 shadow-xs text-xs font-black text-sky-800">
+              <button onclick="adjustCameraZoom(-0.25)" class="w-5 h-5 rounded bg-sky-100 hover:bg-sky-200 flex items-center justify-center text-[10px] active:scale-95" title="縮小 (廣角)">➖</button>
+              <span id="camera-zoom-val" class="px-1 text-[10px] font-mono font-black text-sky-700 min-w-[28px] text-center">1.0x</span>
+              <button onclick="adjustCameraZoom(0.25)" class="w-5 h-5 rounded bg-sky-100 hover:bg-sky-200 flex items-center justify-center text-[10px] active:scale-95" title="放大 (特寫遠方人物)">➕</button>
+            </div>
 
-          <!-- 动作姿态匹配度仪表 (右上角，固定尺寸與等寬數字) -->
-          <div class="bg-white/95 backdrop-blur px-2.5 py-1 rounded-2xl border border-emerald-300 shadow-sm text-center w-[85px] md:w-[92px] shrink-0 select-none">
-            <span class="text-[9px] md:text-[10px] font-bold text-slate-500 block leading-none">動作貼合</span>
-            <span id="match-percent" class="text-base md:text-xl font-black text-emerald-500 tabular-nums font-mono block leading-tight">96%</span>
-            <div class="w-full bg-slate-100 h-1 md:h-1.5 rounded-full overflow-hidden mt-0.5">
-              <div id="match-bar" class="bg-emerald-400 h-full w-[96%] transition-all duration-300"></div>
+            <!-- 獨立鏡頭全螢幕按鍵 -->
+            <button id="btn-camera-fullscreen" onclick="toggleCameraFullscreen()" class="px-2 py-1 rounded-xl bg-white/95 hover:bg-sky-50 border border-sky-300 text-sky-700 font-black text-xs shadow-xs transition flex items-center gap-1 active:scale-95" title="單獨將攝影機與火柴人切換為大螢幕全螢幕">
+              <span id="camera-fs-icon">🔲</span>
+              <span id="camera-fs-text" class="hidden sm:inline">全螢幕</span>
+            </button>
+
+            <!-- 动作姿态匹配度仪表 -->
+            <div class="bg-white/95 px-2 py-0.5 rounded-xl border border-emerald-300 shadow-xs text-center shrink-0">
+              <span class="text-[8px] sm:text-[9px] font-bold text-slate-500 block leading-none">動作貼合</span>
+              <span id="match-percent" class="text-xs sm:text-sm font-black text-emerald-600 tabular-nums font-mono leading-none">96%</span>
             </div>
           </div>
         </div>
@@ -1212,9 +1236,9 @@
         </div>
 
         <!-- 画面主体：真实摄像头 Video (底层) + 萌趣发光火柴人 Canvas (顶层) -->
-        <div id="camera-container" class="flex-1 relative flex items-center justify-center bg-slate-950 overflow-hidden min-h-0">
-          <video id="webcam-video" autoplay playsinline webkit-playsinline="true" muted class="absolute inset-0 w-full h-full object-cover transform -scale-x-100 opacity-85"></video>
-          <canvas id="camera-canvas" width="640" height="480" class="absolute inset-0 w-full h-full z-20 pointer-events-none"></canvas>
+        <div id="camera-container" class="flex-1 relative flex items-center justify-center bg-slate-950 overflow-hidden min-h-0 w-full">
+          <video id="webcam-video" autoplay playsinline webkit-playsinline="true" muted class="absolute inset-0 w-full h-full object-contain sm:object-cover transform -scale-x-100 opacity-90"></video>
+          <canvas id="camera-canvas" width="640" height="480" class="absolute inset-0 w-full h-full object-contain sm:object-cover z-20 pointer-events-none"></canvas>
 
           <!-- 全螢幕退出懸浮按鈕 (全螢幕時置頂最右側，便於隨時一鍵返回雙屏教室) -->
           <button id="btn-camera-exit-fs" onclick="toggleCameraFullscreen()" class="hidden absolute top-4 right-4 z-40 px-4 py-2 rounded-2xl bg-black/75 hover:bg-black/90 text-white font-black text-xs border border-white/30 backdrop-blur-md shadow-2xl flex items-center gap-1.5 transition active:scale-95">
@@ -5154,18 +5178,8 @@
       }
     }
     // ========================================================
-    // 平板與觸控螢幕智慧鎖定：手機支援上下滾動；大平板橫屏鎖定禁止縮放與晃動
+    // 平板與觸控螢幕智慧鎖定：杜絕多指縮放，放行單指原生極速滑動
     // ========================================================
-    function isMobileOrScrollable() {
-      const isMobileUA = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-      const isNarrow = window.innerWidth < 1024;
-      const isPortrait = window.innerHeight > window.innerWidth;
-      const isShortHeight = window.innerHeight < 700;
-      const docHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
-      const isContentOverflowing = docHeight > window.innerHeight + 15;
-      return isMobileUA || isNarrow || isPortrait || isShortHeight || isContentOverflowing;
-    }
-
     function lockTabletViewport() {
       // 阻止 Safari / iOS 雙指縮放手勢 (Pinch-to-zoom)
       document.addEventListener('gesturestart', (e) => e.preventDefault(), { passive: false });
@@ -5179,52 +5193,11 @@
         }
       }, { passive: false });
 
-      // 觸控滑動智慧機制：手機/小螢幕單指放行上下滑動；進度條與橫向選單精準放行
+      // 觸控滑動：僅阻斷雙指/多指縮放，單指操作 100% 放行原生滑動
       document.addEventListener('touchmove', (e) => {
-        // 多指手勢 (雙指捏合縮放) 一律禁止
         if (e.touches && e.touches.length > 1) {
           e.preventDefault();
-          return;
         }
-
-        // 手機端、直立畫面或畫面放不下需要上下瀏覽時，全面放行單指原生垂直滑動
-        if (isMobileOrScrollable()) {
-          return;
-        }
-
-        const target = e.target;
-        if (!target) {
-          e.preventDefault();
-          return;
-        }
-
-        // 1. 放行進度條原生滑動 (input[type="range"])
-        if (target.tagName === 'INPUT' || (target.closest && target.closest('input[type="range"]'))) {
-          return;
-        }
-
-        // 2. 放行設定了滑動類別的容器 (橫向選單、縱向關卡列表、抽屜與彈窗)
-        if (target.closest && target.closest('.allow-touch-scroll, .allow-touch-scroll-x, .touch-scroll-y, .touch-scroll-x, .allow-touch-control')) {
-          return;
-        }
-
-        // 大螢幕平板橫向黃金比例視圖：嚴格防止邊界拖曳晃動
-        e.preventDefault();
-      }, { passive: false });
-
-      // 雙擊放大抑制 (保留按鈕與互動控制項的原生連點響應)
-      let lastTouchEnd = 0;
-      document.addEventListener('touchend', (e) => {
-        const now = performance.now();
-        if (now - lastTouchEnd <= 300) {
-          const target = e.target;
-          if (target && target.closest && target.closest('button, input, a, .cursor-pointer, [onclick], .allow-touch-control')) {
-            lastTouchEnd = now;
-            return;
-          }
-          e.preventDefault();
-        }
-        lastTouchEnd = now;
       }, { passive: false });
 
       // 阻止 Ctrl + 滑鼠滾輪縮放
