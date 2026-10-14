@@ -196,6 +196,21 @@
       transform: scale(1.14) translateY(-2px);
     }
 
+    /* 首頁旋轉黑膠 / CD 背景音樂唱片動畫 (開啟時旋轉，關閉時停止) */
+    @keyframes spin-cd {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .cd-spinning {
+      animation: spin-cd 3.2s linear infinite !important;
+      will-change: transform;
+    }
+    .cd-paused {
+      animation: spin-cd 3.2s linear infinite !important;
+      animation-play-state: paused !important;
+      filter: grayscale(0.7) opacity(0.65);
+    }
+
     /* ======================================================== */
     /* 星球與品牌高飽和度明亮光暈 (保持原始純真色度，絕不灰暗或偏低) */
     /* ======================================================== */
@@ -406,8 +421,36 @@
         </div>
       </div>
 
-      <!-- 右側：累計總積分 (9位數不斷累積) 與家長教練設定 -->
+      <!-- 右側：旋轉 CD 背景音樂開關 + 累計總積分 + 家長教練設定 -->
       <div class="flex items-center gap-2.5 self-end sm:self-auto">
+        <!-- 💿 CD 旋轉唱片背景音樂開關 (開啟時旋轉，關閉時停止轉動) -->
+        <button id="btn-home-cd" onclick="toggleHomeBgmFromCD()" 
+                class="group relative flex items-center gap-2 bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 hover:border-amber-400/80 px-2.5 py-1.5 rounded-full shadow-[0_0_15px_rgba(0,0,0,0.5)] transition-all duration-200 active:scale-95 cursor-pointer select-none"
+                title="首頁音樂開關 (點擊切換播放/停止)">
+          <!-- 旋轉 CD 唱片本體 -->
+          <div id="home-cd-disc" class="relative w-8 h-8 rounded-full shadow-md flex items-center justify-center shrink-0 border border-slate-500/70 overflow-hidden cd-spinning"
+               style="background: radial-gradient(circle, #334155 0%, #0f172a 35%, #1e293b 50%, #0f172a 70%, #334155 100%);">
+            <!-- CD 鐳射彩虹炫彩光芒 -->
+            <div class="absolute inset-0 opacity-45 bg-gradient-to-tr from-cyan-400 via-pink-400 to-amber-300 pointer-events-none mix-blend-screen" style="transform: rotate(45deg);"></div>
+            <!-- CD 紋理同心圓 -->
+            <div class="absolute inset-1 rounded-full border border-slate-400/25 pointer-events-none"></div>
+            <div class="absolute inset-2 rounded-full border border-slate-400/20 pointer-events-none"></div>
+            <!-- 中心孔與音樂符號 -->
+            <div class="relative z-10 w-3 h-3 rounded-full bg-amber-400 flex items-center justify-center shadow-xs border border-amber-200">
+              <span class="text-[7px] text-slate-950 font-black">♪</span>
+            </div>
+          </div>
+          <!-- 狀態標籤文字 -->
+          <div class="flex flex-col text-left pr-1 leading-tight hidden xs:flex sm:flex">
+            <span class="text-[10px] font-bold text-slate-300">首頁音樂</span>
+            <span id="home-cd-status-text" class="text-[9px] font-black text-amber-300">播放中</span>
+          </div>
+          <!-- 關閉音樂時的微型靜音警示角標 -->
+          <div id="home-cd-mute-badge" class="hidden absolute -top-1 -right-1 w-4 h-4 bg-rose-500 text-white rounded-full text-[9px] font-black flex items-center justify-center shadow-md border border-white/80">
+            ✕
+          </div>
+        </button>
+
         <div class="flex items-center gap-2 bg-slate-900/85 backdrop-blur-md border border-amber-400/60 px-4 py-2 rounded-full text-xs font-black text-amber-300 shadow-[0_0_18px_rgba(245,158,11,0.25)]" title="全宇宙跳舞總積分 (最多累計至 9 位數)">
           <span class="text-sm">🏆</span>
           <span class="text-[11px] text-slate-300 font-bold hidden sm:inline">總積分:</span>
@@ -426,7 +469,7 @@
       <!-- 左側：第一專輯【Planet 1: Morning Adventure】 -->
       <!-- (晨光大地星球：極致擴散琥珀金發散光暈 + 純淨光芒) -->
       <!-- ========================================== -->
-      <div id="planet-container-album_1" class="flex flex-col items-center text-center group cursor-pointer select-none planet-interactive-card" onclick="handlePlanetClick('album_1')">
+      <div id="planet-container-album_1" class="flex flex-col items-center text-center group cursor-pointer select-none planet-interactive-card" onclick="handlePlanetClick('album_1')" onmouseenter="playPlanetHoverSFX('album_1')">
         <!-- 標題文字 -->
         <div class="mb-2 text-center">
           <h2 class="text-xl md:text-2xl font-black text-white tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
@@ -481,8 +524,8 @@
           </div>
           <!-- 男女孩小朋友齊聲童聲音訊 -->
           <audio id="audio-welcome-chorus" src="./audio/welcome_kids_chorus.mp3" preload="auto"></audio>
-          <!-- 首頁專屬背景音樂 (首頁音樂2.mp3, 50% 音量循環播放) -->
-          <audio id="audio-home-bgm" src="./audio/home_bgm.mp3" loop preload="auto"></audio>
+          <!-- 首頁專屬背景音樂 (Jump_to_the_Moon.mp3, 40% 音量循環播放) -->
+          <audio id="audio-home-bgm" src="./audio/Jump_to_the_Moon.mp3" loop preload="auto"></audio>
 
           <!-- 全新高畫質去背 5 位小朋友舞蹈團隊立繪 (立體純白防雜質光暈) -->
           <div id="dance-team-kids-img" class="relative z-10 w-full h-full flex items-center justify-center transition-transform duration-300">
@@ -505,7 +548,7 @@
       <!-- 右側：第二專輯【Planet 2: Groove Party】      -->
       <!-- (派對耳機土星：極致發散霓虹紫粉光暈 + 剔透星環) -->
       <!-- ========================================== -->
-      <div id="planet-container-album_2" class="flex flex-col items-center text-center group cursor-pointer select-none planet-interactive-card" onclick="handlePlanetClick('album_2')">
+      <div id="planet-container-album_2" class="flex flex-col items-center text-center group cursor-pointer select-none planet-interactive-card" onclick="handlePlanetClick('album_2')" onmouseenter="playPlanetHoverSFX('album_2')">
         <!-- 標題文字 -->
         <div class="mb-2 text-center">
           <h2 class="text-xl md:text-2xl font-black text-white tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
@@ -638,18 +681,18 @@
           </label>
         </div>
 
-        <!-- 5. 首頁太空環境氛圍音效開關 -->
+        <!-- 5. 首頁專屬背景音樂開關 (Jump to the Moon) -->
         <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-800/60 border border-slate-700/60">
           <div class="flex items-center gap-3">
-            <span class="text-xl">🌌</span>
+            <span class="text-xl">💿</span>
             <div>
-              <div class="font-bold text-sm text-white">首頁太空環境音效</div>
-              <div class="text-[11px] text-slate-400">大廳宇宙微光音效，進入關卡後自動暫停</div>
+              <div class="font-bold text-sm text-white">首頁背景音樂 (Jump to the Moon)</div>
+              <div class="text-[11px] text-slate-400">大廳專屬輕快音樂，可透過首頁 CD 唱片直接切換</div>
             </div>
           </div>
           <label class="relative inline-flex items-center cursor-pointer">
             <input type="checkbox" id="setting-ambient-enabled" class="sr-only peer" checked onchange="saveParentSettings()">
-            <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-500"></div>
+            <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-400"></div>
           </label>
         </div>
       </div>
@@ -1000,18 +1043,23 @@
 
     <!-- 🧲 磁吸式可拖曳懸浮播放/暫停小按鈕 (跟隨畫面、自動吸附螢幕邊緣) -->
     <div id="floating-play-dock" 
-         class="fixed z-40 flex items-center gap-2 bg-white/95 backdrop-blur-md px-3 py-2 rounded-full shadow-2xl border-2 border-amber-400 cursor-grab active:cursor-grabbing select-none transition-all duration-300 hover:scale-105"
+         class="fixed z-40 flex items-center gap-1.5 sm:gap-2 bg-white/95 backdrop-blur-md px-3 py-2 rounded-full shadow-2xl border-2 border-amber-400 cursor-grab active:cursor-grabbing select-none transition-all duration-300 hover:scale-105"
          style="bottom: 80px; right: 24px; touch-action: none;">
-      <button onclick="prevSong()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center font-black text-xs transition active:scale-90" title="上一首">
+      <!-- 回到最前首頁按鍵 (直接從每一首歌返回最前首頁) -->
+      <button onclick="directBackToLobby()" class="w-8 h-8 rounded-full bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-500 hover:to-orange-500 text-slate-950 flex items-center justify-center font-black text-xs transition shadow-sm active:scale-90 shrink-0" title="回到最前面首頁">
+        🏠
+      </button>
+      <div class="h-4 w-px bg-slate-200 shrink-0"></div>
+      <button onclick="prevSong()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center font-black text-xs transition active:scale-90 shrink-0" title="上一首">
         ⏮
       </button>
-      <button id="float-btn-toggle" onclick="togglePlay()" class="w-10 h-10 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white flex items-center justify-center font-black shadow-md text-base transition transform active:scale-90">
+      <button id="float-btn-toggle" onclick="togglePlay()" class="w-10 h-10 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white flex items-center justify-center font-black shadow-md text-base transition transform active:scale-90 shrink-0" title="播放 / 暫停">
         <span id="float-play-icon">▶</span>
       </button>
-      <button onclick="nextSong()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center font-black text-xs transition active:scale-90" title="下一首">
+      <button onclick="nextSong()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center font-black text-xs transition active:scale-90 shrink-0" title="下一首">
         ⏭
       </button>
-      <div class="text-xs pr-1">
+      <div class="text-xs pr-1 shrink-0">
         <div id="float-play-label" class="font-black text-slate-800 leading-tight">開始跟跳</div>
         <div id="float-song-name" class="text-[9px] text-slate-500 font-bold truncate max-w-[90px]">Morning Sunshine</div>
       </div>
@@ -1314,7 +1362,7 @@
       }
 
       dock.addEventListener('mousedown', (e) => {
-        if (e.target.closest('#float-btn-toggle') && !hasMoved) return;
+        if (e.target.closest('button')) return;
         onStart(e.clientX, e.clientY);
         e.preventDefault();
       });
@@ -1327,6 +1375,7 @@
       window.addEventListener('mouseup', onEnd);
 
       dock.addEventListener('touchstart', (e) => {
+        if (e.target.closest('button')) return;
         const touch = e.touches[0];
         onStart(touch.clientX, touch.clientY);
       }, { passive: false });
@@ -1457,6 +1506,7 @@
           }
         }
       });
+      if (typeof updateHomeCdUI === 'function') updateHomeCdUI();
     }
 
     function openParentSettingsModal() {
@@ -1497,288 +1547,57 @@
       return audioCtx;
     }
 
-    // 1. 太空環境音效引擎 (Space Ambient: 深空基底 + 飛船穿梭 + 隕石呼嘯)
-    let ambientNodeGroup = null;
-    let isAmbientPlaying = false;
-    let spaceshipFlybyTimer = null;
-    let meteorFlybyTimer = null;
-
+    // ========================================================
+    // 1. 首頁音訊系統 (移除宇宙環境雜音，僅保留首頁音樂與互動音效)
+    // ========================================================
     function startSpaceAmbient() {
-      if (!userSettings.spaceAmbient) return;
-      const lobby = document.getElementById('view-lobby');
-      if (lobby && lobby.classList.contains('hidden')) return;
+      // 依用戶指示：宇宙音效 (低頻嗡鳴、飛船、隕石) 全數移除，大廳僅播放 Jump to the Moon 專屬音樂
+    }
+    function stopSpaceAmbient() {
+      // 依用戶指示：宇宙環境音已移除
+    }
+
+    // 滑鼠移入星球音效 (Planet Hover SFX)
+    let lastPlanetHoverSFXTime = 0;
+    function playPlanetHoverSFX(albumId = 'album_1') {
+      const now = Date.now();
+      if (now - lastPlanetHoverSFXTime < 180) return; // 180ms 防抖避免連續快速觸發
+      lastPlanetHoverSFXTime = now;
 
       const ctx = getAudioContext();
       if (!ctx) return;
-      if (isAmbientPlaying && ambientNodeGroup) return;
-
       try {
-        const masterGain = ctx.createGain();
-        masterGain.gain.setValueAtTime(0.0001, ctx.currentTime);
-        masterGain.gain.exponentialRampToValueAtTime(0.065, ctx.currentTime + 1.8);
+        const t = ctx.currentTime;
+        const isP1 = albumId === 'album_1';
 
-        // 宇宙深邃基頻 55Hz (低沉星際共鳴)
-        const osc1 = ctx.createOscillator();
-        osc1.type = 'sine';
-        osc1.frequency.setValueAtTime(55, ctx.currentTime);
+        // 溫和清澈的星際水晶微泛音
+        // Planet 1 (晨光生活大冒險): 溫暖金黃大三和弦晶音 [C5 523Hz, E5 659Hz, G5 784Hz, C6 1046Hz]
+        // Planet 2 (星光狂歡新舞曲): 活力幻彩五度和弦波音 [D5 587Hz, A5 880Hz, D6 1175Hz, F#6 1480Hz]
+        const freqs = isP1 
+          ? [523.25, 659.25, 783.99, 1046.50] 
+          : [587.33, 880.00, 1174.66, 1479.98];
 
-        // 溫和八度音 110Hz
-        const osc2 = ctx.createOscillator();
-        osc2.type = 'triangle';
-        osc2.frequency.setValueAtTime(110, ctx.currentTime);
+        freqs.forEach((freq, idx) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = isP1 ? 'sine' : 'triangle';
+          osc.frequency.setValueAtTime(freq, t + idx * 0.035);
 
-        // 宇宙微風微光泛音 220Hz
-        const osc3 = ctx.createOscillator();
-        osc3.type = 'sine';
-        osc3.frequency.setValueAtTime(220, ctx.currentTime);
+          gain.gain.setValueAtTime(0.0001, t + idx * 0.035);
+          gain.gain.exponentialRampToValueAtTime(0.07, t + idx * 0.035 + 0.012);
+          gain.gain.exponentialRampToValueAtTime(0.0001, t + idx * 0.035 + 0.24);
 
-        // 緩慢呼吸濾波 LFO (0.18Hz, 約5秒一次起伏)
-        const lfo = ctx.createOscillator();
-        lfo.type = 'sine';
-        lfo.frequency.setValueAtTime(0.18, ctx.currentTime);
+          osc.connect(gain);
+          gain.connect(ctx.destination);
 
-        const lfoGain = ctx.createGain();
-        lfoGain.gain.setValueAtTime(75, ctx.currentTime);
-        lfo.connect(lfoGain);
-
-        const filter = ctx.createBiquadFilter();
-        filter.type = 'lowpass';
-        filter.frequency.setValueAtTime(280, ctx.currentTime);
-        lfoGain.connect(filter.frequency);
-
-        const gain1 = ctx.createGain(); gain1.gain.value = 0.5;
-        const gain2 = ctx.createGain(); gain2.gain.value = 0.25;
-        const gain3 = ctx.createGain(); gain3.gain.value = 0.15;
-
-        osc1.connect(gain1); gain1.connect(filter);
-        osc2.connect(gain2); gain2.connect(filter);
-        osc3.connect(gain3); gain3.connect(filter);
-
-        filter.connect(masterGain);
-        masterGain.connect(ctx.destination);
-
-        osc1.start();
-        osc2.start();
-        osc3.start();
-        lfo.start();
-
-        ambientNodeGroup = { osc1, osc2, osc3, lfo, masterGain };
-        isAmbientPlaying = true;
-
-        // 啟動隨機宇宙動態音景：飛船與隕石
-        scheduleNextSpaceshipFlyby(3000);
-        scheduleNextMeteorFlyby(1500);
-      } catch (e) {
-        console.warn("Space ambient start warning:", e);
-      }
-    }
-
-    // 飛船呼嘯穿越音效 (Spaceship Doppler Flyby)
-    function triggerSpaceshipFlyby() {
-      if (!isAmbientPlaying || !userSettings.spaceAmbient) return;
-      const ctx = getAudioContext();
-      if (!ctx) return;
-      try {
-        const now = ctx.currentTime;
-        const dur = 3.8;
-        const fromLeft = Math.random() > 0.5;
-
-        const shipGain = ctx.createGain();
-        shipGain.gain.setValueAtTime(0.0001, now);
-        shipGain.gain.exponentialRampToValueAtTime(0.18, now + dur * 0.42);
-        shipGain.gain.exponentialRampToValueAtTime(0.0001, now + dur);
-
-        // 立體聲左右穿梭
-        let panner = null;
-        if (ctx.createStereoPanner) {
-          panner = ctx.createStereoPanner();
-          panner.pan.setValueAtTime(fromLeft ? -0.85 : 0.85, now);
-          panner.pan.linearRampToValueAtTime(fromLeft ? 0.85 : -0.85, now + dur);
-          shipGain.connect(panner);
-          panner.connect(ctx.destination);
-        } else {
-          shipGain.connect(ctx.destination);
-        }
-
-        // 雙引擎音頻振盪器 (都卜勒頻移：遠處漸進升頻 -> 呼嘯而過 -> 遠離降頻)
-        const osc1 = ctx.createOscillator();
-        const osc2 = ctx.createOscillator();
-        osc1.type = 'sawtooth';
-        osc2.type = 'triangle';
-
-        osc1.frequency.setValueAtTime(320, now);
-        osc1.frequency.exponentialRampToValueAtTime(680, now + dur * 0.42);
-        osc1.frequency.exponentialRampToValueAtTime(180, now + dur);
-
-        osc2.frequency.setValueAtTime(324, now);
-        osc2.frequency.exponentialRampToValueAtTime(688, now + dur * 0.42);
-        osc2.frequency.exponentialRampToValueAtTime(182, now + dur);
-
-        const filter = ctx.createBiquadFilter();
-        filter.type = 'lowpass';
-        filter.frequency.setValueAtTime(450, now);
-        filter.frequency.exponentialRampToValueAtTime(1350, now + dur * 0.42);
-        filter.frequency.exponentialRampToValueAtTime(260, now + dur);
-
-        // 噴射白噪音尾氣
-        const bufferSize = Math.floor(ctx.sampleRate * dur);
-        const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
-        const data = noiseBuffer.getChannelData(0);
-        for (let i = 0; i < bufferSize; i++) {
-          data[i] = Math.random() * 2 - 1;
-        }
-        const whiteNoise = ctx.createBufferSource();
-        whiteNoise.buffer = noiseBuffer;
-
-        const noiseFilter = ctx.createBiquadFilter();
-        noiseFilter.type = 'bandpass';
-        noiseFilter.Q.value = 2.2;
-        noiseFilter.frequency.setValueAtTime(480, now);
-        noiseFilter.frequency.exponentialRampToValueAtTime(1250, now + dur * 0.42);
-        noiseFilter.frequency.exponentialRampToValueAtTime(280, now + dur);
-
-        const noiseGain = ctx.createGain();
-        noiseGain.gain.setValueAtTime(0.06, now);
-
-        whiteNoise.connect(noiseFilter);
-        noiseFilter.connect(noiseGain);
-        noiseGain.connect(shipGain);
-
-        osc1.connect(filter);
-        osc2.connect(filter);
-        filter.connect(shipGain);
-
-        osc1.start(now);
-        osc2.start(now);
-        whiteNoise.start(now);
-
-        osc1.stop(now + dur);
-        osc2.stop(now + dur);
-        whiteNoise.stop(now + dur);
-      } catch(e) {}
-    }
-
-    // 隕石/流星破空飛過音效 (Meteor Shimmer Swoosh)
-    function triggerMeteorFlyby() {
-      if (!isAmbientPlaying || !userSettings.spaceAmbient) return;
-      const ctx = getAudioContext();
-      if (!ctx) return;
-      try {
-        const now = ctx.currentTime;
-        const dur = 1.9;
-        const fromLeft = Math.random() > 0.5;
-
-        const meteorGain = ctx.createGain();
-        meteorGain.gain.setValueAtTime(0.0001, now);
-        meteorGain.gain.linearRampToValueAtTime(0.16, now + dur * 0.3);
-        meteorGain.gain.exponentialRampToValueAtTime(0.0001, now + dur);
-
-        if (ctx.createStereoPanner) {
-          const panner = ctx.createStereoPanner();
-          panner.pan.setValueAtTime(fromLeft ? -0.8 : 0.8, now);
-          panner.pan.linearRampToValueAtTime(fromLeft ? 0.8 : -0.8, now + dur);
-          meteorGain.connect(panner);
-          panner.connect(ctx.destination);
-        } else {
-          meteorGain.connect(ctx.destination);
-        }
-
-        // 高頻星塵噪聲彗尾
-        const bufferSize = Math.floor(ctx.sampleRate * dur);
-        const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
-        const data = noiseBuffer.getChannelData(0);
-        for (let i = 0; i < bufferSize; i++) {
-          data[i] = Math.random() * 2 - 1;
-        }
-        const noise = ctx.createBufferSource();
-        noise.buffer = noiseBuffer;
-
-        const filter = ctx.createBiquadFilter();
-        filter.type = 'bandpass';
-        filter.Q.value = 5.5;
-        filter.frequency.setValueAtTime(3200, now);
-        filter.frequency.exponentialRampToValueAtTime(1100, now + dur * 0.5);
-        filter.frequency.exponentialRampToValueAtTime(500, now + dur);
-
-        // 水晶流星泛音
-        const osc = ctx.createOscillator();
-        osc.type = 'sine';
-        osc.frequency.setValueAtTime(2600, now);
-        osc.frequency.exponentialRampToValueAtTime(880, now + dur);
-
-        const oscGain = ctx.createGain();
-        oscGain.gain.setValueAtTime(0.06, now);
-
-        osc.connect(oscGain);
-        oscGain.connect(meteorGain);
-
-        noise.connect(filter);
-        filter.connect(meteorGain);
-
-        noise.start(now);
-        osc.start(now);
-        noise.stop(now + dur);
-        osc.stop(now + dur);
-      } catch(e) {}
-    }
-
-    function scheduleNextSpaceshipFlyby(delayMs = null) {
-      if (spaceshipFlybyTimer) clearTimeout(spaceshipFlybyTimer);
-      if (!isAmbientPlaying) return;
-      const delay = delayMs !== null ? delayMs : (8000 + Math.random() * 9000);
-      spaceshipFlybyTimer = setTimeout(() => {
-        if (isAmbientPlaying) {
-          triggerSpaceshipFlyby();
-          scheduleNextSpaceshipFlyby();
-        }
-      }, delay);
-    }
-
-    function scheduleNextMeteorFlyby(delayMs = null) {
-      if (meteorFlybyTimer) clearTimeout(meteorFlybyTimer);
-      if (!isAmbientPlaying) return;
-      const delay = delayMs !== null ? delayMs : (6000 + Math.random() * 8000);
-      meteorFlybyTimer = setTimeout(() => {
-        if (isAmbientPlaying) {
-          triggerMeteorFlyby();
-          scheduleNextMeteorFlyby();
-        }
-      }, delay);
-    }
-
-    function stopSpaceAmbient(fadeTime = 0.4) {
-      if (spaceshipFlybyTimer) { clearTimeout(spaceshipFlybyTimer); spaceshipFlybyTimer = null; }
-      if (meteorFlybyTimer) { clearTimeout(meteorFlybyTimer); meteorFlybyTimer = null; }
-      if (!isAmbientPlaying || !ambientNodeGroup) return;
-      try {
-        const ctx = getAudioContext();
-        if (ctx && ambientNodeGroup.masterGain) {
-          ambientNodeGroup.masterGain.gain.setValueAtTime(ambientNodeGroup.masterGain.gain.value, ctx.currentTime);
-          ambientNodeGroup.masterGain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + fadeTime);
-          setTimeout(() => {
-            if (ambientNodeGroup) {
-              try {
-                ambientNodeGroup.osc1.stop();
-                ambientNodeGroup.osc2.stop();
-                ambientNodeGroup.osc3.stop();
-                ambientNodeGroup.lfo.stop();
-              } catch(err){}
-              ambientNodeGroup = null;
-            }
-            isAmbientPlaying = false;
-          }, fadeTime * 1000 + 40);
-        } else {
-          ambientNodeGroup = null;
-          isAmbientPlaying = false;
-        }
-      } catch (e) {
-        ambientNodeGroup = null;
-        isAmbientPlaying = false;
-      }
+          osc.start(t + idx * 0.035);
+          osc.stop(t + idx * 0.035 + 0.26);
+        });
+      } catch (e) {}
     }
 
     // ========================================================
-    // 首頁專屬背景音樂管理 (首頁音樂2.mp3，音量 40%，由「首頁太空環境音效」開關控制)
+    // 首頁專屬背景音樂管理 (Jump_to_the_Moon.mp3，40% 音量循環播放，CD唱片連動)
     // ========================================================
     function startHomeBgm() {
       const audioHomeBgm = document.getElementById('audio-home-bgm');
@@ -1786,19 +1605,23 @@
       const lobby = document.getElementById('view-lobby');
       if (lobby && lobby.classList.contains('hidden')) return;
 
-      // 首頁音樂由家長與教練設定中的「首頁太空環境音效」(userSettings.spaceAmbient) 控制開關
+      // 由首頁音樂開關 (userSettings.spaceAmbient) 控制
       if (!userSettings.spaceAmbient) {
         audioHomeBgm.pause();
+        updateHomeCdUI();
         return;
       }
       audioHomeBgm.volume = 0.4; // 音量設置為 40%
       audioHomeBgm.loop = true;  // 循環播放
       const p = audioHomeBgm.play();
       if (p !== undefined) {
-        p.catch(e => {
+        p.then(() => {
+          updateHomeCdUI();
+        }).catch(e => {
           console.log("Home BGM autoplay waiting for interaction:", e);
         });
       }
+      updateHomeCdUI();
     }
 
     function stopHomeBgm(fadeTime = 0.35) {
@@ -1817,13 +1640,60 @@
             audioHomeBgm.pause();
             audioHomeBgm.currentTime = 0;
             audioHomeBgm.volume = 0.4;
+            updateHomeCdUI();
           }
         }, stepTime);
       } else {
         audioHomeBgm.pause();
         audioHomeBgm.currentTime = 0;
         audioHomeBgm.volume = 0.4;
+        updateHomeCdUI();
       }
+    }
+
+    // 點擊首頁 CD 唱片切換背景音樂
+    function toggleHomeBgmFromCD() {
+      getAudioContext();
+      userSettings.spaceAmbient = !userSettings.spaceAmbient;
+      saveParentSettings();
+
+      const audioHomeBgm = document.getElementById('audio-home-bgm');
+      if (userSettings.spaceAmbient) {
+        startHomeBgm();
+        playStarChimeSFX();
+      } else {
+        stopHomeBgm(0.2);
+      }
+      updateHomeCdUI();
+    }
+
+    // 更新 CD 唱片旋轉狀態與狀態徽章
+    function updateHomeCdUI() {
+      const cdDisc = document.getElementById('home-cd-disc');
+      const cdBadge = document.getElementById('home-cd-mute-badge');
+      const cdStatus = document.getElementById('home-cd-status-text');
+      const isMusicOn = !!userSettings.spaceAmbient;
+
+      if (cdDisc) {
+        if (isMusicOn) {
+          cdDisc.classList.add('cd-spinning');
+          cdDisc.classList.remove('cd-paused');
+        } else {
+          cdDisc.classList.remove('cd-spinning');
+          cdDisc.classList.add('cd-paused');
+        }
+      }
+      if (cdBadge) {
+        cdBadge.classList.toggle('hidden', isMusicOn);
+      }
+      if (cdStatus) {
+        cdStatus.innerText = isMusicOn ? "播放中" : "已靜音";
+        cdStatus.className = isMusicOn ? "text-[9px] font-black text-amber-300" : "text-[9px] font-black text-slate-400";
+      }
+
+      // 同步設定彈窗勾選框
+      const ambientChk = document.getElementById('setting-ambient-enabled');
+      if (ambientChk) ambientChk.checked = isMusicOn;
     }
 
     // 2. 黑洞引力漩渦吸入音效 (Black Hole Gravitational Suction SFX)
@@ -2110,11 +1980,11 @@
       } catch(e) {}
     }
 
-    // 首次使用者互動時啟動音訊環境、首頁背景音樂與太空音效
+    // 首次使用者互動時啟動音訊環境與首頁背景音樂
     function initUserAudioOnFirstTouch() {
       getAudioContext();
-      startSpaceAmbient();
       startHomeBgm();
+      updateHomeCdUI();
       document.removeEventListener('pointerdown', initUserAudioOnFirstTouch);
       document.removeEventListener('keydown', initUserAudioOnFirstTouch);
     }
@@ -2194,12 +2064,19 @@
         lobbyFooter.style.transition = '';
       }
 
+      isTransitioningPlanet = false;
       if (viewAlbumLevels) viewAlbumLevels.classList.add('hidden');
+      if (viewDance) viewDance.classList.add('hidden');
       viewLobby.classList.remove('hidden');
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      // 回到首頁，恢復太空氛圍音效與首頁背景音樂
-      startSpaceAmbient();
+      // 回到首頁，恢復首頁專屬背景音樂
       startHomeBgm();
+    }
+
+    // 從每一首跳舞教室直接返回最前面的雙星球首頁
+    function directBackToLobby() {
+      pauseDance();
+      backToPlanetHub();
     }
 
     // 首頁中央小導師切換 (樂樂 / 美美)
@@ -4397,6 +4274,16 @@
       playLabel.innerText = "暫停舞曲";
       btnPlay.classList.replace('bg-amber-500', 'bg-emerald-500');
 
+      // 同步更新磁吸懸浮控制列 (圖示與文字)
+      const floatPlayIcon = document.getElementById('float-play-icon');
+      if (floatPlayIcon) floatPlayIcon.innerText = "⏸";
+      const floatPlayLabel = document.getElementById('float-play-label');
+      if (floatPlayLabel) floatPlayLabel.innerText = "暫停跟跳";
+      const floatBtnToggle = document.getElementById('float-btn-toggle');
+      if (floatBtnToggle) {
+        floatBtnToggle.className = "w-10 h-10 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white flex items-center justify-center font-black shadow-md text-base transition transform active:scale-90 shrink-0";
+      }
+
       if (timerInterval) clearInterval(timerInterval);
 
       if (audioBgm) {
@@ -4438,6 +4325,17 @@
       playIcon.innerText = "▶";
       playLabel.innerText = "播放舞曲";
       btnPlay.classList.replace('bg-emerald-500', 'bg-amber-500');
+
+      // 同步更新磁吸懸浮控制列 (圖示與文字)
+      const floatPlayIcon = document.getElementById('float-play-icon');
+      if (floatPlayIcon) floatPlayIcon.innerText = "▶";
+      const floatPlayLabel = document.getElementById('float-play-label');
+      if (floatPlayLabel) floatPlayLabel.innerText = "開始跟跳";
+      const floatBtnToggle = document.getElementById('float-btn-toggle');
+      if (floatBtnToggle) {
+        floatBtnToggle.className = "w-10 h-10 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white flex items-center justify-center font-black shadow-md text-base transition transform active:scale-90 shrink-0";
+      }
+
       audioBgm.pause();
       audioVoice.pause();
       if (coachVideoA) coachVideoA.pause();
@@ -4646,6 +4544,7 @@
     lockTabletViewport();
 
     loadParentSettings();
+    updateHomeCdUI();
     updatePlaybackUI();
     switchAlbum(currentAlbumId);
     updateLoopModeUI();
@@ -4656,6 +4555,7 @@
     // 页面加载完成后后台异步预热多人姿态 AI 引擎并尝试啟動首頁背景音樂
     window.addEventListener('load', () => {
       loadParentSettings();
+      updateHomeCdUI();
       startHomeBgm();
       setTimeout(tryInitMoveNet, 500);
       setTimeout(tryInitMediaPipe, 1200);
