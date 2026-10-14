@@ -196,7 +196,7 @@
       transform: scale(1.14) translateY(-2px);
     }
 
-    /* 首頁旋轉黑膠 / CD 背景音樂唱片動畫 (開啟時旋轉，關閉時停止) */
+    /* 首頁旋轉黑膠 / CD 背景音樂唱片動畫 (開啟時彩色旋轉，關閉時灰階停止) */
     @keyframes spin-cd {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
@@ -204,11 +204,14 @@
     .cd-spinning {
       animation: spin-cd 3.2s linear infinite !important;
       will-change: transform;
+      filter: grayscale(0%) opacity(1) !important;
+      transition: filter 0.35s ease, opacity 0.35s ease;
     }
     .cd-paused {
       animation: spin-cd 3.2s linear infinite !important;
       animation-play-state: paused !important;
-      filter: grayscale(0.7) opacity(0.65);
+      filter: grayscale(100%) opacity(0.45) contrast(0.85) !important;
+      transition: filter 0.35s ease, opacity 0.35s ease;
     }
 
     /* 電影工作名單式滾動歌詞 (Movie End-Credits Crawl) */
@@ -599,7 +602,7 @@
       <!-- 右側：旋轉 CD 背景音樂開關 + 累計總積分 + 家長教練設定 -->
       <div class="flex items-center gap-1.5 sm:gap-2.5 self-center sm:self-auto flex-wrap sm:flex-nowrap justify-center sm:justify-end w-full sm:w-auto">
 
-        <!-- 💿 CD 旋轉唱片背景音樂開關 (開啟時旋轉，關閉時停止轉動) -->
+        <!-- 💿 CD 旋轉唱片背景音樂開關 (開啟時彩色旋轉，關閉時灰階停止) -->
         <button id="btn-home-cd" onclick="toggleHomeBgmFromCD(event)" 
                 class="group relative flex items-center gap-1.5 sm:gap-2 bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 hover:border-amber-400/80 px-2 sm:px-2.5 py-1.5 rounded-full shadow-[0_0_15px_rgba(0,0,0,0.5)] transition-all duration-200 active:scale-95 cursor-pointer select-none shrink-0"
                 title="首頁音樂開關 (點擊切換播放/暫停)">
@@ -620,10 +623,6 @@
           <div class="flex flex-col text-left pr-0.5 sm:pr-1 leading-tight">
             <span class="text-[9px] sm:text-[10px] font-bold text-slate-300">首頁音樂</span>
             <span id="home-cd-status-text" class="text-[8px] sm:text-[9px] font-black text-amber-300">播放中</span>
-          </div>
-          <!-- 關閉音樂時的微型靜音警示角標 -->
-          <div id="home-cd-mute-badge" class="hidden absolute -top-1 -right-1 w-4 h-4 bg-rose-500 text-white rounded-full text-[9px] font-black flex items-center justify-center shadow-md border border-white/80">
-            ✕
           </div>
         </button>
 
@@ -910,7 +909,7 @@
             </div>
           </div>
           <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" id="setting-camera-auto" class="sr-only peer" checked onchange="saveParentSettings()">
+            <input type="checkbox" id="setting-camera-auto" class="sr-only peer" checked onchange="saveParentSettings(true)">
             <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-500"></div>
           </label>
         </div>
@@ -943,7 +942,7 @@
             </div>
           </div>
           <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" id="setting-voice-guidance" class="sr-only peer" checked onchange="saveParentSettings()">
+            <input type="checkbox" id="setting-voice-guidance" class="sr-only peer" checked onchange="saveParentSettings(true)">
             <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-500"></div>
           </label>
         </div>
@@ -958,7 +957,7 @@
             </div>
           </div>
           <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" id="setting-bgm-enabled" class="sr-only peer" checked onchange="saveParentSettings()">
+            <input type="checkbox" id="setting-bgm-enabled" class="sr-only peer" checked onchange="saveParentSettings(true)">
             <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-pink-500"></div>
           </label>
         </div>
@@ -973,7 +972,7 @@
             </div>
           </div>
           <label class="relative inline-flex items-center cursor-pointer">
-            <input type="checkbox" id="setting-ambient-enabled" class="sr-only peer" checked onchange="saveParentSettings()">
+            <input type="checkbox" id="setting-ambient-enabled" class="sr-only peer" checked onchange="saveParentSettings(true)">
             <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-400"></div>
           </label>
         </div>
@@ -1709,44 +1708,53 @@
       applySettingsToUI();
     }
 
-    function saveParentSettings() {
+    function saveParentSettings(readFromModal = false) {
       const camAuto = document.getElementById('setting-camera-auto');
       const voice = document.getElementById('setting-voice-guidance');
       const bgm = document.getElementById('setting-bgm-enabled');
       const ambient = document.getElementById('setting-ambient-enabled');
 
-      if (camAuto) userSettings.cameraAutoStart = camAuto.checked;
-      if (voice) {
-        userSettings.voiceGuidance = voice.checked;
-        voiceEnabled = voice.checked;
-        const btnVoice = document.getElementById('btn-voice-toggle');
-        if (btnVoice) {
-          if (voiceEnabled) {
-            btnVoice.innerHTML = '<span>🔊</span> 老師原聲口令: 開';
-            btnVoice.className = "px-3 py-1.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold text-emerald-700 transition flex items-center gap-1";
-          } else {
-            btnVoice.innerHTML = '<span>🔇</span> 老師原聲口令: 關';
-            btnVoice.className = "px-3 py-1.5 rounded-2xl bg-slate-100 hover:bg-slate-200 border border-slate-200 text-xs font-bold text-slate-500 transition flex items-center gap-1";
-            if (audioVoice) audioVoice.pause();
+      if (readFromModal) {
+        if (camAuto) userSettings.cameraAutoStart = camAuto.checked;
+        if (voice) {
+          userSettings.voiceGuidance = voice.checked;
+          voiceEnabled = voice.checked;
+        }
+        if (bgm) userSettings.bgmEnabled = bgm.checked;
+        if (ambient) {
+          const prev = userSettings.spaceAmbient;
+          userSettings.spaceAmbient = ambient.checked;
+          const audioHomeBgm = document.getElementById('audio-home-bgm');
+          if (!userSettings.spaceAmbient) {
+            stopSpaceAmbient(0.3);
+            stopHomeBgm(0);
+          } else if (!prev && userSettings.spaceAmbient) {
+            startSpaceAmbient();
+            startHomeBgm();
           }
         }
+      } else {
+        // 同步內部狀態至設定面板核取方塊
+        if (camAuto) camAuto.checked = !!userSettings.cameraAutoStart;
+        if (voice) voice.checked = !!userSettings.voiceGuidance;
+        if (bgm) bgm.checked = !!userSettings.bgmEnabled;
+        if (ambient) ambient.checked = !!userSettings.spaceAmbient;
       }
-      if (bgm) {
-        userSettings.bgmEnabled = bgm.checked;
-        if (audioBgm) audioBgm.muted = !userSettings.bgmEnabled;
-      }
-      if (ambient) {
-        const prev = userSettings.spaceAmbient;
-        userSettings.spaceAmbient = ambient.checked;
-        const audioHomeBgm = document.getElementById('audio-home-bgm');
-        if (!userSettings.spaceAmbient) {
-          stopSpaceAmbient(0.3);
-          if (audioHomeBgm) audioHomeBgm.pause();
-        } else if (!prev && userSettings.spaceAmbient) {
-          startSpaceAmbient();
-          startHomeBgm();
+
+      // 老師原聲口令按鈕同步
+      const btnVoice = document.getElementById('btn-voice-toggle');
+      if (btnVoice) {
+        if (userSettings.voiceGuidance) {
+          btnVoice.innerHTML = '<span>🔊</span> 老師原聲口令: 開';
+          btnVoice.className = "px-3 py-1.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold text-emerald-700 transition flex items-center gap-1";
+        } else {
+          btnVoice.innerHTML = '<span>🔇</span> 老師原聲口令: 關';
+          btnVoice.className = "px-3 py-1.5 rounded-2xl bg-slate-100 hover:bg-slate-200 border border-slate-200 text-xs font-bold text-slate-500 transition flex items-center gap-1";
+          if (audioVoice) audioVoice.pause();
         }
       }
+
+      if (audioBgm) audioBgm.muted = !userSettings.bgmEnabled;
 
       try {
         localStorage.setItem('kaidance_parent_settings', JSON.stringify(userSettings));
@@ -1799,7 +1807,7 @@
     }
 
     function closeParentSettingsModal() {
-      saveParentSettings();
+      saveParentSettings(true);
       const modal = document.getElementById('modal-parent-settings');
       if (modal) modal.classList.add('hidden');
     }
@@ -1813,6 +1821,8 @@
       cameraZoomLevel = 1.0;
       updateCameraZoomUI();
       startSpaceAmbient();
+      startHomeBgm();
+      updateHomeCdUI();
     }
 
     // Web Audio Context & Synthesizer (零依賴純原生合成)
@@ -1993,6 +2003,16 @@
       const lobby = document.getElementById('view-lobby');
       if (lobby && lobby.classList.contains('hidden')) return;
 
+      // 清除可能殘留的漸層計時器，避免競態停止
+      if (audioHomeBgm._volumeRampTimer) {
+        clearInterval(audioHomeBgm._volumeRampTimer);
+        audioHomeBgm._volumeRampTimer = null;
+      }
+      if (audioHomeBgm._fadeTimer) {
+        clearInterval(audioHomeBgm._fadeTimer);
+        audioHomeBgm._fadeTimer = null;
+      }
+
       // 由首頁音樂開關 (userSettings.spaceAmbient) 控制
       if (!userSettings.spaceAmbient) {
         audioHomeBgm.pause();
@@ -2051,7 +2071,9 @@
           if (count >= steps) {
             clearInterval(audioHomeBgm._fadeTimer);
             audioHomeBgm._fadeTimer = null;
-            try { audioHomeBgm.pause(); } catch (e) {}
+            if (!userSettings.spaceAmbient) {
+              try { audioHomeBgm.pause(); } catch (e) {}
+            }
             audioHomeBgm.volume = targetBaseVol;
             updateHomeCdUI();
           }
@@ -2062,10 +2084,10 @@
         updateHomeCdUI();
       }
 
-      // 若有待決的 play promise，resolve 後強制 pause
+      // 若有待決的 play promise，resolve 後僅在已關閉音樂時 pause
       if (homeBgmPlayPromise) {
         homeBgmPlayPromise.then(() => {
-          if (!userSettings.spaceAmbient || fadeTime === 0) {
+          if (!userSettings.spaceAmbient) {
             try { audioHomeBgm.pause(); } catch (e) {}
             updateHomeCdUI();
           }
@@ -2078,21 +2100,20 @@
     function toggleHomeBgmFromCD(e) {
       if (e) {
         e.stopPropagation();
-        if (e.cancelable) e.preventDefault();
       }
       getAudioContext();
       const audioHomeBgm = document.getElementById('audio-home-bgm');
 
-      // 嚴格依據 audio 當前是否正在發聲判斷：正在播則立刻暫停；未在播則開啟
-      const isCurrentlyPlaying = audioHomeBgm && !audioHomeBgm.paused;
+      // 嚴格依據 audio 當前是否正在發聲且設定開啟判斷
+      const isCurrentlyPlaying = audioHomeBgm ? (!audioHomeBgm.paused && !!userSettings.spaceAmbient) : !!userSettings.spaceAmbient;
 
       if (isCurrentlyPlaying) {
         userSettings.spaceAmbient = false;
-        saveParentSettings();
+        saveParentSettings(false);
         stopHomeBgm(0); // 立即徹底暫停，零延遲
       } else {
         userSettings.spaceAmbient = true;
-        saveParentSettings();
+        saveParentSettings(false);
         startHomeBgm();
         playStarChimeSFX();
       }
@@ -2102,7 +2123,6 @@
     // 更新 CD 唱片與主題曲 Logo 的旋轉狀態與狀態徽章
     function updateHomeCdUI() {
       const cdDisc = document.getElementById('home-cd-disc');
-      const cdBadge = document.getElementById('home-cd-mute-badge');
       const cdStatus = document.getElementById('home-cd-status-text');
       const themeLogoState = document.getElementById('theme-logo-play-state');
       const audioHomeBgm = document.getElementById('audio-home-bgm');
@@ -2119,9 +2139,6 @@
           cdDisc.classList.add('cd-paused');
         }
       }
-      if (cdBadge) {
-        cdBadge.classList.toggle('hidden', isMusicPlaying);
-      }
       if (cdStatus) {
         cdStatus.innerText = isMusicPlaying ? "播放中" : "已暫停";
         cdStatus.className = isMusicPlaying ? "text-[8px] sm:text-[9px] font-black text-amber-300" : "text-[8px] sm:text-[9px] font-black text-slate-400";
@@ -2136,7 +2153,7 @@
 
       // 同步設定彈窗勾選框
       const ambientChk = document.getElementById('setting-ambient-enabled');
-      if (ambientChk) ambientChk.checked = isMusicPlaying;
+      if (ambientChk) ambientChk.checked = !!userSettings.spaceAmbient;
     }
 
     // ========================================================
