@@ -396,18 +396,48 @@
       -webkit-overflow-scrolling: touch !important;
     }
 
-    /* 允許歌曲進度條原生滑動 */
-    input[type="range"], .allow-touch-control {
-      touch-action: pan-x !important;
+    /* 允許垂直滑動的區域 (手機端界面與關卡列表) */
+    .allow-touch-scroll, .touch-scroll-y {
+      touch-action: pan-y !important;
+      overflow-y: auto !important;
+      -webkit-overflow-scrolling: touch !important;
+    }
+
+    /* 手機與直立螢幕適配 (畫面放不下時全面放行縱向滑動) */
+    @media (max-width: 1023px), (max-height: 700px) {
+      body {
+        height: auto !important;
+        min-height: 100vh !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        justify-content: flex-start !important;
+      }
+      #view-lobby {
+        min-height: auto !important;
+        height: auto !important;
+        overflow: visible !important;
+      }
+      #view-dance {
+        min-height: auto !important;
+        height: auto !important;
+        overflow-y: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        padding-bottom: 6rem !important;
+      }
+      #view-album-levels {
+        height: auto !important;
+        min-height: calc(100vh - 1rem) !important;
+        max-height: none !important;
+      }
     }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased w-screen h-screen flex flex-col items-center justify-center font-sans select-none overflow-hidden p-1 sm:p-2 md:p-3">
+<body class="bg-slate-950 text-slate-100 antialiased w-full min-h-screen lg:h-screen flex flex-col items-center lg:justify-center font-sans select-none overflow-x-hidden overflow-y-auto lg:overflow-hidden p-1 sm:p-2 md:p-3">
 
   <!-- ========================================================= -->
   <!-- 頁面 1：宇宙雙星球大選單 (深邃星空與極致發散光暈宇宙感)     -->
   <!-- ========================================================= -->
-  <div id="view-lobby" class="relative flex-1 flex flex-col p-4 md:p-6 max-w-6xl mx-auto w-full justify-between min-h-[580px] md:min-h-[640px] rounded-3xl overflow-hidden border border-slate-700/60 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] my-2" style="background: radial-gradient(circle at 50% 25%, #1e293b 0%, #0f172a 45%, #020617 100%);">
+  <div id="view-lobby" class="relative flex-1 flex flex-col p-3 sm:p-4 md:p-6 max-w-6xl mx-auto w-full justify-between min-h-0 lg:min-h-[640px] rounded-3xl overflow-visible lg:overflow-hidden border border-slate-700/60 shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] my-1 sm:my-2" style="background: radial-gradient(circle at 50% 25%, #1e293b 0%, #0f172a 45%, #020617 100%);">
     
     <!-- 背景裝飾：璀璨星光與多層次星雲發散微光 (深色宇宙氛圍) -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden">
@@ -439,31 +469,31 @@
       </div>
 
       <!-- 右側：主題曲Logo播放鍵 + 旋轉 CD 背景音樂開關 + 累計總積分 + 家長教練設定 -->
-      <div class="flex items-center gap-2 sm:gap-2.5 self-end sm:self-auto flex-wrap sm:flex-nowrap justify-end">
+      <div class="flex items-center gap-1.5 sm:gap-2.5 self-center sm:self-auto flex-wrap sm:flex-nowrap justify-center sm:justify-end w-full sm:w-auto">
         <!-- 🌙 主題曲專屬播放暫停 Logo 按鈕 (點選開啟半透明黑色電影結尾滾動字幕歌詞，音量恢復原聲) -->
-        <button id="btn-theme-song-logo" onclick="toggleThemeSongLyricsMode()"
-                class="group relative flex items-center gap-2 bg-gradient-to-r from-amber-500/25 via-pink-500/20 to-indigo-500/25 hover:from-amber-500/40 hover:to-indigo-500/40 border border-amber-300/60 hover:border-amber-300 px-3 py-1.5 rounded-full shadow-[0_0_15px_rgba(245,158,11,0.3)] transition-all duration-300 active:scale-95 cursor-pointer select-none"
+        <button id="btn-theme-song-logo" onclick="toggleThemeSongLyricsMode(event)"
+                class="group relative flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-amber-500/25 via-pink-500/20 to-indigo-500/25 hover:from-amber-500/40 hover:to-indigo-500/40 border border-amber-300/60 hover:border-amber-300 px-2 sm:px-3 py-1.5 rounded-full shadow-[0_0_15px_rgba(245,158,11,0.3)] transition-all duration-300 active:scale-95 cursor-pointer select-none shrink-0"
                 title="主題曲《Jump to the Moon》播放與電影滾動歌詞 (點擊切換)">
           <!-- 迷你發光月亮與音符 Logo 圖示 -->
-          <div class="relative w-8 h-8 rounded-full bg-gradient-to-tr from-amber-400 to-yellow-200 text-slate-950 flex items-center justify-center font-black text-sm shadow-md group-hover:scale-105 transition-transform shrink-0">
+          <div class="relative w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-gradient-to-tr from-amber-400 to-yellow-200 text-slate-950 flex items-center justify-center font-black text-xs sm:text-sm shadow-md group-hover:scale-105 transition-transform shrink-0">
             <span id="theme-logo-icon" class="leading-none">🌙</span>
             <span class="absolute inset-0 rounded-full border border-amber-300 animate-ping opacity-30 pointer-events-none"></span>
           </div>
-          <div class="flex flex-col text-left leading-tight hidden xs:flex sm:flex">
+          <div class="flex flex-col text-left leading-tight">
             <span class="text-[10px] font-black text-amber-300 tracking-wide flex items-center gap-1">
               <span>主題曲</span>
-              <span id="theme-logo-play-state" class="text-[9px] bg-amber-400 text-slate-950 px-1.5 py-0.2 rounded-full font-black">▶ 歌詞</span>
+              <span id="theme-logo-play-state" class="text-[8px] sm:text-[9px] bg-amber-400 text-slate-950 px-1 py-0.2 rounded-full font-black">▶ 歌詞</span>
             </span>
-            <span class="text-[9px] font-bold text-slate-200 truncate max-w-[105px]">Jump to the Moon</span>
+            <span class="text-[8px] sm:text-[9px] font-bold text-slate-200 truncate max-w-[85px] sm:max-w-[105px]">Jump to Moon</span>
           </div>
         </button>
 
         <!-- 💿 CD 旋轉唱片背景音樂開關 (開啟時旋轉，關閉時停止轉動) -->
-        <button id="btn-home-cd" onclick="toggleHomeBgmFromCD()" 
-                class="group relative flex items-center gap-2 bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 hover:border-amber-400/80 px-2.5 py-1.5 rounded-full shadow-[0_0_15px_rgba(0,0,0,0.5)] transition-all duration-200 active:scale-95 cursor-pointer select-none"
-                title="首頁音樂開關 (點擊切換播放/停止)">
+        <button id="btn-home-cd" onclick="toggleHomeBgmFromCD(event)" 
+                class="group relative flex items-center gap-1.5 sm:gap-2 bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 hover:border-amber-400/80 px-2 sm:px-2.5 py-1.5 rounded-full shadow-[0_0_15px_rgba(0,0,0,0.5)] transition-all duration-200 active:scale-95 cursor-pointer select-none shrink-0"
+                title="首頁音樂開關 (點擊切換播放/暫停)">
           <!-- 旋轉 CD 唱片本體 -->
-          <div id="home-cd-disc" class="relative w-8 h-8 rounded-full shadow-md flex items-center justify-center shrink-0 border border-slate-500/70 overflow-hidden cd-spinning"
+          <div id="home-cd-disc" class="relative w-7 h-7 sm:w-8 sm:h-8 rounded-full shadow-md flex items-center justify-center shrink-0 border border-slate-500/70 overflow-hidden cd-spinning"
                style="background: radial-gradient(circle, #334155 0%, #0f172a 35%, #1e293b 50%, #0f172a 70%, #334155 100%);">
             <!-- CD 鐳射彩虹炫彩光芒 -->
             <div class="absolute inset-0 opacity-45 bg-gradient-to-tr from-cyan-400 via-pink-400 to-amber-300 pointer-events-none mix-blend-screen" style="transform: rotate(45deg);"></div>
@@ -471,14 +501,14 @@
             <div class="absolute inset-1 rounded-full border border-slate-400/25 pointer-events-none"></div>
             <div class="absolute inset-2 rounded-full border border-slate-400/20 pointer-events-none"></div>
             <!-- 中心孔與音樂符號 -->
-            <div class="relative z-10 w-3 h-3 rounded-full bg-amber-400 flex items-center justify-center shadow-xs border border-amber-200">
+            <div class="relative z-10 w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-amber-400 flex items-center justify-center shadow-xs border border-amber-200">
               <span class="text-[7px] text-slate-950 font-black">♪</span>
             </div>
           </div>
           <!-- 狀態標籤文字 -->
-          <div class="flex flex-col text-left pr-1 leading-tight hidden xs:flex sm:flex">
-            <span class="text-[10px] font-bold text-slate-300">首頁音樂</span>
-            <span id="home-cd-status-text" class="text-[9px] font-black text-amber-300">播放中</span>
+          <div class="flex flex-col text-left pr-0.5 sm:pr-1 leading-tight">
+            <span class="text-[9px] sm:text-[10px] font-bold text-slate-300">首頁音樂</span>
+            <span id="home-cd-status-text" class="text-[8px] sm:text-[9px] font-black text-amber-300">播放中</span>
           </div>
           <!-- 關閉音樂時的微型靜音警示角標 -->
           <div id="home-cd-mute-badge" class="hidden absolute -top-1 -right-1 w-4 h-4 bg-rose-500 text-white rounded-full text-[9px] font-black flex items-center justify-center shadow-md border border-white/80">
@@ -486,12 +516,12 @@
           </div>
         </button>
 
-        <div class="flex items-center gap-2 bg-slate-900/85 backdrop-blur-md border border-amber-400/60 px-4 py-2 rounded-full text-xs font-black text-amber-300 shadow-[0_0_18px_rgba(245,158,11,0.25)]" title="全宇宙跳舞總積分 (最多累計至 9 位數)">
-          <span class="text-sm">🏆</span>
-          <span class="text-[11px] text-slate-300 font-bold hidden sm:inline">總積分:</span>
+        <div class="flex items-center gap-1.5 sm:gap-2 bg-slate-900/85 backdrop-blur-md border border-amber-400/60 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-black text-amber-300 shadow-[0_0_18px_rgba(245,158,11,0.25)] shrink-0" title="全宇宙跳舞總積分 (最多累計至 9 位數)">
+          <span class="text-xs sm:text-sm">🏆</span>
+          <span class="text-[10px] sm:text-[11px] text-slate-300 font-bold hidden sm:inline">總積分:</span>
           <strong id="total-score-lobby" class="text-amber-300 text-xs sm:text-sm font-mono tracking-wider tabular-nums font-black drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]">000,000,980</strong>
         </div>
-        <button onclick="openParentSettingsModal()" class="w-10 h-10 rounded-full bg-slate-900/85 hover:bg-slate-800 border border-slate-700/90 hover:border-amber-400/80 flex items-center justify-center text-sm text-slate-200 hover:text-amber-300 shadow-md transition-all active:scale-95" title="家長與教練設定：攝影機開關、鏡頭靈敏度與提示語音">
+        <button onclick="openParentSettingsModal()" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-slate-900/85 hover:bg-slate-800 border border-slate-700/90 hover:border-amber-400/80 flex items-center justify-center text-xs sm:text-sm text-slate-200 hover:text-amber-300 shadow-md transition-all active:scale-95 shrink-0" title="家長與教練設定：攝影機開關、鏡頭靈敏度與提示語音">
           ⚙️
         </button>
       </div>
@@ -559,7 +589,7 @@
           </div>
           <!-- 男女孩小朋友齊聲童聲音訊 -->
           <audio id="audio-welcome-chorus" src="./audio/welcome_kids_chorus.mp3" preload="auto"></audio>
-          <!-- 首頁專屬背景音樂 (Jump_to_the_Moon.mp3, 40% 音量循環播放) -->
+          <!-- 首頁專屬背景音樂 (Jump_to_the_Moon.mp3, 30% 音量循環播放) -->
           <audio id="audio-home-bgm" src="./audio/Jump_to_the_Moon.mp3" loop preload="auto"></audio>
 
           <!-- 全新高畫質去背 5 位小朋友舞蹈團隊立繪 (立體純白防雜質光暈) -->
@@ -890,7 +920,7 @@
   <!-- 頁面 2：跳舞互動教室 (The Interactive Dance Classroom)       -->
   <!-- 平板專屬最佳化：單頁一覽無餘，全內容自適應充滿，無需上下捲動 -->
   <!-- ========================================================= -->
-  <div id="view-dance" class="hidden flex-1 flex flex-col p-2 sm:p-3 md:p-4 max-w-7xl mx-auto w-full md:h-[calc(100vh-1rem)] md:max-h-[calc(100vh-1rem)] overflow-hidden">
+  <div id="view-dance" class="hidden flex-1 flex flex-col p-2 sm:p-3 md:p-4 max-w-7xl mx-auto w-full min-h-0 lg:h-[calc(100vh-1rem)] lg:max-h-[calc(100vh-1rem)] overflow-y-auto lg:overflow-hidden allow-touch-scroll touch-scroll-y">
     
     <!-- 教室頂欄：返回、歌曲名、火柴人皮膚、人數、得分、全螢幕 (支援平板左右滑動) -->
     <header class="bg-white/95 backdrop-blur border border-amber-200 rounded-2xl md:rounded-3xl p-2 md:px-5 mb-2 md:mb-3 shadow-md flex items-center justify-between gap-3 overflow-x-auto allow-touch-scroll allow-touch-scroll-x touch-scroll-x min-h-[56px] md:min-h-[64px] shrink-0 no-scrollbar" style="touch-action: pan-x !important; -webkit-overflow-scrolling: touch;">
@@ -975,7 +1005,7 @@
     </header>
 
     <!-- 核心分屏：左側精簡示範卡片 (無黑底、無邊框設計，原畫 9:16)；右側超大螢幕攝影機與火柴人 (佔 75%) -->
-    <main class="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-2 md:gap-3 mb-2 md:mb-3 items-stretch min-h-0 overflow-hidden">
+    <main class="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-2 md:gap-3 mb-2 md:mb-3 items-stretch min-h-0 overflow-visible lg:overflow-hidden">
       
       <!-- 【左半屏：AI 舞蹈導師示範影片 (佔 3/12 = 25% 寬度，無黑底框、無邊框設計，精緻小巧)】 -->
       <section class="relative bg-gradient-to-b from-amber-50/90 via-white to-amber-50/60 rounded-3xl border border-amber-200/60 shadow-md flex flex-col justify-between overflow-hidden h-[360px] sm:h-[420px] lg:h-full lg:col-span-3 shrink-0">
@@ -1539,7 +1569,7 @@
       voiceGuidance: true,
       bgmEnabled: true,
       spaceAmbient: true,
-      spaceVolume: 0.35
+      spaceVolume: 0.3
     };
 
     let userSettings = { ...DEFAULT_PARENT_SETTINGS };
@@ -1553,6 +1583,7 @@
       } catch(e) {
         userSettings = { ...DEFAULT_PARENT_SETTINGS };
       }
+      userSettings.spaceVolume = 0.3; // 預設主題曲音量強制為 30%
       voiceEnabled = !!userSettings.voiceGuidance;
       if (typeof cameraZoomLevel !== 'undefined') {
         if (userSettings.cameraSensitivity === 'high') {
@@ -1763,6 +1794,8 @@
       }, stepTime);
     }
 
+    let homeBgmPlayPromise = null;
+
     function startHomeBgm() {
       const audioHomeBgm = document.getElementById('audio-home-bgm');
       if (!audioHomeBgm) return;
@@ -1775,60 +1808,102 @@
         updateHomeCdUI();
         return;
       }
-      // 進入首頁時音量為 30%；若處於主題曲歌詞模式則為原聲 100%
+      // 進入首頁主題曲預設播放音量精確縮小為 30% (0.3)；若處於主題曲歌詞模式則為原聲 100%
       audioHomeBgm.volume = isThemeSongLyricsActive ? 1.0 : 0.3;
       audioHomeBgm.loop = true;  // 循環播放
-      const p = audioHomeBgm.play();
-      if (p !== undefined) {
-        p.then(() => {
-          updateHomeCdUI();
-        }).catch(e => {
-          console.log("Home BGM autoplay waiting for interaction:", e);
-        });
+
+      try {
+        homeBgmPlayPromise = audioHomeBgm.play();
+        if (homeBgmPlayPromise !== undefined) {
+          homeBgmPlayPromise.then(() => {
+            homeBgmPlayPromise = null;
+            // 若在非同步載入期間使用者已點選暫停，則立即停止
+            if (!userSettings.spaceAmbient) {
+              audioHomeBgm.pause();
+            }
+            updateHomeCdUI();
+          }).catch(e => {
+            homeBgmPlayPromise = null;
+            console.log("Home BGM autoplay waiting for interaction:", e);
+            updateHomeCdUI();
+          });
+        }
+      } catch (e) {
+        console.warn("audioHomeBgm.play error:", e);
       }
       updateHomeCdUI();
     }
 
-    function stopHomeBgm(fadeTime = 0.35) {
+    function stopHomeBgm(fadeTime = 0) {
       const audioHomeBgm = document.getElementById('audio-home-bgm');
-      if (!audioHomeBgm || audioHomeBgm.paused) return;
+      if (!audioHomeBgm) return;
+
+      if (audioHomeBgm._volumeRampTimer) {
+        clearInterval(audioHomeBgm._volumeRampTimer);
+        audioHomeBgm._volumeRampTimer = null;
+      }
+      if (audioHomeBgm._fadeTimer) {
+        clearInterval(audioHomeBgm._fadeTimer);
+        audioHomeBgm._fadeTimer = null;
+      }
+
       const targetBaseVol = isThemeSongLyricsActive ? 1.0 : 0.3;
-      if (fadeTime > 0) {
+
+      if (fadeTime > 0 && !audioHomeBgm.paused) {
         const startVol = audioHomeBgm.volume;
         const steps = 8;
         const stepTime = (fadeTime * 1000) / steps;
         let count = 0;
-        const fadeTimer = setInterval(() => {
+        audioHomeBgm._fadeTimer = setInterval(() => {
           count++;
           audioHomeBgm.volume = Math.max(0, startVol * (1 - count / steps));
           if (count >= steps) {
-            clearInterval(fadeTimer);
-            audioHomeBgm.pause();
-            audioHomeBgm.currentTime = 0;
+            clearInterval(audioHomeBgm._fadeTimer);
+            audioHomeBgm._fadeTimer = null;
+            try { audioHomeBgm.pause(); } catch (e) {}
             audioHomeBgm.volume = targetBaseVol;
             updateHomeCdUI();
           }
         }, stepTime);
       } else {
-        audioHomeBgm.pause();
-        audioHomeBgm.currentTime = 0;
+        try { audioHomeBgm.pause(); } catch (e) {}
         audioHomeBgm.volume = targetBaseVol;
         updateHomeCdUI();
       }
+
+      // 若有待決的 play promise，resolve 後強制 pause
+      if (homeBgmPlayPromise) {
+        homeBgmPlayPromise.then(() => {
+          if (!userSettings.spaceAmbient || fadeTime === 0) {
+            try { audioHomeBgm.pause(); } catch (e) {}
+            updateHomeCdUI();
+          }
+        }).catch(() => {});
+      }
+      updateHomeCdUI();
     }
 
-    // 點擊首頁 CD 唱片切換背景音樂
-    function toggleHomeBgmFromCD() {
+    // 點擊首頁 CD 唱片切換背景音樂 (支援滑鼠點擊與手機觸控)
+    function toggleHomeBgmFromCD(e) {
+      if (e) {
+        e.stopPropagation();
+        if (e.cancelable) e.preventDefault();
+      }
       getAudioContext();
-      userSettings.spaceAmbient = !userSettings.spaceAmbient;
-      saveParentSettings();
-
       const audioHomeBgm = document.getElementById('audio-home-bgm');
-      if (userSettings.spaceAmbient) {
+
+      // 嚴格依據 audio 當前是否正在發聲判斷：正在播則立刻暫停；未在播則開啟
+      const isCurrentlyPlaying = audioHomeBgm && !audioHomeBgm.paused;
+
+      if (isCurrentlyPlaying) {
+        userSettings.spaceAmbient = false;
+        saveParentSettings();
+        stopHomeBgm(0); // 立即徹底暫停，零延遲
+      } else {
+        userSettings.spaceAmbient = true;
+        saveParentSettings();
         startHomeBgm();
         playStarChimeSFX();
-      } else {
-        stopHomeBgm(0.2);
       }
       updateHomeCdUI();
     }
@@ -1839,10 +1914,13 @@
       const cdBadge = document.getElementById('home-cd-mute-badge');
       const cdStatus = document.getElementById('home-cd-status-text');
       const themeLogoState = document.getElementById('theme-logo-play-state');
-      const isMusicOn = !!userSettings.spaceAmbient;
+      const audioHomeBgm = document.getElementById('audio-home-bgm');
+
+      // 真正播放狀態：audio 未暫停且設定開啟
+      const isMusicPlaying = audioHomeBgm ? (!audioHomeBgm.paused && !!userSettings.spaceAmbient) : !!userSettings.spaceAmbient;
 
       if (cdDisc) {
-        if (isMusicOn) {
+        if (isMusicPlaying) {
           cdDisc.classList.add('cd-spinning');
           cdDisc.classList.remove('cd-paused');
         } else {
@@ -1851,11 +1929,11 @@
         }
       }
       if (cdBadge) {
-        cdBadge.classList.toggle('hidden', isMusicOn);
+        cdBadge.classList.toggle('hidden', isMusicPlaying);
       }
       if (cdStatus) {
-        cdStatus.innerText = isMusicOn ? "播放中" : "已靜音";
-        cdStatus.className = isMusicOn ? "text-[9px] font-black text-amber-300" : "text-[9px] font-black text-slate-400";
+        cdStatus.innerText = isMusicPlaying ? "播放中" : "已暫停";
+        cdStatus.className = isMusicPlaying ? "text-[8px] sm:text-[9px] font-black text-amber-300" : "text-[8px] sm:text-[9px] font-black text-slate-400";
       }
       if (themeLogoState) {
         themeLogoState.innerText = isThemeSongLyricsActive ? "⏸ 歌詞中" : "▶ 歌詞";
@@ -1863,7 +1941,7 @@
 
       // 同步設定彈窗勾選框
       const ambientChk = document.getElementById('setting-ambient-enabled');
-      if (ambientChk) ambientChk.checked = isMusicOn;
+      if (ambientChk) ambientChk.checked = isMusicPlaying;
     }
 
     // ========================================================
@@ -2471,9 +2549,16 @@
     }
 
     // 首次使用者互動時啟動音訊環境與首頁背景音樂
-    function initUserAudioOnFirstTouch() {
+    function initUserAudioOnFirstTouch(e) {
       getAudioContext();
-      startHomeBgm();
+      // 如果使用者第一次點擊的正是首頁 CD 開關或主題曲按鈕，交給該按鈕原生點擊邏輯，避免競態雙重觸發
+      if (e && e.target && e.target.closest && e.target.closest('#btn-home-cd, #btn-theme-song-logo')) {
+        // 由按鈕的 onclick 函式處理
+      } else {
+        if (userSettings.spaceAmbient) {
+          startHomeBgm();
+        }
+      }
       updateHomeCdUI();
       document.removeEventListener('pointerdown', initUserAudioOnFirstTouch);
       document.removeEventListener('keydown', initUserAudioOnFirstTouch);
@@ -2511,9 +2596,9 @@
       // 依星球切換專屬主題背景 (Planet 1 晨光島樂園 vs Planet 2 星光彩虹軌道)
       if (viewAlbumLevels) {
         if (albumId === 'album_1') {
-          viewAlbumLevels.className = "flex-1 flex flex-col p-3 sm:p-4 md:p-6 max-w-6xl mx-auto w-full h-[calc(100vh-1.5rem)] max-h-[calc(100vh-1.5rem)] rounded-3xl overflow-hidden border border-amber-300/80 shadow-2xl my-2 relative planet-levels-p1";
+          viewAlbumLevels.className = "flex-1 flex flex-col p-3 sm:p-4 md:p-6 max-w-6xl mx-auto w-full min-h-0 lg:h-[calc(100vh-1.5rem)] lg:max-h-[calc(100vh-1.5rem)] rounded-3xl overflow-hidden border border-amber-300/80 shadow-2xl my-2 relative planet-levels-p1";
         } else {
-          viewAlbumLevels.className = "flex-1 flex flex-col p-3 sm:p-4 md:p-6 max-w-6xl mx-auto w-full h-[calc(100vh-1.5rem)] max-h-[calc(100vh-1.5rem)] rounded-3xl overflow-hidden border border-fuchsia-300/80 shadow-2xl my-2 relative planet-levels-p2";
+          viewAlbumLevels.className = "flex-1 flex flex-col p-3 sm:p-4 md:p-6 max-w-6xl mx-auto w-full min-h-0 lg:h-[calc(100vh-1.5rem)] lg:max-h-[calc(100vh-1.5rem)] rounded-3xl overflow-hidden border border-fuchsia-300/80 shadow-2xl my-2 relative planet-levels-p2";
         }
         viewAlbumLevels.classList.remove('hidden');
       }
@@ -4999,8 +5084,18 @@
       }
     }
     // ========================================================
-    // 平板與觸控螢幕鎖定：禁止雙指縮放、拖曳晃動、下拉重整
+    // 平板與觸控螢幕智慧鎖定：手機支援上下滾動；大平板橫屏鎖定禁止縮放與晃動
     // ========================================================
+    function isMobileOrScrollable() {
+      const isMobileUA = /Android|webOS|iPhone|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+      const isNarrow = window.innerWidth < 1024;
+      const isPortrait = window.innerHeight > window.innerWidth;
+      const isShortHeight = window.innerHeight < 700;
+      const docHeight = Math.max(document.documentElement.scrollHeight, document.body.scrollHeight);
+      const isContentOverflowing = docHeight > window.innerHeight + 15;
+      return isMobileUA || isNarrow || isPortrait || isShortHeight || isContentOverflowing;
+    }
+
     function lockTabletViewport() {
       // 阻止 Safari / iOS 雙指縮放手勢 (Pinch-to-zoom)
       document.addEventListener('gesturestart', (e) => e.preventDefault(), { passive: false });
@@ -5014,12 +5109,19 @@
         }
       }, { passive: false });
 
-      // 觸控滑動精確放行機制：放行時間進度條、教室頂欄橫向滑動、單一星球關卡垂直滾動
+      // 觸控滑動智慧機制：手機/小螢幕單指放行上下滑動；進度條與橫向選單精準放行
       document.addEventListener('touchmove', (e) => {
+        // 多指手勢 (雙指捏合縮放) 一律禁止
         if (e.touches && e.touches.length > 1) {
           e.preventDefault();
           return;
         }
+
+        // 手機端、直立畫面或畫面放不下需要上下瀏覽時，全面放行單指原生垂直滑動
+        if (isMobileOrScrollable()) {
+          return;
+        }
+
         const target = e.target;
         if (!target) {
           e.preventDefault();
@@ -5036,7 +5138,7 @@
           return;
         }
 
-        // 其餘底層視圖、星空背景、固定卡片嚴格禁止拖曳晃動 (Prevent Rubber-banding / Overscroll)
+        // 大螢幕平板橫向黃金比例視圖：嚴格防止邊界拖曳晃動
         e.preventDefault();
       }, { passive: false });
 
