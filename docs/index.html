@@ -1188,7 +1188,7 @@
          style="bottom: 80px; right: 24px; touch-action: none;">
       <!-- 回到最前首頁按鍵 (直接從每一首歌返回最前首頁) -->
       <button onclick="directBackToLobby()" class="w-8 h-8 rounded-full bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-500 hover:to-orange-500 text-slate-950 flex items-center justify-center font-black text-xs transition shadow-sm active:scale-90 shrink-0" title="回到最前面首頁">
-        🏠
+        🪐
       </button>
       <div class="h-4 w-px bg-slate-200 shrink-0"></div>
       <button onclick="prevSong()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center font-black text-xs transition active:scale-90 shrink-0" title="上一首">
@@ -2525,6 +2525,9 @@
 
     // 從單一星球返回雙星球首頁選單
     function backToPlanetHub() {
+      // 確保攝影機硬體關閉
+      stopRealCamera();
+
       // 復原首頁雙星球、天團、頂底欄狀態
       const p1 = document.getElementById('planet-container-album_1');
       const p2 = document.getElementById('planet-container-album_2');
@@ -2566,6 +2569,7 @@
     // 從每一首跳舞教室直接返回最前面的雙星球首頁
     function directBackToLobby() {
       pauseDance();
+      stopRealCamera();
       backToPlanetHub();
     }
 
@@ -2879,14 +2883,22 @@
         startDance();
       }, 300);
 
-      // 进入互动舞台依家長設定預設開啟攝影機
-      if (userSettings.cameraAutoStart && !isCameraActive) {
-        initRealCamera();
+      // 每次進去歌曲時依家長設定預設判斷開啟或關閉攝影機
+      if (userSettings.cameraAutoStart) {
+        if (!isCameraActive) {
+          initRealCamera();
+        }
+      } else {
+        if (isCameraActive) {
+          stopRealCamera();
+        }
       }
     }
 
     function backToLobby() {
       pauseDance();
+      // 離開跳舞教室，關閉實體攝影機
+      stopRealCamera();
       viewDance.classList.add('hidden');
       if (viewAlbumLevels) {
         viewAlbumLevels.classList.remove('hidden');
@@ -3425,20 +3437,39 @@
       p.isWaving = (p.lWrist.y < p.neck.y || p.rWrist.y < p.neck.y);
     }
 
+    // 徹底釋放並關閉實體攝影機
+    function stopRealCamera() {
+      if (cameraStream) {
+        try {
+          cameraStream.getTracks().forEach(t => t.stop());
+        } catch (e) {
+          console.warn("停止相機 track 異常:", e);
+        }
+        cameraStream = null;
+      }
+      if (webcamVideo) {
+        try {
+          webcamVideo.pause();
+        } catch (e) {}
+        webcamVideo.srcObject = null;
+      }
+      isCameraActive = false;
+      if (cameraGuidePrompt) cameraGuidePrompt.classList.remove('hidden');
+      if (btnCamera) {
+        btnCamera.innerText = "📷 開啟攝影機";
+        btnCamera.classList.remove('bg-rose-500');
+        btnCamera.classList.add('bg-sky-500');
+      }
+      if (stickmanStatusBadge) {
+        stickmanStatusBadge.innerText = "等待小朋友入鏡變身火柴人...";
+      }
+      isHumanDetected = false;
+      presenceConfidence = 0;
+    }
+
     async function initRealCamera() {
       if (isCameraActive) {
-        if (cameraStream) {
-          cameraStream.getTracks().forEach(t => t.stop());
-          cameraStream = null;
-        }
-        webcamVideo.srcObject = null;
-        isCameraActive = false;
-        cameraGuidePrompt.classList.remove('hidden');
-        btnCamera.innerText = "📷 開啟攝影機";
-        btnCamera.classList.replace('bg-rose-500', 'bg-sky-500');
-        stickmanStatusBadge.innerText = "等待小朋友入鏡變身火柴人...";
-        isHumanDetected = false;
-        presenceConfidence = 0;
+        stopRealCamera();
         return;
       }
 
