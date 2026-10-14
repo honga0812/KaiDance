@@ -1729,6 +1729,86 @@
       // 依用戶指示：宇宙環境音已移除
     }
 
+    // 俏皮童趣靈動音效計數器與防抖
+    let playfulHoverNoteIndex = 0;
+    let lastPlayfulHoverTime = 0;
+
+    // 首頁可點選物件滑鼠經過俏皮音效 (Playful Bubbly Hover SFX)
+    function playPlayfulHoverSFX(type = 'default') {
+      const now = Date.now();
+      if (now - lastPlayfulHoverTime < 65) return; // 65ms 防抖，防止快速掠過時過度密集
+      lastPlayfulHoverTime = now;
+
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      try {
+        const t = ctx.currentTime;
+        // 俏皮童趣靈動高音階 (C6 1046Hz, D6 1175Hz, E6 1318Hz, G6 1568Hz, A6 1760Hz, C7 2093Hz)
+        const scale = [1046.5, 1174.7, 1318.5, 1568.0, 1760.0, 2093.0];
+        const baseFreq = scale[playfulHoverNoteIndex % scale.length];
+        playfulHoverNoteIndex++;
+
+        // 主震盪器：清脆水滴氣泡感
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        osc.type = 'sine';
+
+        // 俏皮上揚滑音 (0.04s 內輕躍微升 ~22%，營造活潑 "啵啾" 躍動感)
+        osc.frequency.setValueAtTime(baseFreq * 0.95, t);
+        osc.frequency.exponentialRampToValueAtTime(baseFreq * 1.25, t + 0.04);
+        osc.frequency.exponentialRampToValueAtTime(baseFreq * 1.1, t + 0.08);
+
+        // 快速俐落的包絡 (85ms)，俏皮清亮
+        gain.gain.setValueAtTime(0.0001, t);
+        gain.gain.linearRampToValueAtTime(0.065, t + 0.012);
+        gain.gain.exponentialRampToValueAtTime(0.0001, t + 0.085);
+
+        // 副音色：輕柔晶亮泛音 (增添立體感與童趣魔法水滴質感)
+        const sparkle = ctx.createOscillator();
+        const sparkleGain = ctx.createGain();
+        sparkle.type = 'triangle';
+        sparkle.frequency.setValueAtTime(baseFreq * 1.5, t);
+        sparkle.frequency.exponentialRampToValueAtTime(baseFreq * 2.0, t + 0.035);
+
+        sparkleGain.gain.setValueAtTime(0.0001, t);
+        sparkleGain.gain.linearRampToValueAtTime(0.035, t + 0.008);
+        sparkleGain.gain.exponentialRampToValueAtTime(0.0001, t + 0.06);
+
+        osc.connect(gain);
+        gain.connect(ctx.destination);
+        sparkle.connect(sparkleGain);
+        sparkleGain.connect(ctx.destination);
+
+        osc.start(t);
+        sparkle.start(t);
+        osc.stop(t + 0.09);
+        sparkle.stop(t + 0.07);
+      } catch (e) {}
+    }
+
+    // 全域監聽首頁滑鼠移入事件 (首頁中所有可點選物件 hover 時播放俏皮音效)
+    document.addEventListener('mouseover', (e) => {
+      const lobby = document.getElementById('view-lobby');
+      if (!lobby || lobby.classList.contains('hidden')) return;
+
+      const target = e.target;
+      if (!target) return;
+
+      // 檢查是否移入可點選物件 (按鈕、具有 cursor-pointer、onclick 屬性或互動卡片)
+      const clickable = target.closest('#view-lobby button, #view-lobby a, #view-lobby .cursor-pointer, #view-lobby [onclick], #view-lobby .planet-interactive-card');
+      if (clickable) {
+        // 避免滑鼠在其內部子元素移動時重複觸發
+        if (e.relatedTarget && clickable.contains(e.relatedTarget)) {
+          return;
+        }
+        // 若為雙星球卡片，星球已包含專屬星際音效；其餘所有可點選物件均播放俏皮氣泡音效
+        if (clickable.classList.contains('planet-interactive-card')) {
+          return;
+        }
+        playPlayfulHoverSFX();
+      }
+    });
+
     // 滑鼠移入星球音效 (Planet Hover SFX)
     let lastPlanetHoverSFXTime = 0;
     function playPlanetHoverSFX(albumId = 'album_1') {
