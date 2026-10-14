@@ -2752,6 +2752,9 @@
 
     // 一鍵全專輯連續循環播放
     function playCurrentAlbumAll() {
+      if (isThemeSongLyricsActive) exitThemeSongLyricsMode();
+      stopHomeBgm(0);
+      stopSpaceAmbient(0.3);
       const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
       if (!album || !album.songs.length) return;
       isAlbumContinuousPlay = true;
@@ -2761,6 +2764,9 @@
 
     // 隨機跳一首
     function playRandomSongInAlbum() {
+      if (isThemeSongLyricsActive) exitThemeSongLyricsMode();
+      stopHomeBgm(0);
+      stopSpaceAmbient(0.3);
       const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
       if (!album || !album.songs.length) return;
       const randIdx = Math.floor(Math.random() * album.songs.length);
@@ -2942,7 +2948,9 @@
         if (coachTypeBadge) coachTypeBadge.innerText = "📸 動作引導寫真";
       }
 
-      // 進入跳舞教室，停止太空環境音效
+      // 進入跳舞教室，徹底停止首頁主題曲與太空環境音效
+      if (isThemeSongLyricsActive) exitThemeSongLyricsMode();
+      stopHomeBgm(0);
       stopSpaceAmbient(0.3);
 
       viewLobby.classList.add('hidden');
