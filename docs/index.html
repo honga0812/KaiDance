@@ -132,16 +132,12 @@
         0 16px 28px -3px rgba(245, 158, 11, 0.35);
     }
     
-    /* 專屬星球關卡選單風格 (00007 晨光島環形樂園 vs 00012 星光彩虹軌道) */
+    /* 專屬星球關卡選單風格 (極簡明亮白調 + 柔和極光微漸層) */
     .planet-levels-p1 {
-      background: radial-gradient(circle at 50% 15%, rgba(56, 189, 248, 0.28) 0%, rgba(15, 23, 42, 0.88) 70%, #020617 100%),
-                  url('./images/ui/p1_levels_bg.jpg') center center / cover no-repeat;
-      background-blend-mode: overlay;
+      background: radial-gradient(circle at 50% 15%, #ffffff 0%, #fffbeb 40%, #fef3c7 100%);
     }
     .planet-levels-p2 {
-      background: radial-gradient(circle at 50% 15%, rgba(168, 85, 247, 0.35) 0%, rgba(15, 23, 42, 0.9) 70%, #020617 100%),
-                  url('./images/ui/p2_levels_bg.jpg') center center / cover no-repeat;
-      background-blend-mode: overlay;
+      background: radial-gradient(circle at 50% 15%, #ffffff 0%, #faf5ff 40%, #f3e8ff 100%);
     }
     .card-clay-morning {
       background: radial-gradient(circle at 25% 20%, rgba(255,255,255,0.95) 0%, rgba(254,243,199,0.9) 55%, rgba(253,230,138,0.85) 100%);
@@ -366,19 +362,19 @@
   <!-- 頁面 1-B：單一星球闖關選單 (Single Planet 10-Levels Hub)   -->
   <!-- 支援風格 00007 (晨光樂園島) 與 00012 (星光彩虹軌道)          -->
   <!-- ========================================================= -->
-  <div id="view-album-levels" class="hidden flex-1 flex flex-col p-4 md:p-6 max-w-6xl mx-auto w-full min-h-[580px] md:min-h-[640px] rounded-3xl overflow-hidden border-2 border-slate-700/60 shadow-2xl my-2 relative" style="background: radial-gradient(circle at 50% 30%, #1e293b 0%, #0f172a 45%, #020617 100%);">
+  <div id="view-album-levels" class="hidden flex-1 flex flex-col p-4 md:p-6 max-w-6xl mx-auto w-full min-h-[580px] md:min-h-[640px] rounded-3xl overflow-hidden border border-slate-200/90 shadow-2xl my-2 relative" style="background: radial-gradient(circle at 50% 20%, #ffffff 0%, #f8fafc 55%, #f1f5f9 100%);">
     
     <!-- 返回雙星球母艦與星球標題列 (仿造圖檔頂部膠囊選單) -->
-    <header class="relative z-20 flex items-center justify-between pb-4 border-b border-slate-700/60 mb-5">
+    <header class="relative z-20 flex items-center justify-between pb-4 border-b border-slate-200/80 mb-5">
       <div class="flex items-center gap-3">
-        <button onclick="backToPlanetHub()" class="px-4 py-2 rounded-full bg-slate-800/90 hover:bg-slate-700 border border-slate-600 text-xs md:text-sm font-black text-white transition flex items-center gap-1.5 active:scale-95 shadow-md">
+        <button onclick="backToPlanetHub()" class="px-4 py-2 rounded-full bg-white hover:bg-slate-50 border border-slate-200/90 text-xs md:text-sm font-black text-slate-700 shadow-sm transition flex items-center gap-1.5 active:scale-95">
           ◀ 返回宇宙雙星
         </button>
         <div>
-          <h2 id="album-view-title" class="text-lg md:text-xl font-black text-white flex items-center gap-2 drop-shadow">
+          <h2 id="album-view-title" class="text-lg md:text-xl font-black text-slate-800 flex items-center gap-2 drop-shadow-sm">
             第一集：探索生活大冒險
           </h2>
-          <p id="album-view-desc" class="text-xs text-amber-200/80 font-medium">
+          <p id="album-view-desc" class="text-xs text-slate-500 font-medium">
             共 10 個趣味關卡 · 點選任一關卡出發跟跳！
           </p>
         </div>
@@ -386,7 +382,7 @@
 
       <!-- 連續播放按鈕 -->
       <div class="flex items-center gap-2">
-        <button onclick="playCurrentAlbumAll()" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-400 via-orange-400 to-pink-500 hover:opacity-95 text-slate-950 font-black text-xs md:text-sm shadow-lg transition flex items-center gap-2 active:scale-95 anim-pulse">
+        <button onclick="playCurrentAlbumAll()" class="px-5 py-2.5 rounded-full bg-gradient-to-r from-amber-400 via-orange-400 to-pink-500 hover:opacity-95 text-slate-950 font-black text-xs md:text-sm shadow-md transition flex items-center gap-2 active:scale-95 anim-pulse">
           <span>▶</span> 全星球 10 關循環播放
         </button>
       </div>
@@ -401,26 +397,27 @@
 
   <!-- ========================================================= -->
   <!-- 頁面 2：跳舞互動教室 (The Interactive Dance Classroom)       -->
+  <!-- 平板專屬最佳化：單頁一覽無餘，全內容自適應充滿，無需上下捲動 -->
   <!-- ========================================================= -->
-  <div id="view-dance" class="hidden flex-1 flex flex-col p-3 md:p-4 max-w-7xl mx-auto w-full">
+  <div id="view-dance" class="hidden flex-1 flex flex-col p-2 sm:p-3 md:p-4 max-w-7xl mx-auto w-full md:h-[calc(100vh-1rem)] md:max-h-[calc(100vh-1rem)] overflow-hidden">
     
     <!-- 教室頂欄：返回、歌曲名、火柴人皮膚、人數、得分、全螢幕 -->
-    <header class="bg-white/95 backdrop-blur border border-amber-200 rounded-3xl p-3 md:px-5 mb-3 shadow-md flex items-center justify-between gap-3 overflow-x-auto min-h-[68px] shrink-0">
+    <header class="bg-white/95 backdrop-blur border border-amber-200 rounded-2xl md:rounded-3xl p-2 md:px-5 mb-2 md:mb-3 shadow-md flex items-center justify-between gap-3 overflow-x-auto min-h-[56px] md:min-h-[64px] shrink-0">
       
       <!-- 返回与曲名 -->
-      <div class="flex items-center gap-3 shrink-0">
+      <div class="flex items-center gap-2 md:gap-3 shrink-0">
         <button onclick="backToLobby()" class="px-3.5 py-1.5 rounded-2xl bg-slate-100 hover:bg-slate-200 text-xs font-black text-slate-700 transition flex items-center gap-1 active:scale-95 shrink-0">
           ◀ 返回選歌
         </button>
         <div>
-          <h2 id="room-song-title" class="text-base md:text-lg font-black text-slate-800 flex items-center gap-1.5 truncate max-w-[190px] sm:max-w-xs md:max-w-sm">
+          <h2 id="room-song-title" class="text-sm md:text-lg font-black text-slate-800 flex items-center gap-1.5 truncate max-w-[170px] sm:max-w-xs md:max-w-sm">
             ☀️ Morning Sunshine Hello
           </h2>
           <div class="flex items-center gap-1.5 mt-0.5">
-            <span id="room-album-badge" class="text-[11px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200 shrink-0">
+            <span id="room-album-badge" class="text-[10px] md:text-[11px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-md border border-amber-200 shrink-0">
               第 1 集 #01
             </span>
-            <button onclick="togglePlaylistDrawer()" class="text-[11px] font-black text-sky-600 bg-sky-50 hover:bg-sky-100 px-2.5 py-0.5 rounded-md border border-sky-200 transition flex items-center gap-1 shrink-0">
+            <button onclick="togglePlaylistDrawer()" class="text-[10px] md:text-[11px] font-black text-sky-600 bg-sky-50 hover:bg-sky-100 px-2 py-0.5 rounded-md border border-sky-200 transition flex items-center gap-1 shrink-0">
               📜 全專輯歌單 (10首)
             </button>
           </div>
@@ -430,30 +427,30 @@
       <!-- 中间：火柴人外观切换与人数模式 -->
       <div class="flex items-center gap-2 shrink-0">
         <!-- 火柴人頭部造型切換 (人物類 / 野生動物類 / 農場動物類) -->
-        <div class="flex items-center bg-slate-100 p-1 rounded-2xl border border-slate-200 shrink-0">
-          <button id="theme-btn-human" onclick="setHeadTheme('human')" class="px-2.5 py-1 rounded-xl text-xs font-black bg-amber-500 text-white shadow-xs transition" title="P1小男孩 · P2小女孩 · P3老爺爺">
+        <div class="flex items-center bg-slate-100 p-0.5 md:p-1 rounded-2xl border border-slate-200 shrink-0">
+          <button id="theme-btn-human" onclick="setHeadTheme('human')" class="px-2 md:px-2.5 py-1 rounded-xl text-xs font-black bg-amber-500 text-white shadow-xs transition" title="P1小男孩 · P2小女孩 · P3老爺爺">
             🧑 人物類
           </button>
-          <button id="theme-btn-wild" onclick="setHeadTheme('wild')" class="px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition" title="P1獅子 · P2兔子 · P3猴子">
+          <button id="theme-btn-wild" onclick="setHeadTheme('wild')" class="px-2 md:px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition" title="P1獅子 · P2兔子 · P3猴子">
             🦁 野生動物類
           </button>
-          <button id="theme-btn-farm" onclick="setHeadTheme('farm')" class="px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition" title="P1小豬 · P2乳牛 · P3小馬">
+          <button id="theme-btn-farm" onclick="setHeadTheme('farm')" class="px-2 md:px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition" title="P1小豬 · P2乳牛 · P3小馬">
             🐷 農場動物類
           </button>
         </div>
 
         <!-- 人数模式切换 (1人 / 2人 / 3人 智能自动感应) -->
-        <div class="flex items-center bg-slate-100 p-1 rounded-2xl border border-slate-200 shrink-0" title="鏡頭會根據入鏡人數自動切換 (1~3人)，亦可手動點擊鎖定">
+        <div class="flex items-center bg-slate-100 p-0.5 md:p-1 rounded-2xl border border-slate-200 shrink-0" title="鏡頭會根據入鏡人數自動切換 (1~3人)，亦可手動點擊鎖定">
           <span class="text-[10px] font-bold text-slate-500 px-1 hidden md:inline-flex items-center gap-1">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>自動感應:
           </span>
-          <button id="player-btn-1" onclick="setPlayerCount(1)" class="px-2.5 py-1 rounded-xl text-xs font-black bg-sky-500 text-white shadow-xs transition">
+          <button id="player-btn-1" onclick="setPlayerCount(1)" class="px-2 md:px-2.5 py-1 rounded-xl text-xs font-black bg-sky-500 text-white shadow-xs transition">
             🧍 1人
           </button>
-          <button id="player-btn-2" onclick="setPlayerCount(2)" class="px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition">
+          <button id="player-btn-2" onclick="setPlayerCount(2)" class="px-2 md:px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition">
             👫 2人
           </button>
-          <button id="player-btn-3" onclick="setPlayerCount(3)" class="px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition">
+          <button id="player-btn-3" onclick="setPlayerCount(3)" class="px-2 md:px-2.5 py-1 rounded-xl text-xs font-black text-slate-500 hover:text-slate-900 transition">
             👨‍👩‍👧 3人
           </button>
         </div>
@@ -462,49 +459,49 @@
       <!-- 右侧：口令开关、得分牌、全屏 (固定寬高容器，跳動時絕不擠壓排版) -->
       <div class="flex items-center gap-2 md:gap-3 shrink-0">
         <!-- 名师原声开关 -->
-        <button id="btn-voice-toggle" onclick="toggleVoice()" class="px-3 py-1.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold text-emerald-700 transition flex items-center gap-1 shrink-0">
-          <span id="voice-icon">🔊</span> 老師原聲口令: 開
+        <button id="btn-voice-toggle" onclick="toggleVoice()" class="px-2.5 md:px-3 py-1 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold text-emerald-700 transition flex items-center gap-1 shrink-0">
+          <span id="voice-icon">🔊</span> 口令: 開
         </button>
 
-        <!-- 連擊与总分 (鎖定固定尺寸 w-[148px] h-[44px]、數字等寬 tabular-nums，數字增加時零跳動) -->
-        <div class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3.5 py-1.5 rounded-2xl shadow-sm flex items-center justify-between gap-2 shrink-0 w-[148px] h-[44px] select-none">
-          <div class="text-center w-[54px] shrink-0">
-            <span class="text-[10px] font-bold opacity-85 leading-none block">連擊</span>
-            <span id="combo-count" class="text-base font-black tabular-nums font-mono leading-tight block truncate">12x</span>
+        <!-- 連擊与总分 (鎖定固定尺寸 w-[138px] md:w-[148px] h-[38px] md:h-[42px]、數字等寬 tabular-nums) -->
+        <div class="bg-gradient-to-r from-amber-400 to-orange-400 text-white px-3 py-1 rounded-2xl shadow-sm flex items-center justify-between gap-1.5 md:gap-2 shrink-0 w-[138px] md:w-[148px] h-[38px] md:h-[42px] select-none">
+          <div class="text-center w-[50px] shrink-0">
+            <span class="text-[9px] md:text-[10px] font-bold opacity-85 leading-none block">連擊</span>
+            <span id="combo-count" class="text-sm md:text-base font-black tabular-nums font-mono leading-tight block truncate">12x</span>
           </div>
-          <div class="h-6 w-px bg-white/30 shrink-0"></div>
-          <div class="text-center w-[66px] shrink-0">
-            <span class="text-[10px] font-bold opacity-85 leading-none block">星光積分</span>
-            <span id="score-count" class="text-base font-black tabular-nums font-mono leading-tight block truncate">980</span>
+          <div class="h-5 w-px bg-white/30 shrink-0"></div>
+          <div class="text-center w-[60px] shrink-0">
+            <span class="text-[9px] md:text-[10px] font-bold opacity-85 leading-none block">星光積分</span>
+            <span id="score-count" class="text-sm md:text-base font-black tabular-nums font-mono leading-tight block truncate">980</span>
           </div>
         </div>
 
         <!-- 电视全屏按键 -->
-        <button onclick="toggleFullScreen()" class="w-9 h-9 rounded-2xl bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-indigo-600 font-bold flex items-center justify-center text-sm shadow-xs transition shrink-0" title="電視大螢幕全螢幕">
+        <button onclick="toggleFullScreen()" class="w-8 h-8 md:w-9 md:h-9 rounded-2xl bg-indigo-50 hover:bg-indigo-100 border border-indigo-200 text-indigo-600 font-bold flex items-center justify-center text-sm shadow-xs transition shrink-0" title="電視大螢幕全螢幕">
           📺
         </button>
       </div>
     </header>
 
     <!-- 核心分屏：左側精簡示範卡片 (無黑底、無邊框設計，原畫 9:16)；右側超大螢幕攝影機與火柴人 (佔 75%) -->
-    <main class="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-3 mb-3 items-stretch">
+    <main class="flex-1 grid grid-cols-1 lg:grid-cols-12 gap-2 md:gap-3 mb-2 md:mb-3 items-stretch min-h-0 overflow-hidden">
       
       <!-- 【左半屏：AI 舞蹈導師示範影片 (佔 3/12 = 25% 寬度，無黑底框、無邊框設計，精緻小巧)】 -->
-      <section class="relative bg-gradient-to-b from-amber-50/90 via-white to-amber-50/60 rounded-3xl border border-amber-200/60 shadow-md flex flex-col justify-between overflow-hidden h-[460px] sm:h-[500px] lg:h-auto lg:min-h-[460px] lg:col-span-3 shrink-0">
+      <section class="relative bg-gradient-to-b from-amber-50/90 via-white to-amber-50/60 rounded-3xl border border-amber-200/60 shadow-md flex flex-col justify-between overflow-hidden h-[360px] sm:h-[420px] lg:h-full lg:col-span-3 shrink-0">
         <!-- 頂欄狀態 -->
-        <div class="p-2.5 px-3 z-20 flex items-center justify-between gap-1.5 border-b border-amber-100 bg-amber-100/50">
-          <span class="bg-amber-500 text-white text-[11px] font-black px-2 py-0.5 rounded-full shadow flex items-center gap-1 shrink-0">
+        <div class="p-2 md:p-2.5 px-3 z-20 flex items-center justify-between gap-1.5 border-b border-amber-100 bg-amber-100/50 shrink-0">
+          <span class="bg-amber-500 text-white text-[10px] md:text-[11px] font-black px-2 py-0.5 rounded-full shadow flex items-center gap-1 shrink-0">
             <span class="w-1.5 h-1.5 rounded-full bg-white animate-ping"></span>
             示範影片
           </span>
-          <span id="coach-action-title" class="bg-white/95 text-slate-800 text-[11px] font-black px-2 py-0.5 rounded-full border border-amber-200/80 shadow-xs truncate max-w-[140px]">
+          <span id="coach-action-title" class="bg-white/95 text-slate-800 text-[10px] md:text-[11px] font-black px-2 py-0.5 rounded-full border border-amber-200/80 shadow-xs truncate max-w-[140px]">
             動作 02: 托起金色太陽
           </span>
         </div>
 
-        <!-- 動作示範播放器 (支援示範影片與教練寫真圖片無縫切換) -->
-        <div class="flex-1 relative flex items-center justify-center p-2 overflow-hidden">
-          <div class="relative w-full max-w-[210px] h-[330px] sm:h-[370px] aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-amber-300/50 bg-amber-100/40 flex items-center justify-center">
+        <!-- 動作示範播放器 (支援示範影片與教練寫真圖片無縫切換，自適應剩餘空間) -->
+        <div class="flex-1 relative flex items-center justify-center p-1 md:p-2 overflow-hidden min-h-0">
+          <div class="relative w-full max-w-[210px] h-full max-h-[360px] aspect-[9/16] rounded-2xl overflow-hidden shadow-lg border border-amber-300/50 bg-amber-100/40 flex items-center justify-center">
             <!-- 雙緩衝無縫交替播放器 (Dual-buffered Video Architecture: 徹底消除黑屏與卡頓) -->
             <video id="coach-video-a" 
                    src="./videos/loop_03_sun_rise.mp4" 
@@ -533,47 +530,47 @@
         </div>
 
         <!-- 底部動作進度提示 -->
-        <div class="bg-amber-100/40 border-t border-amber-100 px-3 py-1.5 flex items-center justify-between text-[11px]">
+        <div class="bg-amber-100/40 border-t border-amber-100 px-3 py-1 flex items-center justify-between text-[10px] md:text-[11px] shrink-0">
           <span class="font-bold text-amber-800 shrink-0">下個動作：</span>
           <span id="next-action-text" class="font-black text-amber-600 truncate">刷牙微笑大步走 ➜</span>
         </div>
       </section>
 
       <!-- 【右半屏：大螢幕攝影鏡頭 + 人物入鏡趣味發光火柴人 (佔 9/12 = 75% 寬度，超大視角舞台)】 -->
-      <section id="camera-section" class="relative bg-white rounded-3xl border-2 border-sky-200 overflow-hidden shadow-lg flex flex-col justify-between h-[460px] sm:h-[500px] lg:h-auto lg:min-h-[460px] lg:col-span-9 transition-all duration-300">
+      <section id="camera-section" class="relative bg-white rounded-3xl border-2 border-sky-200 overflow-hidden shadow-lg flex flex-col justify-between h-[380px] sm:h-[450px] lg:h-full lg:col-span-9 transition-all duration-300 min-h-0">
         
-        <!-- 顶栏：摄像头开关与火柴人状态 (固定高宽，绝对不会因文字变动挤压画布布局) -->
-        <div class="absolute top-3 left-3 z-30 flex items-center gap-2 max-w-[65%] pointer-events-auto">
-          <button id="btn-camera" onclick="initRealCamera()" class="px-3.5 py-1.5 rounded-full bg-sky-500 hover:bg-sky-600 text-white text-xs font-black shadow transition flex items-center gap-1.5 shrink-0 active:scale-95">
+        <!-- 顶栏：摄像头开关与火柴人状态 (固定高宽，絕對不會因文字變動擠壓畫布佈局) -->
+        <div class="absolute top-2.5 left-3 z-30 flex items-center gap-2 max-w-[65%] pointer-events-auto">
+          <button id="btn-camera" onclick="initRealCamera()" class="px-3 md:px-3.5 py-1 md:py-1.5 rounded-full bg-sky-500 hover:bg-sky-600 text-white text-[11px] md:text-xs font-black shadow transition flex items-center gap-1.5 shrink-0 active:scale-95">
             📷 開啟攝影機
           </button>
-          <span id="stickman-status-badge" class="bg-white/95 backdrop-blur text-slate-700 text-xs font-bold px-3 py-1 rounded-full border border-sky-200 shadow-xs truncate block max-w-xs md:max-w-md">
+          <span id="stickman-status-badge" class="bg-white/95 backdrop-blur text-slate-700 text-[11px] md:text-xs font-bold px-2.5 py-1 rounded-full border border-sky-200 shadow-xs truncate block max-w-xs md:max-w-md">
             等待小朋友入鏡變身火柴人...
           </span>
         </div>
 
         <!-- 頂欄右側：數位縮放 (Zoom In/Out)、鏡頭全螢幕按鍵與動作貼合度儀表 -->
-        <div class="absolute top-3 right-3 z-30 flex items-center gap-1.5 md:gap-2 pointer-events-auto">
+        <div class="absolute top-2.5 right-3 z-30 flex items-center gap-1.5 md:gap-2 pointer-events-auto">
           <!-- 鏡頭遠近縮放控制 (針對站得遠的小朋友支援 1.0x ~ 2.2x 放大，遠距離精準辨識) -->
-          <div class="flex items-center bg-white/95 backdrop-blur px-2 py-1 rounded-2xl border border-sky-300 shadow-sm text-xs font-black text-sky-800 shrink-0" title="鏡頭放大縮小：站較遠時可點選 🔍+ 放大畫面提升辨識精準度">
+          <div class="flex items-center bg-white/95 backdrop-blur px-2 py-0.5 md:py-1 rounded-2xl border border-sky-300 shadow-sm text-xs font-black text-sky-800 shrink-0" title="鏡頭放大縮小：站較遠時可點選 🔍+ 放大畫面提升辨識精準度">
             <span class="text-[10px] text-slate-500 mr-1 hidden sm:inline">鏡頭:</span>
-            <button onclick="adjustCameraZoom(-0.25)" class="w-6 h-6 rounded-lg bg-sky-100 hover:bg-sky-200 flex items-center justify-center text-xs active:scale-95" title="縮小 (廣角)">➖</button>
-            <span id="camera-zoom-val" class="px-1.5 text-[11px] font-mono font-black text-sky-700 min-w-[34px] text-center">1.0x</span>
-            <button onclick="adjustCameraZoom(0.25)" class="w-6 h-6 rounded-lg bg-sky-100 hover:bg-sky-200 flex items-center justify-center text-xs active:scale-95" title="放大 (特寫遠方人物)">➕</button>
+            <button onclick="adjustCameraZoom(-0.25)" class="w-5 h-5 md:w-6 md:h-6 rounded-lg bg-sky-100 hover:bg-sky-200 flex items-center justify-center text-xs active:scale-95" title="縮小 (廣角)">➖</button>
+            <span id="camera-zoom-val" class="px-1 text-[11px] font-mono font-black text-sky-700 min-w-[32px] text-center">1.0x</span>
+            <button onclick="adjustCameraZoom(0.25)" class="w-5 h-5 md:w-6 md:h-6 rounded-lg bg-sky-100 hover:bg-sky-200 flex items-center justify-center text-xs active:scale-95" title="放大 (特寫遠方人物)">➕</button>
             <button onclick="resetCameraZoom()" class="text-[10px] text-slate-400 hover:text-sky-600 ml-1 underline active:scale-95">重設</button>
           </div>
 
           <!-- 獨立鏡頭全螢幕按鍵 -->
-          <button id="btn-camera-fullscreen" onclick="toggleCameraFullscreen()" class="px-3 py-1.5 rounded-2xl bg-white/95 hover:bg-sky-50 border border-sky-300 text-sky-700 font-black text-xs shadow-sm transition flex items-center gap-1.5 active:scale-95" title="單獨將攝影機與火柴人切換為大螢幕全螢幕">
+          <button id="btn-camera-fullscreen" onclick="toggleCameraFullscreen()" class="px-2.5 md:px-3 py-1 md:py-1.5 rounded-2xl bg-white/95 hover:bg-sky-50 border border-sky-300 text-sky-700 font-black text-xs shadow-sm transition flex items-center gap-1.5 active:scale-95" title="單獨將攝影機與火柴人切換為大螢幕全螢幕">
             <span id="camera-fs-icon">🔲</span>
             <span id="camera-fs-text" class="hidden sm:inline">鏡頭全螢幕</span>
           </button>
 
-          <!-- 动作姿态匹配度仪表 (右上角，固定尺寸與等寬數字，防止數字切換時晃動) -->
-          <div class="bg-white/95 backdrop-blur px-3 py-1.5 rounded-2xl border border-emerald-300 shadow-sm text-center w-[92px] shrink-0 select-none">
-            <span class="text-[10px] font-bold text-slate-500 block leading-none">動作貼合</span>
-            <span id="match-percent" class="text-xl font-black text-emerald-500 tabular-nums font-mono block leading-tight">96%</span>
-            <div class="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden mt-0.5">
+          <!-- 动作姿态匹配度仪表 (右上角，固定尺寸與等寬數字) -->
+          <div class="bg-white/95 backdrop-blur px-2.5 py-1 rounded-2xl border border-emerald-300 shadow-sm text-center w-[85px] md:w-[92px] shrink-0 select-none">
+            <span class="text-[9px] md:text-[10px] font-bold text-slate-500 block leading-none">動作貼合</span>
+            <span id="match-percent" class="text-base md:text-xl font-black text-emerald-500 tabular-nums font-mono block leading-tight">96%</span>
+            <div class="w-full bg-slate-100 h-1 md:h-1.5 rounded-full overflow-hidden mt-0.5">
               <div id="match-bar" class="bg-emerald-400 h-full w-[96%] transition-all duration-300"></div>
             </div>
           </div>
@@ -581,7 +578,7 @@
 
         <!-- PERFECT 爆星鼓励弹窗 -->
         <div id="pop-feedback" class="hidden absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 pointer-events-none text-center anim-star">
-          <div class="text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-pink-500 drop-shadow-md">
+          <div class="text-4xl md:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-orange-500 to-pink-500 drop-shadow-md">
             PERFECT! 🌟
           </div>
           <div class="bg-white text-amber-600 font-black text-xs px-3 py-1 rounded-full shadow-lg border border-amber-200 mt-1 inline-block">
@@ -590,7 +587,7 @@
         </div>
 
         <!-- 画面主体：真实摄像头 Video (底层) + 萌趣发光火柴人 Canvas (顶层) -->
-        <div id="camera-container" class="flex-1 relative flex items-center justify-center bg-slate-950 overflow-hidden min-h-[380px]">
+        <div id="camera-container" class="flex-1 relative flex items-center justify-center bg-slate-950 overflow-hidden min-h-0">
           <video id="webcam-video" autoplay playsinline webkit-playsinline="true" muted class="absolute inset-0 w-full h-full object-cover transform -scale-x-100 opacity-85"></video>
           <canvas id="camera-canvas" width="640" height="480" class="absolute inset-0 w-full h-full z-20 pointer-events-none"></canvas>
 
@@ -623,30 +620,30 @@
         </div>
 
         <!-- 底部火柴人追踪提示 -->
-        <div id="camera-bottom-bar" class="bg-sky-50 border-t border-sky-100 px-4 py-2 flex items-center justify-between text-xs">
+        <div id="camera-bottom-bar" class="bg-sky-50 border-t border-sky-100 px-3 md:px-4 py-1.5 flex items-center justify-between text-[10px] md:text-xs shrink-0">
           <div class="flex items-center gap-1.5">
-            <span id="motion-dot" class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
-            <span id="motion-tip-text" class="font-bold text-slate-700">火柴人動作引導：雙手托起大太陽，暖洋洋！</span>
+            <span id="motion-dot" class="w-2 h-2 md:w-2.5 md:h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+            <span id="motion-tip-text" class="font-bold text-slate-700 truncate">火柴人動作引導：雙手托起大太陽，暖洋洋！</span>
           </div>
-          <span class="text-slate-400">端側即時視覺骨骼追蹤 · 保護兒童隱私</span>
+          <span class="text-slate-400 hidden sm:inline">端側即時骨骼追蹤 · 保護兒童隱私</span>
         </div>
 
       </section>
 
     </main>
 
-    <!-- 【下方区域：专注呈现同步大歌词】 -->
-    <footer class="bg-white/95 backdrop-blur border border-amber-200 rounded-3xl p-4 shadow-md flex flex-col gap-3">
+    <!-- 【下方区域：专注呈现同步大歌词与播放控制】 -->
+    <footer class="bg-white/95 backdrop-blur border border-amber-200 rounded-2xl md:rounded-3xl p-2.5 md:p-3.5 shadow-md flex flex-col gap-2 shrink-0">
       
       <!-- 歌詞卡拉OK大條 (主界面最醒目部分) -->
-      <div class="bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-50 border border-amber-200 rounded-2xl py-3 px-4 text-center relative overflow-hidden shadow-inner">
+      <div class="bg-gradient-to-r from-amber-50 via-yellow-50 to-orange-50 border border-amber-200 rounded-xl md:rounded-2xl py-1.5 md:py-2 px-3 md:px-4 text-center relative overflow-hidden shadow-inner">
         <!-- 英文主歌詞 (超大字号、欢快高亮) -->
-        <div id="lyric-main" class="text-xl md:text-3xl font-black text-amber-600 tracking-wide transition-all duration-300">
+        <div id="lyric-main" class="text-lg md:text-2xl font-black text-amber-600 tracking-wide transition-all duration-300">
           "Morning sunshine hello! Waking up the sky so bright!"
         </div>
         <!-- 中文對照與動作引導 (清晰易懂) -->
-        <div id="lyric-sub" class="text-sm md:text-base font-extrabold text-slate-600 mt-1">
-          ☀️ ☀️ 早安陽光！雙手托起大太陽，照亮天空暖洋洋！
+        <div id="lyric-sub" class="text-xs md:text-sm font-extrabold text-slate-600 mt-0.5">
+          ☀️ 早安陽光！雙手托起大太陽，照亮天空暖洋洋！
         </div>
       </div>
 
@@ -1062,9 +1059,9 @@
       // 依星球切換專屬主題背景 (Planet 1 晨光島樂園 vs Planet 2 星光彩虹軌道)
       if (viewAlbumLevels) {
         if (albumId === 'album_1') {
-          viewAlbumLevels.className = "flex-1 flex flex-col p-4 md:p-6 max-w-6xl mx-auto w-full min-h-[580px] md:min-h-[640px] rounded-3xl overflow-hidden border-2 border-amber-400/50 shadow-2xl my-2 relative planet-levels-p1";
+          viewAlbumLevels.className = "flex-1 flex flex-col p-4 md:p-6 max-w-6xl mx-auto w-full min-h-[580px] md:min-h-[640px] rounded-3xl overflow-hidden border border-amber-300/80 shadow-2xl my-2 relative planet-levels-p1";
         } else {
-          viewAlbumLevels.className = "flex-1 flex flex-col p-4 md:p-6 max-w-6xl mx-auto w-full min-h-[580px] md:min-h-[640px] rounded-3xl overflow-hidden border-2 border-fuchsia-400/50 shadow-2xl my-2 relative planet-levels-p2";
+          viewAlbumLevels.className = "flex-1 flex flex-col p-4 md:p-6 max-w-6xl mx-auto w-full min-h-[580px] md:min-h-[640px] rounded-3xl overflow-hidden border border-fuchsia-300/80 shadow-2xl my-2 relative planet-levels-p2";
         }
         viewAlbumLevels.classList.remove('hidden');
       }
@@ -1366,7 +1363,11 @@
       }
 
       viewLobby.classList.add('hidden');
+      if (viewAlbumLevels) {
+        viewAlbumLevels.classList.add('hidden');
+      }
       viewDance.classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'instant' });
 
       if (isPlaylistDrawerOpen) {
         renderPlaylistDrawer();
@@ -1399,6 +1400,7 @@
       } else {
         viewLobby.classList.remove('hidden');
       }
+      window.scrollTo({ top: 0, behavior: 'instant' });
     }
 
     function updatePlayerCountUI(num) {
