@@ -62,10 +62,31 @@
       from { transform: rotate(0deg) translateX(120px) rotate(0deg); }
       to { transform: rotate(360deg) translateX(120px) rotate(-360deg); }
     }
+    @keyframes float-planet-1 {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      33% { transform: translateY(-8px) rotate(1.2deg); }
+      66% { transform: translateY(5px) rotate(-0.8deg); }
+    }
+    @keyframes float-planet-2 {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      33% { transform: translateY(7px) rotate(-1.4deg); }
+      66% { transform: translateY(-7px) rotate(0.9deg); }
+    }
+    @keyframes float-kids {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-7px) rotate(-0.8deg); }
+    }
     @keyframes float-gentle {
       0%, 100% { transform: translateY(0px) rotate(0deg); }
-      50% { transform: translateY(-8px) rotate(1.5deg); }
+      50% { transform: translateY(-6px) rotate(1.2deg); }
     }
+
+    /* 首頁元件漂浮微動態 (星球、舞蹈天團、Logo自然懸浮) */
+    .anim-float { animation: float-gentle 4.2s ease-in-out infinite; will-change: transform; }
+    .anim-float-p1 { animation: float-planet-1 5.4s ease-in-out infinite; will-change: transform; }
+    .anim-float-p2 { animation: float-planet-2 6.0s ease-in-out infinite; will-change: transform; }
+    .anim-float-kids { animation: float-kids 4.6s ease-in-out infinite; will-change: transform; }
+
     @keyframes glow-sun-pulse {
       0%, 100% { filter: drop-shadow(0 0 15px rgba(251, 191, 36, 0.45)); }
       50% { filter: drop-shadow(0 0 30px rgba(251, 191, 36, 0.8)); }
@@ -99,57 +120,67 @@
     .anim-bubble-pop { animation: bubble-pop 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) forwards !important; }
     .anim-stage-ripple { animation: stage-ripple 0.85s ease-out forwards !important; }
 
-    /* 星球點選時快速旋轉放大躍遷進場動畫 (Warp Spin-In) */
-    @keyframes planet-warp-spin-1 {
+    /* 星球點選時黑洞漩渦吸入進場過場動畫 (快速旋轉 1200° 並瞬間縮小 10 倍，黑洞中心奇點吸入感) */
+    @keyframes planet-vortex-suction-1 {
       0% {
-        transform: scale(1.05) rotate(0deg);
-        filter: drop-shadow(0 0 8px #ffffff) drop-shadow(0 0 25px rgba(254, 240, 138, 0.95));
+        transform: scale(1.08) rotate(0deg);
+        filter: drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 25px rgba(254, 240, 138, 0.95));
         opacity: 1;
       }
-      30% {
-        transform: scale(1.5) rotate(130deg);
-        filter: brightness(1.35) drop-shadow(0 0 45px rgba(254, 240, 138, 1));
+      20% {
+        transform: scale(1.16) rotate(180deg);
+        filter: brightness(1.4) drop-shadow(0 0 45px rgba(254, 240, 138, 1));
         opacity: 1;
       }
-      65% {
-        transform: scale(2.6) rotate(450deg);
-        filter: brightness(1.8) drop-shadow(0 0 70px rgba(245, 158, 11, 1));
-        opacity: 0.9;
+      50% {
+        transform: scale(0.58) rotate(600deg);
+        filter: brightness(1.8) drop-shadow(0 0 55px rgba(245, 158, 11, 0.95));
+        opacity: 0.95;
+      }
+      80% {
+        transform: scale(0.18) rotate(980deg);
+        filter: brightness(2.5) drop-shadow(0 0 30px rgba(245, 158, 11, 0.8));
+        opacity: 0.8;
       }
       100% {
-        transform: scale(4.0) rotate(720deg);
-        filter: brightness(2.4) blur(8px);
+        transform: scale(0.08) rotate(1200deg);
+        filter: brightness(3.2) blur(3px);
         opacity: 0;
       }
     }
-    @keyframes planet-warp-spin-2 {
+    @keyframes planet-vortex-suction-2 {
       0% {
-        transform: scale(1.05) rotate(0deg);
-        filter: drop-shadow(0 0 8px #ffffff) drop-shadow(0 0 25px rgba(244, 114, 182, 0.95));
+        transform: scale(1.08) rotate(0deg);
+        filter: drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 25px rgba(244, 114, 182, 0.95));
         opacity: 1;
       }
-      30% {
-        transform: scale(1.5) rotate(130deg);
-        filter: brightness(1.35) drop-shadow(0 0 45px rgba(244, 114, 182, 1));
+      20% {
+        transform: scale(1.16) rotate(180deg);
+        filter: brightness(1.4) drop-shadow(0 0 45px rgba(244, 114, 182, 1));
         opacity: 1;
       }
-      65% {
-        transform: scale(2.6) rotate(450deg);
-        filter: brightness(1.8) drop-shadow(0 0 70px rgba(217, 70, 239, 1));
-        opacity: 0.9;
+      50% {
+        transform: scale(0.58) rotate(600deg);
+        filter: brightness(1.8) drop-shadow(0 0 55px rgba(217, 70, 239, 0.95));
+        opacity: 0.95;
+      }
+      80% {
+        transform: scale(0.18) rotate(980deg);
+        filter: brightness(2.5) drop-shadow(0 0 30px rgba(217, 70, 239, 0.8));
+        opacity: 0.8;
       }
       100% {
-        transform: scale(4.0) rotate(720deg);
-        filter: brightness(2.4) blur(8px);
+        transform: scale(0.08) rotate(1200deg);
+        filter: brightness(3.2) blur(3px);
         opacity: 0;
       }
     }
     .anim-planet-warp-1 {
-      animation: planet-warp-spin-1 0.58s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
+      animation: planet-vortex-suction-1 0.62s cubic-bezier(0.32, 0, 0.15, 1) forwards !important;
       z-index: 50 !important;
     }
     .anim-planet-warp-2 {
-      animation: planet-warp-spin-2 0.58s cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
+      animation: planet-vortex-suction-2 0.62s cubic-bezier(0.32, 0, 0.15, 1) forwards !important;
       z-index: 50 !important;
     }
 
@@ -406,8 +437,8 @@
           </p>
         </div>
 
-        <!-- 星球 1 高清透明實體 (多層次超大發散擴散光暈) -->
-        <div class="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 flex items-center justify-center my-1">
+        <!-- 星球 1 高清透明實體 (多層次超大發散擴散光暈 + 漂浮微動態) -->
+        <div class="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 flex items-center justify-center my-1 anim-float-p1">
           <!-- 1. 超大星雲發散光環 (外層擴散 65px~85px，呼吸起伏) -->
           <div class="absolute -inset-16 md:-inset-20 bg-gradient-to-tr from-amber-500/40 via-yellow-400/30 to-orange-500/15 rounded-full blur-[65px] md:blur-[85px] group-hover:scale-110 group-hover:from-amber-400/55 group-hover:via-yellow-300/45 transition-all duration-700 pointer-events-none anim-pulse-slow"></div>
 
@@ -426,14 +457,14 @@
 
       <!-- ========================================== -->
       <!-- 中央：5 首歌 3D 舞蹈天團歡迎小隊 (Dance Team) -->
-      <!-- (立體純白貼身微光輪廓 + 柔和舞台發光地燈)      -->
+      <!-- (立體純白貼身微光輪廓 + 柔和舞台發光地燈 + 漂浮微動態) -->
       <!-- ========================================== -->
       <div class="flex flex-col items-center text-center relative z-20 select-none py-2">
         <!-- 導師背後立體發光舞台光環 -->
         <div class="absolute inset-0 bg-gradient-to-t from-pink-500/25 via-sky-400/20 to-transparent rounded-full blur-3xl pointer-events-none"></div>
 
         <!-- 歡迎舞團舞台容器 (點擊播放歡迎語音與星光音效) -->
-        <div id="dance-team-card" class="relative w-full max-w-[320px] md:max-w-[340px] h-64 md:h-72 flex flex-col items-center justify-center anim-float cursor-pointer group" onclick="handleDanceTeamClick()" title="點我聆聽舞蹈天團歡迎語音">
+        <div id="dance-team-card" class="relative w-full max-w-[320px] md:max-w-[340px] h-64 md:h-72 flex flex-col items-center justify-center anim-float-kids cursor-pointer group" onclick="handleDanceTeamClick()" title="點我聆聽舞蹈天團歡迎語音">
           
           <!-- 點擊擴散光環 -->
           <div id="dance-team-ripple" class="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-r from-amber-300/50 via-pink-400/50 to-sky-400/50 blur-xl opacity-0 -z-10"></div>
@@ -450,6 +481,8 @@
           </div>
           <!-- 男女孩小朋友齊聲童聲音訊 -->
           <audio id="audio-welcome-chorus" src="./audio/welcome_kids_chorus.mp3" preload="auto"></audio>
+          <!-- 首頁專屬背景音樂 (首頁音樂2.mp3, 50% 音量循環播放) -->
+          <audio id="audio-home-bgm" src="./audio/home_bgm.mp3" loop preload="auto"></audio>
 
           <!-- 全新高畫質去背 5 位小朋友舞蹈團隊立繪 (立體純白防雜質光暈) -->
           <div id="dance-team-kids-img" class="relative z-10 w-full h-full flex items-center justify-center transition-transform duration-300">
@@ -483,8 +516,8 @@
           </p>
         </div>
 
-        <!-- 星球 2 高清透明實體 (多層次超大發散擴散光暈) -->
-        <div class="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 flex items-center justify-center my-1">
+        <!-- 星球 2 高清透明實體 (多層次超大發散擴散光暈 + 漂浮微動態) -->
+        <div class="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 flex items-center justify-center my-1 anim-float-p2">
           <!-- 1. 超大星雲發散光環 (外層擴散 65px~85px，呼吸起伏) -->
           <div class="absolute -inset-16 md:-inset-20 bg-gradient-to-tr from-fuchsia-600/45 via-purple-500/30 to-sky-400/20 rounded-full blur-[65px] md:blur-[85px] group-hover:scale-110 group-hover:from-fuchsia-500/55 group-hover:via-pink-400/45 transition-all duration-700 pointer-events-none anim-pulse-slow"></div>
 
@@ -1369,6 +1402,11 @@
       if (bgm) {
         userSettings.bgmEnabled = bgm.checked;
         if (audioBgm) audioBgm.muted = !userSettings.bgmEnabled;
+        const audioHomeBgm = document.getElementById('audio-home-bgm');
+        if (audioHomeBgm) {
+          if (!userSettings.bgmEnabled) audioHomeBgm.pause();
+          else startHomeBgm();
+        }
       }
       if (ambient) {
         const prev = userSettings.spaceAmbient;
@@ -1741,6 +1779,54 @@
       }
     }
 
+    // ========================================================
+    // 首頁專屬背景音樂管理 (首頁音樂2.mp3，音量 50%，循環播放)
+    // ========================================================
+    function startHomeBgm() {
+      const audioHomeBgm = document.getElementById('audio-home-bgm');
+      if (!audioHomeBgm) return;
+      const lobby = document.getElementById('view-lobby');
+      if (lobby && lobby.classList.contains('hidden')) return;
+
+      if (!userSettings.bgmEnabled) {
+        audioHomeBgm.pause();
+        return;
+      }
+      audioHomeBgm.volume = 0.5; // 音量鎖定為 50%
+      audioHomeBgm.loop = true;  // 循環播放
+      const p = audioHomeBgm.play();
+      if (p !== undefined) {
+        p.catch(e => {
+          console.log("Home BGM autoplay waiting for interaction:", e);
+        });
+      }
+    }
+
+    function stopHomeBgm(fadeTime = 0.35) {
+      const audioHomeBgm = document.getElementById('audio-home-bgm');
+      if (!audioHomeBgm || audioHomeBgm.paused) return;
+      if (fadeTime > 0) {
+        const startVol = audioHomeBgm.volume;
+        const steps = 8;
+        const stepTime = (fadeTime * 1000) / steps;
+        let count = 0;
+        const fadeTimer = setInterval(() => {
+          count++;
+          audioHomeBgm.volume = Math.max(0, startVol * (1 - count / steps));
+          if (count >= steps) {
+            clearInterval(fadeTimer);
+            audioHomeBgm.pause();
+            audioHomeBgm.currentTime = 0;
+            audioHomeBgm.volume = 0.5;
+          }
+        }, stepTime);
+      } else {
+        audioHomeBgm.pause();
+        audioHomeBgm.currentTime = 0;
+        audioHomeBgm.volume = 0.5;
+      }
+    }
+
     // 2. 星球點擊躍遷探索音效 (Planet Click SFX)
     function playPlanetClickSFX(type = 'album_1') {
       const ctx = getAudioContext();
@@ -1808,15 +1894,16 @@
       } catch(e) {}
     }
 
-    // 點擊星球統一入口：播放點擊音效、快速旋轉躍遷過場、停止太空氛圍音、開啟關卡選單
+    // 點擊星球統一入口：播放點擊音效、黑洞漩渦急速吸入過場、停止太空氛圍音與首頁BGM、開啟關卡選單
     let isTransitioningPlanet = false;
     function handlePlanetClick(albumId) {
       if (isTransitioningPlanet) return;
       isTransitioningPlanet = true;
 
-      // 播放該星球專屬星際音效
+      // 播放該星球專屬星際音效，並停止首頁背景音樂與太空氛圍音
       playPlanetClickSFX(albumId);
       stopSpaceAmbient(0.4);
+      stopHomeBgm(0.4);
 
       // 獲取被點選星球與同頁其他元素
       const targetPlanet = document.getElementById(albumId === 'album_1' ? 'planet-container-album_1' : 'planet-container-album_2');
@@ -1977,10 +2064,11 @@
       } catch(e) {}
     }
 
-    // 首次使用者互動時啟動音訊環境與太空音效
+    // 首次使用者互動時啟動音訊環境、首頁背景音樂與太空音效
     function initUserAudioOnFirstTouch() {
       getAudioContext();
       startSpaceAmbient();
+      startHomeBgm();
       document.removeEventListener('pointerdown', initUserAudioOnFirstTouch);
       document.removeEventListener('keydown', initUserAudioOnFirstTouch);
     }
@@ -1999,8 +2087,9 @@
       currentAlbumId = albumId;
       const album = window.KAI_ALBUM_DATABASE[albumId];
 
-      // 進入關卡頁，停止太空氛圍音效
+      // 進入關卡頁，停止太空氛圍音效與首頁背景音樂
       stopSpaceAmbient(0.4);
+      stopHomeBgm(0.4);
 
       const aTitle = document.getElementById('album-view-title');
       const aDesc = document.getElementById('album-view-desc');
@@ -2062,8 +2151,9 @@
       if (viewAlbumLevels) viewAlbumLevels.classList.add('hidden');
       viewLobby.classList.remove('hidden');
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      // 回到首頁，恢復太空氛圍音效
+      // 回到首頁，恢復太空氛圍音效與首頁背景音樂
       startSpaceAmbient();
+      startHomeBgm();
     }
 
     // 首頁中央小導師切換 (樂樂 / 美美)
@@ -2391,6 +2481,7 @@
       } else {
         viewLobby.classList.remove('hidden');
         startSpaceAmbient();
+        startHomeBgm();
       }
       window.scrollTo({ top: 0, behavior: 'instant' });
     }
@@ -4516,9 +4607,10 @@
     renderStickmanLoop();
     initFloatingPlayDock();
 
-    // 页面加载完成后后台异步预热多人姿态 AI 引擎 (平板与各平台通用)
+    // 页面加载完成后后台异步预热多人姿态 AI 引擎并尝试啟動首頁背景音樂
     window.addEventListener('load', () => {
       loadParentSettings();
+      startHomeBgm();
       setTimeout(tryInitMoveNet, 500);
       setTimeout(tryInitMediaPipe, 1200);
     });
