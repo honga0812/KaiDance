@@ -244,28 +244,28 @@
       <div class="absolute -bottom-24 left-1/2 -translate-x-1/2 w-[680px] h-[220px] bg-gradient-to-t from-pink-500/15 via-indigo-500/10 to-transparent rounded-full blur-[80px] pointer-events-none"></div>
     </div>
 
-    <!-- 頂部膠囊狀態列 (搭配強化版 3D KaiDance Logo 與金光環繞) -->
-    <header class="relative z-20 flex items-center justify-between pb-2">
-      <!-- 左側隱形平衡佔位 -->
-      <div class="w-10 md:w-28"></div>
-
-      <!-- 正中央：全新 3D 立體品牌 Logo 膠囊 [ KaiDance 奇妙星律動 ] (高辨識度、極致發光衝擊感) -->
-      <div class="flex items-center gap-3.5 bg-slate-900/85 hover:bg-slate-900/95 backdrop-blur-xl px-6 py-2.5 rounded-full border border-amber-400/50 shadow-[0_0_30px_rgba(251,191,36,0.35),0_8px_20px_-4px_rgba(0,0,0,0.6)] transition-all duration-300 hover:border-amber-300 group cursor-default">
-        <img src="./images/ui/kaidance_logo.png" alt="KaiDance 奇妙星律動" class="h-12 md:h-14 w-auto object-contain glow-kaidance-logo group-hover:scale-105 transition-transform duration-300">
+    <!-- 頂部狀態列：左上方獨立醒目無框 Logo，右側總積分與家長設定 -->
+    <header class="relative z-20 flex flex-col sm:flex-row items-center justify-between gap-3 pb-2 pt-1">
+      <!-- 左上方：全新 3D 獨立品牌 Logo [ KaiDance 奇妙星律動 ] (無框、大氣、顯眼、星際發光) -->
+      <div class="flex items-center gap-3.5 group cursor-pointer select-none transition-transform hover:scale-105 duration-300 self-start sm:self-auto" onclick="playStarChimeSFX()" title="KaiDance 奇妙星律動">
+        <img src="./images/ui/kaidance_logo.png" alt="KaiDance 奇妙星律動" class="h-14 md:h-18 lg:h-20 w-auto object-contain glow-kaidance-logo anim-float">
         <div class="flex flex-col text-left">
-          <span class="font-black text-sm md:text-base tracking-tight text-white select-none drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">KaiDance</span>
-          <span class="text-xs md:text-sm font-extrabold bg-gradient-to-r from-amber-300 via-pink-400 to-indigo-300 bg-clip-text text-transparent select-none drop-shadow-sm">奇妙星律動</span>
+          <div class="flex items-center gap-2">
+            <span class="font-black text-2xl md:text-3xl lg:text-4xl tracking-tight text-white select-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">KaiDance</span>
+            <span class="text-[10px] md:text-xs font-black uppercase tracking-wider px-2 py-0.5 rounded-full bg-gradient-to-r from-amber-400 via-orange-400 to-pink-500 text-slate-950 shadow-md">AI Dance</span>
+          </div>
+          <span class="text-xs md:text-sm lg:text-base font-extrabold bg-gradient-to-r from-amber-300 via-pink-300 to-sky-300 bg-clip-text text-transparent select-none drop-shadow-sm">奇妙星律動 · 兒童星際跟跳殿堂</span>
         </div>
       </div>
 
-      <!-- 右側：累計總積分 (9位數不斷累積) 與家長設定 -->
-      <div class="flex items-center gap-2">
+      <!-- 右側：累計總積分 (9位數不斷累積) 與家長教練設定 -->
+      <div class="flex items-center gap-2.5 self-end sm:self-auto">
         <div class="flex items-center gap-2 bg-slate-900/85 backdrop-blur-md border border-amber-400/60 px-4 py-2 rounded-full text-xs font-black text-amber-300 shadow-[0_0_18px_rgba(245,158,11,0.25)]" title="全宇宙跳舞總積分 (最多累計至 9 位數)">
           <span class="text-sm">🏆</span>
           <span class="text-[11px] text-slate-300 font-bold hidden sm:inline">總積分:</span>
           <strong id="total-score-lobby" class="text-amber-300 text-xs sm:text-sm font-mono tracking-wider tabular-nums font-black drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]">000,000,980</strong>
         </div>
-        <button onclick="alert('家長與教練設定：支援音量配比、鏡頭靈敏度與關卡鎖定！')" class="w-10 h-10 rounded-full bg-slate-900/85 hover:bg-slate-800 border border-slate-700/90 flex items-center justify-center text-sm text-slate-200 shadow-md transition active:scale-95" title="設定與家長控制">
+        <button onclick="openParentSettingsModal()" class="w-10 h-10 rounded-full bg-slate-900/85 hover:bg-slate-800 border border-slate-700/90 hover:border-amber-400/80 flex items-center justify-center text-sm text-slate-200 hover:text-amber-300 shadow-md transition-all active:scale-95" title="家長與教練設定：攝影機開關、鏡頭靈敏度與提示語音">
           ⚙️
         </button>
       </div>
@@ -278,7 +278,7 @@
       <!-- 左側：第一專輯【Planet 1: Morning Adventure】 -->
       <!-- (晨光大地星球：極致擴散琥珀金發散光暈 + 純淨光芒) -->
       <!-- ========================================== -->
-      <div class="flex flex-col items-center text-center group cursor-pointer select-none transition-all duration-300 transform hover:-translate-y-2" onclick="openAlbumView('album_1')">
+      <div class="flex flex-col items-center text-center group cursor-pointer select-none transition-all duration-300 transform hover:-translate-y-2" onclick="handlePlanetClick('album_1')">
         <!-- 標題文字 -->
         <div class="mb-2 text-center">
           <h2 class="text-xl md:text-2xl font-black text-white tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
@@ -315,14 +315,14 @@
         <!-- 導師背後立體發光舞台光環 -->
         <div class="absolute inset-0 bg-gradient-to-t from-pink-500/25 via-sky-400/20 to-transparent rounded-full blur-3xl pointer-events-none"></div>
 
-        <!-- 歡迎舞團舞台容器 -->
-        <div class="relative w-full max-w-[320px] md:max-w-[340px] h-64 md:h-72 flex flex-col items-center justify-center anim-float cursor-pointer group" onclick="alert('🌟 KaiDance 舞蹈天團：全體 5 位夥伴歡迎大家一起來跳舞！')">
+        <!-- 歡迎舞團舞台容器 (點擊播放歡迎語音與星光音效) -->
+        <div id="dance-team-card" class="relative w-full max-w-[320px] md:max-w-[340px] h-64 md:h-72 flex flex-col items-center justify-center anim-float cursor-pointer group" onclick="handleDanceTeamClick()" title="點我聆聽舞蹈天團歡迎語音">
           
           <!-- 頂部歡樂跳舞氣泡 -->
-          <div class="absolute -top-3 z-30 bg-gradient-to-r from-amber-300 via-pink-400 to-purple-400 p-[2px] rounded-2xl shadow-[0_0_15px_rgba(244,114,182,0.4)] animate-bounce">
+          <div id="dance-team-bubble" class="absolute -top-3 z-30 bg-gradient-to-r from-amber-300 via-pink-400 to-purple-400 p-[2px] rounded-2xl shadow-[0_0_15px_rgba(244,114,182,0.4)] animate-bounce">
             <div class="bg-slate-900/90 backdrop-blur border border-amber-300/40 px-3.5 py-1.5 rounded-2xl text-[11px] font-black text-amber-200 flex items-center gap-1.5 shadow-sm">
               <span>🎉</span>
-              <span>舞蹈天團歡迎大家來跳舞！</span>
+              <span id="dance-team-bubble-text">舞蹈天團歡迎大家來跳舞！</span>
             </div>
           </div>
 
@@ -339,7 +339,7 @@
         <div class="mt-2 flex items-center gap-1.5 bg-slate-900/85 px-4 py-1.5 rounded-full border border-slate-700/80 text-[11px] text-slate-200 shadow-md">
           <span class="text-amber-400 font-bold">✨ 5大曲目舞團集結</span>
           <span class="text-slate-500">·</span>
-          <span class="text-sky-300 font-semibold">示範歡樂跟跳</span>
+          <span class="text-sky-300 font-semibold">點擊聆聽歡迎語音</span>
         </div>
       </div>
 
@@ -347,7 +347,7 @@
       <!-- 右側：第二專輯【Planet 2: Groove Party】      -->
       <!-- (派對耳機土星：極致發散霓虹紫粉光暈 + 剔透星環) -->
       <!-- ========================================== -->
-      <div class="flex flex-col items-center text-center group cursor-pointer select-none transition-all duration-300 transform hover:-translate-y-2" onclick="openAlbumView('album_2')">
+      <div class="flex flex-col items-center text-center group cursor-pointer select-none transition-all duration-300 transform hover:-translate-y-2" onclick="handlePlanetClick('album_2')">
         <!-- 標題文字 -->
         <div class="mb-2 text-center">
           <h2 class="text-xl md:text-2xl font-black text-white tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
@@ -395,6 +395,113 @@
       </button>
     </footer>
 
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 彈窗：家長與教練設定 (Parent & Coach Settings Modal)       -->
+  <!-- 支援語音開關、鏡頭預設開關、靈敏度預設、音樂與太空氛圍音效      -->
+  <!-- ========================================================= -->
+  <div id="modal-parent-settings" class="hidden fixed inset-0 z-50 bg-slate-950/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="relative bg-slate-900 border-2 border-slate-700 rounded-3xl p-6 md:p-8 max-w-lg w-full shadow-[0_20px_50px_rgba(0,0,0,0.8)] text-white">
+      <!-- 標題 -->
+      <div class="flex items-center justify-between pb-4 border-b border-slate-800">
+        <div class="flex items-center gap-3">
+          <span class="text-2xl p-2 rounded-2xl bg-slate-800 border border-slate-700">⚙️</span>
+          <div>
+            <h3 class="text-lg md:text-xl font-black text-white">家長與教練設定</h3>
+            <p class="text-xs text-slate-400">自訂攝影機預設、提示語音與星際音效配比</p>
+          </div>
+        </div>
+        <button onclick="closeParentSettingsModal()" class="w-9 h-9 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition active:scale-95" title="關閉">✕</button>
+      </div>
+
+      <!-- 設定列表 -->
+      <div class="py-4 space-y-3.5">
+        <!-- 1. 攝影機預設開關 -->
+        <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-800/60 border border-slate-700/60">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">📷</span>
+            <div>
+              <div class="font-bold text-sm text-white">進入教室自動啟動攝影機</div>
+              <div class="text-[11px] text-slate-400">進入跳舞教室時，預設自動開啟相機進行動作偵測</div>
+            </div>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="setting-camera-auto" class="sr-only peer" checked onchange="saveParentSettings()">
+            <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-emerald-500"></div>
+          </label>
+        </div>
+
+        <!-- 2. 鏡頭靈敏度預設 (站遠時自動放大/增強遠距辨識) -->
+        <div class="p-3.5 rounded-2xl bg-slate-800/60 border border-slate-700/60 space-y-2">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-3">
+              <span class="text-xl">🎯</span>
+              <div>
+                <div class="font-bold text-sm text-white">攝影機偵測靈敏度預設</div>
+                <div class="text-[11px] text-slate-400">人站離鏡頭較遠或身形較小時，提升高敏度辨識</div>
+              </div>
+            </div>
+          </div>
+          <div class="grid grid-cols-3 gap-2 pt-1">
+            <button id="sens-btn-low" onclick="setCameraSensitivity('low')" class="py-1.5 px-3 rounded-xl text-xs font-bold border transition">標準 (1.0x)</button>
+            <button id="sens-btn-medium" onclick="setCameraSensitivity('medium')" class="py-1.5 px-3 rounded-xl text-xs font-bold border transition">靈敏 (1.25x)</button>
+            <button id="sens-btn-high" onclick="setCameraSensitivity('high')" class="py-1.5 px-3 rounded-xl text-xs font-bold border transition">遠距高敏 (1.5x)</button>
+          </div>
+        </div>
+
+        <!-- 3. 小導師語音引導開關 -->
+        <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-800/60 border border-slate-700/60">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">🗣️</span>
+            <div>
+              <div class="font-bold text-sm text-white">小導師提示語音</div>
+              <div class="text-[11px] text-slate-400">舞團歡迎語音、跟跳口號與動作切換語音</div>
+            </div>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="setting-voice-guidance" class="sr-only peer" checked onchange="saveParentSettings()">
+            <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-amber-500"></div>
+          </label>
+        </div>
+
+        <!-- 4. 背景音樂 BGM 開關 -->
+        <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-800/60 border border-slate-700/60">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">🎵</span>
+            <div>
+              <div class="font-bold text-sm text-white">背景音樂伴奏 (BGM)</div>
+              <div class="text-[11px] text-slate-400">跳舞教室歌曲原創音樂伴奏</div>
+            </div>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="setting-bgm-enabled" class="sr-only peer" checked onchange="saveParentSettings()">
+            <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-pink-500"></div>
+          </label>
+        </div>
+
+        <!-- 5. 首頁太空環境氛圍音效開關 -->
+        <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-800/60 border border-slate-700/60">
+          <div class="flex items-center gap-3">
+            <span class="text-xl">🌌</span>
+            <div>
+              <div class="font-bold text-sm text-white">首頁太空環境音效</div>
+              <div class="text-[11px] text-slate-400">大廳宇宙微光音效，進入關卡後自動暫停</div>
+            </div>
+          </div>
+          <label class="relative inline-flex items-center cursor-pointer">
+            <input type="checkbox" id="setting-ambient-enabled" class="sr-only peer" checked onchange="saveParentSettings()">
+            <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-indigo-500"></div>
+          </label>
+        </div>
+      </div>
+
+      <!-- 底部操作按鈕 -->
+      <div class="pt-3 flex items-center justify-between border-t border-slate-800">
+        <button onclick="resetParentSettingsDefault()" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-400 hover:text-white transition">恢復預設值</button>
+        <button onclick="closeParentSettingsModal()" class="px-6 py-2.5 rounded-xl text-xs font-black bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 shadow-md hover:opacity-95 transition active:scale-95">確認並儲存</button>
+      </div>
+    </div>
   </div>
 
 
@@ -1074,6 +1181,363 @@
     }
 
     // ========================================================
+    // 2-B. 星際音效系統與家長教練設定 (Space Audio & Settings)
+    // ========================================================
+    const DEFAULT_PARENT_SETTINGS = {
+      cameraAutoStart: true,
+      cameraSensitivity: 'low', // 'low' (1.0x), 'medium' (1.25x), 'high' (1.5x)
+      voiceGuidance: true,
+      bgmEnabled: true,
+      spaceAmbient: true,
+      spaceVolume: 0.35
+    };
+
+    let userSettings = { ...DEFAULT_PARENT_SETTINGS };
+
+    function loadParentSettings() {
+      try {
+        const saved = localStorage.getItem('kaidance_parent_settings');
+        if (saved) {
+          userSettings = Object.assign({}, DEFAULT_PARENT_SETTINGS, JSON.parse(saved));
+        }
+      } catch(e) {
+        userSettings = { ...DEFAULT_PARENT_SETTINGS };
+      }
+      voiceEnabled = !!userSettings.voiceGuidance;
+      if (typeof cameraZoomLevel !== 'undefined') {
+        if (userSettings.cameraSensitivity === 'high') {
+          cameraZoomLevel = 1.5;
+        } else if (userSettings.cameraSensitivity === 'medium') {
+          cameraZoomLevel = 1.25;
+        } else {
+          cameraZoomLevel = 1.0;
+        }
+        if (typeof updateCameraZoomUI === 'function') updateCameraZoomUI();
+      }
+      applySettingsToUI();
+    }
+
+    function saveParentSettings() {
+      const camAuto = document.getElementById('setting-camera-auto');
+      const voice = document.getElementById('setting-voice-guidance');
+      const bgm = document.getElementById('setting-bgm-enabled');
+      const ambient = document.getElementById('setting-ambient-enabled');
+
+      if (camAuto) userSettings.cameraAutoStart = camAuto.checked;
+      if (voice) {
+        userSettings.voiceGuidance = voice.checked;
+        voiceEnabled = voice.checked;
+        const btnVoice = document.getElementById('btn-voice-toggle');
+        if (btnVoice) {
+          if (voiceEnabled) {
+            btnVoice.innerHTML = '<span>🔊</span> 老師原聲口令: 開';
+            btnVoice.className = "px-3 py-1.5 rounded-2xl bg-emerald-50 hover:bg-emerald-100 border border-emerald-200 text-xs font-bold text-emerald-700 transition flex items-center gap-1";
+          } else {
+            btnVoice.innerHTML = '<span>🔇</span> 老師原聲口令: 關';
+            btnVoice.className = "px-3 py-1.5 rounded-2xl bg-slate-100 hover:bg-slate-200 border border-slate-200 text-xs font-bold text-slate-500 transition flex items-center gap-1";
+            if (audioVoice) audioVoice.pause();
+          }
+        }
+      }
+      if (bgm) {
+        userSettings.bgmEnabled = bgm.checked;
+        if (audioBgm) audioBgm.muted = !userSettings.bgmEnabled;
+      }
+      if (ambient) {
+        const prev = userSettings.spaceAmbient;
+        userSettings.spaceAmbient = ambient.checked;
+        if (!userSettings.spaceAmbient) {
+          stopSpaceAmbient(0.3);
+        } else if (!prev && userSettings.spaceAmbient) {
+          startSpaceAmbient();
+        }
+      }
+
+      try {
+        localStorage.setItem('kaidance_parent_settings', JSON.stringify(userSettings));
+      } catch(e) {}
+    }
+
+    function setCameraSensitivity(level) {
+      userSettings.cameraSensitivity = level;
+      saveParentSettings();
+      applySettingsToUI();
+      // 連動相機 Zoom 遠近
+      if (level === 'high') {
+        cameraZoomLevel = 1.5;
+      } else if (level === 'medium') {
+        cameraZoomLevel = 1.25;
+      } else {
+        cameraZoomLevel = 1.0;
+      }
+      updateCameraZoomUI();
+    }
+
+    function applySettingsToUI() {
+      const camAuto = document.getElementById('setting-camera-auto');
+      const voice = document.getElementById('setting-voice-guidance');
+      const bgm = document.getElementById('setting-bgm-enabled');
+      const ambient = document.getElementById('setting-ambient-enabled');
+
+      if (camAuto) camAuto.checked = !!userSettings.cameraAutoStart;
+      if (voice) voice.checked = !!userSettings.voiceGuidance;
+      if (bgm) bgm.checked = !!userSettings.bgmEnabled;
+      if (ambient) ambient.checked = !!userSettings.spaceAmbient;
+
+      ['low', 'medium', 'high'].forEach(lvl => {
+        const btn = document.getElementById(`sens-btn-${lvl}`);
+        if (btn) {
+          if (userSettings.cameraSensitivity === lvl) {
+            btn.className = "py-1.5 px-3 rounded-xl text-xs font-black border bg-amber-400 text-slate-950 border-amber-300 shadow-md transition";
+          } else {
+            btn.className = "py-1.5 px-3 rounded-xl text-xs font-bold border border-slate-700 bg-slate-800 text-slate-300 hover:text-white transition";
+          }
+        }
+      });
+    }
+
+    function openParentSettingsModal() {
+      loadParentSettings();
+      const modal = document.getElementById('modal-parent-settings');
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeParentSettingsModal() {
+      saveParentSettings();
+      const modal = document.getElementById('modal-parent-settings');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function resetParentSettingsDefault() {
+      userSettings = { ...DEFAULT_PARENT_SETTINGS };
+      try {
+        localStorage.removeItem('kaidance_parent_settings');
+      } catch(e) {}
+      applySettingsToUI();
+      cameraZoomLevel = 1.0;
+      updateCameraZoomUI();
+      startSpaceAmbient();
+    }
+
+    // Web Audio Context & Synthesizer (零依賴純原生合成)
+    let audioCtx = null;
+    function getAudioContext() {
+      if (!audioCtx) {
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        if (AudioContext) {
+          audioCtx = new AudioContext();
+        }
+      }
+      if (audioCtx && audioCtx.state === 'suspended') {
+        audioCtx.resume();
+      }
+      return audioCtx;
+    }
+
+    // 1. 太空環境音效 (Space Ambient Cosmic Drone)
+    let ambientNodeGroup = null;
+    let isAmbientPlaying = false;
+
+    function startSpaceAmbient() {
+      if (!userSettings.spaceAmbient) return;
+      const lobby = document.getElementById('view-lobby');
+      if (lobby && lobby.classList.contains('hidden')) return;
+
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      if (isAmbientPlaying && ambientNodeGroup) return;
+
+      try {
+        const masterGain = ctx.createGain();
+        masterGain.gain.setValueAtTime(0.0001, ctx.currentTime);
+        masterGain.gain.exponentialRampToValueAtTime(0.07, ctx.currentTime + 1.8);
+
+        // 宇宙深邃基頻 55Hz (低沉星際共鳴)
+        const osc1 = ctx.createOscillator();
+        osc1.type = 'sine';
+        osc1.frequency.setValueAtTime(55, ctx.currentTime);
+
+        // 溫和八度音 110Hz
+        const osc2 = ctx.createOscillator();
+        osc2.type = 'triangle';
+        osc2.frequency.setValueAtTime(110, ctx.currentTime);
+
+        // 宇宙微風微光泛音 220Hz
+        const osc3 = ctx.createOscillator();
+        osc3.type = 'sine';
+        osc3.frequency.setValueAtTime(220, ctx.currentTime);
+
+        // 緩慢呼吸濾波 LFO (0.18Hz, 約5秒一次起伏)
+        const lfo = ctx.createOscillator();
+        lfo.type = 'sine';
+        lfo.frequency.setValueAtTime(0.18, ctx.currentTime);
+
+        const lfoGain = ctx.createGain();
+        lfoGain.gain.setValueAtTime(75, ctx.currentTime);
+        lfo.connect(lfoGain);
+
+        const filter = ctx.createBiquadFilter();
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(320, ctx.currentTime);
+        lfoGain.connect(filter.frequency);
+
+        const gain1 = ctx.createGain(); gain1.gain.value = 0.5;
+        const gain2 = ctx.createGain(); gain2.gain.value = 0.25;
+        const gain3 = ctx.createGain(); gain3.gain.value = 0.15;
+
+        osc1.connect(gain1); gain1.connect(filter);
+        osc2.connect(gain2); gain2.connect(filter);
+        osc3.connect(gain3); gain3.connect(filter);
+
+        filter.connect(masterGain);
+        masterGain.connect(ctx.destination);
+
+        osc1.start();
+        osc2.start();
+        osc3.start();
+        lfo.start();
+
+        ambientNodeGroup = { osc1, osc2, osc3, lfo, masterGain };
+        isAmbientPlaying = true;
+      } catch (e) {
+        console.warn("Space ambient start warning:", e);
+      }
+    }
+
+    function stopSpaceAmbient(fadeTime = 0.4) {
+      if (!isAmbientPlaying || !ambientNodeGroup) return;
+      try {
+        const ctx = getAudioContext();
+        if (ctx && ambientNodeGroup.masterGain) {
+          ambientNodeGroup.masterGain.gain.setValueAtTime(ambientNodeGroup.masterGain.gain.value, ctx.currentTime);
+          ambientNodeGroup.masterGain.gain.exponentialRampToValueAtTime(0.0001, ctx.currentTime + fadeTime);
+          setTimeout(() => {
+            if (ambientNodeGroup) {
+              try {
+                ambientNodeGroup.osc1.stop();
+                ambientNodeGroup.osc2.stop();
+                ambientNodeGroup.osc3.stop();
+                ambientNodeGroup.lfo.stop();
+              } catch(err){}
+              ambientNodeGroup = null;
+            }
+            isAmbientPlaying = false;
+          }, fadeTime * 1000 + 40);
+        } else {
+          ambientNodeGroup = null;
+          isAmbientPlaying = false;
+        }
+      } catch (e) {
+        ambientNodeGroup = null;
+        isAmbientPlaying = false;
+      }
+    }
+
+    // 2. 星球點擊躍遷探索音效 (Planet Click SFX)
+    function playPlanetClickSFX(type = 'album_1') {
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      try {
+        const now = ctx.currentTime;
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        const filter = ctx.createBiquadFilter();
+
+        filter.type = 'bandpass';
+        filter.Q.value = 3.0;
+
+        if (type === 'album_1') {
+          // 晨光生活大冒險：溫潤旭日躍遷和弦 (G4 -> C5 -> E5 -> G5)
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(392, now);
+          osc.frequency.exponentialRampToValueAtTime(784, now + 0.1);
+          osc.frequency.exponentialRampToValueAtTime(1174, now + 0.25);
+          filter.frequency.setValueAtTime(1100, now);
+        } else {
+          // 星光狂歡新舞曲：炫彩霓虹電音躍遷 (E4 -> A4 -> E5 -> A5)
+          osc.type = 'sawtooth';
+          osc.frequency.setValueAtTime(330, now);
+          osc.frequency.exponentialRampToValueAtTime(660, now + 0.08);
+          osc.frequency.exponentialRampToValueAtTime(1320, now + 0.22);
+          filter.frequency.setValueAtTime(1500, now);
+        }
+
+        gain.gain.setValueAtTime(0.001, now);
+        gain.gain.linearRampToValueAtTime(0.3, now + 0.03);
+        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.42);
+
+        osc.connect(filter);
+        filter.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(now);
+        osc.stop(now + 0.45);
+      } catch(e) {}
+    }
+
+    // 3. 舞蹈天團星光音效 (Star Sparkle Chime)
+    function playStarChimeSFX() {
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      try {
+        const freqs = [523.25, 659.25, 783.99, 1046.50, 1318.51];
+        const now = ctx.currentTime;
+        freqs.forEach((f, idx) => {
+          const osc = ctx.createOscillator();
+          const gain = ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(f, now + idx * 0.05);
+
+          gain.gain.setValueAtTime(0.001, now + idx * 0.05);
+          gain.gain.linearRampToValueAtTime(0.18, now + idx * 0.05 + 0.02);
+          gain.gain.exponentialRampToValueAtTime(0.0001, now + idx * 0.05 + 0.32);
+
+          osc.connect(gain);
+          gain.connect(ctx.destination);
+          osc.start(now + idx * 0.05);
+          osc.stop(now + idx * 0.05 + 0.35);
+        });
+      } catch(e) {}
+    }
+
+    // 點擊星球統一入口：播放點擊音效、停止太空氛圍音、開啟關卡選單
+    function handlePlanetClick(albumId) {
+      playPlanetClickSFX(albumId);
+      stopSpaceAmbient(0.4);
+      openAlbumView(albumId);
+    }
+
+    // 點擊舞蹈天團小朋友統一入口：音效 + 氣泡跳動 + 小導師語音朗讀
+    function handleDanceTeamClick() {
+      playStarChimeSFX();
+      const bubble = document.getElementById('dance-team-bubble');
+      if (bubble) {
+        bubble.classList.remove('animate-bounce');
+        void bubble.offsetWidth;
+        bubble.classList.add('animate-bounce');
+      }
+      if (userSettings.voiceGuidance && ('speechSynthesis' in window)) {
+        window.speechSynthesis.cancel();
+        const text = "歡迎來到 KaiDance 奇妙星律動，歡迎大家來跳舞！";
+        const utter = new SpeechSynthesisUtterance(text);
+        utter.lang = 'zh-TW';
+        utter.rate = 1.05;
+        utter.pitch = 1.25;
+        window.speechSynthesis.speak(utter);
+      }
+    }
+
+    // 首次使用者互動時啟動音訊環境與太空音效
+    function initUserAudioOnFirstTouch() {
+      getAudioContext();
+      startSpaceAmbient();
+      document.removeEventListener('pointerdown', initUserAudioOnFirstTouch);
+      document.removeEventListener('keydown', initUserAudioOnFirstTouch);
+    }
+    document.addEventListener('pointerdown', initUserAudioOnFirstTouch);
+    document.addEventListener('keydown', initUserAudioOnFirstTouch);
+
+    // ========================================================
     // 3. 視圖導航：雙星球大選單 vs 單一星球 10 關地圖 vs 教室
     // ========================================================
     let isPlaylistDrawerOpen = false;
@@ -1084,6 +1548,9 @@
       if (!window.KAI_ALBUM_DATABASE || !window.KAI_ALBUM_DATABASE[albumId]) return;
       currentAlbumId = albumId;
       const album = window.KAI_ALBUM_DATABASE[albumId];
+
+      // 進入關卡頁，停止太空氛圍音效
+      stopSpaceAmbient(0.4);
 
       const aTitle = document.getElementById('album-view-title');
       const aDesc = document.getElementById('album-view-desc');
@@ -1116,6 +1583,8 @@
       if (viewAlbumLevels) viewAlbumLevels.classList.add('hidden');
       viewLobby.classList.remove('hidden');
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      // 回到首頁，恢復太空氛圍音效
+      startSpaceAmbient();
     }
 
     // 首頁中央小導師切換 (樂樂 / 美美)
@@ -1402,6 +1871,9 @@
         if (coachTypeBadge) coachTypeBadge.innerText = "📸 動作引導寫真";
       }
 
+      // 進入跳舞教室，停止太空環境音效
+      stopSpaceAmbient(0.3);
+
       viewLobby.classList.add('hidden');
       if (viewAlbumLevels) {
         viewAlbumLevels.classList.add('hidden');
@@ -1425,8 +1897,8 @@
         startDance();
       }, 300);
 
-      // 进入互动舞台自动开启摄像头
-      if (!isCameraActive) {
+      // 进入互动舞台依家長設定預設開啟攝影機
+      if (userSettings.cameraAutoStart && !isCameraActive) {
         initRealCamera();
       }
     }
@@ -1439,6 +1911,7 @@
         renderLobbySongs(currentAlbumId);
       } else {
         viewLobby.classList.remove('hidden');
+        startSpaceAmbient();
       }
       window.scrollTo({ top: 0, behavior: 'instant' });
     }
@@ -3307,9 +3780,12 @@
 
       if (timerInterval) clearInterval(timerInterval);
 
-      audioBgm.play().catch(e => {
-        console.log("Audio autoplay fallback:", e);
-      });
+      if (audioBgm) {
+        audioBgm.muted = !userSettings.bgmEnabled;
+        audioBgm.play().catch(e => {
+          console.log("Audio autoplay fallback:", e);
+        });
+      }
       if (activeVideoSlot === 'a') {
         coachVideoA.play().catch(e => console.log("Video A play fallback:", e));
       } else {
@@ -3476,6 +3952,7 @@
     document.addEventListener('fullscreenchange', handleFullscreenChange);
     document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
 
+    loadParentSettings();
     updatePlaybackUI();
     switchAlbum(currentAlbumId);
     updateLoopModeUI();
@@ -3485,6 +3962,7 @@
 
     // 页面加载完成后后台异步预热多人姿态 AI 引擎 (平板与各平台通用)
     window.addEventListener('load', () => {
+      loadParentSettings();
       setTimeout(tryInitMoveNet, 500);
       setTimeout(tryInitMediaPipe, 1200);
     });
