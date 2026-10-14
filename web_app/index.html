@@ -1276,6 +1276,10 @@
       <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
         
         <div class="flex items-center gap-1.5 md:gap-2">
+          <!-- 🪐 回首頁 (直接從單曲返回最前面雙星球首頁) -->
+          <button id="btn-back-home" onclick="directBackToLobby()" class="px-3 py-1.5 rounded-2xl bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-500 hover:to-orange-500 text-slate-950 font-black text-xs md:text-sm transition flex items-center gap-1.5 shadow-sm active:scale-95 shrink-0" title="回到最前面雙星球首頁">
+            <span class="text-sm">🪐</span> <span>回首頁</span>
+          </button>
           <!-- 上一首 -->
           <button id="btn-prev" onclick="prevSong()" class="w-9 h-9 rounded-2xl bg-slate-100 hover:bg-slate-200 text-slate-700 font-black text-sm transition flex items-center justify-center shadow-xs active:scale-95" title="上一首">
             ⏮
@@ -1315,30 +1319,6 @@
 
       </div>
     </footer>
-
-    <!-- 🧲 磁吸式可拖曳懸浮播放/暫停小按鈕 (跟隨畫面、自動吸附螢幕邊緣) -->
-    <div id="floating-play-dock" 
-         class="fixed z-40 flex items-center gap-1.5 sm:gap-2 bg-white/95 backdrop-blur-md px-3 py-2 rounded-full shadow-2xl border-2 border-amber-400 cursor-grab active:cursor-grabbing select-none transition-all duration-300 hover:scale-105"
-         style="bottom: 80px; right: 24px; touch-action: none;">
-      <!-- 回到最前首頁按鍵 (直接從每一首歌返回最前首頁) -->
-      <button onclick="directBackToLobby()" class="w-8 h-8 rounded-full bg-gradient-to-r from-amber-400 to-orange-400 hover:from-amber-500 hover:to-orange-500 text-slate-950 flex items-center justify-center font-black text-xs transition shadow-sm active:scale-90 shrink-0" title="回到最前面首頁">
-        🪐
-      </button>
-      <div class="h-4 w-px bg-slate-200 shrink-0"></div>
-      <button onclick="prevSong()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center font-black text-xs transition active:scale-90 shrink-0" title="上一首">
-        ⏮
-      </button>
-      <button id="float-btn-toggle" onclick="togglePlay()" class="w-10 h-10 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white flex items-center justify-center font-black shadow-md text-base transition transform active:scale-90 shrink-0" title="播放 / 暫停">
-        <span id="float-play-icon">▶</span>
-      </button>
-      <button onclick="nextSong()" class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-700 flex items-center justify-center font-black text-xs transition active:scale-90 shrink-0" title="下一首">
-        ⏭
-      </button>
-      <div class="text-xs pr-1 shrink-0">
-        <div id="float-play-label" class="font-black text-slate-800 leading-tight">開始跟跳</div>
-        <div id="float-song-name" class="text-[9px] text-slate-500 font-bold truncate max-w-[90px]">Morning Sunshine</div>
-      </div>
-    </div>
 
     <!-- 📜 全專輯 10 首歌單抽屜 (Drawer Panel，平板與幼兒專屬大卡片設計) -->
     <div id="album-playlist-drawer" class="hidden fixed inset-0 z-50 bg-black/40 backdrop-blur-xs flex justify-end" onclick="handleDrawerBackdropClick(event)">
@@ -1569,100 +1549,6 @@
     const btnCameraExitFs = document.getElementById('btn-camera-exit-fs');
     const cameraFsText = document.getElementById('camera-fs-text');
     let isCameraFullscreen = false;
-
-        // --- 磁吸式浮動播放/暫停控制器 ---
-    function initFloatingPlayDock() {
-      const dock = document.getElementById('floating-play-dock');
-      if (!dock) return;
-
-      let isDragging = false;
-      let startX = 0, startY = 0;
-      let initialLeft = 0, initialTop = 0;
-      let hasMoved = false;
-
-      function onStart(clientX, clientY) {
-        isDragging = true;
-        hasMoved = false;
-        startX = clientX;
-        startY = clientY;
-        const rect = dock.getBoundingClientRect();
-        initialLeft = rect.left;
-        initialTop = rect.top;
-        dock.style.transition = 'none';
-      }
-
-      function onMove(clientX, clientY) {
-        if (!isDragging) return;
-        const dx = clientX - startX;
-        const dy = clientY - startY;
-        if (Math.abs(dx) > 4 || Math.abs(dy) > 4) {
-          hasMoved = true;
-        }
-        let newLeft = initialLeft + dx;
-        let newTop = initialTop + dy;
-
-        const pad = 12;
-        const maxLeft = window.innerWidth - dock.offsetWidth - pad;
-        const maxTop = window.innerHeight - dock.offsetHeight - pad;
-        newLeft = Math.max(pad, Math.min(maxLeft, newLeft));
-        newTop = Math.max(pad, Math.min(maxTop, newTop));
-
-        dock.style.left = `${newLeft}px`;
-        dock.style.top = `${newTop}px`;
-        dock.style.bottom = 'auto';
-        dock.style.right = 'auto';
-      }
-
-      function onEnd() {
-        if (!isDragging) return;
-        isDragging = false;
-        dock.style.transition = 'all 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275)';
-
-        const rect = dock.getBoundingClientRect();
-        const screenWidth = window.innerWidth;
-        const dockWidth = dock.offsetWidth;
-        const pad = 16;
-
-        // 磁吸到最近的左側或右側邊緣
-        const midX = rect.left + dockWidth / 2;
-        if (midX < screenWidth / 2) {
-          dock.style.left = `${pad}px`;
-        } else {
-          dock.style.left = `${screenWidth - dockWidth - pad}px`;
-        }
-
-        const maxTop = window.innerHeight - dock.offsetHeight - 65;
-        const clampedTop = Math.max(65, Math.min(maxTop, rect.top));
-        dock.style.top = `${clampedTop}px`;
-      }
-
-      dock.addEventListener('mousedown', (e) => {
-        if (e.target.closest('button')) return;
-        onStart(e.clientX, e.clientY);
-        e.preventDefault();
-      });
-      window.addEventListener('mousemove', (e) => {
-        if (isDragging) {
-          onMove(e.clientX, e.clientY);
-          e.preventDefault();
-        }
-      });
-      window.addEventListener('mouseup', onEnd);
-
-      dock.addEventListener('touchstart', (e) => {
-        if (e.target.closest('button')) return;
-        const touch = e.touches[0];
-        onStart(touch.clientX, touch.clientY);
-      }, { passive: false });
-      window.addEventListener('touchmove', (e) => {
-        if (isDragging) {
-          const touch = e.touches[0];
-          onMove(touch.clientX, touch.clientY);
-          e.preventDefault();
-        }
-      }, { passive: false });
-      window.addEventListener('touchend', onEnd);
-    }
 
     // ========================================================
     // 2-B. 星際音效系統與家長教練設定 (Space Audio & Settings)
@@ -3107,10 +2993,6 @@
       const albumBadge = document.getElementById('room-album-badge');
       if (albumBadge) {
         albumBadge.innerText = `${currentAlbumId === 'album_1' ? '第 1 集' : '第 2 集'} #${String(song.trackNumber || 1).padStart(2, '0')}`;
-      }
-      const floatSongName = document.getElementById('float-song-name');
-      if (floatSongName) {
-        floatSongName.innerText = song.title;
       }
 
       audioBgm.src = song.file;
@@ -5088,16 +4970,6 @@
       playLabel.innerText = "暫停舞曲";
       btnPlay.classList.replace('bg-amber-500', 'bg-emerald-500');
 
-      // 同步更新磁吸懸浮控制列 (圖示與文字)
-      const floatPlayIcon = document.getElementById('float-play-icon');
-      if (floatPlayIcon) floatPlayIcon.innerText = "⏸";
-      const floatPlayLabel = document.getElementById('float-play-label');
-      if (floatPlayLabel) floatPlayLabel.innerText = "暫停跟跳";
-      const floatBtnToggle = document.getElementById('float-btn-toggle');
-      if (floatBtnToggle) {
-        floatBtnToggle.className = "w-10 h-10 rounded-full bg-gradient-to-r from-emerald-500 to-teal-500 text-white flex items-center justify-center font-black shadow-md text-base transition transform active:scale-90 shrink-0";
-      }
-
       if (timerInterval) clearInterval(timerInterval);
 
       if (audioBgm) {
@@ -5139,16 +5011,6 @@
       playIcon.innerText = "▶";
       playLabel.innerText = "播放舞曲";
       btnPlay.classList.replace('bg-emerald-500', 'bg-amber-500');
-
-      // 同步更新磁吸懸浮控制列 (圖示與文字)
-      const floatPlayIcon = document.getElementById('float-play-icon');
-      if (floatPlayIcon) floatPlayIcon.innerText = "▶";
-      const floatPlayLabel = document.getElementById('float-play-label');
-      if (floatPlayLabel) floatPlayLabel.innerText = "開始跟跳";
-      const floatBtnToggle = document.getElementById('float-btn-toggle');
-      if (floatBtnToggle) {
-        floatBtnToggle.className = "w-10 h-10 rounded-full bg-gradient-to-r from-amber-500 to-orange-500 text-white flex items-center justify-center font-black shadow-md text-base transition transform active:scale-90 shrink-0";
-      }
 
       audioBgm.pause();
       audioVoice.pause();
@@ -5382,7 +5244,6 @@
     updateLoopModeUI();
     // 立即启动发光火柴人渲染主循环（常驻舞台，实时渲染）
     renderStickmanLoop();
-    initFloatingPlayDock();
 
     // 页面加载完成后后台异步预热多人姿态 AI 引擎并尝试啟動首頁背景音樂
     window.addEventListener('load', () => {
