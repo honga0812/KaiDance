@@ -1402,19 +1402,17 @@
       if (bgm) {
         userSettings.bgmEnabled = bgm.checked;
         if (audioBgm) audioBgm.muted = !userSettings.bgmEnabled;
-        const audioHomeBgm = document.getElementById('audio-home-bgm');
-        if (audioHomeBgm) {
-          if (!userSettings.bgmEnabled) audioHomeBgm.pause();
-          else startHomeBgm();
-        }
       }
       if (ambient) {
         const prev = userSettings.spaceAmbient;
         userSettings.spaceAmbient = ambient.checked;
+        const audioHomeBgm = document.getElementById('audio-home-bgm');
         if (!userSettings.spaceAmbient) {
           stopSpaceAmbient(0.3);
+          if (audioHomeBgm) audioHomeBgm.pause();
         } else if (!prev && userSettings.spaceAmbient) {
           startSpaceAmbient();
+          startHomeBgm();
         }
       }
 
@@ -1780,7 +1778,7 @@
     }
 
     // ========================================================
-    // 首頁專屬背景音樂管理 (首頁音樂2.mp3，音量 50%，循環播放)
+    // 首頁專屬背景音樂管理 (首頁音樂2.mp3，音量 40%，由「首頁太空環境音效」開關控制)
     // ========================================================
     function startHomeBgm() {
       const audioHomeBgm = document.getElementById('audio-home-bgm');
@@ -1788,11 +1786,12 @@
       const lobby = document.getElementById('view-lobby');
       if (lobby && lobby.classList.contains('hidden')) return;
 
-      if (!userSettings.bgmEnabled) {
+      // 首頁音樂由家長與教練設定中的「首頁太空環境音效」(userSettings.spaceAmbient) 控制開關
+      if (!userSettings.spaceAmbient) {
         audioHomeBgm.pause();
         return;
       }
-      audioHomeBgm.volume = 0.5; // 音量鎖定為 50%
+      audioHomeBgm.volume = 0.4; // 音量設置為 40%
       audioHomeBgm.loop = true;  // 循環播放
       const p = audioHomeBgm.play();
       if (p !== undefined) {
@@ -1817,56 +1816,103 @@
             clearInterval(fadeTimer);
             audioHomeBgm.pause();
             audioHomeBgm.currentTime = 0;
-            audioHomeBgm.volume = 0.5;
+            audioHomeBgm.volume = 0.4;
           }
         }, stepTime);
       } else {
         audioHomeBgm.pause();
         audioHomeBgm.currentTime = 0;
-        audioHomeBgm.volume = 0.5;
+        audioHomeBgm.volume = 0.4;
       }
     }
 
-    // 2. 星球點擊躍遷探索音效 (Planet Click SFX)
-    function playPlanetClickSFX(type = 'album_1') {
+    // 2. 黑洞引力漩渦吸入音效 (Black Hole Gravitational Suction SFX)
+    function playBlackHoleSuctionSFX(type = 'album_1') {
       const ctx = getAudioContext();
       if (!ctx) return;
       try {
         const now = ctx.currentTime;
-        const osc = ctx.createOscillator();
-        const gain = ctx.createGain();
-        const filter = ctx.createBiquadFilter();
+        const dur = 0.58;
 
-        filter.type = 'bandpass';
-        filter.Q.value = 3.0;
-
-        if (type === 'album_1') {
-          // 晨光生活大冒險：溫潤旭日躍遷和弦 (G4 -> C5 -> E5 -> G5)
-          osc.type = 'triangle';
-          osc.frequency.setValueAtTime(392, now);
-          osc.frequency.exponentialRampToValueAtTime(784, now + 0.1);
-          osc.frequency.exponentialRampToValueAtTime(1174, now + 0.25);
-          filter.frequency.setValueAtTime(1100, now);
-        } else {
-          // 星光狂歡新舞曲：炫彩霓虹電音躍遷 (E4 -> A4 -> E5 -> A5)
-          osc.type = 'sawtooth';
-          osc.frequency.setValueAtTime(330, now);
-          osc.frequency.exponentialRampToValueAtTime(660, now + 0.08);
-          osc.frequency.exponentialRampToValueAtTime(1320, now + 0.22);
-          filter.frequency.setValueAtTime(1500, now);
+        // 1. 引力漩渦噪聲都卜勒吸入風暴 (Spiraling Vortex Swirl)
+        const bufferSize = Math.floor(ctx.sampleRate * dur);
+        const noiseBuffer = ctx.createBuffer(1, bufferSize, ctx.sampleRate);
+        const data = noiseBuffer.getChannelData(0);
+        for (let i = 0; i < bufferSize; i++) {
+          data[i] = Math.random() * 2 - 1;
         }
+        const noise = ctx.createBufferSource();
+        noise.buffer = noiseBuffer;
 
-        gain.gain.setValueAtTime(0.001, now);
-        gain.gain.linearRampToValueAtTime(0.3, now + 0.03);
-        gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.42);
+        const vortexFilter = ctx.createBiquadFilter();
+        vortexFilter.type = 'bandpass';
+        vortexFilter.Q.setValueAtTime(4.8, now);
+        // 頻率自高頻快速漩渦旋轉下潛至低頻
+        vortexFilter.frequency.setValueAtTime(1450, now);
+        vortexFilter.frequency.exponentialRampToValueAtTime(110, now + dur);
 
-        osc.connect(filter);
-        filter.connect(gain);
-        gain.connect(ctx.destination);
+        // 漩渦旋轉顫音 LFO (自 8Hz 加速至 32Hz，模擬每秒飛速旋轉圈數激增)
+        const lfo = ctx.createOscillator();
+        const lfoGain = ctx.createGain();
+        lfo.type = 'sawtooth';
+        lfo.frequency.setValueAtTime(8, now);
+        lfo.frequency.exponentialRampToValueAtTime(32, now + dur * 0.85);
 
-        osc.start(now);
-        osc.stop(now + 0.45);
-      } catch(e) {}
+        lfoGain.gain.setValueAtTime(0.35, now);
+        lfoGain.gain.linearRampToValueAtTime(0.7, now + dur * 0.75);
+
+        const noiseGain = ctx.createGain();
+        noiseGain.gain.setValueAtTime(0.001, now);
+        noiseGain.gain.linearRampToValueAtTime(0.45, now + 0.08);
+        noiseGain.gain.exponentialRampToValueAtTime(0.001, now + dur);
+
+        lfo.connect(lfoGain.gain);
+        noise.connect(vortexFilter);
+        vortexFilter.connect(noiseGain);
+        noiseGain.connect(ctx.destination);
+
+        // 2. 深邃引力黑洞沉降音 (Deep Gravitational Sub-Bass Drop)
+        const bassOsc = ctx.createOscillator();
+        const bassGain = ctx.createGain();
+        bassOsc.type = (type === 'album_1') ? 'triangle' : 'sawtooth';
+        bassOsc.frequency.setValueAtTime(260, now);
+        bassOsc.frequency.exponentialRampToValueAtTime(36, now + dur);
+
+        bassGain.gain.setValueAtTime(0.001, now);
+        bassGain.gain.linearRampToValueAtTime(0.4, now + 0.05);
+        bassGain.gain.exponentialRampToValueAtTime(0.001, now + dur);
+
+        bassOsc.connect(bassGain);
+        bassGain.connect(ctx.destination);
+
+        // 3. 真空奇點塌縮 Pop 音 (Singularity Implosion Pop at ~0.46s)
+        const popOsc = ctx.createOscillator();
+        const popGain = ctx.createGain();
+        popOsc.type = 'sine';
+        popOsc.frequency.setValueAtTime(190, now + dur * 0.78);
+        popOsc.frequency.exponentialRampToValueAtTime(28, now + dur);
+
+        popGain.gain.setValueAtTime(0.0001, now);
+        popGain.gain.setValueAtTime(0.0001, now + dur * 0.76);
+        popGain.gain.linearRampToValueAtTime(0.55, now + dur * 0.82);
+        popGain.gain.exponentialRampToValueAtTime(0.0001, now + dur);
+
+        popOsc.connect(popGain);
+        popGain.connect(ctx.destination);
+
+        // 啟動所有音源節點
+        noise.start(now);
+        lfo.start(now);
+        bassOsc.start(now);
+        popOsc.start(now + dur * 0.76);
+
+        noise.stop(now + dur);
+        lfo.stop(now + dur);
+        bassOsc.stop(now + dur);
+        popOsc.stop(now + dur + 0.05);
+      } catch(e) {
+        console.warn("Black hole SFX error:", e);
+      }
     }
 
     // 3. 舞蹈天團星光音效 (Star Sparkle Chime)
@@ -1894,14 +1940,14 @@
       } catch(e) {}
     }
 
-    // 點擊星球統一入口：播放點擊音效、黑洞漩渦急速吸入過場、停止太空氛圍音與首頁BGM、開啟關卡選單
+    // 點擊星球統一入口：播放黑洞吸入音效、黑洞漩渦急速吸入過場、停止太空氛圍音與首頁BGM、開啟關卡選單
     let isTransitioningPlanet = false;
     function handlePlanetClick(albumId) {
       if (isTransitioningPlanet) return;
       isTransitioningPlanet = true;
 
-      // 播放該星球專屬星際音效，並停止首頁背景音樂與太空氛圍音
-      playPlanetClickSFX(albumId);
+      // 播放黑洞引力漩渦吸入音效，並停止首頁背景音樂與太空氛圍音
+      playBlackHoleSuctionSFX(albumId);
       stopSpaceAmbient(0.4);
       stopHomeBgm(0.4);
 
