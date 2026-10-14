@@ -211,6 +211,23 @@
       filter: grayscale(0.7) opacity(0.65);
     }
 
+    /* 電影工作名單式滾動歌詞 (Movie End-Credits Crawl) */
+    .lyric-line-active {
+      color: #fde047 !important;
+      font-weight: 900 !important;
+      transform: scale(1.15) !important;
+      filter: drop-shadow(0 0 16px rgba(250, 204, 21, 0.95)) drop-shadow(0 0 32px rgba(245, 158, 11, 0.6)) !important;
+      background: rgba(255, 255, 255, 0.1) !important;
+      border-color: rgba(253, 224, 71, 0.5) !important;
+    }
+    .lyric-line-past {
+      opacity: 0.38;
+      transform: scale(0.96);
+    }
+    .lyric-line-future {
+      opacity: 0.72;
+    }
+
     /* ======================================================== */
     /* 星球與品牌高飽和度明亮光暈 (保持原始純真色度，絕不灰暗或偏低) */
     /* ======================================================== */
@@ -421,8 +438,26 @@
         </div>
       </div>
 
-      <!-- 右側：旋轉 CD 背景音樂開關 + 累計總積分 + 家長教練設定 -->
-      <div class="flex items-center gap-2.5 self-end sm:self-auto">
+      <!-- 右側：主題曲Logo播放鍵 + 旋轉 CD 背景音樂開關 + 累計總積分 + 家長教練設定 -->
+      <div class="flex items-center gap-2 sm:gap-2.5 self-end sm:self-auto flex-wrap sm:flex-nowrap justify-end">
+        <!-- 🌙 主題曲專屬播放暫停 Logo 按鈕 (點選開啟半透明黑色電影結尾滾動字幕歌詞，音量恢復原聲) -->
+        <button id="btn-theme-song-logo" onclick="toggleThemeSongLyricsMode()"
+                class="group relative flex items-center gap-2 bg-gradient-to-r from-amber-500/25 via-pink-500/20 to-indigo-500/25 hover:from-amber-500/40 hover:to-indigo-500/40 border border-amber-300/60 hover:border-amber-300 px-3 py-1.5 rounded-full shadow-[0_0_15px_rgba(245,158,11,0.3)] transition-all duration-300 active:scale-95 cursor-pointer select-none"
+                title="主題曲《Jump to the Moon》播放與電影滾動歌詞 (點擊切換)">
+          <!-- 迷你發光月亮與音符 Logo 圖示 -->
+          <div class="relative w-8 h-8 rounded-full bg-gradient-to-tr from-amber-400 to-yellow-200 text-slate-950 flex items-center justify-center font-black text-sm shadow-md group-hover:scale-105 transition-transform shrink-0">
+            <span id="theme-logo-icon" class="leading-none">🌙</span>
+            <span class="absolute inset-0 rounded-full border border-amber-300 animate-ping opacity-30 pointer-events-none"></span>
+          </div>
+          <div class="flex flex-col text-left leading-tight hidden xs:flex sm:flex">
+            <span class="text-[10px] font-black text-amber-300 tracking-wide flex items-center gap-1">
+              <span>主題曲</span>
+              <span id="theme-logo-play-state" class="text-[9px] bg-amber-400 text-slate-950 px-1.5 py-0.2 rounded-full font-black">▶ 歌詞</span>
+            </span>
+            <span class="text-[9px] font-bold text-slate-200 truncate max-w-[105px]">Jump to the Moon</span>
+          </div>
+        </button>
+
         <!-- 💿 CD 旋轉唱片背景音樂開關 (開啟時旋轉，關閉時停止轉動) -->
         <button id="btn-home-cd" onclick="toggleHomeBgmFromCD()" 
                 class="group relative flex items-center gap-2 bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 hover:border-amber-400/80 px-2.5 py-1.5 rounded-full shadow-[0_0_15px_rgba(0,0,0,0.5)] transition-all duration-200 active:scale-95 cursor-pointer select-none"
@@ -596,6 +631,112 @@
       </button>
     </footer>
 
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 🎬 主題曲《Jump to the Moon》半透明長方形黑色色塊與電影工作名單式滾動歌詞 -->
+  <!-- ========================================================= -->
+  <div id="theme-song-lyrics-modal" 
+       class="hidden fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-8 bg-black/65 backdrop-blur-md opacity-0 transition-opacity duration-400 select-none"
+       onclick="handleLyricsBackdropClick(event)">
+    
+    <!-- 半透明長方形黑色色塊主體 (仿好萊塢電影大片暗黑矩形巨幕) -->
+    <div id="theme-lyrics-card" 
+         class="relative w-full max-w-2xl h-[84vh] max-h-[720px] rounded-3xl bg-black/85 backdrop-blur-2xl border border-white/20 shadow-[0_25px_80px_rgba(0,0,0,0.95)] flex flex-col overflow-hidden transform scale-95 transition-all duration-400">
+      
+      <!-- 頂部控制列：主題曲名、播放/暫停按鈕、時間與關閉回首頁 -->
+      <div class="relative z-30 flex items-center justify-between px-4 sm:px-6 py-3.5 border-b border-white/10 bg-black/50 backdrop-blur-md shrink-0">
+        <div class="flex items-center gap-2.5">
+          <span class="text-2xl animate-spin-slow">🌙</span>
+          <div>
+            <h3 class="font-black text-sm sm:text-base text-white tracking-wide flex items-center gap-2">
+              <span>Jump to the Moon</span>
+              <span class="text-[10px] font-black bg-gradient-to-r from-amber-400 to-pink-500 text-slate-950 px-2 py-0.5 rounded-full shadow">
+                官方主題曲
+              </span>
+            </h3>
+            <p class="text-[10px] sm:text-[11px] text-amber-300 font-bold tracking-wider mt-0.5">
+              🎬 電影工作名單式滾動字幕 · 跟著音樂一起跳躍
+            </p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-2 shrink-0">
+          <!-- 播放/暫停按鈕 -->
+          <button id="btn-theme-lyrics-playpause" onclick="toggleThemeLyricsPlayPause()" 
+                  class="px-3 sm:px-3.5 py-1.5 rounded-2xl bg-amber-400 hover:bg-amber-300 text-slate-950 font-black text-xs flex items-center gap-1.5 shadow-md transition active:scale-95 cursor-pointer">
+            <span id="theme-lyrics-play-icon">⏸</span>
+            <span id="theme-lyrics-play-text">暫停</span>
+          </button>
+          <!-- 從頭播放 -->
+          <button onclick="restartThemeSong()" 
+                  class="p-2 rounded-2xl bg-white/10 hover:bg-white/20 text-slate-300 hover:text-white text-xs font-bold transition active:scale-95 cursor-pointer" title="從頭開始">
+            🔄
+          </button>
+          <!-- 回到首頁按鍵 (淡出消失) -->
+          <button onclick="exitThemeSongLyricsMode()" 
+                  class="px-3 py-1.5 rounded-2xl bg-white/10 hover:bg-rose-500/80 hover:text-white text-slate-300 text-xs font-black transition flex items-center gap-1 active:scale-95 cursor-pointer border border-white/10" title="回到原首頁 (歌詞淡出消失)">
+            ✕ 回到首頁
+          </button>
+        </div>
+      </div>
+
+      <!-- 時間進度條 -->
+      <div class="relative z-30 w-full px-5 py-2 bg-black/60 flex items-center gap-3 shrink-0 border-b border-white/5">
+        <span id="theme-lyrics-time-cur" class="text-[10px] font-mono text-slate-400">00:00</span>
+        <div class="flex-1 h-2 bg-white/15 rounded-full overflow-hidden relative cursor-pointer group" onclick="seekThemeSongFromBar(event)">
+          <div id="theme-lyrics-progress-bar" class="h-full bg-gradient-to-r from-amber-400 via-pink-400 to-sky-400 rounded-full w-0 transition-all duration-100"></div>
+        </div>
+        <span id="theme-lyrics-time-total" class="text-[10px] font-mono text-slate-400">02:57</span>
+      </div>
+
+      <!-- 滾動歌詞工作名單展示區 (仿電影結尾 Credits Crawl) -->
+      <div id="theme-lyrics-viewport" 
+           class="relative flex-1 overflow-hidden select-none"
+           style="mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 14%, black 86%, transparent 100%);">
+        
+        <!-- 滾動內容容器 (由 JavaScript 實時計算平滑向上推進) -->
+        <div id="theme-lyrics-crawl" class="absolute left-0 right-0 px-4 sm:px-10 text-center will-change-transform">
+          
+          <!-- 電影開頭片頭銘謝卡片 -->
+          <div class="py-12 flex flex-col items-center">
+            <span class="text-3xl mb-2">⭐</span>
+            <h2 class="text-xl md:text-2xl font-black text-amber-300 tracking-wider">KAIDANCE PRESENTS</h2>
+            <p class="text-xs text-slate-400 font-bold uppercase tracking-widest mt-1">Official Main Theme Song</p>
+            <h1 class="text-2xl md:text-3xl font-black text-white tracking-tight mt-2 drop-shadow-[0_0_15px_rgba(255,255,255,0.4)]">
+              JUMP TO THE MOON
+            </h1>
+            <div class="w-16 h-0.5 bg-gradient-to-r from-transparent via-amber-400 to-transparent my-4"></div>
+          </div>
+
+          <!-- 動態生成的歌詞行列表 (由 SRT 生成) -->
+          <div id="theme-lyrics-lines" class="space-y-6 md:space-y-8 pb-32">
+            <!-- Dynamically injected via JS -->
+          </div>
+
+          <!-- 電影結尾名單 -->
+          <div class="py-16 flex flex-col items-center text-center space-y-3 border-t border-white/10 mt-12">
+            <span class="text-4xl animate-bounce">🚀 🌕</span>
+            <h4 class="text-base font-black text-amber-300 tracking-wider">THANK YOU FOR DANCING WITH US!</h4>
+            <p class="text-xs text-slate-400">KaiDance 奇妙星律動 · 陪伴每一位孩子快樂跳躍成長</p>
+            <button onclick="exitThemeSongLyricsMode()" class="mt-4 px-6 py-2 rounded-full bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-black text-xs shadow-lg transition active:scale-95">
+              回到宇宙雙星首頁 ✦
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- 底部漸層呼吸提示 -->
+      <div class="relative z-30 px-4 py-2 bg-black/60 border-t border-white/10 flex items-center justify-between text-[11px] text-slate-400 shrink-0">
+        <span class="flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>高音質原聲播放中 · 滾動字幕自動跟進</span>
+        </span>
+        <span class="text-slate-500 hidden sm:inline">點擊上方「✕ 回到首頁」隨時退回大廳</span>
+      </div>
+
+    </div>
   </div>
 
   <!-- ========================================================= -->
@@ -1597,8 +1738,31 @@
     }
 
     // ========================================================
-    // 首頁專屬背景音樂管理 (Jump_to_the_Moon.mp3，40% 音量循環播放，CD唱片連動)
+    // 首頁專屬背景音樂管理 (Jump_to_the_Moon.mp3，大廳 30% 音量循環播放，CD唱片連動)
     // ========================================================
+    let isThemeSongLyricsActive = false;
+    let currentLyricsScrollY = 0;
+    let lyricsAnimFrameId = null;
+
+    function rampAudioVolume(audioEl, targetVol, duration = 380) {
+      if (!audioEl) return;
+      if (audioEl._volumeRampTimer) clearInterval(audioEl._volumeRampTimer);
+      const startVol = audioEl.volume;
+      const steps = 12;
+      const stepTime = duration / steps;
+      let curStep = 0;
+      audioEl._volumeRampTimer = setInterval(() => {
+        curStep++;
+        const v = startVol + (targetVol - startVol) * (curStep / steps);
+        audioEl.volume = Math.max(0, Math.min(1, v));
+        if (curStep >= steps) {
+          clearInterval(audioEl._volumeRampTimer);
+          audioEl._volumeRampTimer = null;
+          audioEl.volume = targetVol;
+        }
+      }, stepTime);
+    }
+
     function startHomeBgm() {
       const audioHomeBgm = document.getElementById('audio-home-bgm');
       if (!audioHomeBgm) return;
@@ -1611,7 +1775,8 @@
         updateHomeCdUI();
         return;
       }
-      audioHomeBgm.volume = 0.4; // 音量設置為 40%
+      // 進入首頁時音量為 30%；若處於主題曲歌詞模式則為原聲 100%
+      audioHomeBgm.volume = isThemeSongLyricsActive ? 1.0 : 0.3;
       audioHomeBgm.loop = true;  // 循環播放
       const p = audioHomeBgm.play();
       if (p !== undefined) {
@@ -1627,6 +1792,7 @@
     function stopHomeBgm(fadeTime = 0.35) {
       const audioHomeBgm = document.getElementById('audio-home-bgm');
       if (!audioHomeBgm || audioHomeBgm.paused) return;
+      const targetBaseVol = isThemeSongLyricsActive ? 1.0 : 0.3;
       if (fadeTime > 0) {
         const startVol = audioHomeBgm.volume;
         const steps = 8;
@@ -1639,14 +1805,14 @@
             clearInterval(fadeTimer);
             audioHomeBgm.pause();
             audioHomeBgm.currentTime = 0;
-            audioHomeBgm.volume = 0.4;
+            audioHomeBgm.volume = targetBaseVol;
             updateHomeCdUI();
           }
         }, stepTime);
       } else {
         audioHomeBgm.pause();
         audioHomeBgm.currentTime = 0;
-        audioHomeBgm.volume = 0.4;
+        audioHomeBgm.volume = targetBaseVol;
         updateHomeCdUI();
       }
     }
@@ -1667,11 +1833,12 @@
       updateHomeCdUI();
     }
 
-    // 更新 CD 唱片旋轉狀態與狀態徽章
+    // 更新 CD 唱片與主題曲 Logo 的旋轉狀態與狀態徽章
     function updateHomeCdUI() {
       const cdDisc = document.getElementById('home-cd-disc');
       const cdBadge = document.getElementById('home-cd-mute-badge');
       const cdStatus = document.getElementById('home-cd-status-text');
+      const themeLogoState = document.getElementById('theme-logo-play-state');
       const isMusicOn = !!userSettings.spaceAmbient;
 
       if (cdDisc) {
@@ -1690,10 +1857,329 @@
         cdStatus.innerText = isMusicOn ? "播放中" : "已靜音";
         cdStatus.className = isMusicOn ? "text-[9px] font-black text-amber-300" : "text-[9px] font-black text-slate-400";
       }
+      if (themeLogoState) {
+        themeLogoState.innerText = isThemeSongLyricsActive ? "⏸ 歌詞中" : "▶ 歌詞";
+      }
 
       // 同步設定彈窗勾選框
       const ambientChk = document.getElementById('setting-ambient-enabled');
       if (ambientChk) ambientChk.checked = isMusicOn;
+    }
+
+    // ========================================================
+    // 🎬 主題曲《Jump to the Moon》電影工作名單式滾動歌詞系統
+    // (依據 Jump_to_the_Moon.srt 毫秒對齊，黑色半透明方塊向上飄移字幕)
+    // ========================================================
+    const THEME_SONG_LYRICS = [
+      {"id":1,"start":15,"end":18.1,"text":"Sun peeks through the window bright"},
+      {"id":2,"start":18.3,"end":21.3,"text":"Pack my toys with morning light"},
+      {"id":3,"start":21.466,"end":24.533,"text":"Share my snack and smile at you"},
+      {"id":4,"start":24.7,"end":27.6,"text":"Kindness makes the sky so blue"},
+      {"id":5,"start":27.866,"end":30.933,"text":"Jump up high, spin around"},
+      {"id":6,"start":31.2,"end":34.1,"text":"Keep our feet off of the ground"},
+      {"id":7,"start":34.266,"end":37.3,"text":"Hand in hand, we dance and play"},
+      {"id":8,"start":37.5,"end":40.333,"text":"Magic happens every day"},
+      {"id":9,"start":50.4,"end":53.366,"text":"Tie my laces, ready now"},
+      {"id":10,"start":53.466,"end":56.533,"text":"Let me show you all just how"},
+      {"id":11,"start":56.666,"end":59.766,"text":"Pick up blocks and clean our room"},
+      {"id":12,"start":60.133,"end":62.766,"text":"Zooming up just like a broom"},
+      {"id":13,"start":63.166,"end":66.1,"text":"Count to three and take a leap"},
+      {"id":14,"start":66.6,"end":69.3,"text":"Into dreams we want to keep"},
+      {"id":15,"start":69.5,"end":72.533,"text":"Reach the stars and touch the moon"},
+      {"id":16,"start":72.766,"end":75.6,"text":"Dance to our own cosmic tune"},
+      {"id":17,"start":75.8,"end":78.933,"text":"Jump up high, spin around"},
+      {"id":18,"start":79,"end":82.1,"text":"Keep our feet off of the ground"},
+      {"id":19,"start":82.266,"end":85.3,"text":"Hand in hand, we dance and play"},
+      {"id":20,"start":85.5,"end":88.3,"text":"Magic happens every day"},
+      {"id":21,"start":101.733,"end":102.533,"text":"I feel it"},
+      {"id":22,"start":114.366,"end":117.466,"text":"With a friend, the world is wide"},
+      {"id":23,"start":117.5,"end":120.4,"text":"Laughing on this cosmic ride"},
+      {"id":24,"start":120.766,"end":123.8,"text":"We are brave and we are bright"},
+      {"id":25,"start":123.866,"end":126.5,"text":"Shining with all of our might"},
+      {"id":26,"start":127.166,"end":130.133,"text":"Jump up high, spin around"},
+      {"id":27,"start":130.266,"end":133.333,"text":"Keep our feet off of the ground"},
+      {"id":28,"start":133.5,"end":136.566,"text":"Hand in hand, we dance and play"},
+      {"id":29,"start":136.7,"end":139.466,"text":"Magic happens every day"},
+      {"id":30,"start":139.933,"end":142.966,"text":"Jump up high, touch the sky"},
+      {"id":31,"start":143.133,"end":146.1,"text":"Watch our dreams go flying by"},
+      {"id":32,"start":146.166,"end":149.266,"text":"Together we can laugh and run"},
+      {"id":33,"start":149.5,"end":152.2,"text":"Our adventure's just begun"},
+      {"id":34,"start":157.666,"end":162.1,"text":"One, two, three, let's go! Keep on dancing, feeling free"},
+      {"id":35,"start":162.3,"end":165.2,"text":"You are who you want to be"},
+      {"id":36,"start":166.266,"end":169.3,"text":"Jump, jump, jump, jump, jump, jump, jump"},
+      {"id":37,"start":169.466,"end":170.8,"text":"Reach for the stars"},
+      {"id":38,"start":170.8,"end":173.333,"text":"This big shiny world is ours"}
+    ];
+
+    function renderThemeSongLyricsDOM() {
+      const container = document.getElementById('theme-lyrics-lines');
+      if (!container) return;
+      container.innerHTML = THEME_SONG_LYRICS.map((cue, idx) => {
+        let interludeHtml = '';
+        if (idx === 8) {
+          interludeHtml = `
+            <div class="py-6 flex flex-col items-center opacity-60">
+              <span class="text-xl">✨ 🎵 ✨</span>
+              <span class="text-[11px] text-amber-200 font-black tracking-widest mt-1">[ 輕快間奏 · 轉個身動一動 💫 ]</span>
+            </div>
+          `;
+        } else if (idx === 20) {
+          interludeHtml = `
+            <div class="py-6 flex flex-col items-center opacity-60">
+              <span class="text-xl">💫 🚀 💫</span>
+              <span class="text-[11px] text-sky-200 font-black tracking-widest mt-1">[ 星際奇妙旋律 · 感受音樂律動 ✨ ]</span>
+            </div>
+          `;
+        } else if (idx === 33) {
+          interludeHtml = `
+            <div class="py-6 flex flex-col items-center opacity-60">
+              <span class="text-xl">🎉 ⚡ 🎉</span>
+              <span class="text-[11px] text-pink-200 font-black tracking-widest mt-1">[ 終極準備 · 1, 2, 3 Let's Go! ]</span>
+            </div>
+          `;
+        }
+
+        return `
+          ${interludeHtml}
+          <div id="lyric-cue-${cue.id}" 
+               onclick="seekThemeSong(${cue.start})"
+               class="lyric-line-item py-3 px-5 rounded-2xl transition-all duration-300 cursor-pointer select-none border border-transparent hover:border-white/20 hover:bg-white/5 text-slate-300 font-bold text-base sm:text-lg md:text-xl tracking-wide max-w-xl mx-auto">
+            <span>${cue.text}</span>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function toggleThemeSongLyricsMode() {
+      if (isThemeSongLyricsActive) {
+        exitThemeSongLyricsMode();
+      } else {
+        enterThemeSongLyricsMode();
+      }
+    }
+
+    function enterThemeSongLyricsMode() {
+      isThemeSongLyricsActive = true;
+      userSettings.spaceAmbient = true; // 確保啟動音樂
+      renderThemeSongLyricsDOM();
+
+      const modal = document.getElementById('theme-song-lyrics-modal');
+      const card = document.getElementById('theme-lyrics-card');
+      const audioHomeBgm = document.getElementById('audio-home-bgm');
+
+      if (modal) {
+        modal.classList.remove('hidden');
+        void modal.offsetWidth; // 強制重繪
+        modal.classList.remove('opacity-0');
+        modal.classList.add('opacity-100');
+      }
+      if (card) {
+        card.classList.remove('scale-95');
+        card.classList.add('scale-100');
+      }
+
+      // 播放並將音量由 30% 漸進提升回復為原本的 100%
+      if (audioHomeBgm) {
+        if (audioHomeBgm.paused) {
+          audioHomeBgm.volume = 0.3;
+          audioHomeBgm.play().catch(e => console.log("Theme song play interaction:", e));
+        }
+        rampAudioVolume(audioHomeBgm, 1.0, 450);
+      }
+
+      updateHomeCdUI();
+      const playIcon = document.getElementById('theme-lyrics-play-icon');
+      const playText = document.getElementById('theme-lyrics-play-text');
+      if (playIcon) playIcon.innerText = '⏸';
+      if (playText) playText.innerText = '暫停';
+
+      startLyricsCrawlLoop();
+    }
+
+    function exitThemeSongLyricsMode() {
+      isThemeSongLyricsActive = false;
+      const modal = document.getElementById('theme-song-lyrics-modal');
+      const card = document.getElementById('theme-lyrics-card');
+      const audioHomeBgm = document.getElementById('audio-home-bgm');
+
+      if (card) {
+        card.classList.remove('scale-100');
+        card.classList.add('scale-95');
+      }
+      if (modal) {
+        modal.classList.remove('opacity-100');
+        modal.classList.add('opacity-0');
+        setTimeout(() => {
+          if (!isThemeSongLyricsActive) {
+            modal.classList.add('hidden');
+          }
+        }, 420);
+      }
+
+      // 停止或退出歌詞模式時，音量平滑回復為首頁 30% 背景音量
+      if (audioHomeBgm && !audioHomeBgm.paused) {
+        rampAudioVolume(audioHomeBgm, 0.3, 400);
+      }
+
+      stopLyricsCrawlLoop();
+      updateHomeCdUI();
+    }
+
+    function toggleThemeLyricsPlayPause() {
+      const audioHomeBgm = document.getElementById('audio-home-bgm');
+      if (!audioHomeBgm) return;
+      const icon = document.getElementById('theme-lyrics-play-icon');
+      const text = document.getElementById('theme-lyrics-play-text');
+
+      if (audioHomeBgm.paused) {
+        audioHomeBgm.play().catch(e => console.log(e));
+        if (icon) icon.innerText = '⏸';
+        if (text) text.innerText = '暫停';
+      } else {
+        audioHomeBgm.pause();
+        if (icon) icon.innerText = '▶';
+        if (text) text.innerText = '繼續播放';
+      }
+      updateHomeCdUI();
+    }
+
+    function restartThemeSong() {
+      seekThemeSong(0);
+      const audioHomeBgm = document.getElementById('audio-home-bgm');
+      if (audioHomeBgm && audioHomeBgm.paused) {
+        audioHomeBgm.play().catch(e => console.log(e));
+      }
+      const icon = document.getElementById('theme-lyrics-play-icon');
+      const text = document.getElementById('theme-lyrics-play-text');
+      if (icon) icon.innerText = '⏸';
+      if (text) text.innerText = '暫停';
+      updateHomeCdUI();
+    }
+
+    function seekThemeSong(time) {
+      const audioHomeBgm = document.getElementById('audio-home-bgm');
+      if (audioHomeBgm) {
+        audioHomeBgm.currentTime = Math.max(0, Math.min(audioHomeBgm.duration || 177, time));
+      }
+    }
+
+    function seekThemeSongFromBar(e) {
+      const bar = e.currentTarget;
+      const rect = bar.getBoundingClientRect();
+      const ratio = Math.max(0, Math.min(1, (e.clientX - rect.left) / rect.width));
+      const audioHomeBgm = document.getElementById('audio-home-bgm');
+      if (audioHomeBgm) {
+        const dur = audioHomeBgm.duration || 177.29;
+        seekThemeSong(ratio * dur);
+      }
+    }
+
+    function handleLyricsBackdropClick(e) {
+      if (e.target.id === 'theme-song-lyrics-modal') {
+        exitThemeSongLyricsMode();
+      }
+    }
+
+    function startLyricsCrawlLoop() {
+      if (lyricsAnimFrameId) cancelAnimationFrame(lyricsAnimFrameId);
+      function step() {
+        if (isThemeSongLyricsActive) {
+          updateLyricsCrawlUI();
+          lyricsAnimFrameId = requestAnimationFrame(step);
+        }
+      }
+      lyricsAnimFrameId = requestAnimationFrame(step);
+    }
+
+    function stopLyricsCrawlLoop() {
+      if (lyricsAnimFrameId) {
+        cancelAnimationFrame(lyricsAnimFrameId);
+        lyricsAnimFrameId = null;
+      }
+    }
+
+    function updateLyricsCrawlUI() {
+      const audioHomeBgm = document.getElementById('audio-home-bgm');
+      if (!audioHomeBgm) return;
+      const t = audioHomeBgm.currentTime || 0;
+      const dur = audioHomeBgm.duration || 177.29;
+
+      // 1. 更新進度時間與進度條
+      const curMin = Math.floor(t / 60);
+      const curSec = Math.floor(t % 60);
+      const totMin = Math.floor(dur / 60);
+      const totSec = Math.floor(dur % 60);
+      const timeCurEl = document.getElementById('theme-lyrics-time-cur');
+      const timeTotEl = document.getElementById('theme-lyrics-time-total');
+      const pBar = document.getElementById('theme-lyrics-progress-bar');
+      if (timeCurEl) timeCurEl.innerText = `${String(curMin).padStart(2,'0')}:${String(curSec).padStart(2,'0')}`;
+      if (timeTotEl) timeTotEl.innerText = `${String(totMin).padStart(2,'0')}:${String(totSec).padStart(2,'0')}`;
+      if (pBar) pBar.style.width = `${Math.min(100, (t / dur) * 100)}%`;
+
+      // 2. 判定當前活躍歌詞行
+      let activeCueIndex = -1;
+      for (let i = 0; i < THEME_SONG_LYRICS.length; i++) {
+        const cue = THEME_SONG_LYRICS[i];
+        if (t >= cue.start && t <= cue.end) {
+          activeCueIndex = i;
+          break;
+        }
+      }
+
+      // 3. 樣式狀態動態高亮
+      THEME_SONG_LYRICS.forEach((cue, i) => {
+        const el = document.getElementById(`lyric-cue-${cue.id}`);
+        if (!el) return;
+        if (i === activeCueIndex) {
+          el.className = "lyric-line-item lyric-line-active py-3.5 px-6 rounded-2xl transition-all duration-300 cursor-pointer select-none border text-center font-black text-lg sm:text-xl md:text-2xl tracking-wide max-w-xl mx-auto shadow-lg";
+        } else if (t > cue.end) {
+          el.className = "lyric-line-item lyric-line-past py-2.5 px-4 rounded-2xl transition-all duration-300 cursor-pointer select-none border border-transparent text-slate-400 font-medium text-sm sm:text-base md:text-lg tracking-wide max-w-xl mx-auto";
+        } else {
+          el.className = "lyric-line-item lyric-line-future py-2.5 px-4 rounded-2xl transition-all duration-300 cursor-pointer select-none border border-transparent text-slate-200 font-bold text-base sm:text-lg md:text-xl tracking-wide max-w-xl mx-auto";
+        }
+      });
+
+      // 4. 電影工作名單式平滑垂直向上推進
+      const viewport = document.getElementById('theme-lyrics-viewport');
+      const crawl = document.getElementById('theme-lyrics-crawl');
+      if (viewport && crawl) {
+        let targetY = 0;
+        if (activeCueIndex !== -1) {
+          const activeEl = document.getElementById(`lyric-cue-${THEME_SONG_LYRICS[activeCueIndex].id}`);
+          if (activeEl) {
+            targetY = (viewport.offsetHeight / 2) - activeEl.offsetTop - (activeEl.offsetHeight / 2);
+          }
+        } else if (t < THEME_SONG_LYRICS[0].start) {
+          // 前奏片頭慢速向上漂移
+          const progress = t / THEME_SONG_LYRICS[0].start;
+          targetY = (viewport.offsetHeight * 0.35) - (progress * 130);
+        } else if (t > THEME_SONG_LYRICS[THEME_SONG_LYRICS.length - 1].end) {
+          // 結尾鳴謝卡片置中
+          const maxScroll = crawl.offsetHeight - viewport.offsetHeight + 60;
+          targetY = -maxScroll;
+        } else {
+          // 間奏過渡插值平滑移動
+          let prevCue = null, nextCue = null;
+          for (let i = 0; i < THEME_SONG_LYRICS.length; i++) {
+            if (THEME_SONG_LYRICS[i].end <= t) prevCue = THEME_SONG_LYRICS[i];
+            if (THEME_SONG_LYRICS[i].start > t && !nextCue) nextCue = THEME_SONG_LYRICS[i];
+          }
+          if (prevCue && nextCue) {
+            const prevEl = document.getElementById(`lyric-cue-${prevCue.id}`);
+            const nextEl = document.getElementById(`lyric-cue-${nextCue.id}`);
+            if (prevEl && nextEl) {
+              const frac = (t - prevCue.end) / (nextCue.start - prevCue.end);
+              const prevTarget = (viewport.offsetHeight / 2) - prevEl.offsetTop - (prevEl.offsetHeight / 2);
+              const nextTarget = (viewport.offsetHeight / 2) - nextEl.offsetTop - (nextEl.offsetHeight / 2);
+              targetY = prevTarget + (nextTarget - prevTarget) * frac;
+            }
+          }
+        }
+
+        // 柔和電影級阻尼內插滑動 (Lerp)
+        currentLyricsScrollY += (targetY - currentLyricsScrollY) * 0.12;
+        crawl.style.transform = `translate3d(0, ${currentLyricsScrollY.toFixed(2)}px, 0)`;
+      }
     }
 
     // 2. 黑洞引力漩渦吸入音效 (Black Hole Gravitational Suction SFX)
@@ -1815,6 +2301,10 @@
     function handlePlanetClick(albumId) {
       if (isTransitioningPlanet) return;
       isTransitioningPlanet = true;
+
+      if (isThemeSongLyricsActive) {
+        exitThemeSongLyricsMode();
+      }
 
       // 播放黑洞引力漩渦吸入音效，並停止首頁背景音樂與太空氛圍音
       playBlackHoleSuctionSFX(albumId);
@@ -4545,6 +5035,7 @@
 
     loadParentSettings();
     updateHomeCdUI();
+    renderThemeSongLyricsDOM();
     updatePlaybackUI();
     switchAlbum(currentAlbumId);
     updateLoopModeUI();
