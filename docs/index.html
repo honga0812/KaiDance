@@ -1901,11 +1901,26 @@
 
     let homeBgmPlayPromise = null;
 
+    function isLobbyActive() {
+      const lobby = document.getElementById('view-lobby');
+      const danceView = document.getElementById('view-dance');
+      const albumView = document.getElementById('view-album-levels');
+      const isLobbyVisible = lobby && !lobby.classList.contains('hidden');
+      const isDanceHidden = !danceView || danceView.classList.contains('hidden');
+      const isLevelsHidden = !albumView || albumView.classList.contains('hidden');
+      return isLobbyVisible && isDanceHidden && isLevelsHidden;
+    }
+
     function startHomeBgm() {
       const audioHomeBgm = document.getElementById('audio-home-bgm');
       if (!audioHomeBgm) return;
-      const lobby = document.getElementById('view-lobby');
-      if (lobby && lobby.classList.contains('hidden')) return;
+
+      // 嚴格檢查：只有在首頁大廳且不在跳舞教室或關卡頁時才允許播放
+      if (!isLobbyActive()) {
+        try { audioHomeBgm.pause(); } catch(e) {}
+        updateHomeCdUI();
+        return;
+      }
 
       // 清除可能殘留的漸層計時器，避免競態停止
       if (audioHomeBgm._volumeRampTimer) {
@@ -1932,9 +1947,9 @@
         if (homeBgmPlayPromise !== undefined) {
           homeBgmPlayPromise.then(() => {
             homeBgmPlayPromise = null;
-            // 若在非同步載入期間使用者已點選暫停，則立即停止
-            if (!userSettings.spaceAmbient) {
-              audioHomeBgm.pause();
+            // 關鍵防線：如果播放啟動時已經離開首頁（如已進入跳舞教室），強制立即暫停！
+            if (!isLobbyActive() || !userSettings.spaceAmbient) {
+              try { audioHomeBgm.pause(); } catch(e) {}
             }
             updateHomeCdUI();
           }).catch(e => {
@@ -1962,41 +1977,19 @@
         audioHomeBgm._fadeTimer = null;
       }
 
-      const targetBaseVol = isThemeSongLyricsActive ? 1.0 : 0.3;
+      // 立即無條件暫停首頁音樂
+      try {
+        audioHomeBgm.pause();
+      } catch (e) {}
 
-      if (fadeTime > 0 && !audioHomeBgm.paused) {
-        const startVol = audioHomeBgm.volume;
-        const steps = 8;
-        const stepTime = (fadeTime * 1000) / steps;
-        let count = 0;
-        audioHomeBgm._fadeTimer = setInterval(() => {
-          count++;
-          audioHomeBgm.volume = Math.max(0, startVol * (1 - count / steps));
-          if (count >= steps) {
-            clearInterval(audioHomeBgm._fadeTimer);
-            audioHomeBgm._fadeTimer = null;
-            if (!userSettings.spaceAmbient) {
-              try { audioHomeBgm.pause(); } catch (e) {}
-            }
-            audioHomeBgm.volume = targetBaseVol;
-            updateHomeCdUI();
-          }
-        }, stepTime);
-      } else {
-        try { audioHomeBgm.pause(); } catch (e) {}
-        audioHomeBgm.volume = targetBaseVol;
-        updateHomeCdUI();
-      }
-
-      // 若有待決的 play promise，resolve 後僅在已關閉音樂時 pause
+      // 如果有待決的非同步 play promise，等其 resolve 後強制二次暫停，杜絕行動端非同步競態自動播放
       if (homeBgmPlayPromise) {
         homeBgmPlayPromise.then(() => {
-          if (!userSettings.spaceAmbient) {
-            try { audioHomeBgm.pause(); } catch (e) {}
-            updateHomeCdUI();
-          }
+          try { audioHomeBgm.pause(); } catch (e) {}
+          updateHomeCdUI();
         }).catch(() => {});
       }
+
       updateHomeCdUI();
     }
 
@@ -2494,10 +2487,12 @@
         exitThemeSongLyricsMode();
       }
 
-      // 播放黑洞引力漩渦吸入音效，並停止首頁背景音樂與太空氛圍音
+      // 播放黑洞引力漩渦吸入音效，並立即停止首頁背景音樂與太空氛圍音
       playBlackHoleSuctionSFX(albumId);
-      stopSpaceAmbient(0.4);
-      stopHomeBgm(0.4);
+      stopSpaceAmbient(0);
+      stopHomeBgm(0);
+      const homeAudioOnPlanet = document.getElementById('audio-home-bgm');
+      if (homeAudioOnPlanet) { try { homeAudioOnPlanet.pause(); } catch(e) {} }
 
       // 獲取被點選星球與同頁其他元素
       const targetPlanet = document.getElementById(albumId === 'album_1' ? 'planet-container-album_1' : 'planet-container-album_2');
@@ -2661,11 +2656,11 @@
     // 首次使用者互動時啟動音訊環境與首頁背景音樂
     function initUserAudioOnFirstTouch(e) {
       getAudioContext();
-      // 如果使用者第一次點擊的正是首頁 CD 開關或主題曲 Logo，交給該按鈕原生點擊邏輯，避免競態雙重觸發
-      if (e && e.target && e.target.closest && e.target.closest('#btn-home-cd, #home-kaidance-logo-btn')) {
-        // 由按鈕的 onclick 函式處理
+      // 如果使用者第一次點擊的正是首頁 CD 開關、主題曲 Logo、星球或跳舞按鈕，不在此啟動首頁音樂，避免競態雙重觸發
+      if (e && e.target && e.target.closest && e.target.closest('#btn-home-cd, #home-kaidance-logo-btn, #planet-container-album_1, #planet-container-album_2, #btn-random-dance, #btn-launch-adventure, .planet-interactive-card, #song-cards-container, [onclick*="selectSong"], [onclick*="playCurrentAlbumAll"], [onclick*="playRandomSongInAlbum"]')) {
+        // 由目標按鈕的原生點擊邏輯處理
       } else {
-        if (userSettings.spaceAmbient) {
+        if (userSettings.spaceAmbient && isLobbyActive()) {
           startHomeBgm();
         }
       }
@@ -3057,7 +3052,14 @@
       // 進入跳舞教室，徹底停止首頁主題曲與太空環境音效
       if (isThemeSongLyricsActive) exitThemeSongLyricsMode();
       stopHomeBgm(0);
-      stopSpaceAmbient(0.3);
+      stopSpaceAmbient(0);
+      const homeAudioOnSelect = document.getElementById('audio-home-bgm');
+      if (homeAudioOnSelect) {
+        try {
+          homeAudioOnSelect.pause();
+          homeAudioOnSelect.currentTime = 0;
+        } catch(e) {}
+      }
 
       viewLobby.classList.add('hidden');
       if (viewAlbumLevels) {
@@ -4989,6 +4991,14 @@
     }
 
     function startDance() {
+      // 確保首頁主題曲絕對靜止
+      stopHomeBgm(0);
+      stopSpaceAmbient(0);
+      const homeAudioOnDance = document.getElementById('audio-home-bgm');
+      if (homeAudioOnDance && !homeAudioOnDance.paused) {
+        try { homeAudioOnDance.pause(); } catch(e) {}
+      }
+
       isPlaying = true;
       playIcon.innerText = "⏸";
       playLabel.innerText = "暫停舞曲";
