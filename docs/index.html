@@ -588,13 +588,7 @@
       <div id="home-kaidance-logo-btn" class="flex items-center gap-3.5 group cursor-pointer select-none self-start sm:self-auto hover-glow-logo" onclick="toggleThemeSongLyricsMode(event)" title="點選 KaiDance 播放官方主題曲《Jump to the Moon》與電影滾動歌詞">
         <img src="./images/ui/kaidance_logo.png" alt="KaiDance 奇妙星律動" class="h-14 md:h-18 lg:h-20 w-auto object-contain glow-kaidance-logo anim-float">
         <div class="flex flex-col text-left">
-          <div class="flex items-center gap-2">
-            <span class="font-black text-2xl md:text-3xl lg:text-4xl tracking-tight text-white select-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">KaiDance</span>
-            <!-- 微型主題曲音符互動小標籤 -->
-            <span class="inline-flex items-center gap-1 text-[9px] sm:text-[10px] bg-amber-400/20 text-amber-300 border border-amber-300/40 px-2 py-0.5 rounded-full font-black group-hover:bg-amber-400 group-hover:text-slate-950 transition-colors shadow-xs">
-              <span id="theme-logo-icon">🎵</span> <span id="theme-logo-play-state">官方主題曲</span>
-            </span>
-          </div>
+          <span class="font-black text-2xl md:text-3xl lg:text-4xl tracking-tight text-white select-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">KaiDance</span>
           <span class="text-xs md:text-sm lg:text-base font-extrabold bg-gradient-to-r from-amber-300 via-pink-300 to-sky-300 bg-clip-text text-transparent select-none drop-shadow-sm">奇妙星律動</span>
         </div>
       </div>
@@ -2120,11 +2114,10 @@
       updateHomeCdUI();
     }
 
-    // 更新 CD 唱片與主題曲 Logo 的旋轉狀態與狀態徽章
+    // 更新 CD 唱片的旋轉狀態與狀態徽章
     function updateHomeCdUI() {
       const cdDisc = document.getElementById('home-cd-disc');
       const cdStatus = document.getElementById('home-cd-status-text');
-      const themeLogoState = document.getElementById('theme-logo-play-state');
       const audioHomeBgm = document.getElementById('audio-home-bgm');
 
       // 真正播放狀態：audio 未暫停且設定開啟
@@ -2142,13 +2135,6 @@
       if (cdStatus) {
         cdStatus.innerText = isMusicPlaying ? "播放中" : "已暫停";
         cdStatus.className = isMusicPlaying ? "text-[8px] sm:text-[9px] font-black text-amber-300" : "text-[8px] sm:text-[9px] font-black text-slate-400";
-      }
-      if (themeLogoState) {
-        themeLogoState.innerText = isThemeSongLyricsActive ? "歌詞模式中" : "官方主題曲";
-      }
-      const themeLogoIcon = document.getElementById('theme-logo-icon');
-      if (themeLogoIcon) {
-        themeLogoIcon.innerText = isThemeSongLyricsActive ? "✨" : "🎵";
       }
 
       // 同步設定彈窗勾選框
