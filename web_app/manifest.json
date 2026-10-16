@@ -1,0 +1,23 @@
+{
+  "name": "KaiDance 奇妙星律動",
+  "short_name": "KaiDance",
+  "description": "兒童 AI 趣味火柴人舞蹈樂園",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "./apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./images/ui/kaidance_app_icon_512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
