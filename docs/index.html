@@ -438,44 +438,113 @@
     }
     
     /* ======================================================== */
-    /* 星球選單與單曲教室：宇宙星光 + 3D 光暈果凍 (Glowing Jelly) 視覺系統 */
+    /* 星球選單與單曲教室：                                      */
+    /* - 第一顆星球 (.theme-planet-1)：晨光亮色系光暈果凍 (Morning Sunshine Bright Jelly) */
+    /* - 第二顆星球 (.theme-planet-2)：深邃星光狂歡果凍 (Cosmic Groove Party Jelly)      */
+    /* - 左上角 300% 放大首頁星球壓底視覺 (.planet-Corner-Backdrop-300)                 */
     /* ======================================================== */
     .planet-levels-p1 {
-      background: radial-gradient(circle at 50% 15%, rgba(180, 83, 9, 0.38) 0%, #1e293b 45%, #0f172a 75%, #020617 100%);
-      box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.85), 0 0 40px rgba(245, 158, 11, 0.18), inset 0 2px 6px rgba(254, 240, 138, 0.25);
+      background: radial-gradient(circle at 14% 12%, #ffffff 0%, #fef9c3 25%, #fde68a 52%, #ffedd5 78%, #bae6fd 100%);
+      box-shadow: 0 25px 60px -15px rgba(180, 83, 9, 0.3), 0 0 45px rgba(251, 191, 36, 0.35), inset 0 3px 8px rgba(255, 255, 255, 0.95);
     }
     .planet-levels-p2 {
       background: radial-gradient(circle at 50% 15%, rgba(162, 28, 175, 0.42) 0%, #1e1b4b 45%, #0f172a 75%, #020617 100%);
       box-shadow: 0 25px 60px -15px rgba(0, 0, 0, 0.85), 0 0 40px rgba(217, 70, 239, 0.22), inset 0 2px 6px rgba(244, 114, 182, 0.25);
     }
 
-    /* 單曲跳舞教室主舞台：深邃星空果凍光暈外框 */
+    /* 單曲跳舞教室主舞台：預設/第二顆星球深邃星空果凍光暈外框 */
     .jelly-cosmic-stage {
-      background: radial-gradient(circle at 50% 20%, #1e293b 0%, #0f172a 52%, #020617 100%);
+      background: radial-gradient(circle at 50% 20%, #1e1b4b 0%, #0f172a 52%, #020617 100%);
       border: 1.5px solid rgba(148, 163, 184, 0.32);
       box-shadow: 
         0 25px 60px -15px rgba(0, 0, 0, 0.88),
-        0 0 35px rgba(56, 189, 248, 0.12),
+        0 0 35px rgba(217, 70, 239, 0.16),
         inset 0 2px 5px rgba(255, 255, 255, 0.18);
+    }
+
+    /* ☀️ 第一顆星球：晨光生活大冒險 — 晨光亮色系主舞台 (.theme-planet-1) */
+    .theme-planet-1.jelly-cosmic-stage,
+    .theme-planet-1 .jelly-cosmic-stage {
+      background: radial-gradient(circle at 14% 12%, #ffffff 0%, #fef9c3 24%, #fde68a 50%, #ffedd5 76%, #bae6fd 100%) !important;
+      border: 2px solid rgba(251, 191, 36, 0.88) !important;
+      box-shadow: 
+        0 25px 60px -15px rgba(180, 83, 9, 0.28),
+        0 0 45px rgba(251, 191, 36, 0.38),
+        inset 0 3px 10px rgba(255, 255, 255, 0.95) !important;
+    }
+
+    /* 左上角 300% 放大首頁星球壓底圖容器 (300% Giant Planet Top-Left Backdrop) */
+    .planet-backdrop-300-wrap {
+      position: absolute;
+      top: -210px;
+      left: -185px;
+      width: 820px;
+      height: 820px;
+      pointer-events: none;
+      user-select: none;
+      z-index: 1;
+      transform: rotate(-6deg);
+      transition: transform 0.6s ease, opacity 0.4s ease;
+    }
+    @media (min-width: 768px) {
+      .planet-backdrop-300-wrap {
+        top: -240px;
+        left: -210px;
+        width: 920px;
+        height: 920px;
+      }
+    }
+    /* 前景微透浮水印壓底層：讓左上角放大 300% 的星球輪廓在卡片邊緣依然清晰可辨，且不遮擋視訊 */
+    .planet-watermark-300-overlay {
+      position: absolute;
+      top: -210px;
+      left: -185px;
+      width: 820px;
+      height: 820px;
+      pointer-events: none;
+      user-select: none;
+      z-index: 25;
+      transform: rotate(-6deg);
+      mask-image: radial-gradient(circle at 28% 28%, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.12) 38%, transparent 66%);
+      -webkit-mask-image: radial-gradient(circle at 28% 28%, rgba(0, 0, 0, 0.24) 0%, rgba(0, 0, 0, 0.12) 38%, transparent 66%);
+    }
+    @media (min-width: 768px) {
+      .planet-watermark-300-overlay {
+        top: -240px;
+        left: -210px;
+        width: 920px;
+        height: 920px;
+      }
     }
 
     /* 頂欄與底欄：半透明星際琉璃果凍條 (Glass-Jelly Bar) */
     .jelly-glass-bar {
-      background: linear-gradient(180deg, rgba(30, 41, 59, 0.86) 0%, rgba(15, 23, 42, 0.92) 100%);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1.5px solid rgba(255, 255, 255, 0.2);
+      background: linear-gradient(180deg, rgba(30, 27, 75, 0.74) 0%, rgba(15, 23, 42, 0.82) 100%);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1.5px solid rgba(255, 255, 255, 0.22);
       box-shadow: 
         inset 0 2px 4px rgba(255, 255, 255, 0.28),
         inset 0 -3px 6px rgba(2, 6, 23, 0.55),
         0 10px 28px -6px rgba(0, 0, 0, 0.65),
-        0 0 20px rgba(56, 189, 248, 0.12);
+        0 0 20px rgba(217, 70, 239, 0.14);
+    }
+    .theme-planet-1 .jelly-glass-bar {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.68) 0%, rgba(254, 249, 195, 0.64) 100%) !important;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1.5px solid rgba(245, 158, 11, 0.6) !important;
+      box-shadow: 
+        inset 0 2px 5px rgba(255, 255, 255, 0.95),
+        inset 0 -3px 6px rgba(245, 158, 11, 0.16),
+        0 8px 24px -6px rgba(180, 83, 9, 0.18),
+        0 0 22px rgba(251, 191, 36, 0.25) !important;
     }
 
     /* 左側導師示範卡片：琥珀金光暈果凍艙 */
     .jelly-card-coach {
-      background: linear-gradient(165deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.96) 100%);
-      backdrop-filter: blur(16px);
+      background: linear-gradient(165deg, rgba(30, 27, 75, 0.76) 0%, rgba(15, 23, 42, 0.84) 100%);
+      backdrop-filter: blur(12px);
       border: 2px solid rgba(251, 191, 36, 0.55);
       box-shadow: 
         inset 0 2px 6px rgba(254, 240, 138, 0.35),
@@ -491,11 +560,20 @@
         0 0 38px rgba(245, 158, 11, 0.38),
         0 16px 36px -6px rgba(0, 0, 0, 0.75);
     }
+    .theme-planet-1 .jelly-card-coach {
+      background: linear-gradient(165deg, rgba(255, 255, 255, 0.68) 0%, rgba(254, 243, 199, 0.74) 100%) !important;
+      border: 2px solid rgba(245, 158, 11, 0.78) !important;
+      box-shadow: 
+        inset 0 2px 6px rgba(255, 255, 255, 0.95),
+        inset 0 -4px 10px rgba(245, 158, 11, 0.2),
+        0 0 28px rgba(251, 191, 36, 0.35),
+        0 14px 30px -6px rgba(180, 83, 9, 0.24) !important;
+    }
 
     /* 右側攝影機與火柴人舞台：冰晶藍光暈果凍艙 */
     .jelly-card-camera {
-      background: linear-gradient(165deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.96) 100%);
-      backdrop-filter: blur(16px);
+      background: linear-gradient(165deg, rgba(30, 41, 59, 0.82) 0%, rgba(15, 23, 42, 0.9) 100%);
+      backdrop-filter: blur(12px);
       border: 2px solid rgba(56, 189, 248, 0.55);
       box-shadow: 
         inset 0 2px 6px rgba(186, 230, 253, 0.35),
@@ -511,6 +589,15 @@
         0 0 42px rgba(56, 189, 248, 0.38),
         0 16px 36px -6px rgba(0, 0, 0, 0.75);
     }
+    .theme-planet-1 .jelly-card-camera {
+      background: linear-gradient(165deg, rgba(255, 255, 255, 0.72) 0%, rgba(224, 242, 254, 0.78) 100%) !important;
+      border: 2px solid rgba(56, 189, 248, 0.78) !important;
+      box-shadow: 
+        inset 0 2px 6px rgba(255, 255, 255, 0.95),
+        inset 0 -4px 10px rgba(14, 165, 233, 0.18),
+        0 0 30px rgba(56, 189, 248, 0.3),
+        0 14px 30px -6px rgba(3, 105, 161, 0.22) !important;
+    }
 
     /* 底部 KTV 歌詞大舞台果凍艙 */
     .jelly-lyric-stage {
@@ -520,6 +607,83 @@
         inset 0 2px 6px rgba(255, 255, 255, 0.22),
         inset 0 -3px 8px rgba(245, 158, 11, 0.15),
         0 0 22px rgba(245, 158, 11, 0.2);
+    }
+    .theme-planet-1 .jelly-lyric-stage {
+      background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.96) 0%, rgba(254, 249, 195, 0.92) 65%, rgba(253, 230, 138, 0.88) 100%) !important;
+      border: 2px solid rgba(245, 158, 11, 0.7) !important;
+      box-shadow: 
+        inset 0 2px 6px rgba(255, 255, 255, 0.98),
+        inset 0 -3px 8px rgba(245, 158, 11, 0.18),
+        0 4px 18px rgba(245, 158, 11, 0.22) !important;
+    }
+
+    /* ☀️ 第一顆星球晨光亮色系：內部文字、面板與控制項細節適配 */
+    .theme-planet-1 #room-song-title {
+      color: #78350f !important;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.95), 0 2px 10px rgba(251, 191, 36, 0.45) !important;
+    }
+    .theme-planet-1 #room-song-title span {
+      color: #b45309 !important;
+    }
+    .theme-planet-1 #room-album-badge {
+      background: rgba(251, 191, 36, 0.35) !important;
+      color: #78350f !important;
+      border-color: rgba(245, 158, 11, 0.65) !important;
+    }
+    .theme-planet-1 .coach-bar-top,
+    .theme-planet-1 .coach-bar-bottom {
+      background: rgba(254, 243, 199, 0.78) !important;
+      border-color: rgba(245, 158, 11, 0.45) !important;
+    }
+    .theme-planet-1 #coach-action-title {
+      background: rgba(255, 255, 255, 0.92) !important;
+      color: #92400e !important;
+      border-color: rgba(245, 158, 11, 0.6) !important;
+    }
+    .theme-planet-1 .coach-bar-bottom span:first-child {
+      color: #92400e !important;
+    }
+    .theme-planet-1 #next-action-text {
+      color: #c2410c !important;
+    }
+    .theme-planet-1 .camera-bar-top,
+    .theme-planet-1 #camera-bottom-bar {
+      background: rgba(240, 249, 255, 0.82) !important;
+      border-color: rgba(56, 189, 248, 0.45) !important;
+    }
+    .theme-planet-1 #motion-tip-text {
+      color: #0c4a6e !important;
+    }
+    .theme-planet-1 #camera-bottom-bar > span {
+      color: #0369a1 !important;
+    }
+    .theme-planet-1 #camera-container {
+      background: radial-gradient(circle at 22% 20%, #fef08a 0%, #7dd3fc 42%, #38bdf8 78%, #0284c7 100%) !important;
+    }
+    .theme-planet-1 #lyric-main {
+      color: #b45309 !important;
+      text-shadow: 0 1px 0 rgba(255, 255, 255, 0.95), 0 2px 12px rgba(251, 191, 36, 0.5) !important;
+    }
+    .theme-planet-1 #lyric-sub {
+      color: #1e293b !important;
+    }
+    .theme-planet-1 #time-current,
+    .theme-planet-1 #time-total {
+      color: #78350f !important;
+    }
+    .theme-planet-1 #time-slider {
+      background: rgba(251, 191, 36, 0.35) !important;
+      border-color: rgba(245, 158, 11, 0.55) !important;
+    }
+    .theme-planet-1 .header-pill-group {
+      background: rgba(254, 243, 199, 0.75) !important;
+      border-color: rgba(245, 158, 11, 0.45) !important;
+    }
+    .theme-planet-1 .header-pill-group span {
+      color: #0369a1 !important;
+    }
+    .theme-planet-1 .header-pill-group button:not(.jelly-btn-gold):not(.jelly-btn-cyan):not(.jelly-btn-amber):not(.jelly-btn-sky):not(.jelly-btn-emerald) {
+      color: #78350f !important;
     }
 
     /* 3D 光暈果凍按鈕共通彈跳與高光效果 */
@@ -633,31 +797,51 @@
         0 0 18px rgba(56, 189, 248, 0.5),
         0 6px 16px rgba(0, 0, 0, 0.5) !important;
     }
-
-    /* 星球單曲選單：光暈果凍曲目卡片 (Planet 1 & Planet 2) — 適度縮小懸浮放大倍率，避免壓到外圍邊框 */
-    .jelly-song-card-p1 {
-      background: linear-gradient(160deg, rgba(30, 41, 59, 0.88) 0%, rgba(15, 23, 42, 0.94) 100%);
-      backdrop-filter: blur(16px);
-      border: 2px solid rgba(251, 191, 36, 0.45);
+    /* 第一顆星球晨光亮色系下的次要果凍按鈕 (奶油晨光金按鈕) */
+    .theme-planet-1 .jelly-btn-dark,
+    .theme-planet-1 .jelly-btn-indigo {
+      background: linear-gradient(180deg, #ffffff 0%, #fef3c7 58%, #fde68a 100%);
+      color: #78350f;
+      border: 1.5px solid rgba(245, 158, 11, 0.65);
       box-shadow: 
-        inset 0 2px 5px rgba(255, 255, 255, 0.25),
-        inset 0 -4px 8px rgba(245, 158, 11, 0.15),
-        0 10px 24px -6px rgba(0, 0, 0, 0.65),
-        0 0 16px rgba(245, 158, 11, 0.15);
+        inset 0 2px 4px rgba(255, 255, 255, 0.95),
+        inset 0 -2px 5px rgba(217, 119, 6, 0.25),
+        0 4px 12px rgba(180, 83, 9, 0.16);
+    }
+    .theme-planet-1 .jelly-btn-dark:hover,
+    .theme-planet-1 .jelly-btn-indigo:hover {
+      color: #451a03;
+      border-color: rgba(245, 158, 11, 0.95);
+      box-shadow: 
+        inset 0 2px 5px rgba(255, 255, 255, 1),
+        0 0 18px rgba(251, 191, 36, 0.6),
+        0 6px 16px rgba(180, 83, 9, 0.24) !important;
+    }
+
+    /* 星球單曲選單：光暈果凍曲目卡片 (Planet 1 晨光亮色系 & Planet 2 星光狂歡系) — 適度縮小懸浮放大倍率，避免壓到外圍邊框 */
+    .jelly-song-card-p1 {
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.84) 0%, rgba(254, 249, 195, 0.8) 55%, rgba(255, 237, 213, 0.86) 100%);
+      backdrop-filter: blur(14px);
+      border: 2px solid rgba(245, 158, 11, 0.65);
+      box-shadow: 
+        inset 0 2px 6px rgba(255, 255, 255, 0.95),
+        inset 0 -4px 8px rgba(245, 158, 11, 0.16),
+        0 10px 24px -6px rgba(180, 83, 9, 0.2),
+        0 0 18px rgba(251, 191, 36, 0.22);
       transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.28s ease, border-color 0.28s ease !important;
     }
     .jelly-song-card-p1:hover {
       transform: translateY(-4px) scale(1.015) !important;
-      border-color: rgba(253, 224, 71, 0.95) !important;
+      border-color: rgba(245, 158, 11, 0.98) !important;
       box-shadow: 
-        inset 0 2px 6px rgba(255, 255, 255, 0.4),
-        inset 0 -4px 10px rgba(245, 158, 11, 0.3),
-        0 14px 28px -6px rgba(0, 0, 0, 0.75),
-        0 0 22px rgba(251, 191, 36, 0.48) !important;
+        inset 0 2px 8px rgba(255, 255, 255, 1),
+        inset 0 -4px 10px rgba(245, 158, 11, 0.28),
+        0 14px 28px -6px rgba(180, 83, 9, 0.3),
+        0 0 24px rgba(251, 191, 36, 0.5) !important;
     }
 
     .jelly-song-card-p2 {
-      background: linear-gradient(160deg, rgba(30, 27, 75, 0.88) 0%, rgba(15, 23, 42, 0.94) 100%);
+      background: linear-gradient(160deg, rgba(30, 27, 75, 0.84) 0%, rgba(15, 23, 42, 0.9) 100%);
       backdrop-filter: blur(16px);
       border: 2px solid rgba(232, 121, 249, 0.45);
       box-shadow: 
@@ -1304,27 +1488,37 @@
 
   <!-- ========================================================= -->
   <!-- 頁面 1-B：單一星球闖關選單 (Single Planet 10-Levels Hub)   -->
-  <!-- 採用首頁一致的「宇宙光暈果凍 (Cosmic Glowing Jelly)」風格   -->
+  <!-- 第一顆星球：晨光亮色系光暈果凍 / 第二顆星球：星光狂歡果凍    -->
+  <!-- 左上角壓底放大 300% 首頁星球設計                            -->
   <!-- ========================================================= -->
-  <div id="view-album-levels" class="hidden flex-1 flex flex-col p-3 sm:p-4 md:p-6 max-w-6xl mx-auto w-full h-[calc(100vh-1.5rem)] max-h-[calc(100vh-1.5rem)] rounded-3xl overflow-hidden jelly-cosmic-stage my-2 relative">
+  <div id="view-album-levels" class="hidden theme-planet-1 flex-1 flex flex-col p-3 sm:p-4 md:p-6 max-w-6xl mx-auto w-full h-[calc(100vh-1.5rem)] max-h-[calc(100vh-1.5rem)] rounded-3xl overflow-hidden jelly-cosmic-stage my-2 relative">
     
-    <!-- 宇宙背景星塵光暈裝飾 -->
-    <div class="pointer-events-none absolute -top-24 -left-24 w-96 h-96 rounded-full bg-amber-400/15 blur-3xl"></div>
-    <div class="pointer-events-none absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-fuchsia-500/15 blur-3xl"></div>
+    <!-- 左上角 300% 放大首頁星球壓底視覺層 (依當前星球自動切換晨光星球 / 派對星球) -->
+    <div class="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none z-0">
+      <div class="planet-backdrop-300-wrap">
+        <div id="levels-bg-planet-glow" class="absolute inset-8 rounded-full bg-gradient-to-br from-amber-400/50 via-yellow-300/35 to-orange-400/20 blur-3xl"></div>
+        <img id="levels-bg-planet-img" src="./images/ui/planet1_morning.png" alt="Planet Backdrop" class="w-full h-full object-contain opacity-55 glow-planet-morning">
+      </div>
+      <!-- 右下環境平衡柔和光島 -->
+      <div id="levels-bg-corner-glow" class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-sky-300/25 blur-3xl"></div>
+    </div>
 
     <!-- 返回雙星球母艦與星球標題列 (光暈果凍膠囊頂欄) -->
-    <header class="relative z-20 flex flex-wrap items-center justify-between gap-2 pb-3 sm:pb-4 border-b border-white/15 mb-3 sm:mb-4 shrink-0">
+    <header id="levels-header-bar" class="jelly-glass-bar rounded-2xl md:rounded-3xl px-3.5 py-2.5 sm:px-5 sm:py-3 relative z-20 flex flex-wrap items-center justify-between gap-2 mb-3 sm:mb-4 shrink-0">
       <div class="flex items-center gap-3">
         <button onclick="backToPlanetHub()" class="jelly-btn-indigo px-4 py-2 rounded-full text-xs md:text-sm font-black transition flex items-center gap-1.5 active:scale-95">
           ◀ 返回宇宙雙星
         </button>
-        <div>
-          <h2 id="album-view-title" class="text-lg md:text-xl font-black text-white flex items-center gap-2 drop-shadow-[0_2px_10px_rgba(251,191,36,0.45)]">
-            第一集：探索生活大冒險
-          </h2>
-          <p id="album-view-desc" class="text-xs text-sky-200/85 font-bold">
-            共 10 個趣味關卡 · 點選任一關卡出發跟跳！
-          </p>
+        <div class="flex items-center gap-2.5">
+          <img id="levels-header-planet-icon" src="./images/ui/planet1_morning.png" alt="Planet Icon" class="w-10 h-10 sm:w-11 sm:h-11 object-contain drop-shadow-md shrink-0">
+          <div>
+            <h2 id="album-view-title" class="text-lg md:text-xl font-black text-amber-950 flex items-center gap-2 drop-shadow-[0_1px_0_rgba(255,255,255,0.9)]">
+              ☀️ 第一集：探索生活大冒險
+            </h2>
+            <p id="album-view-desc" class="text-xs text-amber-800 font-bold">
+              共 10 個趣味關卡 · 點選任一關卡出發跟跳！
+            </p>
+          </div>
         </div>
       </div>
 
@@ -1347,18 +1541,31 @@
 
   <!-- ========================================================= -->
   <!-- 頁面 2：跳舞互動教室 (The Interactive Dance Classroom)       -->
-  <!-- 左側窄長型 9:16 引導卡片 (零側邊空白) + 右側高挑 16:9/4:3 攝影機舞台 -->
+  <!-- 第一顆星球：晨光亮色系光暈果凍 / 第二顆星球：星光狂歡果凍    -->
+  <!-- 左上角壓底放大 300% 首頁星球設計 + 窄長 9:16 引導 + 高挑攝影機 -->
   <!-- ========================================================= -->
-  <div id="view-dance" class="hidden flex-1 flex flex-col p-2 sm:p-3 md:p-3.5 max-w-6xl mx-auto w-full min-h-0 jelly-cosmic-stage rounded-3xl my-1 relative">
+  <div id="view-dance" class="hidden theme-planet-1 flex-1 flex flex-col p-2 sm:p-3 md:p-3.5 max-w-6xl mx-auto w-full min-h-0 jelly-cosmic-stage rounded-3xl my-1 relative">
     
-    <!-- 頂部與底部星雲果凍環境光 -->
-    <div class="pointer-events-none absolute -top-20 left-1/4 w-80 h-80 rounded-full bg-amber-400/12 blur-3xl"></div>
-    <div class="pointer-events-none absolute -bottom-20 right-1/4 w-80 h-80 rounded-full bg-cyan-400/12 blur-3xl"></div>
+    <!-- 🪐 左上角放大 300% 首頁星球壓底背景層 (底層高彩光暈壓底 + 前景左上角微透浮水印壓底，一眼辨識目前所在星球) -->
+    <div class="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none z-0">
+      <div class="planet-backdrop-300-wrap">
+        <div id="dance-bg-planet-glow" class="absolute inset-6 rounded-full bg-gradient-to-br from-amber-400/55 via-yellow-300/40 to-orange-400/25 blur-3xl"></div>
+        <img id="dance-bg-planet-img" src="./images/ui/planet1_morning.png" alt="Current Planet 300% Backdrop" class="w-full h-full object-contain opacity-65 glow-planet-morning">
+      </div>
+      <!-- 右下柔和環境光 -->
+      <div id="dance-bg-corner-glow" class="absolute -bottom-20 right-1/4 w-80 h-80 rounded-full bg-sky-400/20 blur-3xl"></div>
+    </div>
+    <!-- 左上角微透星球浮水印覆蓋層 (穿透卡片邊框，完全不影響影片與鏡頭畫面清晰度) -->
+    <div class="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none z-20">
+      <div class="planet-watermark-300-overlay">
+        <img id="dance-bg-planet-watermark" src="./images/ui/planet1_morning.png" alt="" class="w-full h-full object-contain">
+      </div>
+    </div>
 
     <!-- 教室頂欄：返回、3D主題徽章+歌曲名、火柴人皮膚、人數、得分、全螢幕 -->
-    <header class="jelly-glass-bar rounded-2xl md:rounded-3xl p-2 md:px-4 mb-2 flex items-center justify-between gap-2.5 overflow-x-auto allow-touch-scroll allow-touch-scroll-x touch-scroll-x min-h-[56px] md:min-h-[62px] shrink-0 no-scrollbar relative z-20" style="touch-action: pan-x !important; -webkit-overflow-scrolling: touch;">
+    <header class="jelly-glass-bar rounded-2xl md:rounded-3xl p-2 md:px-4 mb-2 flex items-center justify-between gap-2.5 overflow-x-auto allow-touch-scroll allow-touch-scroll-x touch-scroll-x min-h-[56px] md:min-h-[62px] shrink-0 no-scrollbar relative z-30" style="touch-action: pan-x !important; -webkit-overflow-scrolling: touch;">
       
-      <!-- 返回與曲名 (含專屬 3D 主題果凍小圖示) -->
+      <!-- 返回與曲名 (含專屬 3D 主題果凍小圖示 + 左上角當前星球小標章) -->
       <div class="flex items-center gap-2 md:gap-2.5 shrink-0">
         <button onclick="backToLobby()" class="jelly-btn-indigo px-3.5 py-1.5 rounded-2xl text-xs font-black transition flex items-center gap-1 active:scale-95 shrink-0">
           ◀ 返回選歌
@@ -1371,10 +1578,10 @@
               Morning Sunshine Hello
             </h2>
             <div class="flex items-center gap-1.5 mt-0.5">
-              <span id="room-album-badge" class="text-[10px] md:text-[11px] font-black text-amber-200 bg-amber-500/25 px-2 py-0.5 rounded-full border border-amber-300/40 shrink-0 shadow-xs">
-                第 1 集 #01
+              <span id="room-album-badge" class="text-[10px] md:text-[11px] font-black text-amber-200 bg-amber-500/25 px-2 py-0.5 rounded-full border border-amber-300/40 shrink-0 shadow-xs flex items-center gap-1">
+                ☀️ 晨光星球 · 第 1 集 #01
               </span>
-              <button onclick="togglePlaylistDrawer()" class="text-[10px] md:text-[11px] font-black text-cyan-200 bg-cyan-500/25 hover:bg-cyan-500/35 px-2.5 py-0.5 rounded-full border border-cyan-300/40 transition flex items-center gap-1 shrink-0 shadow-xs">
+              <button onclick="togglePlaylistDrawer()" class="jelly-btn-cyan text-[10px] md:text-[11px] font-black px-2.5 py-0.5 rounded-full transition flex items-center gap-1 shrink-0">
                 📜 全專輯歌單 (10首)
               </button>
             </div>
@@ -1385,7 +1592,7 @@
       <!-- 中間：火柴人外觀切換與人數模式 -->
       <div class="flex items-center gap-2 shrink-0">
         <!-- 火柴人頭部造型切換 (人物類 / 野生動物類 / 農場動物類) -->
-        <div class="flex items-center bg-slate-950/55 p-1 rounded-2xl border border-white/15 shadow-inner shrink-0">
+        <div class="header-pill-group flex items-center bg-slate-950/55 p-1 rounded-2xl border border-white/15 shadow-inner shrink-0">
           <button id="theme-btn-human" onclick="setHeadTheme('human')" class="px-2 md:px-2.5 py-1 rounded-xl text-xs font-black jelly-btn-gold transition" title="P1小男孩 · P2小女孩 · P3老爺爺">
             🧑 人物類
           </button>
@@ -1398,7 +1605,7 @@
         </div>
 
         <!-- 人數模式切換 (1人 / 2人 / 3人 智能自動感應) -->
-        <div class="flex items-center bg-slate-950/55 p-1 rounded-2xl border border-white/15 shadow-inner shrink-0" title="鏡頭會根據入鏡人數自動切換 (1~3人)，亦可手動點擊鎖定">
+        <div class="header-pill-group flex items-center bg-slate-950/55 p-1 rounded-2xl border border-white/15 shadow-inner shrink-0" title="鏡頭會根據入鏡人數自動切換 (1~3人)，亦可手動點擊鎖定">
           <span class="text-[10px] font-bold text-cyan-200/90 px-1.5 hidden md:inline-flex items-center gap-1">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>自動感應:
           </span>
@@ -1447,7 +1654,7 @@
       <!-- 【左半屏：修長直式 9:16 導師引導卡片 (寬度精準貼合 9:16 畫面，消除左右空白)】 -->
       <section class="relative jelly-card-coach rounded-3xl flex flex-col justify-between overflow-hidden w-[240px] sm:w-[256px] lg:w-[248px] xl:w-[264px] h-[390px] sm:h-[430px] lg:h-[510px] xl:h-[540px] mx-auto lg:mx-0 shrink-0">
         <!-- 頂欄狀態 -->
-        <div class="px-2.5 py-1.5 z-20 flex items-center justify-between gap-1 border-b border-amber-300/25 bg-slate-950/40 shrink-0">
+        <div class="coach-bar-top px-2.5 py-1.5 z-20 flex items-center justify-between gap-1 border-b border-amber-300/25 bg-slate-950/40 shrink-0">
           <span class="jelly-btn-gold text-[10px] font-black px-2 py-0.5 rounded-full flex items-center gap-1 shrink-0">
             <span class="w-1.5 h-1.5 rounded-full bg-slate-950 animate-ping"></span>
             動作引導
@@ -1458,8 +1665,8 @@
         </div>
 
         <!-- 動作示範播放器 (滿版貼合修長卡片，零側邊多餘空白) -->
-        <div class="flex-1 relative flex items-center justify-center p-1 overflow-hidden min-h-0 w-full">
-          <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.65),0_0_18px_rgba(251,191,36,0.25)] border border-amber-300/45 bg-slate-950 flex items-center justify-center">
+        <div class="flex-1 relative flex items-center justify-center p-1 overflow-hidden min-h-0 w-full z-30">
+          <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.45),0_0_18px_rgba(251,191,36,0.25)] border border-amber-300/55 bg-slate-950 flex items-center justify-center">
             <!-- 雙緩衝無縫交替播放器 -->
             <video id="coach-video-a" 
                    src="./videos/T1/a1_s01_01_stretch.mp4" 
@@ -1488,7 +1695,7 @@
         </div>
 
         <!-- 底部動作進度提示 -->
-        <div class="bg-slate-950/45 border-t border-amber-300/25 px-2.5 py-1.5 flex items-center justify-between text-[10px] shrink-0">
+        <div class="coach-bar-bottom bg-slate-950/45 border-t border-amber-300/25 px-2.5 py-1.5 flex items-center justify-between text-[10px] shrink-0">
           <span class="font-bold text-amber-200/80 shrink-0">下個動作：</span>
           <span id="next-action-text" class="font-black text-amber-300 truncate">刷牙微笑大步走 ➜</span>
         </div>
@@ -1498,7 +1705,7 @@
       <section id="camera-section" class="relative jelly-card-camera rounded-3xl overflow-hidden flex flex-col justify-between flex-1 min-w-0 h-[380px] sm:h-[440px] lg:h-[510px] xl:h-[540px] transition-all duration-300">
         
         <!-- 頂欄：自適應整合狀態列 (手機端單行優雅對齊，絕不重疊遮擋視訊) -->
-        <div class="p-2 md:p-2.5 px-3 z-30 flex flex-wrap items-center justify-between gap-1.5 border-b border-cyan-300/25 bg-slate-950/40 shrink-0">
+        <div class="camera-bar-top p-2 md:p-2.5 px-3 z-30 flex flex-wrap items-center justify-between gap-1.5 border-b border-cyan-300/25 bg-slate-950/40 shrink-0">
           <div class="flex items-center gap-2 min-w-0">
             <button id="btn-camera" onclick="initRealCamera()" class="jelly-btn-cyan px-3 sm:px-3.5 py-1 rounded-full text-[11px] md:text-xs font-black transition flex items-center gap-1 shrink-0 active:scale-95">
               📷 開啟攝影機
@@ -3049,9 +3256,13 @@
       }
 
       // mode === 'card' (關卡選歌卡片專屬 3D 光暈果凍徽章舞台 — 適度精巧化尺寸)
+      const isP1Song = song.id && song.id.startsWith('a1_');
+      const stageBg = isP1Song
+        ? `radial-gradient(circle at 50% 35%, ${cfg.glow} 0%, rgba(254, 249, 195, 0.78) 65%, rgba(255, 237, 213, 0.88) 100%)`
+        : `radial-gradient(circle at 50% 35%, ${cfg.glow} 0%, rgba(15, 23, 42, 0.8) 80%)`;
       return `
         <div class="song-emblem-stage w-full h-28 rounded-xl flex flex-col items-center justify-center mb-2.5 overflow-hidden relative group-hover:scale-[1.01] transition-transform"
-             style="background: radial-gradient(circle at 50% 35%, ${cfg.glow} 0%, rgba(15, 23, 42, 0.8) 80%);">
+             style="background: ${stageBg};">
           <!-- 背景星芒光暈 -->
           <div class="pointer-events-none absolute w-24 h-24 rounded-full blur-xl opacity-75" style="background: ${cfg.grad};"></div>
           <!-- 立體果凍核心球 + 雙衛星小圖示 -->
@@ -3065,11 +3276,71 @@
             <span class="song-emblem-sat sat-2 -bottom-1 -left-1.5 w-6 h-6 text-xs">${cfg.sat2}</span>
           </div>
           <!-- 底部微縮主題膠囊標籤 -->
-          <span class="relative z-10 mt-1 px-2 py-0.5 rounded-full bg-slate-950/65 border border-white/25 text-[8px] font-black tracking-widest text-amber-200 uppercase shadow">
+          <span class="relative z-10 mt-1 px-2 py-0.5 rounded-full bg-slate-950/70 border border-white/30 text-[8px] font-black tracking-widest text-amber-200 uppercase shadow">
             ${cfg.label}
           </span>
         </div>
       `;
+    }
+
+    // 🪐 統一套用星球專屬主題色系 (Planet 1 晨光亮色系 vs Planet 2 星光狂歡系) 與左上角 300% 放大首頁星球壓底視覺
+    function applyPlanetThemeToViews(albumId) {
+      const isP1 = albumId === 'album_1';
+      const planetImgSrc = isP1 ? './images/ui/planet1_morning.png' : './images/ui/planet2_groove.png';
+      const planetGlowClass = isP1 ? 'glow-planet-morning' : 'glow-planet-groove';
+
+      // 1. 切換容器主題 class (.theme-planet-1 / .theme-planet-2)
+      const drawerEl = document.getElementById('album-playlist-drawer');
+      [viewAlbumLevels, viewDance, drawerEl].forEach(el => {
+        if (!el) return;
+        el.classList.toggle('theme-planet-1', isP1);
+        el.classList.toggle('theme-planet-2', !isP1);
+      });
+
+      // 2. 更新左上角 300% 放大首頁星球壓底圖與光暈 (關卡頁 + 單曲播放頁)
+      const levelsPlanetImg = document.getElementById('levels-bg-planet-img');
+      const levelsPlanetGlow = document.getElementById('levels-bg-planet-glow');
+      const levelsCornerGlow = document.getElementById('levels-bg-corner-glow');
+      const levelsHeaderIcon = document.getElementById('levels-header-planet-icon');
+      if (levelsPlanetImg) {
+        levelsPlanetImg.src = planetImgSrc;
+        levelsPlanetImg.className = `w-full h-full object-contain ${isP1 ? 'opacity-60' : 'opacity-48'} ${planetGlowClass}`;
+      }
+      if (levelsPlanetGlow) {
+        levelsPlanetGlow.className = isP1
+          ? 'absolute inset-8 rounded-full bg-gradient-to-br from-amber-400/55 via-yellow-300/40 to-orange-400/25 blur-3xl'
+          : 'absolute inset-8 rounded-full bg-gradient-to-br from-fuchsia-600/45 via-purple-500/35 to-sky-400/20 blur-3xl';
+      }
+      if (levelsCornerGlow) {
+        levelsCornerGlow.className = isP1
+          ? 'absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-sky-300/30 blur-3xl'
+          : 'absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-fuchsia-500/20 blur-3xl';
+      }
+      if (levelsHeaderIcon) {
+        levelsHeaderIcon.src = planetImgSrc;
+      }
+
+      const dancePlanetImg = document.getElementById('dance-bg-planet-img');
+      const dancePlanetWatermark = document.getElementById('dance-bg-planet-watermark');
+      const dancePlanetGlow = document.getElementById('dance-bg-planet-glow');
+      const danceCornerGlow = document.getElementById('dance-bg-corner-glow');
+      if (dancePlanetImg) {
+        dancePlanetImg.src = planetImgSrc;
+        dancePlanetImg.className = `w-full h-full object-contain ${isP1 ? 'opacity-65' : 'opacity-50'} ${planetGlowClass}`;
+      }
+      if (dancePlanetWatermark) {
+        dancePlanetWatermark.src = planetImgSrc;
+      }
+      if (dancePlanetGlow) {
+        dancePlanetGlow.className = isP1
+          ? 'absolute inset-6 rounded-full bg-gradient-to-br from-amber-400/60 via-yellow-300/45 to-orange-400/25 blur-3xl'
+          : 'absolute inset-6 rounded-full bg-gradient-to-br from-fuchsia-600/50 via-purple-500/35 to-sky-400/20 blur-3xl';
+      }
+      if (danceCornerGlow) {
+        danceCornerGlow.className = isP1
+          ? 'absolute -bottom-20 right-1/4 w-80 h-80 rounded-full bg-sky-300/25 blur-3xl'
+          : 'absolute -bottom-20 right-1/4 w-80 h-80 rounded-full bg-fuchsia-500/18 blur-3xl';
+      }
     }
 
     // 打開單一星球的 10 關選單
@@ -3082,20 +3353,27 @@
       stopSpaceAmbient(0.4);
       stopHomeBgm(0.4);
 
+      applyPlanetThemeToViews(albumId);
+
       const aTitle = document.getElementById('album-view-title');
       const aDesc = document.getElementById('album-view-desc');
       if (aTitle) {
         if (album.id === 'album_1') {
-          aTitle.innerHTML = `<span class="text-amber-300">☀️ Planet 1:</span> ${album.zhTitle}`;
+          aTitle.className = "text-lg md:text-xl font-black text-amber-950 flex items-center gap-2 drop-shadow-[0_1px_0_rgba(255,255,255,0.95)]";
+          aTitle.innerHTML = `<span class="text-amber-600">☀️ Planet 1:</span> ${album.zhTitle}`;
         } else {
+          aTitle.className = "text-lg md:text-xl font-black text-white flex items-center gap-2 drop-shadow-[0_2px_10px_rgba(217,70,239,0.5)]";
           aTitle.innerHTML = `<span class="text-fuchsia-300">🪐 Planet 2:</span> ${album.zhTitle}`;
         }
       }
-      if (aDesc) aDesc.innerText = `${album.subtitle} · 共 10 個趣味動態關卡`;
+      if (aDesc) {
+        aDesc.className = album.id === 'album_1'
+          ? "text-xs text-amber-800 font-bold"
+          : "text-xs text-sky-200/85 font-bold";
+        aDesc.innerText = `${album.subtitle} · 共 10 個趣味動態關卡`;
+      }
 
-      // 依星球切換專屬宇宙光暈果凍背景
       if (viewAlbumLevels) {
-        viewAlbumLevels.className = "flex-1 flex flex-col p-3 sm:p-4 md:p-6 max-w-6xl mx-auto w-full min-h-0 lg:h-[calc(100vh-1.5rem)] lg:max-h-[calc(100vh-1.5rem)] rounded-3xl overflow-hidden jelly-cosmic-stage my-2 relative";
         viewAlbumLevels.classList.remove('hidden');
       }
 
@@ -3180,6 +3458,7 @@
     function switchAlbum(albumId) {
       if (!window.KAI_ALBUM_DATABASE || !window.KAI_ALBUM_DATABASE[albumId]) return;
       currentAlbumId = albumId;
+      applyPlanetThemeToViews(albumId);
       renderLobbySongs(albumId);
     }
 
@@ -3199,14 +3478,24 @@
           : '<span class="jelly-btn-cyan text-[10px] font-black px-2 py-0.5 rounded-full">📸 動作引導寫真</span>';
 
         const cardThemeClass = isP1 
-          ? `jelly-song-card-p1 ${isCurrentActive ? 'ring-2 ring-amber-400/70 border-amber-300' : ''}`
+          ? `jelly-song-card-p1 ${isCurrentActive ? 'ring-2 ring-amber-500/80 border-amber-500' : ''}`
           : `jelly-song-card-p2 ${isCurrentActive ? 'ring-2 ring-fuchsia-400/70 border-fuchsia-300' : ''}`;
 
         const btnClass = isP1 ? 'jelly-btn-gold' : 'jelly-btn-cyan';
 
         const numberBadge = isP1
-          ? 'bg-amber-400/90 text-slate-950 border-amber-200'
+          ? 'bg-amber-400 text-slate-950 border-amber-200'
           : 'bg-fuchsia-500/90 text-white border-fuchsia-300';
+
+        const titleColorClass = isP1
+          ? 'text-amber-950 group-hover:text-orange-600'
+          : 'text-white group-hover:text-amber-300';
+
+        const zhColorClass = isP1 ? 'text-amber-700' : 'text-fuchsia-300';
+        const tagColorClass = isP1 ? 'text-sky-700' : 'text-sky-200';
+        const descColorClass = isP1 ? 'text-slate-700' : 'text-slate-200/85';
+        const footerBorderClass = isP1 ? 'border-amber-500/25' : 'border-white/15';
+        const metaColorClass = isP1 ? 'text-amber-900/85' : 'text-sky-200/80';
 
         return `
           <div onclick="selectSong('${song.id}')" 
@@ -3222,19 +3511,19 @@
 
             <div>
               ${renderSongThemeEmblem(song, 'card')}
-              <h4 class="font-black text-sm sm:text-base text-white group-hover:text-amber-300 transition-colors line-clamp-1 drop-shadow-xs">
+              <h4 class="font-black text-sm sm:text-base ${titleColorClass} transition-colors line-clamp-1 drop-shadow-xs">
                 ${song.title}
               </h4>
-              <p class="text-[11px] sm:text-xs font-black ${isP1 ? 'text-amber-300' : 'text-fuchsia-300'} mt-0.5 flex items-center gap-1">
-                <span class="truncate">${song.zhTitle}</span> · <span class="opacity-90 font-bold text-sky-200 shrink-0">${song.tag}</span>
+              <p class="text-[11px] sm:text-xs font-black ${zhColorClass} mt-0.5 flex items-center gap-1">
+                <span class="truncate">${song.zhTitle}</span> · <span class="opacity-90 font-bold ${tagColorClass} shrink-0">${song.tag}</span>
               </p>
-              <p class="text-[11px] text-slate-200/85 mt-1.5 line-clamp-2 leading-relaxed font-medium">
+              <p class="text-[11px] ${descColorClass} mt-1.5 line-clamp-2 leading-relaxed font-medium">
                 ${song.description}
               </p>
             </div>
 
-            <div class="mt-3 pt-2.5 border-t border-white/15 flex items-center justify-between">
-              <span class="text-[11px] text-sky-200/80 font-bold">⏱ 2:00 · ${song.difficulty}</span>
+            <div class="mt-3 pt-2.5 border-t ${footerBorderClass} flex items-center justify-between">
+              <span class="text-[11px] ${metaColorClass} font-bold">⏱ 2:00 · ${song.difficulty}</span>
               <button class="${btnClass} text-xs font-black px-3.5 py-1.5 rounded-xl transition-all active:scale-95 flex items-center gap-1">
                 <span>▶</span> 開始跳
               </button>
@@ -3286,45 +3575,64 @@
       }
     }
 
-    // 渲染歌單抽屜 (採用光暈果凍深色玻璃卡片 + 3D 主題示意小圖示)
+    // 渲染歌單抽屜 (依星球自動適配晨光亮色系或深邃星光狂歡系 + 3D 主題示意小圖示)
     function renderPlaylistDrawer() {
       const listContainer = document.getElementById('drawer-song-list');
       const dTitle = document.getElementById('drawer-album-title');
       const dSub = document.getElementById('drawer-album-subtitle');
       if (!listContainer || !window.KAI_ALBUM_DATABASE) return;
 
+      const isP1 = currentAlbumId === 'album_1';
       const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
-      if (dTitle) dTitle.innerText = album.zhTitle;
-      if (dSub) dSub.innerText = `${isAlbumContinuousPlay ? '全專輯連播開啟中' : '單曲模式'} · 共 ${album.songs.length} 首曲目`;
+      if (dTitle) {
+        dTitle.innerText = album.zhTitle;
+        dTitle.className = isP1 ? "font-black text-base text-amber-950 leading-tight" : "font-black text-base text-white leading-tight drop-shadow";
+      }
+      if (dSub) {
+        dSub.innerText = `${isAlbumContinuousPlay ? '全專輯連播開啟中' : '單曲模式'} · 共 ${album.songs.length} 首曲目`;
+        dSub.className = isP1 ? "text-xs text-amber-800 font-bold" : "text-xs text-sky-200/80 font-bold";
+      }
 
       updateLoopModeUI();
 
       listContainer.innerHTML = album.songs.map(song => {
         const isCurrent = song.id === currentSongKey;
+        const rowClass = isP1
+          ? (isCurrent
+              ? 'bg-amber-300/60 border-amber-500 shadow-[0_4px_16px_rgba(245,158,11,0.3)]'
+              : 'bg-white/75 border-amber-400/40 hover:bg-white/95 hover:border-amber-500/70')
+          : (isCurrent
+              ? 'bg-amber-500/20 border-amber-300/60 shadow-[0_0_20px_rgba(251,191,36,0.25)]'
+              : 'bg-slate-900/60 border-white/15 hover:bg-slate-800/80 hover:border-white/30');
+        const titleClass = isP1
+          ? (isCurrent ? 'text-orange-700' : 'text-amber-950')
+          : (isCurrent ? 'text-amber-300' : 'text-white');
+        const subClass = isP1 ? 'text-amber-800/90' : 'text-sky-200/80';
+
         return `
           <div onclick="selectSong('${song.id}')" 
-               class="p-3 rounded-2xl flex items-center justify-between transition-all cursor-pointer border ${isCurrent ? 'bg-amber-500/20 border-amber-300/60 shadow-[0_0_20px_rgba(251,191,36,0.25)]' : 'bg-slate-900/60 border-white/15 hover:bg-slate-800/80 hover:border-white/30'}">
+               class="p-3 rounded-2xl flex items-center justify-between transition-all cursor-pointer border ${rowClass}">
             <div class="flex items-center gap-3 min-w-0">
               ${renderSongThemeEmblem(song, 'drawer')}
               <div class="min-w-0">
                 <div class="flex items-center gap-1.5">
-                  <span class="text-[10px] font-black px-1.5 py-0.5 rounded-md ${isCurrent ? 'bg-amber-400 text-slate-950' : 'bg-white/10 text-sky-200'}">#${String(song.trackNumber).padStart(2, '0')}</span>
-                  <h4 class="text-xs md:text-sm font-black ${isCurrent ? 'text-amber-300' : 'text-white'} truncate">
+                  <span class="text-[10px] font-black px-1.5 py-0.5 rounded-md ${isCurrent ? 'bg-amber-400 text-slate-950' : (isP1 ? 'bg-amber-100 text-amber-900' : 'bg-white/10 text-sky-200')}">#${String(song.trackNumber).padStart(2, '0')}</span>
+                  <h4 class="text-xs md:text-sm font-black ${titleClass} truncate">
                     ${song.title}
                   </h4>
                 </div>
-                <p class="text-[11px] text-sky-200/80 font-bold mt-0.5 truncate">${song.zhTitle} · ${song.tag}</p>
+                <p class="text-[11px] ${subClass} font-bold mt-0.5 truncate">${song.zhTitle} · ${song.tag}</p>
               </div>
             </div>
             <div class="flex items-center gap-2 shrink-0 ml-2">
               ${isCurrent ? `
                 <div class="flex items-end gap-0.5 h-4 px-2">
-                  <span class="w-1 bg-amber-400 rounded-full wave-bar-1"></span>
-                  <span class="w-1 bg-amber-400 rounded-full wave-bar-2"></span>
-                  <span class="w-1 bg-amber-400 rounded-full wave-bar-3"></span>
+                  <span class="w-1 bg-amber-500 rounded-full wave-bar-1"></span>
+                  <span class="w-1 bg-amber-500 rounded-full wave-bar-2"></span>
+                  <span class="w-1 bg-amber-500 rounded-full wave-bar-3"></span>
                 </div>
               ` : `
-                <span class="text-[11px] text-sky-200/60 font-mono">2:00</span>
+                <span class="text-[11px] ${isP1 ? 'text-amber-800/70' : 'text-sky-200/60'} font-mono">2:00</span>
                 <span class="w-7 h-7 rounded-xl jelly-btn-gold flex items-center justify-center text-xs font-black">▶</span>
               `}
             </div>
@@ -3410,12 +3718,13 @@
         } catch(e) {}
       }
 
-      // 若該曲屬於特定專輯，更新 currentAlbumId
+      // 若該曲屬於特定專輯，更新 currentAlbumId 並同步套用該星球的色系與左上角 300% 壓底星球
       if (song.albumId && song.albumId !== currentAlbumId) {
         currentAlbumId = song.albumId;
       }
+      applyPlanetThemeToViews(currentAlbumId);
 
-      // 2. 更新單曲教室頂欄的 3D 主題果凍小圖示與歌名
+      // 2. 更新單曲教室頂欄的 3D 主題果凍小圖示、左上角所屬星球標章與歌名
       const roomEmblemEl = document.getElementById('room-song-emblem');
       if (roomEmblemEl) {
         roomEmblemEl.innerHTML = renderSongThemeEmblem(song, 'header');
@@ -3423,7 +3732,10 @@
       roomSongTitle.innerHTML = `${song.title} <span class="text-xs md:text-sm font-bold text-amber-200/90 hidden sm:inline">· ${song.zhTitle || ''}</span>`;
       const albumBadge = document.getElementById('room-album-badge');
       if (albumBadge) {
-        albumBadge.innerText = `${currentAlbumId === 'album_1' ? '第 1 集' : '第 2 集'} #${String(song.trackNumber || 1).padStart(2, '0')}`;
+        const isP1 = currentAlbumId === 'album_1';
+        const badgePlanetImg = isP1 ? './images/ui/planet1_morning.png' : './images/ui/planet2_groove.png';
+        const badgePlanetName = isP1 ? '晨光星球 · 第 1 集' : '派對星球 · 第 2 集';
+        albumBadge.innerHTML = `<img src="${badgePlanetImg}" alt="" class="w-4 h-4 object-contain inline-block shrink-0"> <span>${badgePlanetName} #${String(song.trackNumber || 1).padStart(2, '0')}</span>`;
       }
 
       // 設定音檔路徑但暫不播放
