@@ -14,7 +14,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
   <!-- KaiDance 完整多專輯音樂與動作資料庫 (Album 1 十首全曲 & Album 2 搶先體驗) -->
-  <script src="./album_data.js?v=20261016_1610"></script>
+  <script src="./album_data.js?v=20261016_1640"></script>
   <style>
     @keyframes bounce-slow {
       0%, 100% { transform: translateY(0); }
@@ -536,7 +536,7 @@
       transform: scale(0.96) translateY(1px) !important;
     }
 
-    .jelly-btn-amber {
+    .jelly-btn-amber, .jelly-btn-gold {
       background: linear-gradient(180deg, #fde047 0%, #f59e0b 55%, #d97706 100%);
       color: #0f172a;
       border: 1.5px solid rgba(254, 249, 195, 0.9);
@@ -545,7 +545,7 @@
         inset 0 -3px 5px rgba(180, 83, 9, 0.45),
         0 4px 16px rgba(245, 158, 11, 0.5);
     }
-    .jelly-btn-amber:hover {
+    .jelly-btn-amber:hover, .jelly-btn-gold:hover {
       box-shadow: 
         inset 0 2px 5px rgba(255, 255, 255, 0.95),
         0 0 24px rgba(251, 191, 36, 0.85),
@@ -568,7 +568,7 @@
         0 6px 20px rgba(16, 185, 129, 0.65) !important;
     }
 
-    .jelly-btn-sky {
+    .jelly-btn-sky, .jelly-btn-cyan {
       background: linear-gradient(180deg, #7dd3fc 0%, #0ea5e9 55%, #0284c7 100%);
       color: #082f49;
       border: 1.5px solid rgba(224, 242, 254, 0.9);
@@ -577,7 +577,7 @@
         inset 0 -3px 5px rgba(3, 105, 161, 0.45),
         0 4px 16px rgba(14, 165, 233, 0.5);
     }
-    .jelly-btn-sky:hover {
+    .jelly-btn-sky:hover, .jelly-btn-cyan:hover {
       box-shadow: 
         inset 0 2px 5px rgba(255, 255, 255, 0.95),
         0 0 24px rgba(56, 189, 248, 0.85),
@@ -616,7 +616,7 @@
         0 6px 20px rgba(244, 63, 94, 0.65) !important;
     }
 
-    .jelly-btn-dark {
+    .jelly-btn-dark, .jelly-btn-indigo {
       background: linear-gradient(180deg, rgba(51, 65, 85, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);
       color: #e2e8f0;
       border: 1.5px solid rgba(148, 163, 184, 0.45);
@@ -625,7 +625,7 @@
         inset 0 -2px 5px rgba(0, 0, 0, 0.5),
         0 4px 12px rgba(0, 0, 0, 0.4);
     }
-    .jelly-btn-dark:hover {
+    .jelly-btn-dark:hover, .jelly-btn-indigo:hover {
       color: #ffffff;
       border-color: rgba(56, 189, 248, 0.8);
       box-shadow: 
@@ -634,7 +634,7 @@
         0 6px 16px rgba(0, 0, 0, 0.5) !important;
     }
 
-    /* 星球單曲選單：光暈果凍曲目卡片 (Planet 1 & Planet 2) */
+    /* 星球單曲選單：光暈果凍曲目卡片 (Planet 1 & Planet 2) — 適度縮小懸浮放大倍率，避免壓到外圍邊框 */
     .jelly-song-card-p1 {
       background: linear-gradient(160deg, rgba(30, 41, 59, 0.88) 0%, rgba(15, 23, 42, 0.94) 100%);
       backdrop-filter: blur(16px);
@@ -642,19 +642,18 @@
       box-shadow: 
         inset 0 2px 5px rgba(255, 255, 255, 0.25),
         inset 0 -4px 8px rgba(245, 158, 11, 0.15),
-        0 12px 28px -6px rgba(0, 0, 0, 0.65),
-        0 0 18px rgba(245, 158, 11, 0.15);
-      transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.32s ease, border-color 0.32s ease !important;
+        0 10px 24px -6px rgba(0, 0, 0, 0.65),
+        0 0 16px rgba(245, 158, 11, 0.15);
+      transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.28s ease, border-color 0.28s ease !important;
     }
     .jelly-song-card-p1:hover {
-      transform: translateY(-7px) scale(1.025) !important;
+      transform: translateY(-4px) scale(1.015) !important;
       border-color: rgba(253, 224, 71, 0.95) !important;
       box-shadow: 
         inset 0 2px 6px rgba(255, 255, 255, 0.4),
         inset 0 -4px 10px rgba(245, 158, 11, 0.3),
-        0 18px 36px -6px rgba(0, 0, 0, 0.75),
-        0 0 32px rgba(251, 191, 36, 0.55),
-        0 0 60px rgba(245, 158, 11, 0.25) !important;
+        0 14px 28px -6px rgba(0, 0, 0, 0.75),
+        0 0 22px rgba(251, 191, 36, 0.48) !important;
     }
 
     .jelly-song-card-p2 {
@@ -664,23 +663,35 @@
       box-shadow: 
         inset 0 2px 5px rgba(255, 255, 255, 0.25),
         inset 0 -4px 8px rgba(217, 70, 239, 0.15),
-        0 12px 28px -6px rgba(0, 0, 0, 0.65),
-        0 0 18px rgba(217, 70, 239, 0.15);
-      transition: transform 0.32s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.32s ease, border-color 0.32s ease !important;
+        0 10px 24px -6px rgba(0, 0, 0, 0.65),
+        0 0 16px rgba(217, 70, 239, 0.15);
+      transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.28s ease, border-color 0.28s ease !important;
     }
     .jelly-song-card-p2:hover {
-      transform: translateY(-7px) scale(1.025) !important;
+      transform: translateY(-4px) scale(1.015) !important;
       border-color: rgba(244, 114, 182, 0.95) !important;
       box-shadow: 
         inset 0 2px 6px rgba(255, 255, 255, 0.4),
         inset 0 -4px 10px rgba(217, 70, 239, 0.3),
-        0 18px 36px -6px rgba(0, 0, 0, 0.75),
-        0 0 32px rgba(244, 114, 182, 0.55),
-        0 0 60px rgba(217, 70, 239, 0.28) !important;
+        0 14px 28px -6px rgba(0, 0, 0, 0.75),
+        0 0 22px rgba(244, 114, 182, 0.48) !important;
     }
 
     /* 每一首歌專屬 3D 果凍徽章小圖示 (Song Theme Jelly Emblem) */
+    .song-emblem-stage {
+      border: 1.5px solid rgba(255, 255, 255, 0.18);
+      box-shadow: inset 0 2px 8px rgba(255, 255, 255, 0.18), inset 0 -4px 10px rgba(0, 0, 0, 0.45);
+    }
+    .song-emblem-orbit {
+      position: absolute;
+      inset: -4px;
+      border-radius: 9999px;
+      border: 1.5px dashed rgba(254, 240, 138, 0.65);
+      animation: cd-spin-smooth 12s linear infinite;
+      pointer-events: none;
+    }
     .song-emblem-orb {
+      position: relative;
       box-shadow: 
         inset 0 4px 8px rgba(255, 255, 255, 0.85),
         inset 0 -6px 12px rgba(0, 0, 0, 0.35),
@@ -688,25 +699,42 @@
         0 0 22px rgba(255, 255, 255, 0.3);
       transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
     }
+    .song-emblem-orb::before {
+      content: "";
+      position: absolute;
+      top: 4px;
+      left: 16%;
+      width: 68%;
+      height: 30%;
+      border-radius: 9999px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.75) 0%, rgba(255,255,255,0.05) 100%);
+      pointer-events: none;
+    }
     .group:hover .song-emblem-orb {
-      transform: scale(1.12) rotate(-3deg) translateY(-3px);
+      transform: scale(1.09) rotate(-3deg) translateY(-2px);
       box-shadow: 
         inset 0 4px 10px rgba(255, 255, 255, 0.95),
         inset 0 -6px 12px rgba(0, 0, 0, 0.3),
         0 14px 28px -4px rgba(0, 0, 0, 0.6),
-        0 0 32px rgba(255, 255, 255, 0.65);
+        0 0 28px rgba(255, 255, 255, 0.6);
     }
-    .song-emblem-sat-1 {
-      transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1);
+    .song-emblem-sat {
+      position: absolute;
+      border-radius: 9999px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1.5px solid rgba(255, 255, 255, 0.55);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.45), inset 0 1px 2px rgba(255,255,255,0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 20;
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
-    .group:hover .song-emblem-sat-1 {
-      transform: translate(5px, -5px) scale(1.18) rotate(12deg);
+    .group:hover .song-emblem-sat.sat-1 {
+      transform: translate(3px, -3px) scale(1.14) rotate(10deg);
     }
-    .song-emblem-sat-2 {
-      transition: transform 0.38s cubic-bezier(0.34, 1.56, 0.64, 1);
-    }
-    .group:hover .song-emblem-sat-2 {
-      transform: translate(-5px, 5px) scale(1.18) rotate(-12deg);
+    .group:hover .song-emblem-sat.sat-2 {
+      transform: translate(-3px, 3px) scale(1.14) rotate(-10deg);
     }
 
     input[type=range]::-webkit-slider-thumb {
@@ -820,15 +848,16 @@
       }
     }
 
-    /* 電腦版 Chrome 與大螢幕平板橫向視圖 (>= 1024px)：鎖定飽滿雙欄比例，絕不壓縮變形 */
+    /* 電腦版 Chrome 與大螢幕平板橫向視圖 (>= 1024px)：確保攝影機維持高挑 16:9 / 4:3 比例，絕不垂直壓扁 */
     @media (min-width: 1024px) {
       html, body {
-        height: 100vh;
+        min-height: 100vh !important;
+        height: auto !important;
         overflow-x: hidden !important;
         overflow-y: auto !important;
       }
       body {
-        justify-content: center !important;
+        justify-content: flex-start !important;
       }
       #view-lobby {
         height: calc(100vh - 1rem);
@@ -843,32 +872,15 @@
         overflow: hidden !important;
       }
       #view-dance {
-        height: calc(100vh - 1rem) !important;
-        min-height: 640px !important;
-        max-height: calc(100vh - 1rem) !important;
-        overflow: hidden !important;
-      }
-    }
-
-    /* 若電腦瀏覽器視窗高度較矮 (< 650px)，保持 #view-dance 最小高度 640px 並允許外層垂直滾動，杜絕內部視訊被壓扁 */
-    @media (min-width: 1024px) and (max-height: 650px) {
-      html, body {
         height: auto !important;
-        min-height: 100vh !important;
-        overflow-y: auto !important;
-      }
-      body {
-        justify-content: flex-start !important;
-      }
-      #view-dance {
-        height: 650px !important;
-        min-height: 650px !important;
+        min-height: 760px !important;
         max-height: none !important;
+        overflow: visible !important;
       }
     }
   </style>
 </head>
-<body class="bg-slate-950 text-slate-100 antialiased w-full min-h-screen lg:h-screen flex flex-col items-center lg:justify-center font-sans select-none overflow-x-hidden overflow-y-auto lg:overflow-hidden p-1 sm:p-2 md:p-3">
+<body class="bg-slate-950 text-slate-100 antialiased w-full min-h-screen flex flex-col items-center justify-start font-sans select-none overflow-x-hidden overflow-y-auto p-1 sm:p-2 md:p-3">
 
   <!-- ========================================================= -->
   <!-- 頁面 1：宇宙雙星球大選單 (深邃星空與極致發散光暈宇宙感)     -->
@@ -1324,9 +1336,9 @@
       </div>
     </header>
 
-    <!-- 歌曲關卡卡片垂直滑動區 (固定頂部選單，內部 10 關流暢上下滑動) -->
-    <div class="flex-1 overflow-y-auto allow-touch-scroll touch-scroll-y pr-1 sm:pr-2 relative z-10" style="touch-action: pan-y !important; -webkit-overflow-scrolling: touch;">
-      <div id="song-cards-container" class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3.5 sm:gap-4 md:gap-5 pb-8 pt-1">
+    <!-- 歌曲關卡卡片垂直滑動區 (四周預留充足內邊距，滑鼠移入放大時絕不壓到外圍邊框) -->
+    <div class="flex-1 overflow-y-auto allow-touch-scroll touch-scroll-y relative z-10" style="touch-action: pan-y !important; -webkit-overflow-scrolling: touch;">
+      <div id="song-cards-container" class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 px-3.5 sm:px-5 pt-3.5 pb-10">
         <!-- 由 JS 動態注入 10 首曲目立體光暈果凍卡片 -->
       </div>
     </div>
@@ -1335,16 +1347,16 @@
 
   <!-- ========================================================= -->
   <!-- 頁面 2：跳舞互動教室 (The Interactive Dance Classroom)       -->
-  <!-- 宇宙光暈果凍視覺設計 + 電腦 Chrome 高度鎖定不壓縮最佳化       -->
+  <!-- 左側窄長型 9:16 引導卡片 (零側邊空白) + 右側高挑 16:9/4:3 攝影機舞台 -->
   <!-- ========================================================= -->
-  <div id="view-dance" class="hidden flex-1 flex flex-col p-2 sm:p-3 md:p-3.5 max-w-7xl mx-auto w-full min-h-0 lg:h-[calc(100vh-1rem)] lg:max-h-[calc(100vh-1rem)] overflow-y-auto lg:overflow-hidden allow-touch-scroll touch-scroll-y jelly-cosmic-stage rounded-3xl my-1 relative">
+  <div id="view-dance" class="hidden flex-1 flex flex-col p-2 sm:p-3 md:p-3.5 max-w-6xl mx-auto w-full min-h-0 jelly-cosmic-stage rounded-3xl my-1 relative">
     
     <!-- 頂部與底部星雲果凍環境光 -->
     <div class="pointer-events-none absolute -top-20 left-1/4 w-80 h-80 rounded-full bg-amber-400/12 blur-3xl"></div>
     <div class="pointer-events-none absolute -bottom-20 right-1/4 w-80 h-80 rounded-full bg-cyan-400/12 blur-3xl"></div>
 
     <!-- 教室頂欄：返回、3D主題徽章+歌曲名、火柴人皮膚、人數、得分、全螢幕 -->
-    <header class="jelly-glass-bar rounded-2xl md:rounded-3xl p-2 md:px-4 mb-2 md:mb-2.5 flex items-center justify-between gap-2.5 overflow-x-auto allow-touch-scroll allow-touch-scroll-x touch-scroll-x min-h-[58px] md:min-h-[66px] shrink-0 no-scrollbar relative z-20" style="touch-action: pan-x !important; -webkit-overflow-scrolling: touch;">
+    <header class="jelly-glass-bar rounded-2xl md:rounded-3xl p-2 md:px-4 mb-2 flex items-center justify-between gap-2.5 overflow-x-auto allow-touch-scroll allow-touch-scroll-x touch-scroll-x min-h-[56px] md:min-h-[62px] shrink-0 no-scrollbar relative z-20" style="touch-action: pan-x !important; -webkit-overflow-scrolling: touch;">
       
       <!-- 返回與曲名 (含專屬 3D 主題果凍小圖示) -->
       <div class="flex items-center gap-2 md:gap-2.5 shrink-0">
@@ -1429,26 +1441,26 @@
       </div>
     </header>
 
-    <!-- 核心分屏：左側 AI 導師示範卡片 (原畫 9:16 滿高自適應)；右側超大螢幕攝影機與火柴人 (佔 75%) -->
-    <main class="flex-1 grid grid-cols-1 lg:grid-cols-12 lg:grid-rows-1 gap-2.5 md:gap-3 mb-2 md:mb-2.5 items-stretch min-h-0 lg:min-h-[380px] overflow-visible lg:overflow-hidden relative z-10">
+    <!-- 核心分屏：左側修長直式 9:16 導師示範卡 (緊貼影片無多餘左右留白，騰出空間給攝影機)；右側高挑 16:9 / 4:3 大螢幕攝影機 -->
+    <main class="flex-1 flex flex-col lg:flex-row gap-3 mb-2 items-stretch justify-center min-h-0 relative z-10">
       
-      <!-- 【左半屏：AI 舞蹈導師示範影片 (佔 3/12 = 25% 寬度，琥珀光暈果凍卡片)】 -->
-      <section class="relative jelly-card-coach rounded-3xl flex flex-col justify-between overflow-hidden h-[320px] sm:h-[380px] lg:h-full lg:col-span-3 shrink-0 min-h-0">
+      <!-- 【左半屏：修長直式 9:16 導師引導卡片 (寬度精準貼合 9:16 畫面，消除左右空白)】 -->
+      <section class="relative jelly-card-coach rounded-3xl flex flex-col justify-between overflow-hidden w-[240px] sm:w-[256px] lg:w-[248px] xl:w-[264px] h-[390px] sm:h-[430px] lg:h-[510px] xl:h-[540px] mx-auto lg:mx-0 shrink-0">
         <!-- 頂欄狀態 -->
-        <div class="p-2 md:p-2.5 px-3 z-20 flex items-center justify-between gap-1.5 border-b border-amber-300/25 bg-slate-950/35 shrink-0">
-          <span class="jelly-btn-gold text-[10px] md:text-[11px] font-black px-2.5 py-0.5 rounded-full flex items-center gap-1 shrink-0">
+        <div class="px-2.5 py-1.5 z-20 flex items-center justify-between gap-1 border-b border-amber-300/25 bg-slate-950/40 shrink-0">
+          <span class="jelly-btn-gold text-[10px] font-black px-2 py-0.5 rounded-full flex items-center gap-1 shrink-0">
             <span class="w-1.5 h-1.5 rounded-full bg-slate-950 animate-ping"></span>
-            示範影片
+            動作引導
           </span>
-          <span id="coach-action-title" class="bg-slate-900/80 text-amber-200 text-[10px] md:text-[11px] font-black px-2.5 py-0.5 rounded-full border border-amber-300/40 shadow-xs truncate max-w-[145px]">
+          <span id="coach-action-title" class="bg-slate-900/85 text-amber-200 text-[10px] font-black px-2 py-0.5 rounded-full border border-amber-300/40 shadow-xs truncate max-w-[135px]">
             動作 02: 托起金色太陽
           </span>
         </div>
 
-        <!-- 動作示範播放器 (9:16 直式滿高自適應，徹底解決電腦 Chrome 畫面壓縮與靜態圖覆蓋問題) -->
-        <div class="flex-1 relative flex items-center justify-center p-1.5 md:p-2 overflow-hidden min-h-0">
-          <div class="relative h-full max-h-full aspect-[9/16] w-auto max-w-full mx-auto rounded-2xl overflow-hidden shadow-[0_10px_30px_rgba(0,0,0,0.65),0_0_20px_rgba(251,191,36,0.28)] border-2 border-amber-300/50 bg-slate-950 flex items-center justify-center">
-            <!-- 雙緩衝無縫交替播放器 (Dual-buffered Video Architecture: 徹底消除黑屏與卡頓) -->
+        <!-- 動作示範播放器 (滿版貼合修長卡片，零側邊多餘空白) -->
+        <div class="flex-1 relative flex items-center justify-center p-1 overflow-hidden min-h-0 w-full">
+          <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.65),0_0_18px_rgba(251,191,36,0.25)] border border-amber-300/45 bg-slate-950 flex items-center justify-center">
+            <!-- 雙緩衝無縫交替播放器 -->
             <video id="coach-video-a" 
                    src="./videos/T1/a1_s01_01_stretch.mp4" 
                    autoplay loop muted playsinline webkit-playsinline="true" preload="auto"
@@ -1458,7 +1470,7 @@
                    autoplay loop muted playsinline webkit-playsinline="true" preload="auto"
                    class="absolute inset-0 w-full h-full object-cover object-center select-none transition-opacity duration-300 opacity-0 z-10 pointer-events-none">
             </video>
-            <!-- 示範寫真 (僅在無影片時顯示，有影片時強制隱藏不覆蓋) -->
+            <!-- 示範寫真 (第一顆星球第 8~10 首與第二顆星球全曲目使用靜態引導，有影片時強制隱藏) -->
             <img id="coach-image" 
                  src="./images/boy_dance_coach_1790908303698.jpg" 
                  alt="示範動作" 
@@ -1476,14 +1488,14 @@
         </div>
 
         <!-- 底部動作進度提示 -->
-        <div class="bg-slate-950/45 border-t border-amber-300/25 px-3 py-1.5 flex items-center justify-between text-[10px] md:text-[11px] shrink-0">
+        <div class="bg-slate-950/45 border-t border-amber-300/25 px-2.5 py-1.5 flex items-center justify-between text-[10px] shrink-0">
           <span class="font-bold text-amber-200/80 shrink-0">下個動作：</span>
           <span id="next-action-text" class="font-black text-amber-300 truncate">刷牙微笑大步走 ➜</span>
         </div>
       </section>
 
-      <!-- 【右半屏：大螢幕攝影鏡頭 + 人物入鏡趣味發光火柴人 (佔 9/12 = 75% 寬度，星光藍果凍舞台)】 -->
-      <section id="camera-section" class="relative jelly-card-camera rounded-3xl overflow-hidden flex flex-col justify-between h-[340px] sm:h-[420px] lg:h-full lg:col-span-9 transition-all duration-300 min-h-0">
+      <!-- 【右半屏：高挑 16:9 / 4:3 大螢幕攝影鏡頭 + 人物入鏡趣味發光火柴人】 -->
+      <section id="camera-section" class="relative jelly-card-camera rounded-3xl overflow-hidden flex flex-col justify-between flex-1 min-w-0 h-[380px] sm:h-[440px] lg:h-[510px] xl:h-[540px] transition-all duration-300">
         
         <!-- 頂欄：自適應整合狀態列 (手機端單行優雅對齊，絕不重疊遮擋視訊) -->
         <div class="p-2 md:p-2.5 px-3 z-30 flex flex-wrap items-center justify-between gap-1.5 border-b border-cyan-300/25 bg-slate-950/40 shrink-0">
@@ -1575,10 +1587,10 @@
     </main>
 
     <!-- 【下方區域：光暈果凍同步大歌詞與播放控制】 -->
-    <footer class="jelly-glass-bar rounded-2xl md:rounded-3xl p-2.5 md:p-3 flex flex-col gap-2 shrink-0 relative z-20">
+    <footer class="jelly-glass-bar rounded-2xl md:rounded-3xl p-2 md:p-2.5 flex flex-col gap-1.5 shrink-0 relative z-20">
       
       <!-- 歌詞卡拉OK光暈果凍大條 (主界面最醒目部分) -->
-      <div class="jelly-lyric-stage rounded-xl md:rounded-2xl py-1.5 md:py-2 px-3 md:px-4 text-center relative overflow-hidden">
+      <div class="jelly-lyric-stage rounded-xl md:rounded-2xl py-1 md:py-1.5 px-3 md:px-4 text-center relative overflow-hidden">
         <!-- 英文主歌詞 (超大字號、星光琥珀高亮) -->
         <div id="lyric-main" class="text-lg md:text-2xl font-black text-amber-300 tracking-wide transition-all duration-300 drop-shadow-[0_2px_10px_rgba(251,191,36,0.45)]">
           "Morning sunshine hello! Waking up the sky so bright!"
@@ -3036,24 +3048,24 @@
         `;
       }
 
-      // mode === 'card' (關卡選歌大卡片專屬 3D 光暈果凍徽章舞台)
+      // mode === 'card' (關卡選歌卡片專屬 3D 光暈果凍徽章舞台 — 適度精巧化尺寸)
       return `
-        <div class="song-emblem-stage w-full h-36 rounded-2xl flex flex-col items-center justify-center mb-3 overflow-hidden relative group-hover:scale-[1.02] transition-transform"
-             style="background: radial-gradient(circle at 50% 35%, ${cfg.glow} 0%, rgba(15, 23, 42, 0.78) 80%);">
+        <div class="song-emblem-stage w-full h-28 rounded-xl flex flex-col items-center justify-center mb-2.5 overflow-hidden relative group-hover:scale-[1.01] transition-transform"
+             style="background: radial-gradient(circle at 50% 35%, ${cfg.glow} 0%, rgba(15, 23, 42, 0.8) 80%);">
           <!-- 背景星芒光暈 -->
-          <div class="pointer-events-none absolute w-28 h-28 rounded-full blur-xl opacity-75" style="background: ${cfg.grad};"></div>
+          <div class="pointer-events-none absolute w-24 h-24 rounded-full blur-xl opacity-75" style="background: ${cfg.grad};"></div>
           <!-- 立體果凍核心球 + 雙衛星小圖示 -->
-          <div class="relative w-20 h-20 flex items-center justify-center my-0.5">
+          <div class="relative w-16 h-16 flex items-center justify-center">
             <div class="song-emblem-orbit" style="border-color: ${cfg.ring};"></div>
-            <div class="song-emblem-orb w-16 h-16 rounded-[22px] flex items-center justify-center text-4xl transform group-hover:scale-110 transition-transform duration-300"
-                 style="background: ${cfg.grad}; box-shadow: 0 10px 24px ${cfg.glow}, inset 0 3px 6px rgba(255,255,255,0.9), inset 0 -4px 8px rgba(0,0,0,0.28);">
-              <span class="relative z-10 drop-shadow-[0_4px_6px_rgba(0,0,0,0.35)] select-none">${cfg.main}</span>
+            <div class="song-emblem-orb w-13 h-13 sm:w-14 sm:h-14 rounded-[18px] flex items-center justify-center text-2xl sm:text-3xl transform group-hover:scale-105 transition-transform duration-300"
+                 style="background: ${cfg.grad}; width: 3.35rem; height: 3.35rem; box-shadow: 0 8px 20px ${cfg.glow}, inset 0 3px 6px rgba(255,255,255,0.9), inset 0 -4px 8px rgba(0,0,0,0.28);">
+              <span class="relative z-10 drop-shadow-[0_3px_5px_rgba(0,0,0,0.35)] select-none">${cfg.main}</span>
             </div>
-            <span class="song-emblem-sat sat-1 -top-1 -right-2 w-7 h-7 text-sm">${cfg.sat1}</span>
-            <span class="song-emblem-sat sat-2 -bottom-1 -left-2 w-7 h-7 text-sm">${cfg.sat2}</span>
+            <span class="song-emblem-sat sat-1 -top-1 -right-1.5 w-6 h-6 text-xs">${cfg.sat1}</span>
+            <span class="song-emblem-sat sat-2 -bottom-1 -left-1.5 w-6 h-6 text-xs">${cfg.sat2}</span>
           </div>
           <!-- 底部微縮主題膠囊標籤 -->
-          <span class="relative z-10 mt-1 px-2.5 py-0.5 rounded-full bg-slate-950/65 border border-white/25 text-[9px] font-black tracking-widest text-amber-200 uppercase shadow">
+          <span class="relative z-10 mt-1 px-2 py-0.5 rounded-full bg-slate-950/65 border border-white/25 text-[8px] font-black tracking-widest text-amber-200 uppercase shadow">
             ${cfg.label}
           </span>
         </div>
@@ -3094,6 +3106,7 @@
 
     // 從單一星球返回雙星球首頁選單
     function backToPlanetHub() {
+      currentSongEntryToken++;
       // 確保攝影機硬體關閉
       stopRealCamera();
 
@@ -3137,6 +3150,7 @@
 
     // 從每一首跳舞教室直接返回最前面的雙星球首頁
     function directBackToLobby() {
+      currentSongEntryToken++;
       pauseDance();
       stopRealCamera();
       backToPlanetHub();
@@ -3169,7 +3183,7 @@
       renderLobbySongs(albumId);
     }
 
-    // 動態渲染星球 10 關歌曲卡片 (採用光暈果凍立體玻璃卡片 + 專屬 3D 主題示意小圖示)
+    // 動態渲染星球 10 關歌曲卡片 (適度縮小卡片尺寸與內距，懸浮放大時絕不壓到外圍邊框)
     function renderLobbySongs(albumId) {
       const container = document.getElementById('song-cards-container');
       if (!container || !window.KAI_ALBUM_DATABASE) return;
@@ -3181,12 +3195,12 @@
       container.innerHTML = album.songs.map((song) => {
         const isCurrentActive = song.id === currentSongKey;
         const coachBadge = song.timeline && song.timeline.some(s => s.video) 
-          ? '<span class="jelly-btn-gold text-[10px] font-black px-2.5 py-0.5 rounded-full">🎬 3D 示範影片</span>'
-          : '<span class="jelly-btn-cyan text-[10px] font-black px-2.5 py-0.5 rounded-full">📸 動作引導寫真</span>';
+          ? '<span class="jelly-btn-gold text-[10px] font-black px-2 py-0.5 rounded-full">🎬 3D 示範影片</span>'
+          : '<span class="jelly-btn-cyan text-[10px] font-black px-2 py-0.5 rounded-full">📸 動作引導寫真</span>';
 
         const cardThemeClass = isP1 
-          ? `jelly-song-card-p1 ${isCurrentActive ? 'ring-4 ring-amber-400/55 border-amber-300' : ''}`
-          : `jelly-song-card-p2 ${isCurrentActive ? 'ring-4 ring-fuchsia-400/55 border-fuchsia-300' : ''}`;
+          ? `jelly-song-card-p1 ${isCurrentActive ? 'ring-2 ring-amber-400/70 border-amber-300' : ''}`
+          : `jelly-song-card-p2 ${isCurrentActive ? 'ring-2 ring-fuchsia-400/70 border-fuchsia-300' : ''}`;
 
         const btnClass = isP1 ? 'jelly-btn-gold' : 'jelly-btn-cyan';
 
@@ -3196,32 +3210,32 @@
 
         return `
           <div onclick="selectSong('${song.id}')" 
-               class="group relative ${cardThemeClass} rounded-3xl p-4 sm:p-5 transition-all duration-300 cursor-pointer flex flex-col justify-between transform hover:-translate-y-1.5 overflow-hidden select-none">
+               class="group relative ${cardThemeClass} rounded-2xl p-3.5 sm:p-4 transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden select-none">
             
-            <div class="absolute top-3.5 left-3.5 ${numberBadge} backdrop-blur text-[11px] font-black px-2.5 py-0.5 rounded-full shadow-md z-20 border">
+            <div class="absolute top-2.5 left-2.5 ${numberBadge} backdrop-blur text-[10px] font-black px-2 py-0.5 rounded-full shadow-md z-20 border">
               #${String(song.trackNumber).padStart(2, '0')}
             </div>
 
-            <div class="absolute top-3.5 right-3.5 z-20">
+            <div class="absolute top-2.5 right-2.5 z-20">
               ${coachBadge}
             </div>
 
             <div>
               ${renderSongThemeEmblem(song, 'card')}
-              <h4 class="font-black text-base text-white group-hover:text-amber-300 transition-colors line-clamp-1 drop-shadow-xs">
+              <h4 class="font-black text-sm sm:text-base text-white group-hover:text-amber-300 transition-colors line-clamp-1 drop-shadow-xs">
                 ${song.title}
               </h4>
-              <p class="text-xs font-black ${isP1 ? 'text-amber-300' : 'text-fuchsia-300'} mt-0.5 flex items-center gap-1.5">
-                <span>${song.zhTitle}</span> · <span class="opacity-90 font-bold text-sky-200">${song.tag}</span>
+              <p class="text-[11px] sm:text-xs font-black ${isP1 ? 'text-amber-300' : 'text-fuchsia-300'} mt-0.5 flex items-center gap-1">
+                <span class="truncate">${song.zhTitle}</span> · <span class="opacity-90 font-bold text-sky-200 shrink-0">${song.tag}</span>
               </p>
-              <p class="text-xs text-slate-200/85 mt-2 line-clamp-2 leading-relaxed font-medium">
+              <p class="text-[11px] text-slate-200/85 mt-1.5 line-clamp-2 leading-relaxed font-medium">
                 ${song.description}
               </p>
             </div>
 
-            <div class="mt-4 pt-3 border-t border-white/15 flex items-center justify-between">
-              <span class="text-xs text-sky-200/80 font-bold">⏱ 2:00 · ${song.difficulty}</span>
-              <button class="${btnClass} text-xs font-black px-4 py-2 rounded-xl transition-all active:scale-95 flex items-center gap-1">
+            <div class="mt-3 pt-2.5 border-t border-white/15 flex items-center justify-between">
+              <span class="text-[11px] text-sky-200/80 font-bold">⏱ 2:00 · ${song.difficulty}</span>
+              <button class="${btnClass} text-xs font-black px-3.5 py-1.5 rounded-xl transition-all active:scale-95 flex items-center gap-1">
                 <span>▶</span> 開始跳
               </button>
             </div>
@@ -3371,7 +3385,11 @@
       selectSong(album.songs[nextIdx].id);
     }
 
-    function selectSong(key) {
+    // 單曲進入世代令牌：確保畫面已切入且攝影機開啟/關閉確認完成後，才啟動音樂播放
+    let currentSongEntryToken = 0;
+
+    async function selectSong(key) {
+      const entryToken = ++currentSongEntryToken;
       currentSongKey = key;
       const song = songDatabase[key];
       if (!song) {
@@ -3379,12 +3397,25 @@
         return;
       }
 
+      // 1. 立即停止任何正在播放的音樂與語音，杜絕畫面還沒進來就先發出音樂聲
+      pauseDance();
+      if (isThemeSongLyricsActive) exitThemeSongLyricsMode();
+      stopHomeBgm(0);
+      stopSpaceAmbient(0);
+      const homeAudioOnSelect = document.getElementById('audio-home-bgm');
+      if (homeAudioOnSelect) {
+        try {
+          homeAudioOnSelect.pause();
+          homeAudioOnSelect.currentTime = 0;
+        } catch(e) {}
+      }
+
       // 若該曲屬於特定專輯，更新 currentAlbumId
       if (song.albumId && song.albumId !== currentAlbumId) {
         currentAlbumId = song.albumId;
       }
 
-      // 更新單曲教室頂欄的 3D 主題果凍小圖示與歌名
+      // 2. 更新單曲教室頂欄的 3D 主題果凍小圖示與歌名
       const roomEmblemEl = document.getElementById('room-song-emblem');
       if (roomEmblemEl) {
         roomEmblemEl.innerHTML = renderSongThemeEmblem(song, 'header');
@@ -3395,14 +3426,16 @@
         albumBadge.innerText = `${currentAlbumId === 'album_1' ? '第 1 集' : '第 2 集'} #${String(song.trackNumber || 1).padStart(2, '0')}`;
       }
 
+      // 設定音檔路徑但暫不播放
+      audioBgm.pause();
       audioBgm.src = song.file;
+      audioBgm.currentTime = 0;
       currentTime = 0;
       lastSpokenSegment = -1;
+      combo = 0;
+      score = 0;
 
-      // 智慧預加載：當前曲全段落背景預取 + 次段落提早載入
-      prefetchSongVideos(song);
-
-      // 切換初始動作示範媒體 (嚴格互斥：播放引導影片時強制隱藏靜態寫真圖片，絕不重疊覆蓋！)
+      // 切換初始動作示範媒體 (第一顆星球 1~7 首為引導動畫影片，其餘為靜態引導圖片，嚴格互斥)
       const firstSeg = (song.timeline && song.timeline[0]) || null;
       if (firstSeg && firstSeg.video) {
         if (coachImage) {
@@ -3415,6 +3448,7 @@
         coachVideoB.classList.add('opacity-0', 'pointer-events-none');
 
         coachVideoA.src = firstSeg.video;
+        coachVideoA.pause();
         if (coachTypeBadge) coachTypeBadge.innerText = "🎬 示範影片";
 
         // 預載第二段影片到 coachVideoB
@@ -3440,18 +3474,12 @@
         if (coachTypeBadge) coachTypeBadge.innerText = "📸 動作引導寫真";
       }
 
-      // 進入跳舞教室，徹底停止首頁主題曲與太空環境音效
-      if (isThemeSongLyricsActive) exitThemeSongLyricsMode();
-      stopHomeBgm(0);
-      stopSpaceAmbient(0);
-      const homeAudioOnSelect = document.getElementById('audio-home-bgm');
-      if (homeAudioOnSelect) {
-        try {
-          homeAudioOnSelect.pause();
-          homeAudioOnSelect.currentTime = 0;
-        } catch(e) {}
-      }
+      // 先更新初始歌詞與動作文字 (此時 isPlaying 為 false，不會觸發語音)
+      updatePlaybackUI();
+      if (playIcon) playIcon.innerText = "⏳";
+      if (playLabel) playLabel.innerText = "準備舞台中...";
 
+      // 3. 立即切換畫面至單曲跳舞教室，讓使用者第一時間看到單曲畫面
       viewLobby.classList.add('hidden');
       if (viewAlbumLevels) {
         viewAlbumLevels.classList.add('hidden');
@@ -3463,31 +3491,72 @@
         renderPlaylistDrawer();
       }
 
-      // 切換視圖後立即強制刷新多重自適應尺寸
+      // 等待瀏覽器完成雙幀繪製 (確保單曲畫面已經完整呈現在螢幕上)
+      await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+      if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
+
       resizeCanvas();
-      requestAnimationFrame(resizeCanvas);
-      setTimeout(resizeCanvas, 50);
-      setTimeout(resizeCanvas, 150);
-      setTimeout(resizeCanvas, 300);
+      setTimeout(resizeCanvas, 80);
+      setTimeout(resizeCanvas, 220);
 
-      restartDance();
-      setTimeout(() => {
-        startDance();
-      }, 300);
-
-      // 每次進去歌曲時依家長設定預設判斷開啟或關閉攝影機
+      // 4. 確認攝影機狀態 (依家長設定：確認攝影機已開啟並完成初始偵測就緒，或確認已徹底關閉)
       if (userSettings.cameraAutoStart) {
         if (!isCameraActive) {
-          initRealCamera();
+          if (stickmanStatusBadge) stickmanStatusBadge.innerText = "📷 正在啟動攝影機與偵測狀態...";
+          await Promise.race([
+            initRealCamera(),
+            new Promise(resolve => setTimeout(resolve, 3500))
+          ]);
+        }
+        // 若攝影機已開啟，確認視訊幀已進入就緒狀態
+        if (isCameraActive && webcamVideo && webcamVideo.readyState < 2) {
+          await new Promise(resolve => {
+            const onReady = () => {
+              webcamVideo.removeEventListener('loadeddata', onReady);
+              resolve();
+            };
+            webcamVideo.addEventListener('loadeddata', onReady);
+            setTimeout(() => {
+              webcamVideo.removeEventListener('loadeddata', onReady);
+              resolve();
+            }, 600);
+          });
         }
       } else {
         if (isCameraActive) {
           stopRealCamera();
         }
+        if (stickmanStatusBadge) {
+          stickmanStatusBadge.innerText = "📷 攝影機已關閉 · 可點擊左側開啟鏡頭";
+        }
       }
+
+      if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
+
+      // 5. 若有引導動畫影片，確認首段影片畫面就緒，並在背景預取後續段落
+      if (firstSeg && firstSeg.video && coachVideoA && coachVideoA.readyState < 2) {
+        await new Promise(resolve => {
+          const onVidReady = () => {
+            coachVideoA.removeEventListener('loadeddata', onVidReady);
+            resolve();
+          };
+          coachVideoA.addEventListener('loadeddata', onVidReady);
+          setTimeout(() => {
+            coachVideoA.removeEventListener('loadeddata', onVidReady);
+            resolve();
+          }, 500);
+        });
+      }
+      prefetchSongVideos(song);
+
+      if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
+
+      // 6. 畫面與攝影機狀態皆確認完畢，正式開始播放音樂與舞蹈引導！
+      startDance();
     }
 
     function backToLobby() {
+      currentSongEntryToken++;
       pauseDance();
       // 離開跳舞教室，關閉實體攝影機
       stopRealCamera();
@@ -4049,8 +4118,8 @@
       if (cameraGuidePrompt) cameraGuidePrompt.classList.remove('hidden');
       if (btnCamera) {
         btnCamera.innerText = "📷 開啟攝影機";
-        btnCamera.classList.remove('bg-rose-500');
-        btnCamera.classList.add('bg-sky-500');
+        btnCamera.classList.remove('bg-rose-500', 'jelly-btn-rose');
+        btnCamera.classList.add('jelly-btn-cyan');
       }
       if (stickmanStatusBadge) {
         stickmanStatusBadge.innerText = "等待小朋友入鏡變身火柴人...";
@@ -4115,7 +4184,8 @@
         isCameraActive = true;
         cameraGuidePrompt.classList.add('hidden');
         btnCamera.innerText = "⏹ 關閉攝影機";
-        btnCamera.classList.replace('bg-sky-500', 'bg-rose-500');
+        btnCamera.classList.remove('bg-sky-500', 'jelly-btn-cyan');
+        btnCamera.classList.add('jelly-btn-rose');
         stickmanStatusBadge.innerText = "👀 正在偵測小朋友入鏡...";
 
         resizeCanvas();
