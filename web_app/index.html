@@ -29,7 +29,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
   <!-- KaiDance 完整多專輯音樂與動作資料庫 (Album 1 十首全曲 & Album 2 搶先體驗) -->
-  <script src="./album_data.js?v=20261027_2140"></script>
+  <script src="./album_data.js?v=20261027_2326"></script>
   <style>
     @keyframes bounce-slow {
       0%, 100% { transform: translateY(0); }
@@ -958,18 +958,23 @@
       inset: 0 !important;
       width: 100vw !important;
       height: 100vh !important;
+      height: 100dvh !important;
       max-width: 100vw !important;
       max-height: 100vh !important;
+      max-height: 100dvh !important;
       z-index: 9999 !important;
       border-radius: 0 !important;
       border: none !important;
       margin: 0 !important;
       padding: 0 !important;
       background-color: #020617 !important;
+      display: flex !important;
+      flex-direction: column !important;
     }
     .camera-fullscreen-active #camera-container {
-      min-height: 100vh !important;
-      height: 100% !important;
+      min-height: 0 !important;
+      flex: 1 1 0% !important;
+      height: auto !important;
       width: 100% !important;
       border-radius: 0 !important;
     }
@@ -1772,18 +1777,6 @@
             <span>✕</span> 退出全螢幕
           </button>
 
-          <!-- 🌟 KTV 風格歌詞浮層字幕條 (鏡頭全螢幕專屬，壓在影像畫面下方) 🌟 -->
-          <div id="camera-ktv-subtitle-bar" class="hidden absolute bottom-5 left-1/2 -translate-x-1/2 z-30 w-[94%] max-w-4xl bg-slate-950/85 backdrop-blur-md border border-amber-400/60 rounded-3xl py-3 px-5 text-center shadow-2xl pointer-events-none transition-all duration-300">
-            <!-- 第一行：KTV 歡唱英文大歌詞 (金色發光、清晰大字) -->
-            <div id="ktv-lyric-main" class="text-xl sm:text-2xl md:text-3xl font-black text-amber-300 tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
-              "Morning sunshine hello! Waking up the sky so bright!"
-            </div>
-            <!-- 第二行：中文對照與動作口令 (明亮純白、動作要領) -->
-            <div id="ktv-lyric-sub" class="text-xs sm:text-sm md:text-base font-extrabold text-white/95 mt-1 drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
-              ☀️ 早安陽光！雙手托起大太陽，照亮天空暖洋洋！
-            </div>
-          </div>
-
           <!-- 引導提示框（攝像頭開啟前，懸浮於底部，絕不遮擋火柴人舞台） -->
           <div id="camera-guide-prompt" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-slate-900/90 backdrop-blur-md border border-cyan-400/50 shadow-[0_8px_30px_rgba(0,0,0,0.7),0_0_20px_rgba(56,189,248,0.3)] text-white max-w-[92%]">
             <span class="text-2xl anim-bounce">📷</span>
@@ -1792,6 +1785,20 @@
               <div class="text-[11px] text-cyan-100/90">小朋友入鏡即可即時變身發光火柴人！</div>
             </div>
             <button onclick="initRealCamera()" class="jelly-btn-gold ml-1 px-3.5 py-1.5 rounded-xl font-black text-xs hover:scale-105 active:scale-95 transition whitespace-nowrap">開啟鏡頭</button>
+          </div>
+        </div>
+
+        <!-- 🌟 KTV 風格歌詞獨立底座 (鏡頭全螢幕專屬，獨立於視訊下方，絕不遮擋鏡頭畫面與底部資訊) 🌟 -->
+        <div id="camera-ktv-subtitle-bar" class="hidden z-30 w-full bg-slate-950/95 backdrop-blur-md border-t border-amber-400/50 py-2.5 px-4 text-center shadow-2xl shrink-0 transition-all duration-300">
+          <div class="max-w-4xl mx-auto">
+            <!-- 第一行：KTV 歡唱英文大歌詞 (金色發光、清晰大字) -->
+            <div id="ktv-lyric-main" class="text-lg sm:text-2xl md:text-3xl font-black text-amber-300 tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              "Morning sunshine hello! Waking up the sky so bright!"
+            </div>
+            <!-- 第二行：中文對照與動作口令 (明亮純白、動作要領) -->
+            <div id="ktv-lyric-sub" class="text-xs sm:text-sm md:text-base font-extrabold text-white/95 mt-0.5 drop-shadow-[0_1px_4px_rgba(0,0,0,0.9)]">
+              ☀️ 早安陽光！雙手托起大太陽，照亮天空暖洋洋！
+            </div>
           </div>
         </div>
 
@@ -6007,6 +6014,8 @@
         toggleCameraFullscreen();
       }
     }
+    document.addEventListener('fullscreenchange', handleFullscreenChange);
+    document.addEventListener('webkitfullscreenchange', handleFullscreenChange);
     // ========================================================
     // 平板與觸控螢幕智慧鎖定：杜絕多指縮放，放行單指原生極速滑動
     // ========================================================
