@@ -73,7 +73,7 @@ KIDS_PROFILES = [
         "v2_outfit_zh": "天藍與亮黃撞色星星徽章針織開襟衫、內搭白襯衫與亮色領結、修身五分跳舞短褲、條紋運動長襪與潮鞋",
         "v2_pose_zh": "直立微笑預備姿勢，一手輕舉在胸前比出 K-pop 指尖星星動作，充滿朝氣",
         "v2_prompt_en": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, wearing K-pop preppy pop-star fashion: trendy sky-blue and yellow varsity cardigan with star patches over a crisp white shirt, tailored navy knee-length shorts, striped socks and trendy sneakers. Standing in a cheerful K-pop starting pose in a modern K-pop dance studio. Full body head to toe visible, 4k, Disney Pixar render, no text.",
-        "generated_files": "待模型配額恢復生成 (可使用本列英文 Prompt 直接生成)"
+        "generated_files": "web_app/images/album2_kpop/kid3_boy_kpop_v1.jpg (已生成)"
     },
     {
         "kid_id": "Kid 4",
@@ -90,7 +90,7 @@ KIDS_PROFILES = [
         "v2_outfit_zh": "珊瑚粉與電光青撞色短版連帽衛衣（印有未來感星星圖騰）、純白降落傘寬版街舞長褲、彩色厚底運動鞋",
         "v2_pose_zh": "充滿活力的 K-pop 街舞預備站姿，雙手自然微抬準備隨節拍律動",
         "v2_prompt_en": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, wearing cool K-pop cyber-pop streetwear: neon coral-pink and cyan cropped hoodie with futuristic star graphics, white parachute dance pants, colourful chunky sneakers. Standing in an energetic K-pop ready stance in a vibrant K-pop dance studio. Full body head to toe visible, 4k, Disney Pixar render, no text.",
-        "generated_files": "待模型配額恢復生成 (可使用本列英文 Prompt 直接生成)"
+        "generated_files": "web_app/images/album2_kpop/kid4_girl_kpop_v1.jpg (已生成)"
     },
     {
         "kid_id": "Kid 5",
@@ -107,7 +107,7 @@ KIDS_PROFILES = [
         "v2_outfit_zh": "湖水綠與亮黃拼接運動短上衣、潮流徽章貼布牛仔吊帶短褲（單邊吊帶俏皮造型）、螢光撞色運動鞋",
         "v2_pose_zh": "輕快放鬆的 K-pop 預備律動姿勢，雙手在身前微握拳準備隨著音樂 Bounce",
         "v2_prompt_en": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair in two high puffs with colorful beads, big brown eyes, wearing fresh K-pop Y2K street dance fashion: turquoise and yellow sporty dance top with star emblem, stylish denim overall shorts with colourful patches, neon sneakers. Standing in a joyful K-pop basic starting pose in a modern K-pop dance studio. Full body head to toe visible, 4k, Disney Pixar render, no text.",
-        "generated_files": "待模型配額恢復生成 (可使用本列英文 Prompt 直接生成)"
+        "generated_files": "web_app/images/album2_kpop/kid5_girl_kpop_v1.jpg (已生成)"
     }
 ]
 
@@ -115,62 +115,72 @@ KIDS_PROFILES = [
 SONG_KPOP_ASSIGNMENT = {
     "a2_s01": {
         "kid": KIDS_PROFILES[1], # Mia
+        "coach_image": "./images/album2_kpop/kid2_girl_kpop_v1.jpg",
         "kpop_style": "Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)",
         "outfit_en": "iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers",
         "core_point_dance": "鑽石閃耀手勢舞 (Diamond Shine Point Dance) + 偶像開合跳"
     },
     "a2_s02": {
         "kid": KIDS_PROFILES[3], # Hana
+        "coach_image": "./images/album2_kpop/kid4_girl_kpop_v1.jpg",
         "kpop_style": "Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)",
         "outfit_en": "sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots",
         "core_point_dance": "彩虹畫筆手部波浪舞 (Rainbow Brush Arm Wave) + 仙女轉圈"
     },
     "a2_s03": {
         "kid": KIDS_PROFILES[0], # Leo
+        "coach_image": "./images/album2_kpop/kid1_boy_kpop_v1.jpg",
         "kpop_style": "Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)",
         "outfit_en": "metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers",
         "core_point_dance": "1-2-3 手指卡點舞 (Finger Count Tutting) + 霓虹滑步踢踏"
     },
     "a2_s04": {
         "kid": KIDS_PROFILES[2], # Max
+        "coach_image": "./images/album2_kpop/kid3_boy_kpop_v1.jpg",
         "kpop_style": "K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)",
         "outfit_en": "vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers",
         "core_point_dance": "皇冠獅王重拍踩點 (King Crown Stomp) + Hip-Hop 墨鏡企鵝搖擺"
     },
     "a2_s05": {
         "kid": KIDS_PROFILES[4], # Zoe
+        "coach_image": "./images/album2_kpop/kid5_girl_kpop_v1.jpg",
         "kpop_style": "Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)",
         "outfit_en": "shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers",
         "core_point_dance": "亮晶晶擦窗卡點舞 (Sparkle Wipe Groove) + 雙人擊掌比讚 Pose"
     },
     "a2_s06": {
         "kid": KIDS_PROFILES[0], # Leo
+        "coach_image": "./images/album2_kpop/kid1_boy_kpop_v1.jpg",
         "kpop_style": "Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)",
         "outfit_en": "metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers",
         "core_point_dance": "零重力太空滑步 (Moonwalk Glide) + 超新星爆發跳躍 (Supernova Jump)"
     },
     "a2_s07": {
         "kid": KIDS_PROFILES[1], # Mia
+        "coach_image": "./images/album2_kpop/kid2_girl_kpop_v2.jpg",
         "kpop_style": "Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)",
         "outfit_en": "bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers",
         "core_point_dance": "K-ABC 字母手指舞 (Alphabet Point Choreography) + 韓流聳肩律動"
     },
     "a2_s08": {
         "kid": KIDS_PROFILES[2], # Max
+        "coach_image": "./images/album2_kpop/kid3_boy_kpop_v1.jpg",
         "kpop_style": "K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)",
-        "outfit_en": "sky-blue and yellow K-pop varsity cardigan with star patches, navy shorts, striped socks and trendy sneakers",
+        "outfit_en": "vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers",
         "core_point_dance": "Pop-Pop 雙肩震點舞 (Shoulder Pop Bounce) + 3-2-1 偶像Ending妖精定格"
     },
     "a2_s09": {
         "kid": KIDS_PROFILES[3], # Hana
+        "coach_image": "./images/album2_kpop/kid4_girl_kpop_v1.jpg",
         "kpop_style": "Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)",
-        "outfit_en": "neon coral-pink and cyan K-pop cropped hoodie, white parachute dance pants, colourful chunky sneakers",
+        "outfit_en": "sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots",
         "core_point_dance": "草莓臉頰愛心舞 (Berry Cheek Heart Dance) + 輕快左右踏併步"
     },
     "a2_s10": {
         "kid": KIDS_PROFILES[4], # Zoe
+        "coach_image": "./images/album2_kpop/kid5_girl_kpop_v1.jpg",
         "kpop_style": "Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)",
-        "outfit_en": "turquoise and yellow K-pop sporty top, stylish denim overall shorts with star patches, neon sneakers",
+        "outfit_en": "shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers",
         "core_point_dance": "星光飛吻手勢舞 (Starlight Blow Kiss) + 偶像結尾晚安 Ending Fairy"
     }
 }
@@ -239,9 +249,12 @@ for song in album2["songs"]:
     s_zh = song["zhTitle"]
     assign = SONG_KPOP_ASSIGNMENT[s_id]
     kid = assign["kid"]
+    song["coachImage"] = assign["coach_image"]
 
     for idx, seg in enumerate(song["timeline"]):
         seg_idx = idx + 1
+        seg["image"] = assign["coach_image"]
+        seg["video"] = None
         dur = round(seg["end"] - seg["start"], 2)
         pose = seg.get("targetPose", "march")
         p_info = KPOP_POSE_DETAILS.get(pose, KPOP_POSE_DETAILS["march"])
