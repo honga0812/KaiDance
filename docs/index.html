@@ -1043,7 +1043,7 @@
         overflow-y: visible !important;
         padding-bottom: 5rem !important;
       }
-      #view-album-levels {
+      #view-album-levels, #view-dancer-squad {
         height: auto !important;
         min-height: calc(100vh - 1rem) !important;
         max-height: none !important;
@@ -1075,12 +1075,185 @@
         max-height: calc(100vh - 1rem);
         overflow: hidden !important;
       }
+      #view-dancer-squad {
+        height: auto !important;
+        min-height: calc(100vh - 1rem) !important;
+        max-height: none !important;
+        overflow-x: hidden !important;
+        overflow-y: visible !important;
+      }
       #view-dance {
         height: auto !important;
         min-height: 760px !important;
         max-height: none !important;
         overflow: visible !important;
       }
+    }
+
+    /* ======================================================== */
+    /* 🌟 K-Pop 舞蹈戰隊 3D 環形旋轉舞台與上方動態投射燈掃射特效 */
+    /* ======================================================== */
+    @keyframes spotlight-sweep-1 {
+      0%, 100% { transform: rotate(-28deg) scaleY(1.05); opacity: 0.65; }
+      50% { transform: rotate(24deg) scaleY(1.12); opacity: 0.92; }
+    }
+    @keyframes spotlight-sweep-2 {
+      0%, 100% { transform: rotate(26deg) scaleY(1.08); opacity: 0.85; }
+      50% { transform: rotate(-24deg) scaleY(1.02); opacity: 0.58; }
+    }
+    @keyframes spotlight-sweep-3 {
+      0%, 100% { transform: rotate(-14deg) scaleX(0.95); opacity: 0.72; }
+      33% { transform: rotate(18deg) scaleX(1.1); opacity: 0.95; }
+      66% { transform: rotate(-20deg) scaleX(1.05); opacity: 0.65; }
+    }
+    @keyframes spotlight-center-pulse {
+      0%, 100% { transform: translateX(-50%) scaleX(1) scaleY(1); opacity: 0.82; }
+      50% { transform: translateX(-50%) scaleX(1.14) scaleY(1.04); opacity: 1; }
+    }
+    @keyframes floor-pool-breathe {
+      0%, 100% { transform: translate(-50%, -50%) rotateX(74deg) scale(0.96); opacity: 0.78; }
+      50% { transform: translate(-50%, -50%) rotateX(74deg) scale(1.05); opacity: 1; }
+    }
+    @keyframes dancer-select-pop {
+      0% { transform: translate3d(0px, -8px, 135px) rotateY(0deg) scale(1.08); }
+      32% { transform: translate3d(0px, -28px, 165px) rotateY(-4deg) scale(1.19); }
+      64% { transform: translate3d(0px, -4px, 145px) rotateY(3deg) scale(1.05); }
+      100% { transform: translate3d(0px, -8px, 135px) rotateY(0deg) scale(1.08); }
+    }
+    @keyframes pedestal-shockwave {
+      0% { transform: translate(-50%, -50%) scale(0.6); opacity: 0.95; }
+      100% { transform: translate(-50%, -50%) scale(1.95); opacity: 0; }
+    }
+
+    .stage-spotlight-beam {
+      position: absolute;
+      top: -36px;
+      width: 340px;
+      height: 540px;
+      transform-origin: 50% 0%;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      filter: blur(16px);
+      z-index: 4;
+      clip-path: polygon(45% 0%, 55% 0%, 100% 100%, 0% 100%);
+    }
+    .spotlight-beam-1 {
+      left: 6%;
+      background: linear-gradient(180deg, rgba(56, 189, 248, 0.78) 0%, rgba(56, 189, 248, 0.24) 55%, transparent 100%);
+      animation: spotlight-sweep-1 5.6s ease-in-out infinite;
+    }
+    .spotlight-beam-2 {
+      right: 6%;
+      background: linear-gradient(180deg, rgba(244, 114, 182, 0.78) 0%, rgba(217, 70, 239, 0.24) 55%, transparent 100%);
+      animation: spotlight-sweep-2 6.2s ease-in-out infinite;
+    }
+    .spotlight-beam-3 {
+      left: 24%;
+      background: linear-gradient(180deg, rgba(250, 204, 21, 0.68) 0%, rgba(245, 158, 11, 0.2) 55%, transparent 100%);
+      animation: spotlight-sweep-3 7.4s ease-in-out infinite;
+    }
+    .spotlight-beam-4 {
+      right: 24%;
+      background: linear-gradient(180deg, rgba(52, 211, 153, 0.68) 0%, rgba(16, 185, 129, 0.2) 55%, transparent 100%);
+      animation: spotlight-sweep-1 6.8s ease-in-out infinite reverse;
+    }
+    .spotlight-beam-center {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      width: 390px;
+      height: 490px;
+      transform-origin: 50% 0%;
+      pointer-events: none;
+      mix-blend-mode: screen;
+      filter: blur(18px);
+      z-index: 5;
+      clip-path: polygon(42% 0%, 58% 0%, 100% 100%, 0% 100%);
+      animation: spotlight-center-pulse 3.4s ease-in-out infinite;
+      transition: background 0.45s ease;
+    }
+
+    /* 3D 環形旋轉舞台容器 */
+    .dancer-3d-viewport {
+      perspective: 1200px;
+      perspective-origin: 50% 46%;
+      position: relative;
+      width: 100%;
+      height: 360px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+    @media (min-width: 768px) {
+      .dancer-3d-viewport {
+        height: 395px;
+      }
+    }
+    .dancer-3d-ring {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    /* 底部 3D 立體霓虹旋轉圓盤底座 */
+    .dancer-3d-turntable-floor {
+      position: absolute;
+      top: 76%;
+      left: 50%;
+      width: 540px;
+      height: 540px;
+      border-radius: 9999px;
+      transform: translate(-50%, -50%) rotateX(74deg);
+      background: radial-gradient(circle, rgba(255,255,255,0.22) 0%, rgba(168, 85, 247, 0.28) 34%, rgba(56, 189, 248, 0.2) 58%, transparent 72%);
+      border: 3px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 0 55px rgba(217, 70, 239, 0.55), inset 0 0 45px rgba(56, 189, 248, 0.45);
+      pointer-events: none;
+      animation: floor-pool-breathe 3.6s ease-in-out infinite;
+      transition: box-shadow 0.45s ease, border-color 0.45s ease;
+    }
+    @media (max-width: 640px) {
+      .dancer-3d-turntable-floor {
+        width: 340px;
+        height: 340px;
+      }
+    }
+    .dancer-3d-card {
+      position: absolute;
+      width: 176px;
+      height: 278px;
+      border-radius: 1.5rem;
+      transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.55s ease, filter 0.55s ease, box-shadow 0.45s ease, border-color 0.45s ease;
+      cursor: pointer;
+      will-change: transform, opacity, filter;
+      transform-style: preserve-3d;
+    }
+    @media (min-width: 640px) {
+      .dancer-3d-card {
+        width: 198px;
+        height: 306px;
+      }
+    }
+    .dancer-3d-card.anim-dancer-pop {
+      animation: dancer-select-pop 0.58s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .pedestal-shockwave-ring {
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      width: 160px;
+      height: 46px;
+      border-radius: 9999px;
+      border: 3px solid #fde047;
+      transform: translate(-50%, -50%) scale(0.5);
+      opacity: 0;
+      pointer-events: none;
+    }
+    .pedestal-shockwave-ring.active {
+      animation: pedestal-shockwave 0.72s cubic-bezier(0.16, 1, 0.3, 1) forwards;
     }
   </style>
 </head>
@@ -1230,11 +1403,11 @@
           <div class="absolute bottom-1 w-52 h-6 bg-gradient-to-r from-pink-400/60 via-amber-300/70 to-sky-400/60 rounded-full blur-md -z-10"></div>
         </div>
 
-        <!-- 舞團稱號膠囊 -->
-        <div id="dance-team-status-capsule" class="mt-2 flex items-center gap-1.5 bg-slate-900/85 px-4 py-1.5 rounded-full border border-slate-700/80 text-[11px] text-slate-200 shadow-md transition-all">
-          <span class="text-amber-400 font-bold">✨ 5大曲目舞團集結</span>
+        <!-- 舞團稱號膠囊 (點擊進入 K-Pop 舞蹈戰隊 3D 轉盤選單) -->
+        <div id="dance-team-status-capsule" onclick="handleDanceTeamClick()" class="mt-2 flex items-center gap-1.5 bg-slate-900/90 hover:bg-slate-800 px-4 py-1.5 rounded-full border border-amber-400/60 text-[11px] text-slate-100 shadow-[0_0_16px_rgba(251,191,36,0.28)] cursor-pointer transition-all hover:scale-105">
+          <span class="text-amber-300 font-black">✨ 點選 5 位小舞星戰隊</span>
           <span class="text-slate-500">·</span>
-          <span class="text-sky-300 font-semibold">點擊聆聽男女童聲齊唱</span>
+          <span class="text-sky-300 font-bold">進入專屬 4 首歌單選單 ➜</span>
         </div>
       </div>
 
@@ -1503,6 +1676,158 @@
         <button onclick="closeParentSettingsModal()" class="px-6 py-2.5 rounded-xl text-xs font-black bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 shadow-md hover:opacity-95 transition active:scale-95">確認並儲存</button>
       </div>
     </div>
+  </div>
+
+
+  <!-- ========================================================= -->
+  <!-- 🌟 頁面 1-A：K-Pop 舞蹈戰隊 5 位小朋友 3D 環形旋轉選單頁    -->
+  <!-- (上方動態投射燈掃射 + 圓形立體轉盤選角 + 小朋友童聲口號 + 專屬 4 首歌單連播) -->
+  <!-- ========================================================= -->
+  <div id="view-dancer-squad" class="hidden flex-1 flex flex-col p-3 sm:p-4 md:p-5 max-w-6xl mx-auto w-full rounded-3xl overflow-hidden jelly-cosmic-stage my-2 relative">
+
+    <!-- 🔦 上方演唱會舞台動態投射燈掃射系統 + K-Pop 5 人戰隊全景背景壓底 -->
+    <div class="absolute inset-0 rounded-3xl overflow-hidden pointer-events-none z-0">
+      <!-- K-Pop 5人舞蹈戰隊集結圖全景柔化舞台背景 -->
+      <img src="./images/album2_kpop/kpop_dance_squad_5kids.jpg" alt="K-Pop Dance Squad Stage" class="absolute inset-x-0 top-0 w-full h-[460px] object-cover object-top opacity-22 blur-[2px] scale-105">
+      <div class="absolute inset-0 bg-gradient-to-b from-slate-950/35 via-indigo-950/75 to-slate-950/96"></div>
+
+      <!-- 頂部舞台燈架光點 -->
+      <div class="absolute top-0 inset-x-12 h-2 flex items-center justify-around z-10">
+        <span class="w-6 h-2.5 rounded-b-full bg-sky-300 shadow-[0_0_24px_#38bdf8,0_0_48px_#38bdf8]"></span>
+        <span class="w-6 h-2.5 rounded-b-full bg-amber-300 shadow-[0_0_24px_#fde047,0_0_48px_#fde047]"></span>
+        <span id="center-rig-lamp" class="w-8 h-3 rounded-b-full bg-white shadow-[0_0_32px_#ffffff,0_0_64px_#38bdf8]"></span>
+        <span class="w-6 h-2.5 rounded-b-full bg-emerald-300 shadow-[0_0_24px_#34d399,0_0_48px_#34d399]"></span>
+        <span class="w-6 h-2.5 rounded-b-full bg-pink-400 shadow-[0_0_24px_#f472b6,0_0_48px_#f472b6]"></span>
+      </div>
+
+      <!-- 4 道左右動態搖擺掃射投射燈光束 + 正中央主角追蹤聚光燈 -->
+      <div class="stage-spotlight-beam spotlight-beam-1"></div>
+      <div class="stage-spotlight-beam spotlight-beam-3"></div>
+      <div id="dancer-center-spotlight" class="spotlight-beam-center" style="background: linear-gradient(180deg, rgba(56, 189, 248, 0.85) 0%, rgba(59, 130, 246, 0.28) 58%, transparent 100%);"></div>
+      <div class="stage-spotlight-beam spotlight-beam-4"></div>
+      <div class="stage-spotlight-beam spotlight-beam-2"></div>
+
+      <!-- 舞台漂浮星光微粒 -->
+      <div class="absolute top-20 left-1/6 text-amber-300 text-sm anim-star">✦</div>
+      <div class="absolute top-28 right-1/5 text-pink-300 text-base anim-star" style="animation-delay: 0.9s;">✨</div>
+      <div class="absolute top-48 left-1/4 text-sky-300 text-xs anim-star" style="animation-delay: 1.6s;">✦</div>
+      <div class="absolute top-44 right-1/4 text-emerald-300 text-sm anim-star" style="animation-delay: 2.1s;">🌟</div>
+    </div>
+
+    <!-- 5 位小朋友專屬活潑童聲引導音訊預載 -->
+    <audio id="audio-kid-voice-0" src="./audio/kids/kid1_leo.mp3" preload="auto"></audio>
+    <audio id="audio-kid-voice-1" src="./audio/kids/kid2_mia.mp3" preload="auto"></audio>
+    <audio id="audio-kid-voice-2" src="./audio/kids/kid3_max.mp3" preload="auto"></audio>
+    <audio id="audio-kid-voice-3" src="./audio/kids/kid4_hana.mp3" preload="auto"></audio>
+    <audio id="audio-kid-voice-4" src="./audio/kids/kid5_zoe.mp3" preload="auto"></audio>
+
+    <!-- 頂欄：返回首頁、戰隊標題與 5 位小朋友快速切換膠囊 -->
+    <header class="jelly-glass-bar rounded-2xl md:rounded-3xl px-3.5 py-2.5 sm:px-5 sm:py-3 relative z-20 flex flex-wrap items-center justify-between gap-2.5 mb-2 shrink-0">
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <button onclick="backToPlanetHub()" class="jelly-btn-indigo px-3.5 sm:px-4 py-2 rounded-full text-xs md:text-sm font-black transition flex items-center gap-1.5 active:scale-95 shrink-0">
+          ◀ 返回宇宙首頁
+        </button>
+        <div class="flex items-center gap-2.5">
+          <img src="./images/album2_kpop/kpop_dance_squad_5kids.jpg" alt="K-Pop 舞蹈戰隊" class="w-12 h-8 sm:w-16 sm:h-10 rounded-xl object-cover border border-amber-300/70 shadow-[0_0_14px_rgba(251,191,36,0.45)] shrink-0">
+          <div>
+            <h2 class="text-base sm:text-lg md:text-xl font-black text-white flex items-center gap-2 drop-shadow-[0_2px_10px_rgba(244,114,182,0.6)]">
+              <span>🎤 K-Pop 舞蹈戰隊 · 小舞星選單</span>
+            </h2>
+            <p class="text-[11px] sm:text-xs text-amber-200 font-bold">
+              左右轉動 3D 舞台選擇小朋友 · 聆聽活力童聲與專屬 4 首舞曲連播！
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5 位小舞星快速點選膠囊列 -->
+      <div id="dancer-quick-pills" class="flex items-center gap-1.5 flex-wrap">
+        <!-- 由 JS 動態注入 5 位小朋友快速切換圓鈕 -->
+      </div>
+    </header>
+
+    <!-- 🎠 中央：3D 圓形立體轉動選角舞台 (支援往左轉 / 往右轉 / 直接點選小朋友 / 觸控滑動) -->
+    <section id="dancer-3d-stage-wrap" class="relative z-10 flex flex-col items-center justify-center my-0.5 select-none">
+
+      <!-- 當前選中小朋友頂部動態童聲對話氣泡 (點擊可重播童聲) -->
+      <div id="dancer-speech-bubble" onclick="replayCurrentDancerVoice()" class="relative z-30 mb-1 px-4 py-1.5 rounded-full bg-slate-900/90 backdrop-blur-md border-2 border-amber-300 shadow-[0_0_24px_rgba(251,191,36,0.5)] flex items-center gap-2 cursor-pointer transition-all hover:scale-105 active:scale-95">
+        <span id="dancer-speech-emoji" class="text-base sm:text-lg animate-bounce">👦⚡</span>
+        <span id="dancer-speech-text" class="text-xs sm:text-sm font-black text-amber-200 tracking-wide">
+          "Let's go! 我是 Leo，讓我們一起來跳舞吧！"
+        </span>
+        <span class="px-2 py-0.5 rounded-full bg-amber-400/25 border border-amber-300/50 text-[10px] font-black text-amber-300 flex items-center gap-1">
+          <span>🔊</span><span class="hidden sm:inline">重播童聲</span>
+        </span>
+      </div>
+
+      <!-- 3D 環形旋轉視口 + 左右旋轉大按鈕 -->
+      <div class="relative w-full max-w-5xl mx-auto flex items-center justify-center">
+
+        <!-- ◀ 往左轉立體果凍按鈕 -->
+        <button onclick="rotateDancerCarousel(-1)" class="jelly-btn jelly-btn-cyan z-40 absolute left-1 sm:left-3 md:left-5 px-3 sm:px-4 py-3 sm:py-3.5 rounded-2xl font-black text-xs sm:text-sm flex flex-col items-center gap-0.5 shadow-[0_0_28px_rgba(56,189,248,0.65)] cursor-pointer select-none" title="往左轉動選擇上一位小朋友">
+          <span class="text-lg sm:text-xl leading-none">◀</span>
+          <span class="text-[10px] sm:text-xs font-black">往左轉</span>
+        </button>
+
+        <!-- 3D 環形舞台本體 -->
+        <div id="dancer-3d-viewport" class="dancer-3d-viewport overflow-visible">
+          <!-- 舞台底部 3D 立體霓虹光環轉盤 -->
+          <div id="dancer-turntable-floor" class="dancer-3d-turntable-floor"></div>
+
+          <!-- 點選爆星粒子容器 -->
+          <div id="dancer-stage-particles" class="pointer-events-none absolute inset-0 overflow-visible z-40"></div>
+
+          <!-- 5 位小朋友 3D 卡片環形容器 (由 JS 計算 3D 圓形角度與景深) -->
+          <div id="dancer-3d-ring" class="dancer-3d-ring">
+            <!-- Dynamically populated by renderDancer3DCarousel() -->
+          </div>
+        </div>
+
+        <!-- 往右轉 ▶ 立體果凍按鈕 -->
+        <button onclick="rotateDancerCarousel(1)" class="jelly-btn jelly-btn-fuchsia z-40 absolute right-1 sm:right-3 md:right-5 px-3 sm:px-4 py-3 sm:py-3.5 rounded-2xl font-black text-xs sm:text-sm flex flex-col items-center gap-0.5 shadow-[0_0_28px_rgba(217,70,239,0.65)] cursor-pointer select-none" title="往右轉動選擇下一位小朋友">
+          <span class="text-lg sm:text-xl leading-none">▶</span>
+          <span class="text-[10px] sm:text-xs font-black">往右轉</span>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- 🎵 下方：當前選中小朋友的「專屬 4 首代表舞曲」歌單與一鍵連播控制台 -->
+    <section class="relative z-20 mt-1 bg-slate-950/75 backdrop-blur-xl border border-white/20 rounded-3xl p-3 sm:p-4 shadow-[0_16px_40px_rgba(0,0,0,0.75)]">
+      <!-- 角色專屬歌單標題列 + 一鍵連播 4 首歌大按鈕 -->
+      <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-3 mb-3 border-b border-white/15">
+        <div class="flex items-center gap-3">
+          <div id="selected-dancer-avatar-badge" class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl overflow-hidden border-2 border-amber-300 shadow-[0_0_16px_rgba(251,191,36,0.5)] shrink-0">
+            <img id="selected-dancer-mini-img" src="./images/album2_kpop/kid1_boy_kpop_v1.jpg" alt="Selected Dancer" class="w-full h-full object-cover object-top">
+          </div>
+          <div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <h3 id="selected-dancer-playlist-title" class="text-base sm:text-lg font-black text-white">
+                👦 Leo (陽光刺蝟頭男孩) · 專屬 4 首代表舞曲
+              </h3>
+              <span id="selected-dancer-style-badge" class="px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-black bg-sky-500/30 text-sky-200 border border-sky-300/50">
+                ⚡ K-Pop 銀藍星際男團風
+              </span>
+            </div>
+            <p id="selected-dancer-playlist-desc" class="text-[11px] sm:text-xs text-slate-300 font-bold mt-0.5">
+              包含 ☀️ 晨光星球 2 首 ＋ 🪐 派對星球 2 首 · 點選下方任一首或一鍵連播這 4 首歌！
+            </p>
+          </div>
+        </div>
+
+        <!-- ▶ 一鍵連播該小朋友的 4 首歌主按鈕 -->
+        <button id="btn-play-dancer-4songs" onclick="playSelectedDancerAllSongs()" class="jelly-btn jelly-btn-gold px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-black text-xs sm:text-sm md:text-base flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(251,191,36,0.65)] shrink-0 cursor-pointer">
+          <span>▶</span>
+          <span id="btn-play-dancer-4songs-label">連播 Leo 的 4 首專屬舞曲 (1➔4)</span>
+        </button>
+      </div>
+
+      <!-- 4 首專屬歌曲卡片橫列 (1~4 播放順序) -->
+      <div id="dancer-4songs-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-3.5">
+        <!-- 由 JS 動態渲染該小朋友的 4 首代表歌曲卡片 -->
+      </div>
+    </section>
+
   </div>
 
 
@@ -3069,9 +3394,19 @@
       }, 530);
     }
 
-    // 點擊舞蹈天團小朋友統一入口：星光音效 + 歡慶跳躍 + 粒子爆發 + 男女小朋友齊聲童聲
+    // 點擊舞蹈天團小朋友統一入口：星光音效 + 歡慶跳躍 + 粒子爆發 + 進入 K-Pop 舞蹈戰隊 3D 轉盤選單頁
     function handleDanceTeamClick() {
+      if (isTransitioningPlanet) return;
+      isTransitioningPlanet = true;
+      if (isThemeSongLyricsActive) {
+        exitThemeSongLyricsMode();
+      }
+
       playStarChimeSFX();
+      stopSpaceAmbient(0);
+      stopHomeBgm(0);
+      const homeAudioOnSquad = document.getElementById('audio-home-bgm');
+      if (homeAudioOnSquad) { try { homeAudioOnSquad.pause(); } catch(e) {} }
 
       // 1. 小朋友群體歡樂起跳動畫
       const kidsImg = document.getElementById('dance-team-kids-img');
@@ -3095,49 +3430,14 @@
         }, 900);
       }
 
-      // 3. 歡樂氣泡彈跳與高亮
-      const bubble = document.getElementById('dance-team-bubble');
-      const bubbleText = document.getElementById('dance-team-bubble-text');
-      if (bubble) {
-        bubble.classList.remove('animate-bounce', 'anim-bubble-pop');
-        void bubble.offsetWidth;
-        bubble.classList.add('anim-bubble-pop');
-        setTimeout(() => {
-          bubble.classList.remove('anim-bubble-pop');
-          bubble.classList.add('animate-bounce');
-        }, 1200);
-      }
-      if (bubbleText) {
-        bubbleText.innerText = "歡迎來到 KaiDance，歡迎大家來跳舞！";
-      }
-
-      // 4. 底部狀態膠囊熱烈反饋
-      const capsule = document.getElementById('dance-team-status-capsule');
-      if (capsule) {
-        capsule.innerHTML = '<span class="text-amber-300 font-black animate-pulse">🌟 舞蹈天團齊聲歡呼：歡迎大家來跳舞！ 🎵</span>';
-        setTimeout(() => {
-          capsule.innerHTML = '<span class="text-amber-400 font-bold">✨ 5大曲目舞團集結</span><span class="text-slate-500">·</span><span class="text-sky-300 font-semibold">點擊聆聽男女童聲齊唱</span>';
-        }, 4000);
-      }
-
-      // 5. 放射狀星星與音符爆發特效
+      // 3. 放射狀星星與音符爆發特效
       spawnCelebrationParticles();
 
-      // 6. 優先播放男女小朋友童聲齊唱音訊 (welcome_kids_chorus.mp3)
-      const chorusAudio = document.getElementById('audio-welcome-chorus');
-      if (chorusAudio) {
-        chorusAudio.currentTime = 0;
-        chorusAudio.volume = 1.0;
-        const playPromise = chorusAudio.play();
-        if (playPromise !== undefined) {
-          playPromise.catch((err) => {
-            console.log("Chorus audio play fallback to speechSynthesis:", err);
-            speakKidsChorusFallback();
-          });
-        }
-      } else {
-        speakKidsChorusFallback();
-      }
+      // 4. 順暢切入 K-Pop 舞蹈戰隊 5 位小朋友 3D 轉盤選單頁面
+      setTimeout(() => {
+        openDancerSquadView();
+        isTransitioningPlanet = false;
+      }, 360);
     }
 
     // 歡慶粒子噴射特效 (星星、音符與光芒)
@@ -3365,9 +3665,519 @@
       }
     }
 
+    // ========================================================
+    // 🌟 K-Pop 舞蹈戰隊 5 位小朋友 3D 環形旋轉選單與專屬 4 首歌單連播系統
+    // ========================================================
+    const viewDancerSquad = document.getElementById('view-dancer-squad');
+    let currentDancerIndex = 0; // 0: Leo, 1: Mia, 2: Max, 3: Hana, 4: Zoe
+    let isDancerPlaylistMode = false; // 是否處於小朋友專屬 4 首歌單連播模式
+    let activeDancerIndexForPlay = 0;
+
+    const DANCER_SQUAD_DATA = [
+      {
+        index: 0,
+        id: 'kid1_leo',
+        name: 'Leo',
+        zhTitle: '陽光刺蝟頭男孩 (第1位男孩)',
+        shortLabel: '👦 Leo',
+        emoji: '👦⚡',
+        styleTag: '⚡ K-Pop 銀藍星際男團風',
+        image: './images/album2_kpop/kid1_boy_kpop_v1.jpg',
+        voiceAudioId: 'audio-kid-voice-0',
+        voiceText: "Let's go! 我是 Leo，讓我們一起來跳舞吧！",
+        songs: ['a1_s01', 'a1_s06', 'a2_s03', 'a2_s06'],
+        accentColor: '#38bdf8',
+        glowRgba: 'rgba(56, 189, 248, 0.82)',
+        spotlightBg: 'linear-gradient(180deg, rgba(56, 189, 248, 0.88) 0%, rgba(59, 130, 246, 0.28) 58%, transparent 100%)',
+        chimeFreqs: [523.25, 659.25, 783.99, 1046.50]
+      },
+      {
+        index: 1,
+        id: 'kid2_mia',
+        name: 'Mia',
+        zhTitle: '波浪雙馬尾女孩 (第2位女孩)',
+        shortLabel: '👧 Mia',
+        emoji: '👧💖',
+        styleTag: '💖 K-Pop 夢幻鐳射女團風',
+        image: './images/album2_kpop/kid2_girl_kpop_v1.jpg',
+        voiceAudioId: 'audio-kid-voice-1',
+        voiceText: "耶！我是 Mia，準備好了嗎？跟我一起閃亮搖擺吧！",
+        songs: ['a1_s02', 'a1_s07', 'a2_s01', 'a2_s07'],
+        accentColor: '#f472b6',
+        glowRgba: 'rgba(244, 114, 182, 0.85)',
+        spotlightBg: 'linear-gradient(180deg, rgba(244, 114, 182, 0.88) 0%, rgba(217, 70, 239, 0.28) 58%, transparent 100%)',
+        chimeFreqs: [587.33, 739.99, 880.00, 1174.66]
+      },
+      {
+        index: 2,
+        id: 'kid3_max',
+        name: 'Max',
+        zhTitle: '蓬鬆呆毛棕髮男孩 (第3位男孩)',
+        shortLabel: '👦 Max',
+        emoji: '👦🎧',
+        styleTag: '🎧 K-Pop 翠綠霓虹嘻哈風',
+        image: './images/album2_kpop/kid3_boy_kpop_v1.jpg',
+        voiceAudioId: 'audio-kid-voice-2',
+        voiceText: "Yo! Let's party! 我是 Max，跟上節拍一起跳起來！",
+        songs: ['a1_s03', 'a1_s08', 'a2_s04', 'a2_s08'],
+        accentColor: '#34d399',
+        glowRgba: 'rgba(52, 211, 153, 0.82)',
+        spotlightBg: 'linear-gradient(180deg, rgba(52, 211, 153, 0.86) 0%, rgba(16, 185, 129, 0.28) 58%, transparent 100%)',
+        chimeFreqs: [493.88, 622.25, 739.99, 987.77]
+      },
+      {
+        index: 3,
+        id: 'kid4_hana',
+        name: 'Hana',
+        zhTitle: '烏黑妹妹頭短髮女孩 (第4位女孩)',
+        shortLabel: '👧 Hana',
+        emoji: '👧🌸',
+        styleTag: '🌸 K-Pop 星光丁香紫小香風',
+        image: './images/album2_kpop/kid4_girl_kpop_v1.jpg',
+        voiceAudioId: 'audio-kid-voice-3',
+        voiceText: "Hi! Let's dance! 我是 Hana，快樂音樂開始囉，一起開心跳舞吧！",
+        songs: ['a1_s04', 'a1_s09', 'a2_s02', 'a2_s09'],
+        accentColor: '#c084fc',
+        glowRgba: 'rgba(192, 132, 252, 0.85)',
+        spotlightBg: 'linear-gradient(180deg, rgba(192, 132, 252, 0.88) 0%, rgba(139, 92, 246, 0.28) 58%, transparent 100%)',
+        chimeFreqs: [659.25, 830.61, 987.77, 1318.51]
+      },
+      {
+        index: 4,
+        id: 'kid5_zoe',
+        name: 'Zoe',
+        zhTitle: '雙丸子捲髮女孩 (第5位女孩)',
+        shortLabel: '👧 Zoe',
+        emoji: '👧🌟',
+        styleTag: '🌟 K-Pop 香檳金莓果巨星風',
+        image: './images/album2_kpop/kid5_girl_kpop_v1.jpg',
+        voiceAudioId: 'audio-kid-voice-4',
+        voiceText: "One, two, three, jump! 我是 Zoe，派對時間到，大家一起嗨起來！",
+        songs: ['a1_s05', 'a1_s10', 'a2_s05', 'a2_s10'],
+        accentColor: '#fbbf24',
+        glowRgba: 'rgba(251, 191, 36, 0.85)',
+        spotlightBg: 'linear-gradient(180deg, rgba(251, 191, 36, 0.88) 0%, rgba(244, 63, 94, 0.28) 58%, transparent 100%)',
+        chimeFreqs: [554.37, 698.46, 830.61, 1108.73]
+      }
+    ];
+
+    function stopAllKidPreviewVoices() {
+      for (let i = 0; i < 5; i++) {
+        const el = document.getElementById(`audio-kid-voice-${i}`);
+        if (el) {
+          try {
+            el.pause();
+            el.currentTime = 0;
+          } catch(e) {}
+        }
+      }
+      const chorus = document.getElementById('audio-welcome-chorus');
+      if (chorus) {
+        try {
+          chorus.pause();
+          chorus.currentTime = 0;
+        } catch(e) {}
+      }
+    }
+
+    // 播放 3D 轉盤旋轉與點選小朋友的舞台音效 (Web Audio API 合成)
+    function playDancerSelectSFX(dancerIdx) {
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      const dancer = DANCER_SQUAD_DATA[dancerIdx] || DANCER_SQUAD_DATA[0];
+      try {
+        const now = ctx.currentTime;
+        // 1. 輕快轉盤滑動 Whoosh 音
+        const whooshOsc = ctx.createOscillator();
+        const whooshGain = ctx.createGain();
+        whooshOsc.type = 'triangle';
+        whooshOsc.frequency.setValueAtTime(180, now);
+        whooshOsc.frequency.exponentialRampToValueAtTime(520, now + 0.14);
+        whooshGain.gain.setValueAtTime(0.001, now);
+        whooshGain.gain.linearRampToValueAtTime(0.16, now + 0.04);
+        whooshGain.gain.exponentialRampToValueAtTime(0.0001, now + 0.16);
+        whooshOsc.connect(whooshGain);
+        whooshGain.connect(ctx.destination);
+        whooshOsc.start(now);
+        whooshOsc.stop(now + 0.17);
+
+        // 2. 專屬明亮偶像星光琶音
+        dancer.chimeFreqs.forEach((freq, i) => {
+          const osc = ctx.createOscillator();
+          const g = ctx.createGain();
+          osc.type = 'sine';
+          const t0 = now + 0.04 + i * 0.045;
+          osc.frequency.setValueAtTime(freq, t0);
+          g.gain.setValueAtTime(0.001, t0);
+          g.gain.linearRampToValueAtTime(0.15, t0 + 0.015);
+          g.gain.exponentialRampToValueAtTime(0.0001, t0 + 0.28);
+          osc.connect(g);
+          g.connect(ctx.destination);
+          osc.start(t0);
+          osc.stop(t0 + 0.3);
+        });
+      } catch(e) {}
+    }
+
+    // 播放被選中小朋友的生動童聲引導語音
+    function playDancerKidVoice(dancerIdx) {
+      if (!userSettings.voiceGuidance) return;
+      stopAllKidPreviewVoices();
+      const dancer = DANCER_SQUAD_DATA[dancerIdx] || DANCER_SQUAD_DATA[0];
+      const audioEl = document.getElementById(dancer.voiceAudioId);
+      if (audioEl) {
+        audioEl.currentTime = 0;
+        audioEl.volume = 1.0;
+        const p = audioEl.play();
+        if (p !== undefined) {
+          p.catch(() => {
+            if ('speechSynthesis' in window) {
+              try {
+                window.speechSynthesis.cancel();
+                const u = new SpeechSynthesisUtterance(dancer.voiceText);
+                u.lang = 'zh-TW';
+                u.rate = 1.15;
+                u.pitch = 1.45;
+                window.speechSynthesis.speak(u);
+              } catch(e) {}
+            }
+          });
+        }
+      }
+    }
+
+    function replayCurrentDancerVoice() {
+      playDancerSelectSFX(currentDancerIndex);
+      playDancerKidVoice(currentDancerIndex);
+      triggerActiveDancerCardPop(currentDancerIndex);
+      spawnDancerSelectBurst(currentDancerIndex);
+    }
+
+    // 觸發選中小朋友卡片的立體彈跳與底座光波特效
+    function triggerActiveDancerCardPop(dancerIdx) {
+      const cardEl = document.getElementById(`dancer-3d-card-${dancerIdx}`);
+      const ringEl = document.getElementById(`dancer-shockwave-${dancerIdx}`);
+      const bubbleEl = document.getElementById('dancer-speech-bubble');
+      if (cardEl) {
+        cardEl.classList.remove('anim-dancer-pop');
+        void cardEl.offsetWidth;
+        cardEl.classList.add('anim-dancer-pop');
+      }
+      if (ringEl) {
+        ringEl.classList.remove('active');
+        void ringEl.offsetWidth;
+        ringEl.classList.add('active');
+      }
+      if (bubbleEl) {
+        bubbleEl.classList.remove('anim-bubble-pop');
+        void bubbleEl.offsetWidth;
+        bubbleEl.classList.add('anim-bubble-pop');
+      }
+    }
+
+    // 選中小朋友時的舞台星光與音符噴發特效
+    function spawnDancerSelectBurst(dancerIdx) {
+      const container = document.getElementById('dancer-stage-particles');
+      if (!container) return;
+      container.innerHTML = '';
+      const symbols = ['✨', '🌟', '🎵', '🎶', '⚡', '💖', '⭐', '🎉'];
+      const count = 14;
+      for (let i = 0; i < count; i++) {
+        const p = document.createElement('span');
+        p.innerText = symbols[i % symbols.length];
+        p.className = 'absolute text-lg sm:text-xl select-none pointer-events-none transition-all duration-700 ease-out';
+        p.style.left = '50%';
+        p.style.top = '48%';
+        p.style.transform = 'translate(-50%, -50%) scale(0.4)';
+        p.style.opacity = '1';
+        container.appendChild(p);
+
+        const angle = (i / count) * 2 * Math.PI + (Math.random() * 0.3 - 0.15);
+        const dist = 90 + Math.random() * 85;
+        const tx = Math.cos(angle) * dist;
+        const ty = Math.sin(angle) * dist - 20;
+
+        requestAnimationFrame(() => {
+          p.style.transform = `translate(calc(-50% + ${tx}px), calc(-50% + ${ty}px)) scale(${1.15 + Math.random() * 0.45})`;
+          p.style.opacity = '0';
+        });
+      }
+    }
+
+    // 初始化建立 5 位小朋友的 3D 環形卡片 DOM
+    function ensureDancer3DCardsBuilt() {
+      const ring = document.getElementById('dancer-3d-ring');
+      if (!ring || ring.children.length === 5) return;
+      ring.innerHTML = DANCER_SQUAD_DATA.map((d) => `
+        <div id="dancer-3d-card-${d.index}"
+             onclick="selectDancerByIndex(${d.index}, true)"
+             class="dancer-3d-card bg-slate-900/90 backdrop-blur-md border-2 overflow-visible flex flex-col justify-between p-2 select-none group">
+          <!-- 腳底 3D 點選擴散衝擊波光環 -->
+          <div id="dancer-shockwave-${d.index}" class="pedestal-shockwave-ring" style="border-color: ${d.accentColor}; box-shadow: 0 0 22px ${d.glowRgba};"></div>
+
+          <!-- 9:16 全身 K-Pop 明星寫真 -->
+          <div class="relative w-full flex-1 rounded-2xl overflow-hidden bg-slate-950 border border-white/20">
+            <img src="${d.image}" alt="${d.name}" class="w-full h-full object-cover object-top pointer-events-none group-hover:scale-105 transition-transform duration-300">
+            <!-- 頂部角色編號徽章 -->
+            <div class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-slate-950/80 backdrop-blur border border-white/25 text-[10px] font-black text-white shadow">
+              #${d.index + 1} ${d.name}
+            </div>
+            <!-- 右上童聲喇叭小圖示 -->
+            <div class="absolute top-2 right-2 w-6 h-6 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center text-xs font-black shadow">
+              🔊
+            </div>
+            <!-- 底部漸層名條 -->
+            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-transparent pt-6 pb-2 px-2 text-center">
+              <div class="text-sm sm:text-base font-black text-white drop-shadow">${d.emoji} ${d.name}</div>
+              <div class="text-[10px] font-bold text-amber-200 truncate">${d.zhTitle.split(' ')[0]}</div>
+            </div>
+          </div>
+
+          <!-- 卡片底部狀態列 -->
+          <div id="dancer-card-footer-${d.index}" class="mt-1.5 py-1 px-2 rounded-xl text-center text-[10px] sm:text-[11px] font-black transition-all">
+            專屬 4 首歌單
+          </div>
+        </div>
+      `).join('');
+    }
+
+    // 根據 currentDancerIndex 計算並套用 5 位小朋友在 3D 圓形轉盤上的立體座標、角度與聚光燈
+    function updateDancer3DCarouselUI() {
+      ensureDancer3DCardsBuilt();
+      const activeDancer = DANCER_SQUAD_DATA[currentDancerIndex] || DANCER_SQUAD_DATA[0];
+      const isCompact = window.innerWidth < 640;
+      const rx1 = isCompact ? 112 : 210;
+      const rx2 = isCompact ? 178 : 350;
+
+      DANCER_SQUAD_DATA.forEach((d, idx) => {
+        const card = document.getElementById(`dancer-3d-card-${idx}`);
+        const footer = document.getElementById(`dancer-card-footer-${idx}`);
+        if (!card) return;
+
+        // 計算最短圓形偏移 (-2, -1, 0, 1, 2)
+        let rel = (idx - currentDancerIndex) % 5;
+        if (rel > 2) rel -= 5;
+        if (rel < -2) rel += 5;
+
+        let tx = 0, ty = 0, tz = 0, ry = 0, sc = 1, op = 1, br = 1, zIdx = 10;
+        if (rel === 0) {
+          tx = 0; ty = -8; tz = 135; ry = 0; sc = 1.08; op = 1; br = 1.08; zIdx = 30;
+          card.style.borderColor = d.accentColor;
+          card.style.boxShadow = `0 0 35px ${d.glowRgba}, 0 18px 38px rgba(0,0,0,0.8), inset 0 2px 6px rgba(255,255,255,0.5)`;
+          if (footer) {
+            footer.className = "mt-1.5 py-1 px-2 rounded-xl text-center text-[10px] sm:text-[11px] font-black bg-gradient-to-r from-amber-300 to-orange-400 text-slate-950 shadow";
+            footer.innerText = "🌟 當前領舞主角 (點我發聲)";
+          }
+        } else if (Math.abs(rel) === 1) {
+          tx = rel * rx1; ty = 6; tz = 15; ry = -rel * 24; sc = 0.83; op = 0.88; br = 0.82; zIdx = 20;
+          card.style.borderColor = 'rgba(255, 255, 255, 0.28)';
+          card.style.boxShadow = '0 12px 28px rgba(0,0,0,0.65)';
+          if (footer) {
+            footer.className = "mt-1.5 py-1 px-2 rounded-xl text-center text-[10px] sm:text-[11px] font-bold bg-slate-800/80 text-slate-300";
+            footer.innerText = "點擊轉至中央 ➜";
+          }
+        } else {
+          tx = (rel < 0 ? -1 : 1) * rx2; ty = -14; tz = -110; ry = (rel < 0 ? 1 : -1) * 42; sc = 0.65; op = 0.54; br = 0.62; zIdx = 10;
+          card.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+          card.style.boxShadow = '0 8px 20px rgba(0,0,0,0.5)';
+          if (footer) {
+            footer.className = "mt-1.5 py-1 px-2 rounded-xl text-center text-[10px] sm:text-[11px] font-bold bg-slate-900/70 text-slate-400";
+            footer.innerText = "點擊選擇";
+          }
+        }
+
+        card.style.zIndex = String(zIdx);
+        card.style.opacity = String(op);
+        card.style.filter = `brightness(${br})`;
+        card.style.transform = `translate3d(${tx}px, ${ty}px, ${tz}px) rotateY(${ry}deg) scale(${sc})`;
+      });
+
+      // 更新頂部快速選擇膠囊列
+      const pillsEl = document.getElementById('dancer-quick-pills');
+      if (pillsEl) {
+        pillsEl.innerHTML = DANCER_SQUAD_DATA.map((d, idx) => {
+          const isAct = idx === currentDancerIndex;
+          return `
+            <button onclick="selectDancerByIndex(${idx}, true)"
+                    class="px-2.5 sm:px-3 py-1 rounded-full text-xs font-black transition-all cursor-pointer flex items-center gap-1 ${
+                      isAct
+                        ? 'bg-gradient-to-r from-amber-300 to-pink-400 text-slate-950 shadow-[0_0_16px_rgba(251,191,36,0.75)] scale-105 border-2 border-white'
+                        : 'bg-slate-900/80 hover:bg-slate-800 text-slate-200 border border-white/20'
+                    }">
+              <span>${d.shortLabel}</span>
+            </button>
+          `;
+        }).join('');
+      }
+
+      // 更新中央追蹤投射燈與 3D 舞台底座光暈顏色
+      const centerSpot = document.getElementById('dancer-center-spotlight');
+      if (centerSpot) {
+        centerSpot.style.background = activeDancer.spotlightBg;
+      }
+      const floorEl = document.getElementById('dancer-turntable-floor');
+      if (floorEl) {
+        floorEl.style.borderColor = activeDancer.accentColor;
+        floorEl.style.boxShadow = `0 0 65px ${activeDancer.glowRgba}, inset 0 0 45px ${activeDancer.glowRgba}`;
+      }
+
+      // 更新頂部童聲對話氣泡
+      const speechEmoji = document.getElementById('dancer-speech-emoji');
+      const speechText = document.getElementById('dancer-speech-text');
+      const speechBubble = document.getElementById('dancer-speech-bubble');
+      if (speechEmoji) speechEmoji.innerText = activeDancer.emoji;
+      if (speechText) speechText.innerText = `"${activeDancer.voiceText}"`;
+      if (speechBubble) speechBubble.style.borderColor = activeDancer.accentColor;
+
+      // 更新下方該小朋友的 4 首專屬代表舞曲面板
+      renderSelectedDancer4Songs(activeDancer);
+    }
+
+    function renderSelectedDancer4Songs(dancer) {
+      const miniImg = document.getElementById('selected-dancer-mini-img');
+      const titleEl = document.getElementById('selected-dancer-playlist-title');
+      const styleBadge = document.getElementById('selected-dancer-style-badge');
+      const playAllLabel = document.getElementById('btn-play-dancer-4songs-label');
+      const gridEl = document.getElementById('dancer-4songs-grid');
+
+      if (miniImg) miniImg.src = dancer.image;
+      if (titleEl) titleEl.innerText = `${dancer.emoji} ${dancer.name} (${dancer.zhTitle}) · 專屬 4 首代表舞曲`;
+      if (styleBadge) styleBadge.innerText = dancer.styleTag;
+      if (playAllLabel) playAllLabel.innerText = `連播 ${dancer.name} 的 4 首專屬舞曲 (1➔4)`;
+
+      if (!gridEl || !window.KAI_ALBUM_DATABASE) return;
+
+      gridEl.innerHTML = dancer.songs.map((songId, orderIdx) => {
+        const song = songDatabase[songId];
+        if (!song) return '';
+        const isP1 = songId.startsWith('a1_');
+        const planetLabel = isP1 ? '☀️ 晨光星球' : '🪐 派對星球';
+        const planetBadgeClass = isP1
+          ? 'bg-amber-400 text-slate-950 border-amber-200'
+          : 'bg-fuchsia-500 text-white border-fuchsia-300';
+        const cardClass = isP1 ? 'jelly-song-card-p1' : 'jelly-song-card-p2';
+        const titleColorClass = isP1 ? 'text-amber-950' : 'text-white';
+        const subColorClass = isP1 ? 'text-amber-800' : 'text-fuchsia-300';
+
+        return `
+          <div onclick="playDancerSongAtIndex(${orderIdx})"
+               class="group relative ${cardClass} rounded-2xl p-3 sm:p-3.5 transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden select-none">
+            <div class="flex items-center justify-between gap-1 mb-1.5 relative z-20">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-black ${planetBadgeClass} border shadow-xs">
+                順序 ${orderIdx + 1}/4 · ${planetLabel}
+              </span>
+              <span class="text-[10px] font-black px-2 py-0.5 rounded-full bg-slate-950/75 text-amber-300 border border-amber-300/40">
+                #${String(song.trackNumber).padStart(2, '0')}
+              </span>
+            </div>
+
+            <div>
+              ${renderSongThemeEmblem(song, 'card')}
+              <h4 class="font-black text-sm ${titleColorClass} line-clamp-1">
+                ${song.title}
+              </h4>
+              <p class="text-xs font-extrabold ${subColorClass} mt-0.5 truncate">
+                ${song.zhTitle}
+              </p>
+            </div>
+
+            <div class="mt-2.5 pt-2 border-t ${isP1 ? 'border-amber-500/25' : 'border-white/15'} flex items-center justify-between">
+              <span class="text-[10px] font-bold ${isP1 ? 'text-amber-900/80' : 'text-sky-200/80'}">🎤 領舞: ${dancer.name}</span>
+              <button class="jelly-btn-gold text-[11px] font-black px-3 py-1 rounded-xl flex items-center gap-1">
+                <span>▶</span> 開跳 (${orderIdx + 1}/4)
+              </button>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    // 選擇指定索引的小朋友 (0..4)
+    function selectDancerByIndex(idx, withAudioAndFX = true) {
+      currentDancerIndex = ((idx % 5) + 5) % 5;
+      updateDancer3DCarouselUI();
+      if (withAudioAndFX) {
+        playDancerSelectSFX(currentDancerIndex);
+        playDancerKidVoice(currentDancerIndex);
+        triggerActiveDancerCardPop(currentDancerIndex);
+        spawnDancerSelectBurst(currentDancerIndex);
+      }
+    }
+
+    // 往左轉 (-1) 或 往右轉 (+1)
+    function rotateDancerCarousel(step) {
+      selectDancerByIndex(currentDancerIndex + step, true);
+    }
+
+    // 進入 K-Pop 舞蹈戰隊 3D 轉盤選單頁面
+    function openDancerSquadView() {
+      stopSpaceAmbient(0.3);
+      stopHomeBgm(0.3);
+      if (viewAlbumLevels) viewAlbumLevels.classList.add('hidden');
+      if (viewDance) viewDance.classList.add('hidden');
+      viewLobby.classList.add('hidden');
+      if (viewDancerSquad) {
+        viewDancerSquad.classList.remove('hidden');
+      }
+      selectDancerByIndex(currentDancerIndex, true);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 啟動該小朋友的 4 首歌專屬連播模式 (從第 1 首開始連播 4 首)
+    function playSelectedDancerAllSongs() {
+      playDancerSongAtIndex(0);
+    }
+
+    // 從該小朋友的 4 首歌單中點選第 orderIdx 首開始連播
+    function playDancerSongAtIndex(orderIdx) {
+      const dancer = DANCER_SQUAD_DATA[currentDancerIndex] || DANCER_SQUAD_DATA[0];
+      const targetSongId = dancer.songs[orderIdx] || dancer.songs[0];
+      stopAllKidPreviewVoices();
+      isDancerPlaylistMode = true;
+      activeDancerIndexForPlay = currentDancerIndex;
+      isAlbumContinuousPlay = true;
+      if (viewDancerSquad) viewDancerSquad.classList.add('hidden');
+      updateLoopModeUI();
+      selectSong(targetSongId);
+    }
+
+    // 支援 3D 舞台左右觸控滑動與方向鍵旋轉
+    (function initDancerCarouselGestures() {
+      let touchStartX = null;
+      document.addEventListener('touchstart', (e) => {
+        if (!viewDancerSquad || viewDancerSquad.classList.contains('hidden')) return;
+        if (e.target && e.target.closest && e.target.closest('#dancer-3d-viewport')) {
+          touchStartX = e.touches[0].clientX;
+        }
+      }, { passive: true });
+
+      document.addEventListener('touchend', (e) => {
+        if (touchStartX === null || !viewDancerSquad || viewDancerSquad.classList.contains('hidden')) return;
+        const dx = e.changedTouches[0].clientX - touchStartX;
+        touchStartX = null;
+        if (Math.abs(dx) > 36) {
+          rotateDancerCarousel(dx < 0 ? 1 : -1);
+        }
+      }, { passive: true });
+
+      window.addEventListener('keydown', (e) => {
+        if (!viewDancerSquad || viewDancerSquad.classList.contains('hidden')) return;
+        if (e.key === 'ArrowLeft') rotateDancerCarousel(-1);
+        else if (e.key === 'ArrowRight') rotateDancerCarousel(1);
+      });
+
+      window.addEventListener('resize', () => {
+        if (viewDancerSquad && !viewDancerSquad.classList.contains('hidden')) {
+          updateDancer3DCarouselUI();
+        }
+      });
+    })();
+
     // 打開單一星球的 10 關選單
     function openAlbumView(albumId) {
       if (!window.KAI_ALBUM_DATABASE || !window.KAI_ALBUM_DATABASE[albumId]) return;
+      isDancerPlaylistMode = false;
+      stopAllKidPreviewVoices();
       currentAlbumId = albumId;
       const album = window.KAI_ALBUM_DATABASE[albumId];
 
@@ -3395,6 +4205,7 @@
         aDesc.innerText = `${album.subtitle} · 共 10 個趣味動態關卡`;
       }
 
+      if (viewDancerSquad) viewDancerSquad.classList.add('hidden');
       if (viewAlbumLevels) {
         viewAlbumLevels.classList.remove('hidden');
       }
@@ -3404,9 +4215,11 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // 從單一星球返回雙星球首頁選單
+    // 從單一星球或戰隊選單返回雙星球首頁選單
     function backToPlanetHub() {
       currentSongEntryToken++;
+      isDancerPlaylistMode = false;
+      stopAllKidPreviewVoices();
       // 確保攝影機硬體關閉
       stopRealCamera();
 
@@ -3440,6 +4253,7 @@
       }
 
       isTransitioningPlanet = false;
+      if (viewDancerSquad) viewDancerSquad.classList.add('hidden');
       if (viewAlbumLevels) viewAlbumLevels.classList.add('hidden');
       if (viewDance) viewDance.classList.add('hidden');
       viewLobby.classList.remove('hidden');
@@ -3558,6 +4372,8 @@
     // 一鍵全專輯連續循環播放
     function playCurrentAlbumAll() {
       if (isThemeSongLyricsActive) exitThemeSongLyricsMode();
+      isDancerPlaylistMode = false;
+      stopAllKidPreviewVoices();
       stopHomeBgm(0);
       stopSpaceAmbient(0.3);
       const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
@@ -3570,6 +4386,8 @@
     // 隨機跳一首
     function playRandomSongInAlbum() {
       if (isThemeSongLyricsActive) exitThemeSongLyricsMode();
+      isDancerPlaylistMode = false;
+      stopAllKidPreviewVoices();
       stopHomeBgm(0);
       stopSpaceAmbient(0.3);
       const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
@@ -3597,7 +4415,7 @@
       }
     }
 
-    // 渲染歌單抽屜 (依星球自動適配晨光亮色系或深邃星光狂歡系 + 3D 主題示意小圖示)
+    // 渲染歌單抽屜 (支援「小朋友專屬 4 首歌單連播模式」與「全星球 10 首歌單模式」)
     function renderPlaylistDrawer() {
       const listContainer = document.getElementById('drawer-song-list');
       const dTitle = document.getElementById('drawer-album-title');
@@ -3605,19 +4423,35 @@
       if (!listContainer || !window.KAI_ALBUM_DATABASE) return;
 
       const isP1 = currentAlbumId === 'album_1';
-      const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
-      if (dTitle) {
-        dTitle.innerText = album.zhTitle;
-        dTitle.className = isP1 ? "font-black text-base text-amber-950 leading-tight" : "font-black text-base text-white leading-tight drop-shadow";
-      }
-      if (dSub) {
-        dSub.innerText = `${isAlbumContinuousPlay ? '全專輯連播開啟中' : '單曲模式'} · 共 ${album.songs.length} 首曲目`;
-        dSub.className = isP1 ? "text-xs text-amber-800 font-bold" : "text-xs text-sky-200/80 font-bold";
+      let songsToRender = [];
+
+      if (isDancerPlaylistMode) {
+        const dancer = DANCER_SQUAD_DATA[activeDancerIndexForPlay] || DANCER_SQUAD_DATA[0];
+        songsToRender = dancer.songs.map(id => songDatabase[id]).filter(Boolean);
+        if (dTitle) {
+          dTitle.innerText = `${dancer.emoji} ${dancer.name} 專屬 4 首代表舞曲`;
+          dTitle.className = isP1 ? "font-black text-base text-amber-950 leading-tight" : "font-black text-base text-white leading-tight drop-shadow";
+        }
+        if (dSub) {
+          dSub.innerText = `${isAlbumContinuousPlay ? `${dancer.name} 4首專屬連播中` : '單曲模式'} · 跨星球精選 4 首`;
+          dSub.className = isP1 ? "text-xs text-amber-800 font-bold" : "text-xs text-sky-200/80 font-bold";
+        }
+      } else {
+        const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
+        songsToRender = album.songs;
+        if (dTitle) {
+          dTitle.innerText = album.zhTitle;
+          dTitle.className = isP1 ? "font-black text-base text-amber-950 leading-tight" : "font-black text-base text-white leading-tight drop-shadow";
+        }
+        if (dSub) {
+          dSub.innerText = `${isAlbumContinuousPlay ? '全專輯連播開啟中' : '單曲模式'} · 共 ${album.songs.length} 首曲目`;
+          dSub.className = isP1 ? "text-xs text-amber-800 font-bold" : "text-xs text-sky-200/80 font-bold";
+        }
       }
 
       updateLoopModeUI();
 
-      listContainer.innerHTML = album.songs.map(song => {
+      listContainer.innerHTML = songsToRender.map((song, idx) => {
         const isCurrent = song.id === currentSongKey;
         const rowClass = isP1
           ? (isCurrent
@@ -3630,6 +4464,9 @@
           ? (isCurrent ? 'text-orange-700' : 'text-amber-950')
           : (isCurrent ? 'text-amber-300' : 'text-white');
         const subClass = isP1 ? 'text-amber-800/90' : 'text-sky-200/80';
+        const badgeText = isDancerPlaylistMode
+          ? `${idx + 1}/4`
+          : `#${String(song.trackNumber).padStart(2, '0')}`;
 
         return `
           <div onclick="selectSong('${song.id}')" 
@@ -3638,7 +4475,7 @@
               ${renderSongThemeEmblem(song, 'drawer')}
               <div class="min-w-0">
                 <div class="flex items-center gap-1.5">
-                  <span class="text-[10px] font-black px-1.5 py-0.5 rounded-md ${isCurrent ? 'bg-amber-400 text-slate-950' : (isP1 ? 'bg-amber-100 text-amber-900' : 'bg-white/10 text-sky-200')}">#${String(song.trackNumber).padStart(2, '0')}</span>
+                  <span class="text-[10px] font-black px-1.5 py-0.5 rounded-md ${isCurrent ? 'bg-amber-400 text-slate-950' : (isP1 ? 'bg-amber-100 text-amber-900' : 'bg-white/10 text-sky-200')}">${badgeText}</span>
                   <h4 class="text-xs md:text-sm font-black ${titleClass} truncate">
                     ${song.title}
                   </h4>
@@ -3675,15 +4512,19 @@
       const drawerBtn = document.getElementById('drawer-loop-btn');
       const drawerHint = document.getElementById('drawer-loop-hint');
       const drawerIcon = document.getElementById('drawer-loop-icon');
+      const dancer = DANCER_SQUAD_DATA[activeDancerIndexForPlay] || DANCER_SQUAD_DATA[0];
+      const contLabel = isDancerPlaylistMode ? `${dancer.name} 4首連播` : '全專輯連播';
 
       if (isAlbumContinuousPlay) {
         if (btnIcon) btnIcon.innerText = "🔁";
-        if (btnLabel) btnLabel.innerText = "全專輯連播";
+        if (btnLabel) btnLabel.innerText = contLabel;
         if (drawerBtn) {
-          drawerBtn.innerText = "全專輯連播: 開";
+          drawerBtn.innerText = `${contLabel}: 開`;
           drawerBtn.className = "jelly-btn-gold text-xs font-black px-3 py-1 rounded-xl active:scale-95 transition";
         }
-        if (drawerHint) drawerHint.innerText = "播完自動換下一首 (全專輯循環)";
+        if (drawerHint) drawerHint.innerText = isDancerPlaylistMode
+          ? `依序連播 ${dancer.name} 的 4 首代表舞曲`
+          : "播完自動換下一首 (全專輯循環)";
         if (drawerIcon) drawerIcon.innerText = "🔁";
       } else {
         if (btnIcon) btnIcon.innerText = "🔂";
@@ -3697,8 +4538,16 @@
       }
     }
 
-    // 上一首
+    // 上一首 (若處於小朋友專屬 4 首歌單模式，則在該小朋友的 4 首歌之間循環)
     function prevSong() {
+      if (isDancerPlaylistMode) {
+        const dancer = DANCER_SQUAD_DATA[activeDancerIndexForPlay] || DANCER_SQUAD_DATA[0];
+        const list = dancer.songs;
+        const curIdx = list.indexOf(currentSongKey);
+        const prevIdx = ((curIdx >= 0 ? curIdx : 0) - 1 + list.length) % list.length;
+        selectSong(list[prevIdx]);
+        return;
+      }
       const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
       if (!album || !album.songs.length) return;
       const curIdx = album.songs.findIndex(s => s.id === currentSongKey);
@@ -3706,8 +4555,16 @@
       selectSong(album.songs[prevIdx].id);
     }
 
-    // 下一首
+    // 下一首 (若處於小朋友專屬 4 首歌單模式，則依該小朋友的 4 首歌順序播放)
     function nextSong() {
+      if (isDancerPlaylistMode) {
+        const dancer = DANCER_SQUAD_DATA[activeDancerIndexForPlay] || DANCER_SQUAD_DATA[0];
+        const list = dancer.songs;
+        const curIdx = list.indexOf(currentSongKey);
+        const nextIdx = ((curIdx >= 0 ? curIdx : -1) + 1) % list.length;
+        selectSong(list[nextIdx]);
+        return;
+      }
       const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
       if (!album || !album.songs.length) return;
       const curIdx = album.songs.findIndex(s => s.id === currentSongKey);
@@ -3729,6 +4586,7 @@
 
       // 1. 立即停止任何正在播放的音樂與語音，杜絕畫面還沒進來就先發出音樂聲
       pauseDance();
+      stopAllKidPreviewVoices();
       if (isThemeSongLyricsActive) exitThemeSongLyricsMode();
       stopHomeBgm(0);
       stopSpaceAmbient(0);
@@ -3757,7 +4615,13 @@
         const isP1 = currentAlbumId === 'album_1';
         const badgePlanetImg = isP1 ? './images/ui/planet1_morning.png' : './images/ui/planet2_groove.png';
         const badgePlanetName = isP1 ? '晨光星球 · 第 1 集' : '派對星球 · 第 2 集';
-        albumBadge.innerHTML = `<img src="${badgePlanetImg}" alt="" class="w-4 h-4 object-contain inline-block shrink-0"> <span>${badgePlanetName} #${String(song.trackNumber || 1).padStart(2, '0')}</span>`;
+        if (isDancerPlaylistMode) {
+          const dancer = DANCER_SQUAD_DATA[activeDancerIndexForPlay] || DANCER_SQUAD_DATA[0];
+          const dOrd = dancer.songs.indexOf(song.id) + 1;
+          albumBadge.innerHTML = `<img src="${badgePlanetImg}" alt="" class="w-4 h-4 object-contain inline-block shrink-0"> <span>${dancer.emoji} ${dancer.name} 歌單 (${dOrd || 1}/4) · ${badgePlanetName}</span>`;
+        } else {
+          albumBadge.innerHTML = `<img src="${badgePlanetImg}" alt="" class="w-4 h-4 object-contain inline-block shrink-0"> <span>${badgePlanetName} #${String(song.trackNumber || 1).padStart(2, '0')}</span>`;
+        }
       }
 
       // 設定音檔路徑但暫不播放
@@ -3815,6 +4679,9 @@
 
       // 3. 立即切換畫面至單曲跳舞教室，讓使用者第一時間看到單曲畫面
       viewLobby.classList.add('hidden');
+      if (viewDancerSquad) {
+        viewDancerSquad.classList.add('hidden');
+      }
       if (viewAlbumLevels) {
         viewAlbumLevels.classList.add('hidden');
       }
@@ -3895,7 +4762,10 @@
       // 離開跳舞教室，關閉實體攝影機
       stopRealCamera();
       viewDance.classList.add('hidden');
-      if (viewAlbumLevels) {
+      if (isDancerPlaylistMode && viewDancerSquad) {
+        viewDancerSquad.classList.remove('hidden');
+        updateDancer3DCarouselUI();
+      } else if (viewAlbumLevels) {
         viewAlbumLevels.classList.remove('hidden');
         renderLobbySongs(currentAlbumId);
       } else {
