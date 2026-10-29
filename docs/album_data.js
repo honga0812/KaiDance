@@ -4161,8 +4161,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 01 節: 雙手彈動數一二'. Action: 🎸 雙手像彈吉他輕快撥動，跟著節奏數一二！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 雙手彈動數一二（歌詞：Kiki tar chucking one two.）。動作指令：🎸 雙手像彈吉他輕快撥動，跟著節奏數一二！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 雙手彈動數一二（歌詞：Kiki tar chucking one two.）。動作指令：🎸 雙手像彈吉他輕快撥動，跟著節奏數一二！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 3.33,
@@ -4177,8 +4177,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 02 節: 閃耀出發向前衝'. Action: ✨ 雙臂向前用力揮出，大喊 Let's Go 出發！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 閃耀出發向前衝（歌詞：Let's shine yeah yeah let's go.）。動作指令：✨ 雙臂向前用力揮出，大喊 Let's Go 出發！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 閃耀出發向前衝（歌詞：Let's shine yeah yeah let's go.）。動作指令：✨ 雙臂向前用力揮出，大喊 Let's Go 出發！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 8.57,
@@ -4193,8 +4193,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 03 節: 晨光敲打小窗台'. Action: ☀️ 抬頭仰望，雙手在眼前輕輕敲響晨光窗台！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 晨光敲打小窗台（歌詞：Sunlight knocking on my window pane.）。動作指令：☀️ 抬頭仰望，雙手在眼前輕輕敲響晨光窗台！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 晨光敲打小窗台（歌詞：Sunlight knocking on my window pane.）。動作指令：☀️ 抬頭仰望，雙手在眼前輕輕敲響晨光窗台！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 12.5,
@@ -4209,8 +4209,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 04 節: 時鐘滴答早安到'. Action: ⏰ 雙臂像時針左右擺動，滴答滴答早安來！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 時鐘滴答早安到（歌詞：Tick tock morning comes around again.）。動作指令：⏰ 雙臂像時針左右擺動，滴答滴答早安來！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 時鐘滴答早安到（歌詞：Tick tock morning comes around again.）。動作指令：⏰ 雙臂像時針左右擺動，滴答滴答早安來！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 16.27,
@@ -4225,8 +4225,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 05 節: 音響重音大蹦跳'. Action: 🎵 雙腳踩節奏，跟著重低音高高跳起來！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 音響重音大蹦跳（歌詞：Speakers on jumping off the floor.）。動作指令：🎵 雙腳踩節奏，跟著重低音高高跳起來！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 音響重音大蹦跳（歌詞：Speakers on jumping off the floor.）。動作指令：🎵 雙腳踩節奏，跟著重低音高高跳起來！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 19.6,
@@ -4241,8 +4241,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 06 節: 門外魔法在等待'. Action: 🚪 雙手推開神奇大門，迎接滿滿魔法！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 門外魔法在等待（歌詞：Magic waiting right outside the door.）。動作指令：🚪 雙手推開神奇大門，迎接滿滿魔法！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 門外魔法在等待（歌詞：Magic waiting right outside the door.）。動作指令：🚪 雙手推開神奇大門，迎接滿滿魔法！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 23.33,
@@ -4257,8 +4257,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 07 節: 一步一步三二一'. Action: 👟 雙腳一步一步向前踩，大聲數 3、2、1！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 一步一步三二一（歌詞：Step by step 3 2 1.）。動作指令：👟 雙腳一步一步向前踩，大聲數 3、2、1！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 一步一步三二一（歌詞：Step by step 3 2 1.）。動作指令：👟 雙腳一步一步向前踩，大聲數 3、2、1！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 25.13,
@@ -4273,8 +4273,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 08 節: 金色太陽升起來'. Action: ☀️ 雙手從胸前向上托起，大太陽高高升起！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 金色太陽升起來（歌詞：Here comes the golden sun.）。動作指令：☀️ 雙手從胸前向上托起，大太陽高高升起！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 金色太陽升起來（歌詞：Here comes the golden sun.）。動作指令：☀️ 雙手從胸前向上托起，大太陽高高升起！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 27.07,
@@ -4289,8 +4289,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 09 節: 感受律動聽聲音'. Action: 👂 小手貼在耳朵旁，身體隨著鼓點輕輕彈動！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 感受律動聽聲音（歌詞：Feel the beat hear the sound.）。動作指令：👂 小手貼在耳朵旁，身體隨著鼓點輕輕彈動！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 感受律動聽聲音（歌詞：Feel the beat hear the sound.）。動作指令：👂 小手貼在耳朵旁，身體隨著鼓點輕輕彈動！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 28.93,
@@ -4305,8 +4305,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 10 節: 歡樂轉個大圓圈'. Action: 🌀 雙手張開轉個漂亮大圓圈，站定比個耶！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 歡樂轉個大圓圈（歌詞：Spinning round and round.）。動作指令：🌀 雙手張開轉個漂亮大圓圈，站定比個耶！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 歡樂轉個大圓圈（歌詞：Spinning round and round.）。動作指令：🌀 雙手張開轉個漂亮大圓圈，站定比個耶！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 32.53,
@@ -4321,8 +4321,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 11 節: 預備起步閃耀光'. Action: ⭐ 雙手胸前交叉後向外展開，迎接嶄新一天！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 預備起步閃耀光（歌詞：Ready set shine it's a brand new day.）。動作指令：⭐ 雙手胸前交叉後向外展開，迎接嶄新一天！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 預備起步閃耀光（歌詞：Ready set shine it's a brand new day.）。動作指令：⭐ 雙手胸前交叉後向外展開，迎接嶄新一天！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 36.33,
@@ -4337,8 +4337,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 12 節: 鑽石一般閃亮亮'. Action: 💎 雙手比出閃亮小星星，全身耀眼發光！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 鑽石一般閃亮亮（歌詞：Shine like a diamond when we play.）。動作指令：💎 雙手比出閃亮小星星，全身耀眼發光！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 鑽石一般閃亮亮（歌詞：Shine like a diamond when we play.）。動作指令：💎 雙手比出閃亮小星星，全身耀眼發光！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 39.8,
@@ -4353,8 +4353,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 13 節: 雙手高舉摸藍天'. Action: ☁️ 雙臂向上全力伸直，腳尖墊起摸摸藍天！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 雙手高舉摸藍天（歌詞：Put your hands up high touch the sunny blue.）。動作指令：☁️ 雙臂向上全力伸直，腳尖墊起摸摸藍天！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 雙手高舉摸藍天（歌詞：Put your hands up high touch the sunny blue.）。動作指令：☁️ 雙臂向上全力伸直，腳尖墊起摸摸藍天！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 44.4,
@@ -4369,8 +4369,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 14 節: 萬物為你閃晶晶'. Action: ✨ 雙手由上往下畫出星光小雨，亮晶晶！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 萬物為你閃晶晶（歌詞：Everything is sparkling just for you.）。動作指令：✨ 雙手由上往下畫出星光小雨，亮晶晶！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 萬物為你閃晶晶（歌詞：Everything is sparkling just for you.）。動作指令：✨ 雙手由上往下畫出星光小雨，亮晶晶！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 47.7,
@@ -4385,8 +4385,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 15 節: 啦啦啦啦閃耀光'. Action: 🎶 拍拍小手左右踩點，啦啦啦啦放聲唱！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 啦啦啦啦閃耀光（歌詞：LA LA LA LA shine so bright.）。動作指令：🎶 拍拍小手左右踩點，啦啦啦啦放聲唱！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 啦啦啦啦閃耀光（歌詞：LA LA LA LA shine so bright.）。動作指令：🎶 拍拍小手左右踩點，啦啦啦啦放聲唱！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 51.57,
@@ -4401,8 +4401,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 16 節: 啦啦啦啦晨光照'. Action: 🌅 雙手像微風左右搖擺，迎接溫暖晨光！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 啦啦啦啦晨光照（歌詞：LA LA LA LA morning light.）。動作指令：🌅 雙手像微風左右搖擺，迎接溫暖晨光！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 啦啦啦啦晨光照（歌詞：LA LA LA LA morning light.）。動作指令：🌅 雙手像微風左右搖擺，迎接溫暖晨光！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 56.53,
@@ -4417,8 +4417,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 17 節: 白雲變出奇妙形'. Action: ☁️ 雙手在空中畫出大雲朵，猜猜變出什麼！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 白雲變出奇妙形（歌詞：Look at the clouds making funny shapes.）。動作指令：☁️ 雙手在空中畫出大雲朵，猜猜變出什麼！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 白雲變出奇妙形（歌詞：Look at the clouds making funny shapes.）。動作指令：☁️ 雙手在空中畫出大雲朵，猜猜變出什麼！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 58.57,
@@ -4433,8 +4433,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 18 節: 摘下草莓紫葡萄'. Action: 🍇 雙手上下採摘甜莓果，放進美味野餐籃！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 摘下草莓紫葡萄（歌詞：Pack sweet berries and purple grapes.）。動作指令：🍇 雙手上下採摘甜莓果，放進美味野餐籃！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 摘下草莓紫葡萄（歌詞：Pack sweet berries and purple grapes.）。動作指令：🍇 雙手上下採摘甜莓果，放進美味野餐籃！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 60.47,
@@ -4449,8 +4449,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 19 節: 微笑漫步大街上'. Action: 👟 雙手插腰精神邁步，臉上掛著甜甜微笑！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 微笑漫步大街上（歌詞：Walking down the street with a happy smile.）。動作指令：👟 雙手插腰精神邁步，臉上掛著甜甜微笑！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 微笑漫步大街上（歌詞：Walking down the street with a happy smile.）。動作指令：👟 雙手插腰精神邁步，臉上掛著甜甜微笑！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 62.37,
@@ -4465,8 +4465,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 20 節: 一路跳舞向前行'. Action: 💃 跟著節奏盡情跳舞，每一步都是快樂！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 一路跳舞向前行（歌詞：Gonna dance along every single mile mile mile mile mile.）。動作指令：💃 跟著節奏盡情跳舞，每一步都是快樂！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 一路跳舞向前行（歌詞：Gonna dance along every single mile mile mile mile mile.）。動作指令：💃 跟著節奏盡情跳舞，每一步都是快樂！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 67.7,
@@ -4481,8 +4481,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 21 節: 齊聲歡呼大喊耶'. Action: 🎉 雙臂向上揮舞，開心大喊 Woo！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 齊聲歡呼大喊耶（歌詞：Woo!）。動作指令：🎉 雙臂向上揮舞，開心大喊 Woo！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 齊聲歡呼大喊耶（歌詞：Woo!）。動作指令：🎉 雙臂向上揮舞，開心大喊 Woo！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 68.5,
@@ -4497,8 +4497,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 83.47,
@@ -4513,8 +4513,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 22 節: 跳躍邁步閃星光'. Action: ⭐ 下蹲起跳，踢踢小腳，閃亮星光齊舞！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 跳躍邁步閃星光（歌詞：Hey jump step shine.）。動作指令：⭐ 下蹲起跳，踢踢小腳，閃亮星光齊舞！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 跳躍邁步閃星光（歌詞：Hey jump step shine.）。動作指令：⭐ 下蹲起跳，踢踢小腳，閃亮星光齊舞！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 86.33,
@@ -4529,8 +4529,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 23 節: 預備起步閃耀光'. Action: 🌟 雙手胸前交叉再展開，全新一天火力全開！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 預備起步閃耀光（歌詞：Ready set shine it's a brand new day.）。動作指令：🌟 雙手胸前交叉再展開，全新一天火力全開！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 預備起步閃耀光（歌詞：Ready set shine it's a brand new day.）。動作指令：🌟 雙手胸前交叉再展開，全新一天火力全開！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 90.1,
@@ -4545,8 +4545,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 24 節: 鑽石閃亮齊狂歡'. Action: 💎 雙手高高揮舞，像鑽石般閃耀全場！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 24 節: 鑽石閃亮齊狂歡（歌詞：Shining like a diamond when we play.）。動作指令：💎 雙手高高揮舞，像鑽石般閃耀全場！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 24 節: 鑽石閃亮齊狂歡（歌詞：Shining like a diamond when we play.）。動作指令：💎 雙手高高揮舞，像鑽石般閃耀全場！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 93.57,
@@ -4561,8 +4561,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 25 節: 雙手高舉摸藍天'. Action: ☁️ 伸長小手臂，向著晴朗藍天用力招手！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 25 節: 雙手高舉摸藍天（歌詞：Put your hands up high touch the sunny blue.）。動作指令：☁️ 伸長小手臂，向著晴朗藍天用力招手！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 25 節: 雙手高舉摸藍天（歌詞：Put your hands up high touch the sunny blue.）。動作指令：☁️ 伸長小手臂，向著晴朗藍天用力招手！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 98.13,
@@ -4577,8 +4577,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 26 節: 專屬你的閃亮秀'. Action: ✨ 雙手環繞胸前比個心，全場為你喝采！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 26 節: 專屬你的閃亮秀（歌詞：Everything is sparkling just for you.）。動作指令：✨ 雙手環繞胸前比個心，全場為你喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 26 節: 專屬你的閃亮秀（歌詞：Everything is sparkling just for you.）。動作指令：✨ 雙手環繞胸前比個心，全場為你喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 101.47,
@@ -4593,8 +4593,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 27 節: 啦啦啦啦閃耀光'. Action: 🎶 雙腳打節拍，啦啦啦啦歡樂合唱！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 27 節: 啦啦啦啦閃耀光（歌詞：LA LA LA LA shine so bright.）。動作指令：🎶 雙腳打節拍，啦啦啦啦歡樂合唱！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 27 節: 啦啦啦啦閃耀光（歌詞：LA LA LA LA shine so bright.）。動作指令：🎶 雙腳打節拍，啦啦啦啦歡樂合唱！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 105.27,
@@ -4609,8 +4609,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 28 節: 啦啦啦啦晨光照'. Action: 🌅 左右輕柔擺動，享受溫柔晨光撫摸！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 28 節: 啦啦啦啦晨光照（歌詞：LA LA LA LA morning light.）。動作指令：🌅 左右輕柔擺動，享受溫柔晨光撫摸！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 28 節: 啦啦啦啦晨光照（歌詞：LA LA LA LA morning light.）。動作指令：🌅 左右輕柔擺動，享受溫柔晨光撫摸！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 109.13,
@@ -4625,8 +4625,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 29 節: 啦啦啦啦閃耀光'. Action: 🌟 雙手畫大圓弧，展現最自信的帥氣動作！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 29 節: 啦啦啦啦閃耀光（歌詞：LA LA LA LA shine so bright.）。動作指令：🌟 雙手畫大圓弧，展現最自信的帥氣動作！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 29 節: 啦啦啦啦閃耀光（歌詞：LA LA LA LA shine so bright.）。動作指令：🌟 雙手畫大圓弧，展現最自信的帥氣動作！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 112.97,
@@ -4641,8 +4641,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing iridescent pastel pink and lavender K-pop cropped jacket with star badges, pleated holographic white skirt, pink platform sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Ready, Set, Shine!' (Upbeat K-Pop Girl Group Center Dance (元氣女團主打風)), Segment '第 30 節: 晨光定格大微笑'. Action: 💖 雙手合十胸前鞠躬，定格最燦爛甜美笑容！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 30 節: 晨光定格大微笑（歌詞：LA LA LA LA morning light.）。動作指令：💖 雙手合十胸前鞠躬，定格最燦爛甜美笑容！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 30 節: 晨光定格大微笑（歌詞：LA LA LA LA morning light.）。動作指令：💖 雙手合十胸前鞠躬，定格最燦爛甜美笑容！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           }
         ]
       },
@@ -4676,8 +4676,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "K-pop 派對開始囉！跟著重低音鼓點，膝蓋彈一彈，準備帥氣出發！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '[前奏] 彩虹雲端夢幻預備'. Action: 🌸 雙臂像輕柔微風輕輕拂動，漫步粉彩夢境！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[前奏] 彩虹雲端夢幻預備（歌詞：[Intro 🎵 歡樂前奏]）。動作指令：🌸 雙臂像輕柔微風輕輕拂動，漫步粉彩夢境！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[前奏] 彩虹雲端夢幻預備（歌詞：[Intro 🎵 歡樂前奏]）。動作指令：🌸 雙臂像輕柔微風輕輕拂動，漫步粉彩夢境！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 8.07,
@@ -4692,8 +4692,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 01 節: 粉紅棉花糖飄飄'. Action: 🍬 雙手像棉花糖輕柔托起，在微風中飄呀飄！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 粉紅棉花糖飄飄（歌詞：Pink like cotton candy floating in the breeze.）。動作指令：🍬 雙手像棉花糖輕柔托起，在微風中飄呀飄！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 粉紅棉花糖飄飄（歌詞：Pink like cotton candy floating in the breeze.）。動作指令：🍬 雙手像棉花糖輕柔托起，在微風中飄呀飄！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 12.53,
@@ -4708,8 +4708,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 02 節: 黃色檸檬樹梢滴'. Action: 🍋 雙臂伸向綠樹梢，接住黃色甜甜小檸檬！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 黃色檸檬樹梢滴（歌詞：Yellow lemon drops upon the green trees.）。動作指令：🍋 雙臂伸向綠樹梢，接住黃色甜甜小檸檬！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 黃色檸檬樹梢滴（歌詞：Yellow lemon drops upon the green trees.）。動作指令：🍋 雙臂伸向綠樹梢，接住黃色甜甜小檸檬！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 16.77,
@@ -4724,8 +4724,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 03 節: 小小畫筆蘸深藍'. Action: 🎨 拿著神奇小畫筆，蘸進溫柔蔚藍大海！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 小小畫筆蘸深藍（歌詞：Dip my little brush into a sea of blue.）。動作指令：🎨 拿著神奇小畫筆，蘸進溫柔蔚藍大海！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 小小畫筆蘸深藍（歌詞：Dip my little brush into a sea of blue.）。動作指令：🎨 拿著神奇小畫筆，蘸進溫柔蔚藍大海！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 21.17,
@@ -4740,8 +4740,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 04 節: 為你畫出小宇宙'. Action: 🌌 雙臂在空中畫出大圓弧，創造美麗小宇宙！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 為你畫出小宇宙（歌詞：Painting out a universe just for you.）。動作指令：🌌 雙臂在空中畫出大圓弧，創造美麗小宇宙！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 為你畫出小宇宙（歌詞：Painting out a universe just for you.）。動作指令：🌌 雙臂在空中畫出大圓弧，創造美麗小宇宙！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 25.57,
@@ -4756,8 +4756,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 05 節: 溫柔色彩旋轉舞'. Action: 🌀 腳尖點地輕輕旋轉，柔和色彩旋轉飛揚！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 溫柔色彩旋轉舞（歌詞：Swirling colors soft and bright.）。動作指令：🌀 腳尖點地輕輕旋轉，柔和色彩旋轉飛揚！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 溫柔色彩旋轉舞（歌詞：Swirling colors soft and bright.）。動作指令：🌀 腳尖點地輕輕旋轉，柔和色彩旋轉飛揚！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 27.7,
@@ -4772,8 +4772,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 06 節: 黑夜化作溫暖光'. Action: 🕯️ 雙手捧起微光，點亮身邊每一個角落！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 黑夜化作溫暖光（歌詞：Turning darkness into light.）。動作指令：🕯️ 雙手捧起微光，點亮身邊每一個角落！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 黑夜化作溫暖光（歌詞：Turning darkness into light.）。動作指令：🕯️ 雙手捧起微光，點亮身邊每一個角落！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 29.93,
@@ -4788,8 +4788,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 07 節: 閉上雙眼許個願'. Action: ✨ 雙手合十胸前，輕輕閉眼許下甜甜心願！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 閉上雙眼許個願（歌詞：Close your eyes and make a wish.）。動作指令：✨ 雙手合十胸前，輕輕閉眼許下甜甜心願！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 閉上雙眼許個願（歌詞：Close your eyes and make a wish.）。動作指令：✨ 雙手合十胸前，輕輕閉眼許下甜甜心願！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 32.07,
@@ -4804,8 +4804,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 08 節: 潑灑一道大彩虹'. Action: 🌈 雙臂向外大弧度拋灑，劃出一道亮麗彩虹！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 潑灑一道大彩虹（歌詞：Splash a rainbow.）。動作指令：🌈 雙臂向外大弧度拋灑，劃出一道亮麗彩虹！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 潑灑一道大彩虹（歌詞：Splash a rainbow.）。動作指令：🌈 雙臂向外大弧度拋灑，劃出一道亮麗彩虹！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 33.13,
@@ -4820,8 +4820,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 09 節: 刷刷畫筆真輕盈'. Action: 🖌️ 小手像畫筆輕快左右擺動，刷刷刷！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 刷刷畫筆真輕盈（歌詞：Swish and swish.）。動作指令：🖌️ 小手像畫筆輕快左右擺動，刷刷刷！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 刷刷畫筆真輕盈（歌詞：Swish and swish.）。動作指令：🖌️ 小手像畫筆輕快左右擺動，刷刷刷！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 34.3,
@@ -4836,8 +4836,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 10 節: 越過繽紛彩虹橋'. Action: 🌈 踮起腳尖邁大步，踏上美麗彩虹橋！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 越過繽紛彩虹橋（歌詞：Past a rainbow.）。動作指令：🌈 踮起腳尖邁大步，踏上美麗彩虹橋！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 越過繽紛彩虹橋（歌詞：Past a rainbow.）。動作指令：🌈 踮起腳尖邁大步，踏上美麗彩虹橋！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 35.93,
@@ -4852,8 +4852,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 11 節: 畫出我的小幻想'. Action: 🎨 雙手展開畫布，隨心描繪心中的奇妙世界！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 畫出我的小幻想（歌詞：Paint my fantasy.）。動作指令：🎨 雙手展開畫布，隨心描繪心中的奇妙世界！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 畫出我的小幻想（歌詞：Paint my fantasy.）。動作指令：🎨 雙手展開畫布，隨心描繪心中的奇妙世界！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 38.8,
@@ -4868,8 +4868,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 12 節: 每種顏色跳跳舞'. Action: 💃 每個色彩都在跳舞，左右擺動快樂轉身！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 每種顏色跳跳舞（歌詞：Every color dancing pretty as can be.）。動作指令：💃 每個色彩都在跳舞，左右擺動快樂轉身！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 每種顏色跳跳舞（歌詞：Every color dancing pretty as can be.）。動作指令：💃 每個色彩都在跳舞，左右擺動快樂轉身！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 42.93,
@@ -4884,8 +4884,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 13 節: 珊瑚粉桃薰衣草'. Action: 🪻 抬頭看紫霞天空，微風吹拂甜甜花香！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 珊瑚粉桃薰衣草（歌詞：Coral peach in lavender sky.）。動作指令：🪻 抬頭看紫霞天空，微風吹拂甜甜花香！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 珊瑚粉桃薰衣草（歌詞：Coral peach in lavender sky.）。動作指令：🪻 抬頭看紫霞天空，微風吹拂甜甜花香！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 45.2,
@@ -4900,8 +4900,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 14 節: 甜甜糖果高高飛'. Action: 🍭 雙手用力向上拋，看彩色糖果漫天飛舞！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 甜甜糖果高高飛（歌詞：Watch our candy drips fly high.）。動作指令：🍭 雙手用力向上拋，看彩色糖果漫天飛舞！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 甜甜糖果高高飛（歌詞：Watch our candy drips fly high.）。動作指令：🍭 雙手用力向上拋，看彩色糖果漫天飛舞！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 47.53,
@@ -4916,8 +4916,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 15 節: 甜蜜美好齊讚嘆'. Action: 💖 雙手捧臉甜甜笑，感覺無比溫馨幸福！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 甜蜜美好齊讚嘆（歌詞：Ooh LA LA so sweet so fine.）。動作指令：💖 雙手捧臉甜甜笑，感覺無比溫馨幸福！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 甜蜜美好齊讚嘆（歌詞：Ooh LA LA so sweet so fine.）。動作指令：💖 雙手捧臉甜甜笑，感覺無比溫馨幸福！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 52.77,
@@ -4932,8 +4932,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 16 節: 金色亮粉灑畫紙'. Action: ✨ 手指輕輕彈灑，將金色星星灑在畫紙上！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 金色亮粉灑畫紙（歌詞：Gold glitter and candy on the paper sheep.）。動作指令：✨ 手指輕輕彈灑，將金色星星灑在畫紙上！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 金色亮粉灑畫紙（歌詞：Gold glitter and candy on the paper sheep.）。動作指令：✨ 手指輕輕彈灑，將金色星星灑在畫紙上！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 57.3,
@@ -4948,8 +4948,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 17 節: 神奇色彩動感拍'. Action: 🎵 踩著節奏輕拍雙手，每個顏色都充滿活力！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 神奇色彩動感拍（歌詞：Every little shade has a magic beat.）。動作指令：🎵 踩著節奏輕拍雙手，每個顏色都充滿活力！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 神奇色彩動感拍（歌詞：Every little shade has a magic beat.）。動作指令：🎵 踩著節奏輕拍雙手，每個顏色都充滿活力！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 61.5,
@@ -4964,8 +4964,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 18 節: 紅黃相映橘光耀'. Action: 🍊 雙手在胸前旋轉交融，變出溫暖橘色光芒！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 紅黃相映橘光耀（歌詞：Makes the red and yellow see the orange glow.）。動作指令：🍊 雙手在胸前旋轉交融，變出溫暖橘色光芒！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 紅黃相映橘光耀（歌詞：Makes the red and yellow see the orange glow.）。動作指令：🍊 雙手在胸前旋轉交融，變出溫暖橘色光芒！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 65.9,
@@ -4980,8 +4980,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 19 節: 美麗故事展現出'. Action: 📖 雙手像翻開童話繪本，精彩故事登場！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 美麗故事展現出（歌詞：Watch the pretty stories start to show.）。動作指令：📖 雙手像翻開童話繪本，精彩故事登場！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 美麗故事展現出（歌詞：Watch the pretty stories start to show.）。動作指令：📖 雙手像翻開童話繪本，精彩故事登場！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 69.2,
@@ -4996,8 +4996,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 87.7,
@@ -5012,8 +5012,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 20 節: 越過繽紛彩虹橋'. Action: 🌈 腳步輕快向前跨，漫步在七彩彩虹上！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 越過繽紛彩虹橋（歌詞：Past a rainbow.）。動作指令：🌈 腳步輕快向前跨，漫步在七彩彩虹上！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 越過繽紛彩虹橋（歌詞：Past a rainbow.）。動作指令：🌈 腳步輕快向前跨，漫步在七彩彩虹上！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 89.37,
@@ -5028,8 +5028,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 21 節: 畫出我的小幻想'. Action: 🎨 雙臂展翅滑翔，讓想像力自在翱翔！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 畫出我的小幻想（歌詞：Paint my fantasy.）。動作指令：🎨 雙臂展翅滑翔，讓想像力自在翱翔！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 畫出我的小幻想（歌詞：Paint my fantasy.）。動作指令：🎨 雙臂展翅滑翔，讓想像力自在翱翔！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 92.27,
@@ -5044,8 +5044,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 22 節: 每種顏色跳跳舞'. Action: 💃 跟著節奏輕跳，粉彩雲端盡情舞動！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 每種顏色跳跳舞（歌詞：Every color dancing pretty as can be.）。動作指令：💃 跟著節奏輕跳，粉彩雲端盡情舞動！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 每種顏色跳跳舞（歌詞：Every color dancing pretty as can be.）。動作指令：💃 跟著節奏輕跳，粉彩雲端盡情舞動！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 96.4,
@@ -5060,8 +5060,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 23 節: 珊瑚粉桃薰衣草'. Action: 🌸 雙手畫圈，沈浸在夢幻柔和花海中！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 珊瑚粉桃薰衣草（歌詞：Coral peach in lavender sky.）。動作指令：🌸 雙手畫圈，沈浸在夢幻柔和花海中！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 珊瑚粉桃薰衣草（歌詞：Coral peach in lavender sky.）。動作指令：🌸 雙手畫圈，沈浸在夢幻柔和花海中！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 98.67,
@@ -5076,8 +5076,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 24 節: 彩色糖果高高飛'. Action: 🍬 雙手向上托舉，看糖果雨高高飄落！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 24 節: 彩色糖果高高飛（歌詞：Watch our candy drinks fly high.）。動作指令：🍬 雙手向上托舉，看糖果雨高高飄落！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 24 節: 彩色糖果高高飛（歌詞：Watch our candy drinks fly high.）。動作指令：🍬 雙手向上托舉，看糖果雨高高飄落！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 100.8,
@@ -5092,8 +5092,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '第 25 節: 夢幻傑作大功成'. Action: 🎉 雙手叉腰擺出優雅 Pose，我們的傑作完成！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 25 節: 夢幻傑作大功成（歌詞：Our masterpiece is done.）。動作指令：🎉 雙手叉腰擺出優雅 Pose，我們的傑作完成！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 25 節: 夢幻傑作大功成（歌詞：Our masterpiece is done.）。動作指令：🎉 雙手叉腰擺出優雅 Pose，我們的傑作完成！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 103.17,
@@ -5108,8 +5108,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pastel Rainbow Dream' (Dreamy Pastel K-Pop Synth-Pop (夢幻仙氣女團抒情律動風)), Segment '[尾奏] 歡呼慶祝完美定格'. Action: 🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[尾奏] 歡呼慶祝完美定格（歌詞：[Outro 🎵 歡樂尾奏完美定格]）。動作指令：🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[尾奏] 歡呼慶祝完美定格（歌詞：[Outro 🎵 歡樂尾奏完美定格]）。動作指令：🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           }
         ]
       },
@@ -5143,8 +5143,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 01 節: 歡呼吶喊耶耶耶'. Action: 🎉 雙手高高揮舞，大聲歡呼 Yeah Yeah Yeah！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 歡呼吶喊耶耶耶（歌詞：Yeah yeah yeah.）。動作指令：🎉 雙手高高揮舞，大聲歡呼 Yeah Yeah Yeah！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 歡呼吶喊耶耶耶（歌詞：Yeah yeah yeah.）。動作指令：🎉 雙手高高揮舞，大聲歡呼 Yeah Yeah Yeah！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 2,
@@ -5159,8 +5159,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 02 節: 熱情搖擺耶耶耶'. Action: 🎶 身體左右律動，跟著節奏嗨起來！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 熱情搖擺耶耶耶（歌詞：Yeah yeah.）。動作指令：🎶 身體左右律動，跟著節奏嗨起來！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 熱情搖擺耶耶耶（歌詞：Yeah yeah.）。動作指令：🎶 身體左右律動，跟著節奏嗨起來！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 5.97,
@@ -5175,8 +5175,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 03 節: 一二三四大倒數'. Action: 🔢 伸出手指大聲數：1、2、3、4！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 一二三四大倒數（歌詞：1 2 3 4.）。動作指令：🔢 伸出手指大聲數：1、2、3、4！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 一二三四大倒數（歌詞：1 2 3 4.）。動作指令：🔢 伸出手指大聲數：1、2、3、4！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 8.33,
@@ -5191,8 +5191,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 16,
@@ -5207,8 +5207,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 04 節: 一二拍拍小舞鞋'. Action: 👟 左右小腳尖輕輕點地，拍拍鞋子打節奏！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 一二拍拍小舞鞋（歌詞：1 2 tapping on my shoes.）。動作指令：👟 左右小腳尖輕輕點地，拍拍鞋子打節奏！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 一二拍拍小舞鞋（歌詞：1 2 tapping on my shoes.）。動作指令：👟 左右小腳尖輕輕點地，拍拍鞋子打節奏！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 19.97,
@@ -5223,8 +5223,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 05 節: 三四趕走小煩惱'. Action: 💃 扭扭肩膀擺動手臂，把煩惱通通跳開！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 三四趕走小煩惱（歌詞：3 4 dancing out the blues.）。動作指令：💃 扭扭肩膀擺動手臂，把煩惱通通跳開！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 三四趕走小煩惱（歌詞：3 4 dancing out the blues.）。動作指令：💃 扭扭肩膀擺動手臂，把煩惱通通跳開！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 24.07,
@@ -5239,8 +5239,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 06 節: 五塊甜餅排整齊'. Action: 🍪 伸出五指像小盤子，排好五塊香甜餅乾！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 五塊甜餅排整齊（歌詞：Five sweet cookies sitting in a row.）。動作指令：🍪 伸出五指像小盤子，排好五塊香甜餅乾！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 五塊甜餅排整齊（歌詞：Five sweet cookies sitting in a row.）。動作指令：🍪 伸出五指像小盤子，排好五塊香甜餅乾！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 27.53,
@@ -5255,8 +5255,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 07 節: 數字寶寶長好快'. Action: 🌱 蹲下慢慢長高高，看數字越長越多！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 數字寶寶長好快（歌詞：Watch how fast the little numbers grow.）。動作指令：🌱 蹲下慢慢長高高，看數字越長越多！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 數字寶寶長好快（歌詞：Watch how fast the little numbers grow.）。動作指令：🌱 蹲下慢慢長高高，看數字越長越多！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 32,
@@ -5271,8 +5271,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 08 節: 能不能數我們行'. Action: 🙋 高高舉起小右手：我們能做到，大聲答應！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 能不能數我們行（歌詞：Can you count it yes we can.）。動作指令：🙋 高高舉起小右手：我們能做到，大聲答應！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 能不能數我們行（歌詞：Can you count it yes we can.）。動作指令：🙋 高高舉起小右手：我們能做到，大聲答應！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 34.07,
@@ -5287,8 +5287,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 09 節: 跟著節奏大作戰'. Action: 🥁 精神小隊員原地踏步，踩著節拍向前進！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 跟著節奏大作戰（歌詞：Following the rhythm of the Master plan.）。動作指令：🥁 精神小隊員原地踏步，踩著節拍向前進！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 跟著節奏大作戰（歌詞：Following the rhythm of the Master plan.）。動作指令：🥁 精神小隊員原地踏步，踩著節拍向前進！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 36.07,
@@ -5303,8 +5303,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 10 節: 六七高舉摸摸天'. Action: ☁️ 伸出六和七，雙手用力伸長去摸摸天！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 六七高舉摸摸天（歌詞：6 7 reaching high touching up the sky.）。動作指令：☁️ 伸出六和七，雙手用力伸長去摸摸天！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 六七高舉摸摸天（歌詞：6 7 reaching high touching up the sky.）。動作指令：☁️ 伸出六和七，雙手用力伸長去摸摸天！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 40.07,
@@ -5319,8 +5319,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 11 節: 八九十數字狂歡'. Action: 🎉 拍拍手轉個圈，八九十狂歡派對開始！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 八九十數字狂歡（歌詞：8 9 10 it's a number party.）。動作指令：🎉 拍拍手轉個圈，八九十狂歡派對開始！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 八九十數字狂歡（歌詞：8 9 10 it's a number party.）。動作指令：🎉 拍拍手轉個圈，八九十狂歡派對開始！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 44,
@@ -5335,8 +5335,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 12 節: 動動身體別遲到'. Action: 🏃 扭扭腰、動動腳，跟緊隊伍別掉隊！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 動動身體別遲到（歌詞：Move your body don't be tardy.）。動作指令：🏃 扭扭腰、動動腳，跟緊隊伍別掉隊！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 動動身體別遲到（歌詞：Move your body don't be tardy.）。動作指令：🏃 扭扭腰、動動腳，跟緊隊伍別掉隊！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 47.97,
@@ -5351,8 +5351,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 13 節: 一二三跟我數數'. Action: 👏 伸出手指数 1、2、3，大家齊唱真開心！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 一二三跟我數數（歌詞：1 2 3 count with me happy as can be.）。動作指令：👏 伸出手指数 1、2、3，大家齊唱真開心！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 一二三跟我數數（歌詞：1 2 3 count with me happy as can be.）。動作指令：👏 伸出手指数 1、2、3，大家齊唱真開心！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 55.3,
@@ -5367,8 +5367,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 14 節: 跳到左邊跳到右'. Action: ↔️ 往左邊輕輕跳一步，再往右邊跳一步！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 跳到左邊跳到右（歌詞：Jump to the left jump to the right.）。動作指令：↔️ 往左邊輕輕跳一步，再往右邊跳一步！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 跳到左邊跳到右（歌詞：Jump to the left jump to the right.）。動作指令：↔️ 往左邊輕輕跳一步，再往右邊跳一步！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 57.53,
@@ -5383,8 +5383,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 15 節: 霓虹燈下閃晶晶'. Action: ✨ 雙手比出閃亮小星星，霓虹光芒好耀眼！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 霓虹燈下閃晶晶（歌詞：Numbers glowing in the neon lights.）。動作指令：✨ 雙手比出閃亮小星星，霓虹光芒好耀眼！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 霓虹燈下閃晶晶（歌詞：Numbers glowing in the neon lights.）。動作指令：✨ 雙手比出閃亮小星星，霓虹光芒好耀眼！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 60.73,
@@ -5399,8 +5399,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 68.07,
@@ -5415,8 +5415,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 16 節: 數數天空大氣球'. Action: 🎈 抬頭指指天空，一顆兩顆數著彩色氣球！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 數數天空大氣球（歌詞：Count the balloons floating in the air.）。動作指令：🎈 抬頭指指天空，一顆兩顆數著彩色氣球！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 數數天空大氣球（歌詞：Count the balloons floating in the air.）。動作指令：🎈 抬頭指指天空，一顆兩顆數著彩色氣球！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 70.07,
@@ -5431,8 +5431,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 17 節: 數數身旁小狗狗'. Action: 🐶 雙手扮可愛小狗爪，數數幾隻汪汪小狗！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 數數身旁小狗狗（歌詞：Count the little puppies over there.）。動作指令：🐶 雙手扮可愛小狗爪，數數幾隻汪汪小狗！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 數數身旁小狗狗（歌詞：Count the little puppies over there.）。動作指令：🐶 雙手扮可愛小狗爪，數數幾隻汪汪小狗！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 72.07,
@@ -5447,8 +5447,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 18 節: 快樂相加樂趣多'. Action: ➕ 雙手畫大愛心，把所有快樂通通加倍！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 快樂相加樂趣多（歌詞：Adding up the fun multiply the cheer.）。動作指令：➕ 雙手畫大愛心，把所有快樂通通加倍！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 快樂相加樂趣多（歌詞：Adding up the fun multiply the cheer.）。動作指令：➕ 雙手畫大愛心，把所有快樂通通加倍！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 74,
@@ -5463,8 +5463,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 19 節: 最強數學特攻隊'. Action: 🏆 雙手插腰神氣挺胸，我們是最棒數學小英雄！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 最強數學特攻隊（歌詞：Best little math crew right here.）。動作指令：🏆 雙手插腰神氣挺胸，我們是最棒數學小英雄！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 最強數學特攻隊（歌詞：Best little math crew right here.）。動作指令：🏆 雙手插腰神氣挺胸，我們是最棒數學小英雄！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 76.37,
@@ -5479,8 +5479,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 82,
@@ -5495,8 +5495,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 20 節: 一二三呼八九十'. Action: 🌟 拍手歡呼 Woo，八九十數字大狂歡！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 一二三呼八九十（歌詞：1 2 3 woo 8 9 10 it's a number party.）。動作指令：🌟 拍手歡呼 Woo，八九十數字大狂歡！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 一二三呼八九十（歌詞：1 2 3 woo 8 9 10 it's a number party.）。動作指令：🌟 拍手歡呼 Woo，八九十數字大狂歡！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 87.67,
@@ -5511,8 +5511,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 21 節: 動動身體跳起來'. Action: 💃 全身一起搖擺，派對舞步嗨到頂點！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 動動身體跳起來（歌詞：Woo move your body don't be tardy.）。動作指令：💃 全身一起搖擺，派對舞步嗨到頂點！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 動動身體跳起來（歌詞：Woo move your body don't be tardy.）。動作指令：💃 全身一起搖擺，派對舞步嗨到頂點！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 91.97,
@@ -5527,8 +5527,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 22 節: 一二三數得開心'. Action: 🎶 牽起身邊好朋友，一二三數得好快樂！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 一二三數得開心（歌詞：1 2 3 count with me happy as can be.）。動作指令：🎶 牽起身邊好朋友，一二三數得好快樂！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 一二三數得開心（歌詞：1 2 3 count with me happy as can be.）。動作指令：🎶 牽起身邊好朋友，一二三數得好快樂！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 99.97,
@@ -5543,8 +5543,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '第 23 節: 所有數字通通懂'. Action: 🌟 雙手比出大大勝利 V，數字全都學會囉！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 所有數字通通懂（歌詞：We know all our numbers now.）。動作指令：🌟 雙手比出大大勝利 V，數字全都學會囉！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 所有數字通通懂（歌詞：We know all our numbers now.）。動作指令：🌟 雙手比出大大勝利 V，數字全都學會囉！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 102.93,
@@ -5559,8 +5559,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Number Party 1-2-3' (Funky K-Pop Boy Group Electro Groove (動感男團電子節奏風)), Segment '[尾奏] 歡呼慶祝完美定格'. Action: 🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[尾奏] 歡呼慶祝完美定格（歌詞：[Outro 🎵 歡樂尾奏完美定格]）。動作指令：🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[尾奏] 歡呼慶祝完美定格（歌詞：[Outro 🎵 歡樂尾奏完美定格]）。動作指令：🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           }
         ]
       },
@@ -5594,8 +5594,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "K-pop 派對開始囉！跟著重低音鼓點，膝蓋彈一彈，準備帥氣出發！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '[前奏] 叢林重低音大巡遊'. Action: 🥁 咚咚咚！叢林鼓點敲響，全體動物隊員準備出發！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[前奏] 叢林重低音大巡遊（歌詞：[Intro 🎵 歡樂前奏]）。動作指令：🥁 咚咚咚！叢林鼓點敲響，全體動物隊員準備出發！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[前奏] 叢林重低音大巡遊（歌詞：[Intro 🎵 歡樂前奏]）。動作指令：🥁 咚咚咚！叢林鼓點敲響，全體動物隊員準備出發！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 15,
@@ -5610,8 +5610,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 01 節: 獅子王重音踏步'. Action: 🦁 戴上威風王冠，學獅子大王重重踏步！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 獅子王重音踏步（歌詞：Lion wears a crown stomping with the beat.）。動作指令：🦁 戴上威風王冠，學獅子大王重重踏步！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 獅子王重音踏步（歌詞：Lion wears a crown stomping with the beat.）。動作指令：🦁 戴上威風王冠，學獅子大王重重踏步！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 19.13,
@@ -5626,8 +5626,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 02 節: 長頸鹿高聳入雲'. Action: 🦒 雙臂向上伸直像長頸鹿，長高高看大街！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 長頸鹿高聳入雲（歌詞：Giraffe reaching tall over city street.）。動作指令：🦒 雙臂向上伸直像長頸鹿，長高高看大街！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 長頸鹿高聳入雲（歌詞：Giraffe reaching tall over city street.）。動作指令：🦒 雙臂向上伸直像長頸鹿，長高高看大街！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 23.07,
@@ -5642,8 +5642,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 03 節: 猴子樹梢玩規矩'. Action: 🐒 雙手學猴子抓抓撓撓，樹梢上盪來盪去！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 猴子樹梢玩規矩（歌詞：Monkey on the sins playing fun rules.）。動作指令：🐒 雙手學猴子抓抓撓撓，樹梢上盪來盪去！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 猴子樹梢玩規矩（歌詞：Monkey on the sins playing fun rules.）。動作指令：🐒 雙手學猴子抓抓撓撓，樹梢上盪來盪去！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 26.8,
@@ -5658,8 +5658,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 04 節: 展示叢林新舞步'. Action: 🌴 扭動腰部大跳特跳，展示最強野生舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 展示叢林新舞步（歌詞：Show me how your safari moves.）。動作指令：🌴 扭動腰部大跳特跳，展示最強野生舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 展示叢林新舞步（歌詞：Show me how your safari moves.）。動作指令：🌴 扭動腰部大跳特跳，展示最強野生舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 30.7,
@@ -5674,8 +5674,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 05 節: 大象號角蹦蹦破'. Action: 🐘 雙手當大象長鼻子，吹響號角砰砰發射！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 大象號角蹦蹦破（歌詞：Elephant trumpets p p p POW.）。動作指令：🐘 雙手當大象長鼻子，吹響號角砰砰發射！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 大象號角蹦蹦破（歌詞：Elephant trumpets p p p POW.）。動作指令：🐘 雙手當大象長鼻子，吹響號角砰砰發射！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 32.67,
@@ -5690,8 +5690,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 06 節: 大家快快來排隊'. Action: 🚶 跟緊巡遊隊伍，一二一二快快排好隊！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 大家快快來排隊（歌詞：Everyone is joining the parade right now get in line.）。動作指令：🚶 跟緊巡遊隊伍，一二一二快快排好隊！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 大家快快來排隊（歌詞：Everyone is joining the parade right now get in line.）。動作指令：🚶 跟緊巡遊隊伍，一二一二快快排好隊！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 35.17,
@@ -5706,8 +5706,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 07 節: 拍拍翅膀聽合唱'. Action: 🦜 雙臂展開當大鳥翅膀，拍動聽叢林歡唱！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 拍拍翅膀聽合唱（歌詞：Flap your wings listen to what the jungle sings.）。動作指令：🦜 雙臂展開當大鳥翅膀，拍動聽叢林歡唱！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 拍拍翅膀聽合唱（歌詞：Flap your wings listen to what the jungle sings.）。動作指令：🦜 雙臂展開當大鳥翅膀，拍動聽叢林歡唱！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 39.67,
@@ -5722,8 +5722,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 08 節: 動物園巡遊踏步'. Action: 🥁 精神抖擻繞圈踏步，巡遊隊伍大步走！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 動物園巡遊踏步（歌詞：Wow zoo Bee parade marching all around.）。動作指令：🥁 精神抖擻繞圈踏步，巡遊隊伍大步走！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 動物園巡遊踏步（歌詞：Wow zoo Bee parade marching all around.）。動作指令：🥁 精神抖擻繞圈踏步，巡遊隊伍大步走！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 43.5,
@@ -5738,8 +5738,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 09 節: 重低音震動大地'. Action: 💥 雙腳重重踩踏，感受地面震撼動感鼓點！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 重低音震動大地（歌詞：Feel the bass shaking all across the ground.）。動作指令：💥 雙腳重重踩踏，感受地面震撼動感鼓點！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 重低音震動大地（歌詞：Feel the bass shaking all across the ground.）。動作指令：💥 雙腳重重踩踏，感受地面震撼動感鼓點！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 47.2,
@@ -5754,8 +5754,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 10 節: 重重踏步大聲吼'. Action: 🦁 踏踏踏大步走，張開雙手大聲吼 Roar！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 重重踏步大聲吼（歌詞：Stomp stomp roar roar roar.）。動作指令：🦁 踏踏踏大步走，張開雙手大聲吼 Roar！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 重重踏步大聲吼（歌詞：Stomp stomp roar roar roar.）。動作指令：🦁 踏踏踏大步走，張開雙手大聲吼 Roar！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 49.6,
@@ -5770,8 +5770,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 11 節: 高高躍起藍天下'. Action: ☁️ 下蹲蓄力高高跳起，藍天下齊步歡呼！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 高高躍起藍天下（歌詞：Jump up high parade marching under the blue sky.）。動作指令：☁️ 下蹲蓄力高高跳起，藍天下齊步歡呼！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 高高躍起藍天下（歌詞：Jump up high parade marching under the blue sky.）。動作指令：☁️ 下蹲蓄力高高跳起，藍天下齊步歡呼！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 55.37,
@@ -5786,8 +5786,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 12 節: 感受熱情野性風'. Action: 🌴 雙臂左右搖擺，全身體會滿滿熱情活力！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 感受熱情野性風（歌詞：Yeah we got that safari vibe.）。動作指令：🌴 雙臂左右搖擺，全身體會滿滿熱情活力！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 感受熱情野性風（歌詞：Yeah we got that safari vibe.）。動作指令：🌴 雙臂左右搖擺，全身體會滿滿熱情活力！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 57.93,
@@ -5802,8 +5802,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 64.33,
@@ -5818,8 +5818,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 13 節: 小兔子嘻哈蹦跳'. Action: 🐰 雙手放頭頂當兔耳朵，跟著 Hip-Hop 輕快跳！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 小兔子嘻哈蹦跳（歌詞：Hey little bunny hopping with the hip hop bounce.）。動作指令：🐰 雙手放頭頂當兔耳朵，跟著 Hip-Hop 輕快跳！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 小兔子嘻哈蹦跳（歌詞：Hey little bunny hopping with the hip hop bounce.）。動作指令：🐰 雙手放頭頂當兔耳朵，跟著 Hip-Hop 輕快跳！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 66.73,
@@ -5834,8 +5834,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 14 節: 角落準備出擊囉'. Action: 🐾 輕輕下蹲縮起身體，準備好下一波爆發！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 角落準備出擊囉（歌詞：Now you're in the corner ready for the pounds.）。動作指令：🐾 輕輕下蹲縮起身體，準備好下一波爆發！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 角落準備出擊囉（歌詞：Now you're in the corner ready for the pounds.）。動作指令：🐾 輕輕下蹲縮起身體，準備好下一波爆發！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 68.7,
@@ -5850,8 +5850,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 15 節: 酷企鵝戴上墨鏡'. Action: 😎 雙手在眼前戴起酷墨鏡，擺出最潮姿勢！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 酷企鵝戴上墨鏡（歌詞：Penguin wearing sunglasses looking so cool.）。動作指令：😎 雙手在眼前戴起酷墨鏡，擺出最潮姿勢！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 酷企鵝戴上墨鏡（歌詞：Penguin wearing sunglasses looking so cool.）。動作指令：😎 雙手在眼前戴起酷墨鏡，擺出最潮姿勢！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 70.5,
@@ -5866,8 +5866,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 16 節: 陽光泳池濺水花'. Action: 💦 雙腳輕輕踢踢水，濺起快樂清涼小水花！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 陽光泳池濺水花（歌詞：Splashing around in the sunny pool.）。動作指令：💦 雙腳輕輕踢踢水，濺起快樂清涼小水花！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 陽光泳池濺水花（歌詞：Splashing around in the sunny pool.）。動作指令：💦 雙腳輕輕踢踢水，濺起快樂清涼小水花！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 72.4,
@@ -5882,8 +5882,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 17 節: 重擊銅管節奏踏'. Action: 🥁 雙手握拳敲打重節奏，節奏踩點踏步走！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 重擊銅管節奏踏（歌詞：Hard hitting grass drop Cupid beatbox stomp.）。動作指令：🥁 雙手握拳敲打重節奏，節奏踩點踏步走！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 重擊銅管節奏踏（歌詞：Hard hitting grass drop Cupid beatbox stomp.）。動作指令：🥁 雙手握拳敲打重節奏，節奏踩點踏步走！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 79.4,
@@ -5898,8 +5898,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 18 節: 齊心合力來一段'. Action: 🔥 Break it down！身體下壓，擺出最帥動作！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 齊心合力來一段（歌詞：Break it down!）。動作指令：🔥 Break it down！身體下壓，擺出最帥動作！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 齊心合力來一段（歌詞：Break it down!）。動作指令：🔥 Break it down！身體下壓，擺出最帥動作！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 83.8,
@@ -5914,8 +5914,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 19 節: 動物巡遊繞全場'. Action: 🚶 全場邁步大踏步，巡遊隊伍浩浩蕩蕩！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 動物巡遊繞全場（歌詞：Zoom beat parade marching all around.）。動作指令：🚶 全場邁步大踏步，巡遊隊伍浩浩蕩蕩！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 動物巡遊繞全場（歌詞：Zoom beat parade marching all around.）。動作指令：🚶 全場邁步大踏步，巡遊隊伍浩浩蕩蕩！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 87.1,
@@ -5930,8 +5930,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 20 節: 重低音撼動全場'. Action: 💥 感受最燃低音震撼，全身細胞動起來！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 重低音撼動全場（歌詞：Feel the bass shaking all across the ground.）。動作指令：💥 感受最燃低音震撼，全身細胞動起來！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 重低音撼動全場（歌詞：Feel the bass shaking all across the ground.）。動作指令：💥 感受最燃低音震撼，全身細胞動起來！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 90.47,
@@ -5946,8 +5946,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 21 節: 用力踏地高高跳'. Action: ⭐ 踏踏踏地動山搖，下蹲後用力跳向天空！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 用力踏地高高跳（歌詞：Stomp stomp stomp floor floor jump up high.）。動作指令：⭐ 踏踏踏地動山搖，下蹲後用力跳向天空！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 用力踏地高高跳（歌詞：Stomp stomp stomp floor floor jump up high.）。動作指令：⭐ 踏踏踏地動山搖，下蹲後用力跳向天空！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 94.93,
@@ -5962,8 +5962,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 22 節: 藍天下齊步巡遊'. Action: ☀️ 仰望晴空，歡笑聲在整個森林迴盪！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 藍天下齊步巡遊（歌詞：Parade marching under the blue sky.）。動作指令：☀️ 仰望晴空，歡笑聲在整個森林迴盪！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 藍天下齊步巡遊（歌詞：Parade marching under the blue sky.）。動作指令：☀️ 仰望晴空，歡笑聲在整個森林迴盪！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 100.1,
@@ -5978,8 +5978,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '第 23 節: 表現太棒大定格'. Action: 🏆 雙手抱胸帥氣微笑，大聲喊出 Good Job！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 表現太棒大定格（歌詞：Is good job.）。動作指令：🏆 雙手抱胸帥氣微笑，大聲喊出 Good Job！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 表現太棒大定格（歌詞：Is good job.）。動作指令：🏆 雙手抱胸帥氣微笑，大聲喊出 Good Job！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 101.27,
@@ -5994,8 +5994,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Zoo Beat Parade' (K-Pop Hip-Hop Heavy Bass Bounce (街頭嘻哈重低音 Bounce 風)), Segment '[尾奏] 歡呼慶祝完美定格'. Action: 🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[尾奏] 歡呼慶祝完美定格（歌詞：[Outro 🎵 歡樂尾奏完美定格]）。動作指令：🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[尾奏] 歡呼慶祝完美定格（歌詞：[Outro 🎵 歡樂尾奏完美定格]）。動作指令：🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           }
         ]
       },
@@ -6029,8 +6029,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 01 節: 全體隊員出發囉'. Action: 🚀 雙拳緊握向前衝，大喊 Go 全力以赴！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 全體隊員出發囉（歌詞：Go!）。動作指令：🚀 雙拳緊握向前衝，大喊 Go 全力以赴！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 全體隊員出發囉（歌詞：Go!）。動作指令：🚀 雙拳緊握向前衝，大喊 Go 全力以赴！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 4.5,
@@ -6045,8 +6045,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 02 節: 迅速蹲下大搜索'. Action: 🔍 輕輕蹲下身子，找找地上有沒有小玩具！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 迅速蹲下大搜索（歌詞：Drop down!）。動作指令：🔍 輕輕蹲下身子，找找地上有沒有小玩具！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 迅速蹲下大搜索（歌詞：Drop down!）。動作指令：🔍 輕輕蹲下身子，找找地上有沒有小玩具！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 9.13,
@@ -6061,8 +6061,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 03 節: 彩色蠟筆收進盒'. Action: 🖍️ 雙手撿起小蠟筆，整整齊齊收進盒子裡！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 彩色蠟筆收進盒（歌詞：Crayons in the box.）。動作指令：🖍️ 雙手撿起小蠟筆，整整齊齊收進盒子裡！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 彩色蠟筆收進盒（歌詞：Crayons in the box.）。動作指令：🖍️ 雙手撿起小蠟筆，整整齊齊收進盒子裡！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 10.9,
@@ -6077,8 +6077,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 04 節: 故事書籍排書架'. Action: 📚 雙手抱起厚繪本，一本一本放回小書架！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 故事書籍排書架（歌詞：Books upon the shelf.）。動作指令：📚 雙手抱起厚繪本，一本一本放回小書架！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 故事書籍排書架（歌詞：Books upon the shelf.）。動作指令：📚 雙手抱起厚繪本，一本一本放回小書架！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 13.07,
@@ -6093,8 +6093,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 05 節: 自己收拾我最棒'. Action: 🌟 拍拍小胸脯，我自己整理真能幹！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 自己收拾我最棒（歌詞：I can tidy up all by myself.）。動作指令：🌟 拍拍小胸脯，我自己整理真能幹！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 自己收拾我最棒（歌詞：I can tidy up all by myself.）。動作指令：🌟 拍拍小胸脯，我自己整理真能幹！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 17.07,
@@ -6109,8 +6109,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 06 節: 泰迪熊坐小椅子'. Action: 🧸 抱緊心愛泰迪熊，溫柔放進專屬小椅子！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 泰迪熊坐小椅子（歌詞：Teddy Bearer sitting in his favorite chair.）。動作指令：🧸 抱緊心愛泰迪熊，溫柔放進專屬小椅子！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 泰迪熊坐小椅子（歌詞：Teddy Bearer sitting in his favorite chair.）。動作指令：🧸 抱緊心愛泰迪熊，溫柔放進專屬小椅子！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 20.87,
@@ -6125,8 +6125,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 07 節: 清涼微風陣陣吹'. Action: 🍃 雙手像微風吹過，房間空氣好清新！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 清涼微風陣陣吹（歌詞：Fresh and tiny breezes in the air.）。動作指令：🍃 雙手像微風吹過，房間空氣好清新！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 清涼微風陣陣吹（歌詞：Fresh and tiny breezes in the air.）。動作指令：🍃 雙手像微風吹過，房間空氣好清新！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 24.87,
@@ -6141,8 +6141,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 08 節: 擦擦左邊擦右邊'. Action: 🧽 雙手畫圈圈，擦擦左邊、擦擦右邊！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 擦擦左邊擦右邊（歌詞：Sweet to the left polish to the right.）。動作指令：🧽 雙手畫圈圈，擦擦左邊、擦擦右邊！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 擦擦左邊擦右邊（歌詞：Sweet to the left polish to the right.）。動作指令：🧽 雙手畫圈圈，擦擦左邊、擦擦右邊！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 26.73,
@@ -6157,8 +6157,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 09 節: 水晶一般亮晶晶'. Action: ✨ 伸出手指亮閃閃，地板桌子晶瑩剔透！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 水晶一般亮晶晶（歌詞：Everything is looking crystal bright.）。動作指令：✨ 伸出手指亮閃閃，地板桌子晶瑩剔透！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 水晶一般亮晶晶（歌詞：Everything is looking crystal bright.）。動作指令：✨ 伸出手指亮閃閃，地板桌子晶瑩剔透！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 28.73,
@@ -6173,8 +6173,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 10 節: 團隊合作魔法現'. Action: 🤝 牽起好朋友的手，一起合作變魔法！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 團隊合作魔法現（歌詞：Teamwork makes the magic flow.）。動作指令：🤝 牽起好朋友的手，一起合作變魔法！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 團隊合作魔法現（歌詞：Teamwork makes the magic flow.）。動作指令：🤝 牽起好朋友的手，一起合作變魔法！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 30.67,
@@ -6189,8 +6189,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 11 節: 三二一出發衝衝'. Action: 🏃 倒數 3、2、1，我們衝衝衝！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 三二一出發衝衝（歌詞：3 2 1 here we go go.）。動作指令：🏃 倒數 3、2、1，我們衝衝衝！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 三二一出發衝衝（歌詞：3 2 1 here we go go.）。動作指令：🏃 倒數 3、2、1，我們衝衝衝！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 33.57,
@@ -6205,8 +6205,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 12 節: 特攻隊閃閃發光'. Action: ⭐ 雙臂朝天閃爍，清潔特攻隊大放異彩！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 特攻隊閃閃發光（歌詞：Sparkle sparkle clean team shining through.）。動作指令：⭐ 雙臂朝天閃爍，清潔特攻隊大放異彩！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 特攻隊閃閃發光（歌詞：Sparkle sparkle clean team shining through.）。動作指令：⭐ 雙臂朝天閃爍，清潔特攻隊大放異彩！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 37.53,
@@ -6221,8 +6221,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 13 節: 看看我們多能幹'. Action: 💪 秀出小手臂肌肉，看我們多麼神氣！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 看看我們多能幹（歌詞：Look at all the awesome things that we can do.）。動作指令：💪 秀出小手臂肌肉，看我們多麼神氣！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 看看我們多能幹（歌詞：Look at all the awesome things that we can do.）。動作指令：💪 秀出小手臂肌肉，看我們多麼神氣！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 41.93,
@@ -6237,8 +6237,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 14 節: 積木高高堆成塔'. Action: 🧱 一塊一塊疊積木，堆成高聳大城堡！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 積木高高堆成塔（歌詞：Put the blocks away stack the meat and tall.）。動作指令：🧱 一塊一塊疊積木，堆成高聳大城堡！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 積木高高堆成塔（歌詞：Put the blocks away stack the meat and tall.）。動作指令：🧱 一塊一塊疊積木，堆成高聳大城堡！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 45.4,
@@ -6253,8 +6253,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 15 節: 我們是大廳冠軍'. Action: 🏆 雙手比大拇指，我們是打掃大冠軍！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 我們是大廳冠軍（歌詞：Now we are the champions of the hall.）。動作指令：🏆 雙手比大拇指，我們是打掃大冠軍！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 我們是大廳冠軍（歌詞：Now we are the champions of the hall.）。動作指令：🏆 雙手比大拇指，我們是打掃大冠軍！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 49.37,
@@ -6269,8 +6269,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 16 節: 房間閃亮任務清'. Action: ✨ 雙眼發亮看四周，任務圓滿達成！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 房間閃亮任務清（歌詞：Rumors shiny mission clear.）。動作指令：✨ 雙眼發亮看四周，任務圓滿達成！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 房間閃亮任務清（歌詞：Rumors shiny mission clear.）。動作指令：✨ 雙眼發亮看四周，任務圓滿達成！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 53.27,
@@ -6285,8 +6285,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 17 節: 最亮最美的大廳'. Action: 🌟 轉圈展示新房間，乾淨整齊好舒服！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 最亮最美的大廳（歌詞：Rumors shiny ever since.）。動作指令：🌟 轉圈展示新房間，乾淨整齊好舒服！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 最亮最美的大廳（歌詞：Rumors shiny ever since.）。動作指令：🌟 轉圈展示新房間，乾淨整齊好舒服！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 58.1,
@@ -6301,8 +6301,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 18 節: 拼圖收好疊被子'. Action: 🧩 拼圖放進抽屜，雙手把小毯子折整齊！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 拼圖收好疊被子（歌詞：Puzzles in the drawer fold the blankets neat.）。動作指令：🧩 拼圖放進抽屜，雙手把小毯子折整齊！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 拼圖收好疊被子（歌詞：Puzzles in the drawer fold the blankets neat.）。動作指令：🧩 拼圖放進抽屜，雙手把小毯子折整齊！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 61.93,
@@ -6317,8 +6317,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 19 節: 跟著節奏邊收邊跳'. Action: 💃 一邊踩著音樂節拍，一邊快樂收玩具！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 跟著節奏邊收邊跳（歌詞：Dancing while we're tidy to the rhythm beat.）。動作指令：💃 一邊踩著音樂節拍，一邊快樂收玩具！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 跟著節奏邊收邊跳（歌詞：Dancing while we're tidy to the rhythm beat.）。動作指令：💃 一邊踩著音樂節拍，一邊快樂收玩具！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 65.73,
@@ -6333,8 +6333,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 20 節: 給夥伴比大拇指'. Action: 👍 轉向身邊好夥伴，大方比個大大讚！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 給夥伴比大拇指（歌詞：Give our thumbs up to your partner and smile.）。動作指令：👍 轉向身邊好夥伴，大方比個大大讚！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 給夥伴比大拇指（歌詞：Give our thumbs up to your partner and smile.）。動作指令：👍 轉向身邊好夥伴，大方比個大大讚！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 69.57,
@@ -6349,8 +6349,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 21 節: 漂亮收拾最有型'. Action: 😎 雙手叉腰甩甩頭，最酷最帥的收拾達人！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 漂亮收拾最有型（歌詞：We finish everything in style.）。動作指令：😎 雙手叉腰甩甩頭，最酷最帥的收拾達人！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 漂亮收拾最有型（歌詞：We finish everything in style.）。動作指令：😎 雙手叉腰甩甩頭，最酷最帥的收拾達人！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 76.57,
@@ -6365,8 +6365,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 22 節: 特攻隊閃耀全場'. Action: ⭐ 雙臂向上伸展，閃亮光芒照耀全場！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 特攻隊閃耀全場（歌詞：Sparkle sparkle clean team shining through.）。動作指令：⭐ 雙臂向上伸展，閃亮光芒照耀全場！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 特攻隊閃耀全場（歌詞：Sparkle sparkle clean team shining through.）。動作指令：⭐ 雙臂向上伸展，閃亮光芒照耀全場！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 80.57,
@@ -6381,8 +6381,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 23 節: 看看我們多厲害'. Action: 🎉 拍手跳跳，為所有努力的大家鼓掌！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 看看我們多厲害（歌詞：Look at all the awesome things that we can do.）。動作指令：🎉 拍手跳跳，為所有努力的大家鼓掌！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 看看我們多厲害（歌詞：Look at all the awesome things that we can do.）。動作指令：🎉 拍手跳跳，為所有努力的大家鼓掌！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 84.97,
@@ -6397,8 +6397,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 24 節: 積木收好整齊放'. Action: 🧱 輕輕收好小積木，房間井井有條！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 24 節: 積木收好整齊放（歌詞：Put the blocks away stack them mean and tall.）。動作指令：🧱 輕輕收好小積木，房間井井有條！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 24 節: 積木收好整齊放（歌詞：Put the blocks away stack them mean and tall.）。動作指令：🧱 輕輕收好小積木，房間井井有條！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 88.47,
@@ -6413,8 +6413,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 25 節: 我們是終極冠軍'. Action: 🏆 雙拳向上擊天，歡呼終極大勝利！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 25 節: 我們是終極冠軍（歌詞：Now we are the champions of the hall.）。動作指令：🏆 雙拳向上擊天，歡呼終極大勝利！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 25 節: 我們是終極冠軍（歌詞：Now we are the champions of the hall.）。動作指令：🏆 雙拳向上擊天，歡呼終極大勝利！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 92.3,
@@ -6429,8 +6429,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 26 節: 任務達成亮晶晶'. Action: 🌟 整個房間都在發光，乾乾淨淨無可挑剔！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 26 節: 任務達成亮晶晶（歌詞：Room is shining mission clear.）。動作指令：🌟 整個房間都在發光，乾乾淨淨無可挑剔！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 26 節: 任務達成亮晶晶（歌詞：Room is shining mission clear.）。動作指令：🌟 整個房間都在發光，乾乾淨淨無可挑剔！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 96.2,
@@ -6445,8 +6445,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '第 27 節: 完美清潔大定格'. Action: 💖 雙手在胸前比個大愛心，完美定格微笑！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 27 節: 完美清潔大定格（歌詞：Room is shining ever seen.）。動作指令：💖 雙手在胸前比個大愛心，完美定格微笑！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 27 節: 完美清潔大定格（歌詞：Room is shining ever seen.）。動作指令：💖 雙手在胸前比個大愛心，完美定格微笑！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 99.5,
@@ -6461,8 +6461,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sparkle Clean Team' (Energetic K-Pop Teen-Crush Funk (活力滿滿 Teen-Crush 節奏風)), Segment '[尾奏] 歡呼慶祝完美定格'. Action: 🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[尾奏] 歡呼慶祝完美定格（歌詞：[Outro 🎵 歡樂尾奏完美定格]）。動作指令：🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[尾奏] 歡呼慶祝完美定格（歌詞：[Outro 🎵 歡樂尾奏完美定格]）。動作指令：🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           }
         ]
       },
@@ -6496,8 +6496,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "K-pop 派對開始囉！跟著重低音鼓點，膝蓋彈一彈，準備帥氣出發！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '[前奏] 太空超新星火箭蓄力'. Action: 🚀 雙手合成火箭尖頂，啟動推進器準備升空！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[前奏] 太空超新星火箭蓄力（歌詞：[Intro 🎵 歡樂前奏]）。動作指令：🚀 雙手合成火箭尖頂，啟動推進器準備升空！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[前奏] 太空超新星火箭蓄力（歌詞：[Intro 🎵 歡樂前奏]）。動作指令：🚀 雙手合成火箭尖頂，啟動推進器準備升空！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 16.97,
@@ -6512,8 +6512,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 01 節: 戴銀頭盔漂群星'. Action: 👨‍🚀 雙手在頭上戴緊太空頭盔，輕飄飄漫遊星際！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 戴銀頭盔漂群星（歌詞：Silver helmet on floating through the stars.）。動作指令：👨‍🚀 雙手在頭上戴緊太空頭盔，輕飄飄漫遊星際！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 戴銀頭盔漂群星（歌詞：Silver helmet on floating through the stars.）。動作指令：👨‍🚀 雙手在頭上戴緊太空頭盔，輕飄飄漫遊星際！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 20.6,
@@ -6528,8 +6528,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 02 節: 跟紅火星說哈囉'. Action: 🔴 向遠方紅色火星用力招招手：哈囉你好！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 跟紅火星說哈囉（歌詞：Saying hello to the red light of Mars.）。動作指令：🔴 向遠方紅色火星用力招招手：哈囉你好！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 跟紅火星說哈囉（歌詞：Saying hello to the red light of Mars.）。動作指令：🔴 向遠方紅色火星用力招招手：哈囉你好！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 24.67,
@@ -6544,8 +6544,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 03 節: 銀河雷射星光閃'. Action: ⚡ 雙手向外發射雷射星光光束，閃耀銀河！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 銀河雷射星光閃（歌詞：Laser beams sparkles in the Milky Way.）。動作指令：⚡ 雙手向外發射雷射星光光束，閃耀銀河！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 銀河雷射星光閃（歌詞：Laser beams sparkles in the Milky Way.）。動作指令：⚡ 雙手向外發射雷射星光光束，閃耀銀河！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 28.77,
@@ -6560,8 +6560,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 04 節: 小小太空探險家'. Action: 🪐 踩著太空飄浮步，我們是勇敢探險家！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 小小太空探險家（歌詞：Cosmic lit explorers came to play.）。動作指令：🪐 踩著太空飄浮步，我們是勇敢探險家！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 小小太空探險家（歌詞：Cosmic lit explorers came to play.）。動作指令：🪐 踩著太空飄浮步，我們是勇敢探險家！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 32.4,
@@ -6576,8 +6576,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 05 節: 零重力空中漂浮'. Action: 🌌 雙腳慢慢離地，像羽毛在太空中輕輕飄！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 零重力空中漂浮（歌詞：Gravity zero floating in the air.）。動作指令：🌌 雙腳慢慢離地，像羽毛在太空中輕輕飄！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 零重力空中漂浮（歌詞：Gravity zero floating in the air.）。動作指令：🌌 雙腳慢慢離地，像羽毛在太空中輕輕飄！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 34.37,
@@ -6592,8 +6592,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 06 節: 流星尾巴滿天飛'. Action: 🌠 雙手畫出道道流星雨軌跡，燦爛劃過！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 流星尾巴滿天飛（歌詞：Shooting star trails everywhere.）。動作指令：🌠 雙手畫出道道流星雨軌跡，燦爛劃過！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 流星尾巴滿天飛（歌詞：Shooting star trails everywhere.）。動作指令：🌠 雙手畫出道道流星雨軌跡，燦爛劃過！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 36.3,
@@ -6608,8 +6608,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 07 節: 握緊太空方向盤'. Action: 🛸 雙手緊握飛船方向盤，向左轉向右轉！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 握緊太空方向盤（歌詞：Hold on tight grab the steering wheel.）。動作指令：🛸 雙手緊握飛船方向盤，向左轉向右轉！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 握緊太空方向盤（歌詞：Hold on tight grab the steering wheel.）。動作指令：🛸 雙手緊握飛船方向盤，向左轉向右轉！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 38.13,
@@ -6624,8 +6624,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 08 節: 感受奇幻魔法境'. Action: ✨ 閉上眼睛深深呼吸，體驗奇妙星際魔法！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 感受奇幻魔法境（歌詞：Feel how real this magic can feel.）。動作指令：✨ 閉上眼睛深深呼吸，體驗奇妙星際魔法！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 感受奇幻魔法境（歌詞：Feel how real this magic can feel.）。動作指令：✨ 閉上眼睛深深呼吸，體驗奇妙星際魔法！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 40.53,
@@ -6640,8 +6640,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 09 節: 超新星飛掠月亮'. Action: 🌕 砰一聲超新星爆發，飛船飛快擦過月球！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 超新星飛掠月亮（歌詞：Supernova boom flying past the moon.）。動作指令：🌕 砰一聲超新星爆發，飛船飛快擦過月球！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 超新星飛掠月亮（歌詞：Supernova boom flying past the moon.）。動作指令：🌕 砰一聲超新星爆發，飛船飛快擦過月球！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 44.33,
@@ -6656,8 +6656,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 10 節: 齊唱浩瀚星系歌'. Action: 🎶 張開雙手擁抱宇宙，放聲齊唱銀河曲！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 齊唱浩瀚星系歌（歌詞：Singing out our cosmic galaxy tune.）。動作指令：🎶 張開雙手擁抱宇宙，放聲齊唱銀河曲！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 齊唱浩瀚星系歌（歌詞：Singing out our cosmic galaxy tune.）。動作指令：🎶 張開雙手擁抱宇宙，放聲齊唱銀河曲！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 48.33,
@@ -6672,8 +6672,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 11 節: 光速穿梭大宇宙'. Action: 💫 雙手向前衝刺，以光速穿越無盡星系！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 光速穿梭大宇宙（歌詞：Zooming through space after space speed of light.）。動作指令：💫 雙手向前衝刺，以光速穿越無盡星系！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 光速穿梭大宇宙（歌詞：Zooming through space after space speed of light.）。動作指令：💫 雙手向前衝刺，以光速穿越無盡星系！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 51.8,
@@ -6688,8 +6688,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 12 節: 璀璨星座放光明'. Action: ⭐ 雙手點亮十二星座，漫天星斗閃耀！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 璀璨星座放光明（歌詞：Constellations shining bright.）。動作指令：⭐ 雙手點亮十二星座，漫天星斗閃耀！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 璀璨星座放光明（歌詞：Constellations shining bright.）。動作指令：⭐ 雙手點亮十二星座，漫天星斗閃耀！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 54.97,
@@ -6704,8 +6704,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 13 節: 超級新星照高空'. Action: 🌟 全身聚滿金色星能，向上綻放最耀眼光！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 超級新星照高空（歌詞：Super supernova glowing high.）。動作指令：🌟 全身聚滿金色星能，向上綻放最耀眼光！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 超級新星照高空（歌詞：Super supernova glowing high.）。動作指令：🌟 全身聚滿金色星能，向上綻放最耀眼光！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 59.73,
@@ -6720,8 +6720,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 14 節: 小小火箭巡太空'. Action: 🚀 雙手併攏化作小火箭，穿梭浩瀚星空！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 小小火箭巡太空（歌詞：Little rockets in the cosmic sky sky sky sky.）。動作指令：🚀 雙手併攏化作小火箭，穿梭浩瀚星空！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 小小火箭巡太空（歌詞：Little rockets in the cosmic sky sky sky sky.）。動作指令：🚀 雙手併攏化作小火箭，穿梭浩瀚星空！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 64,
@@ -6736,8 +6736,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 70.77,
@@ -6752,8 +6752,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 15 節: 土星轉動呼啦圈'. Action: 🪐 扭動小蠻腰，學土星光環旋轉呼啦圈！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 土星轉動呼啦圈（歌詞：Satin has a hula hoop.）。動作指令：🪐 扭動小蠻腰，學土星光環旋轉呼啦圈！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 土星轉動呼啦圈（歌詞：Satin has a hula hoop.）。動作指令：🪐 扭動小蠻腰，學土星光環旋轉呼啦圈！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 72.2,
@@ -6768,8 +6768,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 16 節: 外星DJ播電音'. Action: 🎧 雙手戴耳機學外星 DJ 搓盤，發出有趣聲音！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 外星DJ播電音（歌詞：Spinning around alien DJ spinning funny sound.）。動作指令：🎧 雙手戴耳機學外星 DJ 搓盤，發出有趣聲音！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 外星DJ播電音（歌詞：Spinning around alien DJ spinning funny sound.）。動作指令：🎧 雙手戴耳機學外星 DJ 搓盤，發出有趣聲音！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 78.53,
@@ -6784,8 +6784,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 17 節: 渦輪加速噴烈火'. Action: 🔥 按下加速鍵，尾部噴出熊熊金色火焰！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 渦輪加速噴烈火（歌詞：Christ the Turbo poster see the fire blast.）。動作指令：🔥 按下加速鍵，尾部噴出熊熊金色火焰！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 渦輪加速噴烈火（歌詞：Christ the Turbo poster see the fire blast.）。動作指令：🔥 按下加速鍵，尾部噴出熊熊金色火焰！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 82.47,
@@ -6800,8 +6800,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 18 節: 史上最快小飛船'. Action: 🛸 側身滑翔飛馳，我們是宇宙最快飛船！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 史上最快小飛船（歌詞：Fastest little ship that ever passed.）。動作指令：🛸 側身滑翔飛馳，我們是宇宙最快飛船！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 史上最快小飛船（歌詞：Fastest little ship that ever passed.）。動作指令：🛸 側身滑翔飛馳，我們是宇宙最快飛船！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 85.47,
@@ -6816,8 +6816,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 90.47,
@@ -6832,8 +6832,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 19 節: 超新星飛掠月亮'. Action: 🌕 轟鳴聲再次響起，向著銀河中心大飛躍！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 超新星飛掠月亮（歌詞：Supernova boom flying past the moon.）。動作指令：🌕 轟鳴聲再次響起，向著銀河中心大飛躍！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 超新星飛掠月亮（歌詞：Supernova boom flying past the moon.）。動作指令：🌕 轟鳴聲再次響起，向著銀河中心大飛躍！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 94.27,
@@ -6848,8 +6848,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 20 節: 銀河旋律大合唱'. Action: 🎶 昂首挺胸合唱，歌聲響徹整個星際！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 銀河旋律大合唱（歌詞：Singing out our cosmic galaxy tune.）。動作指令：🎶 昂首挺胸合唱，歌聲響徹整個星際！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 銀河旋律大合唱（歌詞：Singing out our cosmic galaxy tune.）。動作指令：🎶 昂首挺胸合唱，歌聲響徹整個星際！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 98.2,
@@ -6864,8 +6864,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 21 節: 光速巡航穿星空'. Action: 💫 雙臂展開穩定巡航，速度超越光芒！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 光速巡航穿星空（歌詞：Zooming through space at the speed of light.）。動作指令：💫 雙臂展開穩定巡航，速度超越光芒！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 光速巡航穿星空（歌詞：Zooming through space at the speed of light.）。動作指令：💫 雙臂展開穩定巡航，速度超越光芒！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 101.73,
@@ -6880,8 +6880,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 22 節: 星宿閃爍耀天際'. Action: ⭐ 雙手向上點綴群星，美麗夜空永不落幕！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 星宿閃爍耀天際（歌詞：Constellations shining bright.）。動作指令：⭐ 雙手向上點綴群星，美麗夜空永不落幕！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 星宿閃爍耀天際（歌詞：Constellations shining bright.）。動作指令：⭐ 雙手向上點綴群星，美麗夜空永不落幕！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 104.9,
@@ -6896,8 +6896,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '第 23 節: 平安著陸大勝利'. Action: 🏆 飛船平穩著陸，雙拳插腰擺出勝利 Pose！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 平安著陸大勝利（歌詞：Landing safely high.）。動作指令：🏆 飛船平穩著陸，雙拳插腰擺出勝利 Pose！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 平安著陸大勝利（歌詞：Landing safely high.）。動作指令：🏆 飛船平穩著陸，雙拳插腰擺出勝利 Pose！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 106.47,
@@ -6912,8 +6912,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with spiky tousled medium-brown hair, big bright brown eyes, rosy cheeks, wide happy smile, wearing metallic silver and royal blue K-pop varsity bomber jacket, black cargo joggers with neon cyan straps, LED high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Galaxy Supernova' (Futuristic Cyber K-Pop Dance Pop (未來感太空電音男團風)), Segment '[尾奏] 歡呼慶祝完美定格'. Action: 🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Leo (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[尾奏] 歡呼慶祝完美定格（歌詞：[Outro 🎵 歡樂尾奏完美定格]）。動作指令：🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Leo (陽光刺蝟頭男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Kai (陽光刺蝟頭男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[尾奏] 歡呼慶祝完美定格（歌詞：[Outro 🎵 歡樂尾奏完美定格]）。動作指令：🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Kai (陽光刺蝟頭男孩)"
           }
         ]
       },
@@ -6947,8 +6947,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 01 節: 歡樂嘻哈笑開懷'. Action: 😄 拍拍大腿開懷大笑，嘻哈鼓點熱力全開！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 歡樂嘻哈笑開懷（歌詞：Ha ha ha ha ha ha yeah yeah yeah ha ha ha ha hoo.）。動作指令：😄 拍拍大腿開懷大笑，嘻哈鼓點熱力全開！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 歡樂嘻哈笑開懷（歌詞：Ha ha ha ha ha ha yeah yeah yeah ha ha ha ha hoo.）。動作指令：😄 拍拍大腿開懷大笑，嘻哈鼓點熱力全開！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 9.5,
@@ -6963,8 +6963,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 02 節: A是飛機飛上天'. Action: ✈️ 雙臂平舉當大飛機，在天空中展翅滑翔！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: A是飛機飛上天（歌詞：F  for airplane flying through the air.）。動作指令：✈️ 雙臂平舉當大飛機，在天空中展翅滑翔！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: A是飛機飛上天（歌詞：F  for airplane flying through the air.）。動作指令：✈️ 雙臂平舉當大飛機，在天空中展翅滑翔！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 12.3,
@@ -6979,8 +6979,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 03 節: 衝上雲霄大歡呼'. Action: ☁️ 飛機衝破雲層，開心大喊 Ahhhhh！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 衝上雲霄大歡呼（歌詞：Ah!）。動作指令：☁️ 飛機衝破雲層，開心大喊 Ahhhhh！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 衝上雲霄大歡呼（歌詞：Ah!）。動作指令：☁️ 飛機衝破雲層，開心大喊 Ahhhhh！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 12.4,
@@ -6995,8 +6995,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 04 節: 衝刺雲端真刺激'. Action: 🚀 雙手向上拉起機頭，直衝美麗雲端！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 衝刺雲端真刺激（歌詞：Ahhhhh!）。動作指令：🚀 雙手向上拉起機頭，直衝美麗雲端！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 衝刺雲端真刺激（歌詞：Ahhhhh!）。動作指令：🚀 雙手向上拉起機頭，直衝美麗雲端！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 13.53,
@@ -7011,8 +7011,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 05 節: B是棕毛大熊熊'. Action: 🐻 雙手比出毛茸茸熊爪，學大熊笨拙搖晃！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: B是棕毛大熊熊（歌詞：B for bear with fluffy brown hair.）。動作指令：🐻 雙手比出毛茸茸熊爪，學大熊笨拙搖晃！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: B是棕毛大熊熊（歌詞：B for bear with fluffy brown hair.）。動作指令：🐻 雙手比出毛茸茸熊爪，學大熊笨拙搖晃！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 16.4,
@@ -7027,8 +7027,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 06 節: C是圓圓甜餅乾'. Action: 🍪 雙手在身前畫出大大圓形香甜餅乾！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: C是圓圓甜餅乾（歌詞：Oh  C for cookies sleep around.）。動作指令：🍪 雙手在身前畫出大大圓形香甜餅乾！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: C是圓圓甜餅乾（歌詞：Oh  C for cookies sleep around.）。動作指令：🍪 雙手在身前畫出大大圓形香甜餅乾！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 19.87,
@@ -7043,8 +7043,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 07 節: D是大鼓咚咚咚'. Action: 🥁 雙手握鼓棒用力敲打大鼓，咚咚作響！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: D是大鼓咚咚咚（歌詞：D for drum making a boomy sound.）。動作指令：🥁 雙手握鼓棒用力敲打大鼓，咚咚作響！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: D是大鼓咚咚咚（歌詞：D for drum making a boomy sound.）。動作指令：🥁 雙手握鼓棒用力敲打大鼓，咚咚作響！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 21.77,
@@ -7059,8 +7059,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 08 節: EFG街頭跳跳'. Action: 💃 腳尖左右滑步，字母跟著音樂跳起街舞！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: EFG街頭跳跳（歌詞：E F G dancing on the street.）。動作指令：💃 腳尖左右滑步，字母跟著音樂跳起街舞！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: EFG街頭跳跳（歌詞：E F G dancing on the street.）。動作指令：💃 腳尖左右滑步，字母跟著音樂跳起街舞！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 23.67,
@@ -7075,8 +7075,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 09 節: 字母合拍踩節奏'. Action: 👟 左右踩拍換重心，每個字母精準對拍！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 字母合拍踩節奏（歌詞：Matching every letter to the beat.）。動作指令：👟 左右踩拍換重心，每個字母精準對拍！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 字母合拍踩節奏（歌詞：Matching every letter to the beat.）。動作指令：👟 左右踩拍換重心，每個字母精準對拍！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 26.07,
@@ -7091,8 +7091,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 10 節: HIJK牽牽手'. Action: 🤝 伸出雙手牽好朋友，一起歡樂向前走！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: HIJK牽牽手（歌詞：H I J K take my hand.）。動作指令：🤝 伸出雙手牽好朋友，一起歡樂向前走！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: HIJK牽牽手（歌詞：H I J K take my hand.）。動作指令：🤝 伸出雙手牽好朋友，一起歡樂向前走！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 30.17,
@@ -7107,8 +7107,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 11 節: LMNO傳遍大地'. Action: 🌍 雙手像廣播向外放送，聲音傳遍大地！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: LMNO傳遍大地（歌詞：L  M  N  O  across the land.）。動作指令：🌍 雙手像廣播向外放送，聲音傳遍大地！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: LMNO傳遍大地（歌詞：L  M  N  O  across the land.）。動作指令：🌍 雙手像廣播向外放送，聲音傳遍大地！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 33.57,
@@ -7123,8 +7123,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 12 節: 大聲唱響最嘹亮'. Action: 📢 雙手放在嘴巴旁，放聲大唱最清楚！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 大聲唱響最嘹亮（歌詞：Sing it louder sing it clear.）。動作指令：📢 雙手放在嘴巴旁，放聲大唱最清楚！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 大聲唱響最嘹亮（歌詞：Sing it louder sing it clear.）。動作指令：📢 雙手放在嘴巴旁，放聲大唱最清楚！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 36.13,
@@ -7139,8 +7139,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 13 節: 魔法聲音齊降臨'. Action: ✨ 手指輕輕彈出魔法音符，神奇美妙！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 魔法聲音齊降臨（歌詞：Magic sounds are here.）。動作指令：✨ 手指輕輕彈出魔法音符，神奇美妙！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 魔法聲音齊降臨（歌詞：Magic sounds are here.）。動作指令：✨ 手指輕輕彈出魔法音符，神奇美妙！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 41.27,
@@ -7155,8 +7155,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 14 節: ABC動感律動'. Action: 🎵 聳聳肩膀左右晃動，感受潮酷 ABC 律動！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: ABC動感律動（歌詞：Oh oh A B C groove.）。動作指令：🎵 聳聳肩膀左右晃動，感受潮酷 ABC 律動！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: ABC動感律動（歌詞：Oh oh A B C groove.）。動作指令：🎵 聳聳肩膀左右晃動，感受潮酷 ABC 律動！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 44.33,
@@ -7171,8 +7171,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 15 節: 跟我一起拼出來'. Action: 🔤 雙手在胸前比劃字母，跟我一起拼！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 跟我一起拼出來（歌詞：Spell it out with me.）。動作指令：🔤 雙手在胸前比劃字母，跟我一起拼！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 跟我一起拼出來（歌詞：Spell it out with me.）。動作指令：🔤 雙手在胸前比劃字母，跟我一起拼！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 46.3,
@@ -7187,8 +7187,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 16 節: PQRS開心唱TUV'. Action: 🎶 踩著節拍唱出 PQRS，再接 TUV 和 W！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: PQRS開心唱TUV（歌詞：P Q R S happy as can be T U V and W.）。動作指令：🎶 踩著節拍唱出 PQRS，再接 TUV 和 W！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: PQRS開心唱TUV（歌詞：P Q R S happy as can be T U V and W.）。動作指令：🎶 踩著節拍唱出 PQRS，再接 TUV 和 W！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 52.5,
@@ -7203,8 +7203,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 17 節: 掌握魔法萬能鑰'. Action: 🔑 雙手做出轉鑰匙手勢，打開知識寶庫大門！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 掌握魔法萬能鑰（歌詞：Now we got the master key.）。動作指令：🔑 雙手做出轉鑰匙手勢，打開知識寶庫大門！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 掌握魔法萬能鑰（歌詞：Now we got the master key.）。動作指令：🔑 雙手做出轉鑰匙手勢，打開知識寶庫大門！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 56.5,
@@ -7219,8 +7219,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 18 節: 每個字母有旋律'. Action: 🎵 身體像波浪流暢起伏，每個字母都在唱歌！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 每個字母有旋律（歌詞：Every single letter has a groove.）。動作指令：🎵 身體像波浪流暢起伏，每個字母都在唱歌！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 每個字母有旋律（歌詞：Every single letter has a groove.）。動作指令：🎵 身體像波浪流暢起伏，每個字母都在唱歌！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 60.57,
@@ -7235,8 +7235,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 19 節: 雙腳快樂跳不停'. Action: 👟 腳步靈巧踢踏跳，快樂停不下來！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 雙腳快樂跳不停（歌詞：Making all our happy feet move.）。動作指令：👟 腳步靈巧踢踏跳，快樂停不下來！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 雙腳快樂跳不停（歌詞：Making all our happy feet move.）。動作指令：👟 腳步靈巧踢踏跳，快樂停不下來！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 66.87,
@@ -7251,8 +7251,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 20 節: 翻開故事小讀本'. Action: 📖 雙手平攤當書本，好奇閱讀精彩童話！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 翻開故事小讀本（歌詞：Read a little story in an open book.）。動作指令：📖 雙手平攤當書本，好奇閱讀精彩童話！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 翻開故事小讀本（歌詞：Read a little story in an open book.）。動作指令：📖 雙手平攤當書本，好奇閱讀精彩童話！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 68.77,
@@ -7267,8 +7267,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 21 節: 好奇目光仔細瞧'. Action: 👀 雙手在眼睛比出小望遠鏡，仔細觀察！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 好奇目光仔細瞧（歌詞：Take a little closer curious look.）。動作指令：👀 雙手在眼睛比出小望遠鏡，仔細觀察！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 好奇目光仔細瞧（歌詞：Take a little closer curious look.）。動作指令：👀 雙手在眼睛比出小望遠鏡，仔細觀察！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 70.97,
@@ -7283,8 +7283,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 22 節: 文字就像小拼圖'. Action: 🧩 雙手一塊一塊拼湊起神奇智慧小拼圖！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 文字就像小拼圖（歌詞：Words are like puzzle.）。動作指令：🧩 雙手一塊一塊拼湊起神奇智慧小拼圖！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 文字就像小拼圖（歌詞：Words are like puzzle.）。動作指令：🧩 雙手一塊一塊拼湊起神奇智慧小拼圖！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 71.87,
@@ -7299,8 +7299,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 23 節: 腦袋靈巧動一動'. Action: 🧠 食指輕點太陽穴，開動聰明小腦袋！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 腦袋靈巧動一動（歌詞：Pieces in your mind.）。動作指令：🧠 食指輕點太陽穴，開動聰明小腦袋！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 腦袋靈巧動一動（歌詞：Pieces in your mind.）。動作指令：🧠 食指輕點太陽穴，開動聰明小腦袋！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 72.9,
@@ -7315,8 +7315,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 24 節: 尋獲最酷大寶藏'. Action: 💎 雙手向上托起發光寶箱，收穫滿滿寶藏！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 24 節: 尋獲最酷大寶藏（歌詞：Coolest little treasures you can find.）。動作指令：💎 雙手向上托起發光寶箱，收穫滿滿寶藏！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 24 節: 尋獲最酷大寶藏（歌詞：Coolest little treasures you can find.）。動作指令：💎 雙手向上托起發光寶箱，收穫滿滿寶藏！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 75.93,
@@ -7331,8 +7331,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 83.27,
@@ -7347,8 +7347,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 25 節: ABC律動跟我拼'. Action: 🔤 全場齊聲歡唱 ABC，潮酷手勢擺出來！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 25 節: ABC律動跟我拼（歌詞：A B C groove spell it out with me.）。動作指令：🔤 全場齊聲歡唱 ABC，潮酷手勢擺出來！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 25 節: ABC律動跟我拼（歌詞：A B C groove spell it out with me.）。動作指令：🔤 全場齊聲歡唱 ABC，潮酷手勢擺出來！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 87.27,
@@ -7363,8 +7363,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 26 節: 字母大合唱齊歡樂'. Action: 🎉 拍手跳跳接續唱歌，滿滿活力充沛！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 26 節: 字母大合唱齊歡樂（歌詞：P Q R S happy as can be T U V and W.）。動作指令：🎉 拍手跳跳接續唱歌，滿滿活力充沛！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 26 節: 字母大合唱齊歡樂（歌詞：P Q R S happy as can be T U V and W.）。動作指令：🎉 拍手跳跳接續唱歌，滿滿活力充沛！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 93.53,
@@ -7379,8 +7379,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 27 節: 掌握關鍵大金匙'. Action: 🔑 轉動大金鑰匙，我們是字母大高手！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 27 節: 掌握關鍵大金匙（歌詞：Now we got the master key.）。動作指令：🔑 轉動大金鑰匙，我們是字母大高手！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 27 節: 掌握關鍵大金匙（歌詞：Now we got the master key.）。動作指令：🔑 轉動大金鑰匙，我們是字母大高手！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 97.4,
@@ -7395,8 +7395,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 28 節: 我們深愛 ABC'. Action: 💖 雙手放在胸口比心，我們最喜歡 ABC！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 28 節: 我們深愛 ABC（歌詞：We love  A B C.）。動作指令：💖 雙手放在胸口比心，我們最喜歡 ABC！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 28 節: 我們深愛 ABC（歌詞：We love  A B C.）。動作指令：💖 雙手放在胸口比心，我們最喜歡 ABC！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 100.47,
@@ -7411,8 +7411,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 29 節: 噠噠噠噠齊歡呼'. Action: 🎶 踩著動感步伐，噠噠噠噠歡樂伴唱！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 29 節: 噠噠噠噠齊歡呼（歌詞：Da da da da da oh oh oh oh.）。動作指令：🎶 踩著動感步伐，噠噠噠噠歡樂伴唱！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 29 節: 噠噠噠噠齊歡呼（歌詞：Da da da da da oh oh oh oh.）。動作指令：🎶 踩著動感步伐，噠噠噠噠歡樂伴唱！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 104.73,
@@ -7427,8 +7427,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 30 節: 拍手齊歌高亢唱'. Action: 👏 雙手胸前用力拍掌，歡呼節奏最高潮！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 30 節: 拍手齊歌高亢唱（歌詞：Da da da da da oh.）。動作指令：👏 雙手胸前用力拍掌，歡呼節奏最高潮！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 30 節: 拍手齊歌高亢唱（歌詞：Da da da da da oh.）。動作指令：👏 雙手胸前用力拍掌，歡呼節奏最高潮！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 107.87,
@@ -7443,8 +7443,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '第 31 節: 完美街舞終極定格'. Action: 😎 雙腳站穩、單手插腰、另一手比耶定格！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 31 節: 完美街舞終極定格（歌詞：Da da da da da da.）。動作指令：😎 雙腳站穩、單手插腰、另一手比耶定格！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 31 節: 完美街舞終極定格（歌詞：Da da da da da da.）。動作指令：😎 雙腳站穩、單手插腰、另一手比耶定格！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           },
           {
             "start": 112.83,
@@ -7459,8 +7459,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler girl with wavy light-brown hair tied into two high pigtails with sparkling ribbons, big brown eyes, sweet radiant smile, wearing bright magenta and white K-pop sporty jersey top, pastel purple wide-leg cargo pants with straps, chunky sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'K-ABC Groove' (Signature K-Pop Idol Pop Groove (正統 K-Pop 洗腦字母手勢舞)), Segment '[尾奏] 歡呼慶祝完美定格'. Action: 🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mia (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[尾奏] 歡呼慶祝完美定格（歌詞：[Outro 🎵 歡樂尾奏完美定格]）。動作指令：🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Mia (波浪雙馬尾女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：妞 (波浪雙馬尾女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[尾奏] 歡呼慶祝完美定格（歌詞：[Outro 🎵 歡樂尾奏完美定格]）。動作指令：🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "妞 (波浪雙馬尾女孩)"
           }
         ]
       },
@@ -7494,8 +7494,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "K-pop 派對開始囉！跟著重低音鼓點，膝蓋彈一彈，準備帥氣出發！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '[前奏] 氣球定格暖身預備'. Action: 🎈 拍拍身邊彩色大氣球，音樂一停立刻定格！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[前奏] 氣球定格暖身預備（歌詞：[Intro 🎵 歡樂前奏]）。動作指令：🎈 拍拍身邊彩色大氣球，音樂一停立刻定格！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[前奏] 氣球定格暖身預備（歌詞：[Intro 🎵 歡樂前奏]）。動作指令：🎈 拍拍身邊彩色大氣球，音樂一停立刻定格！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 6.8,
@@ -7510,8 +7510,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 01 節: 原地定格大喊嘿'. Action: 🧊 身體一秒定格不動，大聲喊 Hey！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 原地定格大喊嘿（歌詞：Free hey!）。動作指令：🧊 身體一秒定格不動，大聲喊 Hey！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 原地定格大喊嘿（歌詞：Free hey!）。動作指令：🧊 身體一秒定格不動，大聲喊 Hey！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 7.9,
@@ -7526,8 +7526,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 14.93,
@@ -7542,8 +7542,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 02 節: 聳聳肩膀彈彈膝'. Action: 🦵 聳聳雙肩、膝蓋彈動，像小彈簧一樣！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 聳聳肩膀彈彈膝（歌詞：Pop your shoulders bounce your knees.）。動作指令：🦵 聳聳雙肩、膝蓋彈動，像小彈簧一樣！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 聳聳肩膀彈彈膝（歌詞：Pop your shoulders bounce your knees.）。動作指令：🦵 聳聳雙肩、膝蓋彈動，像小彈簧一樣！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 16.8,
@@ -7558,8 +7558,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 03 節: 揮舞雙臂夏日樹'. Action: 🌳 雙手高舉像大樹枝葉，隨夏日微風搖動！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 揮舞雙臂夏日樹（歌詞：Wave your arms like summer trees.）。動作指令：🌳 雙手高舉像大樹枝葉，隨夏日微風搖動！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 揮舞雙臂夏日樹（歌詞：Wave your arms like summer trees.）。動作指令：🌳 雙手高舉像大樹枝葉，隨夏日微風搖動！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 18.67,
@@ -7574,8 +7574,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 04 節: 蟋蟀快跳真輕巧'. Action: 🦗 像小蟋蟀一樣輕巧快速在草地跳躍！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 蟋蟀快跳真輕巧（歌詞：Hop like a cricket fast and light.）。動作指令：🦗 像小蟋蟀一樣輕巧快速在草地跳躍！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 蟋蟀快跳真輕巧（歌詞：Hop like a cricket fast and light.）。動作指令：🦗 像小蟋蟀一樣輕巧快速在草地跳躍！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 20.5,
@@ -7590,8 +7590,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 05 節: 轉圈轉到節奏緊'. Action: 🌀 雙手張開快速轉圈圈，跟緊動感鼓點！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 轉圈轉到節奏緊（歌詞：Spin around till the beat gets tight.）。動作指令：🌀 雙手張開快速轉圈圈，跟緊動感鼓點！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 轉圈轉到節奏緊（歌詞：Spin around till the beat gets tight.）。動作指令：🌀 雙手張開快速轉圈圈，跟緊動感鼓點！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 22.37,
@@ -7606,8 +7606,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 06 節: 感受氣氛漸高漲'. Action: 🔥 腳步越來越快，期待下一秒的驚喜！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 感受氣氛漸高漲（歌詞：Feel the tension build it up.）。動作指令：🔥 腳步越來越快，期待下一秒的驚喜！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 感受氣氛漸高漲（歌詞：Feel the tension build it up.）。動作指令：🔥 腳步越來越快，期待下一秒的驚喜！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 24.27,
@@ -7622,8 +7622,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 07 節: 杯中珍珠泡泡冒'. Action: 🥤 雙手做出咕嚕咕嚕小泡泡，冒出杯口！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 杯中珍珠泡泡冒（歌詞：Bubble tea inside a cup.）。動作指令：🥤 雙手做出咕嚕咕嚕小泡泡，冒出杯口！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 杯中珍珠泡泡冒（歌詞：Bubble tea inside a cup.）。動作指令：🥤 雙手做出咕嚕咕嚕小泡泡，冒出杯口！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 26.13,
@@ -7638,8 +7638,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 08 節: 預備站穩別摔倒'. Action: 🧘 雙腳站穩抓牢地面，平衡身體保持穩定！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 預備站穩別摔倒（歌詞：Ready steady don't you drop.）。動作指令：🧘 雙腳站穩抓牢地面，平衡身體保持穩定！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 預備站穩別摔倒（歌詞：Ready steady don't you drop.）。動作指令：🧘 雙腳站穩抓牢地面，平衡身體保持穩定！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 27.97,
@@ -7654,8 +7654,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 09 節: 三二一立刻停下'. Action: 🛑 倒數 3、2、1，停！停！停！一秒變成木頭人！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 三二一立刻停下（歌詞：3 2 1 and stop stop stop stop stop.）。動作指令：🛑 倒數 3、2、1，停！停！停！一秒變成木頭人！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 三二一立刻停下（歌詞：3 2 1 and stop stop stop stop stop.）。動作指令：🛑 倒數 3、2、1，停！停！停！一秒變成木頭人！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 33.6,
@@ -7670,8 +7670,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 10 節: 波波抖動別定格'. Action: 💃 音樂響起快抖動，搖動身體別被抓到！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 波波抖動別定格（歌詞：Pop pop shake it don't you freeze.）。動作指令：💃 音樂響起快抖動，搖動身體別被抓到！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 波波抖動別定格（歌詞：Pop pop shake it don't you freeze.）。動作指令：💃 音樂響起快抖動，搖動身體別被抓到！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 36,
@@ -7686,8 +7686,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 11 節: 跳舞小蜜蜂拂風'. Action: 🐝 學勤勞小蜜蜂採蜜，扭動屁股輕盈跳舞！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 跳舞小蜜蜂拂風（歌詞：Dancing like a honey bee breeze.）。動作指令：🐝 學勤勞小蜜蜂採蜜，扭動屁股輕盈跳舞！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 跳舞小蜜蜂拂風（歌詞：Dancing like a honey bee breeze.）。動作指令：🐝 學勤勞小蜜蜂採蜜，扭動屁股輕盈跳舞！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 37.87,
@@ -7702,8 +7702,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 12 節: 音樂一停辨方向'. Action: 👂 豎起耳朵聽仔細，音樂一停立刻煞車！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 音樂一停辨方向（歌詞：When the music stops taste the right.）。動作指令：👂 豎起耳朵聽仔細，音樂一停立刻煞車！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 音樂一停辨方向（歌詞：When the music stops taste the right.）。動作指令：👂 豎起耳朵聽仔細，音樂一停立刻煞車！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 39.53,
@@ -7718,8 +7718,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 13 節: 雙手筆直指天空'. Action: ☝️ 伸出手指筆直指著天空，一動也不動！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 雙手筆直指天空（歌詞：Their hands are pointing in the air.）。動作指令：☝️ 伸出手指筆直指著天空，一動也不動！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 雙手筆直指天空（歌詞：Their hands are pointing in the air.）。動作指令：☝️ 伸出手指筆直指著天空，一動也不動！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 44.8,
@@ -7734,8 +7734,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 14 節: 數到十再次定格'. Action: 🔢 1 到 10 快速動動，時間一到立刻雕像定格！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 數到十再次定格（歌詞：Pop pop move it freeze again from 1 to ten.）。動作指令：🔢 1 到 10 快速動動，時間一到立刻雕像定格！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 數到十再次定格（歌詞：Pop pop move it freeze again from 1 to ten.）。動作指令：🔢 1 到 10 快速動動，時間一到立刻雕像定格！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 49.17,
@@ -7750,8 +7750,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 57.9,
@@ -7766,8 +7766,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 15 節: 動動手指踢腳趾'. Action: 🦶 甩甩手指、踢踢腳趾，放鬆全身肌肉！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 動動手指踢腳趾（歌詞：Wiggle your fingers shake your toes.）。動作指令：🦶 甩甩手指、踢踢腳趾，放鬆全身肌肉！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 動動手指踢腳趾（歌詞：Wiggle your fingers shake your toes.）。動作指令：🦶 甩甩手指、踢踢腳趾，放鬆全身肌肉！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 59.87,
@@ -7782,8 +7782,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 16 節: 鼻子平衡保持穩'. Action: 👃 伸出食指點鼻子，單腳站立試試平衡！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 鼻子平衡保持穩（歌詞：Try to balance on your nose.）。動作指令：👃 伸出食指點鼻子，單腳站立試試平衡！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 鼻子平衡保持穩（歌詞：Try to balance on your nose.）。動作指令：👃 伸出食指點鼻子，單腳站立試試平衡！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 61.77,
@@ -7798,8 +7798,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 17 節: 跳到前面跳後面'. Action: ↔️ 雙腳往前跳一步，再往後跳一步！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 跳到前面跳後面（歌詞：Jump to the front jump to the back.）。動作指令：↔️ 雙腳往前跳一步，再往後跳一步！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 跳到前面跳後面（歌詞：Jump to the front jump to the back.）。動作指令：↔️ 雙腳往前跳一步，再往後跳一步！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 63.6,
@@ -7814,8 +7814,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 18 節: 踩緊節奏軌道上'. Action: 🚂 跟緊舞蹈小火車，穩穩行駛在軌道上！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 踩緊節奏軌道上（歌詞：Stay right on the dancing track track track track track.）。動作指令：🚂 跟緊舞蹈小火車，穩穩行駛在軌道上！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 踩緊節奏軌道上（歌詞：Stay right on the dancing track track track track track.）。動作指令：🚂 跟緊舞蹈小火車，穩穩行駛在軌道上！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 67.53,
@@ -7830,8 +7830,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 84.3,
@@ -7846,8 +7846,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 19 節: 滿分定格大喊耶'. Action: 🎉 穩穩站住，大聲歡呼一聲 Yeah！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 滿分定格大喊耶（歌詞：Yeah!）。動作指令：🎉 穩穩站住，大聲歡呼一聲 Yeah！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 滿分定格大喊耶（歌詞：Yeah!）。動作指令：🎉 穩穩站住，大聲歡呼一聲 Yeah！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 85.1,
@@ -7862,8 +7862,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 99.17,
@@ -7878,8 +7878,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 20 節: 波波晃動全身舞'. Action: 💃 伴隨熱烈音樂，全身各個關節大解放！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 波波晃動全身舞（歌詞：Pop pop shake it don't you freeze.）。動作指令：💃 伴隨熱烈音樂，全身各個關節大解放！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 波波晃動全身舞（歌詞：Pop pop shake it don't you freeze.）。動作指令：💃 伴隨熱烈音樂，全身各個關節大解放！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 101.57,
@@ -7894,8 +7894,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 21 節: 微風蜜蜂輕跳步'. Action: 🌸 踩出最可愛小碎步，輕盈靈活跳舞！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 微風蜜蜂輕跳步（歌詞：Dancing like a honey bee breeze.）。動作指令：🌸 踩出最可愛小碎步，輕盈靈活跳舞！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 微風蜜蜂輕跳步（歌詞：Dancing like a honey bee breeze.）。動作指令：🌸 踩出最可愛小碎步，輕盈靈活跳舞！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 103.47,
@@ -7910,8 +7910,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 22 節: 音樂暫停神反應'. Action: ⚡ 超強反應力，一秒站定擺出雕塑造型！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 音樂暫停神反應（歌詞：When the music stops taste right.）。動作指令：⚡ 超強反應力，一秒站定擺出雕塑造型！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 音樂暫停神反應（歌詞：When the music stops taste right.）。動作指令：⚡ 超強反應力，一秒站定擺出雕塑造型！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 105.13,
@@ -7926,8 +7926,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '第 23 節: 高舉雙手王者定格'. Action: 🏆 雙手高舉指天，定格成為反應力之王！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 高舉雙手王者定格（歌詞：Their hands are pointing in the air.）。動作指令：🏆 雙手高舉指天，定格成為反應力之王！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 高舉雙手王者定格（歌詞：Their hands are pointing in the air.）。動作指令：🏆 雙手高舉指天，定格成為反應力之王！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 107.73,
@@ -7942,8 +7942,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful toddler boy with fluffy layered brown hair and cute cowlick fringe, big round brown eyes, button nose, cute grin, wearing vibrant emerald green and black K-pop hip-hop windbreaker jacket, black joggers with neon lime stripes, high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Pop Pop Freeze!' (K-Pop Popping & Freeze Challenge (韓流 Popping 震點與木頭人定格風)), Segment '[尾奏] 歡呼慶祝完美定格'. Action: 🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Max (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[尾奏] 歡呼慶祝完美定格（歌詞：[Outro 🎵 歡樂尾奏完美定格]）。動作指令：🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Max (蓬鬆呆毛棕髮男孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：HiHi (蓬鬆呆毛棕髮男孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[尾奏] 歡呼慶祝完美定格（歌詞：[Outro 🎵 歡樂尾奏完美定格]）。動作指令：🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "HiHi (蓬鬆呆毛棕髮男孩)"
           }
         ]
       },
@@ -7977,8 +7977,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "K-pop 派對開始囉！跟著重低音鼓點，膝蓋彈一彈，準備帥氣出發！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '[前奏] 綠茵草地野餐預備'. Action: 🧺 提著美味小野餐籃，走向陽光灑落的綠草地！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[前奏] 綠茵草地野餐預備（歌詞：[Intro 🎵 歡樂前奏]）。動作指令：🧺 提著美味小野餐籃，走向陽光灑落的綠草地！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[前奏] 綠茵草地野餐預備（歌詞：[Intro 🎵 歡樂前奏]）。動作指令：🧺 提著美味小野餐籃，走向陽光灑落的綠草地！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 17.3,
@@ -7993,8 +7993,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 01 節: 草地鋪開格子墊'. Action: 🧺 雙手向前推開，把紅白格子野餐墊鋪整齊！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 草地鋪開格子墊（歌詞：Spreading out the checker blanket on the grass.）。動作指令：🧺 雙手向前推開，把紅白格子野餐墊鋪整齊！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 草地鋪開格子墊（歌詞：Spreading out the checker blanket on the grass.）。動作指令：🧺 雙手向前推開，把紅白格子野餐墊鋪整齊！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 19.33,
@@ -8009,8 +8009,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 02 節: 倒杯香濃冰牛奶'. Action: 🥛 拿著小牛奶壺，往玻璃杯裡倒香甜牛奶！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 倒杯香濃冰牛奶（歌詞：Pouring sweet cold milk into a glass.）。動作指令：🥛 拿著小牛奶壺，往玻璃杯裡倒香甜牛奶！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 倒杯香濃冰牛奶（歌詞：Pouring sweet cold milk into a glass.）。動作指令：🥛 拿著小牛奶壺，往玻璃杯裡倒香甜牛奶！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 21.7,
@@ -8025,8 +8025,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 03 節: 紅紅草莓圓又甜'. Action: 🍓 雙手比出小草莓形狀，摘下又紅又甜草莓！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 紅紅草莓圓又甜（歌詞：Red strawberries sweet and round.）。動作指令：🍓 雙手比出小草莓形狀，摘下又紅又甜草莓！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 紅紅草莓圓又甜（歌詞：Red strawberries sweet and round.）。動作指令：🍓 雙手比出小草莓形狀，摘下又紅又甜草莓！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 23.97,
@@ -8041,8 +8041,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 04 節: 最棒野餐美食籃'. Action: 🧺 打開大野餐籃，滿滿美味點心真豐盛！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 最棒野餐美食籃（歌詞：Tasty as picnic Basket found.）。動作指令：🧺 打開大野餐籃，滿滿美味點心真豐盛！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 最棒野餐美食籃（歌詞：Tasty as picnic Basket found.）。動作指令：🧺 打開大野餐籃，滿滿美味點心真豐盛！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 27.17,
@@ -8057,8 +8057,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 05 節: 搓搓手洗洗乾淨'. Action: 🧼 肥皂搓搓手，手心手背洗得好乾淨！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 搓搓手洗洗乾淨（歌詞：Wash your hands clean rub a dub dub.）。動作指令：🧼 肥皂搓搓手，手心手背洗得好乾淨！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 搓搓手洗洗乾淨（歌詞：Wash your hands clean rub a dub dub.）。動作指令：🧼 肥皂搓搓手，手心手背洗得好乾淨！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 29.33,
@@ -8073,8 +8073,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 06 節: 夥伴圍坐同歡樂'. Action: 👭 跟小夥伴們圍坐在一起，開開心心分享！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 夥伴圍坐同歡樂（歌詞：Sitting together with a painted club.）。動作指令：👭 跟小夥伴們圍坐在一起，開開心心分享！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 夥伴圍坐同歡樂（歌詞：Sitting together with a painted club.）。動作指令：👭 跟小夥伴們圍坐在一起，開開心心分享！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 31.53,
@@ -8089,8 +8089,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 07 節: 咬一口微笑好甜'. Action: 😋 大口咬下甜點心，露出無比滿足大微笑！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 咬一口微笑好甜（歌詞：Take a little bite and smile so wide.）。動作指令：😋 大口咬下甜點心，露出無比滿足大微笑！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 咬一口微笑好甜（歌詞：Take a little bite and smile so wide.）。動作指令：😋 大口咬下甜點心，露出無比滿足大微笑！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 33.7,
@@ -8105,8 +8105,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 08 節: 陽光河畔春意濃'. Action: 🏞️ 雙臂張開深呼吸，享受河邊暖洋洋微風！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 陽光河畔春意濃（歌詞：Sunny park on the Riverside.）。動作指令：🏞️ 雙臂張開深呼吸，享受河邊暖洋洋微風！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 陽光河畔春意濃（歌詞：Sunny park on the Riverside.）。動作指令：🏞️ 雙臂張開深呼吸，享受河邊暖洋洋微風！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 35.67,
@@ -8121,8 +8121,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 09 節: 甜蜜莓果野餐天'. Action: 🍓 左右踩步轉個圈，甜蜜野餐日最快樂！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 甜蜜莓果野餐天（歌詞：Sweet Berry Picnic Yummy Day.）。動作指令：🍓 左右踩步轉個圈，甜蜜野餐日最快樂！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 甜蜜莓果野餐天（歌詞：Sweet Berry Picnic Yummy Day.）。動作指令：🍓 左右踩步轉個圈，甜蜜野餐日最快樂！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 38.13,
@@ -8137,8 +8137,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 10 節: 健康蔬果助玩耍'. Action: 🥦 吃下營養好蔬果，全身充滿運動大能量！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 健康蔬果助玩耍（歌詞：Eating healthy food while we play.）。動作指令：🥦 吃下營養好蔬果，全身充滿運動大能量！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 健康蔬果助玩耍（歌詞：Eating healthy food while we play.）。動作指令：🥦 吃下營養好蔬果，全身充滿運動大能量！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 40.27,
@@ -8153,8 +8153,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 11 節: 香脆蘋果甜香蕉'. Action: 🍎 雙手咬蘋果、剝香蕉，脆脆甜甜真好吃！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 香脆蘋果甜香蕉（歌詞：Crunchy apples and bananas so sweet.）。動作指令：🍎 雙手咬蘋果、剝香蕉，脆脆甜甜真好吃！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 香脆蘋果甜香蕉（歌詞：Crunchy apples and bananas so sweet.）。動作指令：🍎 雙手咬蘋果、剝香蕉，脆脆甜甜真好吃！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 42.53,
@@ -8169,8 +8169,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 12 節: 每一口都是美味'. Action: ✨ 摸摸小肚子，每一口都是愛心的滋味！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 每一口都是美味（歌詞：Every single bite is a special treat.）。動作指令：✨ 摸摸小肚子，每一口都是愛心的滋味！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 每一口都是美味（歌詞：Every single bite is a special treat.）。動作指令：✨ 摸摸小肚子，每一口都是愛心的滋味！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 44.6,
@@ -8185,8 +8185,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 13 節: 細嚼慢嚥喀嚓嚼'. Action: 🦷 慢慢咀嚼，嘴巴動動，健康飲食好習慣！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 細嚼慢嚥喀嚓嚼（歌詞：Munch Crunch do it slow.）。動作指令：🦷 慢慢咀嚼，嘴巴動動，健康飲食好習慣！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 細嚼慢嚥喀嚓嚼（歌詞：Munch Crunch do it slow.）。動作指令：🦷 慢慢咀嚼，嘴巴動動，健康飲食好習慣！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 46.8,
@@ -8201,8 +8201,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 14 節: 營養食物助長高'. Action: 🌱 蹲下慢慢長高高，身體壯壯像小樹！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 營養食物助長高（歌詞：Healthy food helps us grow.）。動作指令：🌱 蹲下慢慢長高高，身體壯壯像小樹！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 營養食物助長高（歌詞：Healthy food helps us grow.）。動作指令：🌱 蹲下慢慢長高高，身體壯壯像小樹！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 51.93,
@@ -8217,8 +8217,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 15 節: 胡蘿蔔橘紅閃耀'. Action: 🥕 拿著脆胡蘿蔔，喀嚓喀嚓大口咬！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 胡蘿蔔橘紅閃耀（歌詞：Oh carrots skips or orange.）。動作指令：🥕 拿著脆胡蘿蔔，喀嚓喀嚓大口咬！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 胡蘿蔔橘紅閃耀（歌詞：Oh carrots skips or orange.）。動作指令：🥕 拿著脆胡蘿蔔，喀嚓喀嚓大口咬！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 54.27,
@@ -8233,8 +8233,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 16 節: 翠綠芹菜脆生生'. Action: 🥬 綠綠小芹菜，清爽又脆口，營養滿分！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 翠綠芹菜脆生生（歌詞：Salary is green.）。動作指令：🥬 綠綠小芹菜，清爽又脆口，營養滿分！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 翠綠芹菜脆生生（歌詞：Salary is green.）。動作指令：🥬 綠綠小芹菜，清爽又脆口，營養滿分！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 55.53,
@@ -8249,8 +8249,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 17 節: 最棒美味健康餐'. Action: 🌟 豎起雙手大拇指，健康點心天下第一棒！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 最棒美味健康餐（歌詞：Fresh as jammy snacks that we've ever seen.）。動作指令：🌟 豎起雙手大拇指，健康點心天下第一棒！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 最棒美味健康餐（歌詞：Fresh as jammy snacks that we've ever seen.）。動作指令：🌟 豎起雙手大拇指，健康點心天下第一棒！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 57.7,
@@ -8265,8 +8265,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 18 節: 分享甜瓜給好友'. Action: 🍈 切一塊甜甜大西瓜，雙手送給身邊好朋友！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 分享甜瓜給好友（歌詞：Give a piece of melon to your best friend.）。動作指令：🍈 切一塊甜甜大西瓜，雙手送給身邊好朋友！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 分享甜瓜給好友（歌詞：Give a piece of melon to your best friend.）。動作指令：🍈 切一塊甜甜大西瓜，雙手送給身邊好朋友！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 59.93,
@@ -8281,8 +8281,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "jump",
             "voiceScript": "預備跟上重拍——向上輕快彈跳換步，雙手帥氣揮舞嗨翻全場！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 19 節: 野餐派對永不散'. Action: 🎉 牽起手轉圈圈，歡樂野餐派對笑聲不斷！. The character is performing a high-energy K-pop center jump-step with synchronized arm pump, landing in a cool idol power stance on the beat. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 野餐派對永不散（歌詞：Picnic party that will never end.）。動作指令：🎉 牽起手轉圈圈，歡樂野餐派對笑聲不斷！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 野餐派對永不散（歌詞：Picnic party that will never end.）。動作指令：🎉 牽起手轉圈圈，歡樂野餐派對笑聲不斷！｜【K-pop 舞台中心爆發跳】跟隨重拍雙腳輕快彈跳換步（Jump & Pop），雙手同步帥氣擊拍，落地瞬間精準卡點站穩。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 62.2,
@@ -8297,8 +8297,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 85.87,
@@ -8313,8 +8313,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "march",
             "voiceScript": "跟著 K-pop 節拍，一二踩點、肩膀微聳，走出最帥氣的偶像台步！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 20 節: 甜蜜莓果野餐日'. Action: 🍓 踩著輕快節拍，再次唱起野餐歡樂歌！. The character is performing a crisp K-pop idol rhythmic step-touch bounce, knees popping to the beat, groovy shoulder isolation, confident idol charisma. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 甜蜜莓果野餐日（歌詞：Sweet Berry Picnic Yummy day.）。動作指令：🍓 踩著輕快節拍，再次唱起野餐歡樂歌！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 甜蜜莓果野餐日（歌詞：Sweet Berry Picnic Yummy day.）。動作指令：🍓 踩著輕快節拍，再次唱起野餐歡樂歌！｜【K-pop 節奏踩點步】雙膝隨鼓點彈性律動（Groove Bounce），搭配韓流偶像標誌性微聳肩與左右踏併步（Step-Touch），眼神自信放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 88.27,
@@ -8329,8 +8329,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 21 節: 盡情享受好美食'. Action: 😋 快樂進餐、快樂運動，每天都健健康康！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 盡情享受好美食（歌詞：Eating up the food while we play.）。動作指令：😋 快樂進餐、快樂運動，每天都健健康康！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 盡情享受好美食（歌詞：Eating up the food while we play.）。動作指令：😋 快樂進餐、快樂運動，每天都健健康康！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 90.4,
@@ -8345,8 +8345,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 22 節: 脆脆蘋果甜香蕉'. Action: 🍌 香甜水果入肚子，能量滿滿活力十足！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 脆脆蘋果甜香蕉（歌詞：Crunchy apples and bananas so sweet.）。動作指令：🍌 香甜水果入肚子，能量滿滿活力十足！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 脆脆蘋果甜香蕉（歌詞：Crunchy apples and bananas so sweet.）。動作指令：🍌 香甜水果入肚子，能量滿滿活力十足！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 92.73,
@@ -8361,8 +8361,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '第 23 節: 感恩健康大微笑'. Action: 🙏 雙手合十胸前鞠躬，謝謝大自然美味點心！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 感恩健康大微笑（歌詞：Every single bite is a special treat.）。動作指令：🙏 雙手合十胸前鞠躬，謝謝大自然美味點心！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 感恩健康大微笑（歌詞：Every single bite is a special treat.）。動作指令：🙏 雙手合十胸前鞠躬，謝謝大自然美味點心！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           },
           {
             "start": 94.93,
@@ -8377,8 +8377,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful East Asian toddler girl with straight black bob haircut and bangs, bright dark eyes, rosy cheeks, tiny flower stud earrings, beaming smile, wearing sparkling lilac and silver tweed K-pop stage jacket and pleated skirt set, white star ankle boots. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Sweet Berry Picnic' (Refreshing Summer K-Pop Pop (清爽夏日女團甜美律動風)), Segment '[尾奏] 歡呼慶祝完美定格'. Action: 🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Hana (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[尾奏] 歡呼慶祝完美定格（歌詞：[Outro 🎵 歡樂尾奏完美定格]）。動作指令：🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Hana (烏黑妹妹頭短髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：Mina (烏黑妹妹頭短髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[尾奏] 歡呼慶祝完美定格（歌詞：[Outro 🎵 歡樂尾奏完美定格]）。動作指令：🎉 擺出最棒的帥氣 Pose，為自己大聲歡呼喝采！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "Mina (烏黑妹妹頭短髮女孩)"
           }
         ]
       },
@@ -8412,8 +8412,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "K-pop 派對開始囉！跟著重低音鼓點，膝蓋彈一彈，準備帥氣出發！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '[前奏] 暖心睡衣派對預備'. Action: 🌙 穿好軟綿綿睡衣，踩在毛茸茸地毯上輕輕搖擺！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[前奏] 暖心睡衣派對預備（歌詞：[Intro 🎵 歡樂前奏]）。動作指令：🌙 穿好軟綿綿睡衣，踩在毛茸茸地毯上輕輕搖擺！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[前奏] 暖心睡衣派對預備（歌詞：[Intro 🎵 歡樂前奏]）。動作指令：🌙 穿好軟綿綿睡衣，踩在毛茸茸地毯上輕輕搖擺！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 1.77,
@@ -8428,8 +8428,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 01 節: 輕輕哼唱搖籃曲'. Action: 🎶 溫柔哼著旋律，全身肌肉慢慢放鬆！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 輕輕哼唱搖籃曲（歌詞：Hmm Hmm!）。動作指令：🎶 溫柔哼著旋律，全身肌肉慢慢放鬆！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 01 節: 輕輕哼唱搖籃曲（歌詞：Hmm Hmm!）。動作指令：🎶 溫柔哼著旋律，全身肌肉慢慢放鬆！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 4.6,
@@ -8444,8 +8444,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 02 節: 微風輕吹夜安寧'. Action: 🍃 雙手像夜風撫過，室內一片溫馨寧靜！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 微風輕吹夜安寧（歌詞：Hmm!）。動作指令：🍃 雙手像夜風撫過，室內一片溫馨寧靜！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 02 節: 微風輕吹夜安寧（歌詞：Hmm!）。動作指令：🍃 雙手像夜風撫過，室內一片溫馨寧靜！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 5.4,
@@ -8460,8 +8460,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 10.87,
@@ -8476,8 +8476,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 03 節: 蓬鬆睡衣拖鞋脫'. Action: 🥿 脫下小拖鞋，穿著軟綿綿睡衣準備睡覺！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 蓬鬆睡衣拖鞋脫（歌詞：Fluffy pajamas slippers on the floor.）。動作指令：🥿 脫下小拖鞋，穿著軟綿綿睡衣準備睡覺！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 03 節: 蓬鬆睡衣拖鞋脫（歌詞：Fluffy pajamas slippers on the floor.）。動作指令：🥿 脫下小拖鞋，穿著軟綿綿睡衣準備睡覺！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 15.8,
@@ -8492,8 +8492,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 04 節: 關上遊戲小屋門'. Action: 🚪 輕輕關好遊戲屋小木門，玩具們也都休息！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 關上遊戲小屋門（歌詞：Closing up the busy playhouse door.）。動作指令：🚪 輕輕關好遊戲屋小木門，玩具們也都休息！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 04 節: 關上遊戲小屋門（歌詞：Closing up the busy playhouse door.）。動作指令：🚪 輕輕關好遊戲屋小木門，玩具們也都休息！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 21.17,
@@ -8508,8 +8508,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 05 節: 群星點亮小夜燈'. Action: 🌟 滿天小星星亮起柔和微光，像溫暖小夜燈！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 群星點亮小夜燈（歌詞：Stars are turning on their little night lights.）。動作指令：🌟 滿天小星星亮起柔和微光，像溫暖小夜燈！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 05 節: 群星點亮小夜燈（歌詞：Stars are turning on their little night lights.）。動作指令：🌟 滿天小星星亮起柔和微光，像溫暖小夜燈！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 26.5,
@@ -8524,8 +8524,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 06 節: 照亮祥和安寧夜'. Action: 🌌 溫和星光灑滿房間，夜晚好平靜好安詳！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 照亮祥和安寧夜（歌詞：Shining over cozy peaceful nights.）。動作指令：🌌 溫和星光灑滿房間，夜晚好平靜好安詳！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 06 節: 照亮祥和安寧夜（歌詞：Shining over cozy peaceful nights.）。動作指令：🌌 溫和星光灑滿房間，夜晚好平靜好安詳！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 32,
@@ -8540,8 +8540,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 07 節: 泰迪熊深深打哈欠'. Action: 🥱 抱著泰迪熊輕輕打個哈欠，眼睛瞇瞇笑！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 泰迪熊深深打哈欠（歌詞：Teddy bear is yawning soft and deep.）。動作指令：🥱 抱著泰迪熊輕輕打個哈欠，眼睛瞇瞇笑！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 07 節: 泰迪熊深深打哈欠（歌詞：Teddy bear is yawning soft and deep.）。動作指令：🥱 抱著泰迪熊輕輕打個哈欠，眼睛瞇瞇笑！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 34.33,
@@ -8556,8 +8556,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 08 節: 倦意雙眼該入眠'. Action: 😴 小揉眼睛，該讓辛苦一整天的小眼睛休息！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 倦意雙眼該入眠（歌詞：Time for little weary eyes to sleep.）。動作指令：😴 小揉眼睛，該讓辛苦一整天的小眼睛休息！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 08 節: 倦意雙眼該入眠（歌詞：Time for little weary eyes to sleep.）。動作指令：😴 小揉眼睛，該讓辛苦一整天的小眼睛休息！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 36.93,
@@ -8572,8 +8572,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 09 節: 給微笑月亮送飛吻'. Action: 🌙 雙手捧在嘴邊，給彎彎月亮送一個甜甜飛吻！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 給微笑月亮送飛吻（歌詞：Blow a kiss up to the smiling moon.）。動作指令：🌙 雙手捧在嘴邊，給彎彎月亮送一個甜甜飛吻！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 09 節: 給微笑月亮送飛吻（歌詞：Blow a kiss up to the smiling moon.）。動作指令：🌙 雙手捧在嘴邊，給彎彎月亮送一個甜甜飛吻！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 40,
@@ -8588,8 +8588,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 10 節: 聆聽甜蜜安眠曲'. Action: 🎶 閉上眼睛，靜靜聽這首溫柔晚安小搖籃！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 聆聽甜蜜安眠曲（歌詞：Listen to this quiet sweet tune.）。動作指令：🎶 閉上眼睛，靜靜聽這首溫柔晚安小搖籃！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 10 節: 聆聽甜蜜安眠曲（歌詞：Listen to this quiet sweet tune.）。動作指令：🎶 閉上眼睛，靜靜聽這首溫柔晚安小搖籃！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 45.13,
@@ -8604,8 +8604,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 11 節: 星光睡衣入夢鄉'. Action: ✨ 乘著星光小船，慢慢飄向奇妙夢鄉！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 星光睡衣入夢鄉（歌詞：Starlight Pajama dream away.）。動作指令：✨ 乘著星光小船，慢慢飄向奇妙夢鄉！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 11 節: 星光睡衣入夢鄉（歌詞：Starlight Pajama dream away.）。動作指令：✨ 乘著星光小船，慢慢飄向奇妙夢鄉！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 48.53,
@@ -8620,8 +8620,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 12 節: 今天過得真美好'. Action: 💖 雙手抱緊胸膛，今天真是快樂充實的一天！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 今天過得真美好（歌詞：We had such a wonderful day.）。動作指令：💖 雙手抱緊胸膛，今天真是快樂充實的一天！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 12 節: 今天過得真美好（歌詞：We had such a wonderful day.）。動作指令：💖 雙手抱緊胸膛，今天真是快樂充實的一天！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 51.27,
@@ -8636,8 +8636,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 13 節: 漂浮蔚藍棉花雲'. Action: ☁️ 身體像躺在藍色棉花糖雲朵上，好輕好軟！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 漂浮蔚藍棉花雲（歌詞：Drifting on a cloud of cotton blue.）。動作指令：☁️ 身體像躺在藍色棉花糖雲朵上，好輕好軟！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 13 節: 漂浮蔚藍棉花雲（歌詞：Drifting on a cloud of cotton blue.）。動作指令：☁️ 身體像躺在藍色棉花糖雲朵上，好輕好軟！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 54,
@@ -8652,8 +8652,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 14 節: 甜甜美夢在等待'. Action: 🍭 閉上雙眼，無數奇妙好夢等著你探險！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 甜甜美夢在等待（歌詞：Sweetest dreams are waiting for you.）。動作指令：🍭 閉上雙眼，無數奇妙好夢等著你探險！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 14 節: 甜甜美夢在等待（歌詞：Sweetest dreams are waiting for you.）。動作指令：🍭 閉上雙眼，無數奇妙好夢等著你探險！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 56.57,
@@ -8668,8 +8668,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "wave",
             "voiceScript": "小手畫出流暢波浪，手指閃亮亮卡點，身體跟著音樂帥氣擺動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 15 節: 晚安星星晚安天'. Action: ⭐ 輕輕揮動小手，跟滿天星空溫柔道晚安！. The character is performing a smooth K-pop idol body wave and stylish overhead hand wave with finger-tutting star gestures, swaying hips rhythmically. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 晚安星星晚安天（歌詞：Goodnight stars goodnight sky.）。動作指令：⭐ 輕輕揮動小手，跟滿天星空溫柔道晚安！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 15 節: 晚安星星晚安天（歌詞：Goodnight stars goodnight sky.）。動作指令：⭐ 輕輕揮動小手，跟滿天星空溫柔道晚安！｜【K-pop 波浪手勢舞】手臂呈流暢波浪擺動（Arm Wave），手指比出韓流閃耀星光手勢，搭配骨盆輕快左右律動。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 62,
@@ -8684,8 +8684,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 16 節: 溫柔星光搖籃曲'. Action: 🎶 身體像小搖籃左右輕輕晃動，安然入眠！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 溫柔星光搖籃曲（歌詞：Gentle little Starlight Lullaby.）。動作指令：🎶 身體像小搖籃左右輕輕晃動，安然入眠！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 16 節: 溫柔星光搖籃曲（歌詞：Gentle little Starlight Lullaby.）。動作指令：🎶 身體像小搖籃左右輕輕晃動，安然入眠！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 66.77,
@@ -8700,8 +8700,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 71.87,
@@ -8716,8 +8716,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "reach",
             "voiceScript": "手臂俐落向天空定點伸展，眼神看向指尖，卡點超精準！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 17 節: 蓋上溫暖輕軟被'. Action: 🛏️ 雙手拉起蓬鬆小被子，蓋好肩膀好暖和！. The character is performing a sharp K-pop point choreography reaching up diagonally to the sky with crisp arm angles, dynamic hip-hop bounce. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 蓋上溫暖輕軟被（歌詞：Cover with the blanket warm and light.）。動作指令：🛏️ 雙手拉起蓬鬆小被子，蓋好肩膀好暖和！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 17 節: 蓋上溫暖輕軟被（歌詞：Cover with the blanket warm and light.）。動作指令：🛏️ 雙手拉起蓬鬆小被子，蓋好肩膀好暖和！｜【K-pop 斜角卡點伸展】手臂俐落定點向天空斜上方延伸（Point Dance），下肢帶動輕快彈跳步，展現帥氣延伸線條。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 74.3,
@@ -8732,8 +8732,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 18 節: 安安穩穩到天明'. Action: 🌅 縮進暖和被窩，一覺睡到天色大亮！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 安安穩穩到天明（歌詞：Safe and sound until the morning light.）。動作指令：🌅 縮進暖和被窩，一覺睡到天色大亮！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 18 節: 安安穩穩到天明（歌詞：Safe and sound until the morning light.）。動作指令：🌅 縮進暖和被窩，一覺睡到天色大亮！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 76.9,
@@ -8748,8 +8748,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 19 節: 安心睡到朝陽起'. Action: ☀️ 帶著安心與被愛，做個甜甜的好夢！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 安心睡到朝陽起（歌詞：Safe and sound until the morning bright.）。動作指令：☀️ 帶著安心與被愛，做個甜甜的好夢！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 19 節: 安心睡到朝陽起（歌詞：Safe and sound until the morning bright.）。動作指令：☀️ 帶著安心與被愛，做個甜甜的好夢！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 79.9,
@@ -8764,8 +8764,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sun_rise",
             "voiceScript": "胸口輕輕律動，雙手向天空畫出大光環，你就是舞台最閃耀的 Center！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 20 節: 明天迎來新遊戲'. Action: 🎈 睡飽飽長高高，明天又有很多新遊戲！. The character is performing a glamorous K-pop sweeping arm formation drawing a glowing halo overhead, chest pop on the beat, radiant center idol aura. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 明天迎來新遊戲（歌詞：Tomorrow will be full of brand new games.）。動作指令：🎈 睡飽飽長高高，明天又有很多新遊戲！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 20 節: 明天迎來新遊戲（歌詞：Tomorrow will be full of brand new games.）。動作指令：🎈 睡飽飽長高高，明天又有很多新遊戲！｜【K-pop 星光光環開展】胸口先做一個輕巧律動震點（Chest Pop），雙臂由胸前向頭頂畫出耀眼偶像光環，氣場全開。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 85.17,
@@ -8780,8 +8780,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 21 節: 呼喚快樂小朋友'. Action: 👭 夢裡和小夥伴手拉手，快樂奔跑！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 呼喚快樂小朋友（歌詞：Calling all the happy children's names.）。動作指令：👭 夢裡和小夥伴手拉手，快樂奔跑！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 21 節: 呼喚快樂小朋友（歌詞：Calling all the happy children's names.）。動作指令：👭 夢裡和小夥伴手拉手，快樂奔跑！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 89.57,
@@ -8796,8 +8796,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 94.77,
@@ -8812,8 +8812,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 22 節: 輕輕嘆息甜入睡'. Action: 😌 輕呼一口氣，全身沉浸在最舒服的放鬆裡！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 輕輕嘆息甜入睡（歌詞：Ooh!）。動作指令：😌 輕呼一口氣，全身沉浸在最舒服的放鬆裡！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 22 節: 輕輕嘆息甜入睡（歌詞：Ooh!）。動作指令：😌 輕呼一口氣，全身沉浸在最舒服的放鬆裡！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 95.57,
@@ -8828,8 +8828,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "Dance Break 時間！聳聳肩膀、左右踩點滑步，展現你最酷的 K-pop 律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '[旋律間奏] 動作接續歡樂跳'. Action: 🎶 跟著動感節拍左右輕快律動，準備下一段舞步！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：[旋律間奏] 動作接續歡樂跳（歌詞：[Interlude 🎵 輕快旋律間奏]）。動作指令：🎶 跟著動感節拍左右輕快律動，準備下一段舞步！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 101.13,
@@ -8844,8 +8844,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 23 節: 星光睡衣入夢鄉'. Action: 🌙 乘著星光搖籃，靜靜航向美麗夢之島！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 星光睡衣入夢鄉（歌詞：Starlight pajama dream away.）。動作指令：🌙 乘著星光搖籃，靜靜航向美麗夢之島！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 23 節: 星光睡衣入夢鄉（歌詞：Starlight pajama dream away.）。動作指令：🌙 乘著星光搖籃，靜靜航向美麗夢之島！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 104.57,
@@ -8860,8 +8860,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 24 節: 感謝美好每一天'. Action: 🙏 懷著感恩與幸福，甜甜進入夢鄉！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 24 節: 感謝美好每一天（歌詞：We had such a wonderful day.）。動作指令：🙏 懷著感恩與幸福，甜甜進入夢鄉！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 24 節: 感謝美好每一天（歌詞：We had such a wonderful day.）。動作指令：🙏 懷著感恩與幸福，甜甜進入夢鄉！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 107.27,
@@ -8876,8 +8876,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "sway",
             "voiceScript": "轉轉小肩膀、搖搖小蠻腰，跟著韓流旋律輕快滑步律動！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 25 節: 漫步棉花藍雲端'. Action: ☁️ 在軟軟的雲朵上打滾，無憂無慮！. The character is performing a trendy K-pop groovy hip sway and smooth shoulder roll, fluid upper body isolation, charming idol smile. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 25 節: 漫步棉花藍雲端（歌詞：Drifting on a cloud of cotton blue.）。動作指令：☁️ 在軟軟的雲朵上打滾，無憂無慮！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 25 節: 漫步棉花藍雲端（歌詞：Drifting on a cloud of cotton blue.）。動作指令：☁️ 在軟軟的雲朵上打滾，無憂無慮！｜【K-pop 律動搖擺步】上身流暢轉肩（Shoulder Roll）結合骨盆左右節奏搖擺，步伐輕盈滑順，展現韓流洗腦律動感。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 110,
@@ -8892,8 +8892,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "比出超萌的 K-pop 臉頰愛心與手指愛心，給全場最甜美的微笑！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 26 節: 甜美夢鄉等著你'. Action: ✨ 最美好的夢，正溫柔包圍著你！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 26 節: 甜美夢鄉等著你（歌詞：Sweetest dreams are waiting for you.）。動作指令：✨ 最美好的夢，正溫柔包圍著你！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 26 節: 甜美夢鄉等著你（歌詞：Sweetest dreams are waiting for you.）。動作指令：✨ 最美好的夢，正溫柔包圍著你！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           },
           {
             "start": 113.97,
@@ -8908,8 +8908,8 @@ window.KAI_ALBUM_DATABASE = {
             "targetPose": "heart",
             "voiceScript": "Ending Fairy 時間！擺出最帥氣的臉頰愛心 Pose，對鏡頭眨眨眼定格！",
             "videoPrompt": "9:16 vertical full-body shot, 3D Pixar Disney style cheerful tan-skinned toddler girl with voluminous curly brown hair tied in two high puffs with colorful beaded hair ties, big expressive brown eyes, radiant smile, wearing shimmering gold and berry-pink K-pop bomber jacket, metallic purple dance shorts, colourful high-top sneakers. In a vibrant neon K-pop dance practice studio with LED light strips and polished wooden floor. Song 'Starlight Pajama Party' (Cozy K-Pop R&B Lullaby Groove (溫馨韓流 R&B 星光慢搖風)), Segment '第 27 節: 晚安明天見定格'. Action: 💤 雙手合十貼臉頰，閉上眼睛甜甜入睡！. The character is performing a signature K-pop Ending Fairy pose with cute finger-hearts and cheek-hearts, winking playfully at the camera. Smooth 60fps K-pop dance animation, crisp rhythmic bounce on the beat, full body head to shoes clearly visible, Disney Pixar 3D render, no text.",
-            "videoPromptZh": "【9:16 直式全身鏡位】主角：Zoe (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 27 節: 晚安明天見定格（歌詞：Sweet dreams see you tomorrow.）。動作指令：💤 雙手合十貼臉頰，閉上眼睛甜甜入睡！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
-            "kpopCoach": "Zoe (健康小麥肌雙丸子捲髮女孩)"
+            "videoPromptZh": "【9:16 直式全身鏡位】主角：MiMi (健康小麥肌雙丸子捲髮女孩)（著 K-pop 潮流舞台服）。場景：韓流霓虹星光舞蹈教室（木質地板與柔和 LED 燈條）。段落：第 27 節: 晚安明天見定格（歌詞：Sweet dreams see you tomorrow.）。動作指令：💤 雙手合十貼臉頰，閉上眼睛甜甜入睡！｜【K-pop 結尾妖精比心】擺出韓流偶像經典 Ending Fairy 定格姿勢，雙手比出臉頰愛心（Cheek Heart）與手指愛心，對鏡頭甜美放電。運鏡與風格：正面全身入鏡（頭頂至舞鞋完整保留安全邊距），60fps 流暢 K-pop 律動卡點，3D 皮克斯精緻渲染。",
+            "kpopCoach": "MiMi (健康小麥肌雙丸子捲髮女孩)"
           }
         ]
       }

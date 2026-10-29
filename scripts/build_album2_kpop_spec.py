@@ -26,7 +26,7 @@ album2 = db["album_2"]
 KIDS_PROFILES = [
     {
         "kid_id": "Kid 1",
-        "name": "Leo (陽光刺蝟頭男孩)",
+        "name": "Kai (陽光刺蝟頭男孩)",
         "gender": "Boy",
         "songs": "Track 03《Number Party 1-2-3》、Track 06《Galaxy Supernova》",
         "appearance_zh": "3D Pixar 風格陽光小男孩，標誌性微翹棕色層次短髮、明亮圓潤大棕眼、紅潤臉頰與燦爛露齒笑",
@@ -43,7 +43,7 @@ KIDS_PROFILES = [
     },
     {
         "kid_id": "Kid 2",
-        "name": "Mia (波浪雙馬尾女孩)",
+        "name": "妞 (波浪雙馬尾女孩)",
         "gender": "Girl",
         "songs": "Track 01《Ready, Set, Shine!》、Track 07《K-ABC Groove》",
         "appearance_zh": "3D Pixar 風格甜美小女孩，淺棕色大波浪捲雙馬尾（綁閃亮絲帶）、水汪汪棕色大眼、甜美酒窩笑容",
@@ -60,7 +60,7 @@ KIDS_PROFILES = [
     },
     {
         "kid_id": "Kid 3",
-        "name": "Max (蓬鬆呆毛棕髮男孩)",
+        "name": "HiHi (蓬鬆呆毛棕髮男孩)",
         "gender": "Boy",
         "songs": "Track 04《Zoo Beat Parade》、Track 08《Pop Pop Freeze!》",
         "appearance_zh": "3D Pixar 風格可愛小男孩，蓬鬆厚實微捲棕髮與頭頂呆毛、圓滾滾棕色大眼、小巧圓鼻與陽光笑容",
@@ -77,7 +77,7 @@ KIDS_PROFILES = [
     },
     {
         "kid_id": "Kid 4",
-        "name": "Hana (烏黑妹妹頭短髮女孩)",
+        "name": "Mina (烏黑妹妹頭短髮女孩)",
         "gender": "Girl",
         "songs": "Track 02《Pastel Rainbow Dream》、Track 09《Sweet Berry Picnic》",
         "appearance_zh": "3D Pixar 風格亞裔可愛小女孩，整齊烏黑妹妹頭短髮（齊瀏海）、閃亮深邃大眼、粉嫩臉頰、佩戴小花耳釘",
@@ -94,7 +94,7 @@ KIDS_PROFILES = [
     },
     {
         "kid_id": "Kid 5",
-        "name": "Zoe (健康小麥肌雙丸子捲髮女孩)",
+        "name": "MiMi (健康小麥肌雙丸子捲髮女孩)",
         "gender": "Girl",
         "songs": "Track 05《Sparkle Clean Team》、Track 10《Starlight Pajama Party》",
         "appearance_zh": "3D Pixar 風格健康小麥色肌膚小女孩，蓬鬆棕色捲髮綁成高高的雙丸子頭（配彩色串珠髮圈）、明亮大棕眼、陽光笑容",

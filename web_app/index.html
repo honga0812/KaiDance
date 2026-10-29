@@ -952,7 +952,37 @@
       box-shadow: 0 0 18px rgba(251, 191, 36, 1), 0 0 30px rgba(245, 158, 11, 0.8);
     }
 
-    /* 鏡頭獨立全螢幕模式樣式 (相容桌面與 iPad/Safari) */
+    /* 鏡頭獨立全螢幕模式樣式 (相容桌面與 iPad/Safari，消除上下界面遮擋) */
+    #view-dance.is-camera-fs {
+      transform: none !important;
+      position: fixed !important;
+      inset: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      height: 100dvh !important;
+      max-width: 100vw !important;
+      max-height: 100dvh !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border-radius: 0 !important;
+      border: none !important;
+      z-index: 9999 !important;
+      background: #020617 !important;
+    }
+    #view-dance.is-camera-fs > header,
+    #view-dance.is-camera-fs > footer,
+    #view-dance.is-camera-fs .planet-watermark-300-overlay,
+    #view-dance.is-camera-fs .planet-backdrop-300-wrap,
+    #view-dance.is-camera-fs .jelly-card-coach {
+      display: none !important;
+    }
+    #view-dance.is-camera-fs > main {
+      z-index: 9999 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      height: 100% !important;
+    }
     .camera-fullscreen-active {
       position: fixed !important;
       inset: 0 !important;
@@ -971,12 +1001,93 @@
       display: flex !important;
       flex-direction: column !important;
     }
+    /* 全螢幕時隱藏攝影機頂欄與底欄，徹底避免平板上下畫面被界面擋住 */
+    .camera-fullscreen-active .camera-bar-top,
+    .camera-fullscreen-active #camera-bottom-bar {
+      display: none !important;
+    }
     .camera-fullscreen-active #camera-container {
       min-height: 0 !important;
       flex: 1 1 0% !important;
-      height: auto !important;
+      height: 100% !important;
       width: 100% !important;
       border-radius: 0 !important;
+    }
+    /* 全螢幕時 KTV 字幕改為底部輕透懸浮膠囊，不壓縮也不遮擋上下畫面 */
+    .camera-fullscreen-active #camera-ktv-subtitle-bar {
+      position: absolute !important;
+      bottom: max(14px, env(safe-area-inset-bottom, 14px)) !important;
+      left: 50% !important;
+      transform: translateX(-50%) !important;
+      width: auto !important;
+      min-width: min(88vw, 620px) !important;
+      max-width: 92vw !important;
+      background: rgba(2, 6, 23, 0.58) !important;
+      backdrop-filter: blur(10px) !important;
+      -webkit-backdrop-filter: blur(10px) !important;
+      border: 1.5px solid rgba(251, 191, 36, 0.55) !important;
+      border-radius: 1.25rem !important;
+      padding: 0.45rem 1.25rem !important;
+      pointer-events: none !important;
+      z-index: 45 !important;
+    }
+    .camera-fullscreen-active #btn-camera-exit-fs {
+      top: max(16px, env(safe-area-inset-top, 16px)) !important;
+      right: max(16px, env(safe-area-inset-right, 16px)) !important;
+      z-index: 60 !important;
+    }
+
+    /* 🖥️ 桌面端瀏覽器單曲播放固定比例舞台縮放 (.desktop-fixed-stage) */
+    /* 改變桌面瀏覽器視窗大小時，整個單曲界面維持 1180x748 固定長寬比例等比縮放，絕不隨視窗變形或重排 */
+    #view-dance.desktop-fixed-stage:not(.hidden):not(.is-camera-fs) {
+      position: fixed !important;
+      top: 50% !important;
+      left: 50% !important;
+      width: 1180px !important;
+      height: 748px !important;
+      min-width: 1180px !important;
+      max-width: 1180px !important;
+      min-height: 748px !important;
+      max-height: 748px !important;
+      margin: 0 !important;
+      padding: 14px !important;
+      overflow: hidden !important;
+      transform: translate(-50%, -50%) scale(var(--dance-stage-scale, 1)) !important;
+      transform-origin: center center !important;
+      z-index: 40;
+    }
+    #view-dance.desktop-fixed-stage:not(.is-camera-fs) > header {
+      min-height: 60px !important;
+      max-height: 60px !important;
+      margin-bottom: 8px !important;
+      flex-wrap: nowrap !important;
+    }
+    #view-dance.desktop-fixed-stage:not(.is-camera-fs) > main {
+      flex-direction: row !important;
+      height: 516px !important;
+      min-height: 516px !important;
+      max-height: 516px !important;
+      margin-bottom: 8px !important;
+      gap: 12px !important;
+    }
+    #view-dance.desktop-fixed-stage:not(.is-camera-fs) .jelly-card-coach {
+      width: 260px !important;
+      min-width: 260px !important;
+      max-width: 260px !important;
+      height: 516px !important;
+      margin: 0 !important;
+    }
+    #view-dance.desktop-fixed-stage:not(.is-camera-fs) #camera-section {
+      flex: 1 1 0% !important;
+      height: 516px !important;
+      min-height: 516px !important;
+      max-height: 516px !important;
+    }
+    #view-dance.desktop-fixed-stage:not(.is-camera-fs) > footer {
+      height: 128px !important;
+      min-height: 128px !important;
+      max-height: 128px !important;
+      justify-content: space-between !important;
     }
 
     /* 平板與所有螢幕基礎重置 */
@@ -1036,7 +1147,7 @@
         overflow: visible !important;
         padding-bottom: 5.5rem !important;
       }
-      #view-dance {
+      #view-dance:not(.desktop-fixed-stage) {
         min-height: auto !important;
         height: auto !important;
         max-height: none !important;
@@ -1082,7 +1193,7 @@
         overflow-x: hidden !important;
         overflow-y: visible !important;
       }
-      #view-dance {
+      #view-dance:not(.desktop-fixed-stage) {
         height: auto !important;
         min-height: 760px !important;
         max-height: none !important;
@@ -1091,7 +1202,7 @@
     }
 
     /* ======================================================== */
-    /* 🌟 K-Pop 舞蹈戰隊 3D 環形旋轉舞台與上方動態投射燈掃射特效 */
+    /* 🌟 K-Pop 舞蹈戰隊 3D 環形旋轉空間與上方動態投射燈掃射特效 */
     /* ======================================================== */
     @keyframes spotlight-sweep-1 {
       0%, 100% { transform: rotate(-28deg) scaleY(1.05); opacity: 0.65; }
@@ -1111,18 +1222,18 @@
       50% { transform: translateX(-50%) scaleX(1.14) scaleY(1.04); opacity: 1; }
     }
     @keyframes floor-pool-breathe {
-      0%, 100% { transform: translate(-50%, -50%) rotateX(74deg) scale(0.96); opacity: 0.78; }
-      50% { transform: translate(-50%, -50%) rotateX(74deg) scale(1.05); opacity: 1; }
+      0%, 100% { transform: translate(-50%, -50%) rotateX(75deg) scale(0.97); opacity: 0.82; }
+      50% { transform: translate(-50%, -50%) rotateX(75deg) scale(1.04); opacity: 1; }
     }
-    @keyframes dancer-select-pop {
-      0% { transform: translate3d(0px, -8px, 135px) rotateY(0deg) scale(1.08); }
-      32% { transform: translate3d(0px, -28px, 165px) rotateY(-4deg) scale(1.19); }
-      64% { transform: translate3d(0px, -4px, 145px) rotateY(3deg) scale(1.05); }
-      100% { transform: translate3d(0px, -8px, 135px) rotateY(0deg) scale(1.08); }
+    @keyframes dancer-cutout-bounce {
+      0% { transform: translateY(0) scale(1); }
+      30% { transform: translateY(-22px) scale(1.09); }
+      60% { transform: translateY(3px) scale(0.97); }
+      100% { transform: translateY(0) scale(1); }
     }
     @keyframes pedestal-shockwave {
-      0% { transform: translate(-50%, -50%) scale(0.6); opacity: 0.95; }
-      100% { transform: translate(-50%, -50%) scale(1.95); opacity: 0; }
+      0% { transform: translate(-50%, -50%) scale(0.55); opacity: 0.95; }
+      100% { transform: translate(-50%, -50%) scale(2.1); opacity: 0; }
     }
 
     .stage-spotlight-beam {
@@ -1173,79 +1284,124 @@
       transition: background 0.45s ease;
     }
 
-    /* 3D 環形旋轉舞台容器 */
+    /* 3D 無邊框立體舞台空間 (支援滑鼠與手指左右拖曳旋轉) */
     .dancer-3d-viewport {
       perspective: 1200px;
-      perspective-origin: 50% 46%;
+      perspective-origin: 50% 45%;
       position: relative;
       width: 100%;
-      height: 360px;
+      height: 365px;
       display: flex;
       align-items: center;
       justify-content: center;
       user-select: none;
+      cursor: grab;
+      touch-action: pan-y;
+    }
+    .dancer-3d-viewport:active,
+    .dancer-3d-viewport.is-dragging {
+      cursor: grabbing;
     }
     @media (min-width: 768px) {
       .dancer-3d-viewport {
-        height: 395px;
+        height: 400px;
       }
     }
     .dancer-3d-ring {
       position: relative;
       width: 100%;
       height: 100%;
-      transform-style: preserve-3d;
       display: flex;
       align-items: center;
       justify-content: center;
     }
-    /* 底部 3D 立體霓虹旋轉圓盤底座 */
+    /* 底部 3D 立體霓虹旋轉圓盤舞台地面 */
     .dancer-3d-turntable-floor {
       position: absolute;
-      top: 76%;
+      top: 79%;
       left: 50%;
-      width: 540px;
-      height: 540px;
+      width: 680px;
+      height: 680px;
       border-radius: 9999px;
-      transform: translate(-50%, -50%) rotateX(74deg);
-      background: radial-gradient(circle, rgba(255,255,255,0.22) 0%, rgba(168, 85, 247, 0.28) 34%, rgba(56, 189, 248, 0.2) 58%, transparent 72%);
-      border: 3px solid rgba(255, 255, 255, 0.35);
-      box-shadow: 0 0 55px rgba(217, 70, 239, 0.55), inset 0 0 45px rgba(56, 189, 248, 0.45);
+      transform: translate(-50%, -50%) rotateX(75deg);
+      background:
+        radial-gradient(circle, rgba(255,255,255,0.28) 0%, rgba(168, 85, 247, 0.3) 34%, rgba(56, 189, 248, 0.22) 56%, transparent 72%),
+        repeating-conic-gradient(from 0deg, rgba(255,255,255,0.08) 0deg 18deg, transparent 18deg 36deg);
+      border: 3px solid rgba(255, 255, 255, 0.38);
+      box-shadow: 0 0 65px rgba(217, 70, 239, 0.55), inset 0 0 50px rgba(56, 189, 248, 0.45);
       pointer-events: none;
       animation: floor-pool-breathe 3.6s ease-in-out infinite;
       transition: box-shadow 0.45s ease, border-color 0.45s ease;
     }
     @media (max-width: 640px) {
       .dancer-3d-turntable-floor {
-        width: 340px;
-        height: 340px;
+        width: 390px;
+        height: 390px;
       }
     }
-    .dancer-3d-card {
+    /* 無圖卡 3D 空間立體人物模型容器 (永遠面向正前方，依空間前後自動縮放) */
+    .dancer-3d-actor {
       position: absolute;
-      width: 176px;
-      height: 278px;
-      border-radius: 1.5rem;
-      transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.55s ease, filter 0.55s ease, box-shadow 0.45s ease, border-color 0.45s ease;
+      width: 210px;
+      height: 315px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
       cursor: pointer;
       will-change: transform, opacity, filter;
-      transform-style: preserve-3d;
+      transition: transform 0.48s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.48s ease, filter 0.48s ease;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
+    .dancer-3d-viewport.is-dragging .dancer-3d-actor {
+      transition: none !important;
     }
     @media (min-width: 640px) {
-      .dancer-3d-card {
-        width: 198px;
-        height: 306px;
+      .dancer-3d-actor {
+        width: 236px;
+        height: 345px;
       }
     }
-    .dancer-3d-card.anim-dancer-pop {
-      animation: dancer-select-pop 0.58s cubic-bezier(0.34, 1.56, 0.64, 1);
+    .dancer-actor-body {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .dancer-3d-actor.anim-dancer-pop .dancer-actor-body {
+      animation: dancer-cutout-bounce 0.56s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .dancer-actor-cutout-img {
+      width: 100%;
+      height: 88%;
+      object-fit: contain;
+      object-position: center bottom;
+      pointer-events: none;
+      user-select: none;
+      -webkit-user-drag: none;
+      transition: filter 0.35s ease, transform 0.35s ease;
+    }
+    .dancer-actor-floor-aura {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 132px;
+      height: 30px;
+      border-radius: 9999px;
+      pointer-events: none;
+      transition: all 0.35s ease;
     }
     .pedestal-shockwave-ring {
       position: absolute;
-      bottom: -10px;
+      bottom: 16px;
       left: 50%;
-      width: 160px;
-      height: 46px;
+      width: 155px;
+      height: 42px;
       border-radius: 9999px;
       border: 3px solid #fde047;
       transform: translate(-50%, -50%) scale(0.5);
@@ -1734,7 +1890,7 @@
               <span>🎤 K-Pop 舞蹈戰隊 · 小舞星選單</span>
             </h2>
             <p class="text-[11px] sm:text-xs text-amber-200 font-bold">
-              左右轉動 3D 舞台選擇小朋友 · 聆聽活力童聲與專屬 4 首舞曲連播！
+              左右拖曳 3D 舞台空間旋轉選擇小朋友 · 聆聽活力童聲與專屬 4 首舞曲連播！
             </p>
           </div>
         </div>
@@ -1746,28 +1902,22 @@
       </div>
     </header>
 
-    <!-- 🎠 中央：3D 圓形立體轉動選角舞台 (支援往左轉 / 往右轉 / 直接點選小朋友 / 觸控滑動) -->
+    <!-- 🎠 中央：3D 立體空間無圖卡拖曳旋轉舞台 (支援滑鼠/手指自由拖曳旋轉、正面朝前遠近縮放、直接點選小朋友) -->
     <section id="dancer-3d-stage-wrap" class="relative z-10 flex flex-col items-center justify-center my-0.5 select-none">
 
       <!-- 當前選中小朋友頂部動態童聲對話氣泡 (點擊可重播童聲) -->
       <div id="dancer-speech-bubble" onclick="replayCurrentDancerVoice()" class="relative z-30 mb-1 px-4 py-1.5 rounded-full bg-slate-900/90 backdrop-blur-md border-2 border-amber-300 shadow-[0_0_24px_rgba(251,191,36,0.5)] flex items-center gap-2 cursor-pointer transition-all hover:scale-105 active:scale-95">
         <span id="dancer-speech-emoji" class="text-base sm:text-lg animate-bounce">👦⚡</span>
         <span id="dancer-speech-text" class="text-xs sm:text-sm font-black text-amber-200 tracking-wide">
-          "Let's go! 我是 Leo，讓我們一起來跳舞吧！"
+          "Let's go! 我是 Kai，讓我們一起來跳舞吧！"
         </span>
         <span class="px-2 py-0.5 rounded-full bg-amber-400/25 border border-amber-300/50 text-[10px] font-black text-amber-300 flex items-center gap-1">
           <span>🔊</span><span class="hidden sm:inline">重播童聲</span>
         </span>
       </div>
 
-      <!-- 3D 環形旋轉視口 + 左右旋轉大按鈕 -->
-      <div class="relative w-full max-w-5xl mx-auto flex items-center justify-center">
-
-        <!-- ◀ 往左轉立體果凍按鈕 -->
-        <button onclick="rotateDancerCarousel(-1)" class="jelly-btn jelly-btn-cyan z-40 absolute left-1 sm:left-3 md:left-5 px-3 sm:px-4 py-3 sm:py-3.5 rounded-2xl font-black text-xs sm:text-sm flex flex-col items-center gap-0.5 shadow-[0_0_28px_rgba(56,189,248,0.65)] cursor-pointer select-none" title="往左轉動選擇上一位小朋友">
-          <span class="text-lg sm:text-xl leading-none">◀</span>
-          <span class="text-[10px] sm:text-xs font-black">往左轉</span>
-        </button>
+      <!-- 3D 環形無圖卡空間視口 (直接左右拖曳旋轉或點擊小朋友) -->
+      <div class="relative w-full max-w-5xl mx-auto flex flex-col items-center justify-center">
 
         <!-- 3D 環形舞台本體 -->
         <div id="dancer-3d-viewport" class="dancer-3d-viewport overflow-visible">
@@ -1777,17 +1927,17 @@
           <!-- 點選爆星粒子容器 -->
           <div id="dancer-stage-particles" class="pointer-events-none absolute inset-0 overflow-visible z-40"></div>
 
-          <!-- 5 位小朋友 3D 卡片環形容器 (由 JS 計算 3D 圓形角度與景深) -->
+          <!-- 5 位小朋友 3D 無框全身人物空間容器 (由 JS 計算 3D 圓形軌跡與正面朝前遠近縮放) -->
           <div id="dancer-3d-ring" class="dancer-3d-ring">
-            <!-- Dynamically populated by renderDancer3DCarousel() -->
+            <!-- Dynamically populated by ensureDancer3DCardsBuilt() -->
           </div>
         </div>
 
-        <!-- 往右轉 ▶ 立體果凍按鈕 -->
-        <button onclick="rotateDancerCarousel(1)" class="jelly-btn jelly-btn-fuchsia z-40 absolute right-1 sm:right-3 md:right-5 px-3 sm:px-4 py-3 sm:py-3.5 rounded-2xl font-black text-xs sm:text-sm flex flex-col items-center gap-0.5 shadow-[0_0_28px_rgba(217,70,239,0.65)] cursor-pointer select-none" title="往右轉動選擇下一位小朋友">
-          <span class="text-lg sm:text-xl leading-none">▶</span>
-          <span class="text-[10px] sm:text-xs font-black">往右轉</span>
-        </button>
+        <!-- 舞台底部輕巧拖曳操作提示 -->
+        <div class="relative z-30 -mt-2 mb-1 px-3.5 py-1 rounded-full bg-slate-900/75 border border-white/20 text-[11px] font-bold text-sky-200/90 flex items-center gap-1.5 pointer-events-none shadow">
+          <span>🖐️</span>
+          <span>在舞台空間左右拖曳即可旋轉 · 點選任一小朋友轉至正中央領舞</span>
+        </div>
 
       </div>
     </section>
@@ -1803,7 +1953,7 @@
           <div>
             <div class="flex items-center gap-2 flex-wrap">
               <h3 id="selected-dancer-playlist-title" class="text-base sm:text-lg font-black text-white">
-                👦 Leo (陽光刺蝟頭男孩) · 專屬 4 首代表舞曲
+                👦 Kai (陽光刺蝟頭男孩) · 專屬 4 首代表舞曲
               </h3>
               <span id="selected-dancer-style-badge" class="px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-black bg-sky-500/30 text-sky-200 border border-sky-300/50">
                 ⚡ K-Pop 銀藍星際男團風
@@ -1818,7 +1968,7 @@
         <!-- ▶ 一鍵連播該小朋友的 4 首歌主按鈕 -->
         <button id="btn-play-dancer-4songs" onclick="playSelectedDancerAllSongs()" class="jelly-btn jelly-btn-gold px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-black text-xs sm:text-sm md:text-base flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(251,191,36,0.65)] shrink-0 cursor-pointer">
           <span>▶</span>
-          <span id="btn-play-dancer-4songs-label">連播 Leo 的 4 首專屬舞曲 (1➔4)</span>
+          <span id="btn-play-dancer-4songs-label">連播 Kai 的 4 首專屬舞曲 (1➔4)</span>
         </button>
       </div>
 
@@ -3666,10 +3816,12 @@
     }
 
     // ========================================================
-    // 🌟 K-Pop 舞蹈戰隊 5 位小朋友 3D 環形旋轉選單與專屬 4 首歌單連播系統
+    // 🌟 K-Pop 舞蹈戰隊 5 位小朋友 3D 無圖卡空間拖曳旋轉選單與專屬 4 首歌單連播系統
     // ========================================================
     const viewDancerSquad = document.getElementById('view-dancer-squad');
-    let currentDancerIndex = 0; // 0: Leo, 1: Mia, 2: Max, 3: Hana, 4: Zoe
+    let currentDancerIndex = 0; // 0: Kai, 1: 妞, 2: HiHi, 3: Mina, 4: MiMi
+    let dancerStageAngle = 0; // 連續 3D 空間旋轉角度 (度)，支援 360 度無縫拖曳
+    let isDancerDragging = false;
     let isDancerPlaylistMode = false; // 是否處於小朋友專屬 4 首歌單連播模式
     let activeDancerIndexForPlay = 0;
 
@@ -3677,85 +3829,90 @@
       {
         index: 0,
         id: 'kid1_leo',
-        name: 'Leo',
+        name: 'Kai',
         zhTitle: '陽光刺蝟頭男孩 (第1位男孩)',
-        shortLabel: '👦 Leo',
+        shortLabel: '👦 Kai',
         emoji: '👦⚡',
         styleTag: '⚡ K-Pop 銀藍星際男團風',
         image: './images/album2_kpop/kid1_boy_kpop_v1.jpg',
+        cutout: './images/album2_kpop/cutouts/kid1_kai.png',
         voiceAudioId: 'audio-kid-voice-0',
-        voiceText: "Let's go! 我是 Leo，讓我們一起來跳舞吧！",
+        voiceText: "Let's go! 我是 Kai，讓我們一起來跳舞吧！",
         songs: ['a1_s01', 'a1_s06', 'a2_s03', 'a2_s06'],
         accentColor: '#38bdf8',
-        glowRgba: 'rgba(56, 189, 248, 0.82)',
+        glowRgba: 'rgba(56, 189, 248, 0.85)',
         spotlightBg: 'linear-gradient(180deg, rgba(56, 189, 248, 0.88) 0%, rgba(59, 130, 246, 0.28) 58%, transparent 100%)',
         chimeFreqs: [523.25, 659.25, 783.99, 1046.50]
       },
       {
         index: 1,
         id: 'kid2_mia',
-        name: 'Mia',
+        name: '妞',
         zhTitle: '波浪雙馬尾女孩 (第2位女孩)',
-        shortLabel: '👧 Mia',
+        shortLabel: '👧 妞',
         emoji: '👧💖',
         styleTag: '💖 K-Pop 夢幻鐳射女團風',
         image: './images/album2_kpop/kid2_girl_kpop_v1.jpg',
+        cutout: './images/album2_kpop/cutouts/kid2_niu.png',
         voiceAudioId: 'audio-kid-voice-1',
-        voiceText: "耶！我是 Mia，準備好了嗎？跟我一起閃亮搖擺吧！",
+        voiceText: "耶！我是妞，準備好了嗎？跟我一起閃亮搖擺吧！",
         songs: ['a1_s02', 'a1_s07', 'a2_s01', 'a2_s07'],
         accentColor: '#f472b6',
-        glowRgba: 'rgba(244, 114, 182, 0.85)',
+        glowRgba: 'rgba(244, 114, 182, 0.88)',
         spotlightBg: 'linear-gradient(180deg, rgba(244, 114, 182, 0.88) 0%, rgba(217, 70, 239, 0.28) 58%, transparent 100%)',
         chimeFreqs: [587.33, 739.99, 880.00, 1174.66]
       },
       {
         index: 2,
         id: 'kid3_max',
-        name: 'Max',
+        name: 'HiHi',
         zhTitle: '蓬鬆呆毛棕髮男孩 (第3位男孩)',
-        shortLabel: '👦 Max',
+        shortLabel: '👦 HiHi',
         emoji: '👦🎧',
         styleTag: '🎧 K-Pop 翠綠霓虹嘻哈風',
         image: './images/album2_kpop/kid3_boy_kpop_v1.jpg',
+        cutout: './images/album2_kpop/cutouts/kid3_hihi.png',
         voiceAudioId: 'audio-kid-voice-2',
-        voiceText: "Yo! Let's party! 我是 Max，跟上節拍一起跳起來！",
+        voiceText: "Yo! Let's party! 我是 HiHi，跟上節拍一起跳起來！",
         songs: ['a1_s03', 'a1_s08', 'a2_s04', 'a2_s08'],
         accentColor: '#34d399',
-        glowRgba: 'rgba(52, 211, 153, 0.82)',
+        glowRgba: 'rgba(52, 211, 153, 0.85)',
         spotlightBg: 'linear-gradient(180deg, rgba(52, 211, 153, 0.86) 0%, rgba(16, 185, 129, 0.28) 58%, transparent 100%)',
         chimeFreqs: [493.88, 622.25, 739.99, 987.77]
       },
       {
         index: 3,
         id: 'kid4_hana',
-        name: 'Hana',
+        name: 'Mina',
         zhTitle: '烏黑妹妹頭短髮女孩 (第4位女孩)',
-        shortLabel: '👧 Hana',
+        shortLabel: '👧 Mina',
         emoji: '👧🌸',
         styleTag: '🌸 K-Pop 星光丁香紫小香風',
         image: './images/album2_kpop/kid4_girl_kpop_v1.jpg',
+        cutout: './images/album2_kpop/cutouts/kid4_mina.png',
         voiceAudioId: 'audio-kid-voice-3',
-        voiceText: "Hi! Let's dance! 我是 Hana，快樂音樂開始囉，一起開心跳舞吧！",
+        voiceText: "Hi! Let's dance! 我是 Mina，快樂音樂開始囉，一起開心跳舞吧！",
         songs: ['a1_s04', 'a1_s09', 'a2_s02', 'a2_s09'],
         accentColor: '#c084fc',
-        glowRgba: 'rgba(192, 132, 252, 0.85)',
+        glowRgba: 'rgba(192, 132, 252, 0.88)',
         spotlightBg: 'linear-gradient(180deg, rgba(192, 132, 252, 0.88) 0%, rgba(139, 92, 246, 0.28) 58%, transparent 100%)',
         chimeFreqs: [659.25, 830.61, 987.77, 1318.51]
       },
       {
         index: 4,
         id: 'kid5_zoe',
-        name: 'Zoe',
+        name: 'MiMi',
         zhTitle: '雙丸子捲髮女孩 (第5位女孩)',
-        shortLabel: '👧 Zoe',
+        shortLabel: '👧 MiMi',
         emoji: '👧🌟',
         styleTag: '🌟 K-Pop 香檳金莓果巨星風',
         image: './images/album2_kpop/kid5_girl_kpop_v1.jpg',
+        cutout: './images/album2_kpop/cutouts/kid5_mimi.png',
         voiceAudioId: 'audio-kid-voice-4',
-        voiceText: "One, two, three, jump! 我是 Zoe，派對時間到，大家一起嗨起來！",
+        voiceText: "One, two, three, jump! 我是 MiMi，派對時間到，大家一起嗨起來！",
         songs: ['a1_s05', 'a1_s10', 'a2_s05', 'a2_s10'],
         accentColor: '#fbbf24',
-        glowRgba: 'rgba(251, 191, 36, 0.85)',
+        glowRgba: 'rgba(251, 191, 36, 0.88)',
         spotlightBg: 'linear-gradient(180deg, rgba(251, 191, 36, 0.88) 0%, rgba(244, 63, 94, 0.28) 58%, transparent 100%)',
         chimeFreqs: [554.37, 698.46, 830.61, 1108.73]
       }
@@ -3853,7 +4010,7 @@
       spawnDancerSelectBurst(currentDancerIndex);
     }
 
-    // 觸發選中小朋友卡片的立體彈跳與底座光波特效
+    // 觸發選中小朋友立體人物的彈跳與腳底光波特效
     function triggerActiveDancerCardPop(dancerIdx) {
       const cardEl = document.getElementById(`dancer-3d-card-${dancerIdx}`);
       const ringEl = document.getElementById(`dancer-shockwave-${dancerIdx}`);
@@ -3904,93 +4061,97 @@
       }
     }
 
-    // 初始化建立 5 位小朋友的 3D 環形卡片 DOM
+    // 初始化建立 5 位小朋友的無圖卡 3D 空間立體去背角色 DOM
     function ensureDancer3DCardsBuilt() {
       const ring = document.getElementById('dancer-3d-ring');
       if (!ring || ring.children.length === 5) return;
       ring.innerHTML = DANCER_SQUAD_DATA.map((d) => `
         <div id="dancer-3d-card-${d.index}"
-             onclick="selectDancerByIndex(${d.index}, true)"
-             class="dancer-3d-card bg-slate-900/90 backdrop-blur-md border-2 overflow-visible flex flex-col justify-between p-2 select-none group">
+             data-dancer-index="${d.index}"
+             class="dancer-3d-actor select-none group">
           <!-- 腳底 3D 點選擴散衝擊波光環 -->
-          <div id="dancer-shockwave-${d.index}" class="pedestal-shockwave-ring" style="border-color: ${d.accentColor}; box-shadow: 0 0 22px ${d.glowRgba};"></div>
+          <div id="dancer-shockwave-${d.index}" class="pedestal-shockwave-ring" style="border-color: ${d.accentColor}; box-shadow: 0 0 24px ${d.glowRgba};"></div>
 
-          <!-- 9:16 全身 K-Pop 明星寫真 -->
-          <div class="relative w-full flex-1 rounded-2xl overflow-hidden bg-slate-950 border border-white/20">
-            <img src="${d.image}" alt="${d.name}" class="w-full h-full object-cover object-top pointer-events-none group-hover:scale-105 transition-transform duration-300">
-            <!-- 頂部角色編號徽章 -->
-            <div class="absolute top-2 left-2 px-2 py-0.5 rounded-full bg-slate-950/80 backdrop-blur border border-white/25 text-[10px] font-black text-white shadow">
-              #${d.index + 1} ${d.name}
-            </div>
-            <!-- 右上童聲喇叭小圖示 -->
-            <div class="absolute top-2 right-2 w-6 h-6 rounded-full bg-amber-400 text-slate-950 flex items-center justify-center text-xs font-black shadow">
-              🔊
-            </div>
-            <!-- 底部漸層名條 -->
-            <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950/95 via-slate-950/60 to-transparent pt-6 pb-2 px-2 text-center">
-              <div class="text-sm sm:text-base font-black text-white drop-shadow">${d.emoji} ${d.name}</div>
-              <div class="text-[10px] font-bold text-amber-200 truncate">${d.zhTitle.split(' ')[0]}</div>
-            </div>
-          </div>
+          <!-- 腳底舞台聚光光暈底座 -->
+          <div id="dancer-floor-aura-${d.index}" class="dancer-actor-floor-aura" style="background: radial-gradient(ellipse at center, ${d.glowRgba} 0%, transparent 72%);"></div>
 
-          <!-- 卡片底部狀態列 -->
-          <div id="dancer-card-footer-${d.index}" class="mt-1.5 py-1 px-2 rounded-xl text-center text-[10px] sm:text-[11px] font-black transition-all">
-            專屬 4 首歌單
+          <div class="dancer-actor-body">
+            <!-- 無圖卡透明去背全身 K-Pop 明星立體角色 (永遠面向正前方) -->
+            <img id="dancer-cutout-img-${d.index}" src="${d.cutout}" alt="${d.name}" draggable="false" class="dancer-actor-cutout-img">
+
+            <!-- 腳下懸浮舞台名牌膠囊 -->
+            <div id="dancer-card-footer-${d.index}" class="-mt-1 px-3 py-1 rounded-full text-center text-xs sm:text-sm font-black transition-all flex items-center gap-1.5 shadow-lg whitespace-nowrap">
+              <span>${d.emoji} ${d.name}</span>
+            </div>
           </div>
         </div>
       `).join('');
     }
 
-    // 根據 currentDancerIndex 計算並套用 5 位小朋友在 3D 圓形轉盤上的立體座標、角度與聚光燈
-    function updateDancer3DCarouselUI() {
+    // 依連續旋轉角度 dancerStageAngle 即時計算 5 位小朋友在 3D 空間中的橢圓軌跡座標與遠近縮放
+    // 轉到後面時依然 100% 面向正前方 (無 rotateY 翻轉)，正中間最大 (1.14x)，轉到後面縮小 (0.55x)
+    function renderDancer3DStagePositions() {
       ensureDancer3DCardsBuilt();
-      const activeDancer = DANCER_SQUAD_DATA[currentDancerIndex] || DANCER_SQUAD_DATA[0];
       const isCompact = window.innerWidth < 640;
-      const rx1 = isCompact ? 112 : 210;
-      const rx2 = isCompact ? 178 : 350;
+      const radiusX = isCompact ? 148 : 285;
+      const radiusY = isCompact ? 42 : 68;
 
       DANCER_SQUAD_DATA.forEach((d, idx) => {
-        const card = document.getElementById(`dancer-3d-card-${idx}`);
+        const actor = document.getElementById(`dancer-3d-card-${idx}`);
+        const imgEl = document.getElementById(`dancer-cutout-img-${idx}`);
+        const auraEl = document.getElementById(`dancer-floor-aura-${idx}`);
         const footer = document.getElementById(`dancer-card-footer-${idx}`);
-        if (!card) return;
+        if (!actor) return;
 
-        // 計算最短圓形偏移 (-2, -1, 0, 1, 2)
-        let rel = (idx - currentDancerIndex) % 5;
-        if (rel > 2) rel -= 5;
-        if (rel < -2) rel += 5;
+        const deg = idx * 72 + dancerStageAngle;
+        const rad = (deg * Math.PI) / 180;
+        const sinVal = Math.sin(rad);
+        const cosVal = Math.cos(rad); // +1: 正前方中央, -1: 舞台後方
 
-        let tx = 0, ty = 0, tz = 0, ry = 0, sc = 1, op = 1, br = 1, zIdx = 10;
-        if (rel === 0) {
-          tx = 0; ty = -8; tz = 135; ry = 0; sc = 1.08; op = 1; br = 1.08; zIdx = 30;
-          card.style.borderColor = d.accentColor;
-          card.style.boxShadow = `0 0 35px ${d.glowRgba}, 0 18px 38px rgba(0,0,0,0.8), inset 0 2px 6px rgba(255,255,255,0.5)`;
-          if (footer) {
-            footer.className = "mt-1.5 py-1 px-2 rounded-xl text-center text-[10px] sm:text-[11px] font-black bg-gradient-to-r from-amber-300 to-orange-400 text-slate-950 shadow";
-            footer.innerText = "🌟 當前領舞主角 (點我發聲)";
-          }
-        } else if (Math.abs(rel) === 1) {
-          tx = rel * rx1; ty = 6; tz = 15; ry = -rel * 24; sc = 0.83; op = 0.88; br = 0.82; zIdx = 20;
-          card.style.borderColor = 'rgba(255, 255, 255, 0.28)';
-          card.style.boxShadow = '0 12px 28px rgba(0,0,0,0.65)';
-          if (footer) {
-            footer.className = "mt-1.5 py-1 px-2 rounded-xl text-center text-[10px] sm:text-[11px] font-bold bg-slate-800/80 text-slate-300";
-            footer.innerText = "點擊轉至中央 ➜";
-          }
-        } else {
-          tx = (rel < 0 ? -1 : 1) * rx2; ty = -14; tz = -110; ry = (rel < 0 ? 1 : -1) * 42; sc = 0.65; op = 0.54; br = 0.62; zIdx = 10;
-          card.style.borderColor = 'rgba(255, 255, 255, 0.15)';
-          card.style.boxShadow = '0 8px 20px rgba(0,0,0,0.5)';
-          if (footer) {
-            footer.className = "mt-1.5 py-1 px-2 rounded-xl text-center text-[10px] sm:text-[11px] font-bold bg-slate-900/70 text-slate-400";
-            footer.innerText = "點擊選擇";
+        // 深度比例 0.0 (最遠後方) ~ 1.0 (正前方中央)
+        const depth01 = (1 + cosVal) * 0.5;
+
+        // 水平與垂直空間位移 (後方人物站位略高，呈現真實舞台空間透視)
+        const tx = sinVal * radiusX;
+        const ty = -(1 - depth01) * radiusY + 14;
+
+        // 正中間最大 (1.14x)，轉到後面平滑縮小 (0.55x)，且永遠面向正前方 (rotateY = 0deg)
+        const sc = 0.55 + 0.59 * Math.pow(depth01, 1.15);
+        const op = 0.68 + 0.32 * depth01;
+        const br = 0.62 + 0.46 * depth01;
+        const zIdx = Math.round(100 + cosVal * 80);
+
+        actor.style.zIndex = String(zIdx);
+        actor.style.opacity = op.toFixed(3);
+        actor.style.filter = `brightness(${br.toFixed(3)})`;
+        actor.style.transform = `translate3d(${tx.toFixed(1)}px, ${ty.toFixed(1)}px, 0px) scale(${sc.toFixed(3)})`;
+
+        const isFrontCenter = cosVal > 0.82;
+        if (imgEl) {
+          imgEl.style.filter = isFrontCenter
+            ? `drop-shadow(0 0 18px ${d.glowRgba}) drop-shadow(0 14px 24px rgba(0,0,0,0.85))`
+            : `drop-shadow(0 10px 18px rgba(0,0,0,0.75))`;
+        }
+        if (auraEl) {
+          auraEl.style.opacity = isFrontCenter ? '1' : '0.35';
+          auraEl.style.transform = `translateX(-50%) scale(${isFrontCenter ? 1.25 : 0.85})`;
+        }
+        if (footer) {
+          if (isFrontCenter) {
+            footer.className = "-mt-1 px-3.5 py-1 rounded-full text-center text-xs sm:text-sm font-black bg-gradient-to-r from-amber-300 via-yellow-300 to-orange-400 text-slate-950 border-2 border-white shadow-[0_0_20px_rgba(251,191,36,0.85)] flex items-center gap-1.5 whitespace-nowrap";
+            footer.innerHTML = `<span>${d.emoji} ${d.name}</span><span class="text-[11px] bg-slate-950/20 px-1.5 py-0.2 rounded-full">🔊 領舞主角</span>`;
+          } else {
+            footer.className = "-mt-1 px-2.5 py-0.5 rounded-full text-center text-[11px] sm:text-xs font-bold bg-slate-900/85 text-slate-200 border border-white/25 shadow flex items-center gap-1 whitespace-nowrap";
+            footer.innerHTML = `<span>${d.emoji} ${d.name}</span>`;
           }
         }
-
-        card.style.zIndex = String(zIdx);
-        card.style.opacity = String(op);
-        card.style.filter = `brightness(${br})`;
-        card.style.transform = `translate3d(${tx}px, ${ty}px, ${tz}px) rotateY(${ry}deg) scale(${sc})`;
       });
+    }
+
+    // 根據 currentDancerIndex 更新舞台燈光、童聲氣泡與下方 4 首專屬代表舞曲面板
+    function updateDancer3DCarouselUI() {
+      renderDancer3DStagePositions();
+      const activeDancer = DANCER_SQUAD_DATA[currentDancerIndex] || DANCER_SQUAD_DATA[0];
 
       // 更新頂部快速選擇膠囊列
       const pillsEl = document.getElementById('dancer-quick-pills');
@@ -4092,9 +4253,16 @@
       }).join('');
     }
 
-    // 選擇指定索引的小朋友 (0..4)
+    // 選擇指定索引的小朋友 (0..4)，自動沿最短圓弧角度平滑旋轉至正中央
     function selectDancerByIndex(idx, withAudioAndFX = true) {
-      currentDancerIndex = ((idx % 5) + 5) % 5;
+      const targetIdx = ((idx % 5) + 5) % 5;
+      currentDancerIndex = targetIdx;
+
+      // 計算與當前 dancerStageAngle 距離最近的等效目標角度 (-targetIdx * 72 + 360 * k)
+      const desiredBase = -targetIdx * 72;
+      let diff = ((desiredBase - dancerStageAngle) % 360 + 540) % 360 - 180;
+      dancerStageAngle += diff;
+
       updateDancer3DCarouselUI();
       if (withAudioAndFX) {
         playDancerSelectSFX(currentDancerIndex);
@@ -4141,24 +4309,78 @@
       selectSong(targetSongId);
     }
 
-    // 支援 3D 舞台左右觸控滑動與方向鍵旋轉
+    // 支援 3D 空間滑鼠與手指自由拖曳旋轉 (Pointer Events + 慣性自動吸附至最近的小朋友)
     (function initDancerCarouselGestures() {
-      let touchStartX = null;
-      document.addEventListener('touchstart', (e) => {
-        if (!viewDancerSquad || viewDancerSquad.classList.contains('hidden')) return;
-        if (e.target && e.target.closest && e.target.closest('#dancer-3d-viewport')) {
-          touchStartX = e.touches[0].clientX;
-        }
-      }, { passive: true });
+      let startX = 0;
+      let lastX = 0;
+      let velocityX = 0;
+      let startAngle = 0;
+      let pointerDownActorIdx = null;
+      let activePointerId = null;
 
-      document.addEventListener('touchend', (e) => {
-        if (touchStartX === null || !viewDancerSquad || viewDancerSquad.classList.contains('hidden')) return;
-        const dx = e.changedTouches[0].clientX - touchStartX;
-        touchStartX = null;
-        if (Math.abs(dx) > 36) {
-          rotateDancerCarousel(dx < 0 ? 1 : -1);
+      const viewport = document.getElementById('dancer-3d-viewport');
+      if (!viewport) return;
+
+      viewport.addEventListener('pointerdown', (e) => {
+        if (!viewDancerSquad || viewDancerSquad.classList.contains('hidden')) return;
+        activePointerId = e.pointerId;
+        startX = e.clientX;
+        lastX = e.clientX;
+        velocityX = 0;
+        startAngle = dancerStageAngle;
+        isDancerDragging = false;
+
+        const actorEl = e.target && e.target.closest ? e.target.closest('.dancer-3d-actor') : null;
+        pointerDownActorIdx = actorEl ? parseInt(actorEl.getAttribute('data-dancer-index'), 10) : null;
+
+        try { viewport.setPointerCapture(e.pointerId); } catch(err) {}
+      });
+
+      viewport.addEventListener('pointermove', (e) => {
+        if (activePointerId === null || e.pointerId !== activePointerId) return;
+        const dx = e.clientX - startX;
+        velocityX = e.clientX - lastX;
+        lastX = e.clientX;
+
+        if (!isDancerDragging && Math.abs(dx) > 6) {
+          isDancerDragging = true;
+          viewport.classList.add('is-dragging');
         }
-      }, { passive: true });
+
+        if (isDancerDragging) {
+          const degPerPx = window.innerWidth < 640 ? 0.52 : 0.34;
+          dancerStageAngle = startAngle + dx * degPerPx;
+          renderDancer3DStagePositions();
+        }
+      });
+
+      function finishDragOrTap(e) {
+        if (activePointerId === null || (e && e.pointerId !== undefined && e.pointerId !== activePointerId)) return;
+        try { viewport.releasePointerCapture(activePointerId); } catch(err) {}
+        activePointerId = null;
+        viewport.classList.remove('is-dragging');
+
+        if (!isDancerDragging) {
+          // 單純點擊某位小朋友：直接將該小朋友轉至正中央並播放童聲
+          if (pointerDownActorIdx !== null && !isNaN(pointerDownActorIdx)) {
+            selectDancerByIndex(pointerDownActorIdx, true);
+          }
+          pointerDownActorIdx = null;
+          return;
+        }
+
+        isDancerDragging = false;
+        pointerDownActorIdx = null;
+
+        // 根據放開時的角度與滑動慣性，計算最接近正前方 (0度) 的小朋友索引
+        const projectedAngle = dancerStageAngle + velocityX * 1.4;
+        const rawIdx = Math.round(-projectedAngle / 72);
+        const snappedIdx = ((rawIdx % 5) + 5) % 5;
+        selectDancerByIndex(snappedIdx, true);
+      }
+
+      viewport.addEventListener('pointerup', finishDragOrTap);
+      viewport.addEventListener('pointercancel', finishDragOrTap);
 
       window.addEventListener('keydown', (e) => {
         if (!viewDancerSquad || viewDancerSquad.classList.contains('hidden')) return;
@@ -4686,6 +4908,7 @@
         viewAlbumLevels.classList.add('hidden');
       }
       viewDance.classList.remove('hidden');
+      updateDanceStageScale();
       window.scrollTo({ top: 0, behavior: 'instant' });
 
       if (isPlaylistDrawerOpen) {
@@ -4852,14 +5075,38 @@
 
     // ========================================================
     // 4. 真实摄像头开启与真正起效的端侧计算机视觉骨骼提取系统
+    //    ＋ 桌面瀏覽器單曲播放固定長寬比例 (1180x748) 等比縮放引擎
     // ========================================================
+    const isDesktopBrowser = !isAppleMobile && !/Android|webOS|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    function updateDanceStageScale() {
+      if (!viewDance) return;
+      if (isDesktopBrowser) {
+        viewDance.classList.add('desktop-fixed-stage');
+        if (!viewDance.classList.contains('hidden') && !viewDance.classList.contains('is-camera-fs')) {
+          const STAGE_W = 1180;
+          const STAGE_H = 748;
+          const availW = Math.max(320, window.innerWidth - 20);
+          const availH = Math.max(240, window.innerHeight - 16);
+          const scale = Math.min(availW / STAGE_W, availH / STAGE_H);
+          viewDance.style.setProperty('--dance-stage-scale', scale.toFixed(4));
+        } else {
+          viewDance.style.setProperty('--dance-stage-scale', '1');
+        }
+      } else {
+        viewDance.classList.remove('desktop-fixed-stage');
+        viewDance.style.removeProperty('--dance-stage-scale');
+      }
+    }
+
     function resizeCanvas() {
+      updateDanceStageScale();
       if (!cameraCanvas) return;
       const container = document.getElementById('camera-container') || cameraCanvas.parentElement;
       if (!container) return;
       const rect = container.getBoundingClientRect();
-      const w = Math.round(rect.width || container.clientWidth || container.offsetWidth || 0);
-      const h = Math.round(rect.height || container.clientHeight || container.offsetHeight || 0);
+      const w = Math.round(container.clientWidth || container.offsetWidth || rect.width || 0);
+      const h = Math.round(container.clientHeight || container.offsetHeight || rect.height || 0);
       if (w > 0 && h > 0) {
         if (cameraCanvas.width !== w || cameraCanvas.height !== h) {
           cameraCanvas.width = w;
@@ -6795,12 +7042,21 @@
     }
 
     function toggleFullScreen() {
+      // 在平板 (iPad/iOS) 或單曲畫面中，確保全螢幕切換能直接進入無上下界面遮擋的沉浸式大螢幕
+      if (isAppleMobile && viewDance && !viewDance.classList.contains('hidden')) {
+        toggleCameraFullscreen();
+        return;
+      }
       const docEl = document.documentElement;
       if (!document.fullscreenElement && !document.webkitFullscreenElement) {
         if (docEl.requestFullscreen) {
-          docEl.requestFullscreen().catch(e => console.warn(e));
+          docEl.requestFullscreen().catch(() => {
+            if (viewDance && !viewDance.classList.contains('hidden')) toggleCameraFullscreen();
+          });
         } else if (docEl.webkitRequestFullscreen) {
           docEl.webkitRequestFullscreen();
+        } else if (viewDance && !viewDance.classList.contains('hidden')) {
+          toggleCameraFullscreen();
         }
       } else {
         if (document.exitFullscreen) {
@@ -6813,7 +7069,7 @@
 
     // ========================================================
     // 7. 鏡頭與火柴人獨立全螢幕模式 (Camera Solo Fullscreen)
-    //    壓上 KTV 風格發光大字幕，支援 iPad/Safari/Chrome
+    //    消除平板上下界面遮擋，懸浮 KTV 發光大字幕，相容 iPad/Safari/Chrome
     // ========================================================
     function toggleCameraFullscreen() {
       isCameraFullscreen = !isCameraFullscreen;
@@ -6825,6 +7081,7 @@
       const cameraBottomBar = document.getElementById('camera-bottom-bar');
 
       if (isCameraFullscreen) {
+        if (viewDance) viewDance.classList.add('is-camera-fs');
         if (cameraSec) cameraSec.classList.add('camera-fullscreen-active');
         if (ktvBar) ktvBar.classList.remove('hidden');
         if (btnExitFs) btnExitFs.classList.remove('hidden');
@@ -6850,12 +7107,13 @@
           } catch(e) {}
         }
       } else {
+        if (viewDance) viewDance.classList.remove('is-camera-fs');
         if (cameraSec) cameraSec.classList.remove('camera-fullscreen-active');
         if (ktvBar) ktvBar.classList.add('hidden');
         if (btnExitFs) btnExitFs.classList.add('hidden');
         if (cameraBottomBar) cameraBottomBar.classList.remove('hidden');
         if (fsIcon) fsIcon.innerText = "🔲";
-        if (fsText) fsText.innerText = "鏡頭全螢幕";
+        if (fsText) fsText.innerText = "全螢幕";
 
         // 退出 HTML5 全螢幕
         if (document.fullscreenElement || document.webkitFullscreenElement) {
@@ -6869,7 +7127,8 @@
         }
       }
 
-      // 重新校正相機畫布大小，確保火柴人座標映射 100% 精準無失真
+      // 重新校正舞台比例與相機畫布大小，確保火柴人座標映射 100% 精準無失真
+      updateDanceStageScale();
       resizeCanvas();
       requestAnimationFrame(resizeCanvas);
       setTimeout(resizeCanvas, 50);
