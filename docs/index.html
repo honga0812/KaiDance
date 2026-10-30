@@ -488,6 +488,88 @@
         inset 0 3px 10px rgba(255, 255, 255, 0.95) !important;
     }
 
+    /* 🌸 第三顆星球：J-Pop 櫻花偶像星 (.theme-planet-3) */
+    .planet-levels-p3,
+    .theme-planet-3.jelly-cosmic-stage,
+    .theme-planet-3 .jelly-cosmic-stage {
+      background: radial-gradient(circle at 14% 12%, #ffffff 0%, #fff1f2 28%, #ffe4e6 50%, #ccfbf1 85%, #f0fdfa 100%) !important;
+      border: 2px solid rgba(244, 63, 94, 0.8) !important;
+      box-shadow: 
+        0 25px 60px -15px rgba(225, 29, 72, 0.28),
+        0 0 45px rgba(244, 63, 94, 0.35),
+        inset 0 3px 10px rgba(255, 255, 255, 0.95) !important;
+    }
+    .theme-planet-3 .jelly-glass-bar {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 228, 230, 0.7) 100%) !important;
+      border: 1.5px solid rgba(244, 63, 94, 0.6) !important;
+    }
+    .theme-planet-3 .jelly-lyric-stage {
+      background: radial-gradient(circle at 50% 0%, rgba(255, 255, 255, 0.96) 0%, rgba(255, 228, 230, 0.92) 65%, rgba(204, 251, 241, 0.88) 100%) !important;
+      border: 2px solid rgba(244, 63, 94, 0.65) !important;
+    }
+    .theme-planet-3 #room-song-title {
+      color: #881337 !important;
+    }
+
+    /* 🎷 第四顆星球：R&B 靈魂節奏星 (.theme-planet-4) */
+    .planet-levels-p4,
+    .theme-planet-4.jelly-cosmic-stage,
+    .theme-planet-4 .jelly-cosmic-stage {
+      background: radial-gradient(circle at 50% 20%, #311042 0%, #1e0b29 52%, #0a0310 100%) !important;
+      border: 2px solid rgba(249, 115, 22, 0.65) !important;
+      box-shadow: 
+        0 25px 60px -15px rgba(0, 0, 0, 0.92),
+        0 0 45px rgba(249, 115, 22, 0.25),
+        inset 0 2px 6px rgba(251, 146, 60, 0.22) !important;
+    }
+    .theme-planet-4 .jelly-glass-bar {
+      background: linear-gradient(180deg, rgba(49, 16, 66, 0.82) 0%, rgba(24, 8, 40, 0.88) 100%) !important;
+      border: 1.5px solid rgba(249, 115, 22, 0.5) !important;
+    }
+    .theme-planet-4 .jelly-lyric-stage {
+      background: radial-gradient(circle at 50% 0%, rgba(55, 19, 74, 0.92) 0%, rgba(30, 10, 42, 0.95) 75%, rgba(15, 4, 22, 0.98) 100%) !important;
+      border: 2px solid rgba(249, 115, 22, 0.6) !important;
+    }
+
+    /* ======================================================== */
+    /* 🎠 首頁 5 選項 3D 空間旋轉舞台 CSS                       */
+    /* ======================================================== */
+    .home-3d-stage {
+      perspective: 1200px;
+      perspective-origin: 50% 46%;
+      user-select: none;
+      touch-action: pan-y;
+      cursor: grab;
+    }
+    .home-3d-stage.is-dragging {
+      cursor: grabbing;
+    }
+    .home-carousel-actor {
+      position: absolute;
+      transform-style: preserve-3d;
+      transition: transform 0.48s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.48s ease, filter 0.48s ease;
+      will-change: transform, opacity, filter;
+    }
+    .home-3d-stage.is-dragging .home-carousel-actor {
+      transition: none !important;
+    }
+    /* 星球專屬高彩度立體光暈 */
+    .glow-p1 {
+      filter: drop-shadow(0 0 14px rgba(254, 240, 138, 0.95)) drop-shadow(0 0 38px rgba(245, 158, 11, 0.7));
+    }
+    .glow-p2 {
+      filter: drop-shadow(0 0 14px rgba(244, 114, 182, 0.95)) drop-shadow(0 0 38px rgba(217, 70, 239, 0.7));
+    }
+    .glow-p3-jpop {
+      filter: drop-shadow(0 0 14px rgba(251, 113, 133, 0.95)) drop-shadow(0 0 42px rgba(45, 212, 191, 0.7));
+    }
+    .glow-p4-rnb {
+      filter: drop-shadow(0 0 14px rgba(249, 115, 22, 0.95)) drop-shadow(0 0 44px rgba(168, 85, 247, 0.7));
+    }
+    .glow-squad {
+      filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.92)) drop-shadow(0 0 38px rgba(56, 189, 248, 0.75));
+    }
+
     /* 左上角 300% 放大首頁星球壓底圖容器 (300% Giant Planet Top-Left Backdrop) */
     .planet-backdrop-300-wrap {
       position: absolute;
@@ -1485,121 +1567,64 @@
       </div>
     </header>
 
-    <!-- 中央雙星球與中間導師主舞台 (iPad 橫向黃金比例，深色星空極致發散光暈) -->
-    <div class="relative z-10 my-auto py-4 md:py-6 grid grid-cols-1 md:grid-cols-3 items-center gap-6 md:gap-4 max-w-5xl mx-auto w-full">
+    <!-- 頂部快速切換膠囊按鈕與手勢提示 -->
+    <div class="relative z-20 flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-2.5 pt-1">
+      <div class="flex items-center gap-2">
+        <span class="text-xs font-black px-2.5 py-1 rounded-full bg-slate-800/90 border border-white/20 text-sky-200 shadow-xs">
+          🖐️ 空間左右拖曳旋轉
+        </span>
+        <span class="text-[11px] sm:text-xs text-slate-300 font-medium hidden sm:inline">
+          滑動自由探索 4 顆音樂星球與舞團戰隊 · 點擊直接穿梭
+        </span>
+      </div>
 
-      <!-- ========================================== -->
-      <!-- 左側：第一專輯【Planet 1: Morning Adventure】 -->
-      <!-- (晨光大地星球：極致擴散琥珀金發散光暈 + 純淨光芒) -->
-      <!-- ========================================== -->
-      <div id="planet-container-album_1" class="flex flex-col items-center text-center group cursor-pointer select-none planet-interactive-card" onclick="handlePlanetClick('album_1')" onmouseenter="playPlanetHoverSFX('album_1')">
-        <!-- 標題文字 -->
-        <div class="mb-2 text-center">
-          <h2 class="text-xl md:text-2xl font-black text-white tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-            Planet 1: Morning Adventure
-          </h2>
-          <p class="text-xs md:text-sm text-amber-300 font-bold tracking-wide mt-0.5 drop-shadow-[0_0_10px_rgba(245,158,11,0.6)]">
-            Adventure · 晨光生活大冒險 (10關)
+      <!-- 5 項目快速切換按鈕列 -->
+      <div id="home-quick-pills" class="flex items-center gap-1.5 flex-wrap">
+        <!-- 由 JS 動態建立 5 項目切換按鈕 -->
+      </div>
+    </div>
+
+    <!-- 🎠 3D 旋轉舞台 (5 個等距項目，各間隔 72°，始終正面朝前 Billboard 縮放) -->
+    <div class="relative z-10 flex-1 flex items-center justify-center my-1 sm:my-2 min-h-[340px] sm:min-h-[380px]">
+      <div id="home-3d-stage" class="home-3d-stage relative w-full h-[340px] sm:h-[390px] flex items-center justify-center">
+
+        <!-- 舞台底部霓虹發光旋轉圓盤地面 (隨選中項目切換光暈主色) -->
+        <div id="home-turntable-floor" class="absolute top-[82%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[620px] h-[620px] rounded-full border-2 border-white/25 pointer-events-none transition-all duration-500" style="transform: translate(-50%, -50%) rotateX(76deg); background: radial-gradient(circle, rgba(255,255,255,0.22) 0%, rgba(245,158,11,0.25) 35%, rgba(56,189,248,0.18) 60%, transparent 75%); box-shadow: 0 0 50px rgba(245,158,11,0.45), inset 0 0 40px rgba(56,189,248,0.35);"></div>
+
+        <!-- 5 個立體項目容器 (由 JS 動態建立) -->
+        <div id="home-carousel-ring" class="relative w-full h-full flex items-center justify-center"></div>
+      </div>
+    </div>
+
+    <!-- 男女孩小朋友齊聲童聲音訊與首頁背景音樂掛載點 -->
+    <audio id="audio-welcome-chorus" src="./audio/welcome_kids_chorus.mp3" preload="auto"></audio>
+    <audio id="audio-home-bgm" src="./audio/Jump_to_the_Moon.mp3" loop preload="auto"></audio>
+
+    <!-- 底部：當前選中項目的詳細資訊面板與進入按鈕 (聯動響應) -->
+    <div class="relative z-20 bg-slate-900/90 border border-white/15 backdrop-blur-xl rounded-2xl p-3 sm:p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xl mb-1">
+      <div class="flex items-center gap-3">
+        <div id="home-active-avatar" class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center text-2xl sm:text-3xl border-2 border-amber-300 shadow-md shrink-0 bg-slate-950">
+          ☀️
+        </div>
+        <div>
+          <div class="flex items-center gap-2 flex-wrap">
+            <h3 id="home-active-title" class="font-black text-base sm:text-lg text-white">
+              Planet 1: Morning Adventure
+            </h3>
+            <span id="home-active-badge" class="px-2.5 py-0.5 rounded-full text-[11px] sm:text-xs font-black bg-amber-400 text-slate-950">
+              ☀️ 晨光生活大冒險 · 10 關
+            </span>
+          </div>
+          <p id="home-active-desc" class="text-xs text-slate-300 font-medium mt-0.5">
+            陽光晨曦大地金 · 培養良好生活習慣的趣味律動
           </p>
         </div>
-
-        <!-- 星球 1 高清透明實體 (多層次超大發散擴散光暈 + 漂浮微動態) -->
-        <div class="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 flex items-center justify-center my-1 anim-float-p1">
-          <!-- 1. 超大星雲發散光環 (外層擴散 65px~85px，呼吸起伏) -->
-          <div class="absolute -inset-16 md:-inset-20 bg-gradient-to-tr from-amber-500/40 via-yellow-400/30 to-orange-500/15 rounded-full blur-[65px] md:blur-[85px] group-hover:scale-110 group-hover:from-amber-400/55 group-hover:via-yellow-300/45 transition-all duration-700 pointer-events-none anim-pulse-slow"></div>
-
-          <!-- 2. 中層陽光耀斑日冕 (高亮核心 30px 模糊) -->
-          <div class="absolute -inset-4 bg-gradient-to-r from-amber-400/40 via-yellow-300/35 to-orange-400/25 rounded-full blur-2xl group-hover:bg-amber-300/55 transition-all duration-500 pointer-events-none"></div>
-
-          <!-- 3. 精確去背晨光大地星球 (已修復平滑太陽光線 + 4重防鋸齒發散光暈) -->
-          <img src="./images/ui/planet1_morning.png" alt="Planet 1: Morning Adventure" class="w-full h-full object-contain glow-planet-morning group-hover:scale-108 transition-transform duration-300 pointer-events-none">
-
-          <!-- 探索提示懸浮小徽章 -->
-          <div class="absolute bottom-2 bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 font-black text-xs px-4 py-1.5 rounded-full shadow-[0_4px_18px_rgba(245,158,11,0.6)] border-2 border-white group-hover:scale-110 transition-transform">
-            <span>探索晨光星球 (10關) ➜</span>
-          </div>
-        </div>
       </div>
 
-      <!-- ========================================== -->
-      <!-- 中央：5 首歌 3D 舞蹈天團歡迎小隊 (Dance Team) -->
-      <!-- (立體純白貼身微光輪廓 + 柔和舞台發光地燈 + 漂浮微動態) -->
-      <!-- ========================================== -->
-      <div class="flex flex-col items-center text-center relative z-20 select-none py-2">
-        <!-- 導師背後立體發光舞台光環 -->
-        <div class="absolute inset-0 bg-gradient-to-t from-pink-500/25 via-sky-400/20 to-transparent rounded-full blur-3xl pointer-events-none"></div>
-
-        <!-- 歡迎舞團舞台容器 (點擊播放歡迎語音與星光音效) -->
-        <div id="dance-team-card" class="relative w-full max-w-[320px] md:max-w-[340px] h-64 md:h-72 flex flex-col items-center justify-center anim-float-kids cursor-pointer group" onclick="handleDanceTeamClick()" title="點我聆聽舞蹈天團歡迎語音">
-          
-          <!-- 點擊擴散光環 -->
-          <div id="dance-team-ripple" class="pointer-events-none absolute inset-0 rounded-full bg-gradient-to-r from-amber-300/50 via-pink-400/50 to-sky-400/50 blur-xl opacity-0 -z-10"></div>
-          
-          <!-- 點擊歡慶粒子容器 (星星與音樂符號爆發) -->
-          <div id="dance-team-particles" class="pointer-events-none absolute inset-0 overflow-visible z-40"></div>
-
-          <!-- 頂部歡樂跳舞氣泡 -->
-          <div id="dance-team-bubble" class="absolute -top-3 z-30 bg-gradient-to-r from-amber-300 via-pink-400 to-purple-400 p-[2px] rounded-2xl shadow-[0_0_15px_rgba(244,114,182,0.4)] animate-bounce">
-            <div class="bg-slate-900/90 backdrop-blur border border-amber-300/40 px-3.5 py-1.5 rounded-2xl text-[11px] font-black text-amber-200 flex items-center gap-1.5 shadow-sm">
-              <span>🎉</span>
-              <span id="dance-team-bubble-text">歡迎來到 KaiDance，歡迎大家來跳舞！</span>
-            </div>
-          </div>
-          <!-- 男女孩小朋友齊聲童聲音訊 -->
-          <audio id="audio-welcome-chorus" src="./audio/welcome_kids_chorus.mp3" preload="auto"></audio>
-          <!-- 首頁專屬背景音樂 (Jump_to_the_Moon.mp3, 30% 音量循環播放) -->
-          <audio id="audio-home-bgm" src="./audio/Jump_to_the_Moon.mp3" loop preload="auto"></audio>
-
-          <!-- 全新高畫質去背 5 位小朋友舞蹈團隊立繪 (立體純白防雜質光暈) -->
-          <div id="dance-team-kids-img" class="relative z-10 w-full h-full flex items-center justify-center transition-transform duration-300">
-            <img src="./images/ui/dance_team_kids.png" alt="KaiDance 舞蹈天團" class="w-full h-full object-contain glow-dance-team pointer-events-none">
-          </div>
-
-          <!-- 舞台底部柔和星光底座 -->
-          <div class="absolute bottom-1 w-52 h-6 bg-gradient-to-r from-pink-400/60 via-amber-300/70 to-sky-400/60 rounded-full blur-md -z-10"></div>
-        </div>
-
-        <!-- 舞團稱號膠囊 (點擊進入 K-Pop 舞蹈戰隊 3D 轉盤選單) -->
-        <div id="dance-team-status-capsule" onclick="handleDanceTeamClick()" class="mt-2 flex items-center gap-1.5 bg-slate-900/90 hover:bg-slate-800 px-4 py-1.5 rounded-full border border-amber-400/60 text-[11px] text-slate-100 shadow-[0_0_16px_rgba(251,191,36,0.28)] cursor-pointer transition-all hover:scale-105">
-          <span class="text-amber-300 font-black">✨ 點選 5 位小舞星戰隊</span>
-          <span class="text-slate-500">·</span>
-          <span class="text-sky-300 font-bold">進入專屬 4 首歌單選單 ➜</span>
-        </div>
-      </div>
-
-      <!-- ========================================== -->
-      <!-- 右側：第二專輯【Planet 2: Groove Party】      -->
-      <!-- (派對耳機土星：極致發散霓虹紫粉光暈 + 剔透星環) -->
-      <!-- ========================================== -->
-      <div id="planet-container-album_2" class="flex flex-col items-center text-center group cursor-pointer select-none planet-interactive-card" onclick="handlePlanetClick('album_2')" onmouseenter="playPlanetHoverSFX('album_2')">
-        <!-- 標題文字 -->
-        <div class="mb-2 text-center">
-          <h2 class="text-xl md:text-2xl font-black text-white tracking-tight drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]">
-            Planet 2: Groove Party
-          </h2>
-          <p class="text-xs md:text-sm text-fuchsia-300 font-bold tracking-wide mt-0.5 drop-shadow-[0_0_10px_rgba(217,70,239,0.6)]">
-            Groove Party · 星光狂歡新舞曲 (10關)
-          </p>
-        </div>
-
-        <!-- 星球 2 高清透明實體 (多層次超大發散擴散光暈 + 漂浮微動態) -->
-        <div class="relative w-64 h-64 md:w-72 md:h-72 lg:w-80 lg:h-80 flex items-center justify-center my-1 anim-float-p2">
-          <!-- 1. 超大星雲發散光環 (外層擴散 65px~85px，呼吸起伏) -->
-          <div class="absolute -inset-16 md:-inset-20 bg-gradient-to-tr from-fuchsia-600/45 via-purple-500/30 to-sky-400/20 rounded-full blur-[65px] md:blur-[85px] group-hover:scale-110 group-hover:from-fuchsia-500/55 group-hover:via-pink-400/45 transition-all duration-700 pointer-events-none anim-pulse-slow"></div>
-
-          <!-- 2. 中層霓虹紫粉日冕 (高亮核心 30px 模糊) -->
-          <div class="absolute -inset-4 bg-gradient-to-r from-fuchsia-400/40 via-pink-400/35 to-indigo-400/25 rounded-full blur-2xl group-hover:bg-fuchsia-300/55 transition-all duration-500 pointer-events-none"></div>
-
-          <!-- 3. 精確去背派對耳機土星 (4重防鋸齒發散光暈) -->
-          <img src="./images/ui/planet2_groove.png" alt="Planet 2: Groove Party" class="w-full h-full object-contain glow-planet-groove group-hover:scale-108 transition-transform duration-300 pointer-events-none">
-
-          <!-- 探索提示懸浮小徽章 -->
-          <div class="absolute bottom-2 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-black text-xs px-4 py-1.5 rounded-full shadow-[0_4px_18px_rgba(217,70,239,0.6)] border-2 border-white group-hover:scale-110 transition-transform">
-            <span>進入派對星球 (10關) ➜</span>
-          </div>
-        </div>
-      </div>
-
+      <!-- 進入主按鈕 -->
+      <button id="btn-enter-active-home" onclick="handleCurrentHomeItemAction()" class="px-6 sm:px-8 py-2.5 sm:py-3 rounded-full font-black text-sm sm:text-base bg-gradient-to-r from-amber-400 via-yellow-300 to-orange-500 text-slate-950 shadow-[0_0_25px_rgba(251,191,36,0.65)] hover:scale-105 active:scale-95 transition-all cursor-pointer whitespace-nowrap">
+        <span>進入關卡選單 ➜</span>
+      </button>
     </div>
 
     <!-- ========================================== -->
@@ -3500,6 +3525,373 @@
       } catch(e) {}
     }
 
+    // ========================================================
+    // 🎠 首頁 5 選項 3D 空間旋轉舞台 (4 顆音樂星球 + 1 個舞團戰隊)
+    // ========================================================
+    const HOMEPAGE_5_ITEMS = [
+      {
+        index: 0,
+        id: 'album_1',
+        title: 'Planet 1: Morning Adventure',
+        shortName: '☀️ 晨光星球',
+        badge: '☀️ 晨光生活大冒險 · 10 關',
+        style: '陽光晨曦大地金 · 培養良好生活習慣的趣味律動',
+        color: '#f59e0b',
+        glowClass: 'glow-p1',
+        floorGlow: 'rgba(245, 158, 11, 0.75)',
+        iconText: '☀️',
+        image: './images/ui/planet1_morning.png',
+        btnText: '進入晨光星球 (10關) ➜',
+        type: 'planet'
+      },
+      {
+        index: 1,
+        id: 'album_2',
+        title: 'Planet 2: Groove Party',
+        shortName: '🪐 派對星球',
+        badge: '🪐 K-Pop 星光狂歡 · 10 關',
+        style: '派對耳機土星 · 霓虹粉紫狂歡與動感流行跳舞',
+        color: '#d946ef',
+        glowClass: 'glow-p2',
+        floorGlow: 'rgba(217, 70, 239, 0.75)',
+        iconText: '🪐',
+        image: './images/ui/planet2_groove.png',
+        btnText: '進入派對星球 (10關) ➜',
+        type: 'planet'
+      },
+      {
+        index: 2,
+        id: 'album_3',
+        title: 'Planet 3: Sakura Neo Pop',
+        shortName: '🌸 J-Pop 星球',
+        badge: '🌸 J-Pop 櫻花偶像星 · 10 關',
+        style: '櫻花粉紅＋薄荷青藍 · 日系動漫元氣流行與萌系應援跳躍',
+        color: '#f43f5e',
+        glowClass: 'glow-p3-jpop',
+        floorGlow: 'rgba(244, 63, 94, 0.8)',
+        iconText: '🌸',
+        image: './images/ui/planet3_jpop.png',
+        btnText: '進入櫻花偶像星 (10關) ➜',
+        type: 'planet'
+      },
+      {
+        index: 3,
+        id: 'album_4',
+        title: 'Planet 4: Sunset Soul Groove',
+        shortName: '🎷 R&B 星球',
+        badge: '🎷 R&B 靈魂節奏星 · 10 關',
+        style: '夕陽琥珀金＋天鵝絨深紫 · 節奏藍調與復古黑膠放克絲滑搖擺',
+        color: '#f97316',
+        glowClass: 'glow-p4-rnb',
+        floorGlow: 'rgba(249, 115, 22, 0.8)',
+        iconText: '🎷',
+        image: './images/ui/planet4_rnb.png',
+        btnText: '進入靈魂節奏星 (10關) ➜',
+        type: 'planet'
+      },
+      {
+        index: 4,
+        id: 'dance_squad',
+        title: 'K-Pop 5 位小舞星戰隊',
+        shortName: '🎤 舞蹈戰隊',
+        badge: '🎤 舞團專屬 4 首歌單選單',
+        style: 'Kai · Jessie · Tim · Mina · MiMi · 自由旋轉選角與專屬舞曲連播',
+        color: '#38bdf8',
+        glowClass: 'glow-squad',
+        floorGlow: 'rgba(56, 189, 248, 0.85)',
+        iconText: '🎤',
+        image: './images/ui/dance_team_kids.png',
+        btnText: '進入 5 位小舞星戰隊 ➜',
+        type: 'squad'
+      }
+    ];
+
+    let currentHomeItemIndex = 0;
+    let homeStageAngle = 0;
+    let isHomeDragging = false;
+    let homeDragStartX = 0;
+    let homeDragStartAngle = 0;
+    let homeLastPointerX = 0;
+    let homeDragVelocity = 0;
+    let homeLastTimestamp = 0;
+
+    function initHomeCarousel() {
+      const ring = document.getElementById('home-carousel-ring');
+      if (!ring) return;
+
+      ring.innerHTML = HOMEPAGE_5_ITEMS.map((item) => {
+        return `
+          <div id="home-actor-${item.index}"
+               data-index="${item.index}"
+               onclick="handleHomeActorClick(${item.index})"
+               class="home-carousel-actor flex flex-col items-center justify-center cursor-pointer select-none">
+            <div class="actor-body relative flex flex-col items-center">
+              <div class="relative w-44 h-44 sm:w-56 sm:h-56 flex items-center justify-center anim-float">
+                <img src="${item.image}" alt="${item.title}" class="w-full h-full object-contain ${item.glowClass} pointer-events-none select-none">
+              </div>
+              <!-- 懸浮立體名牌 -->
+              <div id="home-actor-badge-${item.index}" class="-mt-4 px-3.5 py-1 rounded-full text-xs sm:text-sm font-black transition-all flex items-center gap-1.5 shadow-xl whitespace-nowrap">
+                <span>${item.shortName}</span>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      // 初始化快速切換膠囊
+      const pillsContainer = document.getElementById('home-quick-pills');
+      if (pillsContainer) {
+        pillsContainer.innerHTML = HOMEPAGE_5_ITEMS.map((item, idx) => `
+          <button id="home-pill-${idx}" onclick="selectHomeCarouselItem(${idx}, true)" class="px-2.5 py-1 rounded-full text-xs font-black transition-all border border-white/15 bg-slate-900/80 hover:bg-slate-800 text-slate-200 cursor-pointer">
+            ${item.shortName}
+          </button>
+        `).join('');
+      }
+
+      setupHomeCarouselInteraction();
+      updateHomeCarouselPositions();
+      updateHomeActiveInfo(0);
+    }
+
+    function updateHomeCarouselPositions() {
+      const isCompact = window.innerWidth < 640;
+      const radiusX = isCompact ? 145 : 270;
+      const radiusY = isCompact ? 36 : 65;
+
+      HOMEPAGE_5_ITEMS.forEach((item, idx) => {
+        const actor = document.getElementById(`home-actor-${idx}`);
+        const badge = document.getElementById(`home-actor-badge-${idx}`);
+        if (!actor) return;
+
+        const deg = idx * 72 + homeStageAngle;
+        const rad = (deg * Math.PI) / 180;
+        const sinVal = Math.sin(rad);
+        const cosVal = Math.cos(rad);
+
+        const posX = sinVal * radiusX;
+        const posY = cosVal * radiusY;
+
+        // depth: 1 (front center, cosVal = 1) -> 0 (back, cosVal = -1)
+        const depth = (cosVal + 1) / 2;
+        const scale = 0.58 + depth * 0.58; // 0.58x back ~ 1.16x front
+        const opacity = 0.38 + depth * 0.62;
+        const zIndex = Math.round(depth * 100);
+
+        actor.style.transform = `translate3d(${posX}px, ${posY}px, 0) scale(${scale})`;
+        actor.style.zIndex = zIndex;
+        actor.style.opacity = opacity;
+
+        const isCenterTarget = idx === currentHomeItemIndex;
+
+        if (badge) {
+          if (isCenterTarget) {
+            badge.style.background = `linear-gradient(135deg, ${item.color}, #ffffff)`;
+            badge.style.color = '#020617';
+            badge.style.border = `2px solid #ffffff`;
+            badge.style.boxShadow = `0 0 20px ${item.color}`;
+            badge.style.transform = 'scale(1.08)';
+          } else {
+            badge.style.background = 'rgba(15, 23, 42, 0.85)';
+            badge.style.color = '#94a3b8';
+            badge.style.border = '1px solid rgba(255,255,255,0.2)';
+            badge.style.boxShadow = 'none';
+            badge.style.transform = 'scale(0.92)';
+          }
+        }
+      });
+    }
+
+    function selectHomeCarouselItem(idx, playVoice) {
+      if (idx < 0 || idx >= HOMEPAGE_5_ITEMS.length) return;
+      currentHomeItemIndex = idx;
+
+      // 旋轉舞台使目標項目回到正面 (deg = 0 => idx * 72 + angle = 360*k => angle = -idx * 72)
+      const targetBase = -idx * 72;
+      const currentMod = ((homeStageAngle % 360) + 360) % 360;
+      let targetMod = ((targetBase % 360) + 360) % 360;
+      let delta = targetMod - currentMod;
+      if (delta > 180) delta -= 360;
+      if (delta < -180) delta += 360;
+
+      homeStageAngle += delta;
+
+      updateHomeCarouselPositions();
+      updateHomeActiveInfo(idx);
+
+      if (playVoice) {
+        playHomeItemSFX(idx);
+      }
+    }
+
+    function updateHomeActiveInfo(idx) {
+      const item = HOMEPAGE_5_ITEMS[idx] || HOMEPAGE_5_ITEMS[0];
+      const avatarEl = document.getElementById('home-active-avatar');
+      const titleEl = document.getElementById('home-active-title');
+      const badgeEl = document.getElementById('home-active-badge');
+      const descEl = document.getElementById('home-active-desc');
+      const btnEl = document.getElementById('btn-enter-active-home');
+      const floorEl = document.getElementById('home-turntable-floor');
+
+      if (avatarEl) {
+        avatarEl.innerText = item.iconText;
+        avatarEl.style.borderColor = item.color;
+        avatarEl.style.boxShadow = `0 0 20px ${item.color}`;
+      }
+      if (titleEl) {
+        titleEl.innerText = item.title;
+      }
+      if (badgeEl) {
+        badgeEl.innerText = item.badge;
+        badgeEl.style.background = item.color;
+        badgeEl.style.color = '#020617';
+      }
+      if (descEl) {
+        descEl.innerText = item.style;
+      }
+      if (btnEl) {
+        btnEl.innerHTML = `<span>${item.btnText}</span>`;
+      }
+      if (floorEl) {
+        floorEl.style.background = `radial-gradient(circle, rgba(255,255,255,0.25) 0%, ${item.floorGlow} 40%, transparent 75%)`;
+        floorEl.style.boxShadow = `0 0 50px ${item.floorGlow}`;
+      }
+
+      // 同步下方隨機與全專播放的當前目標
+      if (item.type === 'planet') {
+        currentAlbumId = item.id;
+      }
+
+      // 更新頂部快速切換膠囊高亮
+      HOMEPAGE_5_ITEMS.forEach((_, i) => {
+        const pill = document.getElementById(`home-pill-${i}`);
+        if (pill) {
+          if (i === idx) {
+            pill.className = "px-2.5 py-1 rounded-full text-xs font-black transition-all border border-white bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 shadow-md cursor-pointer";
+          } else {
+            pill.className = "px-2.5 py-1 rounded-full text-xs font-black transition-all border border-white/15 bg-slate-900/80 hover:bg-slate-800 text-slate-200 cursor-pointer";
+          }
+        }
+      });
+    }
+
+    function handleHomeActorClick(idx) {
+      if (isHomeDragging) return;
+      if (idx === currentHomeItemIndex) {
+        handleCurrentHomeItemAction();
+      } else {
+        selectHomeCarouselItem(idx, true);
+      }
+    }
+
+    function handleCurrentHomeItemAction() {
+      const item = HOMEPAGE_5_ITEMS[currentHomeItemIndex] || HOMEPAGE_5_ITEMS[0];
+      if (item.type === 'planet') {
+        handlePlanetClick(item.id);
+      } else if (item.type === 'squad') {
+        handleDanceTeamClick();
+      }
+    }
+
+    function setupHomeCarouselInteraction() {
+      const stage = document.getElementById('home-3d-stage');
+      if (!stage) return;
+
+      const degPerPx = 0.36;
+
+      const onStart = (clientX) => {
+        isHomeDragging = true;
+        homeDragStartX = clientX;
+        homeLastPointerX = clientX;
+        homeDragStartAngle = homeStageAngle;
+        homeDragVelocity = 0;
+        homeLastTimestamp = performance.now();
+        stage.classList.add('is-dragging');
+      };
+
+      const onMove = (clientX) => {
+        if (!isHomeDragging) return;
+        const now = performance.now();
+        const dt = Math.max(1, now - homeLastTimestamp);
+        const dx = clientX - homeLastPointerX;
+        homeDragVelocity = dx / dt;
+        homeLastPointerX = clientX;
+        homeLastTimestamp = now;
+
+        const totalDx = clientX - homeDragStartX;
+        homeStageAngle = homeDragStartAngle + totalDx * degPerPx;
+        updateHomeCarouselPositions();
+      };
+
+      const onEnd = () => {
+        if (!isHomeDragging) return;
+        isHomeDragging = false;
+        stage.classList.remove('is-dragging');
+
+        // 慣性釋放與磁吸對齊 (72 度一格)
+        const projected = homeStageAngle + homeDragVelocity * 100;
+        const slot = Math.round(projected / 72);
+        homeStageAngle = slot * 72;
+
+        let snappedIdx = ((-slot % 5) + 5) % 5;
+        currentHomeItemIndex = snappedIdx;
+
+        updateHomeCarouselPositions();
+        updateHomeActiveInfo(snappedIdx);
+        playHomeItemSFX(snappedIdx);
+      };
+
+      stage.addEventListener('mousedown', (e) => onStart(e.clientX));
+      window.addEventListener('mousemove', (e) => {
+        if (isHomeDragging) onMove(e.clientX);
+      });
+      window.addEventListener('mouseup', () => {
+        if (isHomeDragging) onEnd();
+      });
+
+      stage.addEventListener('touchstart', (e) => {
+        if (e.touches.length > 0) onStart(e.touches[0].clientX);
+      }, { passive: true });
+      window.addEventListener('touchmove', (e) => {
+        if (isHomeDragging && e.touches.length > 0) onMove(e.touches[0].clientX);
+      }, { passive: true });
+      window.addEventListener('touchend', () => {
+        if (isHomeDragging) onEnd();
+      });
+      window.addEventListener('touchcancel', () => {
+        if (isHomeDragging) onEnd();
+      });
+    }
+
+    function playHomeItemSFX(itemIdx) {
+      const ctx = getAudioContext();
+      if (!ctx) return;
+      try {
+        const now = ctx.currentTime;
+        const freqs = [
+          [523.25, 659.25, 783.99], // P1: C-E-G sunrise
+          [440.00, 554.37, 659.25], // P2: A-C#-E groove
+          [659.25, 830.61, 987.77], // P3: E-G#-B J-Pop anime sparkle
+          [392.00, 493.88, 587.33], // P4: G-B-D R&B jazz warm
+          [523.25, 659.25, 880.00]  // Squad: C-E-A team chime
+        ];
+        const chord = freqs[itemIdx] || freqs[0];
+
+        chord.forEach((f, i) => {
+          const o = ctx.createOscillator();
+          const g = ctx.createGain();
+          o.type = itemIdx === 3 ? 'sine' : 'triangle';
+          o.frequency.setValueAtTime(f, now + i * 0.05);
+          g.gain.setValueAtTime(0.001, now);
+          g.gain.exponentialRampToValueAtTime(0.12, now + i * 0.05 + 0.02);
+          g.gain.exponentialRampToValueAtTime(0.0001, now + i * 0.05 + 0.35);
+          o.connect(g);
+          g.connect(ctx.destination);
+          o.start(now + i * 0.05);
+          o.stop(now + i * 0.05 + 0.38);
+        });
+      } catch(e) {}
+    }
+
     // 點擊星球統一入口：播放黑洞吸入音效、黑洞漩渦急速吸入過場、停止太空氛圍音與首頁BGM、開啟關卡選單
     let isTransitioningPlanet = false;
     function handlePlanetClick(albumId) {
@@ -3517,24 +3909,9 @@
       const homeAudioOnPlanet = document.getElementById('audio-home-bgm');
       if (homeAudioOnPlanet) { try { homeAudioOnPlanet.pause(); } catch(e) {} }
 
-      // 獲取被點選星球與同頁其他元素
-      const targetPlanet = document.getElementById(albumId === 'album_1' ? 'planet-container-album_1' : 'planet-container-album_2');
-      const otherPlanet = document.getElementById(albumId === 'album_1' ? 'planet-container-album_2' : 'planet-container-album_1');
-      const danceTeam = document.getElementById('dance-team-card');
       const lobbyHeader = document.querySelector('#view-lobby > header');
       const lobbyFooter = document.querySelector('#view-lobby > footer');
 
-      // 其他元素協同淡出退場
-      if (otherPlanet) {
-        otherPlanet.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
-        otherPlanet.style.opacity = '0';
-        otherPlanet.style.transform = 'scale(0.7)';
-      }
-      if (danceTeam) {
-        danceTeam.style.transition = 'opacity 0.35s ease, transform 0.35s ease';
-        danceTeam.style.opacity = '0';
-        danceTeam.style.transform = 'scale(0.7)';
-      }
       if (lobbyHeader) {
         lobbyHeader.style.transition = 'opacity 0.3s ease';
         lobbyHeader.style.opacity = '0';
@@ -3544,18 +3921,17 @@
         lobbyFooter.style.opacity = '0';
       }
 
-      // 被點擊的星球執行急速旋轉放大穿梭進場動畫 (Warp Spin)
-      if (targetPlanet) {
-        targetPlanet.classList.remove('anim-planet-warp-1', 'anim-planet-warp-2');
-        void targetPlanet.offsetWidth;
-        targetPlanet.classList.add(albumId === 'album_1' ? 'anim-planet-warp-1' : 'anim-planet-warp-2');
+      const actor = document.getElementById(`home-actor-${currentHomeItemIndex}`);
+      if (actor) {
+        actor.style.transition = 'transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.45s ease';
+        actor.style.transform += ' scale(2.5)';
+        actor.style.opacity = '0';
       }
 
-      // 動畫躍遷結束後 (520ms) 順暢切入關卡選單
       setTimeout(() => {
         openAlbumView(albumId);
         isTransitioningPlanet = false;
-      }, 530);
+      }, 500);
     }
 
     // 點擊舞蹈天團小朋友統一入口：星光音效 + 歡慶跳躍 + 粒子爆發 + 進入 K-Pop 舞蹈戰隊 3D 轉盤選單頁
@@ -3576,32 +3952,12 @@
         stopHomeBgm(0);
       }
 
-      // 1. 小朋友群體歡樂起跳動畫
-      const kidsImg = document.getElementById('dance-team-kids-img');
-      if (kidsImg) {
-        kidsImg.classList.remove('anim-kids-jump');
-        void kidsImg.offsetWidth;
-        kidsImg.classList.add('anim-kids-jump');
-        setTimeout(() => {
-          kidsImg.classList.remove('anim-kids-jump');
-        }, 900);
+      const actor = document.getElementById('home-actor-4');
+      if (actor) {
+        actor.style.transition = 'transform 0.4s ease, opacity 0.35s ease';
+        actor.style.transform += ' scale(1.3)';
       }
 
-      // 2. 舞台發光水波漣漪光環
-      const ripple = document.getElementById('dance-team-ripple');
-      if (ripple) {
-        ripple.classList.remove('anim-stage-ripple');
-        void ripple.offsetWidth;
-        ripple.classList.add('anim-stage-ripple');
-        setTimeout(() => {
-          ripple.classList.remove('anim-stage-ripple');
-        }, 900);
-      }
-
-      // 3. 放射狀星星與音符爆發特效
-      spawnCelebrationParticles();
-
-      // 4. 順暢切入 K-Pop 舞蹈戰隊 5 位小朋友 3D 轉盤選單頁面
       setTimeout(() => {
         openDancerSquadView();
         isTransitioningPlanet = false;
@@ -3773,18 +4129,46 @@
       `;
     }
 
-    // 🪐 統一套用星球專屬主題色系 (Planet 1 晨光亮色系 vs Planet 2 星光狂歡系) 與左上角 300% 放大首頁星球壓底視覺
+    // 🪐 統一套用星球專屬主題色系 (Planet 1 晨光亮色系 / Planet 2 星光狂歡系 / Planet 3 J-Pop 櫻花偶像 / Planet 4 R&B 靈魂放克) 與左上角 300% 放大首頁星球壓底視覺
     function applyPlanetThemeToViews(albumId) {
-      const isP1 = albumId === 'album_1';
-      const planetImgSrc = isP1 ? './images/ui/planet1_morning.png' : './images/ui/planet2_groove.png';
-      const planetGlowClass = isP1 ? 'glow-planet-morning' : 'glow-planet-groove';
+      let planetImgSrc = './images/ui/planet1_morning.png';
+      let planetGlowClass = 'glow-p1';
+      let glowGrad = 'from-amber-400/55 via-yellow-300/40 to-orange-400/25';
+      let cornerGrad = 'bg-sky-300/30';
+      let themeClass = 'theme-planet-1';
 
-      // 1. 切換容器主題 class (.theme-planet-1 / .theme-planet-2)
+      if (albumId === 'album_1') {
+        planetImgSrc = './images/ui/planet1_morning.png';
+        planetGlowClass = 'glow-p1';
+        glowGrad = 'from-amber-400/55 via-yellow-300/40 to-orange-400/25';
+        cornerGrad = 'bg-sky-300/30';
+        themeClass = 'theme-planet-1';
+      } else if (albumId === 'album_2') {
+        planetImgSrc = './images/ui/planet2_groove.png';
+        planetGlowClass = 'glow-p2';
+        glowGrad = 'from-fuchsia-600/45 via-purple-500/35 to-sky-400/20';
+        cornerGrad = 'bg-fuchsia-500/20';
+        themeClass = 'theme-planet-2';
+      } else if (albumId === 'album_3') {
+        planetImgSrc = './images/ui/planet3_jpop.png';
+        planetGlowClass = 'glow-p3-jpop';
+        glowGrad = 'from-rose-500/55 via-pink-400/40 to-teal-400/25';
+        cornerGrad = 'bg-teal-300/30';
+        themeClass = 'theme-planet-3';
+      } else if (albumId === 'album_4') {
+        planetImgSrc = './images/ui/planet4_rnb.png';
+        planetGlowClass = 'glow-p4-rnb';
+        glowGrad = 'from-orange-500/55 via-amber-400/40 to-purple-800/30';
+        cornerGrad = 'bg-purple-600/25';
+        themeClass = 'theme-planet-4';
+      }
+
+      // 1. 切換容器主題 class
       const drawerEl = document.getElementById('album-playlist-drawer');
       [viewAlbumLevels, viewDance, drawerEl].forEach(el => {
         if (!el) return;
-        el.classList.toggle('theme-planet-1', isP1);
-        el.classList.toggle('theme-planet-2', !isP1);
+        el.classList.remove('theme-planet-1', 'theme-planet-2', 'theme-planet-3', 'theme-planet-4');
+        el.classList.add(themeClass);
       });
 
       // 2. 更新左上角 300% 放大首頁星球壓底圖與光暈 (關卡頁 + 單曲播放頁)
@@ -3794,17 +4178,13 @@
       const levelsHeaderIcon = document.getElementById('levels-header-planet-icon');
       if (levelsPlanetImg) {
         levelsPlanetImg.src = planetImgSrc;
-        levelsPlanetImg.className = `w-full h-full object-contain ${isP1 ? 'opacity-60' : 'opacity-48'} ${planetGlowClass}`;
+        levelsPlanetImg.className = `w-full h-full object-contain ${themeClass === 'theme-planet-1' || themeClass === 'theme-planet-3' ? 'opacity-65' : 'opacity-48'} ${planetGlowClass}`;
       }
       if (levelsPlanetGlow) {
-        levelsPlanetGlow.className = isP1
-          ? 'absolute inset-8 rounded-full bg-gradient-to-br from-amber-400/55 via-yellow-300/40 to-orange-400/25 blur-3xl'
-          : 'absolute inset-8 rounded-full bg-gradient-to-br from-fuchsia-600/45 via-purple-500/35 to-sky-400/20 blur-3xl';
+        levelsPlanetGlow.className = `absolute inset-8 rounded-full bg-gradient-to-br ${glowGrad} blur-3xl`;
       }
       if (levelsCornerGlow) {
-        levelsCornerGlow.className = isP1
-          ? 'absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-sky-300/30 blur-3xl'
-          : 'absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-fuchsia-500/20 blur-3xl';
+        levelsCornerGlow.className = `absolute -bottom-24 -right-24 w-96 h-96 rounded-full ${cornerGrad} blur-3xl`;
       }
       if (levelsHeaderIcon) {
         levelsHeaderIcon.src = planetImgSrc;
@@ -3816,20 +4196,16 @@
       const danceCornerGlow = document.getElementById('dance-bg-corner-glow');
       if (dancePlanetImg) {
         dancePlanetImg.src = planetImgSrc;
-        dancePlanetImg.className = `w-full h-full object-contain ${isP1 ? 'opacity-65' : 'opacity-50'} ${planetGlowClass}`;
+        dancePlanetImg.className = `w-full h-full object-contain ${themeClass === 'theme-planet-1' || themeClass === 'theme-planet-3' ? 'opacity-65' : 'opacity-50'} ${planetGlowClass}`;
       }
       if (dancePlanetWatermark) {
         dancePlanetWatermark.src = planetImgSrc;
       }
       if (dancePlanetGlow) {
-        dancePlanetGlow.className = isP1
-          ? 'absolute inset-6 rounded-full bg-gradient-to-br from-amber-400/60 via-yellow-300/45 to-orange-400/25 blur-3xl'
-          : 'absolute inset-6 rounded-full bg-gradient-to-br from-fuchsia-600/50 via-purple-500/35 to-sky-400/20 blur-3xl';
+        dancePlanetGlow.className = `absolute inset-6 rounded-full bg-gradient-to-br ${glowGrad} blur-3xl`;
       }
       if (danceCornerGlow) {
-        danceCornerGlow.className = isP1
-          ? 'absolute -bottom-20 right-1/4 w-80 h-80 rounded-full bg-sky-300/25 blur-3xl'
-          : 'absolute -bottom-20 right-1/4 w-80 h-80 rounded-full bg-fuchsia-500/18 blur-3xl';
+        danceCornerGlow.className = `absolute -bottom-20 right-1/4 w-80 h-80 rounded-full ${cornerGrad} blur-3xl`;
       }
     }
 
@@ -4440,15 +4816,27 @@
         if (album.id === 'album_1') {
           aTitle.className = "text-lg md:text-xl font-black text-amber-950 flex items-center gap-2 drop-shadow-[0_1px_0_rgba(255,255,255,0.95)]";
           aTitle.innerHTML = `<span class="text-amber-600">☀️ Planet 1:</span> ${album.zhTitle}`;
-        } else {
+        } else if (album.id === 'album_2') {
           aTitle.className = "text-lg md:text-xl font-black text-white flex items-center gap-2 drop-shadow-[0_2px_10px_rgba(217,70,239,0.5)]";
           aTitle.innerHTML = `<span class="text-fuchsia-300">🪐 Planet 2:</span> ${album.zhTitle}`;
+        } else if (album.id === 'album_3') {
+          aTitle.className = "text-lg md:text-xl font-black text-rose-950 flex items-center gap-2 drop-shadow-[0_1px_0_rgba(255,255,255,0.95)]";
+          aTitle.innerHTML = `<span class="text-rose-600">🌸 Planet 3:</span> ${album.zhTitle}`;
+        } else if (album.id === 'album_4') {
+          aTitle.className = "text-lg md:text-xl font-black text-amber-300 flex items-center gap-2 drop-shadow-[0_2px_10px_rgba(249,115,22,0.5)]";
+          aTitle.innerHTML = `<span class="text-orange-400">🎷 Planet 4:</span> ${album.zhTitle}`;
         }
       }
       if (aDesc) {
-        aDesc.className = album.id === 'album_1'
-          ? "text-xs text-amber-800 font-bold"
-          : "text-xs text-sky-200/85 font-bold";
+        if (album.id === 'album_1') {
+          aDesc.className = "text-xs text-amber-800 font-bold";
+        } else if (album.id === 'album_2') {
+          aDesc.className = "text-xs text-sky-200/85 font-bold";
+        } else if (album.id === 'album_3') {
+          aDesc.className = "text-xs text-rose-800 font-bold";
+        } else if (album.id === 'album_4') {
+          aDesc.className = "text-xs text-orange-200 font-bold";
+        }
         aDesc.innerText = `${album.subtitle} · 共 10 個趣味動態關卡`;
       }
 
@@ -4470,26 +4858,8 @@
       // 確保攝影機硬體關閉
       stopRealCamera();
 
-      // 復原首頁雙星球、天團、頂底欄狀態
-      const p1 = document.getElementById('planet-container-album_1');
-      const p2 = document.getElementById('planet-container-album_2');
-      const danceTeam = document.getElementById('dance-team-card');
       const lobbyHeader = document.querySelector('#view-lobby > header');
       const lobbyFooter = document.querySelector('#view-lobby > footer');
-
-      [p1, p2].forEach(p => {
-        if (p) {
-          p.classList.remove('anim-planet-warp-1', 'anim-planet-warp-2');
-          p.style.opacity = '1';
-          p.style.transform = '';
-          p.style.transition = '';
-        }
-      });
-      if (danceTeam) {
-        danceTeam.style.opacity = '1';
-        danceTeam.style.transform = '';
-        danceTeam.style.transition = '';
-      }
       if (lobbyHeader) {
         lobbyHeader.style.opacity = '1';
         lobbyHeader.style.transition = '';
@@ -4499,14 +4869,23 @@
         lobbyFooter.style.transition = '';
       }
 
+      // 重置 3D carousel actor 動畫狀態
+      for (let i = 0; i < HOMEPAGE_5_ITEMS.length; i++) {
+        const actor = document.getElementById(`home-actor-${i}`);
+        if (actor) {
+          actor.style.transition = '';
+        }
+      }
+
       isTransitioningPlanet = false;
       if (viewDancerSquad) viewDancerSquad.classList.add('hidden');
       if (viewAlbumLevels) viewAlbumLevels.classList.add('hidden');
       if (viewDance) viewDance.classList.add('hidden');
       viewLobby.classList.remove('hidden');
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      // 回到首頁，恢復首頁專屬背景音樂
+      // 回到首頁，恢復首頁專屬背景音樂與 3D 舞台位置
       startHomeBgm();
+      updateHomeCarouselPositions();
     }
 
     // 從每一首跳舞教室直接返回最前面的雙星球首頁
@@ -4552,33 +4931,53 @@
       const album = window.KAI_ALBUM_DATABASE[albumId] || window.KAI_ALBUM_DATABASE['album_1'];
       if (!album) return;
 
-      const isP1 = albumId === 'album_1';
-
       container.innerHTML = album.songs.map((song) => {
         const isCurrentActive = song.id === currentSongKey;
         const coachBadge = song.timeline && song.timeline.some(s => s.video) 
           ? '<span class="jelly-btn-gold text-[10px] font-black px-2 py-0.5 rounded-full">🎬 3D 示範影片</span>'
           : '<span class="jelly-btn-cyan text-[10px] font-black px-2 py-0.5 rounded-full">📸 動作引導寫真</span>';
 
-        const cardThemeClass = isP1 
-          ? `jelly-song-card-p1 ${isCurrentActive ? 'ring-2 ring-amber-500/80 border-amber-500' : ''}`
-          : `jelly-song-card-p2 ${isCurrentActive ? 'ring-2 ring-fuchsia-400/70 border-fuchsia-300' : ''}`;
+        let cardThemeClass = `jelly-song-card-p1 ${isCurrentActive ? 'ring-2 ring-amber-500/80 border-amber-500' : ''}`;
+        let btnClass = 'jelly-btn-gold';
+        let numberBadge = 'bg-amber-400 text-slate-950 border-amber-200';
+        let titleColorClass = 'text-amber-950 group-hover:text-orange-600';
+        let zhColorClass = 'text-amber-700';
+        let tagColorClass = 'text-sky-700';
+        let descColorClass = 'text-slate-700';
+        let footerBorderClass = 'border-amber-500/25';
+        let metaColorClass = 'text-amber-900/85';
 
-        const btnClass = isP1 ? 'jelly-btn-gold' : 'jelly-btn-cyan';
-
-        const numberBadge = isP1
-          ? 'bg-amber-400 text-slate-950 border-amber-200'
-          : 'bg-fuchsia-500/90 text-white border-fuchsia-300';
-
-        const titleColorClass = isP1
-          ? 'text-amber-950 group-hover:text-orange-600'
-          : 'text-white group-hover:text-amber-300';
-
-        const zhColorClass = isP1 ? 'text-amber-700' : 'text-fuchsia-300';
-        const tagColorClass = isP1 ? 'text-sky-700' : 'text-sky-200';
-        const descColorClass = isP1 ? 'text-slate-700' : 'text-slate-200/85';
-        const footerBorderClass = isP1 ? 'border-amber-500/25' : 'border-white/15';
-        const metaColorClass = isP1 ? 'text-amber-900/85' : 'text-sky-200/80';
+        if (albumId === 'album_2') {
+          cardThemeClass = `jelly-song-card-p2 ${isCurrentActive ? 'ring-2 ring-fuchsia-400/70 border-fuchsia-300' : ''}`;
+          btnClass = 'jelly-btn-cyan';
+          numberBadge = 'bg-fuchsia-500/90 text-white border-fuchsia-300';
+          titleColorClass = 'text-white group-hover:text-amber-300';
+          zhColorClass = 'text-fuchsia-300';
+          tagColorClass = 'text-sky-200';
+          descColorClass = 'text-slate-200/85';
+          footerBorderClass = 'border-white/15';
+          metaColorClass = 'text-sky-200/80';
+        } else if (albumId === 'album_3') {
+          cardThemeClass = `jelly-song-card-p1 ${isCurrentActive ? 'ring-2 ring-rose-500/80 border-rose-400' : ''}`;
+          btnClass = 'jelly-btn-gold';
+          numberBadge = 'bg-rose-500 text-white border-rose-300';
+          titleColorClass = 'text-rose-950 group-hover:text-pink-600';
+          zhColorClass = 'text-rose-600';
+          tagColorClass = 'text-teal-700';
+          descColorClass = 'text-slate-700';
+          footerBorderClass = 'border-rose-400/25';
+          metaColorClass = 'text-rose-900/85';
+        } else if (albumId === 'album_4') {
+          cardThemeClass = `jelly-song-card-p2 ${isCurrentActive ? 'ring-2 ring-orange-500/80 border-orange-400' : ''}`;
+          btnClass = 'jelly-btn-cyan';
+          numberBadge = 'bg-orange-500 text-slate-950 border-amber-300';
+          titleColorClass = 'text-white group-hover:text-amber-300';
+          zhColorClass = 'text-amber-400';
+          tagColorClass = 'text-orange-300';
+          descColorClass = 'text-slate-200/85';
+          footerBorderClass = 'border-orange-500/30';
+          metaColorClass = 'text-orange-200/80';
+        }
 
         return `
           <div onclick="selectSong('${song.id}')" 
@@ -7209,8 +7608,15 @@
     updatePlaybackUI();
     switchAlbum(currentAlbumId);
     updateLoopModeUI();
+    initHomeCarousel();
     // 立即启动发光火柴人渲染主循环（常驻舞台，实时渲染）
     renderStickmanLoop();
+
+    window.addEventListener('resize', () => {
+      if (viewLobby && !viewLobby.classList.contains('hidden')) {
+        updateHomeCarouselPositions();
+      }
+    });
 
     // 页面加载完成后后台异步预热多人姿态 AI 引擎并尝试啟動首頁背景音樂
     window.addEventListener('load', () => {
