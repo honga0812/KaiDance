@@ -2910,22 +2910,29 @@
 
     let homeBgmPlayPromise = null;
 
-    function isLobbyActive() {
+    function isLobbyOrSquadActive() {
       const lobby = document.getElementById('view-lobby');
+      const squadView = document.getElementById('view-dancer-squad');
       const danceView = document.getElementById('view-dance');
       const albumView = document.getElementById('view-album-levels');
       const isLobbyVisible = lobby && !lobby.classList.contains('hidden');
+      const isSquadVisible = squadView && !squadView.classList.contains('hidden');
       const isDanceHidden = !danceView || danceView.classList.contains('hidden');
       const isLevelsHidden = !albumView || albumView.classList.contains('hidden');
-      return isLobbyVisible && isDanceHidden && isLevelsHidden;
+      return (isLobbyVisible || isSquadVisible) && isDanceHidden && isLevelsHidden;
+    }
+
+    function isSquadViewActive() {
+      const squadView = document.getElementById('view-dancer-squad');
+      return !!(squadView && !squadView.classList.contains('hidden'));
     }
 
     function startHomeBgm() {
       const audioHomeBgm = document.getElementById('audio-home-bgm');
       if (!audioHomeBgm) return;
 
-      // 嚴格檢查：只有在首頁大廳且不在跳舞教室或關卡頁時才允許播放
-      if (!isLobbyActive()) {
+      // 嚴格檢查：只有在首頁大廳或舞團戰隊選單（且不在跳舞教室或星球關卡頁）時才允許播放
+      if (!isLobbyOrSquadActive()) {
         try { audioHomeBgm.pause(); } catch(e) {}
         updateHomeCdUI();
         return;
@@ -2941,14 +2948,19 @@
         audioHomeBgm._fadeTimer = null;
       }
 
-      // 由首頁音樂開關 (userSettings.spaceAmbient) 控制
+      // 由首頁音樂開關 (userSettings.spaceAmbient) 控制；若外面首頁關閉主題音樂，進戰隊選單也不會播放
       if (!userSettings.spaceAmbient) {
         audioHomeBgm.pause();
         updateHomeCdUI();
         return;
       }
-      // 進入首頁主題曲預設播放音量精確縮小為 30% (0.3)；若處於主題曲歌詞模式則為原聲 100%
-      audioHomeBgm.volume = isThemeSongLyricsActive ? 1.0 : 0.3;
+      // 首頁大廳預設音量為 30% (0.3)；進入舞團戰隊選單時音量再減低 50% (即 0.3 * 0.5 = 0.15)；歌詞模式為 100%
+      const targetVol = isThemeSongLyricsActive ? 1.0 : (isSquadViewActive() ? 0.15 : 0.3);
+      if (!audioHomeBgm.paused) {
+        rampAudioVolume(audioHomeBgm, targetVol, 320);
+      } else {
+        audioHomeBgm.volume = targetVol;
+      }
       audioHomeBgm.loop = true;  // 循環播放
 
       try {
@@ -2956,9 +2968,11 @@
         if (homeBgmPlayPromise !== undefined) {
           homeBgmPlayPromise.then(() => {
             homeBgmPlayPromise = null;
-            // 關鍵防線：如果播放啟動時已經離開首頁（如已進入跳舞教室），強制立即暫停！
-            if (!isLobbyActive() || !userSettings.spaceAmbient) {
+            // 關鍵防線：如果播放啟動時已經離開首頁與戰隊選單（如已進入跳舞教室），強制立即暫停！
+            if (!isLobbyOrSquadActive() || !userSettings.spaceAmbient) {
               try { audioHomeBgm.pause(); } catch(e) {}
+            } else {
+              audioHomeBgm.volume = isThemeSongLyricsActive ? 1.0 : (isSquadViewActive() ? 0.15 : 0.3);
             }
             updateHomeCdUI();
           }).catch(e => {
@@ -3554,9 +3568,13 @@
 
       playStarChimeSFX();
       stopSpaceAmbient(0);
-      stopHomeBgm(0);
+      // 進入舞團戰隊選單時保留首頁主題音樂並將音量減低 50% (0.3 -> 0.15)；若首頁音樂為關閉則不播放
       const homeAudioOnSquad = document.getElementById('audio-home-bgm');
-      if (homeAudioOnSquad) { try { homeAudioOnSquad.pause(); } catch(e) {} }
+      if (userSettings.spaceAmbient && homeAudioOnSquad && !homeAudioOnSquad.paused) {
+        rampAudioVolume(homeAudioOnSquad, 0.15, 320);
+      } else if (!userSettings.spaceAmbient) {
+        stopHomeBgm(0);
+      }
 
       // 1. 小朋友群體歡樂起跳動畫
       const kidsImg = document.getElementById('dance-team-kids-img');
@@ -3819,7 +3837,7 @@
     // 🌟 K-Pop 舞蹈戰隊 5 位小朋友 3D 無圖卡空間拖曳旋轉選單與專屬 4 首歌單連播系統
     // ========================================================
     const viewDancerSquad = document.getElementById('view-dancer-squad');
-    let currentDancerIndex = 0; // 0: Kai, 1: 妞, 2: HiHi, 3: Mina, 4: MiMi
+    let currentDancerIndex = 0; // 0: Kai, 1: Jessie, 2: Tim, 3: Mina, 4: MiMi
     let dancerStageAngle = 0; // 連續 3D 空間旋轉角度 (度)，支援 360 度無縫拖曳
     let isDancerDragging = false;
     let isDancerPlaylistMode = false; // 是否處於小朋友專屬 4 首歌單連播模式
@@ -3846,14 +3864,14 @@
       {
         index: 1,
         id: 'kid2_mia',
-        name: '妞',
-        shortLabel: '👧 妞',
+        name: 'Jessie',
+        shortLabel: '👧 Jessie',
         emoji: '👧💖',
         styleTag: '💖 K-Pop 夢幻鐳射女團風',
         image: './images/album2_kpop/kid2_girl_kpop_v1.jpg',
         cutout: './images/album2_kpop/cutouts/kid2_niu.png',
         voiceAudioId: 'audio-kid-voice-1',
-        voiceText: "耶！我是妞，準備好了嗎？跟我一起閃亮搖擺吧！",
+        voiceText: "耶！我是 Jessie，準備好了嗎？跟我一起閃亮搖擺吧！",
         songs: ['a1_s02', 'a1_s07', 'a2_s01', 'a2_s07'],
         accentColor: '#f472b6',
         glowRgba: 'rgba(244, 114, 182, 0.88)',
@@ -3863,14 +3881,14 @@
       {
         index: 2,
         id: 'kid3_max',
-        name: 'HiHi',
-        shortLabel: '👦 HiHi',
+        name: 'Tim',
+        shortLabel: '👦 Tim',
         emoji: '👦🎧',
         styleTag: '🎧 K-Pop 翠綠霓虹嘻哈風',
         image: './images/album2_kpop/kid3_boy_kpop_v1.jpg',
         cutout: './images/album2_kpop/cutouts/kid3_hihi.png',
         voiceAudioId: 'audio-kid-voice-2',
-        voiceText: "Yo! Let's party! 我是 HiHi，跟上節拍一起跳起來！",
+        voiceText: "Yo! Let's party! 我是 Tim，跟上節拍一起跳起來！",
         songs: ['a1_s03', 'a1_s08', 'a2_s04', 'a2_s08'],
         accentColor: '#34d399',
         glowRgba: 'rgba(52, 211, 153, 0.85)',
@@ -4134,7 +4152,7 @@
         if (footer) {
           if (isFrontCenter) {
             footer.className = "-mt-1 px-3.5 py-1 rounded-full text-center text-xs sm:text-sm font-black bg-gradient-to-r from-amber-300 via-yellow-300 to-orange-400 text-slate-950 border-2 border-white shadow-[0_0_20px_rgba(251,191,36,0.85)] flex items-center gap-1.5 whitespace-nowrap";
-            footer.innerHTML = `<span>${d.emoji} ${d.name}</span><span class="text-[11px] bg-slate-950/20 px-1.5 py-0.2 rounded-full">🔊 領舞主角</span>`;
+            footer.innerHTML = `<span>${d.emoji} ${d.name}</span><span class="text-[11px] bg-slate-950/20 px-1.5 py-0.2 rounded-full">▶ 再點一下開跳</span>`;
           } else {
             footer.className = "-mt-1 px-2.5 py-0.5 rounded-full text-center text-[11px] sm:text-xs font-bold bg-slate-900/85 text-slate-200 border border-white/25 shadow flex items-center gap-1 whitespace-nowrap";
             footer.innerHTML = `<span>${d.emoji} ${d.name}</span>`;
@@ -4154,7 +4172,7 @@
         pillsEl.innerHTML = DANCER_SQUAD_DATA.map((d, idx) => {
           const isAct = idx === currentDancerIndex;
           return `
-            <button onclick="selectDancerByIndex(${idx}, true)"
+            <button onclick="handleDancerTapOrSelect(${idx})"
                     class="px-2.5 sm:px-3 py-1 rounded-full text-xs font-black transition-all cursor-pointer flex items-center gap-1 ${
                       isAct
                         ? 'bg-gradient-to-r from-amber-300 to-pink-400 text-slate-950 shadow-[0_0_16px_rgba(251,191,36,0.75)] scale-105 border-2 border-white'
@@ -4267,6 +4285,16 @@
       }
     }
 
+    // 點選小朋友互動邏輯：若點選非當前主角，旋轉至正中央並播放引導語音；若已在正中央再次點下去，直接進入專屬 4 首歌播放！
+    function handleDancerTapOrSelect(idx) {
+      const targetIdx = ((idx % 5) + 5) % 5;
+      if (targetIdx === currentDancerIndex) {
+        playSelectedDancerAllSongs();
+      } else {
+        selectDancerByIndex(targetIdx, true);
+      }
+    }
+
     // 往左轉 (-1) 或 往右轉 (+1)
     function rotateDancerCarousel(step) {
       selectDancerByIndex(currentDancerIndex + step, true);
@@ -4275,13 +4303,14 @@
     // 進入 K-Pop 舞蹈戰隊 3D 轉盤選單頁面
     function openDancerSquadView() {
       stopSpaceAmbient(0.3);
-      stopHomeBgm(0.3);
       if (viewAlbumLevels) viewAlbumLevels.classList.add('hidden');
       if (viewDance) viewDance.classList.add('hidden');
       viewLobby.classList.add('hidden');
       if (viewDancerSquad) {
         viewDancerSquad.classList.remove('hidden');
       }
+      // 保留首頁主題音樂並將音量減低 50% (0.3 -> 0.15)；若首頁主題音樂為關閉則不播放
+      startHomeBgm();
       selectDancerByIndex(currentDancerIndex, true);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -4296,6 +4325,7 @@
       const dancer = DANCER_SQUAD_DATA[currentDancerIndex] || DANCER_SQUAD_DATA[0];
       const targetSongId = dancer.songs[orderIdx] || dancer.songs[0];
       stopAllKidPreviewVoices();
+      stopHomeBgm(0);
       isDancerPlaylistMode = true;
       activeDancerIndexForPlay = currentDancerIndex;
       isAlbumContinuousPlay = true;
@@ -4356,9 +4386,9 @@
         viewport.classList.remove('is-dragging');
 
         if (!isDancerDragging) {
-          // 單純點擊某位小朋友：直接將該小朋友轉至正中央並播放童聲
+          // 單純點擊某位小朋友：若非當前主角則轉至正中央並播放童聲；若已是正中央主角再次點下去，直接進入專屬歌曲播放！
           if (pointerDownActorIdx !== null && !isNaN(pointerDownActorIdx)) {
-            selectDancerByIndex(pointerDownActorIdx, true);
+            handleDancerTapOrSelect(pointerDownActorIdx);
           }
           pointerDownActorIdx = null;
           return;
@@ -4367,7 +4397,7 @@
         isDancerDragging = false;
         pointerDownActorIdx = null;
 
-        // 根據放開時的角度與滑動慣性，計算最接近正前方 (0度) 的小朋友索引
+        // 根據放開時的角度與滑動慣性，計算最接近正前方 (0度) 的小朋友索引並播放引導語音
         const projectedAngle = dancerStageAngle + velocityX * 1.4;
         const rawIdx = Math.round(-projectedAngle / 72);
         const snappedIdx = ((rawIdx % 5) + 5) % 5;
@@ -4983,6 +5013,7 @@
       if (isDancerPlaylistMode && viewDancerSquad) {
         viewDancerSquad.classList.remove('hidden');
         updateDancer3DCarouselUI();
+        startHomeBgm();
       } else if (viewAlbumLevels) {
         viewAlbumLevels.classList.remove('hidden');
         renderLobbySongs(currentAlbumId);

@@ -43,7 +43,7 @@ KIDS_PROFILES = [
     },
     {
         "kid_id": "Kid 2",
-        "name": "妞 (波浪雙馬尾女孩)",
+        "name": "Jessie (波浪雙馬尾女孩)",
         "gender": "Girl",
         "songs": "Track 01《Ready, Set, Shine!》、Track 07《K-ABC Groove》",
         "appearance_zh": "3D Pixar 風格甜美小女孩，淺棕色大波浪捲雙馬尾（綁閃亮絲帶）、水汪汪棕色大眼、甜美酒窩笑容",
@@ -60,7 +60,7 @@ KIDS_PROFILES = [
     },
     {
         "kid_id": "Kid 3",
-        "name": "HiHi (蓬鬆呆毛棕髮男孩)",
+        "name": "Tim (蓬鬆呆毛棕髮男孩)",
         "gender": "Boy",
         "songs": "Track 04《Zoo Beat Parade》、Track 08《Pop Pop Freeze!》",
         "appearance_zh": "3D Pixar 風格可愛小男孩，蓬鬆厚實微捲棕髮與頭頂呆毛、圓滾滾棕色大眼、小巧圓鼻與陽光笑容",

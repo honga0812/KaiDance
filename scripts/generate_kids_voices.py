@@ -18,20 +18,20 @@ KIDS_VOICES = [
     },
     {
         "id": "kid2_mia",
-        "name": "妞",
+        "name": "Jessie",
         "voice": "zh-CN-XiaoyiNeural",
         "rate": "+16%",
         "pitch": "+24Hz",
-        "text": "耶！我是妞，準備好了嗎？跟我一起閃亮搖擺吧！",
+        "text": "耶！我是 Jessie，準備好了嗎？跟我一起閃亮搖擺吧！",
         "ffmpeg_af": "highpass=f=90,treble=g=2,volume=1.45"
     },
     {
         "id": "kid3_max",
-        "name": "HiHi",
+        "name": "Tim",
         "voice": "zh-CN-YunxiaNeural",
         "rate": "+18%",
         "pitch": "+4Hz",
-        "text": "Yo! Let's party! 我是 HiHi，跟上節拍一起跳起來！",
+        "text": "Yo! Let's party! 我是 Tim，跟上節拍一起跳起來！",
         "ffmpeg_af": "highpass=f=90,treble=g=2,volume=1.45"
     },
     {
