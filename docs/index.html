@@ -1772,12 +1772,12 @@
       </div>
     </div>
 
-    <!-- 🎠 3D 旋轉舞台 (5 個等距項目，各間隔 72°，始終正面朝前 Billboard 縮放) -->
-    <div class="relative z-10 flex-1 flex items-center justify-center my-1 sm:my-2 min-h-[360px] sm:min-h-[420px]">
-      <div id="home-3d-stage" class="home-3d-stage relative w-full h-[360px] sm:h-[430px] flex items-center justify-center">
+    <!-- 🎠 3D 旋轉舞台 (5 個等距項目，各間隔 72°，始終正面朝前 Billboard 縮放，位置向上提拉避免遮擋下方資訊卡) -->
+    <div class="relative z-10 flex-1 flex items-center justify-center my-0 sm:my-1 min-h-[350px] sm:min-h-[410px]">
+      <div id="home-3d-stage" class="home-3d-stage relative w-full h-[350px] sm:h-[410px] flex items-center justify-center">
 
-        <!-- 舞台底部霓虹發光旋轉圓盤地面 (隨選中項目切換光暈主色) -->
-        <div id="home-turntable-floor" class="absolute top-[82%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[620px] h-[620px] rounded-full border-2 border-white/25 pointer-events-none transition-all duration-500" style="transform: translate(-50%, -50%) rotateX(76deg); background: radial-gradient(circle, rgba(255,255,255,0.22) 0%, rgba(245,158,11,0.25) 35%, rgba(56,189,248,0.18) 60%, transparent 75%); box-shadow: 0 0 50px rgba(245,158,11,0.45), inset 0 0 40px rgba(56,189,248,0.35);"></div>
+        <!-- 舞台底部霓虹發光旋轉圓盤地面 (隨選中項目切換光暈主色，位置同步上移配合軌道) -->
+        <div id="home-turntable-floor" class="absolute top-[73%] left-1/2 -translate-x-1/2 -translate-y-1/2 w-[620px] h-[620px] rounded-full border-2 border-white/25 pointer-events-none transition-all duration-500" style="transform: translate(-50%, -50%) rotateX(76deg); background: radial-gradient(circle, rgba(255,255,255,0.22) 0%, rgba(245,158,11,0.25) 35%, rgba(56,189,248,0.18) 60%, transparent 75%); box-shadow: 0 0 50px rgba(245,158,11,0.45), inset 0 0 40px rgba(56,189,248,0.35);"></div>
 
         <!-- 5 個立體項目容器 (由 JS 動態建立) -->
         <div id="home-carousel-ring" class="relative w-full h-full flex items-center justify-center"></div>
@@ -1788,8 +1788,8 @@
     <audio id="audio-welcome-chorus" src="./audio/welcome_kids_chorus.mp3" preload="auto"></audio>
     <audio id="audio-home-bgm" src="./audio/Jump_to_the_Moon.mp3" loop preload="auto"></audio>
 
-    <!-- 底部：當前選中項目的詳細資訊面板與進入按鈕 (聯動響應) -->
-    <div class="relative z-20 bg-slate-900/90 border border-white/15 backdrop-blur-xl rounded-2xl p-3 sm:p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xl mb-1">
+    <!-- 底部：當前選中項目的詳細資訊面板與進入按鈕 (固定於底部，與上方選單保持充足淨空) -->
+    <div class="relative z-20 bg-slate-900/90 border border-white/15 backdrop-blur-xl rounded-2xl p-3 sm:p-4 flex flex-col sm:flex-row items-center justify-between gap-3 shadow-xl mb-1 mt-auto shrink-0">
       <div class="flex items-center gap-3">
         <div id="home-active-avatar" class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl flex items-center justify-center text-2xl sm:text-3xl border-2 border-amber-300 shadow-md shrink-0 bg-slate-950">
           ☀️
@@ -2080,10 +2080,10 @@
           ◀ 返回宇宙首頁
         </button>
         <div class="flex items-center gap-2.5">
-          <img src="./images/album2_kpop/kpop_dance_squad_5kids.jpg" alt="K-Pop 舞蹈戰隊" class="w-12 h-8 sm:w-16 sm:h-10 rounded-xl object-cover border border-amber-300/70 shadow-[0_0_14px_rgba(251,191,36,0.45)] shrink-0">
+          <img src="./images/album2_kpop/kpop_dance_squad_5kids.jpg" alt="Kai 舞蹈戰隊" class="w-12 h-8 sm:w-16 sm:h-10 rounded-xl object-cover border border-amber-300/70 shadow-[0_0_14px_rgba(251,191,36,0.45)] shrink-0">
           <div>
             <h2 class="text-base sm:text-lg md:text-xl font-black text-white flex items-center gap-2 drop-shadow-[0_2px_10px_rgba(244,114,182,0.6)]">
-              <span>🎤 K-Pop 舞蹈戰隊 · 小舞星選單</span>
+              <span>🎤 Kai舞蹈戰隊選單</span>
             </h2>
             <p class="text-[11px] sm:text-xs text-amber-200 font-bold">
               左右拖曳 3D 舞台空間旋轉選擇小朋友 · 聆聽活力童聲與專屬 4 首舞曲連播！
@@ -2101,15 +2101,24 @@
     <!-- 🎠 中央：3D 立體空間無圖卡拖曳旋轉舞台 (支援滑鼠/手指自由拖曳旋轉、正面朝前遠近縮放、直接點選小朋友) -->
     <section id="dancer-3d-stage-wrap" class="relative z-10 flex flex-col items-center justify-center my-0.5 select-none">
 
-      <!-- 當前選中小朋友頂部動態童聲對話氣泡 (點擊可重播童聲) -->
-      <div id="dancer-speech-bubble" onclick="replayCurrentDancerVoice()" class="relative z-30 mb-1 px-4 py-1.5 rounded-full bg-slate-900/90 backdrop-blur-md border-2 border-amber-300 shadow-[0_0_24px_rgba(251,191,36,0.5)] flex items-center gap-2 cursor-pointer transition-all hover:scale-105 active:scale-95">
-        <span id="dancer-speech-emoji" class="text-base sm:text-lg animate-bounce">👦⚡</span>
-        <span id="dancer-speech-text" class="text-xs sm:text-sm font-black text-amber-200 tracking-wide">
-          "Let's go! 我是 Kai，讓我們一起來跳舞吧！"
-        </span>
-        <span class="px-2 py-0.5 rounded-full bg-amber-400/25 border border-amber-300/50 text-[10px] font-black text-amber-300 flex items-center gap-1">
-          <span>🔊</span><span class="hidden sm:inline">重播童聲</span>
-        </span>
+      <!-- 當前選中小朋友頂部動態童聲對話氣泡與手勢提示列 (並列於上方，避免遮擋舞台下方選單) -->
+      <div class="relative z-30 mb-2 flex items-center justify-center gap-2.5 flex-wrap">
+        <!-- 童聲氣泡 (點擊可重播童聲) -->
+        <div id="dancer-speech-bubble" onclick="replayCurrentDancerVoice()" class="px-4 py-1.5 rounded-full bg-slate-900/90 backdrop-blur-md border-2 border-amber-300 shadow-[0_0_24px_rgba(251,191,36,0.5)] flex items-center gap-2 cursor-pointer transition-all hover:scale-105 active:scale-95">
+          <span id="dancer-speech-emoji" class="text-base sm:text-lg animate-bounce">👦⚡</span>
+          <span id="dancer-speech-text" class="text-xs sm:text-sm font-black text-amber-200 tracking-wide">
+            "Let's go! 我是 Kai，讓我們一起來跳舞吧！"
+          </span>
+          <span class="px-2 py-0.5 rounded-full bg-amber-400/25 border border-amber-300/50 text-[10px] font-black text-amber-300 flex items-center gap-1">
+            <span>🔊</span><span class="hidden sm:inline">重播童聲</span>
+          </span>
+        </div>
+
+        <!-- 舞台拖曳操作提示 (移至上方，徹底解決與下方選單文字及人物重疊問題) -->
+        <div class="px-3.5 py-1.5 rounded-full bg-slate-900/85 backdrop-blur-md border border-white/20 text-[11px] font-bold text-sky-200 flex items-center gap-1.5 shadow pointer-events-none">
+          <span>🖐️</span>
+          <span>在舞台空間左右拖曳即可旋轉 · 點選任一小朋友轉至正中央領舞</span>
+        </div>
       </div>
 
       <!-- 3D 環形無圖卡空間視口 (直接左右拖曳旋轉或點擊小朋友) -->
@@ -2127,12 +2136,6 @@
           <div id="dancer-3d-ring" class="dancer-3d-ring">
             <!-- Dynamically populated by ensureDancer3DCardsBuilt() -->
           </div>
-        </div>
-
-        <!-- 舞台底部輕巧拖曳操作提示 -->
-        <div class="relative z-30 -mt-2 mb-1 px-3.5 py-1 rounded-full bg-slate-900/75 border border-white/20 text-[11px] font-bold text-sky-200/90 flex items-center gap-1.5 pointer-events-none shadow">
-          <span>🖐️</span>
-          <span>在舞台空間左右拖曳即可旋轉 · 點選任一小朋友轉至正中央領舞</span>
         </div>
 
       </div>
@@ -3797,11 +3800,11 @@
                onclick="handleHomeActorClick(${item.index})"
                class="home-carousel-actor flex flex-col items-center justify-center cursor-pointer select-none">
             <div class="actor-body relative flex flex-col items-center">
-              <div class="relative w-44 h-44 sm:w-56 sm:h-56 flex items-center justify-center anim-float">
+              <div class="relative w-38 h-38 sm:w-48 sm:h-48 flex items-center justify-center anim-float">
                 <img src="${item.image}" alt="${item.title}" class="w-full h-full object-contain ${item.glowClass} pointer-events-none select-none">
               </div>
               <!-- 懸浮立體名牌 -->
-              <div id="home-actor-badge-${item.index}" class="-mt-4 px-3.5 py-1 rounded-full text-xs sm:text-sm font-black transition-all flex items-center gap-1.5 shadow-xl whitespace-nowrap">
+              <div id="home-actor-badge-${item.index}" class="-mt-3 px-3.5 py-1 rounded-full text-xs sm:text-sm font-black transition-all flex items-center gap-1.5 shadow-xl whitespace-nowrap">
                 <span>${item.shortName}</span>
               </div>
             </div>
@@ -3827,7 +3830,9 @@
     function updateHomeCarouselPositions() {
       const isCompact = window.innerWidth < 640;
       const radiusX = isCompact ? 145 : 275;
-      const radiusY = isCompact ? 36 : 64;
+      const radiusY = isCompact ? 32 : 56;
+      // 空間向上微調提升（offsetY），徹底拉開與下方星球介紹卡片的距離，確保零遮擋
+      const offsetY = isCompact ? -32 : -46;
 
       HOMEPAGE_5_ITEMS.forEach((item, idx) => {
         const actor = document.getElementById(`home-actor-${idx}`);
@@ -3840,12 +3845,12 @@
         const cosVal = Math.cos(rad);
 
         const posX = sinVal * radiusX;
-        const posY = cosVal * radiusY;
+        const posY = offsetY + cosVal * radiusY;
 
         // depth: 1 (front center, cosVal = 1) -> 0 (back, cosVal = -1)
         const depth = (cosVal + 1) / 2;
-        // 放大前方、縮小後方：大幅拉大景深縮放比例 (前景放大至 ~1.52x，後景縮小至 ~0.30x)
-        const scale = 0.30 + Math.pow(depth, 1.5) * 1.22;
+        // 放大前方、縮小後方：大幅拉大景深縮放比例 (前景放大至 ~1.46x，後景縮小至 ~0.30x)
+        const scale = 0.30 + Math.pow(depth, 1.5) * 1.16;
         const opacity = 0.22 + Math.pow(depth, 1.25) * 0.78;
         const blur = (1.0 - depth) * 2.5;
         const brightness = 0.60 + depth * 0.45;
