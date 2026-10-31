@@ -3766,8 +3766,8 @@
       {
         index: 4,
         id: 'dance_squad',
-        title: 'K-Pop 5 位小舞星戰隊',
-        shortName: '🎤 舞蹈戰隊',
+        title: 'Kai舞蹈戰隊',
+        shortName: '🎤 Kai舞蹈戰隊',
         badge: '🎤 舞團專屬 4 首歌單選單',
         style: 'Kai · Jessie · Tim · Mina · MiMi · 自由旋轉選角與專屬舞曲連播',
         color: '#38bdf8',
@@ -3775,7 +3775,7 @@
         floorGlow: 'rgba(56, 189, 248, 0.85)',
         iconText: '🎤',
         image: './images/ui/dance_team_kids.png',
-        btnText: '進入 5 位小舞星戰隊 ➜',
+        btnText: '進入 Kai舞蹈戰隊 ➜',
         type: 'squad'
       }
     ];
@@ -3794,13 +3794,16 @@
       if (!ring) return;
 
       ring.innerHTML = HOMEPAGE_5_ITEMS.map((item) => {
+        const isSquad = item.type === 'squad';
+        // 舞蹈戰隊為 5 位小朋友橫向集結圖，特別放大 1.5 倍以匹配單顆圓形星球的視覺量體
+        const containerClass = isSquad ? 'w-[230px] h-40 sm:w-[295px] sm:h-50' : 'w-38 h-38 sm:w-48 sm:h-48';
         return `
           <div id="home-actor-${item.index}"
                data-index="${item.index}"
                onclick="handleHomeActorClick(${item.index})"
                class="home-carousel-actor flex flex-col items-center justify-center cursor-pointer select-none">
             <div class="actor-body relative flex flex-col items-center">
-              <div class="relative w-38 h-38 sm:w-48 sm:h-48 flex items-center justify-center anim-float">
+              <div class="relative ${containerClass} flex items-center justify-center anim-float">
                 <img src="${item.image}" alt="${item.title}" class="w-full h-full object-contain ${item.glowClass} pointer-events-none select-none">
               </div>
               <!-- 懸浮立體名牌 -->
