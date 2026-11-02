@@ -488,7 +488,7 @@
         inset 0 3px 10px rgba(255, 255, 255, 0.95) !important;
     }
 
-    /* 🌸 第三顆星球：J-Pop 櫻花偶像星 (.theme-planet-3) */
+    /* 🌸 第三顆星球：櫻花星球 (.theme-planet-3) */
     .planet-levels-p3,
     .theme-planet-3.jelly-cosmic-stage,
     .theme-planet-3 .jelly-cosmic-stage {
@@ -511,7 +511,7 @@
       color: #881337 !important;
     }
 
-    /* 🎷 第四顆星球：R&B 靈魂節奏星 (.theme-planet-4) */
+    /* 🌅 第四顆星球：日落星球 (.theme-planet-4) */
     .planet-levels-p4,
     .theme-planet-4.jelly-cosmic-stage,
     .theme-planet-4 .jelly-cosmic-stage {
@@ -560,14 +560,106 @@
     .glow-p2 {
       filter: drop-shadow(0 0 14px rgba(244, 114, 182, 0.95)) drop-shadow(0 0 38px rgba(217, 70, 239, 0.7));
     }
-    .glow-p3-jpop {
+    .glow-p3-jpop,
+    .glow-p3 {
       filter: drop-shadow(0 0 14px rgba(251, 113, 133, 0.95)) drop-shadow(0 0 42px rgba(45, 212, 191, 0.7));
     }
-    .glow-p4-rnb {
+    .glow-p4-rnb,
+    .glow-p4 {
       filter: drop-shadow(0 0 14px rgba(249, 115, 22, 0.95)) drop-shadow(0 0 44px rgba(168, 85, 247, 0.7));
     }
     .glow-squad {
       filter: drop-shadow(0 0 14px rgba(255, 255, 255, 0.92)) drop-shadow(0 0 38px rgba(56, 189, 248, 0.75));
+    }
+
+    /* 🪐 4 顆星球交錯立體旋轉動態 Logo */
+    @keyframes cosmicPlanetsRevolve {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    @keyframes cosmicPlanetCounterRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(-360deg); }
+    }
+    .cosmic-4planets-ring {
+      position: relative;
+      width: 24px;
+      height: 24px;
+      animation: cosmicPlanetsRevolve 10s linear infinite;
+      transform-style: preserve-3d;
+    }
+    .cosmic-planet-orbit-item {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      object-fit: contain;
+      filter: drop-shadow(0 1px 3px rgba(0,0,0,0.8));
+      animation: cosmicPlanetCounterRotate 10s linear infinite;
+    }
+    .p-orbit-1 { top: -2px; left: 7px; }
+    .p-orbit-2 { top: 7px; right: -2px; }
+    .p-orbit-3 { bottom: -2px; left: 7px; }
+    .p-orbit-4 { top: 7px; left: -2px; }
+    .cosmic-planet-center-node {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 8px;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    /* 🪐 Kai 宇宙星空黑膠唱片機 (Turntable Player) CSS */
+    @keyframes vinylSpin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .turntable-vinyl-disc {
+      transition: box-shadow 0.4s ease;
+    }
+    .turntable-vinyl-disc.is-spinning {
+      animation: vinylSpin 4.2s linear infinite;
+    }
+    .turntable-vinyl-disc.is-paused {
+      animation-play-state: paused !important;
+    }
+    .vinyl-grooves {
+      background: repeating-radial-gradient(
+        circle at center,
+        rgba(15, 23, 42, 0.96) 0px,
+        rgba(30, 41, 59, 0.9) 2px,
+        rgba(10, 15, 30, 0.98) 4px,
+        rgba(51, 65, 85, 0.85) 6px,
+        rgba(8, 12, 24, 0.98) 8px
+      );
+    }
+    .turntable-tonearm {
+      transform-origin: 16px 16px;
+      transition: transform 0.65s cubic-bezier(0.34, 1.35, 0.64, 1);
+    }
+    .turntable-tonearm.is-playing {
+      transform: rotate(26deg);
+    }
+    .turntable-tonearm.is-parked {
+      transform: rotate(0deg);
+    }
+    /* 音訊律動跳動光柱 (Equalizer Bars) */
+    @keyframes eqWave {
+      0%, 100% { height: 6px; }
+      50% { height: 22px; }
+    }
+    .eq-bar {
+      transition: height 0.15s ease;
+    }
+    .is-playing-eq .eq-bar:nth-child(2n) {
+      animation: eqWave 0.75s ease-in-out infinite;
+    }
+    .is-playing-eq .eq-bar:nth-child(2n+1) {
+      animation: eqWave 0.9s ease-in-out infinite 0.18s;
+    }
+    .is-playing-eq .eq-bar:nth-child(3n) {
+      animation: eqWave 0.6s ease-in-out infinite 0.32s;
     }
 
     /* 🌌 宇宙深空動態背景：銀河系旋臂、斜向銀河星河、流星雨與璀璨動態星群 */
@@ -1764,6 +1856,26 @@
           <span class="text-xs">🚀</span>
           <span>全專連播</span>
         </button>
+
+        <!-- 🪐 Kai 宇宙星空唱片機 (4 顆星球交錯立體漸漸旋轉動態 Logo 入口) -->
+        <button id="btn-enter-turntable" onclick="openTurntablePlayer()" 
+                class="group px-3 py-1.5 rounded-full font-black text-xs text-white bg-gradient-to-r from-purple-900/90 via-indigo-900/90 to-slate-900/90 hover:from-purple-800 hover:to-indigo-800 border border-amber-400/70 hover:border-amber-300 shadow-[0_0_18px_rgba(251,191,36,0.35)] transition-all active:scale-95 flex items-center gap-2 cursor-pointer select-none shrink-0" 
+                title="進入 Kai 宇宙星空唱片機 · 欣賞 40 首全黑膠 CD 音樂">
+          <!-- 4 顆星球立體漸漸旋轉動態 Logo -->
+          <div class="relative w-6 h-6 flex items-center justify-center shrink-0">
+            <div class="cosmic-4planets-ring">
+              <img src="./images/ui/planet1_morning.png" alt="" class="cosmic-planet-orbit-item p-orbit-1">
+              <img src="./images/ui/planet2_groove.png" alt="" class="cosmic-planet-orbit-item p-orbit-2">
+              <img src="./images/ui/planet3_jpop.png" alt="" class="cosmic-planet-orbit-item p-orbit-3">
+              <img src="./images/ui/planet4_rnb.png" alt="" class="cosmic-planet-orbit-item p-orbit-4">
+              <div class="cosmic-planet-center-node">💿</div>
+            </div>
+          </div>
+          <div class="flex items-center gap-1">
+            <span class="text-amber-300">宇宙唱片機</span>
+            <span class="text-[10px] text-sky-200/90 font-bold hidden md:inline">· 40首黑膠CD</span>
+          </div>
+        </button>
       </div>
 
       <!-- 5 項目快速切換按鈕列 -->
@@ -2631,6 +2743,254 @@
     <!-- 本地背景音樂與真人名師口令播放器 -->
     <audio id="audio-bgm" src="./morning_sunshine_hello.mp3" preload="auto"></audio>
     <audio id="audio-voice" preload="auto"></audio>
+  </div>
+
+  <!-- ======================================================== -->
+  <!-- 🪐 Kai 宇宙星空黑膠唱片機 (全 4 張專輯純音樂欣賞廳) -->
+  <!-- ======================================================== -->
+  <div id="view-turntable" class="hidden flex-1 flex flex-col p-3 sm:p-4 md:p-5 max-w-6xl mx-auto w-full h-[calc(100vh-1.25rem)] max-h-[820px] min-h-[580px] rounded-3xl overflow-hidden border border-slate-700/80 shadow-[0_25px_70px_-12px_rgba(0,0,0,0.9)] my-1 select-none relative" style="background: radial-gradient(circle at 50% 25%, #18132c 0%, #0d0c1c 45%, #030209 100%);">
+    
+    <!-- 深空星光背景裝飾 -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div id="turntable-ambient-glow" class="absolute top-1/3 left-1/3 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] rounded-full blur-[110px] opacity-40 transition-all duration-700 pointer-events-none" style="background: radial-gradient(circle, #f59e0b 0%, #ec4899 45%, transparent 70%);"></div>
+      <div class="absolute top-10 right-20 text-amber-300 text-sm anim-star-slow">✦</div>
+      <div class="absolute top-24 left-24 text-cyan-300 text-base anim-star-fast">✨</div>
+      <div class="absolute bottom-28 right-32 text-pink-300 text-sm anim-star-med">✦</div>
+      <div class="absolute bottom-20 left-1/3 text-teal-300 text-xs anim-star-slow">★</div>
+    </div>
+
+    <!-- 頂部導航列：返回首頁 + 唱片機標章 + 4 顆星球專輯切換膠囊 -->
+    <header class="relative z-20 flex flex-wrap items-center justify-between gap-2.5 pb-2.5 border-b border-white/10 shrink-0">
+      <div class="flex items-center gap-2 sm:gap-3">
+        <button onclick="closeTurntablePlayer()" class="jelly-btn-gold px-3 sm:px-4 py-1.5 rounded-2xl font-black text-xs sm:text-sm flex items-center gap-1.5 active:scale-95 shadow-md cursor-pointer" title="返回星空首頁">
+          <span>←</span> <span>返回首頁</span>
+        </button>
+        <div class="flex items-center gap-2 px-3 py-1 rounded-full bg-slate-900/85 border border-amber-400/50 shadow-xs">
+          <span class="text-sm">🪐</span>
+          <span class="text-xs sm:text-sm font-black text-amber-300">Kai 宇宙唱片機</span>
+          <span class="text-[10px] text-slate-300 font-bold hidden sm:inline">· 40 首黑膠 CD 純音樂欣賞廳</span>
+        </div>
+      </div>
+
+      <!-- 4 顆星球專輯黑膠切換膠囊 (可自由點選切換要播放的專輯) -->
+      <div id="turntable-album-tabs" class="flex items-center gap-1 sm:gap-1.5 flex-wrap">
+        <button onclick="switchTurntableAlbum('album_1')" id="tab-turntable-album_1" class="px-2.5 sm:px-3 py-1 rounded-full text-xs font-black transition-all flex items-center gap-1.5 border border-amber-400/80 bg-amber-400 text-slate-950 shadow-[0_0_12px_rgba(251,191,36,0.5)]">
+          <img src="./images/ui/planet1_morning.png" alt="" class="w-4 h-4 object-contain inline-block">
+          <span>晨光星球</span>
+        </button>
+        <button onclick="switchTurntableAlbum('album_2')" id="tab-turntable-album_2" class="px-2.5 sm:px-3 py-1 rounded-full text-xs font-black transition-all flex items-center gap-1.5 border border-white/20 bg-slate-900/80 text-slate-300 hover:text-white hover:border-purple-400/60">
+          <img src="./images/ui/planet2_groove.png" alt="" class="w-4 h-4 object-contain inline-block">
+          <span>派對星球</span>
+        </button>
+        <button onclick="switchTurntableAlbum('album_3')" id="tab-turntable-album_3" class="px-2.5 sm:px-3 py-1 rounded-full text-xs font-black transition-all flex items-center gap-1.5 border border-white/20 bg-slate-900/80 text-slate-300 hover:text-white hover:border-pink-400/60">
+          <img src="./images/ui/planet3_jpop.png" alt="" class="w-4 h-4 object-contain inline-block">
+          <span>櫻花星球</span>
+        </button>
+        <button onclick="switchTurntableAlbum('album_4')" id="tab-turntable-album_4" class="px-2.5 sm:px-3 py-1 rounded-full text-xs font-black transition-all flex items-center gap-1.5 border border-white/20 bg-slate-900/80 text-slate-300 hover:text-white hover:border-orange-400/60">
+          <img src="./images/ui/planet4_rnb.png" alt="" class="w-4 h-4 object-contain inline-block">
+          <span>日落星球</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 中間核心舞台：左側黑膠唱盤機 (旋轉黑膠CD+機械唱臂) + 右側當前歌曲與 10 首歌單 -->
+    <main class="relative z-10 flex-1 flex flex-col md:flex-row items-center gap-4 py-2 min-h-0 w-full overflow-hidden">
+      
+      <!-- 左側：3D 黑膠唱盤機本體 (播放時黑膠旋轉、唱針移上唱盤；暫停時停止) -->
+      <section class="flex-1 w-full md:w-1/2 flex flex-col items-center justify-center p-2 relative h-full min-h-[280px]">
+        
+        <!-- 唱機底座機身 (Brushed Metallic Turntable Base) -->
+        <div class="relative w-[270px] sm:w-[310px] md:w-[340px] h-[270px] sm:h-[310px] md:h-[340px] rounded-3xl p-3 flex items-center justify-center border-2 border-slate-700/80 shadow-[0_20px_50px_rgba(0,0,0,0.8),inset_0_2px_8px_rgba(255,255,255,0.15)]" style="background: radial-gradient(circle at 40% 30%, #201a35 0%, #120e24 60%, #080612 100%);">
+          
+          <!-- 唱盤圓形金屬轉盤托盤 (Turntable Platter) -->
+          <div class="relative w-[230px] sm:w-[270px] md:w-[290px] h-[230px] sm:h-[270px] md:h-[290px] rounded-full p-2 flex items-center justify-center border border-slate-600/70 shadow-[0_0_30px_rgba(0,0,0,0.9)]" style="background: radial-gradient(circle, #332d4a 0%, #171329 80%, #0d0a1a 100%);">
+            
+            <!-- 🪐 黑膠唱片本體 (Vinyl Disc)：外圍黑膠微音軌 + 內圈星球 CD 圖案 (播放時旋轉，暫停時靜止) -->
+            <div id="turntable-disc" class="turntable-vinyl-disc relative w-full h-full rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.95)] overflow-hidden cursor-pointer is-paused" onclick="turntableTogglePlay()" title="點擊黑膠唱片切換 播放 / 暫停">
+              
+              <!-- 黑膠同心微溝槽與彩虹炫光折射 (Iridescent Vinyl Grooves) -->
+              <div class="absolute inset-0 rounded-full vinyl-grooves opacity-90"></div>
+              <div class="absolute inset-0 rounded-full opacity-35 bg-gradient-to-tr from-cyan-400 via-pink-400 to-amber-300 pointer-events-none mix-blend-screen" style="transform: rotate(35deg);"></div>
+              
+              <!-- 黑膠細緻邊緣光暈環 -->
+              <div class="absolute inset-2 rounded-full border border-white/15 pointer-events-none"></div>
+              <div class="absolute inset-5 rounded-full border border-white/10 pointer-events-none"></div>
+              <div class="absolute inset-8 rounded-full border border-white/10 pointer-events-none"></div>
+              
+              <!-- 內圈星球 CD 標籤 (直徑約佔 54%) -->
+              <div class="relative z-10 w-[54%] h-[54%] rounded-full p-1.5 flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.8)] border border-amber-300/40" style="background: radial-gradient(circle, #2d1f4d 0%, #150f29 100%);">
+                <!-- 星球高解析去背圖案 -->
+                <img id="turntable-planet-img" src="./images/ui/planet1_morning.png" alt="當前播放星球" class="w-full h-full object-contain filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)] pointer-events-none select-none">
+                
+                <!-- 中心主軸金屬孔 (Spindle) -->
+                <div class="absolute w-6 h-6 rounded-full bg-gradient-to-br from-amber-300 via-amber-500 to-amber-700 flex items-center justify-center shadow-lg border border-amber-200 pointer-events-none">
+                  <div class="w-2.5 h-2.5 rounded-full bg-slate-950 border border-amber-300/60 flex items-center justify-center">
+                    <span class="w-1 h-1 rounded-full bg-amber-400"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 機械唱臂 (Turntable Tonearm)：播放時落針至黑膠上，暫停時退回停靠座 -->
+            <div id="turntable-tonearm" class="turntable-tonearm absolute -top-1.5 -right-1.5 w-16 h-40 pointer-events-none is-parked z-30" style="filter: drop-shadow(0 6px 10px rgba(0,0,0,0.8));">
+              <!-- 唱臂金屬底座圓盤 -->
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-slate-300 via-slate-600 to-slate-900 border border-slate-400 shadow-md flex items-center justify-center">
+                <div class="w-3.5 h-3.5 rounded-full bg-amber-400 border border-amber-200 shadow-xs"></div>
+              </div>
+              <!-- 金屬鍍鉻唱臂桿 -->
+              <div class="absolute top-6 left-3 w-1.5 h-24 bg-gradient-to-r from-slate-200 via-slate-400 to-slate-600 rounded-full shadow"></div>
+              <!-- 唱頭與唱針 (Cartridge & Stylus) -->
+              <div class="absolute top-28 left-0.5 w-5 h-7 rounded-sm bg-gradient-to-br from-amber-400 via-orange-500 to-slate-900 border border-amber-200 shadow-md transform rotate-12 flex items-center justify-center">
+                <span class="text-[7px] text-white font-black">♪</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 唱機下方音訊節奏律動發光條 (Equalizer Waveform Bars) -->
+        <div id="turntable-equalizer" class="flex items-end justify-center gap-1.5 mt-3 h-6 w-full max-w-xs">
+          <!-- 12 根隨音樂跳動的節奏光柱 -->
+          <span class="eq-bar w-1.5 rounded-full bg-amber-400/90 h-2"></span>
+          <span class="eq-bar w-1.5 rounded-full bg-amber-300/90 h-4"></span>
+          <span class="eq-bar w-1.5 rounded-full bg-orange-400/90 h-3"></span>
+          <span class="eq-bar w-1.5 rounded-full bg-pink-400/90 h-5"></span>
+          <span class="eq-bar w-1.5 rounded-full bg-fuchsia-400/90 h-3"></span>
+          <span class="eq-bar w-1.5 rounded-full bg-cyan-400/90 h-6"></span>
+          <span class="eq-bar w-1.5 rounded-full bg-teal-400/90 h-4"></span>
+          <span class="eq-bar w-1.5 rounded-full bg-cyan-300/90 h-5"></span>
+          <span class="eq-bar w-1.5 rounded-full bg-pink-400/90 h-3"></span>
+          <span class="eq-bar w-1.5 rounded-full bg-rose-400/90 h-4"></span>
+          <span class="eq-bar w-1.5 rounded-full bg-amber-300/90 h-2"></span>
+          <span class="eq-bar w-1.5 rounded-full bg-amber-400/90 h-3"></span>
+        </div>
+      </section>
+
+      <!-- 右側：當前歌曲資訊 + 10 首專屬黑膠音軌點播清單 -->
+      <section class="flex-1 w-full md:w-1/2 flex flex-col justify-between p-2 h-full min-h-0 overflow-hidden">
+        
+        <!-- 當前正在播放的歌曲卡片 -->
+        <div class="relative bg-slate-900/80 backdrop-blur-md rounded-2xl p-3 sm:p-4 border border-amber-300/40 shadow-lg flex items-center justify-between gap-3 mb-2 shrink-0">
+          <div class="flex items-center gap-3 min-w-0">
+            <!-- 歌曲 3D 主題徽章 -->
+            <div id="turntable-song-emblem" class="shrink-0">
+              <!-- Rendered via renderSongThemeEmblem -->
+            </div>
+            <div class="min-w-0">
+              <div class="flex items-center gap-2">
+                <span id="turntable-track-badge" class="px-2 py-0.5 rounded-md text-[10px] font-black bg-amber-400 text-slate-950 shrink-0">#01</span>
+                <span id="turntable-planet-badge" class="text-[10px] font-bold text-amber-200 truncate">晨光星球 · 第 1 集</span>
+              </div>
+              <h2 id="turntable-song-title" class="text-base sm:text-lg font-black text-white truncate drop-shadow">
+                Morning Sunshine Hello
+              </h2>
+              <p id="turntable-song-desc" class="text-xs text-slate-300 truncate font-medium">
+                早晨起床向太陽公公打招呼，伸展筋骨深呼吸
+              </p>
+            </div>
+          </div>
+          <div class="shrink-0 flex flex-col items-end">
+            <span class="text-[9px] font-black px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/40">
+              ✨ 高音質立體聲
+            </span>
+            <span class="text-[10px] font-mono text-slate-400 mt-1">120 秒完整版</span>
+          </div>
+        </div>
+
+        <!-- 10 首曲目滾動播放清單 -->
+        <div class="flex-1 overflow-y-auto space-y-1.5 pr-1 min-h-0 allow-touch-scroll touch-scroll-y custom-scroll" id="turntable-playlist-container">
+          <!-- Dynamically populated via JS -->
+        </div>
+
+      </section>
+
+    </main>
+
+    <!-- 底部：專業音樂唱機控制控制列 (全音軌播放器控制) -->
+    <footer class="relative z-20 bg-slate-900/90 backdrop-blur-md rounded-2xl p-2.5 sm:p-3 border border-amber-300/35 shadow-2xl flex flex-col gap-2 shrink-0 mt-1">
+      
+      <!-- 音軌時間進度條 (支援觸控拖曳跳轉) -->
+      <div class="flex items-center gap-2.5 w-full">
+        <span id="turntable-time-cur" class="text-xs font-mono font-bold text-amber-200/90 min-w-[36px] text-right">0:00</span>
+        <div class="relative flex-1 flex items-center">
+          <input id="turntable-slider" type="range" min="0" max="120" value="0" step="0.5" 
+                 oninput="turntableOnSliderInput(this.value)" 
+                 onchange="turntableOnSliderChange(this.value)" 
+                 class="w-full h-2 bg-slate-950/80 border border-white/20 rounded-lg appearance-none cursor-pointer accent-amber-400 allow-touch-control">
+        </div>
+        <span id="turntable-time-dur" class="text-xs font-mono font-bold text-amber-200/90 min-w-[36px]">2:00</span>
+      </div>
+
+      <!-- 唱機控制按鍵行 (快退、上一首、播放/暫停、下一首、快進、循環模式、速度、音量) -->
+      <div class="flex flex-wrap items-center justify-between gap-2">
+        
+        <!-- 左側：循環模式切換 + 隨機播放 -->
+        <div class="flex items-center gap-1.5">
+          <!-- 循環模式 (單曲 / 專輯 / 全宇宙 40 首連播) -->
+          <button id="btn-turntable-loop" onclick="turntableCycleLoop()" 
+                  class="px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-200 text-xs font-black border border-white/15 transition active:scale-95 flex items-center gap-1.5 cursor-pointer"
+                  title="切換循環模式：單曲循環 / 專輯循環 / 全 40 首連播">
+            <span id="turntable-loop-icon">🔁</span>
+            <span id="turntable-loop-text" class="text-[11px]">專輯循環</span>
+          </button>
+
+          <!-- 隨機播放開關 -->
+          <button id="btn-turntable-shuffle" onclick="turntableToggleShuffle()" 
+                  class="px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-black border border-white/15 transition active:scale-95 flex items-center gap-1 cursor-pointer"
+                  title="隨機播放開關">
+            <span>🔀</span>
+            <span id="turntable-shuffle-text" class="text-[11px] hidden sm:inline">順序播放</span>
+          </button>
+        </div>
+
+        <!-- 中間：核心播放操作群 (快退10秒、上一首、播放/暫停、下一首、快進10秒) -->
+        <div class="flex items-center gap-2 sm:gap-3">
+          <!-- 快退 10 秒 -->
+          <button onclick="turntableSeekDelta(-10)" class="w-8 h-8 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-300 border border-white/15 flex items-center justify-center text-xs font-black transition active:scale-95 cursor-pointer" title="快退 10 秒">
+            -10s
+          </button>
+
+          <!-- 上一首 -->
+          <button onclick="turntablePrevTrack()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-white border border-white/20 flex items-center justify-center text-sm font-black transition active:scale-95 cursor-pointer" title="上一首">
+            ⏮
+          </button>
+
+          <!-- 巨型播放 / 暫停按鈕 (金色光芒果凍按鍵) -->
+          <button id="btn-turntable-play" onclick="turntableTogglePlay()" class="px-5 sm:px-6 py-2 rounded-2xl font-black text-sm text-slate-950 bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-400 hover:from-amber-200 hover:to-yellow-300 shadow-[0_0_20px_rgba(254,240,138,0.7)] border border-white/80 transition active:scale-95 flex items-center gap-2 cursor-pointer">
+            <span id="turntable-play-icon" class="text-base">▶</span>
+            <span id="turntable-play-text">播放黑膠</span>
+          </button>
+
+          <!-- 下一首 -->
+          <button onclick="turntableNextTrack()" class="w-9 h-9 rounded-xl bg-slate-800 hover:bg-slate-700 text-white border border-white/20 flex items-center justify-center text-sm font-black transition active:scale-95 cursor-pointer" title="下一首">
+            ⏭
+          </button>
+
+          <!-- 快進 10 秒 -->
+          <button onclick="turntableSeekDelta(10)" class="w-8 h-8 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-300 border border-white/15 flex items-center justify-center text-xs font-black transition active:scale-95 cursor-pointer" title="快進 10 秒">
+            +10s
+          </button>
+        </div>
+
+        <!-- 右側：速度切換 + 音量控制 -->
+        <div class="flex items-center gap-2">
+          <!-- 速度切換 -->
+          <button id="btn-turntable-speed" onclick="turntableCycleSpeed()" class="px-2.5 py-1 rounded-xl bg-slate-800 text-sky-200 border border-white/15 text-xs font-bold transition active:scale-95 cursor-pointer">
+            1.0x
+          </button>
+          
+          <!-- 音量控制 -->
+          <div class="flex items-center gap-1.5 bg-slate-800/80 px-2 py-1 rounded-xl border border-white/15">
+            <button onclick="turntableToggleMute()" id="btn-turntable-mute" class="text-xs text-amber-300 cursor-pointer">🔊</button>
+            <input id="turntable-volume" type="range" min="0" max="1" step="0.05" value="1" oninput="turntableSetVolume(this.value)" class="w-16 h-1.5 accent-amber-400 cursor-pointer">
+          </div>
+        </div>
+
+      </div>
+    </footer>
+
+    <!-- 唱機專屬純音訊標籤 -->
+    <audio id="audio-turntable" preload="auto"></audio>
   </div>
 
   <script>
@@ -3820,30 +4180,30 @@
         index: 2,
         id: 'album_3',
         title: 'Planet 3: Sakura Neo Pop',
-        shortName: '🌸 J-Pop 星球',
-        badge: '🌸 J-Pop 櫻花偶像星 · 10 關',
-        style: '櫻花粉紅＋薄荷青藍 · 日系動漫元氣流行與萌系應援跳躍',
+        shortName: '🌸 櫻花星球',
+        badge: '🌸 櫻花星球 · 10 關',
+        style: '櫻花粉紅＋薄荷青藍 · 元氣流行與萌系應援跳躍',
         color: '#f43f5e',
         glowClass: 'glow-p3-jpop',
         floorGlow: 'rgba(244, 63, 94, 0.8)',
         iconText: '🌸',
         image: './images/ui/planet3_jpop.png',
-        btnText: '進入櫻花偶像星 (10關) ➜',
+        btnText: '進入櫻花星球 (10關) ➜',
         type: 'planet'
       },
       {
         index: 3,
         id: 'album_4',
         title: 'Planet 4: Sunset Soul Groove',
-        shortName: '🎷 R&B 星球',
-        badge: '🎷 R&B 靈魂節奏星 · 10 關',
-        style: '夕陽琥珀金＋天鵝絨深紫 · 節奏藍調與復古黑膠放克絲滑搖擺',
+        shortName: '🌅 日落星球',
+        badge: '🌅 日落星球 · 10 關',
+        style: '夕陽琥珀金＋天鵝絨深紫 · 溫暖節奏與絲滑搖擺',
         color: '#f97316',
         glowClass: 'glow-p4-rnb',
         floorGlow: 'rgba(249, 115, 22, 0.8)',
-        iconText: '🎷',
+        iconText: '🌅',
         image: './images/ui/planet4_rnb.png',
-        btnText: '進入靈魂節奏星 (10關) ➜',
+        btnText: '進入日落星球 (10關) ➜',
         type: 'planet'
       },
       {
@@ -4319,7 +4679,7 @@
       'a1_s08': { main: '🧊', sat1: '❄️', sat2: '🕺', label: 'WIGGLE & FREEZE', grad: 'linear-gradient(135deg, #7dd3fc 0%, #06b6d4 55%, #2563eb 100%)', glow: 'rgba(6, 182, 212, 0.65)', ring: 'rgba(165, 243, 252, 0.7)' },
       'a1_s09': { main: '🍎', sat1: '🥦', sat2: '🍓', label: 'YUMMY SNACK', grad: 'linear-gradient(135deg, #86efac 0%, #10b981 55%, #f43f5e 100%)', glow: 'rgba(16, 185, 129, 0.65)', ring: 'rgba(167, 243, 208, 0.7)' },
       'a1_s10': { main: '🌙', sat1: '⭐', sat2: '💤', label: 'SOFT GOODNIGHT', grad: 'linear-gradient(135deg, #a5b4fc 0%, #6366f1 50%, #7e22ce 100%)', glow: 'rgba(139, 92, 246, 0.65)', ring: 'rgba(221, 214, 254, 0.7)' },
-      // Planet 2: 歡樂節奏派對篇
+      // Planet 2: 派對星球 (歡樂節奏派對篇)
       'a2_s01': { main: '✨', sat1: '🌟', sat2: '⚡', label: 'READY SET SHINE', grad: 'linear-gradient(135deg, #fde047 0%, #f97316 55%, #ec4899 100%)', glow: 'rgba(249, 115, 22, 0.65)', ring: 'rgba(254, 240, 138, 0.7)' },
       'a2_s02': { main: '🌸', sat1: '🌈', sat2: '🦋', label: 'PASTEL DREAM', grad: 'linear-gradient(135deg, #f9a8d4 0%, #c084fc 55%, #38bdf8 100%)', glow: 'rgba(236, 72, 153, 0.65)', ring: 'rgba(251, 207, 232, 0.7)' },
       'a2_s03': { main: '🎉', sat1: '1️⃣', sat2: '🎊', label: 'NUMBER PARTY', grad: 'linear-gradient(135deg, #67e8f9 0%, #3b82f6 50%, #8b5cf6 100%)', glow: 'rgba(56, 189, 248, 0.65)', ring: 'rgba(186, 230, 253, 0.7)' },
@@ -4329,7 +4689,31 @@
       'a2_s07': { main: '🎵', sat1: '🎤', sat2: '🔤', label: 'K-ABC GROOVE', grad: 'linear-gradient(135deg, #fb7185 0%, #ec4899 55%, #8b5cf6 100%)', glow: 'rgba(236, 72, 153, 0.65)', ring: 'rgba(251, 207, 232, 0.7)' },
       'a2_s08': { main: '🎈', sat1: '💥', sat2: '🧊', label: 'POP POP FREEZE', grad: 'linear-gradient(135deg, #5eead4 0%, #06b6d4 55%, #3b82f6 100%)', glow: 'rgba(6, 182, 212, 0.65)', ring: 'rgba(165, 243, 252, 0.7)' },
       'a2_s09': { main: '🍓', sat1: '🧺', sat2: '🍒', label: 'BERRY PICNIC', grad: 'linear-gradient(135deg, #fda4af 0%, #f43f5e 50%, #fbbf24 100%)', glow: 'rgba(244, 63, 94, 0.65)', ring: 'rgba(254, 205, 211, 0.7)' },
-      'a2_s10': { main: '🌟', sat1: '🌙', sat2: '🪩', label: 'PAJAMA PARTY', grad: 'linear-gradient(135deg, #f472b6 0%, #a855f7 50%, #6366f1 100%)', glow: 'rgba(168, 85, 247, 0.65)', ring: 'rgba(245, 208, 254, 0.7)' }
+      'a2_s10': { main: '🌟', sat1: '🌙', sat2: '🪩', label: 'PAJAMA PARTY', grad: 'linear-gradient(135deg, #f472b6 0%, #a855f7 50%, #6366f1 100%)', glow: 'rgba(168, 85, 247, 0.65)', ring: 'rgba(245, 208, 254, 0.7)' },
+
+      // Planet 3: 櫻花星球 (Sakura Neo Pop)
+      'a3_s01': { main: '🎁', sat1: '😊', sat2: '✨', label: 'SHARE SMILE', grad: 'linear-gradient(135deg, #f472b6 0%, #fb7185 55%, #f43f5e 100%)', glow: 'rgba(251, 113, 133, 0.65)', ring: 'rgba(254, 205, 211, 0.7)' },
+      'a3_s02': { main: '🦘', sat1: '☀️', sat2: '🎈', label: 'JUMP FOR JOY', grad: 'linear-gradient(135deg, #fde047 0%, #f59e0b 55%, #ea580c 100%)', glow: 'rgba(245, 158, 11, 0.65)', ring: 'rgba(254, 240, 138, 0.7)' },
+      'a3_s03': { main: '🌈', sat1: '🌬️', sat2: '☁️', label: 'DEEP BREATH', grad: 'linear-gradient(135deg, #6ee7b7 0%, #38bdf8 50%, #818cf8 100%)', glow: 'rgba(56, 189, 248, 0.65)', ring: 'rgba(186, 230, 253, 0.7)' },
+      'a3_s04': { main: '🐧', sat1: '🚶', sat2: '⭐', label: 'WAITING LINE', grad: 'linear-gradient(135deg, #38bdf8 0%, #0284c7 55%, #1e40af 100%)', glow: 'rgba(14, 165, 233, 0.65)', ring: 'rgba(186, 230, 253, 0.7)' },
+      'a3_s05': { main: '🪄', sat1: '💫', sat2: '💖', label: 'MAGIC WORDS', grad: 'linear-gradient(135deg, #c084fc 0%, #a855f7 50%, #ec4899 100%)', glow: 'rgba(168, 85, 247, 0.65)', ring: 'rgba(243, 232, 255, 0.7)' },
+      'a3_s06': { main: '🤝', sat1: '🌱', sat2: '🌟', label: 'HELPING HANDS', grad: 'linear-gradient(135deg, #34d399 0%, #059669 55%, #047857 100%)', glow: 'rgba(16, 185, 129, 0.65)', ring: 'rgba(167, 243, 208, 0.7)' },
+      'a3_s07': { main: '🤙', sat1: '🛡️', sat2: '💎', label: 'PROMISE CLUB', grad: 'linear-gradient(135deg, #fbbf24 0%, #f59e0b 50%, #d97706 100%)', glow: 'rgba(245, 158, 11, 0.65)', ring: 'rgba(254, 243, 199, 0.7)' },
+      'a3_s08': { main: '🐶', sat1: '🐾', sat2: '🌸', label: 'GENTLE TOUCH', grad: 'linear-gradient(135deg, #fbcfe8 0%, #f472b6 50%, #db2777 100%)', glow: 'rgba(236, 72, 153, 0.65)', ring: 'rgba(251, 207, 232, 0.7)' },
+      'a3_s09': { main: '🛑', sat1: '⚡', sat2: '🧊', label: 'SUPER BRAKE', grad: 'linear-gradient(135deg, #f87171 0%, #ef4444 55%, #b91c1c 100%)', glow: 'rgba(239, 68, 68, 0.65)', ring: 'rgba(254, 202, 202, 0.7)' },
+      'a3_s10': { main: '🫂', sat1: '✨', sat2: '🌙', label: 'HUG IT OUT', grad: 'linear-gradient(135deg, #e879f9 0%, #c084fc 50%, #6366f1 100%)', glow: 'rgba(192, 132, 252, 0.65)', ring: 'rgba(245, 208, 254, 0.7)' },
+
+      // Planet 4: 日落星球 (Sunset Soul Groove)
+      'a4_s01': { main: '🎻', sat1: '🎶', sat2: '🧡', label: 'WARM HUG', grad: 'linear-gradient(135deg, #fb923c 0%, #ea580c 55%, #c2410c 100%)', glow: 'rgba(249, 115, 22, 0.65)', ring: 'rgba(254, 215, 170, 0.7)' },
+      'a4_s02': { main: '☀️', sat1: '🌻', sat2: '✨', label: 'POCKET SUN', grad: 'linear-gradient(135deg, #fde047 0%, #f59e0b 55%, #ea580c 100%)', glow: 'rgba(251, 191, 36, 0.65)', ring: 'rgba(254, 240, 138, 0.7)' },
+      'a4_s03': { main: '💧', sat1: '🌊', sat2: '🕊️', label: 'QUIET FLOW', grad: 'linear-gradient(135deg, #67e8f9 0%, #06b6d4 50%, #0284c7 100%)', glow: 'rgba(6, 182, 212, 0.65)', ring: 'rgba(165, 243, 252, 0.7)' },
+      'a4_s04': { main: '🐢', sat1: '🌿', sat2: '⏳', label: 'TURTLE WALK', grad: 'linear-gradient(135deg, #a7f3d0 0%, #10b981 50%, #065f46 100%)', glow: 'rgba(16, 185, 129, 0.65)', ring: 'rgba(167, 243, 208, 0.7)' },
+      'a4_s05': { main: '🍯', sat1: '🐝', sat2: '💛', label: 'HONEY WORDS', grad: 'linear-gradient(135deg, #fef08a 0%, #facc15 50%, #ca8a04 100%)', glow: 'rgba(234, 179, 8, 0.65)', ring: 'rgba(254, 240, 138, 0.7)' },
+      'a4_s06': { main: '🌲', sat1: '🍃', sat2: '🍎', label: 'HONEST TREE', grad: 'linear-gradient(135deg, #86efac 0%, #22c55e 50%, #15803d 100%)', glow: 'rgba(34, 197, 94, 0.65)', ring: 'rgba(187, 247, 208, 0.7)' },
+      'a4_s07': { main: '🪨', sat1: '⛰️', sat2: '⭐', label: 'SOLID FRIEND', grad: 'linear-gradient(135deg, #cbd5e1 0%, #94a3b8 50%, #475569 100%)', glow: 'rgba(148, 163, 184, 0.65)', ring: 'rgba(226, 232, 240, 0.7)' },
+      'a4_s08': { main: '🦋', sat1: '🌸', sat2: '✨', label: 'BUTTERFLY', grad: 'linear-gradient(135deg, #f472b6 0%, #e879f9 50%, #c084fc 100%)', glow: 'rgba(232, 121, 249, 0.65)', ring: 'rgba(245, 208, 254, 0.7)' },
+      'a4_s09': { main: '💡', sat1: '🧠', sat2: '⚡', label: 'PAUSE & THINK', grad: 'linear-gradient(135deg, #fde047 0%, #38bdf8 55%, #6366f1 100%)', glow: 'rgba(56, 189, 248, 0.65)', ring: 'rgba(224, 231, 255, 0.7)' },
+      'a4_s10': { main: '🌌', sat1: '🌙', sat2: '💤', label: 'LULLABY', grad: 'linear-gradient(135deg, #818cf8 0%, #6366f1 50%, #312e81 100%)', glow: 'rgba(99, 102, 241, 0.65)', ring: 'rgba(224, 231, 255, 0.7)' }
     };
 
     // 渲染每首歌的 3D 光暈果凍主題示意小圖示 (支援 'card' 大舞台、'header' 教室頂欄、'drawer' 歌單抽屜)
@@ -4399,7 +4783,7 @@
       `;
     }
 
-    // 🪐 統一套用星球專屬主題色系 (Planet 1 晨光亮色系 / Planet 2 星光狂歡系 / Planet 3 J-Pop 櫻花偶像 / Planet 4 R&B 靈魂放克) 與左上角 300% 放大首頁星球壓底視覺
+    // 🪐 統一套用星球專屬主題色系 (Planet 1 晨光亮色系 / Planet 2 派對狂歡系 / Planet 3 櫻花粉系 / Planet 4 日落琥珀系) 與左上角 300% 放大首頁星球壓底視覺
     function applyPlanetThemeToViews(albumId) {
       let planetImgSrc = './images/ui/planet1_morning.png';
       let planetGlowClass = 'glow-p1';
@@ -4951,6 +5335,8 @@
       stopSpaceAmbient(0.3);
       if (viewAlbumLevels) viewAlbumLevels.classList.add('hidden');
       if (viewDance) viewDance.classList.add('hidden');
+      if (viewTurntable) viewTurntable.classList.add('hidden');
+      if (audioTurntable) audioTurntable.pause();
       viewLobby.classList.add('hidden');
       if (viewDancerSquad) {
         viewDancerSquad.classList.remove('hidden');
@@ -5111,6 +5497,8 @@
       }
 
       if (viewDancerSquad) viewDancerSquad.classList.add('hidden');
+      if (viewTurntable) viewTurntable.classList.add('hidden');
+      if (audioTurntable) audioTurntable.pause();
       if (viewAlbumLevels) {
         viewAlbumLevels.classList.remove('hidden');
       }
@@ -5151,6 +5539,8 @@
       if (viewDancerSquad) viewDancerSquad.classList.add('hidden');
       if (viewAlbumLevels) viewAlbumLevels.classList.add('hidden');
       if (viewDance) viewDance.classList.add('hidden');
+      if (viewTurntable) viewTurntable.classList.add('hidden');
+      if (audioTurntable) audioTurntable.pause();
       viewLobby.classList.remove('hidden');
       window.scrollTo({ top: 0, behavior: 'smooth' });
       // 回到首頁，恢復首頁專屬背景音樂與 3D 舞台位置
@@ -5561,9 +5951,18 @@
       roomSongTitle.innerHTML = `${song.title} <span class="text-xs md:text-sm font-bold text-amber-200/90 hidden sm:inline">· ${song.zhTitle || ''}</span>`;
       const albumBadge = document.getElementById('room-album-badge');
       if (albumBadge) {
-        const isP1 = currentAlbumId === 'album_1';
-        const badgePlanetImg = isP1 ? './images/ui/planet1_morning.png' : './images/ui/planet2_groove.png';
-        const badgePlanetName = isP1 ? '晨光星球 · 第 1 集' : '派對星球 · 第 2 集';
+        let badgePlanetImg = './images/ui/planet1_morning.png';
+        let badgePlanetName = '晨光星球 · 第 1 集';
+        if (currentAlbumId === 'album_2') {
+          badgePlanetImg = './images/ui/planet2_groove.png';
+          badgePlanetName = '派對星球 · 第 2 集';
+        } else if (currentAlbumId === 'album_3') {
+          badgePlanetImg = './images/ui/planet3_jpop.png';
+          badgePlanetName = '櫻花星球 · 第 3 集';
+        } else if (currentAlbumId === 'album_4') {
+          badgePlanetImg = './images/ui/planet4_rnb.png';
+          badgePlanetName = '日落星球 · 第 4 集';
+        }
         if (isDancerPlaylistMode) {
           const dancer = DANCER_SQUAD_DATA[activeDancerIndexForPlay] || DANCER_SQUAD_DATA[0];
           const dOrd = dancer.songs.indexOf(song.id) + 1;
@@ -5648,6 +6047,12 @@
       }
       if (viewAlbumLevels) {
         viewAlbumLevels.classList.add('hidden');
+      }
+      if (viewTurntable) {
+        viewTurntable.classList.add('hidden');
+      }
+      if (audioTurntable) {
+        audioTurntable.pause();
       }
       viewDance.classList.remove('hidden');
       updateDanceStageScale();
@@ -8125,6 +8530,470 @@
       }, { passive: false });
     }
     lockTabletViewport();
+
+    // ========================================================
+    // 🪐 Kai 宇宙星空黑膠唱片機 (Turntable Player) 控制系統
+    // ========================================================
+    const viewTurntable = document.getElementById('view-turntable');
+    const audioTurntable = document.getElementById('audio-turntable');
+    let turntableActiveAlbum = 'album_1';
+    let turntableActiveSongId = 'a1_s01';
+    let turntableIsPlaying = false;
+    let turntableLoopMode = 'album'; // 'single' (🔂), 'album' (🔁), 'all' (🌌)
+    let turntableIsShuffle = false;
+    let turntableSpeed = 1.0;
+    let turntableVolume = 1.0;
+    let isTurntableSeeking = false;
+
+    const TURNTABLE_ALBUM_CONFIGS = {
+      'album_1': {
+        name: '晨光星球 · 第 1 集',
+        planetImg: './images/ui/planet1_morning.png',
+        ambientGlow: 'radial-gradient(circle, #f59e0b 0%, #ea580c 45%, transparent 70%)',
+        activeTabClass: ['border-amber-400/80', 'bg-amber-400', 'text-slate-950', 'shadow-[0_0_12px_rgba(251,191,36,0.5)]'],
+        badgeBg: 'bg-amber-400 text-slate-950',
+        planetBadgeColor: 'text-amber-200'
+      },
+      'album_2': {
+        name: '派對星球 · 第 2 集',
+        planetImg: './images/ui/planet2_groove.png',
+        ambientGlow: 'radial-gradient(circle, #d946ef 0%, #8b5cf6 45%, transparent 70%)',
+        activeTabClass: ['border-fuchsia-400/80', 'bg-fuchsia-500', 'text-white', 'shadow-[0_0_12px_rgba(217,70,239,0.5)]'],
+        badgeBg: 'bg-fuchsia-500 text-white',
+        planetBadgeColor: 'text-fuchsia-200'
+      },
+      'album_3': {
+        name: '櫻花星球 · 第 3 集',
+        planetImg: './images/ui/planet3_jpop.png',
+        ambientGlow: 'radial-gradient(circle, #fb7185 0%, #2dd4bf 45%, transparent 70%)',
+        activeTabClass: ['border-rose-400/80', 'bg-rose-500', 'text-white', 'shadow-[0_0_12px_rgba(244,63,94,0.5)]'],
+        badgeBg: 'bg-rose-500 text-white',
+        planetBadgeColor: 'text-rose-200'
+      },
+      'album_4': {
+        name: '日落星球 · 第 4 集',
+        planetImg: './images/ui/planet4_rnb.png',
+        ambientGlow: 'radial-gradient(circle, #f97316 0%, #a855f7 45%, transparent 70%)',
+        activeTabClass: ['border-orange-400/80', 'bg-orange-500', 'text-white', 'shadow-[0_0_12px_rgba(249,115,22,0.5)]'],
+        badgeBg: 'bg-orange-500 text-white',
+        planetBadgeColor: 'text-orange-200'
+      }
+    };
+
+    const TURNTABLE_ALBUM_LIST = ['album_1', 'album_2', 'album_3', 'album_4'];
+
+    function getAllTurntableTracks() {
+      if (!window.KAI_ALBUM_DATABASE) return [];
+      const all = [];
+      TURNTABLE_ALBUM_LIST.forEach(aid => {
+        const album = window.KAI_ALBUM_DATABASE[aid];
+        if (album && album.songs) {
+          all.push(...album.songs);
+        }
+      });
+      return all;
+    }
+
+    function updateTurntableAlbumTabs() {
+      TURNTABLE_ALBUM_LIST.forEach(id => {
+        const tab = document.getElementById(`tab-turntable-${id}`);
+        if (!tab) return;
+        const cfg = TURNTABLE_ALBUM_CONFIGS[id];
+        if (id === turntableActiveAlbum) {
+          tab.className = `px-2.5 sm:px-3 py-1 rounded-full text-xs font-black transition-all flex items-center gap-1.5 border ${cfg.activeTabClass.join(' ')}`;
+        } else {
+          tab.className = `px-2.5 sm:px-3 py-1 rounded-full text-xs font-black transition-all flex items-center gap-1.5 border border-white/20 bg-slate-900/80 text-slate-300 hover:text-white`;
+        }
+      });
+    }
+
+    function renderTurntablePlaylist() {
+      const container = document.getElementById('turntable-playlist-container');
+      if (!container) return;
+      const album = window.KAI_ALBUM_DATABASE ? window.KAI_ALBUM_DATABASE[turntableActiveAlbum] : null;
+      if (!album || !album.songs) {
+        container.innerHTML = '<div class="text-center text-xs text-slate-400 py-6">尚無歌曲資料</div>';
+        return;
+      }
+      container.innerHTML = album.songs.map((song, idx) => {
+        const isCurrent = song.id === turntableActiveSongId;
+        const trackNo = `#${String(idx + 1).padStart(2, '0')}`;
+        return `
+          <div onclick="turntablePlaySong('${song.id}', true)" 
+               class="group flex items-center justify-between p-2 sm:p-2.5 rounded-xl border transition-all cursor-pointer ${
+                 isCurrent 
+                   ? 'bg-amber-400/20 border-amber-300/80 shadow-[0_0_12px_rgba(251,191,36,0.25)] text-white' 
+                   : 'bg-slate-950/40 hover:bg-slate-800/60 border-white/10 hover:border-white/25 text-slate-300 hover:text-white'
+               }">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <span class="text-xs font-mono font-black ${isCurrent ? 'text-amber-300' : 'text-slate-400'} shrink-0">${trackNo}</span>
+              <div class="w-7 h-7 shrink-0 flex items-center justify-center">
+                ${renderSongThemeEmblem(song, 'drawer')}
+              </div>
+              <div class="min-w-0">
+                <div class="text-xs sm:text-sm font-bold truncate flex items-center gap-1.5">
+                  <span class="${isCurrent ? 'text-amber-200 font-black' : ''}">${song.title}</span>
+                  ${isCurrent && turntableIsPlaying ? '<span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span>' : ''}
+                </div>
+                <div class="text-[10px] text-slate-400 truncate">${song.desc || song.zhTitle || ''}</div>
+              </div>
+            </div>
+            <div class="shrink-0 flex items-center gap-2">
+              <span class="text-[10px] font-mono text-slate-400">2:00</span>
+              <span class="text-xs ${isCurrent && turntableIsPlaying ? 'text-amber-300' : 'text-slate-500 opacity-60 group-hover:opacity-100'}">
+                ${isCurrent && turntableIsPlaying ? '▶' : '♪'}
+              </span>
+            </div>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function turntableSetPlayState(isPlaying) {
+      turntableIsPlaying = isPlaying;
+      const disc = document.getElementById('turntable-disc');
+      const arm = document.getElementById('turntable-tonearm');
+      const eq = document.getElementById('turntable-equalizer');
+      const playIcon = document.getElementById('turntable-play-icon');
+      const playText = document.getElementById('turntable-play-text');
+
+      if (isPlaying) {
+        if (disc) {
+          disc.classList.remove('is-paused');
+          disc.classList.add('is-spinning');
+        }
+        if (arm) {
+          arm.classList.remove('is-parked');
+          arm.classList.add('is-playing');
+        }
+        if (eq) {
+          eq.classList.add('is-playing-eq');
+        }
+        if (playIcon) playIcon.innerText = '⏸';
+        if (playText) playText.innerText = '暫停黑膠';
+      } else {
+        if (disc) {
+          disc.classList.add('is-paused');
+        }
+        if (arm) {
+          arm.classList.remove('is-playing');
+          arm.classList.add('is-parked');
+        }
+        if (eq) {
+          eq.classList.remove('is-playing-eq');
+        }
+        if (playIcon) playIcon.innerText = '▶';
+        if (playText) playText.innerText = '播放黑膠';
+      }
+      renderTurntablePlaylist();
+    }
+
+    function turntablePlaySong(songId, autoPlay = true) {
+      turntableActiveSongId = songId;
+      const song = songDatabase[songId];
+      if (!song) return;
+
+      if (song.albumId && song.albumId !== turntableActiveAlbum) {
+        turntableActiveAlbum = song.albumId;
+      }
+      updateTurntableAlbumTabs();
+
+      const cfg = TURNTABLE_ALBUM_CONFIGS[turntableActiveAlbum] || TURNTABLE_ALBUM_CONFIGS['album_1'];
+      const trackBadge = document.getElementById('turntable-track-badge');
+      const planetBadge = document.getElementById('turntable-planet-badge');
+      const songTitleEl = document.getElementById('turntable-song-title');
+      const songDescEl = document.getElementById('turntable-song-desc');
+      const emblemEl = document.getElementById('turntable-song-emblem');
+
+      if (trackBadge) {
+        trackBadge.innerText = `#${String(song.trackNumber || 1).padStart(2, '0')}`;
+        trackBadge.className = `px-2 py-0.5 rounded-md text-[10px] font-black shrink-0 ${cfg.badgeBg}`;
+      }
+      if (planetBadge) {
+        planetBadge.innerText = cfg.name;
+        planetBadge.className = `text-[10px] font-bold truncate ${cfg.planetBadgeColor}`;
+      }
+      if (songTitleEl) songTitleEl.innerText = song.title;
+      if (songDescEl) songDescEl.innerText = song.desc || song.zhTitle || '';
+      if (emblemEl) emblemEl.innerHTML = renderSongThemeEmblem(song, 'header');
+
+      const glowEl = document.getElementById('turntable-ambient-glow');
+      if (glowEl) glowEl.style.background = cfg.ambientGlow;
+      const discPlanetImg = document.getElementById('turntable-planet-img');
+      if (discPlanetImg) discPlanetImg.src = cfg.planetImg;
+
+      if (audioTurntable) {
+        const curSrc = audioTurntable.getAttribute('src') || '';
+        if (curSrc !== song.file && !audioTurntable.src.endsWith(song.file.replace(/^\.\//, ''))) {
+          audioTurntable.src = song.file;
+        }
+        audioTurntable.currentTime = 0;
+        audioTurntable.playbackRate = turntableSpeed;
+        audioTurntable.volume = turntableVolume;
+      }
+
+      renderTurntablePlaylist();
+
+      if (autoPlay && audioTurntable) {
+        audioTurntable.play().then(() => {
+          turntableSetPlayState(true);
+        }).catch(err => {
+          console.warn("Turntable autoplay prevented:", err);
+          turntableSetPlayState(false);
+        });
+      } else {
+        turntableSetPlayState(false);
+      }
+    }
+
+    function switchTurntableAlbum(albumId) {
+      turntableActiveAlbum = albumId;
+      updateTurntableAlbumTabs();
+      const album = window.KAI_ALBUM_DATABASE ? window.KAI_ALBUM_DATABASE[albumId] : null;
+      if (!album || !album.songs || !album.songs.length) return;
+      turntablePlaySong(album.songs[0].id, turntableIsPlaying);
+    }
+
+    function openTurntablePlayer(albumId, songId) {
+      stopHomeBgm(0.3);
+      stopSpaceAmbient(0.3);
+      pauseDance();
+      stopAllKidPreviewVoices();
+      stopRealCamera();
+
+      viewLobby.classList.add('hidden');
+      if (viewAlbumLevels) viewAlbumLevels.classList.add('hidden');
+      if (viewDance) viewDance.classList.add('hidden');
+      if (viewDancerSquad) viewDancerSquad.classList.add('hidden');
+      
+      if (viewTurntable) {
+        viewTurntable.classList.remove('hidden');
+      }
+
+      if (albumId && TURNTABLE_ALBUM_CONFIGS[albumId]) {
+        turntableActiveAlbum = albumId;
+      }
+      updateTurntableAlbumTabs();
+
+      const targetSongId = songId || (window.KAI_ALBUM_DATABASE && window.KAI_ALBUM_DATABASE[turntableActiveAlbum]?.songs[0]?.id) || 'a1_s01';
+      turntablePlaySong(targetSongId, true);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function closeTurntablePlayer() {
+      if (audioTurntable) {
+        audioTurntable.pause();
+      }
+      turntableSetPlayState(false);
+      if (viewTurntable) {
+        viewTurntable.classList.add('hidden');
+      }
+      backToPlanetHub();
+    }
+
+    function turntableNextTrack(isAutoAdvance = false) {
+      if (turntableIsShuffle) {
+        const allSongs = turntableLoopMode === 'all' 
+          ? getAllTurntableTracks() 
+          : (window.KAI_ALBUM_DATABASE[turntableActiveAlbum]?.songs || []);
+        if (allSongs.length > 1) {
+          let randIdx;
+          do {
+            randIdx = Math.floor(Math.random() * allSongs.length);
+          } while (allSongs[randIdx].id === turntableActiveSongId && allSongs.length > 1);
+          turntablePlaySong(allSongs[randIdx].id, true);
+          return;
+        }
+      }
+
+      if (turntableLoopMode === 'all') {
+        const allSongs = getAllTurntableTracks();
+        const curIdx = allSongs.findIndex(s => s.id === turntableActiveSongId);
+        const nextIdx = (curIdx + 1) % allSongs.length;
+        turntablePlaySong(allSongs[nextIdx].id, true);
+      } else {
+        const curAlbumSongs = window.KAI_ALBUM_DATABASE[turntableActiveAlbum]?.songs || [];
+        const curIdx = curAlbumSongs.findIndex(s => s.id === turntableActiveSongId);
+        const nextIdx = (curIdx + 1) % curAlbumSongs.length;
+        turntablePlaySong(curAlbumSongs[nextIdx].id, true);
+      }
+    }
+
+    function turntablePrevTrack() {
+      if (audioTurntable && audioTurntable.currentTime > 3) {
+        audioTurntable.currentTime = 0;
+        return;
+      }
+      if (turntableLoopMode === 'all') {
+        const allSongs = getAllTurntableTracks();
+        const curIdx = allSongs.findIndex(s => s.id === turntableActiveSongId);
+        const prevIdx = (curIdx - 1 + allSongs.length) % allSongs.length;
+        turntablePlaySong(allSongs[prevIdx].id, true);
+      } else {
+        const curAlbumSongs = window.KAI_ALBUM_DATABASE[turntableActiveAlbum]?.songs || [];
+        const curIdx = curAlbumSongs.findIndex(s => s.id === turntableActiveSongId);
+        const prevIdx = (curIdx - 1 + curAlbumSongs.length) % curAlbumSongs.length;
+        turntablePlaySong(curAlbumSongs[prevIdx].id, true);
+      }
+    }
+
+    function turntableTogglePlay() {
+      if (!audioTurntable) return;
+      if (!audioTurntable.src) {
+        turntablePlaySong(turntableActiveSongId, true);
+        return;
+      }
+      if (audioTurntable.paused) {
+        audioTurntable.play().then(() => {
+          turntableSetPlayState(true);
+        }).catch(err => {
+          console.warn("Turntable play failed:", err);
+        });
+      } else {
+        audioTurntable.pause();
+        turntableSetPlayState(false);
+      }
+    }
+
+    function turntableSeekDelta(delta) {
+      if (!audioTurntable) return;
+      const cur = audioTurntable.currentTime || 0;
+      const dur = audioTurntable.duration || 120;
+      audioTurntable.currentTime = Math.max(0, Math.min(dur, cur + delta));
+    }
+
+    function turntableCycleLoop() {
+      const iconEl = document.getElementById('turntable-loop-icon');
+      const textEl = document.getElementById('turntable-loop-text');
+      if (turntableLoopMode === 'album') {
+        turntableLoopMode = 'all';
+        if (iconEl) iconEl.innerText = '🌌';
+        if (textEl) textEl.innerText = '全專40首';
+      } else if (turntableLoopMode === 'all') {
+        turntableLoopMode = 'single';
+        if (iconEl) iconEl.innerText = '🔂';
+        if (textEl) textEl.innerText = '單曲循環';
+      } else {
+        turntableLoopMode = 'album';
+        if (iconEl) iconEl.innerText = '🔁';
+        if (textEl) textEl.innerText = '專輯循環';
+      }
+    }
+
+    function turntableToggleShuffle() {
+      turntableIsShuffle = !turntableIsShuffle;
+      const btn = document.getElementById('btn-turntable-shuffle');
+      const textEl = document.getElementById('turntable-shuffle-text');
+      if (btn) {
+        if (turntableIsShuffle) {
+          btn.className = 'px-2.5 py-1.5 rounded-xl bg-amber-400 text-slate-950 text-xs font-black border border-amber-300 shadow-[0_0_10px_rgba(251,191,36,0.5)] transition active:scale-95 flex items-center gap-1 cursor-pointer';
+          if (textEl) textEl.innerText = '隨機播放';
+        } else {
+          btn.className = 'px-2.5 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 text-xs font-black border border-white/15 transition active:scale-95 flex items-center gap-1 cursor-pointer';
+          if (textEl) textEl.innerText = '順序播放';
+        }
+      }
+    }
+
+    function turntableOnSliderInput(val) {
+      isTurntableSeeking = true;
+      const curEl = document.getElementById('turntable-time-cur');
+      if (curEl) {
+        const m = Math.floor(val / 60);
+        const s = Math.floor(val % 60);
+        curEl.innerText = `${m}:${String(s).padStart(2, '0')}`;
+      }
+    }
+
+    function turntableOnSliderChange(val) {
+      if (audioTurntable) {
+        audioTurntable.currentTime = parseFloat(val);
+      }
+      isTurntableSeeking = false;
+    }
+
+    function turntableCycleSpeed() {
+      const speeds = [1.0, 1.25, 1.5, 0.75];
+      const curIdx = speeds.indexOf(turntableSpeed);
+      turntableSpeed = speeds[(curIdx + 1) % speeds.length];
+      if (audioTurntable) {
+        audioTurntable.playbackRate = turntableSpeed;
+      }
+      const btn = document.getElementById('btn-turntable-speed');
+      if (btn) btn.innerText = `${turntableSpeed}x`;
+    }
+
+    function turntableSetVolume(val) {
+      turntableVolume = parseFloat(val);
+      if (audioTurntable) {
+        audioTurntable.volume = turntableVolume;
+      }
+      const muteBtn = document.getElementById('btn-turntable-mute');
+      if (muteBtn) {
+        muteBtn.innerText = turntableVolume === 0 ? '🔇' : (turntableVolume < 0.5 ? '🔉' : '🔊');
+      }
+    }
+
+    let turntablePreMuteVolume = 1.0;
+    function turntableToggleMute() {
+      const slider = document.getElementById('turntable-volume');
+      if (!audioTurntable) return;
+      if (audioTurntable.volume > 0) {
+        turntablePreMuteVolume = audioTurntable.volume;
+        turntableSetVolume(0);
+        if (slider) slider.value = 0;
+      } else {
+        const restore = turntablePreMuteVolume || 1.0;
+        turntableSetVolume(restore);
+        if (slider) slider.value = restore;
+      }
+    }
+
+    // 初始化唱片機音訊標籤事件監聽
+    if (audioTurntable) {
+      audioTurntable.addEventListener('timeupdate', () => {
+        if (isTurntableSeeking) return;
+        const cur = audioTurntable.currentTime || 0;
+        const dur = audioTurntable.duration || 120;
+        const slider = document.getElementById('turntable-slider');
+        const curEl = document.getElementById('turntable-time-cur');
+        if (slider) {
+          slider.max = dur;
+          slider.value = cur;
+        }
+        if (curEl) {
+          const m = Math.floor(cur / 60);
+          const s = Math.floor(cur % 60);
+          curEl.innerText = `${m}:${String(s).padStart(2, '0')}`;
+        }
+      });
+
+      audioTurntable.addEventListener('loadedmetadata', () => {
+        const dur = audioTurntable.duration || 120;
+        const slider = document.getElementById('turntable-slider');
+        const durEl = document.getElementById('turntable-time-dur');
+        if (slider) slider.max = dur;
+        if (durEl) {
+          const m = Math.floor(dur / 60);
+          const s = Math.floor(dur % 60);
+          durEl.innerText = `${m}:${String(s).padStart(2, '0')}`;
+        }
+      });
+
+      audioTurntable.addEventListener('ended', () => {
+        if (turntableLoopMode === 'single') {
+          audioTurntable.currentTime = 0;
+          audioTurntable.play().catch(e => console.warn(e));
+        } else {
+          turntableNextTrack(true);
+        }
+      });
+
+      audioTurntable.addEventListener('play', () => turntableSetPlayState(true));
+      audioTurntable.addEventListener('pause', () => {
+        if (!audioTurntable.ended) turntableSetPlayState(false);
+      });
+    }
 
     loadParentSettings();
     updateHomeCdUI();
