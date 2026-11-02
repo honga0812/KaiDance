@@ -5118,6 +5118,13 @@
       const album = window.KAI_ALBUM_DATABASE[albumId] || window.KAI_ALBUM_DATABASE['album_1'];
       if (!album) return;
 
+      // 智慧預熱：背景預載該專輯第一首歌的前段影片，點選即可秒開無延遲
+      if (album.songs && album.songs[0]) {
+        setTimeout(() => {
+          if (window.prefetchSongVideos) prefetchSongVideos(album.songs[0]);
+        }, 300);
+      }
+
       container.innerHTML = album.songs.map((song) => {
         const isCurrentActive = song.id === currentSongKey;
         const coachBadge = song.timeline && song.timeline.some(s => s.video) 
@@ -5168,6 +5175,8 @@
 
         return `
           <div onclick="selectSong('${song.id}')" 
+               onmouseenter="if(window.prefetchSongVideos) prefetchSongVideos(songDatabase['${song.id}'])"
+               ontouchstart="if(window.prefetchSongVideos) prefetchSongVideos(songDatabase['${song.id}'])"
                class="group relative ${cardThemeClass} rounded-2xl p-3.5 sm:p-4 transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden select-none">
             
             <div class="absolute top-2.5 left-2.5 ${numberBadge} backdrop-blur text-[10px] font-black px-2 py-0.5 rounded-full shadow-md z-20 border">
@@ -5303,6 +5312,7 @@
 
         return `
           <div onclick="selectSong('${song.id}')" 
+               onmouseenter="if(window.prefetchSongVideos) prefetchSongVideos(songDatabase['${song.id}'])"
                class="p-3 rounded-2xl flex items-center justify-between transition-all cursor-pointer border ${rowClass}">
             <div class="flex items-center gap-3 min-w-0">
               ${renderSongThemeEmblem(song, 'drawer')}
@@ -5417,6 +5427,9 @@
         return;
       }
 
+      // 🚀 關鍵零延遲核心：第 0 毫秒立即並行啟動該曲全段落影片預加載與前段 Blob 快取
+      prefetchSongVideos(song);
+
       // 1. 立即停止任何正在播放的音樂與語音，杜絕畫面還沒進來就先發出音樂聲
       pauseDance();
       stopAllKidPreviewVoices();
@@ -5466,7 +5479,7 @@
       combo = 0;
       score = 0;
 
-      // 切換初始動作示範媒體 (第一顆星球 1~7 首為引導動畫影片，其餘為靜態引導圖片，嚴格互斥)
+      // 切換初始動作示範媒體 (第一顆星球與第二顆星球示範影片，優先使用已快取的記憶體 Blob，嚴格互斥)
       const firstSeg = (song.timeline && song.timeline[0]) || null;
       if (firstSeg && firstSeg.video) {
         if (coachImage) {
@@ -5478,14 +5491,24 @@
         coachVideoB.classList.remove('opacity-100');
         coachVideoB.classList.add('opacity-0', 'pointer-events-none');
 
-        coachVideoA.src = firstSeg.video;
+        const initialSrcA = (videoBlobCache.get(firstSeg.video)?.blobUrl) || firstSeg.video;
+        if (coachVideoA._logicalVideoUrl !== firstSeg.video) {
+          coachVideoA.src = initialSrcA;
+          coachVideoA._logicalVideoUrl = firstSeg.video;
+          coachVideoA.load();
+        }
         coachVideoA.pause();
         if (coachTypeBadge) coachTypeBadge.innerText = "🎬 示範影片";
 
         // 預載第二段影片到 coachVideoB
         if (song.timeline && song.timeline[1] && song.timeline[1].video) {
-          coachVideoB.src = song.timeline[1].video;
-          coachVideoB.load();
+          const seg2Video = song.timeline[1].video;
+          const initialSrcB = (videoBlobCache.get(seg2Video)?.blobUrl) || seg2Video;
+          if (coachVideoB._logicalVideoUrl !== seg2Video) {
+            coachVideoB.src = initialSrcB;
+            coachVideoB._logicalVideoUrl = seg2Video;
+            coachVideoB.load();
+          }
         }
       } else {
         if (coachVideoA) {
@@ -5579,10 +5602,9 @@
           setTimeout(() => {
             coachVideoA.removeEventListener('loadeddata', onVidReady);
             resolve();
-          }, 500);
+          }, 250);
         });
       }
-      prefetchSongVideos(song);
 
       if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
 
@@ -7313,11 +7335,42 @@
     }
 
     // ========================================================
-    // 6. 智慧背景預加載 (Prefetch) 與 雙緩衝無縫交替播放 (Dual-buffered Crossfade)
+    // 6. 智慧記憶體 Blob 預加載 (Prefetch) 與 雙緩衝無縫交替播放 (Dual-buffered Crossfade)
     // ========================================================
-    let currentPrefetchAbort = null;
+    const MAX_VIDEO_BLOB_CACHE = 80;
+    async function loadVideoBlob(url) {
+      if (!url) return null;
+      if (videoBlobCache.has(url)) {
+        return videoBlobCache.get(url);
+      }
+      try {
+        const res = await fetch(url, { cache: 'force-cache' });
+        if (!res.ok) return null;
+        const blob = await res.blob();
+        const blobUrl = URL.createObjectURL(blob);
+
+        if (videoBlobCache.size >= MAX_VIDEO_BLOB_CACHE) {
+          const oldestKey = videoBlobCache.keys().next().value;
+          const oldestVal = videoBlobCache.get(oldestKey);
+          if (oldestVal && oldestVal.blobUrl) {
+            try { URL.revokeObjectURL(oldestVal.blobUrl); } catch(e) {}
+          }
+          videoBlobCache.delete(oldestKey);
+        }
+
+        const entry = { blobUrl, blob };
+        videoBlobCache.set(url, entry);
+        return entry;
+      } catch(e) {
+        return null;
+      }
+    }
+
+    let currentPrefetchGeneration = 0;
     function prefetchSongVideos(song) {
       if (!song || !song.timeline) return;
+      const gen = ++currentPrefetchGeneration;
+
       // 收集該曲目所有影片路徑
       const videoUrls = [];
       song.timeline.forEach(seg => {
@@ -7327,41 +7380,45 @@
       });
       if (videoUrls.length === 0) return;
 
-      // 1. 優先確保前 3 段影片立刻進入快取 (Link rel=preload 或 fetch blob)
-      videoUrls.slice(0, 3).forEach(url => {
-        if (!videoBlobCache.has(url)) {
-          try {
-            const link = document.createElement('link');
-            link.rel = 'preload';
-            link.as = 'video';
-            link.href = url;
-            document.head.appendChild(link);
-            videoBlobCache.set(url, true);
-          } catch(e) {}
-        }
+      // 1. 最高優先級：立即並行下載前 3 段影片進入記憶體 Blob (零延遲關鍵)
+      const topPriority = videoUrls.slice(0, 3);
+      topPriority.forEach(url => {
+        loadVideoBlob(url).then(entry => {
+          if (!entry || gen !== currentPrefetchGeneration) return;
+          // 若教練槽正準備此影片，無感平滑升級為 Blob 零延遲記憶體路徑
+          if (coachVideoA && coachVideoA._logicalVideoUrl === url && !coachVideoA.src.startsWith('blob:')) {
+            if (coachVideoA.paused && coachVideoA.currentTime === 0) {
+              coachVideoA.src = entry.blobUrl;
+              coachVideoA.load();
+            }
+          }
+          if (coachVideoB && coachVideoB._logicalVideoUrl === url && !coachVideoB.src.startsWith('blob:')) {
+            if (coachVideoB.paused && coachVideoB.currentTime === 0) {
+              coachVideoB.src = entry.blobUrl;
+              coachVideoB.load();
+            }
+          }
+        });
       });
 
-      // 2. 序列背景預載後續所有影片 (不阻塞當前播放，完全消除切換延遲)
-      let idx = 0;
+      // 2. 序列背景預載後續所有影片 (間隔 120ms 錯開頻寬，保持主播放絕對順暢)
+      let idx = 3;
       function fetchNext() {
-        if (idx >= videoUrls.length) return;
+        if (gen !== currentPrefetchGeneration || idx >= videoUrls.length) return;
         const url = videoUrls[idx++];
         if (!videoBlobCache.has(url)) {
-          fetch(url, { cache: 'force-cache' })
-            .then(res => res.blob())
-            .then(() => {
-              videoBlobCache.set(url, true);
-              setTimeout(fetchNext, 120); // 錯開頻寬，保持主播放絕對順暢
-            })
-            .catch(() => {
-              setTimeout(fetchNext, 200);
-            });
+          loadVideoBlob(url).finally(() => {
+            if (gen === currentPrefetchGeneration) {
+              setTimeout(fetchNext, 120);
+            }
+          });
         } else {
           fetchNext();
         }
       }
-      setTimeout(fetchNext, 300);
+      setTimeout(fetchNext, 250);
     }
+    window.prefetchSongVideos = prefetchSongVideos;
 
     function switchCoachVideoSeamlessly(targetVideoUrl, nextVideoUrl) {
       if (!coachVideoA || !coachVideoB) return;
@@ -7372,30 +7429,53 @@
       const standbySlot = activeVideoSlot === 'a' ? coachVideoB : coachVideoA;
       const standbyName = activeVideoSlot === 'a' ? 'b' : 'a';
 
-      // 若目前播放的正是這支影片，僅確保顯示與播放
-      if (currentActive.src && currentActive.src.indexOf(targetVideoUrl.replace('./', '')) !== -1) {
+      // 檢查目前播放中的槽位是否正是此影片
+      const isCurrentThisVideo = currentActive._logicalVideoUrl === targetVideoUrl ||
+        (currentActive.src && currentActive.src.indexOf(targetVideoUrl.replace('./', '')) !== -1);
+
+      if (isCurrentThisVideo) {
         currentActive.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
         currentActive.classList.add('opacity-100');
         standbySlot.classList.remove('opacity-100');
         standbySlot.classList.add('opacity-0', 'pointer-events-none');
-        if (isPlaying && currentActive.paused) currentActive.play().catch(e => console.log(e));
+        if (isPlaying && currentActive.paused) {
+          currentActive.play().catch(e => console.log(e));
+        }
         // 預先載入下一段到 standbySlot
-        if (nextVideoUrl && (!standbySlot.src || standbySlot.src.indexOf(nextVideoUrl.replace('./', '')) === -1)) {
-          standbySlot.src = nextVideoUrl;
-          standbySlot.load();
+        if (nextVideoUrl) {
+          const isNextLoaded = standbySlot._logicalVideoUrl === nextVideoUrl ||
+            (standbySlot.src && standbySlot.src.indexOf(nextVideoUrl.replace('./', '')) !== -1);
+          if (!isNextLoaded) {
+            const memNext = (videoBlobCache.get(nextVideoUrl)?.blobUrl) || nextVideoUrl;
+            standbySlot.src = memNext;
+            standbySlot._logicalVideoUrl = nextVideoUrl;
+            standbySlot.load();
+          }
         }
         return;
       }
 
-      // 如果備用槽 (standbySlot) 已經載好這支影片，執行無縫 300ms 交叉漸變！
+      // 檢查備用槽 (standbySlot) 是否已載好這支影片 (重要：避免重複設 src 導致瀏覽器重置緩衝！)
+      const isStandbyTarget = standbySlot._logicalVideoUrl === targetVideoUrl ||
+        (standbySlot.src && standbySlot.src.indexOf(targetVideoUrl.replace('./', '')) !== -1);
+
+      if (!isStandbyTarget) {
+        const memTarget = (videoBlobCache.get(targetVideoUrl)?.blobUrl) || targetVideoUrl;
+        standbySlot.src = memTarget;
+        standbySlot._logicalVideoUrl = targetVideoUrl;
+        standbySlot.load();
+      } else {
+        // 已預載就緒，確保從頭播放
+        try { standbySlot.currentTime = 0; } catch(e) {}
+      }
+
       standbySlot.classList.remove('hidden');
-      standbySlot.src = targetVideoUrl;
       if (isPlaying) {
         standbySlot.playbackRate = playSpeed;
         const playPromise = standbySlot.play();
         if (playPromise !== undefined) {
           playPromise.then(() => {
-            // 新影片已開始解碼播放，立即可見度翻轉 (無黑屏、無等待！)
+            // 新影片解碼播放完成，立即可見度翻轉 (無黑屏、無等待！)
             standbySlot.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
             standbySlot.classList.add('opacity-100');
             currentActive.classList.remove('opacity-100');
@@ -7409,15 +7489,18 @@
             if (nextVideoUrl) {
               setTimeout(() => {
                 const idleVideo = activeVideoSlot === 'a' ? coachVideoB : coachVideoA;
-                if (!idleVideo.src || idleVideo.src.indexOf(nextVideoUrl.replace('./', '')) === -1) {
-                  idleVideo.src = nextVideoUrl;
+                const isNextInIdle = idleVideo._logicalVideoUrl === nextVideoUrl ||
+                  (idleVideo.src && idleVideo.src.indexOf(nextVideoUrl.replace('./', '')) !== -1);
+                if (!isNextInIdle) {
+                  const idleNextMem = (videoBlobCache.get(nextVideoUrl)?.blobUrl) || nextVideoUrl;
+                  idleVideo.src = idleNextMem;
+                  idleVideo._logicalVideoUrl = nextVideoUrl;
                   idleVideo.load();
                 }
-              }, 400);
+              }, 300);
             }
           }).catch(e => {
             console.log("Video switch play error:", e);
-            // 降級直接顯示
             standbySlot.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
             standbySlot.classList.add('opacity-100');
             currentActive.classList.remove('opacity-100');
