@@ -2396,12 +2396,12 @@
           <div class="relative w-full h-full rounded-2xl overflow-hidden shadow-[0_8px_24px_rgba(0,0,0,0.45),0_0_18px_rgba(251,191,36,0.25)] border border-amber-300/55 bg-slate-950 flex items-center justify-center">
             <!-- 雙緩衝無縫交替播放器 -->
             <video id="coach-video-a" 
-                   src="./videos/T1/a1_s01_01_stretch.mp4" 
-                   autoplay loop muted playsinline webkit-playsinline="true" preload="auto"
+                   src="./videos/T1/t1_seg_01.mp4" 
+                   loop muted playsinline webkit-playsinline="true" preload="auto"
                    class="absolute inset-0 w-full h-full object-cover object-center select-none transition-opacity duration-300 opacity-100 z-10">
             </video>
             <video id="coach-video-b" 
-                   autoplay loop muted playsinline webkit-playsinline="true" preload="auto"
+                   loop muted playsinline webkit-playsinline="true" preload="auto"
                    class="absolute inset-0 w-full h-full object-cover object-center select-none transition-opacity duration-300 opacity-0 z-10 pointer-events-none">
             </video>
             <!-- 示範寫真 (第一顆星球第 8~10 首與第二顆星球全曲目使用靜態引導，有影片時強制隱藏) -->
@@ -2799,13 +2799,27 @@
     const coachImage = document.getElementById('coach-image');
     const coachTypeBadge = document.getElementById('coach-type-badge');
 
-    // 影片播放錯誤自動備援機制 (確保動作示範區絕不出現黑屏或消失)
+    // 瀏覽器靜音自動播放硬體規範設定 (確保 iOS / Safari / Chrome 任何裝置秒播不黑屏)
+    function setupVideoElement(vid) {
+      if (!vid) return;
+      vid.muted = true;
+      vid.defaultMuted = true;
+      vid.playsInline = true;
+      vid.setAttribute('muted', '');
+      vid.setAttribute('playsinline', '');
+      vid.setAttribute('webkit-playsinline', 'true');
+    }
+    setupVideoElement(coachVideoA);
+    setupVideoElement(coachVideoB);
+
+    // 影片播放錯誤備援機制 (僅在非中止的真實嚴重解碼錯誤時才進行備援，絕不誤觸靜態圖片)
     if (coachVideoA) {
       coachVideoA.addEventListener('error', (e) => {
-        console.warn("coachVideoA 播放錯誤，啟動備援視覺:", e);
+        if (coachVideoA.error && coachVideoA.error.code === 1) return; // 忽略一般切換中斷 (MEDIA_ERR_ABORTED)
+        console.warn("coachVideoA 嚴重解碼錯誤:", e);
         const curSeg = getCurrentSegment();
-        if (coachImage) {
-          coachImage.src = (curSeg && curSeg.image) || (songDatabase[currentSongKey] && songDatabase[currentSongKey].coachImage) || './images/boy_dance_coach_1790908303698.jpg';
+        if (curSeg && !curSeg.video && coachImage) {
+          coachImage.src = curSeg.image || (songDatabase[currentSongKey] && songDatabase[currentSongKey].coachImage) || './images/boy_dance_coach_1790908303698.jpg';
           coachImage.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
           coachImage.classList.add('opacity-100');
         }
@@ -2813,13 +2827,8 @@
     }
     if (coachVideoB) {
       coachVideoB.addEventListener('error', (e) => {
-        console.warn("coachVideoB 播放錯誤，啟動備援視覺:", e);
-        const curSeg = getCurrentSegment();
-        if (coachImage) {
-          coachImage.src = (curSeg && curSeg.image) || (songDatabase[currentSongKey] && songDatabase[currentSongKey].coachImage) || './images/boy_dance_coach_1790908303698.jpg';
-          coachImage.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
-          coachImage.classList.add('opacity-100');
-        }
+        if (coachVideoB.error && coachVideoB.error.code === 1) return;
+        console.warn("coachVideoB 嚴重解碼錯誤:", e);
       });
     }
 
@@ -5582,6 +5591,8 @@
           coachImage.classList.add('hidden', 'opacity-0', 'pointer-events-none');
         }
         activeVideoSlot = 'a';
+        setupVideoElement(coachVideoA);
+        setupVideoElement(coachVideoB);
         coachVideoA.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
         coachVideoA.classList.add('opacity-100');
         coachVideoB.classList.remove('opacity-100');
@@ -5594,13 +5605,13 @@
           coachVideoA._logicalVideoUrl = firstSeg.video;
           coachVideoA.load();
         }
-        coachVideoA.pause();
         if (coachTypeBadge) coachTypeBadge.innerText = "🎬 示範影片";
 
         // 預載第二段影片到 coachVideoB
         if (song.timeline && song.timeline[1] && song.timeline[1].video) {
           const seg2Video = song.timeline[1].video;
           if (coachVideoB._logicalVideoUrl !== seg2Video) {
+            setupVideoElement(coachVideoB);
             coachVideoB.src = seg2Video;
             coachVideoB._logicalVideoUrl = seg2Video;
             coachVideoB.load();
@@ -5618,7 +5629,8 @@
           coachVideoB.classList.add('hidden', 'opacity-0', 'pointer-events-none');
         }
         if (coachImage) {
-          coachImage.classList.remove('hidden', 'opacity-0');
+          coachImage.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+          coachImage.classList.add('opacity-100');
           coachImage.src = (firstSeg && firstSeg.image) || song.coachImage || './images/boy_dance_coach_1790908303698.jpg';
         }
         if (coachTypeBadge) coachTypeBadge.innerText = "📸 動作引導寫真";
@@ -5688,19 +5700,22 @@
 
       if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
 
-      // 5. 若有引導動畫影片，確認首段影片畫面就緒 (極速檢查，至多等候 300ms)
+      // 5. 若有引導動畫影片，確認首段影片畫面就緒 (充分等候首幀解碼渲染，至多 800ms)
       if (firstSeg && firstSeg.video && coachVideoA && coachVideoA.readyState < 2) {
         updateStageLoader(92, "動作引導動畫幀解碼中...", "無縫雙緩衝就緒");
         await new Promise(resolve => {
-          const onVidReady = () => {
-            coachVideoA.removeEventListener('loadeddata', onVidReady);
-            resolve();
+          let resolved = false;
+          const done = () => {
+            if (!resolved) {
+              resolved = true;
+              coachVideoA.removeEventListener('loadeddata', done);
+              coachVideoA.removeEventListener('canplay', done);
+              resolve();
+            }
           };
-          coachVideoA.addEventListener('loadeddata', onVidReady);
-          setTimeout(() => {
-            coachVideoA.removeEventListener('loadeddata', onVidReady);
-            resolve();
-          }, 300);
+          coachVideoA.addEventListener('loadeddata', done);
+          coachVideoA.addEventListener('canplay', done);
+          setTimeout(done, 800);
         });
       }
 
@@ -7651,6 +7666,7 @@
       const isStandbyTarget = standbySlot._logicalVideoUrl === targetVideoUrl ||
         (standbySlot.src && standbySlot.src.indexOf(targetVideoUrl.replace('./', '')) !== -1);
 
+      setupVideoElement(standbySlot);
       if (!isStandbyTarget) {
         standbySlot.src = targetVideoUrl;
         standbySlot._logicalVideoUrl = targetVideoUrl;
@@ -7659,32 +7675,41 @@
         try { standbySlot.currentTime = 0; } catch(e) {}
       }
 
-      // 🌟 關鍵修復：同步鎖定新活躍槽位並立即可見，徹底杜絕非同步 race condition 導致兩槽皆 opacity-0 而黑屏/消失
-      activeVideoSlot = standbyName;
-      standbySlot.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
-      standbySlot.classList.add('opacity-100');
-
+      // 🌟 關鍵防黑屏機制：保持 currentActive 持續可見，直到 standbySlot 確認開始渲染幀才完成平滑淡入翻轉
+      standbySlot.classList.remove('hidden');
       if (isPlaying) {
         standbySlot.playbackRate = playSpeed;
         const playPromise = standbySlot.play();
-        if (playPromise !== undefined) {
-          playPromise.catch(e => {
-            console.warn("Video switch play retry:", e);
-            if (isPlaying && activeVideoSlot === standbyName) {
-              setTimeout(() => { standbySlot.play().catch(() => {}); }, 60);
-            }
-          });
-        }
-      }
 
-      // 舊槽位在 220ms 平滑交叉淡出後，才隱藏並暫停，保證畫面永遠連續有動畫
-      setTimeout(() => {
-        if (activeVideoSlot === standbyName) {
-          currentActive.classList.remove('opacity-100');
-          currentActive.classList.add('opacity-0', 'pointer-events-none');
-          try { currentActive.pause(); } catch(e) {}
+        const executeTransition = () => {
+          activeVideoSlot = standbyName;
+          standbySlot.classList.remove('opacity-0', 'pointer-events-none');
+          standbySlot.classList.add('opacity-100');
+          setTimeout(() => {
+            if (activeVideoSlot === standbyName) {
+              currentActive.classList.remove('opacity-100');
+              currentActive.classList.add('opacity-0', 'pointer-events-none');
+              try { currentActive.pause(); } catch(e) {}
+            }
+          }, 180);
+        };
+
+        if (playPromise !== undefined) {
+          playPromise.then(executeTransition).catch(e => {
+            console.warn("Video switch play retry:", e);
+            setupVideoElement(standbySlot);
+            standbySlot.play().then(executeTransition).catch(() => {});
+          });
+        } else {
+          executeTransition();
         }
-      }, 220);
+      } else {
+        activeVideoSlot = standbyName;
+        standbySlot.classList.remove('opacity-0', 'pointer-events-none');
+        standbySlot.classList.add('opacity-100');
+        currentActive.classList.remove('opacity-100');
+        currentActive.classList.add('opacity-0', 'pointer-events-none');
+      }
 
       // 切換完成後，立即將下一個段落的影片預先放入空閒槽中
       if (nextVideoUrl) {
@@ -7801,8 +7826,10 @@
 
     audioBgm.addEventListener('error', (e) => {
       console.warn("audioBgm playback error:", e);
-      if (isAlbumContinuousPlay) {
-        setTimeout(nextSong, 500);
+      // 若該曲音訊路徑無法載入 (如尚未生成音樂之概念星球)，安全兜底避免跳轉與黑屏崩潰
+      if (audioBgm.src && audioBgm.src.indexOf('track_01_morning_sunshine_hello') === -1) {
+        audioBgm.src = './audio/album1/track_01_morning_sunshine_hello.mp3';
+        if (isPlaying) audioBgm.play().catch(() => {});
       }
     });
 
@@ -7850,14 +7877,37 @@
         if (coachImage) {
           coachImage.classList.add('hidden', 'opacity-0', 'pointer-events-none');
         }
-        if (activeVideoSlot === 'a') {
-          coachVideoA.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
-          coachVideoA.classList.add('opacity-100');
-          coachVideoA.play().catch(e => console.log("Video A play fallback:", e));
-        } else {
-          coachVideoB.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
-          coachVideoB.classList.add('opacity-100');
-          coachVideoB.play().catch(e => console.log("Video B play fallback:", e));
+        const activeVid = activeVideoSlot === 'a' ? coachVideoA : coachVideoB;
+        const standbyVid = activeVideoSlot === 'a' ? coachVideoB : coachVideoA;
+        setupVideoElement(activeVid);
+        setupVideoElement(standbyVid);
+
+        activeVid.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+        activeVid.classList.add('opacity-100');
+        standbyVid.classList.remove('opacity-100');
+        standbyVid.classList.add('opacity-0', 'pointer-events-none');
+
+        activeVid.playbackRate = playSpeed;
+        const playProm = activeVid.play();
+        if (playProm !== undefined) {
+          playProm.catch(e => {
+            console.log("activeVid play catch, retrying:", e);
+            setupVideoElement(activeVid);
+            setTimeout(() => {
+              if (isPlaying) activeVid.play().catch(() => {});
+            }, 60);
+          });
+        }
+      } else {
+        if (coachVideoA) coachVideoA.pause();
+        if (coachVideoB) coachVideoB.pause();
+        if (coachImage) {
+          coachImage.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+          coachImage.classList.add('opacity-100');
+          const targetImg = (seg && seg.image) || (songDatabase[currentSongKey] && songDatabase[currentSongKey].coachImage) || './images/boy_dance_coach_1790908303698.jpg';
+          if (coachImage.src.indexOf(targetImg.replace('./', '')) === -1) {
+            coachImage.src = targetImg;
+          }
         }
       }
 
