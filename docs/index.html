@@ -2234,6 +2234,33 @@
 
 
   <!-- ========================================================= -->
+  <!-- 單曲資源預載進度與暖機畫面 (初次載入無延遲秒播保證)          -->
+  <!-- ========================================================= -->
+  <div id="song-stage-loader" class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-slate-950/85 backdrop-blur-md transition-all duration-300 pointer-events-none opacity-0 hidden">
+    <div class="relative flex flex-col items-center max-w-sm w-11/12 p-6 rounded-3xl bg-slate-900/95 border border-white/20 shadow-2xl text-center space-y-4">
+      <div id="loader-song-emblem" class="w-16 h-16 flex items-center justify-center relative">
+        <div class="absolute inset-0 rounded-full bg-cyan-500/25 animate-ping"></div>
+        <div class="text-4xl animate-bounce">🎵</div>
+      </div>
+      
+      <div class="space-y-1">
+        <h3 id="loader-song-title" class="text-base sm:text-lg font-black text-white drop-shadow truncate max-w-[280px]">載入歌曲中...</h3>
+        <p id="loader-status-text" class="text-xs font-bold text-cyan-300">正在下載高音質音樂與 3D 示範影片...</p>
+      </div>
+
+      <!-- 進度條 -->
+      <div class="w-full bg-slate-800 rounded-full h-3 p-0.5 border border-white/10 overflow-hidden shadow-inner relative">
+        <div id="loader-progress-bar" class="h-full rounded-full bg-gradient-to-r from-cyan-400 via-amber-300 to-emerald-400 transition-all duration-200" style="width: 15%"></div>
+      </div>
+
+      <div class="flex items-center justify-between w-full text-[11px] font-mono text-slate-400 px-1">
+        <span id="loader-detail-text">記憶體快取中 · 零延遲秒播準備</span>
+        <span id="loader-percent-text" class="font-bold text-amber-300">15%</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
   <!-- 頁面 2：跳舞互動教室 (The Interactive Dance Classroom)       -->
   <!-- 第一顆星球：晨光亮色系光暈果凍 / 第二顆星球：星光狂歡果凍    -->
   <!-- 左上角壓底放大 300% 首頁星球設計 + 窄長 9:16 引導 + 高挑攝影機 -->
@@ -2298,19 +2325,25 @@
           </button>
         </div>
 
-        <!-- 人數模式切換 (1人 / 2人 / 3人 智能自動感應) -->
-        <div class="header-pill-group flex items-center bg-slate-950/55 p-1 rounded-2xl border border-white/15 shadow-inner shrink-0" title="鏡頭會根據入鏡人數自動切換 (1~3人)，亦可手動點擊鎖定">
-          <span class="text-[10px] font-bold text-cyan-200/90 px-1.5 hidden md:inline-flex items-center gap-1">
+        <!-- 人數模式切換 (1人 ~ 5人 智能自動感應與防跳鎖定) -->
+        <div class="header-pill-group flex items-center bg-slate-950/55 p-1 rounded-2xl border border-white/15 shadow-inner shrink-0" title="鏡頭會根據入鏡人數自動感應並鎖定 (1~5人)，亦可手動點擊鎖定">
+          <span class="text-[10px] font-bold text-cyan-200/90 px-1.5 hidden lg:inline-flex items-center gap-1">
             <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>自動感應:
           </span>
           <button id="player-btn-1" onclick="setPlayerCount(1)" class="px-2 md:px-2.5 py-1 rounded-xl text-xs font-black jelly-btn-cyan transition">
-            🧍 1人
+            1人
           </button>
           <button id="player-btn-2" onclick="setPlayerCount(2)" class="px-2 md:px-2.5 py-1 rounded-xl text-xs font-black text-slate-300 hover:text-white transition">
-            👫 2人
+            2人
           </button>
           <button id="player-btn-3" onclick="setPlayerCount(3)" class="px-2 md:px-2.5 py-1 rounded-xl text-xs font-black text-slate-300 hover:text-white transition">
-            👨‍👩‍👧 3人
+            3人
+          </button>
+          <button id="player-btn-4" onclick="setPlayerCount(4)" class="px-2 md:px-2.5 py-1 rounded-xl text-xs font-black text-slate-300 hover:text-white transition">
+            4人
+          </button>
+          <button id="player-btn-5" onclick="setPlayerCount(5)" class="px-2 md:px-2.5 py-1 rounded-xl text-xs font-black text-slate-300 hover:text-white transition">
+            5人
           </button>
         </div>
       </div>
@@ -2668,22 +2701,28 @@
       }
     } catch(e) {}
 
-    // 三大類型與三位玩家頭部造型特徵配置
+    // 三大類型與五位玩家頭部造型特徵配置
     const CHARACTER_PROFILES = {
       human: [
         { role: 'boy', name: '👦 樂樂 (小男孩)', color: '#f59e0b', glow: 'rgba(245, 158, 11, 0.95)', headBg: '#fef3c7', match: '#10b981' },
         { role: 'girl', name: '👧 美美 (小女孩)', color: '#ec4899', glow: 'rgba(236, 72, 153, 0.95)', headBg: '#fce7f3', match: '#38bdf8' },
-        { role: 'grandpa', name: '👴 智爺 (老爺爺)', color: '#0d9488', glow: 'rgba(13, 148, 136, 0.95)', headBg: '#f0fdfa', match: '#a855f7' }
+        { role: 'grandpa', name: '👴 智爺 (老爺爺)', color: '#0d9488', glow: 'rgba(13, 148, 136, 0.95)', headBg: '#f0fdfa', match: '#a855f7' },
+        { role: 'girl', name: '👧 妞妞 (萌女孩)', color: '#a855f7', glow: 'rgba(168, 85, 247, 0.95)', headBg: '#f3e8ff', match: '#ec4899' },
+        { role: 'boy', name: '👦 凱凱 (酷男孩)', color: '#06b6d4', glow: 'rgba(6, 182, 212, 0.95)', headBg: '#cffafe', match: '#f97316' }
       ],
       wild: [
         { role: 'lion', name: '🦁 辛巴 (小獅子)', color: '#f59e0b', glow: 'rgba(245, 158, 11, 0.95)', headBg: '#fef3c7', match: '#10b981' },
         { role: 'rabbit', name: '🐰 兔寶 (小萌兔)', color: '#a855f7', glow: 'rgba(168, 85, 247, 0.95)', headBg: '#faf5ff', match: '#ec4899' },
-        { role: 'monkey', name: '🐵 皮皮 (小頑猴)', color: '#ea580c', glow: 'rgba(234, 88, 12, 0.95)', headBg: '#fff7ed', match: '#38bdf8' }
+        { role: 'monkey', name: '🐵 皮皮 (小頑猴)', color: '#ea580c', glow: 'rgba(234, 88, 12, 0.95)', headBg: '#fff7ed', match: '#38bdf8' },
+        { role: 'lion', name: '🐯 斑斑 (小老虎)', color: '#06b6d4', glow: 'rgba(6, 182, 212, 0.95)', headBg: '#cffafe', match: '#f97316' },
+        { role: 'rabbit', name: '🦊 奇奇 (小赤狐)', color: '#10b981', glow: 'rgba(16, 185, 129, 0.95)', headBg: '#d1fae5', match: '#ec4899' }
       ],
       farm: [
         { role: 'pig', name: '🐷 嘟嘟 (小萌豬)', color: '#f43f5e', glow: 'rgba(244, 63, 94, 0.95)', headBg: '#ffe4e6', match: '#10b981' },
         { role: 'cow', name: '🐮 哞哞 (花斑牛)', color: '#10b981', glow: 'rgba(16, 185, 129, 0.95)', headBg: '#ecfdf5', match: '#38bdf8' },
-        { role: 'horse', name: '🐴 奔奔 (小駿馬)', color: '#b45309', glow: 'rgba(180, 83, 9, 0.95)', headBg: '#fef3c7', match: '#eab308' }
+        { role: 'horse', name: '🐴 奔奔 (小駿馬)', color: '#b45309', glow: 'rgba(180, 83, 9, 0.95)', headBg: '#fef3c7', match: '#eab308' },
+        { role: 'pig', name: '🐑 咩咩 (小綿羊)', color: '#38bdf8', glow: 'rgba(56, 189, 248, 0.95)', headBg: '#e0f2fe', match: '#a855f7' },
+        { role: 'cow', name: '🦆 呱呱 (小黃鴨)', color: '#eab308', glow: 'rgba(234, 179, 8, 0.95)', headBg: '#fef9c3', match: '#ec4899' }
       ]
     };
 
@@ -2723,9 +2762,20 @@
     }
 
     let trackedPlayerPoses = [
-      createPlayerPoseProfile(0.5),   // P1 (中心)
-      createPlayerPoseProfile(0.28),  // P2 (左侧同伴)
-      createPlayerPoseProfile(0.72)   // P3 (右侧同伴)
+      createPlayerPoseProfile(0.50),  // P1 (中心)
+      createPlayerPoseProfile(0.30),  // P2 (偏左)
+      createPlayerPoseProfile(0.70),  // P3 (偏右)
+      createPlayerPoseProfile(0.16),  // P4 (最左)
+      createPlayerPoseProfile(0.84)   // P5 (最右)
+    ];
+
+    // 5 位玩家持久化鎖定與防抖防跳追蹤狀態 (離開螢幕超過三分之二範圍才解除鎖定)
+    const playerLockStates = [
+      { locked: false, lastX: 0.50, lastY: 0.50, missingFrames: 0 },
+      { locked: false, lastX: 0.30, lastY: 0.50, missingFrames: 0 },
+      { locked: false, lastX: 0.70, lastY: 0.50, missingFrames: 0 },
+      { locked: false, lastX: 0.16, lastY: 0.50, missingFrames: 0 },
+      { locked: false, lastX: 0.84, lastY: 0.50, missingFrames: 0 }
     ];
 
     // 离屏轻量计算机视觉处理画布 (160x120 像素极速处理)
@@ -5427,6 +5477,29 @@
         return;
       }
 
+      // 0. 顯示專屬單曲 Loading 暖機進度畫面 (第一次下載保證無延遲秒播)
+      function updateStageLoader(pct, statusText, detailText) {
+        const loader = document.getElementById('song-stage-loader');
+        const pBar = document.getElementById('loader-progress-bar');
+        const pText = document.getElementById('loader-percent-text');
+        const sText = document.getElementById('loader-status-text');
+        const dText = document.getElementById('loader-detail-text');
+        const titleEl = document.getElementById('loader-song-title');
+        const emblemEl = document.getElementById('loader-song-emblem');
+        if (loader) {
+          loader.classList.remove('hidden', 'pointer-events-none', 'opacity-0');
+          loader.classList.add('opacity-100');
+        }
+        if (titleEl) titleEl.innerText = song.title;
+        if (emblemEl) emblemEl.innerHTML = renderSongThemeEmblem(song, 'header');
+        if (pBar) pBar.style.width = `${pct}%`;
+        if (pText) pText.innerText = `${Math.round(pct)}%`;
+        if (sText && statusText) sText.innerText = statusText;
+        if (dText && detailText) dText.innerText = detailText;
+      }
+
+      updateStageLoader(15, "正在準備星空舞台與音樂檔案...", "連線快取池 · 準備中");
+
       // 🚀 關鍵零延遲核心：第 0 毫秒立即並行啟動該曲全段落影片預加載與前段 Blob 快取
       prefetchSongVideos(song);
 
@@ -5470,6 +5543,8 @@
         }
       }
 
+      updateStageLoader(35, "正在載入高音質音樂與動作資料...", "音訊通道就緒");
+
       // 設定音檔路徑但暫不播放
       audioBgm.pause();
       audioBgm.src = song.file;
@@ -5491,6 +5566,10 @@
         coachVideoB.classList.remove('opacity-100');
         coachVideoB.classList.add('opacity-0', 'pointer-events-none');
 
+        updateStageLoader(55, "正在下載第 1 段 3D 動作引導影片...", "記憶體 Blob 快取中");
+        // 確保第一段影片進入記憶體 Blob 快取
+        await loadVideoBlob(firstSeg.video);
+
         const initialSrcA = (videoBlobCache.get(firstSeg.video)?.blobUrl) || firstSeg.video;
         if (coachVideoA._logicalVideoUrl !== firstSeg.video) {
           coachVideoA.src = initialSrcA;
@@ -5502,7 +5581,9 @@
 
         // 預載第二段影片到 coachVideoB
         if (song.timeline && song.timeline[1] && song.timeline[1].video) {
+          updateStageLoader(75, "正在預備第 2 段示範影片...", "雙緩衝記憶體預取");
           const seg2Video = song.timeline[1].video;
+          loadVideoBlob(seg2Video); // 背景並行下載
           const initialSrcB = (videoBlobCache.get(seg2Video)?.blobUrl) || seg2Video;
           if (coachVideoB._logicalVideoUrl !== seg2Video) {
             coachVideoB.src = initialSrcB;
@@ -5559,6 +5640,7 @@
 
       // 4. 確認攝影機狀態 (依家長設定：確認攝影機已開啟並完成初始偵測就緒，或確認已徹底關閉)
       if (userSettings.cameraAutoStart) {
+        updateStageLoader(88, "AI 動作偵測鏡頭暖機中...", "火柴人骨骼辨識");
         if (!isCameraActive) {
           if (stickmanStatusBadge) stickmanStatusBadge.innerText = "📷 正在啟動攝影機與偵測狀態...";
           await Promise.race([
@@ -5591,7 +5673,7 @@
 
       if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
 
-      // 5. 若有引導動畫影片，確認首段影片畫面就緒，並在背景預取後續段落
+      // 5. 若有引導動畫影片，確認首段影片畫面就緒
       if (firstSeg && firstSeg.video && coachVideoA && coachVideoA.readyState < 2) {
         await new Promise(resolve => {
           const onVidReady = () => {
@@ -5602,21 +5684,34 @@
           setTimeout(() => {
             coachVideoA.removeEventListener('loadeddata', onVidReady);
             resolve();
-          }, 250);
+          }, 350);
         });
       }
 
       if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
 
-      // 6. 畫面與攝影機狀態皆確認完畢，正式開始播放音樂與舞蹈引導！
+      // 6. 100% 準備完成，優雅淡出 Loading 畫面，正式開始播放音樂與舞蹈引導！
+      updateStageLoader(100, "🎉 舞台準備完成！音樂即刻開始！", "100% 零延遲秒播就緒");
+      await new Promise(r => setTimeout(r, 200));
+
+      const stageLoaderEl = document.getElementById('song-stage-loader');
+      if (stageLoaderEl) {
+        stageLoaderEl.classList.add('opacity-0', 'pointer-events-none');
+        setTimeout(() => stageLoaderEl.classList.add('hidden'), 300);
+      }
+
       startDance();
     }
 
     function backToLobby() {
       currentSongEntryToken++;
       pauseDance();
-      // 離開跳舞教室，關閉實體攝影機
+      // 離開跳舞教室，關閉實體攝影機並隱藏載入器
       stopRealCamera();
+      const stageLoaderEl = document.getElementById('song-stage-loader');
+      if (stageLoaderEl) {
+        stageLoaderEl.classList.add('hidden', 'opacity-0', 'pointer-events-none');
+      }
       viewDance.classList.add('hidden');
       if (isDancerPlaylistMode && viewDancerSquad) {
         viewDancerSquad.classList.remove('hidden');
@@ -5634,11 +5729,11 @@
     }
 
     function updatePlayerCountUI(num) {
-      [1, 2, 3].forEach(n => {
+      [1, 2, 3, 4, 5].forEach(n => {
         const btn = document.getElementById(`player-btn-${n}`);
         if (btn) {
           if (n === num) {
-            btn.className = "px-2 md:px-2.5 py-1 rounded-xl text-xs font-black jelly-btn-cyan transition";
+            btn.className = "px-2 md:px-2.5 py-1 rounded-xl text-xs font-black jelly-btn-cyan transition shadow-md";
           } else {
             btn.className = "px-2 md:px-2.5 py-1 rounded-xl text-xs font-black text-slate-300 hover:text-white transition";
           }
@@ -5655,15 +5750,15 @@
       const now = performance.now();
       if (now < manualPlayerCountOverrideUntil) return; // 手動點選鎖定時間內不自動變更
 
-      // 嚴格平滑器：只接受 1~3 人的有效整數
-      const target = Math.max(1, Math.min(3, Math.round(detectedCount)));
+      // 嚴格平滑器：接受 1~5 人的有效整數
+      const target = Math.max(1, Math.min(5, Math.round(detectedCount)));
       autoDetectBuffer.push(target);
-      if (autoDetectBuffer.length > 32) autoDetectBuffer.shift();
+      if (autoDetectBuffer.length > 36) autoDetectBuffer.shift();
 
-      // 當最近 32 次檢測（約 1.5~2 秒連續幀）中有至少 24 次（75%）一致判定為新目標人數，且距上次切換超過 4.5 秒時才平滑切換
+      // 當最近 36 次檢測（約 1.8~2.5 秒連續幀）中有至少 28 次（約 78%）一致判定為新目標人數，且距上次切換超過 5 秒時才平滑切換
       const countMatching = autoDetectBuffer.filter(c => c === target).length;
-      if (countMatching >= 24 && target !== playerCount) {
-        if (now - lastAutoSwitchTime > 4500) {
+      if (countMatching >= 28 && target !== playerCount) {
+        if (now - lastAutoSwitchTime > 5000) {
           lastAutoSwitchTime = now;
           console.log(`[Auto-Detect] 🎯 畫面人數高置信度平穩自適應：${playerCount}人 ➜ ${target}人`);
           setPlayerCount(target, false);
@@ -5673,18 +5768,22 @@
     }
 
     function setPlayerCount(num, isManual = true) {
-      playerCount = Math.max(1, Math.min(3, num));
+      playerCount = Math.max(1, Math.min(5, num));
       updatePlayerCountUI(playerCount);
       if (isManual) {
-        manualPlayerCountOverrideUntil = performance.now() + 15000; // 手動切換模式鎖定 15 秒，充分保證單人專注跳舞
+        manualPlayerCountOverrideUntil = performance.now() + 25000; // 手動切換模式鎖定 25 秒，充分保證專注跳舞不隨意跳變
         stickmanStatusBadge.innerText = `✨ 已鎖定為 ${playerCount} 位火柴人模式（點擊其他按鈕可切換）`;
       } else {
         if (playerCount === 1) {
           stickmanStatusBadge.innerText = "👀 鏡頭感應到 1 位小朋友，火柴人合體就位！";
         } else if (playerCount === 2) {
           stickmanStatusBadge.innerText = "🎉 鏡頭感應到 2 位小朋友！已自動調整為雙人齊舞模式！";
+        } else if (playerCount === 3) {
+          stickmanStatusBadge.innerText = "🎉🎉 鏡頭感應到 3 位小朋友！已自動調整為三人齊舞派對！";
+        } else if (playerCount === 4) {
+          stickmanStatusBadge.innerText = "🎉🎉🎉 鏡頭感應到 4 位小朋友！已自動調整為四人舞團齊舞！";
         } else {
-          stickmanStatusBadge.innerText = "🎉🎉🎉 鏡頭感應到 3 位小朋友！已自動調整為三人齊舞派對！";
+          stickmanStatusBadge.innerText = "🌟🌟🌟🌟🌟 鏡頭感應到 5 位小朋友！5人戰隊全員大合體開跳！";
         }
       }
       updateIdlePoses();
@@ -5851,129 +5950,208 @@
       const vh = webcamVideo.videoHeight || 480;
       if (vw <= 0 || vh <= 0) return;
 
-      // 过滤有效检测人体 (置信度阈值 0.12，或至少 3 个关键点置信度 > 0.18，让远距离小人体也能灵敏捕捉)
+      // 1. 靈敏度優化：放寬置信度門檻 (總分 > 0.08，或只要有 2 個關節點評分 > 0.10 即視為有效人體，兼顧遠距與幼兒)
       const validPoses = (poses || []).filter(p => {
-        if (p.score && p.score > 0.10) return true;
+        if (p.score && p.score > 0.08) return true;
         if (p.keypoints) {
-          const highConf = p.keypoints.filter(k => k.score > 0.16).length;
-          return highConf >= 3;
+          const highConf = p.keypoints.filter(k => k.score > 0.10).length;
+          return highConf >= 2;
         }
         return false;
       });
 
       if (validPoses.length === 0) {
-        if (presenceConfidence > 0) presenceConfidence -= 1.0;
+        if (presenceConfidence > 0) presenceConfidence -= 0.5;
+        // 即使此幀未捕捉到，已鎖定槽位累加遺失計數，未滿 60 幀 (~2秒) 前絕不隨意解除鎖定
+        for (let i = 0; i < playerCount; i++) {
+          if (playerLockStates[i] && playerLockStates[i].locked) {
+            playerLockStates[i].missingFrames++;
+            if (playerLockStates[i].missingFrames > 60) {
+              playerLockStates[i].locked = false;
+              playerLockStates[i].missingFrames = 0;
+            }
+          }
+        }
         return;
       }
 
       lastMoveNetDetectTime = performance.now();
       activeTrackingEngine = "MoveNet AI MultiPose";
 
-      // 🎯 核心：透過 evaluateAutoPlayerCount 進行平滑防抖自適應判定（不再在單幀突發覆蓋 playerCount）
-      evaluateAutoPlayerCount(validPoses.length);
-
-      // 计算每个人在屏幕上的水平中心点 (镜像后 1.0 - x/vw)
+      // 计算每个人在屏幕上的水平与垂直中心点 (镜像后 1.0 - x/vw)
       validPoses.forEach(pose => {
-        let sumX = 0;
-        let count = 0;
+        let sumX = 0, sumY = 0, count = 0;
         pose.keypoints.forEach(k => {
-          if (k.score > 0.15) {
+          if (k.score > 0.08) {
             sumX += k.x;
+            sumY += k.y;
             count++;
           }
         });
         const rawX = count > 0 ? (sumX / count) : ((pose.box ? (pose.box.xMin + pose.box.xMax) / 2 : vw / 2));
+        const rawY = count > 0 ? (sumY / count) : ((pose.box ? (pose.box.yMin + pose.box.yMax) / 2 : vh / 2));
         pose.screenCenterX = 1.0 - (rawX / vw);
+        pose.screenCenterY = rawY / vh;
       });
 
-      // 依水平由左至右對 validPoses 排序，賦予穩定的空間連續性
+      // 依水平由左至右排序
       validPoses.sort((a, b) => a.screenCenterX - b.screenCenterX);
 
-      // 多人独立扇区站位匹配：根据小朋友水平位置智能匹配 P1, P2, P3 槽位
       const sectors = getSectors();
       const assignedPoses = new Array(playerCount).fill(null);
       const usedPoses = new Set();
 
+      // 🎯 核心鎖定演算法（Phase 1）：優先保持已鎖定槽位（未離開螢幕超過 2/3 範圍前絕對鎖定！）
       for (let sIdx = 0; sIdx < playerCount; sIdx++) {
-        const targetX = sectors[sIdx].defaultX;
-        let bestDist = Infinity;
-        let bestPoseIdx = -1;
-        validPoses.forEach((pose, pIdx) => {
-          if (!usedPoses.has(pIdx)) {
-            const dist = Math.abs(pose.screenCenterX - targetX);
-            if (dist < bestDist) {
-              bestDist = dist;
-              bestPoseIdx = pIdx;
+        if (playerLockStates[sIdx] && playerLockStates[sIdx].locked) {
+          let bestDist = Infinity;
+          let bestPoseIdx = -1;
+          validPoses.forEach((pose, pIdx) => {
+            if (!usedPoses.has(pIdx)) {
+              const dx = Math.abs(pose.screenCenterX - playerLockStates[sIdx].lastX);
+              const dy = Math.abs(pose.screenCenterY - playerLockStates[sIdx].lastY);
+              const dist = Math.sqrt(dx * dx + dy * dy);
+              // 鎖定條件：水平位移在三分之二螢幕 (0.67) 範圍內，保持原位鎖定
+              if (dx <= 0.67 && dist < bestDist) {
+                bestDist = dist;
+                bestPoseIdx = pIdx;
+              }
+            }
+          });
+
+          if (bestPoseIdx !== -1) {
+            assignedPoses[sIdx] = validPoses[bestPoseIdx];
+            usedPoses.add(bestPoseIdx);
+            playerLockStates[sIdx].lastX = validPoses[bestPoseIdx].screenCenterX;
+            playerLockStates[sIdx].lastY = validPoses[bestPoseIdx].screenCenterY;
+            playerLockStates[sIdx].missingFrames = 0;
+          } else {
+            // 此幀未直接命中：增加遺失計數
+            playerLockStates[sIdx].missingFrames++;
+            // 唯有超出 2/3 螢幕或徹底離開相機邊界 (0.04 或 0.96) 或逾 60 幀 (~2秒) 才正式解鎖
+            if (playerLockStates[sIdx].missingFrames > 60 ||
+                playerLockStates[sIdx].lastX < 0.04 || playerLockStates[sIdx].lastX > 0.96) {
+              playerLockStates[sIdx].locked = false;
+              playerLockStates[sIdx].missingFrames = 0;
             }
           }
-        });
-        // 只要在对应站位合理距离内 (0.42 以内) 即可完美认领
-        if (bestPoseIdx !== -1 && bestDist < 0.42) {
-          assignedPoses[sIdx] = validPoses[bestPoseIdx];
-          usedPoses.add(bestPoseIdx);
         }
       }
 
-      // 如果有小朋友入镜但未落入已知扇区（例如单人自由站位），优先填充空槽位
+      // 🎯 核心鎖定演算法（Phase 2）：為未鎖定的空槽位配對新入鏡的小朋友並建立鎖定
+      for (let sIdx = 0; sIdx < playerCount; sIdx++) {
+        if (!assignedPoses[sIdx] && (!playerLockStates[sIdx] || !playerLockStates[sIdx].locked)) {
+          const targetX = sectors[sIdx] ? sectors[sIdx].defaultX : 0.5;
+          let bestDist = Infinity;
+          let bestPoseIdx = -1;
+          validPoses.forEach((pose, pIdx) => {
+            if (!usedPoses.has(pIdx)) {
+              const dist = Math.abs(pose.screenCenterX - targetX);
+              if (dist < bestDist) {
+                bestDist = dist;
+                bestPoseIdx = pIdx;
+              }
+            }
+          });
+
+          if (bestPoseIdx !== -1) {
+            assignedPoses[sIdx] = validPoses[bestPoseIdx];
+            usedPoses.add(bestPoseIdx);
+            if (!playerLockStates[sIdx]) {
+              playerLockStates[sIdx] = { locked: true, lastX: validPoses[bestPoseIdx].screenCenterX, lastY: validPoses[bestPoseIdx].screenCenterY, missingFrames: 0 };
+            } else {
+              playerLockStates[sIdx].locked = true;
+              playerLockStates[sIdx].lastX = validPoses[bestPoseIdx].screenCenterX;
+              playerLockStates[sIdx].lastY = validPoses[bestPoseIdx].screenCenterY;
+              playerLockStates[sIdx].missingFrames = 0;
+            }
+          }
+        }
+      }
+
+      // 若還有入鏡小朋友但槽位未滿，優先填補空槽
       validPoses.forEach((pose, pIdx) => {
         if (!usedPoses.has(pIdx)) {
           for (let sIdx = 0; sIdx < playerCount; sIdx++) {
             if (!assignedPoses[sIdx]) {
               assignedPoses[sIdx] = pose;
               usedPoses.add(pIdx);
+              if (playerLockStates[sIdx]) {
+                playerLockStates[sIdx].locked = true;
+                playerLockStates[sIdx].lastX = pose.screenCenterX;
+                playerLockStates[sIdx].lastY = pose.screenCenterY;
+                playerLockStates[sIdx].missingFrames = 0;
+              }
               break;
             }
           }
         }
       });
 
+      // 清除超過 playerCount 的多餘鎖定
+      for (let sIdx = playerCount; sIdx < playerLockStates.length; sIdx++) {
+        if (playerLockStates[sIdx]) {
+          playerLockStates[sIdx].locked = false;
+          playerLockStates[sIdx].missingFrames = 0;
+        }
+      }
+
+      const lockedActiveCount = playerLockStates.slice(0, playerCount).filter(s => s && s.locked && s.missingFrames < 30).length;
+      evaluateAutoPlayerCount(Math.max(validPoses.length, lockedActiveCount));
+
       const trackedActiveCount = assignedPoses.filter(p => p !== null).length;
-      if (trackedActiveCount > 0) {
+      const displayCount = Math.max(trackedActiveCount, lockedActiveCount);
+      if (displayCount > 0) {
         presenceConfidence = Math.min(100, presenceConfidence + 8);
         isHumanDetected = true;
         if (playerCount === 1) {
-          stickmanStatusBadge.innerText = "🎉 小朋友已入鏡！火柴人合體完成！";
+          stickmanStatusBadge.innerText = "🎉 小朋友已鎖定入鏡！火柴人合體完成！";
         } else if (playerCount === 2) {
-          if (trackedActiveCount >= 2) {
-            stickmanStatusBadge.innerText = "🎉🎉 成功偵測到 2 位小朋友！左右火柴人同步齊舞！";
-          } else {
-            stickmanStatusBadge.innerText = "🎉 已捕捉到 1 位小朋友！等待另一位小夥伴入鏡~";
-          }
+          stickmanStatusBadge.innerText = displayCount >= 2 
+            ? "🎉🎉 成功鎖定 2 位小朋友！左右火柴人同步齊舞！" 
+            : `🎉 已鎖定 ${displayCount} 位小朋友！等待另一位小夥伴入鏡~`;
+        } else if (playerCount === 3) {
+          stickmanStatusBadge.innerText = displayCount >= 3 
+            ? "🎉🎉🎉 成功鎖定 3 位小朋友！三人熱力齊舞派對！" 
+            : `🎉 已鎖定 ${displayCount} 位小朋友，等待其餘小夥伴入鏡~`;
+        } else if (playerCount === 4) {
+          stickmanStatusBadge.innerText = displayCount >= 4 
+            ? "🎉🎉🎉🎉 成功鎖定 4 位小朋友！四人舞團齊舞！" 
+            : `🎉 已鎖定 ${displayCount} 位小朋友，等待其餘小夥伴入鏡~`;
         } else {
-          if (trackedActiveCount >= 3) {
-            stickmanStatusBadge.innerText = "🎉🎉🎉 成功偵測到 3 位小朋友！全員火柴人熱力齊舞！";
-          } else {
-            stickmanStatusBadge.innerText = `🎉 已捕捉到 ${trackedActiveCount} 位小朋友，等待其餘小夥伴入鏡~`;
-          }
+          stickmanStatusBadge.innerText = displayCount >= 5 
+            ? "🌟🌟🌟🌟🌟 5 位小朋友全員鎖定到齊！大合體熱力開跳！" 
+            : `🎉 已鎖定 ${displayCount} 位小朋友，等待其餘小夥伴入鏡~`;
         }
         stickmanStatusBadge.className = "bg-emerald-500 text-white text-xs font-black px-3 py-1 rounded-full shadow";
       }
 
       const alpha = 0.35; // 平滑基礎權重（降低高頻噪聲干擾）
 
-      // 将检测到的骨骼绑定到对应的玩家槽位 (最多 3 位)
-      for (let i = 0; i < 3; i++) {
+      // 将检测到的骨骼绑定到对应的玩家槽位 (最多 5 位)
+      for (let i = 0; i < playerCount; i++) {
         const p = trackedPlayerPoses[i];
         if (!p) continue;
 
         const assignedPose = (i < playerCount) ? assignedPoses[i] : null;
+        const isLockedSlot = playerLockStates[i] && playerLockStates[i].locked;
 
         if (assignedPose) {
           p.detected = true;
           const kpMap = {};
           assignedPose.keypoints.forEach(k => { kpMap[k.name] = k; });
 
-          // 🧠 智慧死區（Deadzone）防抖濾波器：微小抖動不更新，大幅移動立即平滑跟隨 (放寬至 0.10 兼顧遠距人物)
+          // 🧠 智慧死區（Deadzone）防抖濾波器：微小抖動不更新，大幅移動立即平滑跟隨 (放寬至 0.08 兼顧遠距人物)
           function updateNodeFromKp(node, kp, fallbackX, fallbackY) {
-            if (kp && kp.score > 0.10) {
+            if (kp && kp.score > 0.08) {
               const targetX = 1.0 - (kp.x / vw);
               const targetY = kp.y / vh;
               const dx = targetX - node.x;
               const dy = targetY - node.y;
               const dist = Math.sqrt(dx * dx + dy * dy);
 
-              // 抖動死區閾值：若位移小於 0.007（約數個像素微抖），保持穩定不動
-              if (dist < 0.007) {
+              // 抖動死區閾值：若位移小於 0.006（約數個像素微抖），保持穩定不動
+              if (dist < 0.006) {
                 return;
               }
 
@@ -6046,8 +6224,13 @@
           // 姿态判别 (双手举高 / 招手)
           p.isHandsHigh = (p.lWrist.y < p.head.y + 0.06 || p.rWrist.y < p.head.y + 0.06);
           p.isWaving = (p.lWrist.y < p.neck.y || p.rWrist.y < p.neck.y);
+        } else if (isLockedSlot) {
+          // 該玩家處於鎖定保護中（短暫轉身或微動遮擋）：保持 detected 為 true，在鎖定原位平滑阻尼，絕不跳變或消失
+          p.detected = true;
+          const idleWave = Math.sin(frameTick * 0.05 + i * 1.5) * 0.01;
+          p.head.x += (playerLockStates[i].lastX + idleWave - p.head.x) * 0.08;
         } else {
-          // 该玩家未入镜：保持该站位的轻柔律动等待
+          // 该玩家未入镜或已解除鎖定：保持该站位的轻柔律动等待
           p.detected = false;
           const s = (sectors && sectors[i]) || { defaultX: 0.5 };
           const idleWave = Math.sin(frameTick * 0.06 + i * 1.5) * 0.02;
@@ -6293,20 +6476,35 @@
     webcamVideo.addEventListener('loadedmetadata', resizeCanvas);
     webcamVideo.addEventListener('play', resizeCanvas);
 
-    // 多人独立扇区定义 (根据当前设定的玩家数量 1, 2, 3 进行屏幕空间独立解耦)
+    // 多人独立扇区定义 (根据当前设定的玩家数量 1~5 进行屏幕空间独立解耦)
     function getSectors() {
       if (playerCount === 1) {
         return [{ id: 0, minX: 0.0, maxX: 1.0, defaultX: 0.50 }];
       } else if (playerCount === 2) {
         return [
-          { id: 0, minX: 0.0, maxX: 0.52, defaultX: 0.28 },
-          { id: 1, minX: 0.48, maxX: 1.0, defaultX: 0.72 }
+          { id: 0, minX: 0.0, maxX: 0.52, defaultX: 0.30 },
+          { id: 1, minX: 0.48, maxX: 1.0, defaultX: 0.70 }
         ];
-      } else {
+      } else if (playerCount === 3) {
         return [
           { id: 0, minX: 0.0, maxX: 0.38, defaultX: 0.20 },
           { id: 1, minX: 0.32, maxX: 0.68, defaultX: 0.50 },
           { id: 2, minX: 0.62, maxX: 1.0, defaultX: 0.80 }
+        ];
+      } else if (playerCount === 4) {
+        return [
+          { id: 0, minX: 0.0, maxX: 0.28, defaultX: 0.16 },
+          { id: 1, minX: 0.24, maxX: 0.52, defaultX: 0.38 },
+          { id: 2, minX: 0.48, maxX: 0.76, defaultX: 0.62 },
+          { id: 3, minX: 0.72, maxX: 1.0, defaultX: 0.84 }
+        ];
+      } else {
+        return [
+          { id: 0, minX: 0.0, maxX: 0.23, defaultX: 0.12 },
+          { id: 1, minX: 0.20, maxX: 0.42, defaultX: 0.31 },
+          { id: 2, minX: 0.39, maxX: 0.61, defaultX: 0.50 },
+          { id: 3, minX: 0.58, maxX: 0.80, defaultX: 0.69 },
+          { id: 4, minX: 0.77, maxX: 1.0, defaultX: 0.88 }
         ];
       }
     }
@@ -6537,8 +6735,9 @@
         cvDetectedPersons = 1;
       }
 
-      if (cvDetectedPersons > 0) {
-        evaluateAutoPlayerCount(cvDetectedPersons);
+      // 僅在 MoveNet / MediaPipe 完全不可用時，才允許低階 CV 在極其嚴格條件下參考，防止手臂揮動誤判為 3 人
+      if (!moveNetDetector && !mpPose && cvDetectedPersons === 1) {
+        evaluateAutoPlayerCount(1);
       }
 
       // 玩家骨骼驅動與狀態更新 (加入 PresenceTimer 鎖定與滯後記憶，消除抽搐與誤判)
@@ -6738,14 +6937,31 @@
               ? [{ id: 0, minX: 0.20, width: 0.60, title: "👋 小朋友站在這裡，馬上合體火柴人！", color: "rgba(250, 204, 21, 0.65)", textColor: "rgba(250, 204, 21, 0.95)" }]
               : (playerCount === 2 
                   ? [
-                      { id: 0, minX: 0.05, width: 0.42, title: "👋 P1 (左邊小朋友請就位)", color: "rgba(245, 158, 11, 0.65)", textColor: "rgba(245, 158, 11, 0.95)" },
-                      { id: 1, minX: 0.53, width: 0.42, title: "👋 P2 (右邊小朋友請就位)", color: "rgba(56, 189, 248, 0.65)", textColor: "rgba(56, 189, 248, 0.95)" }
+                      { id: 0, minX: 0.05, width: 0.42, title: "👋 P1 (左邊請就位)", color: "rgba(245, 158, 11, 0.65)", textColor: "rgba(245, 158, 11, 0.95)" },
+                      { id: 1, minX: 0.53, width: 0.42, title: "👋 P2 (右邊請就位)", color: "rgba(56, 189, 248, 0.65)", textColor: "rgba(56, 189, 248, 0.95)" }
                     ]
-                  : [
-                      { id: 0, minX: 0.03, width: 0.29, title: "👋 P1 (左邊)", color: "rgba(245, 158, 11, 0.65)", textColor: "rgba(245, 158, 11, 0.95)" },
-                      { id: 1, minX: 0.35, width: 0.30, title: "👋 P2 (中間)", color: "rgba(56, 189, 248, 0.65)", textColor: "rgba(56, 189, 248, 0.95)" },
-                      { id: 2, minX: 0.68, width: 0.29, title: "👋 P3 (右邊)", color: "rgba(192, 132, 252, 0.65)", textColor: "rgba(192, 132, 252, 0.95)" }
-                    ]
+                  : (playerCount === 3
+                      ? [
+                          { id: 0, minX: 0.03, width: 0.29, title: "👋 P1 (左邊)", color: "rgba(245, 158, 11, 0.65)", textColor: "rgba(245, 158, 11, 0.95)" },
+                          { id: 1, minX: 0.35, width: 0.30, title: "👋 P2 (中間)", color: "rgba(56, 189, 248, 0.65)", textColor: "rgba(56, 189, 248, 0.95)" },
+                          { id: 2, minX: 0.68, width: 0.29, title: "👋 P3 (右邊)", color: "rgba(192, 132, 252, 0.65)", textColor: "rgba(192, 132, 252, 0.95)" }
+                        ]
+                      : (playerCount === 4
+                          ? [
+                              { id: 0, minX: 0.02, width: 0.22, title: "👋 P1", color: "rgba(245, 158, 11, 0.65)", textColor: "rgba(245, 158, 11, 0.95)" },
+                              { id: 1, minX: 0.26, width: 0.22, title: "👋 P2", color: "rgba(56, 189, 248, 0.65)", textColor: "rgba(56, 189, 248, 0.95)" },
+                              { id: 2, minX: 0.52, width: 0.22, title: "👋 P3", color: "rgba(192, 132, 252, 0.65)", textColor: "rgba(192, 132, 252, 0.95)" },
+                              { id: 3, minX: 0.76, width: 0.22, title: "👋 P4", color: "rgba(16, 185, 129, 0.65)", textColor: "rgba(16, 185, 129, 0.95)" }
+                            ]
+                          : [
+                              { id: 0, minX: 0.02, width: 0.17, title: "👋 P1", color: "rgba(245, 158, 11, 0.65)", textColor: "rgba(245, 158, 11, 0.95)" },
+                              { id: 1, minX: 0.21, width: 0.17, title: "👋 P2", color: "rgba(236, 72, 153, 0.65)", textColor: "rgba(236, 72, 153, 0.95)" },
+                              { id: 2, minX: 0.41, width: 0.17, title: "👋 P3", color: "rgba(6, 182, 212, 0.65)", textColor: "rgba(6, 182, 212, 0.95)" },
+                              { id: 3, minX: 0.61, width: 0.17, title: "👋 P4", color: "rgba(168, 85, 247, 0.65)", textColor: "rgba(168, 85, 247, 0.95)" },
+                              { id: 4, minX: 0.81, width: 0.17, title: "👋 P5", color: "rgba(16, 185, 129, 0.65)", textColor: "rgba(16, 185, 129, 0.95)" }
+                            ]
+                        )
+                    )
                 );
 
             guideSlots.forEach(slot => {
