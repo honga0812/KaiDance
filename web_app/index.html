@@ -2794,16 +2794,16 @@
     </header>
 
     <!-- 中間核心舞台：左側黑膠唱盤機 (旋轉黑膠CD+機械唱臂) + 右側當前歌曲與 10 首歌單 -->
-    <main class="relative z-10 flex-1 flex flex-col md:flex-row items-center gap-4 py-2 min-h-0 w-full overflow-hidden">
+    <main class="relative z-10 flex-1 flex flex-col md:flex-row items-stretch gap-3 md:gap-4 py-1.5 min-h-0 w-full overflow-hidden">
       
-      <!-- 左側：3D 黑膠唱盤機本體 (播放時黑膠旋轉、唱針移上唱盤；暫停時停止) -->
-      <section class="flex-1 w-full md:w-1/2 flex flex-col items-center justify-center p-2 relative h-full min-h-[280px]">
+      <!-- 左側：3D 黑膠唱盤機本體 (播放時黑膠旋轉、唱針移上唱盤；暫停時停止) + 畫面左下雙語同步歌詞 -->
+      <section class="flex-1 w-full md:w-1/2 flex flex-col items-center justify-between p-1.5 sm:p-2 relative h-full min-h-0 overflow-hidden">
         
         <!-- 唱機底座機身 (Brushed Metallic Turntable Base) -->
-        <div class="relative w-[270px] sm:w-[310px] md:w-[340px] h-[270px] sm:h-[310px] md:h-[340px] rounded-3xl p-3 flex items-center justify-center border-2 border-slate-700/80 shadow-[0_20px_50px_rgba(0,0,0,0.8),inset_0_2px_8px_rgba(255,255,255,0.15)]" style="background: radial-gradient(circle at 40% 30%, #201a35 0%, #120e24 60%, #080612 100%);">
+        <div class="relative w-[230px] sm:w-[260px] md:w-[280px] h-[230px] sm:h-[260px] md:h-[280px] rounded-3xl p-2.5 flex items-center justify-center border-2 border-slate-700/80 shadow-[0_20px_50px_rgba(0,0,0,0.8),inset_0_2px_8px_rgba(255,255,255,0.15)] shrink-0" style="background: radial-gradient(circle at 40% 30%, #201a35 0%, #120e24 60%, #080612 100%);">
           
           <!-- 唱盤圓形金屬轉盤托盤 (Turntable Platter) -->
-          <div class="relative w-[230px] sm:w-[270px] md:w-[290px] h-[230px] sm:h-[270px] md:h-[290px] rounded-full p-2 flex items-center justify-center border border-slate-600/70 shadow-[0_0_30px_rgba(0,0,0,0.9)]" style="background: radial-gradient(circle, #332d4a 0%, #171329 80%, #0d0a1a 100%);">
+          <div class="relative w-[195px] sm:w-[225px] md:w-[245px] h-[195px] sm:h-[225px] md:h-[245px] rounded-full p-1.5 flex items-center justify-center border border-slate-600/70 shadow-[0_0_30px_rgba(0,0,0,0.9)]" style="background: radial-gradient(circle, #332d4a 0%, #171329 80%, #0d0a1a 100%);">
             
             <!-- 🪐 黑膠唱片本體 (Vinyl Disc)：外圍黑膠微音軌 + 內圈星球 CD 圖案 (播放時旋轉，暫停時靜止) -->
             <div id="turntable-disc" class="turntable-vinyl-disc relative w-full h-full rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.95)] overflow-hidden cursor-pointer is-paused" onclick="turntableTogglePlay()" title="點擊黑膠唱片切換 播放 / 暫停">
@@ -2813,9 +2813,9 @@
               <div class="absolute inset-0 rounded-full opacity-35 bg-gradient-to-tr from-cyan-400 via-pink-400 to-amber-300 pointer-events-none mix-blend-screen" style="transform: rotate(35deg);"></div>
               
               <!-- 黑膠細緻邊緣光暈環 -->
-              <div class="absolute inset-2 rounded-full border border-white/15 pointer-events-none"></div>
-              <div class="absolute inset-5 rounded-full border border-white/10 pointer-events-none"></div>
-              <div class="absolute inset-8 rounded-full border border-white/10 pointer-events-none"></div>
+              <div class="absolute inset-1.5 rounded-full border border-white/15 pointer-events-none"></div>
+              <div class="absolute inset-4 rounded-full border border-white/10 pointer-events-none"></div>
+              <div class="absolute inset-7 rounded-full border border-white/10 pointer-events-none"></div>
               
               <!-- 內圈星球 CD 標籤 (直徑約佔 54%) -->
               <div class="relative z-10 w-[54%] h-[54%] rounded-full p-1.5 flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.8)] border border-amber-300/40" style="background: radial-gradient(circle, #2d1f4d 0%, #150f29 100%);">
@@ -2823,25 +2823,25 @@
                 <img id="turntable-planet-img" src="./images/ui/planet1_morning.png" alt="當前播放星球" class="w-full h-full object-contain filter drop-shadow-[0_4px_12px_rgba(0,0,0,0.7)] pointer-events-none select-none">
                 
                 <!-- 中心主軸金屬孔 (Spindle) -->
-                <div class="absolute w-6 h-6 rounded-full bg-gradient-to-br from-amber-300 via-amber-500 to-amber-700 flex items-center justify-center shadow-lg border border-amber-200 pointer-events-none">
-                  <div class="w-2.5 h-2.5 rounded-full bg-slate-950 border border-amber-300/60 flex items-center justify-center">
-                    <span class="w-1 h-1 rounded-full bg-amber-400"></span>
+                <div class="absolute w-5 h-5 rounded-full bg-gradient-to-br from-amber-300 via-amber-500 to-amber-700 flex items-center justify-center shadow-lg border border-amber-200 pointer-events-none">
+                  <div class="w-2 h-2 rounded-full bg-slate-950 border border-amber-300/60 flex items-center justify-center">
+                    <span class="w-0.5 h-0.5 rounded-full bg-amber-400"></span>
                   </div>
                 </div>
               </div>
             </div>
 
             <!-- 機械唱臂 (Turntable Tonearm)：播放時落針至黑膠上，暫停時退回停靠座 -->
-            <div id="turntable-tonearm" class="turntable-tonearm absolute -top-1.5 -right-1.5 w-16 h-40 pointer-events-none is-parked z-30" style="filter: drop-shadow(0 6px 10px rgba(0,0,0,0.8));">
+            <div id="turntable-tonearm" class="turntable-tonearm absolute -top-1.5 -right-1.5 w-14 h-36 pointer-events-none is-parked z-30" style="filter: drop-shadow(0 6px 10px rgba(0,0,0,0.8));">
               <!-- 唱臂金屬底座圓盤 -->
-              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-slate-300 via-slate-600 to-slate-900 border border-slate-400 shadow-md flex items-center justify-center">
-                <div class="w-3.5 h-3.5 rounded-full bg-amber-400 border border-amber-200 shadow-xs"></div>
+              <div class="w-7 h-7 rounded-full bg-gradient-to-br from-slate-300 via-slate-600 to-slate-900 border border-slate-400 shadow-md flex items-center justify-center">
+                <div class="w-3 h-3 rounded-full bg-amber-400 border border-amber-200 shadow-xs"></div>
               </div>
               <!-- 金屬鍍鉻唱臂桿 -->
-              <div class="absolute top-6 left-3 w-1.5 h-24 bg-gradient-to-r from-slate-200 via-slate-400 to-slate-600 rounded-full shadow"></div>
+              <div class="absolute top-5 left-2.5 w-1.5 h-20 bg-gradient-to-r from-slate-200 via-slate-400 to-slate-600 rounded-full shadow"></div>
               <!-- 唱頭與唱針 (Cartridge & Stylus) -->
-              <div class="absolute top-28 left-0.5 w-5 h-7 rounded-sm bg-gradient-to-br from-amber-400 via-orange-500 to-slate-900 border border-amber-200 shadow-md transform rotate-12 flex items-center justify-center">
-                <span class="text-[7px] text-white font-black">♪</span>
+              <div class="absolute top-24 left-0 w-4.5 h-6 rounded-sm bg-gradient-to-br from-amber-400 via-orange-500 to-slate-900 border border-amber-200 shadow-md transform rotate-12 flex items-center justify-center">
+                <span class="text-[6px] text-white font-black">♪</span>
               </div>
             </div>
 
@@ -2849,14 +2849,14 @@
         </div>
 
         <!-- 唱機下方音訊節奏律動發光條 (Equalizer Waveform Bars) -->
-        <div id="turntable-equalizer" class="flex items-end justify-center gap-1.5 mt-3 h-6 w-full max-w-xs">
+        <div id="turntable-equalizer" class="flex items-end justify-center gap-1.5 my-1.5 h-4 sm:h-5 w-full max-w-xs shrink-0">
           <!-- 12 根隨音樂跳動的節奏光柱 -->
           <span class="eq-bar w-1.5 rounded-full bg-amber-400/90 h-2"></span>
           <span class="eq-bar w-1.5 rounded-full bg-amber-300/90 h-4"></span>
           <span class="eq-bar w-1.5 rounded-full bg-orange-400/90 h-3"></span>
           <span class="eq-bar w-1.5 rounded-full bg-pink-400/90 h-5"></span>
           <span class="eq-bar w-1.5 rounded-full bg-fuchsia-400/90 h-3"></span>
-          <span class="eq-bar w-1.5 rounded-full bg-cyan-400/90 h-6"></span>
+          <span class="eq-bar w-1.5 rounded-full bg-cyan-400/90 h-5"></span>
           <span class="eq-bar w-1.5 rounded-full bg-teal-400/90 h-4"></span>
           <span class="eq-bar w-1.5 rounded-full bg-cyan-300/90 h-5"></span>
           <span class="eq-bar w-1.5 rounded-full bg-pink-400/90 h-3"></span>
@@ -2864,13 +2864,31 @@
           <span class="eq-bar w-1.5 rounded-full bg-amber-300/90 h-2"></span>
           <span class="eq-bar w-1.5 rounded-full bg-amber-400/90 h-3"></span>
         </div>
+
+        <!-- 🎶 畫面左下位置：同步雙語歌詞展示區 (英文字型較大，中文歌詞為輔) -->
+        <div id="turntable-lyrics-container" class="w-full max-w-md px-3.5 py-2 sm:py-2.5 rounded-2xl bg-slate-900/85 backdrop-blur-md border border-amber-300/40 shadow-[0_6px_25px_rgba(0,0,0,0.7)] flex items-center gap-3 transition-all duration-300 shrink-0">
+          <div class="w-8 h-8 rounded-xl bg-gradient-to-br from-amber-400/30 via-pink-500/25 to-purple-600/35 border border-amber-300/40 flex items-center justify-center shrink-0 text-amber-300 text-sm shadow-inner">
+            <span class="inline-block animate-pulse">🎙️</span>
+          </div>
+          <div class="min-w-0 flex-1 flex flex-col justify-center">
+            <!-- 英文主歌詞 (英文字型較大、清晰立體) -->
+            <div id="turntable-lyric-en" class="text-sm sm:text-base md:text-[17px] font-black text-amber-100 tracking-wide leading-tight line-clamp-2 transition-all duration-200 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)]">
+              ♪ Kai 宇宙星空黑膠唱片機
+            </div>
+            <!-- 中文翻譯歌詞 (中文歌詞為輔、柔和優雅) -->
+            <div id="turntable-lyric-zh" class="text-xs sm:text-xs md:text-sm font-semibold text-amber-300/90 leading-snug line-clamp-2 mt-0.5 transition-all duration-200 drop-shadow">
+              點擊播放欣賞高音質立體聲黑膠音樂
+            </div>
+          </div>
+        </div>
+
       </section>
 
       <!-- 右側：當前歌曲資訊 + 10 首專屬黑膠音軌點播清單 -->
-      <section class="flex-1 w-full md:w-1/2 flex flex-col justify-between p-2 h-full min-h-0 overflow-hidden">
+      <section class="flex-1 w-full md:w-1/2 flex flex-col justify-start p-1.5 sm:p-2 h-full min-h-0 overflow-hidden">
         
         <!-- 當前正在播放的歌曲卡片 -->
-        <div class="relative bg-slate-900/80 backdrop-blur-md rounded-2xl p-3 sm:p-4 border border-amber-300/40 shadow-lg flex items-center justify-between gap-3 mb-2 shrink-0">
+        <div class="relative bg-slate-900/80 backdrop-blur-md rounded-2xl p-2.5 sm:p-3 border border-amber-300/40 shadow-lg flex items-center justify-between gap-3 mb-2 shrink-0">
           <div class="flex items-center gap-3 min-w-0">
             <!-- 歌曲 3D 主題徽章 -->
             <div id="turntable-song-emblem" class="shrink-0">
@@ -2897,8 +2915,8 @@
           </div>
         </div>
 
-        <!-- 10 首曲目滾動播放清單 -->
-        <div class="flex-1 overflow-y-auto space-y-1.5 pr-1 min-h-0 allow-touch-scroll touch-scroll-y custom-scroll" id="turntable-playlist-container">
+        <!-- 10 首曲目滾動播放清單 (加入 pb-16 徹底解決第 10 首歌與底欄重疊問題) -->
+        <div class="flex-1 overflow-y-auto space-y-2 pr-1.5 pb-16 min-h-0 allow-touch-scroll touch-scroll-y custom-scroll" id="turntable-playlist-container">
           <!-- Dynamically populated via JS -->
         </div>
 
@@ -8552,7 +8570,9 @@
         ambientGlow: 'radial-gradient(circle, #f59e0b 0%, #ea580c 45%, transparent 70%)',
         activeTabClass: ['border-amber-400/80', 'bg-amber-400', 'text-slate-950', 'shadow-[0_0_12px_rgba(251,191,36,0.5)]'],
         badgeBg: 'bg-amber-400 text-slate-950',
-        planetBadgeColor: 'text-amber-200'
+        planetBadgeColor: 'text-amber-200',
+        lyricsBorder: 'border-amber-400/40',
+        lyricsZhColor: 'text-amber-300/90'
       },
       'album_2': {
         name: '派對星球 · 第 2 集',
@@ -8560,7 +8580,9 @@
         ambientGlow: 'radial-gradient(circle, #d946ef 0%, #8b5cf6 45%, transparent 70%)',
         activeTabClass: ['border-fuchsia-400/80', 'bg-fuchsia-500', 'text-white', 'shadow-[0_0_12px_rgba(217,70,239,0.5)]'],
         badgeBg: 'bg-fuchsia-500 text-white',
-        planetBadgeColor: 'text-fuchsia-200'
+        planetBadgeColor: 'text-fuchsia-200',
+        lyricsBorder: 'border-fuchsia-400/40',
+        lyricsZhColor: 'text-fuchsia-200/90'
       },
       'album_3': {
         name: '櫻花星球 · 第 3 集',
@@ -8568,7 +8590,9 @@
         ambientGlow: 'radial-gradient(circle, #fb7185 0%, #2dd4bf 45%, transparent 70%)',
         activeTabClass: ['border-rose-400/80', 'bg-rose-500', 'text-white', 'shadow-[0_0_12px_rgba(244,63,94,0.5)]'],
         badgeBg: 'bg-rose-500 text-white',
-        planetBadgeColor: 'text-rose-200'
+        planetBadgeColor: 'text-rose-200',
+        lyricsBorder: 'border-rose-400/40',
+        lyricsZhColor: 'text-rose-200/90'
       },
       'album_4': {
         name: '日落星球 · 第 4 集',
@@ -8576,7 +8600,9 @@
         ambientGlow: 'radial-gradient(circle, #f97316 0%, #a855f7 45%, transparent 70%)',
         activeTabClass: ['border-orange-400/80', 'bg-orange-500', 'text-white', 'shadow-[0_0_12px_rgba(249,115,22,0.5)]'],
         badgeBg: 'bg-orange-500 text-white',
-        planetBadgeColor: 'text-orange-200'
+        planetBadgeColor: 'text-orange-200',
+        lyricsBorder: 'border-orange-400/40',
+        lyricsZhColor: 'text-orange-200/90'
       }
     };
 
@@ -8622,7 +8648,7 @@
           <div onclick="turntablePlaySong('${song.id}', true)" 
                class="group flex items-center justify-between p-2 sm:p-2.5 rounded-xl border transition-all cursor-pointer ${
                  isCurrent 
-                   ? 'bg-amber-400/20 border-amber-300/80 shadow-[0_0_12px_rgba(251,191,36,0.25)] text-white' 
+                   ? 'bg-amber-400/20 border-amber-300/80 shadow-[0_0_12px_rgba(251,191,36,0.25)] text-white is-active-track' 
                    : 'bg-slate-950/40 hover:bg-slate-800/60 border-white/10 hover:border-white/25 text-slate-300 hover:text-white'
                }">
             <div class="flex items-center gap-2.5 min-w-0">
@@ -8646,7 +8672,71 @@
             </div>
           </div>
         `;
-      }).join('');
+      }).join('') + '<div class="h-8 w-full shrink-0 pointer-events-none"></div>';
+
+      // 確保當前曲目在歌單中清晰可見
+      const activeEl = container.querySelector('.is-active-track');
+      if (activeEl) {
+        setTimeout(() => {
+          activeEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+        }, 50);
+      }
+    }
+
+    // 🎶 畫面左下角：動態雙語同步歌詞更新 (英文字型較大，中文歌詞為輔)
+    function updateTurntableLyrics(time = 0) {
+      const lyricEnEl = document.getElementById('turntable-lyric-en');
+      const lyricZhEl = document.getElementById('turntable-lyric-zh');
+      const container = document.getElementById('turntable-lyrics-container');
+      if (!lyricEnEl || !lyricZhEl) return;
+
+      const song = songDatabase[turntableActiveSongId];
+      if (!song) return;
+
+      const cfg = TURNTABLE_ALBUM_CONFIGS[turntableActiveAlbum] || TURNTABLE_ALBUM_CONFIGS['album_1'];
+      if (container) {
+        container.className = `w-full max-w-md px-3.5 py-2 sm:py-2.5 rounded-2xl bg-slate-900/85 backdrop-blur-md border ${cfg.lyricsBorder || 'border-amber-400/40'} shadow-[0_6px_25px_rgba(0,0,0,0.7)] flex items-center gap-3 transition-all duration-300 shrink-0`;
+      }
+
+      if (!song.timeline || !song.timeline.length) {
+        lyricEnEl.innerText = song.title;
+        lyricZhEl.innerText = song.zhTitle || song.desc || '高音質黑膠音樂播放中';
+        lyricZhEl.className = `text-xs sm:text-xs md:text-sm font-semibold leading-snug line-clamp-2 mt-0.5 transition-all duration-200 drop-shadow ${cfg.lyricsZhColor || 'text-amber-300/90'}`;
+        return;
+      }
+
+      let activeSeg = song.timeline[0];
+      for (let i = 0; i < song.timeline.length; i++) {
+        const seg = song.timeline[i];
+        if (time >= seg.start && time < seg.end) {
+          activeSeg = seg;
+          break;
+        } else if (time >= seg.end) {
+          activeSeg = seg;
+        }
+      }
+
+      // 提取乾淨英文歌詞 (英文字型較大)
+      let en = (activeSeg.lyric || '').replace(/^[\"\'\s]+|[\"\'\s]+$/g, '').trim();
+      if (!en) {
+        en = song.title;
+      }
+
+      // 提取輔助中文翻譯歌詞 (中文歌詞為輔)
+      let zh = activeSeg.lyricZh || '';
+      if (!zh) {
+        zh = (activeSeg.title || '').replace(/^第\s*\d+\s*節\s*:\s*/, '').replace(/^\[.*?\]\s*/, '').trim();
+      }
+      if (!zh) {
+        zh = (activeSeg.sub || '').replace(/^[^\u4e00-\u9fa5]+/, '').trim();
+      }
+      if (!zh) {
+        zh = song.zhTitle || song.desc || '聆聽動人旋律，感受快樂節奏';
+      }
+
+      lyricEnEl.innerText = en;
+      lyricZhEl.innerText = zh;
+      lyricZhEl.className = `text-xs sm:text-xs md:text-sm font-semibold leading-snug line-clamp-2 mt-0.5 transition-all duration-200 drop-shadow ${cfg.lyricsZhColor || 'text-amber-300/90'}`;
     }
 
     function turntableSetPlayState(isPlaying) {
@@ -8731,6 +8821,9 @@
         audioTurntable.playbackRate = turntableSpeed;
         audioTurntable.volume = turntableVolume;
       }
+
+      // 即時初始化左下雙語歌詞
+      updateTurntableLyrics(0);
 
       renderTurntablePlaylist();
 
@@ -8898,17 +8991,21 @@
     function turntableOnSliderInput(val) {
       isTurntableSeeking = true;
       const curEl = document.getElementById('turntable-time-cur');
+      const numVal = parseFloat(val);
       if (curEl) {
-        const m = Math.floor(val / 60);
-        const s = Math.floor(val % 60);
+        const m = Math.floor(numVal / 60);
+        const s = Math.floor(numVal % 60);
         curEl.innerText = `${m}:${String(s).padStart(2, '0')}`;
       }
+      updateTurntableLyrics(numVal);
     }
 
     function turntableOnSliderChange(val) {
+      const numVal = parseFloat(val);
       if (audioTurntable) {
-        audioTurntable.currentTime = parseFloat(val);
+        audioTurntable.currentTime = numVal;
       }
+      updateTurntableLyrics(numVal);
       isTurntableSeeking = false;
     }
 
@@ -8966,6 +9063,8 @@
           const s = Math.floor(cur % 60);
           curEl.innerText = `${m}:${String(s).padStart(2, '0')}`;
         }
+        // 即時同步更新畫面左下雙語歌詞 (英文字型較大，中文歌詞為輔)
+        updateTurntableLyrics(cur);
       });
 
       audioTurntable.addEventListener('loadedmetadata', () => {
