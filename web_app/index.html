@@ -2769,7 +2769,7 @@
   <!-- ======================================================== -->
   <!-- 🪐 Kai 宇宙星空黑膠唱片機 (全 4 張專輯純音樂欣賞廳) -->
   <!-- ======================================================== -->
-  <div id="view-turntable" class="hidden flex-1 flex flex-col p-2.5 sm:p-3 md:p-4 max-w-6xl mx-auto w-full h-[calc(100vh-0.75rem)] max-h-[900px] min-h-[560px] rounded-3xl overflow-hidden border border-slate-700/80 shadow-[0_25px_70px_-12px_rgba(0,0,0,0.9)] my-0.5 select-none relative" style="background: radial-gradient(circle at 50% 25%, #18132c 0%, #0d0c1c 45%, #030209 100%);">
+  <div id="view-turntable" class="hidden flex-1 flex flex-col p-2.5 sm:p-3 md:p-4 max-w-6xl mx-auto w-full h-[calc(100vh-0.75rem)] max-h-[900px] min-h-[560px] rounded-3xl overflow-hidden border border-slate-700/80 shadow-[0_25px_70px_-12px_rgba(0,0,0,0.9)] my-0.5 select-none relative" style="background: radial-gradient(circle at 50% 30%, #1e1b4b 0%, #151132 45%, #0e0a22 80%, #0a0718 100%);">
     
     <!-- 深空星光背景裝飾 -->
     <div class="absolute inset-0 pointer-events-none overflow-hidden">
@@ -2780,8 +2780,8 @@
       <div class="absolute bottom-20 left-1/3 text-teal-300 text-xs anim-star-slow">★</div>
     </div>
 
-    <!-- 頂部導航列：返回首頁 + 唱片機標章 + 4 顆星球專輯切換膠囊 -->
-    <header class="relative z-20 flex flex-wrap items-center justify-between gap-2 pb-1.5 border-b border-white/10 shrink-0">
+    <!-- 頂部導航列：返回首頁 + 唱片機標章 + 4 顆星球專輯切換膠囊 (獨立星際琉璃果凍條，無頂部漸黑壓迫) -->
+    <header class="jelly-glass-bar rounded-2xl md:rounded-3xl px-3 sm:px-4 py-1.5 sm:py-2 relative z-30 flex flex-wrap items-center justify-between gap-2 mb-1.5 shrink-0 shadow-lg border border-white/20">
       <div class="flex items-center gap-2 sm:gap-3">
         <button onclick="closeTurntablePlayer()" class="jelly-btn-gold px-3 sm:px-4 py-1 rounded-2xl font-black text-xs sm:text-sm flex items-center gap-1.5 active:scale-95 shadow-md cursor-pointer" title="返回星空首頁">
           <span>←</span> <span>返回首頁</span>
@@ -2817,14 +2817,14 @@
     <!-- 中間核心舞台：左側黑膠唱盤機 (旋轉黑膠CD+機械唱臂) + 右側當前歌曲與 10 首歌單 -->
     <main class="relative z-10 flex-1 flex flex-col md:flex-row items-stretch gap-3 md:gap-4 py-1 min-h-0 w-full overflow-hidden">
       
-      <!-- 左側：3D 黑膠唱盤機本體 + 大幅放大律動音波 + 畫面左下角居中雙語同步歌詞 -->
-      <section class="flex-1 w-full md:w-5/12 flex flex-col items-center justify-between p-1 sm:p-2 relative h-full min-h-0 overflow-hidden">
+      <!-- 左側：3D 黑膠唱盤機本體 + 大幅放大律動音波 + 畫面下方的歌詞再往下移到畫面的中間 -->
+      <section class="flex-1 w-full md:w-5/12 lg:w-5/12 flex flex-col items-center justify-between p-1 sm:p-2 relative h-full min-h-0 overflow-hidden">
         
-        <!-- 唱機底座機身 (Brushed Metallic Turntable Base) -->
-        <div class="relative w-[210px] sm:w-[230px] md:w-[250px] h-[210px] sm:h-[230px] md:h-[250px] rounded-3xl p-2 flex items-center justify-center border-2 border-slate-700/80 shadow-[0_20px_50px_rgba(0,0,0,0.8),inset_0_2px_8px_rgba(255,255,255,0.15)] shrink-0" style="background: radial-gradient(circle at 40% 30%, #201a35 0%, #120e24 60%, #080612 100%);">
+        <!-- 唱機底座機身 (Brushed Metallic Turntable Base - 大幅放大尺寸) -->
+        <div class="relative w-[260px] sm:w-[285px] md:w-[315px] lg:w-[335px] h-[260px] sm:h-[285px] md:h-[315px] lg:h-[335px] rounded-3xl p-2.5 flex items-center justify-center border-2 border-slate-700/80 shadow-[0_20px_50px_rgba(0,0,0,0.8),inset_0_2px_8px_rgba(255,255,255,0.15)] shrink-0" style="background: radial-gradient(circle at 40% 30%, #201a35 0%, #120e24 60%, #080612 100%);">
           
-          <!-- 唱盤圓形金屬轉盤托盤 (Turntable Platter) -->
-          <div class="relative w-[180px] sm:w-[200px] md:w-[220px] h-[180px] sm:h-[200px] md:h-[220px] rounded-full p-1.5 flex items-center justify-center border border-slate-600/70 shadow-[0_0_30px_rgba(0,0,0,0.9)]" style="background: radial-gradient(circle, #332d4a 0%, #171329 80%, #0d0a1a 100%);">
+          <!-- 唱盤圓形金屬轉盤托盤 (Turntable Platter - 大幅放大尺寸) -->
+          <div class="relative w-[225px] sm:w-[250px] md:w-[280px] lg:w-[300px] h-[225px] sm:h-[250px] md:h-[280px] lg:h-[300px] rounded-full p-2 flex items-center justify-center border border-slate-600/70 shadow-[0_0_30px_rgba(0,0,0,0.9)]" style="background: radial-gradient(circle, #332d4a 0%, #171329 80%, #0d0a1a 100%);">
             
             <!-- 🪐 黑膠唱片本體 (Vinyl Disc)：外圍黑膠微音軌 + 內圈星球 CD 圖案 (播放時旋轉，暫停時靜止) -->
             <div id="turntable-disc" class="turntable-vinyl-disc relative w-full h-full rounded-full flex items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.95)] overflow-hidden cursor-pointer is-paused" onclick="turntableTogglePlay()" title="點擊黑膠唱片切換 播放 / 暫停">
@@ -2834,9 +2834,9 @@
               <div class="absolute inset-0 rounded-full opacity-35 bg-gradient-to-tr from-cyan-400 via-pink-400 to-amber-300 pointer-events-none mix-blend-screen" style="transform: rotate(35deg);"></div>
               
               <!-- 黑膠細緻邊緣光暈環 -->
-              <div class="absolute inset-1.5 rounded-full border border-white/15 pointer-events-none"></div>
-              <div class="absolute inset-4 rounded-full border border-white/10 pointer-events-none"></div>
-              <div class="absolute inset-7 rounded-full border border-white/10 pointer-events-none"></div>
+              <div class="absolute inset-2 rounded-full border border-white/15 pointer-events-none"></div>
+              <div class="absolute inset-5 rounded-full border border-white/10 pointer-events-none"></div>
+              <div class="absolute inset-8 rounded-full border border-white/10 pointer-events-none"></div>
               
               <!-- 內圈星球 CD 標籤 (直徑約佔 54%) -->
               <div class="relative z-10 w-[54%] h-[54%] rounded-full p-1.5 flex items-center justify-center shadow-[0_0_20px_rgba(0,0,0,0.8)] border border-amber-300/40" style="background: radial-gradient(circle, #2d1f4d 0%, #150f29 100%);">
@@ -2852,25 +2852,25 @@
               </div>
             </div>
 
-            <!-- 機械唱臂 (Turntable Tonearm)：播放時落針至黑膠上，暫停時退回停靠座 -->
-            <div id="turntable-tonearm" class="turntable-tonearm absolute -top-1.5 -right-1.5 w-14 h-36 pointer-events-none is-parked z-30" style="filter: drop-shadow(0 6px 10px rgba(0,0,0,0.8));">
+            <!-- 機械唱臂 (Turntable Tonearm)：加長比例配合大型轉盤 -->
+            <div id="turntable-tonearm" class="turntable-tonearm absolute -top-2 -right-2 w-16 h-42 pointer-events-none is-parked z-30" style="filter: drop-shadow(0 6px 10px rgba(0,0,0,0.8));">
               <!-- 唱臂金屬底座圓盤 -->
-              <div class="w-7 h-7 rounded-full bg-gradient-to-br from-slate-300 via-slate-600 to-slate-900 border border-slate-400 shadow-md flex items-center justify-center">
-                <div class="w-3 h-3 rounded-full bg-amber-400 border border-amber-200 shadow-xs"></div>
+              <div class="w-8 h-8 rounded-full bg-gradient-to-br from-slate-300 via-slate-600 to-slate-900 border border-slate-400 shadow-md flex items-center justify-center">
+                <div class="w-3.5 h-3.5 rounded-full bg-amber-400 border border-amber-200 shadow-xs"></div>
               </div>
               <!-- 金屬鍍鉻唱臂桿 -->
-              <div class="absolute top-5 left-2.5 w-1.5 h-20 bg-gradient-to-r from-slate-200 via-slate-400 to-slate-600 rounded-full shadow"></div>
+              <div class="absolute top-6 left-3 w-2 h-24 bg-gradient-to-r from-slate-200 via-slate-400 to-slate-600 rounded-full shadow"></div>
               <!-- 唱頭與唱針 (Cartridge & Stylus) -->
-              <div class="absolute top-24 left-0 w-4.5 h-6 rounded-sm bg-gradient-to-br from-amber-400 via-orange-500 to-slate-900 border border-amber-200 shadow-md transform rotate-12 flex items-center justify-center">
-                <span class="text-[6px] text-white font-black">♪</span>
+              <div class="absolute top-28 left-0.5 w-5 h-7 rounded-sm bg-gradient-to-br from-amber-400 via-orange-500 to-slate-900 border border-amber-200 shadow-md transform rotate-12 flex items-center justify-center">
+                <span class="text-[7px] text-white font-black">♪</span>
               </div>
             </div>
 
           </div>
         </div>
 
-        <!-- 唱機下方大幅放大之音訊節奏律動發光條 (Equalizer Waveform Bars) -->
-        <div id="turntable-equalizer" class="flex items-end justify-center gap-1 sm:gap-1.5 my-1.5 h-10 sm:h-12 w-full max-w-sm px-2 shrink-0">
+        <!-- 唱機下方音訊節奏律動發光條 (Equalizer Waveform Bars - 維持大振幅律動) -->
+        <div id="turntable-equalizer" class="flex items-end justify-center gap-1 sm:gap-1.5 my-1 h-9 sm:h-11 w-full max-w-sm px-2 shrink-0">
           <span class="eq-bar eq-b-treble-1 w-1.5 rounded-full bg-cyan-400 h-2"></span>
           <span class="eq-bar eq-b-treble-2 w-1.5 rounded-full bg-cyan-300 h-3"></span>
           <span class="eq-bar eq-b-mid-1 w-1.5 rounded-full bg-teal-400 h-4"></span>
@@ -2897,37 +2897,37 @@
           <span class="eq-bar eq-b-treble-1 w-1.5 rounded-full bg-cyan-400 h-2"></span>
         </div>
 
-        <!-- 🎶 畫面左下角居中位置：雙語同步歌詞展示區 (往下移一些，居中平衡呈現) -->
-        <div id="turntable-lyrics-container" class="w-full max-w-sm sm:max-w-md px-3.5 py-2 sm:py-2.5 rounded-2xl bg-slate-900/90 backdrop-blur-md border border-amber-300/40 shadow-[0_6px_25px_rgba(0,0,0,0.7)] flex flex-col items-center justify-center text-center transition-all duration-300 shrink-0 mt-auto mb-1">
+        <!-- 🎶 下方的歌詞再往下移到畫面的中間 (雙語同步歌詞展示區，貼齊最底部水平置中) -->
+        <div id="turntable-lyrics-container" class="w-full max-w-sm sm:max-w-md md:max-w-lg px-4 py-2 sm:py-2.5 rounded-2xl bg-slate-900/90 backdrop-blur-md border border-amber-300/40 shadow-[0_8px_30px_rgba(0,0,0,0.7)] flex flex-col items-center justify-center text-center transition-all duration-300 shrink-0 mt-auto mb-0 mx-auto">
           <div class="flex items-center justify-center gap-1.5 mb-0.5">
             <span class="text-xs text-amber-300 animate-pulse">🎙️</span>
             <span class="text-[10px] font-bold text-amber-200/80 tracking-widest uppercase">Kai Cosmic Lyrics</span>
           </div>
           <!-- 英文主歌詞 (英文字型較大、清晰立體、居中呈現) -->
-          <div id="turntable-lyric-en" class="text-sm sm:text-base md:text-[17px] font-black text-amber-100 tracking-wide leading-snug line-clamp-2 transition-all duration-200 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] text-center w-full">
+          <div id="turntable-lyric-en" class="text-sm sm:text-base md:text-lg font-black text-amber-100 tracking-wide leading-snug line-clamp-2 transition-all duration-200 drop-shadow-[0_2px_8px_rgba(0,0,0,0.9)] text-center w-full">
             ♪ Kai 宇宙星空黑膠唱片機
           </div>
           <!-- 中文翻譯歌詞 (中文歌詞為輔、柔和優雅、居中呈現) -->
-          <div id="turntable-lyric-zh" class="text-xs sm:text-[13px] font-semibold text-amber-300/90 leading-tight line-clamp-2 mt-0.5 transition-all duration-200 drop-shadow text-center w-full">
+          <div id="turntable-lyric-zh" class="text-xs sm:text-[13px] font-semibold text-amber-300/95 leading-tight line-clamp-2 mt-0.5 transition-all duration-200 drop-shadow text-center w-full">
             點擊播放欣賞高音質立體聲黑膠音樂
           </div>
         </div>
 
       </section>
 
-      <!-- 右側：當前歌曲資訊 + 10 首專屬黑膠音軌點播清單 (比例優化：全 10 首歌完整呈現) -->
-      <section class="flex-1 w-full md:w-7/12 flex flex-col justify-start p-1 sm:p-1.5 h-full min-h-0 overflow-hidden">
+      <!-- 右側：當前歌曲資訊 + 10 首專屬黑膠音軌點播清單 (剛好跟版面一樣大：比例飽滿，清晰呈現全部 10 首歌) -->
+      <section class="flex-1 w-full md:w-7/12 lg:w-7/12 flex flex-col justify-start p-1 sm:p-1.5 h-full min-h-0 overflow-hidden">
         
-        <!-- 當前正在播放的歌曲簡潔卡片 -->
-        <div class="relative bg-slate-900/80 backdrop-blur-md rounded-xl px-3 py-1.5 border border-amber-300/40 shadow-md flex items-center justify-between gap-2 mb-1.5 shrink-0">
+        <!-- 當前正在播放的歌曲卡片 -->
+        <div class="relative bg-slate-900/85 backdrop-blur-md rounded-2xl px-3.5 py-2 border border-amber-300/40 shadow-md flex items-center justify-between gap-2.5 mb-2 shrink-0">
           <div class="flex items-center gap-2.5 min-w-0">
             <!-- 歌曲 3D 主題徽章 -->
-            <div id="turntable-song-emblem" class="shrink-0 scale-90">
+            <div id="turntable-song-emblem" class="shrink-0">
               <!-- Rendered via renderSongThemeEmblem -->
             </div>
             <div class="min-w-0">
               <div class="flex items-center gap-2">
-                <span id="turntable-track-badge" class="px-1.5 py-0.2 rounded text-[10px] font-black bg-amber-400 text-slate-950 shrink-0">#01</span>
+                <span id="turntable-track-badge" class="px-2 py-0.5 rounded-md text-[10px] font-black bg-amber-400 text-slate-950 shrink-0">#01</span>
                 <span id="turntable-planet-badge" class="text-[10px] font-bold text-amber-200 truncate">晨光星球 · 第 1 集</span>
               </div>
               <h2 id="turntable-song-title" class="text-sm sm:text-base font-black text-white truncate drop-shadow">
@@ -2939,15 +2939,19 @@
             </div>
           </div>
           <div class="shrink-0 flex flex-col items-end">
-            <span class="text-[9px] font-black px-1.5 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/40">
+            <span class="text-[9px] font-black px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-400/40">
               ✨ 高音質
             </span>
-            <span class="text-[10px] font-mono text-slate-400 mt-0.5">120 秒</span>
+            <span class="text-[10px] font-mono text-slate-400 mt-1">120 秒</span>
           </div>
         </div>
 
-        <!-- 10 首曲目緊湊清單 (版面比例優化：完整清晰呈現所有 10 首歌，第 9 與第 10 首不再被遮擋) -->
-        <div class="flex-1 overflow-y-auto space-y-1 pr-1 pb-4 min-h-0 allow-touch-scroll touch-scroll-y custom-scroll" id="turntable-playlist-container">
+        <!-- 10 首曲目播放清單 (版面比例飽滿大方：剛好跟版面一樣大，完整呈現所有 10 首歌，第 9 與第 10 首一目了然) -->
+        <div class="flex-1 overflow-y-auto space-y-1.5 pr-1 pb-2 min-h-0 allow-touch-scroll touch-scroll-y custom-scroll" id="turntable-playlist-container">
+          <!-- Dynamically populated via JS -->
+        </div>
+
+      </section>
           <!-- Dynamically populated via JS -->
         </div>
 
@@ -8689,33 +8693,33 @@
         const trackNo = `#${String(idx + 1).padStart(2, '0')}`;
         return `
           <div onclick="turntablePlaySong('${song.id}', true)" 
-               class="group flex items-center justify-between py-1 px-2 sm:px-2.5 rounded-lg border transition-all cursor-pointer ${
+               class="group flex items-center justify-between py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl border transition-all cursor-pointer ${
                  isCurrent 
-                   ? 'bg-amber-400/20 border-amber-300/80 shadow-[0_0_10px_rgba(251,191,36,0.25)] text-white is-active-track' 
-                   : 'bg-slate-950/40 hover:bg-slate-800/60 border-white/10 hover:border-white/20 text-slate-300 hover:text-white'
+                   ? 'bg-amber-400/25 border-amber-300/80 shadow-[0_0_12px_rgba(251,191,36,0.28)] text-white is-active-track' 
+                   : 'bg-slate-950/45 hover:bg-slate-800/60 border-white/10 hover:border-white/25 text-slate-300 hover:text-white'
                }">
-            <div class="flex items-center gap-2 min-w-0">
-              <span class="text-[11px] font-mono font-black ${isCurrent ? 'text-amber-300' : 'text-slate-400'} shrink-0">${trackNo}</span>
-              <div class="w-6 h-6 shrink-0 flex items-center justify-center">
+            <div class="flex items-center gap-2.5 min-w-0">
+              <span class="text-xs font-mono font-black ${isCurrent ? 'text-amber-300' : 'text-slate-400'} shrink-0">${trackNo}</span>
+              <div class="w-7 h-7 sm:w-8 sm:h-8 shrink-0 flex items-center justify-center">
                 ${renderSongThemeEmblem(song, 'mini')}
               </div>
               <div class="min-w-0">
-                <div class="text-xs sm:text-[13px] font-bold truncate flex items-center gap-1.5 leading-snug">
+                <div class="text-xs sm:text-sm font-bold truncate flex items-center gap-1.5 leading-tight">
                   <span class="${isCurrent ? 'text-amber-200 font-black' : ''}">${song.title}</span>
                   ${isCurrent && turntableIsPlaying ? '<span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span>' : ''}
                 </div>
-                <div class="text-[9px] sm:text-[10px] text-slate-400 truncate leading-none">${song.desc || song.zhTitle || ''}</div>
+                <div class="text-[10px] sm:text-[11px] text-slate-300/90 truncate mt-0.5 leading-none">${song.zhTitle || song.desc || ''}</div>
               </div>
             </div>
-            <div class="shrink-0 flex items-center gap-1.5 ml-2">
-              <span class="text-[9px] font-mono text-slate-400">2:00</span>
-              <span class="text-xs ${isCurrent && turntableIsPlaying ? 'text-amber-300' : 'text-slate-500 opacity-60 group-hover:opacity-100'}">
+            <div class="shrink-0 flex items-center gap-2 ml-2">
+              <span class="text-[10px] font-mono text-slate-400">2:00</span>
+              <span class="text-xs ${isCurrent && turntableIsPlaying ? 'text-amber-300 scale-110' : 'text-slate-500 opacity-60 group-hover:opacity-100'}">
                 ${isCurrent && turntableIsPlaying ? '▶' : '♪'}
               </span>
             </div>
           </div>
         `;
-      }).join('') + '<div class="h-2 w-full shrink-0 pointer-events-none"></div>';
+      }).join('') + '<div class="h-1 w-full shrink-0 pointer-events-none"></div>';
 
       // 確保當前曲目在歌單中清晰可見
       const activeEl = container.querySelector('.is-active-track');
@@ -8726,7 +8730,7 @@
       }
     }
 
-    // 🎶 畫面左下角居中位置：動態雙語同步歌詞更新 (英文字型較大，中文歌詞為輔)
+    // 🎶 畫面下方的歌詞再往下移到畫面的中間：動態雙語同步歌詞更新 (英文字型較大，中文歌詞為輔)
     function updateTurntableLyrics(time = 0) {
       const lyricEnEl = document.getElementById('turntable-lyric-en');
       const lyricZhEl = document.getElementById('turntable-lyric-zh');
@@ -8738,7 +8742,7 @@
 
       const cfg = TURNTABLE_ALBUM_CONFIGS[turntableActiveAlbum] || TURNTABLE_ALBUM_CONFIGS['album_1'];
       if (container) {
-        container.className = `w-full max-w-sm sm:max-w-md px-3.5 py-2 sm:py-2.5 rounded-2xl bg-slate-900/90 backdrop-blur-md border ${cfg.lyricsBorder || 'border-amber-300/40'} shadow-[0_6px_25px_rgba(0,0,0,0.7)] flex flex-col items-center justify-center text-center transition-all duration-300 shrink-0 mt-auto mb-1`;
+        container.className = `w-full max-w-sm sm:max-w-md md:max-w-lg px-4 py-2 sm:py-2.5 rounded-2xl bg-slate-900/90 backdrop-blur-md border ${cfg.lyricsBorder || 'border-amber-300/40'} shadow-[0_8px_30px_rgba(0,0,0,0.7)] flex flex-col items-center justify-center text-center transition-all duration-300 shrink-0 mt-auto mb-0 mx-auto`;
       }
 
       if (!song.timeline || !song.timeline.length) {
