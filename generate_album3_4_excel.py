@@ -50,7 +50,7 @@ ALBUM3_CHARACTERS = [
         "costume": "櫻花粉與青瓷綠拼接 J-Pop 飛行棒球外套、純白工裝束口五分褲、發光 LED 高筒球鞋、頭戴式偶像微型麥克風",
         "pose": "元氣滿滿雙手比耶 (Peace Sign)，雙腿微開隨節拍輕微跳躍，笑容燦爛",
         "prompt": "9:16 vertical full-body shot, Disney Pixar 3D CGI style, adorable 5-year-old boy Kai, short spiky layered brown hair, big warm sparkling brown eyes, rosy cheeks, energetic beaming toothy smile. Wearing a chic pastel sakura-pink and neon teal Tokyo idol bomber jacket over a clean white graphic t-shirt, crisp white cargo dance shorts, light-up cyan high-top sneakers, tiny transparent idol headset mic. Cheerful coach dance pose, one hand flashing a cute peace sign, feet shoulder-width apart ready to jump. Vibrant pastel Tokyo Shibuya neon dance stage background with floating sakura cherry blossom petals, volumetric soft studio lighting, ultra-clean character render, 8k resolution, Disney Pixar animation style --no text, watermarks, deformed limbs, blur.",
-        "status": "已生成第一幀底圖：web_app/images/album3_jpop/kid1_kai_jpop.jpg"
+        "status": "已上傳就緒：./images/album3_jpop/kid1_kai_jpop.jpg"
     },
     {
         "id": "Kid 1",
@@ -72,7 +72,7 @@ ALBUM3_CHARACTERS = [
         "costume": "櫻花粉與丁香紫層次偶像舞台蓬蓬裙（配透明歐根紗花瓣邊）、珍珠白色泡泡袖短外套、粉色荷葉邊中筒襪、白色厚底瑪莉珍舞鞋",
         "pose": "雙手在胸前比出招牌手指愛心 (Finger Heart)，微微歪頭甜美微笑",
         "prompt": "9:16 vertical full-body shot, Disney Pixar 3D CGI style, adorable 5-year-old girl Jessie, wavy light-brown hair in high bouncy twin pigtails tied with sparkling pastel sakura ribbon bows, sparkling large brown eyes, rosy cheeks, lovely dimpled smile. Wearing an exquisite Tokyo idol stage dress in layered pastel cherry-blossom pink and dreamy lavender with sheer organza petal ruffle skirt, pearl-white puff-sleeve cropped jacket, frilly pastel socks, glossy white platform dance Mary Janes. Adorable center idol pose, cute finger heart at chest, head tilted slightly. Dreamy pastel wonderland stage with cherry blossom trees, luminous fairy lights, Disney Pixar masterpiece, 8k resolution --no text, watermarks, blur.",
-        "status": "已生成第一幀底圖：web_app/images/album3_jpop/kid2_jessie_jpop.jpg"
+        "status": "已上傳就緒：./images/album3_jpop/kid2_jessie_jpop.jpg"
     },
     {
         "id": "Kid 2",
@@ -94,7 +94,7 @@ ALBUM3_CHARACTERS = [
         "costume": "薄荷綠與檸檬黃亮眼拼接多口袋工裝背心、純白短T、淺卡其跳舞束口縮口褲、亮黃厚底運動鞋、俏皮星星髮夾",
         "pose": "雙手在腰間握拳做「小火車站長拉鳴笛」動作，右腳向前輕快踩點踏步",
         "prompt": "9:16 vertical full-body shot, Disney Pixar 3D CGI style, adorable 5-year-old boy Tim, fluffy soft curly light-brown hair with a playful hair cowlick ahoge on top, large warm brown eyes, button nose, wide cheerful smile. Wearing a bright Harajuku street dance outfit: mint-green and sunny-yellow colorblock utility zip vest over a white t-shirt, comfy light-khaki joggers, bright yellow chunky high-top sneakers, cute star hairpin in messy curls. Fun conductor dance pose, pretending to pull train whistle, energetic step forward. Cheerful colorful toy train station studio background, volumetric sunlight, Disney Pixar render, 8k resolution --no text, blur.",
-        "status": "已生成第一幀底圖：web_app/images/album3_jpop/kid3_tim_jpop.jpg"
+        "status": "已上傳就緒：./images/album3_jpop/kid3_tim_jpop.jpg"
     },
     {
         "id": "Kid 3",
@@ -109,24 +109,24 @@ ALBUM3_CHARACTERS = [
     },
     {
         "id": "Kid 4",
-        "name": "Hana (烏黑齊瀏海亞裔女孩)",
+        "name": "Mimi (烏黑齊瀏海女孩)",
         "feature": "3D Pixar 風格亞裔精緻小女孩，柔順烏黑妹妹頭齊短髮（齊瀏海）、深邃明亮黑眼、白皙肌膚與粉嫩臉頰",
         "tracks": "Track 03《彩虹深呼吸·和平心》、Track 08《溫柔小手抱抱你》",
         "version": "版本 A：J-Pop 和風櫻雪和紙印花蓬蓬裙 (Sakura Blossom Kimono-Pop)",
         "costume": "改良式粉白櫻花和風短版短袖上衣、櫻粉色千層雪紡短裙、腰間淡金絲質蝴蝶結、白色棉質花邊襪、淡粉芭蕾平底舞鞋",
         "pose": "雙手合十在胸前做「深呼吸和平祈禱手勢」，身形如優雅櫻花仙子輕輕微蹲",
-        "prompt": "9:16 vertical full-body shot, Disney Pixar 3D CGI style, adorable 5-year-old Asian girl Hana, sleek shiny jet-black bob haircut with neat straight bangs, big expressive obsidian-brown eyes, fair skin, rosy pink cheeks, serene gentle smile. Wearing a modern Japanese neo-pop sakura stage outfit: pastel pink and white kimono-inspired cropped blouse with delicate cherry petal motifs, multi-layered blush chiffon bubble skirt, soft golden sash bow at waist, white frilled ankle socks, pastel pink dance flats. Graceful starting pose, palms gently touching at chest in peaceful deep breath posture, serene and gentle demeanor. Magical cherry blossom garden pavilion background with gently falling petals, ethereal soft lighting, Disney Pixar 3D masterpiece, 8k resolution --no text, watermarks, blur.",
-        "status": "提示詞已就緒（排定第二梯次批次生圖）"
+        "prompt": "9:16 vertical full-body shot, Disney Pixar 3D CGI style, adorable 5-year-old Asian girl Mimi, sleek shiny jet-black bob haircut with neat straight bangs, big expressive obsidian-brown eyes, fair skin, rosy pink cheeks, serene gentle smile. Wearing a modern Japanese neo-pop sakura stage outfit: pastel pink and white kimono-inspired cropped blouse with delicate cherry petal motifs, multi-layered blush chiffon bubble skirt, soft golden sash bow at waist, white frilled ankle socks, pastel pink dance flats. Graceful starting pose, palms gently touching at chest in peaceful deep breath posture, serene and gentle demeanor. Magical cherry blossom garden pavilion background with gently falling petals, ethereal soft lighting, Disney Pixar 3D masterpiece, 8k resolution --no text, watermarks, blur.",
+        "status": "已上傳就緒：./images/album3_jpop/kid4_mimi_jpop.jpg (原檔名 kid4_mina_jpop.jpg)"
     },
     {
         "id": "Kid 4",
-        "name": "Hana (烏黑齊瀏海亞裔女孩)",
+        "name": "Mimi (烏黑齊瀏海女孩)",
         "feature": "3D Pixar 風格亞裔精緻小女孩，柔順烏黑妹妹頭齊短髮（齊瀏海）、深邃明亮黑眼、白皙肌膚與粉嫩臉頰",
         "tracks": "Track 03《彩虹深呼吸·和平心》、Track 08《溫柔小手抱抱你》",
         "version": "版本 B：原宿雲朵棉花糖淡紫日常洋裝 (Cotton Candy Lavender)",
         "costume": "淡紫與鵝黃撞色棉花糖雲朵泡泡袖連身裙、白色透氣褲襪、銀白亮粉小皮鞋、頭戴立體櫻花珍珠髮箍",
         "pose": "雙臂向兩側優雅舒展如小天鵝，腳尖輕巧交叉站立，眼神溫柔注視鏡頭",
-        "prompt": "9:16 vertical full-body shot, Disney Pixar 3D CGI style, adorable 5-year-old Asian girl Hana, sleek black bob with neat bangs, pearl sakura headband, sparkling dark eyes, sweet gentle expression. Wearing a soft pastel lavender and buttercup-yellow cotton candy puff dress with cloud ruffles, white dance tights, shimmering silver ballet shoes. Poised graceful posture, arms extended softly like swan wings, serene peaceful dance stance. Pastel gradient dreamscape studio background with floating glowing stars, Disney Pixar 3D render, 8k resolution --no text, blur.",
+        "prompt": "9:16 vertical full-body shot, Disney Pixar 3D CGI style, adorable 5-year-old Asian girl Mimi, sleek black bob with neat bangs, pearl sakura headband, sparkling dark eyes, sweet gentle expression. Wearing a soft pastel lavender and buttercup-yellow cotton candy puff dress with cloud ruffles, white dance tights, shimmering silver ballet shoes. Poised graceful posture, arms extended softly like swan wings, serene peaceful dance stance. Pastel gradient dreamscape studio background with floating glowing stars, Disney Pixar 3D render, 8k resolution --no text, blur.",
         "status": "提示詞已就緒（排定第二梯次批次生圖）"
     },
     {
@@ -138,7 +138,7 @@ ALBUM3_CHARACTERS = [
         "costume": "亮橘與櫻草黃漸層高腰吊帶裙、內搭純白短T、腳穿彩虹條紋長筒襪與電光紫運動鞋、雙丸子頭點綴彩色糖果髮夾",
         "pose": "雙手在頭頂上方比出大大的「愛心拱門」，一隻腳俏皮後踢，笑容充滿暖洋洋的愛",
         "prompt": "9:16 vertical full-body shot, Disney Pixar 3D CGI style, adorable 5-year-old girl MiMi, warm golden bronze skin, curly dark brown hair tied in two high puffy space buns decorated with colorful candy beads and sakura clips, huge sparkling brown eyes, radiant joyful open-mouth smile. Wearing a bright Harajuku pop outfit: sunset orange and primrose-yellow gradient overall skirt with cute patch pockets over a white tee, vibrant rainbow striped knee-high socks, electric purple dance sneakers. Energetic love pose, hands forming a large heart over head, one foot kicked back playfully. Colorful Tokyo pop candy street background, sunny glowing studio lights, Disney Pixar 3D render, 8k resolution --no text, watermarks, blur.",
-        "status": "提示詞已就緒（排定第二梯次批次生圖）"
+        "status": "已上傳就緒：./images/album3_jpop/kid5_MiMi_jpop.jpg"
     },
     {
         "id": "Kid 5",
@@ -163,7 +163,7 @@ ALBUM4_CHARACTERS = [
         "costume": "焦糖暖棕細條燈芯絨休閒夾克、內搭奶油燕麥色高領針織衫、炭灰微錐形跳舞長褲、焦糖皮質復古休閒鞋",
         "pose": "雙手插在夾克口袋，身體隨著 96 BPM 慢板 R&B 放鬆左右輕微搖擺，眼神溫暖",
         "prompt": "9:16 vertical full-body shot, Disney Pixar 3D CGI style, adorable 5-year-old boy Kai, spiky layered soft brown hair, large expressive brown eyes, gentle charming warm smile. Wearing a cozy retro R&B outfit: warm caramel-brown fine corduroy chore jacket over a cream-white knit sweater, charcoal relaxed dance trousers, vintage tan leather casual shoes. Relaxed soul groove stance, hands loosely tucked into jacket pockets, gentle rhythmic swaying pose, cozy and cool. Golden hour sunset lounge background, warm amber and terracotta lighting, wooden acoustic floor, Disney Pixar 3D render, 8k resolution --no text, watermarks, blur.",
-        "status": "提示詞已就緒（排定第二梯次批次生圖）"
+        "status": "已上傳就緒：./images/album4_rnb/kid1_kai_R&B.jpg"
     },
     {
         "id": "Kid 1",
@@ -185,7 +185,7 @@ ALBUM4_CHARACTERS = [
         "costume": "焦糖南瓜暖橘色粗麻花針織 Oversize 軟萌毛衣、米白細褶軟裙、咖啡色棉質暖腿襪、焦糖棕復古牛津鞋",
         "pose": "雙手環抱自己的肩膀做「自我擁抱暖陽」動作，雙眼微閉享受音樂，笑容無比甜美",
         "prompt": "9:16 vertical full-body shot, Disney Pixar 3D CGI style, adorable 5-year-old girl Jessie, wavy light-brown hair in twin low pigtails tied with amber satin ribbons, warm brown eyes, angelic sweet smile. Wearing an oversized chunky cable-knit sweater in cozy sunset pumpkin-orange, soft cream pleat skirt, espresso-brown knit leg warmers, caramel vintage oxford shoes. Tender self-hug pose, arms gently wrapping across shoulders embracing the warmth, soft gentle sway to soul music. Dreamy sunset living room studio with warm velvet curtains, soft amber dusk rays, Disney Pixar 3D masterpiece, 8k resolution --no text, watermarks, blur.",
-        "status": "提示詞已就緒（排定第二梯次批次生圖）"
+        "status": "已上傳就緒：./images/album4_rnb/kid2_jessie_R&B.jpg"
     },
     {
         "id": "Kid 2",
@@ -207,7 +207,7 @@ ALBUM4_CHARACTERS = [
         "costume": "深苔蘚綠復古西裝背心、內搭米黃棉麻長袖襯衫（挽起袖子）、深棕燈芯絨九分寬褲、復古麂皮樂福鞋",
         "pose": "身體微微前傾，雙手做出「慢步滑步」平穩手勢，表情充滿耐心與專注",
         "prompt": "9:16 vertical full-body shot, Disney Pixar 3D CGI style, adorable 5-year-old boy Tim, fluffy soft curly brown hair with iconic cowlick, big round brown eyes, thoughtful kind smile. Wearing a retro soul barista outfit: moss-green tweed waistcoat vest over a cream linen long-sleeve shirt with rolled sleeves, rich chocolate-brown corduroy cropped trousers, tan suede loafers. Slow steady turtle dance pose, arms extended gently gliding smoothly to the slow tempo, relaxed and patient posture. Vintage cozy vinyl record shop setting with warm incandescent table lamps, wooden shelves, Disney Pixar 3D render, 8k resolution --no text, watermarks, blur.",
-        "status": "提示詞已就緒（排定第二梯次批次生圖）"
+        "status": "已上傳就緒：./images/album4_rnb/kid3_tim_R&B.jpg"
     },
     {
         "id": "Kid 3",
@@ -222,24 +222,24 @@ ALBUM4_CHARACTERS = [
     },
     {
         "id": "Kid 4",
-        "name": "Hana (烏黑齊瀏海亞裔女孩)",
+        "name": "Mimi (烏黑齊瀏海女孩)",
         "feature": "3D Pixar 風格亞裔小女孩，烏黑順滑齊短髮、黑亮杏眼、平靜恬雅氣質",
         "tracks": "Track 03《平靜溪流深呼吸》、Track 06《誠實小樹苗·良善之心》",
         "version": "版本 A：落日大地色莫蘭迪茶歇長裙裝 (Morandi Earth Tea Dress)",
         "costume": "莫蘭迪灰粉與奶茶棕拼色長版亞麻棉連身裙、米白針織小披肩、深木色復古平底皮鞋、珍珠小髮夾",
         "pose": "雙手在胸前緩緩劃出如同「平靜溪水」般的波浪手勢，雙膝隨流水旋律輕緩微屈",
-        "prompt": "9:16 vertical full-body shot, Disney Pixar 3D CGI style, adorable 5-year-old Asian girl Hana, silky jet-black bob haircut with neat straight bangs, pearl hairpin, deep luminous dark eyes, calm graceful smile. Wearing a soothing Morandi tea dress in muted dusty-rose and milk-tea brown linen with a delicate cream-knit shoulder shawl, dark wood vintage leather flats. Peaceful water-flow dance pose, hands making gentle undulating wave gestures like a calm forest creek, knees bending softly in tranquil rhythm. Serene golden sunset forest riverbank setting, warm sunbeams filtering through trees, Disney Pixar 3D masterpiece, 8k resolution --no text, watermarks, blur.",
-        "status": "提示詞已就緒（排定第二梯次批次生圖）"
+        "prompt": "9:16 vertical full-body shot, Disney Pixar 3D CGI style, adorable 5-year-old Asian girl Mimi, silky jet-black bob haircut with neat straight bangs, pearl hairpin, deep luminous dark eyes, calm graceful smile. Wearing a soothing Morandi tea dress in muted dusty-rose and milk-tea brown linen with a delicate cream-knit shoulder shawl, dark wood vintage leather flats. Peaceful water-flow dance pose, hands making gentle undulating wave gestures like a calm forest creek, knees bending softly in tranquil rhythm. Serene golden sunset forest riverbank setting, warm sunbeams filtering through trees, Disney Pixar 3D masterpiece, 8k resolution --no text, watermarks, blur.",
+        "status": "已上傳就緒：./images/album4_rnb/kid4_mimi_R&B.jpg (原檔名 kid4_mina_R&B.jpg)"
     },
     {
         "id": "Kid 4",
-        "name": "Hana (烏黑齊瀏海亞裔女孩)",
+        "name": "Mimi (烏黑齊瀏海女孩)",
         "feature": "3D Pixar 風格亞裔小女孩，烏黑順滑齊短髮、黑亮杏眼、平靜恬雅氣質",
         "tracks": "Track 03《平靜溪流深呼吸》、Track 06《誠實小樹苗·良善之心》",
         "version": "版本 B：暖杏色高領毛衣配燈芯絨吊帶裙裝 (Warm Apricot Corduroy)",
         "costume": "暖杏黃色柔軟高領羊絨衫、深墨綠細條燈芯絨吊帶長裙、米白棉襪、復古瑪莉珍鞋",
         "pose": "雙手在胸口捧著一株象徵誠實的小樹苗手勢，抬頭仰望微風，目光清澈明亮",
-        "prompt": "9:16 vertical full-body shot, Disney Pixar 3D CGI style, adorable 5-year-old Asian girl Hana, black bob, neat bangs, innocent clear eyes, gentle smile. Wearing a warm apricot turtleneck cashmere sweater under a forest-green corduroy overall dress, white socks, classic Mary Janes. Holding hands cupped like nurturing a little seedling sprout, looking gently upward with pure honest expression. Warm sunlit botanical greenhouse studio, golden hour glow, Disney Pixar 3D render, 8k resolution --no text, blur.",
+        "prompt": "9:16 vertical full-body shot, Disney Pixar 3D CGI style, adorable 5-year-old Asian girl Mimi, black bob, neat bangs, innocent clear eyes, gentle smile. Wearing a warm apricot turtleneck cashmere sweater under a forest-green corduroy overall dress, white socks, classic Mary Janes. Holding hands cupped like nurturing a little seedling sprout, looking gently upward with pure honest expression. Warm sunlit botanical greenhouse studio, golden hour glow, Disney Pixar 3D render, 8k resolution --no text, blur.",
         "status": "提示詞已就緒（排定第二梯次批次生圖）"
     },
     {
@@ -251,7 +251,7 @@ ALBUM4_CHARACTERS = [
         "costume": "蜜糖琥珀金色短絨休閒連身短褲裝（腰間繫同色細絨帶）、內搭純白短T、暖棕短靴、雙丸子頭搭配琥珀色木質髮珠",
         "pose": "雙手在嘴角兩側做「甜甜微笑花朵」手勢，頭輕輕向右歪，神態甜美如蜜糖",
         "prompt": "9:16 vertical full-body shot, Disney Pixar 3D CGI style, adorable 5-year-old girl MiMi, warm golden-tan skin tone, curly dark brown hair in two fluffy space buns with polished amber wooden beads, huge twinkling brown eyes, sweetest radiant smile. Wearing a luxurious velvet jumpsuit in warm honey-amber over a soft white tee, comfy tan suede ankle boots. Honey-sweet smile pose, cupping hands like blooming petals beside cheeks, head tilted with joyful sweetness. Cozy golden sunset honeycomb-inspired lounge studio, soft amber rim light, Disney Pixar 3D masterpiece, 8k resolution --no text, watermarks, blur.",
-        "status": "提示詞已就緒（排定第二梯次批次生圖）"
+        "status": "已上傳就緒：./images/album4_rnb/kid5_MiMi_R&B.jpg"
     },
     {
         "id": "Kid 5",
@@ -292,7 +292,7 @@ ALBUM3_TRACK_SUMMARY = [
         "num": "Track #03",
         "en": "Deep Breath Rainbow",
         "zh": "彩虹深呼吸·和平心",
-        "dancer": "Hana (烏黑齊瀏海女孩)",
+        "dancer": "Mimi (烏黑齊瀏海女孩)",
         "style": "Gentle J-Pop Neo-Acoustic Ballad (慢歌 · 和風櫻花抒情優雅呼吸舞)",
         "phrases": 6,
         "duration": "02:00.00",
@@ -342,7 +342,7 @@ ALBUM3_TRACK_SUMMARY = [
         "num": "Track #08",
         "en": "Gentle Touch Little Puppy",
         "zh": "溫柔小手抱抱你",
-        "dancer": "Hana (烏黑齊瀏海女孩)",
+        "dancer": "Mimi (烏黑齊瀏海女孩)",
         "style": "Warm J-Pop Lullaby Waltz (慢歌 · 櫻花小圓舞曲撫摸溫柔律動)",
         "phrases": 6,
         "duration": "02:00.00",
@@ -395,7 +395,7 @@ ALBUM4_TRACK_SUMMARY = [
         "num": "Track #03",
         "en": "Quiet Water Flow",
         "zh": "平靜溪流深呼吸",
-        "dancer": "Hana (烏黑齊瀏海女孩)",
+        "dancer": "Mimi (烏黑齊瀏海女孩)",
         "style": "Ambient Meditation Soul (88 BPM 極致慢速流水冥想深呼吸)",
         "phrases": 5,
         "duration": "02:00.00",
@@ -425,7 +425,7 @@ ALBUM4_TRACK_SUMMARY = [
         "num": "Track #06",
         "en": "Little Honest Tree",
         "zh": "誠實小樹苗·良善之心",
-        "dancer": "Hana (烏黑齊瀏海女孩)",
+        "dancer": "Mimi (烏黑齊瀏海女孩)",
         "style": "Acoustic Soul Lullaby (94 BPM 溫柔樹苗向上萌芽舒展身姿)",
         "phrases": 6,
         "duration": "02:00.00",
@@ -599,7 +599,7 @@ def build_album3_spec():
                 cell.alignment = Alignment(horizontal="center", vertical="center")
             elif col_idx in [8]:
                 cell.alignment = Alignment(horizontal="left", vertical="center", wrap_text=True)
-                if "已生成" in str(cell.value):
+                if "已生成" in str(cell.value) or "已上傳" in str(cell.value):
                     cell.font = Font(name=FONT_NAME, size=9, bold=True, color="047857")
             else:
                 cell.alignment = Alignment(horizontal="left", vertical="center", wrap_text=True)
@@ -675,9 +675,9 @@ def build_album3_spec():
         elif "Tim" in dancer_name:
             char_en = "5-year-old boy Tim with fluffy curly brown hair and playful cowlick, wearing mint-green and sunny-yellow Harajuku utility vest and light joggers"
             char_zh = "Tim (蓬鬆呆毛棕髮男孩，穿著薄荷黃拼接活力工裝背心)"
-        elif "Hana" in dancer_name:
+        elif ("Mimi" in dancer_name or "Hana" in dancer_name):
             char_en = "5-year-old Asian girl Hana with sleek black bob haircut and straight bangs, wearing delicate pastel sakura kimono-pop top and layered blush bubble skirt"
-            char_zh = "Hana (烏黑齊瀏海亞裔女孩，穿著和風櫻雪改良式偶像裙)"
+            char_zh = "Mimi (烏黑齊瀏海女孩，穿著和風櫻雪改良式偶像裙)"
         else: # MiMi
             char_en = "5-year-old girl MiMi with warm bronze skin and curly twin space buns, wearing vibrant orange-yellow overall dress with cute patches"
             char_zh = "MiMi (健康小麥肌雙丸子捲髮女孩，穿著高彩原宿糖果吊帶裙)"
@@ -887,9 +887,9 @@ def build_album4_spec():
         elif "Tim" in dancer_name:
             char_en = "5-year-old boy Tim with fluffy curly brown hair with cowlick, wearing moss-green tweed waistcoat vest over cream linen shirt and chocolate corduroy pants"
             char_zh = "Tim (蓬鬆呆毛棕髮男孩，穿著復古西裝背心與燈芯絨長褲)"
-        elif "Hana" in dancer_name:
+        elif ("Mimi" in dancer_name or "Hana" in dancer_name):
             char_en = "5-year-old Asian girl Hana with silky black bob haircut and straight bangs, wearing soothing Morandi dusty-rose linen dress and cream knit shawl"
-            char_zh = "Hana (烏黑齊瀏海亞裔女孩，穿著莫蘭迪茶歇長裙與針織披肩)"
+            char_zh = "Mimi (烏黑齊瀏海女孩，穿著莫蘭迪茶歇長裙與針織披肩)"
         else: # MiMi
             char_en = "5-year-old girl MiMi with warm bronze skin and twin space buns with wooden beads, wearing luxurious honey-amber velvet jumpsuit"
             char_zh = "MiMi (健康小麥肌雙丸子捲髮女孩，穿著蜜糖琥珀金絨面連身短褲)"
