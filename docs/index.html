@@ -3325,6 +3325,10 @@
     // DOM 引用
     const viewLobby = document.getElementById('view-lobby');
     const viewDance = document.getElementById('view-dance');
+    const viewAlbumLevels = document.getElementById('view-album-levels');
+    const viewDancerSquad = document.getElementById('view-dancer-squad');
+    const viewTurntable = document.getElementById('view-turntable');
+    const audioTurntable = document.getElementById('audio-turntable');
     const roomSongTitle = document.getElementById('room-song-title');
     const coachVideoA = document.getElementById('coach-video-a');
     const coachVideoB = document.getElementById('coach-video-b');
@@ -5416,7 +5420,6 @@
     //    + 每一首歌專屬 3D 光暈果凍主題示意小圖示系統 (SONG_THEME_EMBLEMS)
     // ========================================================
     let isPlaylistDrawerOpen = false;
-    const viewAlbumLevels = document.getElementById('view-album-levels');
 
     // 20 首歌曲專屬 3D 光暈果凍立體主題示意小圖示設定 (主圖示 + 雙衛星裝飾 + 立體漸層 + 外發光)
     const SONG_THEME_EMBLEMS = {
@@ -5630,7 +5633,6 @@
     // ========================================================
     // 🌟 K-Pop 舞蹈戰隊 5 位小朋友 3D 無圖卡空間拖曳旋轉選單與專屬 8 首歌單連播系統
     // ========================================================
-    const viewDancerSquad = document.getElementById('view-dancer-squad');
     let currentDancerIndex = 0; // 0: Kai, 1: Jessie, 2: Tim, 3: Mina, 4: MiMi
     let dancerStageAngle = 0; // 連續 3D 空間旋轉角度 (度)，支援 360 度無縫拖曳
     let isDancerDragging = false;
@@ -9473,8 +9475,6 @@
     // ========================================================
     // 🪐 Kai 宇宙星空黑膠唱片機 (Turntable Player) 控制系統
     // ========================================================
-    const viewTurntable = document.getElementById('view-turntable');
-    const audioTurntable = document.getElementById('audio-turntable');
     let turntableActiveAlbum = 'album_1';
     let turntableActiveSongId = 'a1_s01';
     let turntableIsPlaying = false;
@@ -9906,7 +9906,7 @@
 
       if (audioTurntable) {
         const curSrc = audioTurntable.getAttribute('src') || '';
-        if (curSrc !== song.file && !audioTurntable.src.endsWith(song.file.replace(/^\.\//, ''))) {
+        if (curSrc !== song.file && !(audioTurntable.src && audioTurntable.src.endsWith(song.file.replace(/^\.\//, '')))) {
           audioTurntable.src = song.file;
         }
         audioTurntable.currentTime = 0;
