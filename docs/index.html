@@ -386,15 +386,6 @@
       transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
 
-    /* 9. Launch Adventure 全專連播主按鈕移入效果 */
-    #btn-launch-adventure {
-      transition: transform 0.28s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.28s ease, filter 0.28s ease !important;
-    }
-    #btn-launch-adventure:hover {
-      transform: scale(1.05) translateY(-3px) !important;
-      box-shadow: 0 0 45px rgba(254, 240, 138, 0.85), 0 0 90px rgba(245, 158, 11, 0.55), inset 0 0 25px rgba(255, 255, 255, 0.95) !important;
-      filter: brightness(1.08) !important;
-    }
 
     /* ======================================================== */
     /* 3D 黏土擬物風格 (Pure Claymorphism & SVG Components)     */
@@ -1939,14 +1930,6 @@
           <span>隨機跳舞</span>
         </button>
 
-        <!-- 全專連播主按鈕 (精巧亮眼糖果膠囊，移至首頁上方) -->
-        <button id="btn-launch-adventure" onclick="playCurrentAlbumAll()" 
-                class="group px-3.5 py-1.5 rounded-full font-black text-xs text-slate-950 bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-400 hover:from-amber-200 hover:to-yellow-300 shadow-[0_0_15px_rgba(254,240,138,0.55)] border border-white/70 transition-all active:scale-95 flex items-center gap-1.5 cursor-pointer select-none shrink-0" 
-                title="全專連播：從第 1 關開始連續跳完整張專輯">
-          <span class="text-xs">🚀</span>
-          <span>全專連播</span>
-        </button>
-
         <!-- 🪐 Kai 宇宙星空唱片機 (4 顆星球交錯立體漸漸旋轉動態 Logo 入口) -->
         <button id="btn-enter-turntable" onclick="openTurntablePlayer()" 
                 class="group px-3 py-1.5 rounded-full font-black text-xs text-white bg-gradient-to-r from-purple-900/90 via-indigo-900/90 to-slate-900/90 hover:from-purple-800 hover:to-indigo-800 border border-amber-400/70 hover:border-amber-300 shadow-[0_0_18px_rgba(251,191,36,0.35)] transition-all active:scale-95 flex items-center gap-2 cursor-pointer select-none shrink-0" 
@@ -2914,6 +2897,12 @@
           <img src="./images/ui/planet4_rnb.png" alt="" class="w-4 h-4 object-contain inline-block">
           <span>日落星球</span>
         </button>
+        <!-- 🌌 四張專輯連續播放專屬膠囊按鈕 -->
+        <button onclick="startTurntableAllAlbumsPlay()" id="tab-turntable-all" class="px-2.5 sm:px-3 py-1 rounded-full text-xs font-black transition-all flex items-center gap-1.5 border border-amber-300/40 bg-slate-900/85 text-amber-200 hover:text-white hover:border-amber-300 cursor-pointer active:scale-95 shadow-sm" title="四張專輯連續播放：無縫連播 4 顆星球全部 40 首黑膠曲目">
+          <span>🌌</span>
+          <span>四張專輯連播</span>
+          <span class="text-[10px] font-mono px-1.5 py-0.2 rounded-full bg-amber-400/20 text-amber-300 border border-amber-300/30">40首</span>
+        </button>
       </div>
     </header>
 
@@ -3049,7 +3038,38 @@
           </div>
         </div>
 
-        <!-- 10 首曲目播放清單 (版面比例飽滿大方：剛好跟版面一樣大，完整呈現所有 10 首歌，第 9 與第 10 首一目了然) -->
+        <!-- 歌單工具列：顯示當前範圍 + 一鍵四張專輯連播按鈕 + 切換全部40首/單專10首 -->
+        <div class="flex items-center justify-between px-1 py-1 mb-1 shrink-0 text-xs">
+          <div class="flex items-center gap-1.5 min-w-0">
+            <span id="turntable-playlist-title" class="font-black text-white text-xs flex items-center gap-1 truncate">
+              <span>📜</span>
+              <span id="turntable-playlist-label">晨光星球曲目 (10首)</span>
+            </span>
+            <span id="turntable-playlist-mode-badge" class="hidden text-[10px] font-black px-2 py-0.5 rounded-full bg-gradient-to-r from-amber-400 via-rose-500 to-purple-500 text-slate-950 shadow-xs shrink-0 anim-pulse">
+              🌌 四專連播中
+            </span>
+          </div>
+
+          <div class="flex items-center gap-1.5 shrink-0">
+            <!-- 切換顯示：當前星球 10 首 / 全宇宙 40 首 -->
+            <button id="btn-turntable-view-toggle" onclick="toggleTurntablePlaylistView()" 
+                    class="text-[11px] font-bold px-2.5 py-1 rounded-xl bg-slate-800/90 hover:bg-slate-700 text-sky-200 border border-white/15 hover:border-sky-300/50 transition active:scale-95 flex items-center gap-1 cursor-pointer"
+                    title="切換顯示：當前星球 10 首 或 全宇宙 40 首">
+              <span id="turntable-view-toggle-icon">🌐</span>
+              <span id="turntable-view-toggle-text">全專40首</span>
+            </button>
+
+            <!-- 一鍵四張專輯連續播放按鈕 -->
+            <button id="btn-turntable-play-all4" onclick="startTurntableAllAlbumsPlay()" 
+                    class="text-[11px] font-black px-3 py-1 rounded-xl bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-400 hover:from-amber-200 hover:to-yellow-300 text-slate-950 border border-white/80 shadow-[0_0_12px_rgba(251,191,36,0.45)] transition active:scale-95 flex items-center gap-1 cursor-pointer"
+                    title="啟動四張專輯連續播放：依序播放全部 40 首黑膠曲目">
+              <span class="text-xs">▶</span>
+              <span id="turntable-play-all4-text">四張專輯連播</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- 10 首或 40 首曲目播放清單 (版面比例飽滿大方：剛好跟版面一樣大，完整呈現所有歌曲) -->
         <div class="flex-1 overflow-y-auto space-y-1.5 pr-1 pb-2 min-h-0 allow-touch-scroll touch-scroll-y custom-scroll" id="turntable-playlist-container">
           <!-- Dynamically populated via JS -->
         </div>
@@ -3078,12 +3098,12 @@
         
         <!-- 左側：循環模式切換 + 隨機播放 -->
         <div class="flex items-center gap-1.5">
-          <!-- 循環模式 (單曲 / 專輯 / 全宇宙 40 首連播) -->
+          <!-- 循環模式 (單曲 / 單專 / 四張專輯全專連播) -->
           <button id="btn-turntable-loop" onclick="turntableCycleLoop()" 
                   class="px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-200 text-xs font-black border border-white/15 transition active:scale-95 flex items-center gap-1.5 cursor-pointer"
-                  title="切換循環模式：單曲循環 / 專輯循環 / 全 40 首連播">
+                  title="切換循環模式：四張全專連播 (40首) / 單張專輯循環 (10首) / 單曲循環">
             <span id="turntable-loop-icon">🔁</span>
-            <span id="turntable-loop-text" class="text-[11px]">專輯循環</span>
+            <span id="turntable-loop-text" class="text-[11px]">單張專輯循環</span>
           </button>
 
           <!-- 隨機播放開關 -->
@@ -5377,7 +5397,7 @@
     function initUserAudioOnFirstTouch(e) {
       getAudioContext();
       // 如果使用者第一次點擊的正是首頁 CD 開關、主題曲 Logo、星球或跳舞按鈕，不在此啟動首頁音樂，避免競態雙重觸發
-      if (e && e.target && e.target.closest && e.target.closest('#btn-home-cd, #home-kaidance-logo-btn, #planet-container-album_1, #planet-container-album_2, #btn-random-dance, #btn-launch-adventure, .planet-interactive-card, #song-cards-container, [onclick*="selectSong"], [onclick*="playCurrentAlbumAll"], [onclick*="playRandomSongInAlbum"]')) {
+      if (e && e.target && e.target.closest && e.target.closest('#btn-home-cd, #home-kaidance-logo-btn, #planet-container-album_1, #planet-container-album_2, #btn-random-dance, .planet-interactive-card, #song-cards-container, [onclick*="selectSong"], [onclick*="playCurrentAlbumAll"], [onclick*="playRandomSongInAlbum"]')) {
         // 由目標按鈕的原生點擊邏輯處理
       } else {
         if (userSettings.spaceAmbient && isLobbyActive()) {
@@ -9459,6 +9479,7 @@
     let turntableActiveSongId = 'a1_s01';
     let turntableIsPlaying = false;
     let turntableLoopMode = 'album'; // 'single' (🔂), 'album' (🔁), 'all' (🌌)
+    let turntablePlaylistView = 'album'; // 'album' (當前星球10首) or 'all' (全宇宙40首)
     let turntableIsShuffle = false;
     let turntableSpeed = 1.0;
     let turntableVolume = 1.0;
@@ -9515,7 +9536,10 @@
       TURNTABLE_ALBUM_LIST.forEach(aid => {
         const album = window.KAI_ALBUM_DATABASE[aid];
         if (album && album.songs) {
-          all.push(...album.songs);
+          album.songs.forEach(s => {
+            if (!s.albumId) s.albumId = aid;
+            all.push(s);
+          });
         }
       });
       return all;
@@ -9532,48 +9556,215 @@
           tab.className = `px-2.5 sm:px-3 py-1 rounded-full text-xs font-black transition-all flex items-center gap-1.5 border border-white/20 bg-slate-900/80 text-slate-300 hover:text-white`;
         }
       });
+      updateTurntableLoopUI();
+    }
+
+    function updateTurntableLoopUI() {
+      const iconEl = document.getElementById('turntable-loop-icon');
+      const textEl = document.getElementById('turntable-loop-text');
+      const loopBtn = document.getElementById('btn-turntable-loop');
+      const tabAll = document.getElementById('tab-turntable-all');
+      const modeBadge = document.getElementById('turntable-playlist-mode-badge');
+      const playAll4Btn = document.getElementById('btn-turntable-play-all4');
+      const playAll4Text = document.getElementById('turntable-play-all4-text');
+
+      if (turntableLoopMode === 'all') {
+        if (iconEl) iconEl.innerText = '🌌';
+        if (textEl) textEl.innerText = '四張全專連播 (40首)';
+        if (loopBtn) {
+          loopBtn.className = 'px-2.5 sm:px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-400/35 via-rose-500/25 to-purple-600/35 text-amber-200 text-xs font-black border border-amber-300/80 shadow-[0_0_12px_rgba(251,191,36,0.4)] transition active:scale-95 flex items-center gap-1.5 cursor-pointer';
+        }
+        if (tabAll) {
+          tabAll.className = 'px-2.5 sm:px-3 py-1 rounded-full text-xs font-black transition-all flex items-center gap-1.5 border border-amber-300 bg-gradient-to-r from-amber-400 via-rose-500 to-purple-600 text-slate-950 font-black shadow-[0_0_15px_rgba(251,191,36,0.6)] cursor-pointer active:scale-95 scale-105';
+        }
+        if (modeBadge) modeBadge.classList.remove('hidden');
+        if (playAll4Btn) {
+          playAll4Btn.className = 'text-[11px] font-black px-3 py-1 rounded-xl bg-gradient-to-r from-emerald-400 to-teal-300 text-slate-950 border border-white/80 shadow-[0_0_12px_rgba(52,211,153,0.45)] transition active:scale-95 flex items-center gap-1 cursor-pointer';
+        }
+        if (playAll4Text) playAll4Text.innerText = '✓ 四專連播中';
+      } else if (turntableLoopMode === 'single') {
+        if (iconEl) iconEl.innerText = '🔂';
+        if (textEl) textEl.innerText = '單曲循環';
+        if (loopBtn) {
+          loopBtn.className = 'px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-sky-200 text-xs font-black border border-sky-400/30 transition active:scale-95 flex items-center gap-1.5 cursor-pointer';
+        }
+        if (tabAll) {
+          tabAll.className = 'px-2.5 sm:px-3 py-1 rounded-full text-xs font-black transition-all flex items-center gap-1.5 border border-amber-300/40 bg-slate-900/85 text-amber-200 hover:text-white hover:border-amber-300 cursor-pointer active:scale-95 shadow-sm';
+        }
+        if (modeBadge) modeBadge.classList.add('hidden');
+        if (playAll4Btn) {
+          playAll4Btn.className = 'text-[11px] font-black px-3 py-1 rounded-xl bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-400 hover:from-amber-200 hover:to-yellow-300 text-slate-950 border border-white/80 shadow-[0_0_12px_rgba(251,191,36,0.45)] transition active:scale-95 flex items-center gap-1 cursor-pointer';
+        }
+        if (playAll4Text) playAll4Text.innerText = '四張專輯連播';
+      } else {
+        // album
+        if (iconEl) iconEl.innerText = '🔁';
+        const curAlbumName = TURNTABLE_ALBUM_CONFIGS[turntableActiveAlbum]?.name?.split('·')[0]?.trim() || '單張專輯';
+        if (textEl) textEl.innerText = `${curAlbumName}循環 (10首)`;
+        if (loopBtn) {
+          loopBtn.className = 'px-2.5 sm:px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-slate-700 text-amber-200 text-xs font-black border border-white/15 transition active:scale-95 flex items-center gap-1.5 cursor-pointer';
+        }
+        if (tabAll) {
+          tabAll.className = 'px-2.5 sm:px-3 py-1 rounded-full text-xs font-black transition-all flex items-center gap-1.5 border border-amber-300/40 bg-slate-900/85 text-amber-200 hover:text-white hover:border-amber-300 cursor-pointer active:scale-95 shadow-sm';
+        }
+        if (modeBadge) modeBadge.classList.add('hidden');
+        if (playAll4Btn) {
+          playAll4Btn.className = 'text-[11px] font-black px-3 py-1 rounded-xl bg-gradient-to-r from-amber-300 via-yellow-200 to-amber-400 hover:from-amber-200 hover:to-yellow-300 text-slate-950 border border-white/80 shadow-[0_0_12px_rgba(251,191,36,0.45)] transition active:scale-95 flex items-center gap-1 cursor-pointer';
+        }
+        if (playAll4Text) playAll4Text.innerText = '四張專輯連播';
+      }
+    }
+
+    // 啟動四張專輯連續播放功能 (40首黑膠歌曲循環連播)
+    function startTurntableAllAlbumsPlay(forceStartFromFirst = false) {
+      turntableLoopMode = 'all';
+      turntablePlaylistView = 'all';
+      updateTurntableAlbumTabs();
+      updateTurntableLoopUI();
+      renderTurntablePlaylist();
+
+      const allTracks = getAllTurntableTracks();
+      if (!allTracks.length) return;
+
+      if (forceStartFromFirst) {
+        turntablePlaySong(allTracks[0].id, true);
+      } else if (!turntableIsPlaying || (audioTurntable && audioTurntable.paused)) {
+        const targetSongId = turntableActiveSongId || allTracks[0].id;
+        turntablePlaySong(targetSongId, true);
+      } else {
+        renderTurntablePlaylist();
+      }
+    }
+
+    // 切換歌單顯示視角 (當前星球 10 首 VS 全宇宙 40 首)
+    function toggleTurntablePlaylistView() {
+      turntablePlaylistView = turntablePlaylistView === 'all' ? 'album' : 'all';
+      renderTurntablePlaylist();
     }
 
     function renderTurntablePlaylist() {
       const container = document.getElementById('turntable-playlist-container');
       if (!container) return;
-      const album = window.KAI_ALBUM_DATABASE ? window.KAI_ALBUM_DATABASE[turntableActiveAlbum] : null;
-      if (!album || !album.songs) {
-        container.innerHTML = '<div class="text-center text-xs text-slate-400 py-6">尚無歌曲資料</div>';
-        return;
-      }
-      container.innerHTML = album.songs.map((song, idx) => {
-        const isCurrent = song.id === turntableActiveSongId;
-        const trackNo = `#${String(idx + 1).padStart(2, '0')}`;
-        return `
-          <div onclick="turntablePlaySong('${song.id}', true)" 
-               class="group flex items-center justify-between py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl border transition-all cursor-pointer ${
-                 isCurrent 
-                   ? 'bg-amber-400/25 border-amber-300/80 shadow-[0_0_12px_rgba(251,191,36,0.28)] text-white is-active-track' 
-                   : 'bg-slate-950/45 hover:bg-slate-800/60 border-white/10 hover:border-white/25 text-slate-300 hover:text-white'
-               }">
-            <div class="flex items-center gap-2.5 min-w-0">
-              <span class="text-xs font-mono font-black ${isCurrent ? 'text-amber-300' : 'text-slate-400'} shrink-0">${trackNo}</span>
-              <div class="w-7 h-7 sm:w-8 sm:h-8 shrink-0 flex items-center justify-center">
-                ${renderSongThemeEmblem(song, 'mini')}
-              </div>
-              <div class="min-w-0">
-                <div class="text-xs sm:text-sm font-bold truncate flex items-center gap-1.5 leading-tight">
-                  <span class="${isCurrent ? 'text-amber-200 font-black' : ''}">${song.title}</span>
-                  ${isCurrent && turntableIsPlaying ? '<span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span>' : ''}
+
+      const labelEl = document.getElementById('turntable-playlist-label');
+      const toggleIcon = document.getElementById('turntable-view-toggle-icon');
+      const toggleText = document.getElementById('turntable-view-toggle-text');
+
+      if (turntablePlaylistView === 'all') {
+        if (labelEl) labelEl.innerText = '全宇宙 40 首黑膠曲目';
+        if (toggleIcon) toggleIcon.innerText = '📁';
+        if (toggleText) toggleText.innerText = '當前專輯10首';
+
+        const allSongs = getAllTurntableTracks();
+        if (!allSongs.length) {
+          container.innerHTML = '<div class="text-center text-xs text-slate-400 py-6">尚無歌曲資料</div>';
+          return;
+        }
+
+        let html = '';
+        let lastAlbumId = null;
+        allSongs.forEach((song, idx) => {
+          const isCurrent = song.id === turntableActiveSongId;
+          const aid = song.albumId || 'album_1';
+          const cfg = TURNTABLE_ALBUM_CONFIGS[aid] || TURNTABLE_ALBUM_CONFIGS['album_1'];
+          const trackNo = `#${String(idx + 1).padStart(2, '0')}`;
+
+          if (aid !== lastAlbumId) {
+            lastAlbumId = aid;
+            const albumObj = window.KAI_ALBUM_DATABASE ? window.KAI_ALBUM_DATABASE[aid] : null;
+            html += `
+              <div class="sticky top-0 z-10 px-2.5 py-1.5 rounded-xl bg-slate-900/95 backdrop-blur-md border border-white/10 flex items-center justify-between mt-2 mb-1 shadow-md">
+                <div class="flex items-center gap-2">
+                  <img src="${cfg.planetImg}" class="w-4 h-4 object-contain inline-block">
+                  <span class="text-xs font-black ${cfg.planetBadgeColor}">${cfg.name}</span>
+                  <span class="text-[10px] text-slate-400 font-bold">(${albumObj?.songs?.length || 10} 首)</span>
                 </div>
-                <div class="text-[10px] sm:text-[11px] text-slate-300/90 truncate mt-0.5 leading-none">${song.zhTitle || song.desc || ''}</div>
+                <button onclick="switchTurntableAlbum('${aid}')" class="text-[10px] text-sky-300 hover:text-white px-2 py-0.5 rounded-lg bg-white/5 hover:bg-white/10 border border-white/10 transition cursor-pointer">
+                  切換此星球
+                </button>
+              </div>
+            `;
+          }
+
+          html += `
+            <div onclick="turntablePlaySong('${song.id}', true)" 
+                 class="group flex items-center justify-between py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl border transition-all cursor-pointer ${
+                   isCurrent 
+                     ? 'bg-amber-400/25 border-amber-300/80 shadow-[0_0_12px_rgba(251,191,36,0.28)] text-white is-active-track' 
+                     : 'bg-slate-950/45 hover:bg-slate-800/60 border-white/10 hover:border-white/25 text-slate-300 hover:text-white'
+                 }">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <span class="text-xs font-mono font-black ${isCurrent ? 'text-amber-300' : 'text-slate-400'} shrink-0">${trackNo}</span>
+                <div class="w-7 h-7 sm:w-8 sm:h-8 shrink-0 flex items-center justify-center">
+                  ${renderSongThemeEmblem(song, 'mini')}
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs sm:text-sm font-bold truncate flex items-center gap-1.5 leading-tight">
+                    <span class="${isCurrent ? 'text-amber-200 font-black' : ''}">${song.title}</span>
+                    ${isCurrent && turntableIsPlaying ? '<span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span>' : ''}
+                  </div>
+                  <div class="text-[10px] sm:text-[11px] text-slate-300/90 truncate mt-0.5 leading-none flex items-center gap-1.5">
+                    <span class="text-[9px] px-1 rounded bg-slate-800/80 ${cfg.planetBadgeColor}">${cfg.name.split('·')[0].trim()}</span>
+                    <span>${song.zhTitle || song.desc || ''}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="shrink-0 flex items-center gap-2 ml-2">
+                <span class="text-[10px] font-mono text-slate-400">2:00</span>
+                <span class="text-xs ${isCurrent && turntableIsPlaying ? 'text-amber-300 scale-110' : 'text-slate-500 opacity-60 group-hover:opacity-100'}">
+                  ${isCurrent && turntableIsPlaying ? '▶' : '♪'}
+                </span>
               </div>
             </div>
-            <div class="shrink-0 flex items-center gap-2 ml-2">
-              <span class="text-[10px] font-mono text-slate-400">2:00</span>
-              <span class="text-xs ${isCurrent && turntableIsPlaying ? 'text-amber-300 scale-110' : 'text-slate-500 opacity-60 group-hover:opacity-100'}">
-                ${isCurrent && turntableIsPlaying ? '▶' : '♪'}
-              </span>
+          `;
+        });
+        container.innerHTML = html + '<div class="h-2 w-full shrink-0 pointer-events-none"></div>';
+      } else {
+        // album view
+        const album = window.KAI_ALBUM_DATABASE ? window.KAI_ALBUM_DATABASE[turntableActiveAlbum] : null;
+        const cfg = TURNTABLE_ALBUM_CONFIGS[turntableActiveAlbum] || TURNTABLE_ALBUM_CONFIGS['album_1'];
+        if (labelEl) labelEl.innerText = `${cfg.name}曲目 (10首)`;
+        if (toggleIcon) toggleIcon.innerText = '🌐';
+        if (toggleText) toggleText.innerText = '全專40首';
+
+        if (!album || !album.songs) {
+          container.innerHTML = '<div class="text-center text-xs text-slate-400 py-6">尚無歌曲資料</div>';
+          return;
+        }
+
+        container.innerHTML = album.songs.map((song, idx) => {
+          const isCurrent = song.id === turntableActiveSongId;
+          const trackNo = `#${String(idx + 1).padStart(2, '0')}`;
+          return `
+            <div onclick="turntablePlaySong('${song.id}', true)" 
+                 class="group flex items-center justify-between py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl border transition-all cursor-pointer ${
+                   isCurrent 
+                     ? 'bg-amber-400/25 border-amber-300/80 shadow-[0_0_12px_rgba(251,191,36,0.28)] text-white is-active-track' 
+                     : 'bg-slate-950/45 hover:bg-slate-800/60 border-white/10 hover:border-white/25 text-slate-300 hover:text-white'
+                 }">
+              <div class="flex items-center gap-2.5 min-w-0">
+                <span class="text-xs font-mono font-black ${isCurrent ? 'text-amber-300' : 'text-slate-400'} shrink-0">${trackNo}</span>
+                <div class="w-7 h-7 sm:w-8 sm:h-8 shrink-0 flex items-center justify-center">
+                  ${renderSongThemeEmblem(song, 'mini')}
+                </div>
+                <div class="min-w-0">
+                  <div class="text-xs sm:text-sm font-bold truncate flex items-center gap-1.5 leading-tight">
+                    <span class="${isCurrent ? 'text-amber-200 font-black' : ''}">${song.title}</span>
+                    ${isCurrent && turntableIsPlaying ? '<span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span>' : ''}
+                  </div>
+                  <div class="text-[10px] sm:text-[11px] text-slate-300/90 truncate mt-0.5 leading-none">${song.zhTitle || song.desc || ''}</div>
+                </div>
+              </div>
+              <div class="shrink-0 flex items-center gap-2 ml-2">
+                <span class="text-[10px] font-mono text-slate-400">2:00</span>
+                <span class="text-xs ${isCurrent && turntableIsPlaying ? 'text-amber-300 scale-110' : 'text-slate-500 opacity-60 group-hover:opacity-100'}">
+                  ${isCurrent && turntableIsPlaying ? '▶' : '♪'}
+                </span>
+              </div>
             </div>
-          </div>
-        `;
-      }).join('') + '<div class="h-1 w-full shrink-0 pointer-events-none"></div>';
+          `;
+        }).join('') + '<div class="h-1 w-full shrink-0 pointer-events-none"></div>';
+      }
 
       // 確保當前曲目在歌單中清晰可見
       const activeEl = container.querySelector('.is-active-track');
@@ -9742,7 +9933,9 @@
 
     function switchTurntableAlbum(albumId) {
       turntableActiveAlbum = albumId;
+      turntablePlaylistView = 'album';
       updateTurntableAlbumTabs();
+      updateTurntableLoopUI();
       const album = window.KAI_ALBUM_DATABASE ? window.KAI_ALBUM_DATABASE[albumId] : null;
       if (!album || !album.songs || !album.songs.length) return;
       turntablePlaySong(album.songs[0].id, turntableIsPlaying);
@@ -9770,6 +9963,7 @@
         turntableActiveAlbum = albumId;
       }
       updateTurntableAlbumTabs();
+      updateTurntableLoopUI();
 
       const targetSongId = songId || (window.KAI_ALBUM_DATABASE && window.KAI_ALBUM_DATABASE[turntableActiveAlbum]?.songs[0]?.id) || 'a1_s01';
       turntablePlaySong(targetSongId, true);
@@ -9859,21 +10053,16 @@
     }
 
     function turntableCycleLoop() {
-      const iconEl = document.getElementById('turntable-loop-icon');
-      const textEl = document.getElementById('turntable-loop-text');
       if (turntableLoopMode === 'album') {
         turntableLoopMode = 'all';
-        if (iconEl) iconEl.innerText = '🌌';
-        if (textEl) textEl.innerText = '全專40首';
+        turntablePlaylistView = 'all';
       } else if (turntableLoopMode === 'all') {
         turntableLoopMode = 'single';
-        if (iconEl) iconEl.innerText = '🔂';
-        if (textEl) textEl.innerText = '單曲循環';
       } else {
         turntableLoopMode = 'album';
-        if (iconEl) iconEl.innerText = '🔁';
-        if (textEl) textEl.innerText = '專輯循環';
       }
+      updateTurntableLoopUI();
+      renderTurntablePlaylist();
     }
 
     function turntableToggleShuffle() {
