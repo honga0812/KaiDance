@@ -3160,6 +3160,7 @@
     // 2. 全局状态
     // ========================================================
     let isPlaying = false;
+    let isSeekingSlider = false; // 拖動時間軸旗標，避免計時器更新與拖動手勢互相搶奪
     let currentTime = 0;
     let playSpeed = 1.0;
     let voiceEnabled = true;
@@ -5724,7 +5725,7 @@
       // 智慧預熱：背景預載該專輯第一首歌的前段影片，點選即可秒開無延遲
       if (album.songs && album.songs[0]) {
         setTimeout(() => {
-          if (window.prefetchSongVideos) prefetchSongVideos(album.songs[0]);
+          if (window.prefetchSongVideos) window.prefetchSongVideos(album.songs[0]);
         }, 300);
       }
 
@@ -5778,8 +5779,8 @@
 
         return `
           <div onclick="selectSong('${song.id}')" 
-               onmouseenter="if(window.prefetchSongVideos) prefetchSongVideos(songDatabase['${song.id}'])"
-               ontouchstart="if(window.prefetchSongVideos) prefetchSongVideos(songDatabase['${song.id}'])"
+               onmouseenter="if(window.prefetchSongVideos) window.prefetchSongVideos(songDatabase['${song.id}'])"
+               ontouchstart="if(window.prefetchSongVideos) window.prefetchSongVideos(songDatabase['${song.id}'])"
                class="group relative ${cardThemeClass} rounded-2xl p-3.5 sm:p-4 transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden select-none">
             
             <div class="absolute top-2.5 left-2.5 ${numberBadge} backdrop-blur text-[10px] font-black px-2 py-0.5 rounded-full shadow-md z-20 border">
@@ -5915,7 +5916,7 @@
 
         return `
           <div onclick="selectSong('${song.id}')" 
-               onmouseenter="if(window.prefetchSongVideos) prefetchSongVideos(songDatabase['${song.id}'])"
+               onmouseenter="if(window.prefetchSongVideos) window.prefetchSongVideos(songDatabase['${song.id}'])"
                class="p-3 rounded-2xl flex items-center justify-between transition-all cursor-pointer border ${rowClass}">
             <div class="flex items-center gap-3 min-w-0">
               ${renderSongThemeEmblem(song, 'drawer')}
@@ -8206,6 +8207,7 @@
       }
       setTimeout(stepPrefetch, 100);
     }
+    const prefetchSongVideos = startContinuousVideoPrefetch;
     window.prefetchSongVideos = startContinuousVideoPrefetch;
 
     function switchCoachVideoSeamlessly(targetVideoUrl, nextVideoUrl) {
@@ -9264,15 +9266,15 @@
       });
     }
 
-    loadParentSettings();
-    updateHomeCdUI();
-    renderThemeSongLyricsDOM();
-    updatePlaybackUI();
-    switchAlbum(currentAlbumId);
-    updateLoopModeUI();
-    initHomeCarousel();
+    try { loadParentSettings(); } catch(e) { console.warn('loadParentSettings error:', e); }
+    try { updateHomeCdUI(); } catch(e) { console.warn('updateHomeCdUI error:', e); }
+    try { renderThemeSongLyricsDOM(); } catch(e) { console.warn('renderThemeSongLyricsDOM error:', e); }
+    try { updatePlaybackUI(); } catch(e) { console.warn('updatePlaybackUI error:', e); }
+    try { switchAlbum(currentAlbumId); } catch(e) { console.warn('switchAlbum error:', e); }
+    try { updateLoopModeUI(); } catch(e) { console.warn('updateLoopModeUI error:', e); }
+    try { initHomeCarousel(); } catch(e) { console.warn('initHomeCarousel error:', e); }
     // 立即启动发光火柴人渲染主循环（常驻舞台，实时渲染）
-    renderStickmanLoop();
+    try { renderStickmanLoop(); } catch(e) { console.warn('renderStickmanLoop error:', e); }
 
     window.addEventListener('resize', () => {
       if (viewLobby && !viewLobby.classList.contains('hidden')) {
