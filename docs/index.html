@@ -6067,10 +6067,11 @@
         }
         if (coachTypeBadge) coachTypeBadge.innerText = "🎬 示範影片";
 
-        // 預載第二段影片到 coachVideoB
-        if (song.timeline && song.timeline[1] && song.timeline[1].video) {
-          const seg2Video = song.timeline[1].video;
-          if (coachVideoB._logicalVideoUrl !== seg2Video) {
+        // 預載第二段影片到 coachVideoB (若為多樂句整合曲目，尋找下一個不同影片)
+        if (song.timeline) {
+          const nextDiffSeg = song.timeline.find(s => s.video && s.video !== firstSeg.video);
+          const seg2Video = nextDiffSeg ? nextDiffSeg.video : (song.timeline[1] && song.timeline[1].video);
+          if (seg2Video && coachVideoB._logicalVideoUrl !== seg2Video) {
             setupVideoElement(coachVideoB);
             coachVideoB.src = seg2Video;
             coachVideoB._logicalVideoUrl = seg2Video;
@@ -8205,6 +8206,7 @@
       const seg = getCurrentSegment();
       const song = songDatabase[currentSongKey];
       const nextSeg = (song && song.timeline && song.timeline[idx + 1]) ? song.timeline[idx + 1] : null;
+      const nextDiffSeg = (song && song.timeline) ? (song.timeline.slice(idx + 1).find(s => s.video && s.video !== (seg && seg.video)) || nextSeg) : null;
 
       if (seg) {
         coachActionTitle.innerText = seg.title;
@@ -8224,7 +8226,7 @@
             if (coachImage) {
               coachImage.classList.add('hidden', 'opacity-0', 'pointer-events-none');
             }
-            switchCoachVideoSeamlessly(seg.video, nextSeg ? nextSeg.video : null);
+            switchCoachVideoSeamlessly(seg.video, nextDiffSeg ? nextDiffSeg.video : null);
             if (coachTypeBadge) coachTypeBadge.innerText = "🎬 示範影片";
           } else {
             if (coachVideoA) {

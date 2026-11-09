@@ -9480,7 +9480,7 @@ window.KAI_ALBUM_DATABASE = {
             "start": 0,
             "end": 3.27,
             "title": "第 01 節: 分享倒數一二三",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_01.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"One, two, three, share with me!\"",
             "sub": "✨ 【快樂分享】1、2、3，跟我一起分享！",
@@ -9488,13 +9488,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Put a smile on, ha... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：伸出雙手熱情打招呼！",
-            "lyricZh": "1、2、3，跟我一起分享！"
+            "lyricZh": "1、2、3，跟我一起分享！",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 3.27,
             "end": 7.87,
             "title": "第 02 節: 微笑自由動起來",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_01.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Put a smile on, happy and free. Yo!\"",
             "sub": "✨ 【快樂分享】綻放微笑，快樂又自由，Yo！",
@@ -9502,13 +9505,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I have colorful bu... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手比出大微笑定格！",
-            "lyricZh": "綻放微笑，快樂又自由，Yo！"
+            "lyricZh": "綻放微笑，快樂又自由，Yo！",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 7.87,
             "end": 14.6,
             "title": "[間奏] 🎵 歡樂律動間奏",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_01.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "[Music Interlude 🎵 輕快間奏]",
             "sub": "✨ 【生活英文與品格】感受律動，原地踩點",
@@ -9516,13 +9522,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I have colorful bu... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 14.6,
             "end": 18.27,
             "title": "第 03 節: 五彩積木搭高高",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_02.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"I have colorful building blocks.\"",
             "sub": "✨ 【快樂分享】我有五彩繽紛的積木塊，",
@@ -9530,13 +9539,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "You have a train t... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手上下交替堆積木！",
-            "lyricZh": "我有五彩繽紛的積木塊，"
+            "lyricZh": "我有五彩繽紛的積木塊，",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 18.27,
             "end": 21.57,
             "title": "第 04 節: 小火車站長出發",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_02.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"You have a train that runs on rocks.\"",
             "sub": "✨ 【快樂分享】你有奔馳在軌道上的小火車。",
@@ -9544,13 +9556,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Let's put them tog... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手向前推動小火車！",
-            "lyricZh": "你有奔馳在軌道上的小火車。"
+            "lyricZh": "你有奔馳在軌道上的小火車。",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 21.57,
             "end": 25.6,
             "title": "第 05 節: 玩具並排手牽手",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_02.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Let's put them together, side by side.\"",
             "sub": "✨ 【快樂分享】讓我們把玩具放在一起，並排玩耍，",
@@ -9558,13 +9573,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Look at our castle... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙臂展開左右擁抱！",
-            "lyricZh": "讓我們把玩具放在一起，並排玩耍，"
+            "lyricZh": "讓我們把玩具放在一起，並排玩耍，",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 25.6,
             "end": 29.1,
             "title": "第 06 節: 城堡高高聳立",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_03.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Look at our castle, so high and wide.\"",
             "sub": "✨ 【快樂分享】看我們的城堡多高多大！",
@@ -9572,13 +9590,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"Here you go.\" \"Th... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手向上高舉比出大城堡！",
-            "lyricZh": "看我們的城堡多高多大！"
+            "lyricZh": "看我們的城堡多高多大！",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 29.1,
             "end": 32.3,
             "title": "[間奏] 🎵 歡樂律動間奏",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_03.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "[Music Interlude 🎵 輕快間奏]",
             "sub": "✨ 【生活英文與品格】感受律動，原地踩點",
@@ -9586,13 +9607,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"Here you go.\" \"Th... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 32.3,
             "end": 35.57,
             "title": "第 07 節: 拿去玩吧謝謝你",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_03.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"\"Here you go.\" \"Thank you, friend!\"\"",
             "sub": "✨ 【快樂分享】「給你玩！」「謝謝你好朋友！」",
@@ -9600,13 +9624,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Sharing makes the ... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手平捧禮貌遞出玩具！",
-            "lyricZh": "「給你玩！」「謝謝你好朋友！」"
+            "lyricZh": "「給你玩！」「謝謝你好朋友！」",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 35.57,
             "end": 39.9,
             "title": "第 08 節: 分享時光不間斷",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_04.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Sharing makes the playtime never end.\"",
             "sub": "✨ 【快樂分享】快樂分享讓遊戲時光永不結束。",
@@ -9614,13 +9641,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "One for you, one f... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙腳原地踏步拍拍手！",
-            "lyricZh": "快樂分享讓遊戲時光永不結束。"
+            "lyricZh": "快樂分享讓遊戲時光永不結束。",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 39.9,
             "end": 43.67,
             "title": "第 09 節: 一人一個感情好",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_04.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"One for you, one for me.\"",
             "sub": "✨ 【快樂分享】你一個、我一個，",
@@ -9628,13 +9658,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Super share smile ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：食指輪流指向朋友與自己！",
-            "lyricZh": "你一個、我一個，"
+            "lyricZh": "你一個、我一個，",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 43.67,
             "end": 50.67,
             "title": "第 10 節: 分享微笑綻放",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_04.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Super share smile for you and me.\"",
             "sub": "✨ 【快樂分享】你我臉上都有快樂分享的微笑！",
@@ -9642,13 +9675,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Two little crayons... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手比臉頰愛心甜美笑！",
-            "lyricZh": "你我臉上都有快樂分享的微笑！"
+            "lyricZh": "你我臉上都有快樂分享的微笑！",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 50.67,
             "end": 54.13,
             "title": "第 11 節: 彩色蠟筆借你畫",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_05.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Two little crayons, blue and red.\"",
             "sub": "✨ 【快樂分享】兩支小蠟筆，一藍一紅，",
@@ -9656,13 +9692,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"Can I borrow your... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手在胸前模仿畫畫！",
-            "lyricZh": "兩支小蠟筆，一藍一紅，"
+            "lyricZh": "兩支小蠟筆，一藍一紅，",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 54.13,
             "end": 57.97,
             "title": "第 12 節: 溫柔禮貌詢問",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_05.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"\"Can I borrow yours?\" you gently said.\"",
             "sub": "✨ 【快樂分享】「我可以借你的嗎？」你溫柔地說。",
@@ -9670,13 +9709,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"Sure you can.\" We... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手合十禮貌微微點頭！",
-            "lyricZh": "「我可以借你的嗎？」你溫柔地說。"
+            "lyricZh": "「我可以借你的嗎？」你溫柔地說。",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 57.97,
             "end": 61.73,
             "title": "第 13 節: 輪流著玩最開心",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_05.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"\"Sure you can.\" We take our turn.\"",
             "sub": "✨ 【快樂分享】「當然可以！」我們輪流使用，",
@@ -9684,13 +9726,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Sharing is the swe... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：拍手兩下雙腳跳動！",
-            "lyricZh": "「當然可以！」我們輪流使用，"
+            "lyricZh": "「當然可以！」我們輪流使用，",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 61.73,
             "end": 65.3,
             "title": "第 14 節: 學會分享最甜美",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_06.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Sharing is the sweetest thing we learn.\"",
             "sub": "✨ 【快樂分享】分享是我們學會最甜美的事！",
@@ -9698,13 +9743,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"Here you go.\" \"Th... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手貼胸口溫暖律動！",
-            "lyricZh": "分享是我們學會最甜美的事！"
+            "lyricZh": "分享是我們學會最甜美的事！",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 65.3,
             "end": 68.5,
             "title": "[間奏] 🎵 歡樂律動間奏",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_06.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "[Music Interlude 🎵 輕快間奏]",
             "sub": "✨ 【生活英文與品格】感受律動，原地踩點",
@@ -9712,13 +9760,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"Here you go.\" \"Th... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 68.5,
             "end": 71.77,
             "title": "第 15 節: 拿去玩吧謝謝你",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_06.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"\"Here you go.\" \"Thank you, friend!\"\"",
             "sub": "✨ 【快樂分享】「給你玩！」「謝謝你好朋友！」",
@@ -9726,13 +9777,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Sharing makes the ... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手平捧禮貌遞出玩具！",
-            "lyricZh": "「給你玩！」「謝謝你好朋友！」"
+            "lyricZh": "「給你玩！」「謝謝你好朋友！」",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 71.77,
             "end": 76,
             "title": "第 16 節: 分享時光不間斷",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_07.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Sharing makes the playtime never end.\"",
             "sub": "✨ 【快樂分享】快樂分享讓遊戲時光永不結束。",
@@ -9740,13 +9794,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "One for you, one f... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙腳原地踏步拍拍手！",
-            "lyricZh": "快樂分享讓遊戲時光永不結束。"
+            "lyricZh": "快樂分享讓遊戲時光永不結束。",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 76,
             "end": 79.87,
             "title": "第 17 節: 一人一個感情好",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_07.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"One for you, one for me.\"",
             "sub": "✨ 【快樂分享】你一個、我一個，",
@@ -9754,13 +9811,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Super share smile ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：食指輪流指向朋友與自己！",
-            "lyricZh": "你一個、我一個，"
+            "lyricZh": "你一個、我一個，",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 79.87,
             "end": 87.5,
             "title": "第 18 節: 分享微笑綻放",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_07.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Super share smile for you and me.\"",
             "sub": "✨ 【快樂分享】你我臉上都有快樂分享的微笑！",
@@ -9768,13 +9828,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Sharing is caring ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手比臉頰愛心甜美笑！",
-            "lyricZh": "你我臉上都有快樂分享的微笑！"
+            "lyricZh": "你我臉上都有快樂分享的微笑！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 87.5,
             "end": 94.57,
             "title": "第 19 節: 關懷分享每一天",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_07.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Sharing is caring every day.\"",
             "sub": "✨ 【快樂分享】每天都要用愛心分享關懷，",
@@ -9782,13 +9845,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Let's dance, hoora... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：手臂大弧度畫出愛心！",
-            "lyricZh": "每天都要用愛心分享關懷，"
+            "lyricZh": "每天都要用愛心分享關懷，",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 94.57,
             "end": 102.4,
             "title": "第 20 節: 開心跳舞大歡呼",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_07.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Let's dance, hooray!\"",
             "sub": "✨ 【快樂分享】大家一起開心跳舞，萬歲！",
@@ -9796,13 +9862,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Yo!... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙臂高舉向上大歡呼！",
-            "lyricZh": "大家一起開心跳舞，萬歲！"
+            "lyricZh": "大家一起開心跳舞，萬歲！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 102.4,
             "end": 104.1,
             "title": "第 21 節: 帥氣卡點 Yo",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_07.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Yo!\"",
             "sub": "✨ 【快樂分享】Yo！",
@@ -9810,13 +9879,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Hey, hey, hey, hey... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：單手帥氣指鏡頭！",
-            "lyricZh": "Yo！"
+            "lyricZh": "Yo！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 104.1,
             "end": 109.8,
             "title": "第 22 節: 結尾快樂歡呼定格",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_07.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Hey, hey, hey, hey, hey, hey, hey!\"",
             "sub": "✨ 【快樂分享】嘿、嘿、嘿，快樂分享好朋友！",
@@ -9824,13 +9896,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：偶像結尾微笑招手定格！",
-            "lyricZh": "嘿、嘿、嘿，快樂分享好朋友！"
+            "lyricZh": "嘿、嘿、嘿，快樂分享好朋友！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 109.8,
             "end": 120,
             "title": "[尾奏] 🌟 快樂 Ending 定格",
-            "video": null,
+            "video": "./videos/G3/a3_t1_phrase_07.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "[Ending Outro 🌟 帥氣結尾]",
             "sub": "✨ 【快樂分享】做最棒的自己，定格微笑！",
@@ -9838,7 +9913,10 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           }
         ],
         "leadDancer": "Jessie (波浪雙馬尾女孩)"
@@ -9866,7 +9944,7 @@ window.KAI_ALBUM_DATABASE = {
             "start": 0,
             "end": 2.77,
             "title": "第 01 節: 早安起床動起來",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_01.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Wake up!\"",
             "sub": "✨ 【晨光活力】起床啦！醒醒動一動！",
@@ -9874,13 +9952,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Shake it up, jump ... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙臂高舉伸個大懶腰！",
-            "lyricZh": "起床啦！醒醒動一動！"
+            "lyricZh": "起床啦！醒醒動一動！",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 2.77,
             "end": 7.57,
             "title": "第 02 節: 快樂跳躍出發",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_01.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Shake it up, jump for joy, let's go!\"",
             "sub": "✨ 【晨光活力】搖一搖，為喜樂大跳躍，出發！",
@@ -9888,13 +9969,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "The golden sun is ... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：輕快彈跳原地搖擺！",
-            "lyricZh": "搖一搖，為喜樂大跳躍，出發！"
+            "lyricZh": "搖一搖，為喜樂大跳躍，出發！",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 7.57,
             "end": 11.4,
             "title": "第 03 節: 金色太陽放光芒",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_01.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"The golden sun is shining bright,\"",
             "sub": "✨ 【晨光活力】金黃色的太陽閃閃發光，",
@@ -9902,13 +9986,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Chasing away the s... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手高托金色大太陽！",
-            "lyricZh": "金黃色的太陽閃閃發光，"
+            "lyricZh": "金黃色的太陽閃閃發光，",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 11.4,
             "end": 14.93,
             "title": "第 04 節: 趕走睡意精神好",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_02.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Chasing away the sleepy night.\"",
             "sub": "✨ 【晨光活力】趕走瞌睡蟲與黑黑的夜晚。",
@@ -9916,13 +10003,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Stretch my arms up... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手向外輕輕推散睡意！",
-            "lyricZh": "趕走瞌睡蟲與黑黑的夜晚。"
+            "lyricZh": "趕走瞌睡蟲與黑黑的夜晚。",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 14.93,
             "end": 18.2,
             "title": "第 05 節: 雙臂向上大伸展",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_02.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Stretch my arms up high and wide,\"",
             "sub": "✨ 【晨光活力】雙臂向上伸展，又高又寬，",
@@ -9930,13 +10020,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Feel the joy rumbl... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙臂向兩側盡情延展！",
-            "lyricZh": "雙臂向上伸展，又高又寬，"
+            "lyricZh": "雙臂向上伸展，又高又寬，",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 18.2,
             "end": 22.27,
             "title": "第 06 節: 喜樂滿溢在心田",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_02.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Feel the joy rumbling deep inside.\"",
             "sub": "✨ 【晨光活力】感受心裡深處湧現的喜樂澎湃。",
@@ -9944,13 +10037,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Jump, jump, jump f... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手捧心輕快踏步！",
-            "lyricZh": "感受心裡深處湧現的喜樂澎湃。"
+            "lyricZh": "感受心裡深處湧現的喜樂澎湃。",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 22.27,
             "end": 25.4,
             "title": "第 07 節: 快樂彈跳躍動",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_03.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Jump, jump, jump for joy!\"",
             "sub": "✨ 【晨光活力】跳、跳、為喜樂跳躍！",
@@ -9958,13 +10054,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Happy girl and hap... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：雙腳有力輕快連續彈跳！",
-            "lyricZh": "跳、跳、為喜樂跳躍！"
+            "lyricZh": "跳、跳、為喜樂跳躍！",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 25.4,
             "end": 28.8,
             "title": "第 08 節: 快樂男孩與女孩",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_03.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Happy girl and happy boy.\"",
             "sub": "✨ 【晨光活力】快樂的小女孩與快樂的小男孩。",
@@ -9972,13 +10071,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Good morning, suns... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手插腰自信微笑踏步！",
-            "lyricZh": "快樂的小女孩與快樂的小男孩。"
+            "lyricZh": "快樂的小女孩與快樂的小男孩。",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 28.8,
             "end": 32.6,
             "title": "第 09 節: 早安陽光向前行",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_03.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Good morning, sunshine, here we go!\"",
             "sub": "✨ 【晨光活力】早安陽光，我們出發囉！",
@@ -9986,13 +10088,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Let your happy col... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：向前揮手大步邁進！",
-            "lyricZh": "早安陽光，我們出發囉！"
+            "lyricZh": "早安陽光，我們出發囉！",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 32.6,
             "end": 36.67,
             "title": "第 10 節: 幸福色彩流淌",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_04.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Let your happy colors flow.\"",
             "sub": "✨ 【晨光活力】讓幸福的色彩在身上流淌！",
@@ -10000,13 +10105,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Brush my teeth wit... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手由上而下輕撫身體！",
-            "lyricZh": "讓幸福的色彩在身上流淌！"
+            "lyricZh": "讓幸福的色彩在身上流淌！",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 36.67,
             "end": 38.1,
             "title": "第 11 節: 刷牙刷出歡樂節拍",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_04.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Brush my teeth with a chika-\"",
             "sub": "✨ 【晨光活力】刷刷牙發出嘰咕嘰咕的節拍，",
@@ -10014,13 +10122,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "chika beat, tappin... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：單手模仿刷牙輕快晃動！",
-            "lyricZh": "刷刷牙發出嘰咕嘰咕的節拍，"
+            "lyricZh": "刷刷牙發出嘰咕嘰咕的節拍，",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 38.1,
             "end": 39.9,
             "title": "第 12 節: 輕快踩點小腳丫",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_04.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"chika beat, tapping my dancing\"",
             "sub": "✨ 【晨光活力】踩著舞蹈節拍的小腳丫。",
@@ -10028,13 +10139,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "little feet. Joy i... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙腳左右踏併點地卡點！",
-            "lyricZh": "踩著舞蹈節拍的小腳丫。"
+            "lyricZh": "踩著舞蹈節拍的小腳丫。",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 39.9,
             "end": 43.47,
             "title": "第 13 節: 喜樂是分享的禮物",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_05.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"little feet. Joy is a gift to share,\"",
             "sub": "✨ 【晨光活力】喜樂是值得分享的禮物，",
@@ -10042,13 +10156,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Spreading happines... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手平托向前送出溫暖！",
-            "lyricZh": "喜樂是值得分享的禮物，"
+            "lyricZh": "喜樂是值得分享的禮物，",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 43.47,
             "end": 45.73,
             "title": "第 14 節: 幸福散播到各處",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_05.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Spreading happiness everywhere.\"",
             "sub": "✨ 【晨光活力】把幸福傳播到每一個角落。",
@@ -10056,13 +10173,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Jump, jump, jump f... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手向四周撒出星光！",
-            "lyricZh": "把幸福傳播到每一個角落。"
+            "lyricZh": "把幸福傳播到每一個角落。",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 45.73,
             "end": 48.9,
             "title": "第 15 節: 快樂彈跳躍動",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_05.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Jump, jump, jump for joy!\"",
             "sub": "✨ 【晨光活力】跳、跳、為喜樂跳躍！",
@@ -10070,13 +10190,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Happy girl and hap... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：雙腳有力輕快連續彈跳！",
-            "lyricZh": "跳、跳、為喜樂跳躍！"
+            "lyricZh": "跳、跳、為喜樂跳躍！",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 48.9,
             "end": 52.27,
             "title": "第 16 節: 快樂男孩與女孩",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_06.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Happy girl and happy boy.\"",
             "sub": "✨ 【晨光活力】快樂的小女孩與快樂的小男孩。",
@@ -10084,13 +10207,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Good morning, suns... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手插腰自信微笑踏步！",
-            "lyricZh": "快樂的小女孩與快樂的小男孩。"
+            "lyricZh": "快樂的小女孩與快樂的小男孩。",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 52.27,
             "end": 56.1,
             "title": "第 17 節: 早安陽光向前行",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_06.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Good morning, sunshine, here we go!\"",
             "sub": "✨ 【晨光活力】早安陽光，我們出發囉！",
@@ -10098,13 +10224,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Let your happy col... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：向前揮手大步邁進！",
-            "lyricZh": "早安陽光，我們出發囉！"
+            "lyricZh": "早安陽光，我們出發囉！",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 56.1,
             "end": 60.13,
             "title": "第 18 節: 幸福色彩流淌",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_06.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Let your happy colors flow.\"",
             "sub": "✨ 【晨光活力】讓幸福的色彩在身上流淌！",
@@ -10112,13 +10241,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "One, two, three, f... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手由上而下輕撫身體！",
-            "lyricZh": "讓幸福的色彩在身上流淌！"
+            "lyricZh": "讓幸福的色彩在身上流淌！",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 60.13,
             "end": 66.2,
             "title": "第 19 節: 定格微笑定格跳",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_07.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"One, two, three, freeze and smile! Joy all the while.\"",
             "sub": "✨ 【晨光活力】一、二、三，定格微笑！心中充滿喜樂！",
@@ -10126,13 +10258,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Jump, jump, jump f... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：單手比耶俏皮定格！",
-            "lyricZh": "一、二、三，定格微笑！心中充滿喜樂！"
+            "lyricZh": "一、二、三，定格微笑！心中充滿喜樂！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 66.2,
             "end": 81.77,
             "title": "[間奏] 🎵 歡樂律動間奏",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_07.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "[Music Interlude 🎵 輕快間奏]",
             "sub": "✨ 【生活英文與品格】感受律動，原地踩點",
@@ -10140,13 +10275,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Jump, jump, jump f... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 81.77,
             "end": 84.97,
             "title": "第 20 節: 快樂彈跳躍動",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_07.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Jump, jump, jump for joy!\"",
             "sub": "✨ 【晨光活力】跳、跳、為喜樂跳躍！",
@@ -10154,13 +10292,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Happy girl and hap... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：雙腳有力輕快連續彈跳！",
-            "lyricZh": "跳、跳、為喜樂跳躍！"
+            "lyricZh": "跳、跳、為喜樂跳躍！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 84.97,
             "end": 88.37,
             "title": "第 21 節: 快樂男孩與女孩",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_07.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Happy girl and happy boy.\"",
             "sub": "✨ 【晨光活力】快樂的小女孩與快樂的小男孩。",
@@ -10168,13 +10309,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Good morning, suns... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手插腰自信微笑踏步！",
-            "lyricZh": "快樂的小女孩與快樂的小男孩。"
+            "lyricZh": "快樂的小女孩與快樂的小男孩。",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 88.37,
             "end": 92.17,
             "title": "第 22 節: 早安陽光向前行",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_07.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Good morning, sunshine, here we go!\"",
             "sub": "✨ 【晨光活力】早安陽光，我們出發囉！",
@@ -10182,13 +10326,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Let your happy col... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：向前揮手大步邁進！",
-            "lyricZh": "早安陽光，我們出發囉！"
+            "lyricZh": "早安陽光，我們出發囉！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 92.17,
             "end": 95.13,
             "title": "第 23 節: 幸福光彩閃亮定格",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_07.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Let your happy colors glow.\"",
             "sub": "✨ 【晨光活力】讓幸福的色彩閃閃發光！",
@@ -10196,13 +10343,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：結尾雙臂托陽光定格笑！",
-            "lyricZh": "讓幸福的色彩閃閃發光！"
+            "lyricZh": "讓幸福的色彩閃閃發光！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 95.13,
             "end": 120,
             "title": "[尾奏] 🌟 快樂 Ending 定格",
-            "video": null,
+            "video": "./videos/G3/a3_t2_phrase_07.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "[Ending Outro 🌟 帥氣結尾]",
             "sub": "✨ 【晨光活力】做最棒的自己，定格微笑！",
@@ -10210,7 +10360,10 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           }
         ],
         "leadDancer": "Kai (陽光刺蝟頭男孩)"
@@ -10238,7 +10391,7 @@ window.KAI_ALBUM_DATABASE = {
             "start": 0,
             "end": 7.13,
             "title": "[前奏] 🎵 歡樂律動前奏",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_01.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "[Intro 🎵 歡樂律動前奏]",
             "sub": "✨ 【生活英文與品格】情緒平靜 · 原地踏步暖身準備",
@@ -10246,13 +10399,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Let it go.... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友準備好，跟著輕快節奏一起動起來！",
-            "lyricZh": "歡樂律動前奏"
+            "lyricZh": "歡樂律動前奏",
+            "phraseIndex": 1,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 7.13,
             "end": 11.57,
             "title": "第 01 節: 放鬆深呼吸",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_01.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Let it go.\"",
             "sub": "✨ 【情緒平靜】放輕鬆，釋放所有的緊繃。",
@@ -10260,13 +10416,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Watch the peaceful... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙肩下沉吐氣放鬆！",
-            "lyricZh": "放輕鬆，釋放所有的緊繃。"
+            "lyricZh": "放輕鬆，釋放所有的緊繃。",
+            "phraseIndex": 1,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 11.57,
             "end": 17.47,
             "title": "第 02 節: 美麗彩虹發光芒",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_01.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Watch the peaceful rainbow glow.\"",
             "sub": "✨ 【情緒平靜】看著寧靜美麗的彩虹在發光。",
@@ -10274,13 +10433,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "When things go wro... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手在天空畫出大彩虹！",
-            "lyricZh": "看著寧靜美麗的彩虹在發光。"
+            "lyricZh": "看著寧靜美麗的彩虹在發光。",
+            "phraseIndex": 1,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 17.47,
             "end": 21.47,
             "title": "第 03 節: 心情煩躁停一停",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_02.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"When things go wrong and I feel mad,\"",
             "sub": "✨ 【情緒平靜】當事情不如意、我感到生氣時，",
@@ -10288,13 +10450,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Or feeling stormy,... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手握拳輕輕放在胸前！",
-            "lyricZh": "當事情不如意、我感到生氣時，"
+            "lyricZh": "當事情不如意、我感到生氣時，",
+            "phraseIndex": 2,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 21.47,
             "end": 25.6,
             "title": "第 04 節: 平復心中暴風雨",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_02.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Or feeling stormy, tired, and sad,\"",
             "sub": "✨ 【情緒平靜】或是心情像暴風雨一樣疲憊悲傷，",
@@ -10302,13 +10467,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I stop my feet, I ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手輕輕摸胸口順氣！",
-            "lyricZh": "或是心情像暴風雨一樣疲憊悲傷，"
+            "lyricZh": "或是心情像暴風雨一樣疲憊悲傷，",
+            "phraseIndex": 2,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 25.6,
             "end": 30.17,
             "title": "第 05 節: 停下腳步閉上眼",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_02.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"I stop my feet, I close my eyes,\"",
             "sub": "✨ 【情緒平靜】我會停下雙腳，閉上眼睛，",
@@ -10316,13 +10484,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "And look inside fo... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：原地立正閉眼靜心！",
-            "lyricZh": "我會停下雙腳，閉上眼睛，"
+            "lyricZh": "我會停下雙腳，閉上眼睛，",
+            "phraseIndex": 2,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 30.17,
             "end": 34.9,
             "title": "第 06 節: 尋找心中的晴朗",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_03.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"And look inside for quiet skies.\"",
             "sub": "✨ 【情緒平靜】在心裡尋找那片晴朗寧靜的天空。",
@@ -10330,13 +10501,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Breathe in, one, t... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手合十放在心口！",
-            "lyricZh": "在心裡尋找那片晴朗寧靜的天空。"
+            "lyricZh": "在心裡尋找那片晴朗寧靜的天空。",
+            "phraseIndex": 3,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 34.9,
             "end": 37.57,
             "title": "第 07 節: 緩緩吸氣一二三",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_03.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Breathe in, one, two, three. Deep\"",
             "sub": "✨ 【情緒平靜】吸氣，一、二、三，深吸一口氣，",
@@ -10344,13 +10518,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Breath, breathe, b... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙臂向上緩緩展開深吸！",
-            "lyricZh": "吸氣，一、二、三，深吸一口氣，"
+            "lyricZh": "吸氣，一、二、三，深吸一口氣，",
+            "phraseIndex": 3,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 37.57,
             "end": 41.67,
             "title": "第 08 節: 平靜吐氣心放寬",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_03.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Breath, breathe, breathe out peacefully.\"",
             "sub": "✨ 【情緒平靜】慢慢地、平和安寧地呼出氣來。",
@@ -10358,13 +10535,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Hush like a soft c... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手緩緩向下推氣下沉！",
-            "lyricZh": "慢慢地、平和安寧地呼出氣來。"
+            "lyricZh": "慢慢地、平和安寧地呼出氣來。",
+            "phraseIndex": 3,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 41.67,
             "end": 45.73,
             "title": "第 09 節: 藍天飄浮輕柔雲",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_04.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Hush like a soft cloud in the blue.\"",
             "sub": "✨ 【情緒平靜】像藍天中一朵輕柔飄浮的雲彩。",
@@ -10372,13 +10552,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Peace is flowing t... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：身體左右輕輕隨風擺動！",
-            "lyricZh": "像藍天中一朵輕柔飄浮的雲彩。"
+            "lyricZh": "像藍天中一朵輕柔飄浮的雲彩。",
+            "phraseIndex": 4,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 45.73,
             "end": 51.4,
             "title": "第 10 節: 和平寧靜在流淌",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_04.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Peace is flowing through and through.\"",
             "sub": "✨ 【情緒平靜】和平與寧靜在全身流淌。",
@@ -10386,13 +10569,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Gentle words and q... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：手掌輕撫胸膛感受平靜！",
-            "lyricZh": "和平與寧靜在全身流淌。"
+            "lyricZh": "和平與寧靜在全身流淌。",
+            "phraseIndex": 4,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 51.4,
             "end": 54.4,
             "title": "[間奏] 🎵 歡樂律動間奏",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_04.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "[Music Interlude 🎵 輕快間奏]",
             "sub": "✨ 【生活英文與品格】感受律動，原地踩點",
@@ -10400,13 +10586,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Gentle words and q... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "phraseIndex": 4,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 54.4,
             "end": 58.47,
             "title": "第 11 節: 溫柔言語靜下心",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_05.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Gentle words and quiet mind,\"",
             "sub": "✨ 【情緒平靜】用溫柔的話語，保持平靜的心靈，",
@@ -10414,13 +10603,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Leaving all the st... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：食指輕碰唇角溫柔微笑！",
-            "lyricZh": "用溫柔的話語，保持平靜的心靈，"
+            "lyricZh": "用溫柔的話語，保持平靜的心靈，",
+            "phraseIndex": 5,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 58.47,
             "end": 62.4,
             "title": "第 12 節: 告別情緒暴風雨",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_05.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Leaving all the storms behind.\"",
             "sub": "✨ 【情緒平靜】把所有的暴風雨都拋在腦後。",
@@ -10428,13 +10620,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Rainbow colors in ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手輕輕往後揮別煩惱！",
-            "lyricZh": "把所有的暴風雨都拋在腦後。"
+            "lyricZh": "把所有的暴風雨都拋在腦後。",
+            "phraseIndex": 5,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 62.4,
             "end": 66.57,
             "title": "第 13 節: 空中彩虹色彩濃",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_05.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Rainbow colors in the air,\"",
             "sub": "✨ 【情緒平靜】空中綻放出繽紛的彩虹顏色，",
@@ -10442,13 +10637,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Peace and calmness... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手由胸前推向天空展開！",
-            "lyricZh": "空中綻放出繽紛的彩虹顏色，"
+            "lyricZh": "空中綻放出繽紛的彩虹顏色，",
+            "phraseIndex": 5,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 66.57,
             "end": 71.5,
             "title": "第 14 節: 和平安寧遍各處",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_06.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Peace and calmness everywhere.\"",
             "sub": "✨ 【情緒平靜】和平與安寧圍繞在每個角落。",
@@ -10456,13 +10654,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Breathe in, one, t... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手環抱四周輕柔踏步！",
-            "lyricZh": "和平與安寧圍繞在每個角落。"
+            "lyricZh": "和平與安寧圍繞在每個角落。",
+            "phraseIndex": 6,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 71.5,
             "end": 74.13,
             "title": "第 15 節: 緩緩吸氣一二三",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_06.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Breathe in, one, two, three. Deep\"",
             "sub": "✨ 【情緒平靜】吸氣，一、二、三，深吸一口氣，",
@@ -10470,13 +10671,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Breath, breathe, b... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙臂向上緩緩展開深吸！",
-            "lyricZh": "吸氣，一、二、三，深吸一口氣，"
+            "lyricZh": "吸氣，一、二、三，深吸一口氣，",
+            "phraseIndex": 6,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 74.13,
             "end": 78.3,
             "title": "第 16 節: 平靜吐氣心放寬",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_06.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Breath, breathe, breathe out peacefully.\"",
             "sub": "✨ 【情緒平靜】慢慢地、平和安寧地呼出氣來。",
@@ -10484,13 +10688,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Hush like a soft c... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手緩緩向下推氣下沉！",
-            "lyricZh": "慢慢地、平和安寧地呼出氣來。"
+            "lyricZh": "慢慢地、平和安寧地呼出氣來。",
+            "phraseIndex": 6,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 78.3,
             "end": 82.27,
             "title": "第 17 節: 藍天飄浮輕柔雲",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_06.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Hush like a soft cloud in the blue.\"",
             "sub": "✨ 【情緒平靜】像藍天中一朵輕柔飄浮的雲彩。",
@@ -10498,13 +10705,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Peace is flowing t... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：身體左右輕輕隨風擺動！",
-            "lyricZh": "像藍天中一朵輕柔飄浮的雲彩。"
+            "lyricZh": "像藍天中一朵輕柔飄浮的雲彩。",
+            "phraseIndex": 6,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 82.27,
             "end": 90.4,
             "title": "第 18 節: 和平寧靜在流淌",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_06.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Peace is flowing through and through.\"",
             "sub": "✨ 【情緒平靜】和平與寧靜在全身流淌。",
@@ -10512,13 +10722,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I am peaceful, I a... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：手掌輕撫胸膛感受平靜！",
-            "lyricZh": "和平與寧靜在全身流淌。"
+            "lyricZh": "和平與寧靜在全身流淌。",
+            "phraseIndex": 6,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 90.4,
             "end": 94.87,
             "title": "第 19 節: 我是平靜和平星",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_06.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"I am peaceful, I am calm,\"",
             "sub": "✨ 【情緒平靜】我很平靜，我很安寧，",
@@ -10526,13 +10739,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Holding peace insi... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手疊在心口甜甜微笑！",
-            "lyricZh": "我很平靜，我很安寧，"
+            "lyricZh": "我很平靜，我很安寧，",
+            "phraseIndex": 6,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 94.87,
             "end": 100.17,
             "title": "第 20 節: 守護和平微笑定格",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_06.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Holding peace inside my palm.\"",
             "sub": "✨ 【情緒平靜】把和平緊緊握在手掌心中。",
@@ -10540,13 +10756,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：掌心向上微托亮光定格！",
-            "lyricZh": "把和平緊緊握在手掌心中。"
+            "lyricZh": "把和平緊緊握在手掌心中。",
+            "phraseIndex": 6,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 100.17,
             "end": 120,
             "title": "[尾奏] 🌟 快樂 Ending 定格",
-            "video": null,
+            "video": "./videos/G3/a3_t3_phrase_06.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "[Ending Outro 🌟 帥氣結尾]",
             "sub": "✨ 【情緒平靜】做最棒的自己，定格微笑！",
@@ -10554,7 +10773,10 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "phraseIndex": 6,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           }
         ],
         "leadDancer": "Mimi (烏黑齊瀏海女孩)"
@@ -10582,7 +10804,7 @@ window.KAI_ALBUM_DATABASE = {
             "start": 0,
             "end": 5.77,
             "title": "[前奏] 🎵 歡樂律動前奏",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_01.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "[Intro 🎵 歡樂律動前奏]",
             "sub": "✨ 【生活英文與品格】耐心等待 · 原地踏步暖身準備",
@@ -10590,13 +10812,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Choo-choo, little ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友準備好，跟著輕快節奏一起動起來！",
-            "lyricZh": "歡樂律動前奏"
+            "lyricZh": "歡樂律動前奏",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 5.77,
             "end": 9.7,
             "title": "第 01 節: 小火車排隊走",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_01.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Choo-choo, little train! In line, in line.\"",
             "sub": "✨ 【耐心等待】鳴鳴！小小火車排隊排整齊，",
@@ -10604,13 +10829,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Waiting my turn, f... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙臂如火車推輪踏步走！",
-            "lyricZh": "鳴鳴！小小火車排隊排整齊，"
+            "lyricZh": "鳴鳴！小小火車排隊排整齊，",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 9.7,
             "end": 17.07,
             "title": "第 02 節: 耐心等待心情好",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_01.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Waiting my turn, feeling fine.\"",
             "sub": "✨ 【耐心等待】耐心輪到我，心情真美好。",
@@ -10618,13 +10846,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "The big slide is t... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：微笑豎起大拇指點贊！",
-            "lyricZh": "耐心輪到我，心情真美好。"
+            "lyricZh": "耐心輪到我，心情真美好。",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 17.07,
             "end": 21.13,
             "title": "第 03 節: 高高滑梯好期待",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_02.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"The big slide is tall and fun.\"",
             "sub": "✨ 【耐心等待】大溜滑梯又高又好玩，",
@@ -10632,13 +10863,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Lots of friends, n... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：單手遮額頭仰望上方！",
-            "lyricZh": "大溜滑梯又高又好玩，"
+            "lyricZh": "大溜滑梯又高又好玩，",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 21.13,
             "end": 25.2,
             "title": "第 04 節: 好多朋友一起玩",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_02.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Lots of friends, not just one.\"",
             "sub": "✨ 【耐心等待】好多好朋友，不只我一個。",
@@ -10646,13 +10880,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "No need to push, n... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手向前友善招招手！",
-            "lyricZh": "好多好朋友，不只我一個。"
+            "lyricZh": "好多好朋友，不只我一個。",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 25.2,
             "end": 29,
             "title": "第 05 節: 不推不搶守秩序",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_02.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"No need to push, no need to race.\"",
             "sub": "✨ 【耐心等待】不用推擠，不用爭先恐後，",
@@ -10660,13 +10897,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Everyone has a hap... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手在身前輕輕做打住動作！",
-            "lyricZh": "不用推擠，不用爭先恐後，"
+            "lyricZh": "不用推擠，不用爭先恐後，",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 29,
             "end": 34.57,
             "title": "第 06 節: 人人都有好位置",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_03.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Everyone has a happy place.\"",
             "sub": "✨ 【耐心等待】每個人都有屬於自己的快樂位置。",
@@ -10674,13 +10914,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "One by one, in a r... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手左右展開歡迎大家！",
-            "lyricZh": "每個人都有屬於自己的快樂位置。"
+            "lyricZh": "每個人都有屬於自己的快樂位置。",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 34.57,
             "end": 38.37,
             "title": "第 07 節: 一二一個接一個",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_03.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"One by one, in a row,\"",
             "sub": "✨ 【耐心等待】一個接一個，排成一條線，",
@@ -10688,13 +10931,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Step by step, watc... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：原地精神抖擻抬腿踏步！",
-            "lyricZh": "一個接一個，排成一條線，"
+            "lyricZh": "一個接一個，排成一條線，",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 38.37,
             "end": 42.27,
             "title": "第 08 節: 步步前進守規則",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_03.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Step by step, watch us go.\"",
             "sub": "✨ 【耐心等待】一步接一步，看我們前進。",
@@ -10702,13 +10948,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"After you,\" I say... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手輕輕擺動齊步走！",
-            "lyricZh": "一步接一步，看我們前進。"
+            "lyricZh": "一步接一步，看我們前進。",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 42.27,
             "end": 46.1,
             "title": "第 09 節: 你先請最有禮貌",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_04.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"\"After you,\" I say with pride.\"",
             "sub": "✨ 【耐心等待】「你先請！」我驕傲有禮貌地說，",
@@ -10716,13 +10965,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Patience makes a s... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：單手禮貌向前延展指引！",
-            "lyricZh": "「你先請！」我驕傲有禮貌地說，"
+            "lyricZh": "「你先請！」我驕傲有禮貌地說，",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 46.1,
             "end": 49.1,
             "title": "第 10 節: 耐心滑梯更順暢",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_04.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Patience makes a smoother slide.\"",
             "sub": "✨ 【耐心等待】耐心讓溜滑梯溜得更加順暢！",
@@ -10730,13 +10982,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Wash our hands wit... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手自高處向下滑動！",
-            "lyricZh": "耐心讓溜滑梯溜得更加順暢！"
+            "lyricZh": "耐心讓溜滑梯溜得更加順暢！",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 49.1,
             "end": 57.7,
             "title": "[間奏] 🎵 歡樂律動間奏",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_04.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "[Music Interlude 🎵 輕快間奏]",
             "sub": "✨ 【生活英文與品格】感受律動，原地踩點",
@@ -10744,13 +10999,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Wash our hands wit... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 57.7,
             "end": 61.57,
             "title": "第 11 節: 泡泡洗手耐心洗",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_05.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Wash our hands with bubbly soap.\"",
             "sub": "✨ 【耐心等待】用起泡泡的肥皂洗洗小手，",
@@ -10758,13 +11016,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Waiting is easy wh... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手互相搓搓洗洗手！",
-            "lyricZh": "用起泡泡的肥皂洗洗小手，"
+            "lyricZh": "用起泡泡的肥皂洗洗小手，",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 61.57,
             "end": 65.4,
             "title": "第 12 節: 心中有愛等待易",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_05.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Waiting is easy when we have hope.\"",
             "sub": "✨ 【耐心等待】心懷希望，等待變得好容易。",
@@ -10772,13 +11033,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Tick-tock, clock, ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手貼心口輕輕晃動！",
-            "lyricZh": "心懷希望，等待變得好容易。"
+            "lyricZh": "心懷希望，等待變得好容易。",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 65.4,
             "end": 69.07,
             "title": "第 13 節: 時鐘滴答唱歡歌",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_05.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Tick-tock, clock, it won't be long,\"",
             "sub": "✨ 【耐心等待】滴答滴答，時鐘響起，不會等太久的，",
@@ -10786,13 +11050,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Singing our happy ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手如時鐘指針擺動！",
-            "lyricZh": "滴答滴答，時鐘響起，不會等太久的，"
+            "lyricZh": "滴答滴答，時鐘響起，不會等太久的，",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 69.07,
             "end": 74.87,
             "title": "第 14 節: 唱響等待歡樂曲",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_06.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Singing our happy waiting song.\"",
             "sub": "✨ 【耐心等待】唱著我們快樂的等待之歌！",
@@ -10800,13 +11067,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "One by one, in a r... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：雙腳歡快踏點拍拍手！",
-            "lyricZh": "唱著我們快樂的等待之歌！"
+            "lyricZh": "唱著我們快樂的等待之歌！",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 74.87,
             "end": 78.67,
             "title": "第 15 節: 一二一個接一個",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_06.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"One by one, in a row,\"",
             "sub": "✨ 【耐心等待】一個接一個，排成一條線，",
@@ -10814,13 +11084,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Step by step, watc... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：原地精神抖擻抬腿踏步！",
-            "lyricZh": "一個接一個，排成一條線，"
+            "lyricZh": "一個接一個，排成一條線，",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 78.67,
             "end": 82.57,
             "title": "第 16 節: 步步前進守規則",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_06.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Step by step, watch us go.\"",
             "sub": "✨ 【耐心等待】一步接一步，看我們前進。",
@@ -10828,13 +11101,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"After you,\" I say... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手輕輕擺動齊步走！",
-            "lyricZh": "一步接一步，看我們前進。"
+            "lyricZh": "一步接一步，看我們前進。",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 82.57,
             "end": 86.4,
             "title": "第 17 節: 你先請最有禮貌",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_07.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"\"After you,\" I say with pride.\"",
             "sub": "✨ 【耐心等待】「你先請！」我驕傲有禮貌地說，",
@@ -10842,13 +11118,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Patience makes a s... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：單手禮貌向前延展指引！",
-            "lyricZh": "「你先請！」我驕傲有禮貌地說，"
+            "lyricZh": "「你先請！」我驕傲有禮貌地說，",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 86.4,
             "end": 90.3,
             "title": "第 18 節: 耐心滑梯更順暢",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_07.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Patience makes a smoother slide.\"",
             "sub": "✨ 【耐心等待】耐心讓溜滑梯溜得更加順暢！",
@@ -10856,13 +11135,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I can wait, yes, I... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手自高處向下滑動！",
-            "lyricZh": "耐心讓溜滑梯溜得更加順暢！"
+            "lyricZh": "耐心讓溜滑梯溜得更加順暢！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 90.3,
             "end": 93.97,
             "title": "第 19 節: 我能等待最棒了",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_07.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"I can wait, yes, I can!\"",
             "sub": "✨ 【耐心等待】我可以耐心等待，沒錯我可以！",
@@ -10870,13 +11152,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I am patience's nu... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：拍胸脯自豪點頭自信笑！",
-            "lyricZh": "我可以耐心等待，沒錯我可以！"
+            "lyricZh": "我可以耐心等待，沒錯我可以！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 93.97,
             "end": 97.67,
             "title": "第 20 節: 耐心小模範定格",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_07.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"I am patience's number one fan.\"",
             "sub": "✨ 【耐心等待】我是耐心隊伍裡的第一名小粉絲！",
@@ -10884,13 +11169,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手比耶自信定格笑！",
-            "lyricZh": "我是耐心隊伍裡的第一名小粉絲！"
+            "lyricZh": "我是耐心隊伍裡的第一名小粉絲！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 97.67,
             "end": 120,
             "title": "[尾奏] 🌟 快樂 Ending 定格",
-            "video": null,
+            "video": "./videos/G3/a3_t4_phrase_07.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "[Ending Outro 🌟 帥氣結尾]",
             "sub": "✨ 【耐心等待】做最棒的自己，定格微笑！",
@@ -10898,7 +11186,10 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           }
         ],
         "leadDancer": "Tim (蓬鬆呆毛棕髮男孩)"
@@ -10926,7 +11217,7 @@ window.KAI_ALBUM_DATABASE = {
             "start": 0,
             "end": 5.57,
             "title": "[前奏] 🎵 歡樂律動前奏",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_01.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "[Intro 🎵 歡樂律動前奏]",
             "sub": "✨ 【生活英文與品格】禮貌好習慣 · 原地踏步暖身準備",
@@ -10934,13 +11225,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "When I want a glas... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友準備好，跟著輕快節奏一起動起來！",
-            "lyricZh": "歡樂律動前奏"
+            "lyricZh": "歡樂律動前奏",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 5.57,
             "end": 8.77,
             "title": "第 01 節: 想喝果汁懂禮貌",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_01.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"When I want a glass of juice,\"",
             "sub": "✨ 【禮貌好習慣】當我想要一杯甜甜果汁時，",
@@ -10948,13 +11242,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "What sweet words d... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手做出托杯小動作！",
-            "lyricZh": "當我想要一杯甜甜果汁時，"
+            "lyricZh": "當我想要一杯甜甜果汁時，",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 8.77,
             "end": 13.1,
             "title": "第 02 節: 甜美神奇小咒語",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_01.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"What sweet words do I produce?\"",
             "sub": "✨ 【禮貌好習慣】我會說出什麼神奇又甜美的字句？",
@@ -10962,13 +11259,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I don't whine, and... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：歪頭手托臉頰可愛思考！",
-            "lyricZh": "我會說出什麼神奇又甜美的字句？"
+            "lyricZh": "我會說出什麼神奇又甜美的字句？",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 13.1,
             "end": 16.33,
             "title": "第 03 節: 不吵不鬧心平靜",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_02.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"I don't whine, and I don't shout.\"",
             "sub": "✨ 【禮貌好習慣】我不吵鬧哭叫，也不大吼大叫，",
@@ -10976,13 +11276,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Here is how the wo... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：食指放唇前做噓聲動作！",
-            "lyricZh": "我不吵鬧哭叫，也不大吼大叫，"
+            "lyricZh": "我不吵鬧哭叫，也不大吼大叫，",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 16.33,
             "end": 20.5,
             "title": "第 04 節: 把話好好說出來",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_02.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Here is how the words come out.\"",
             "sub": "✨ 【禮貌好習慣】我深呼吸一口氣，把話好好說出來。",
@@ -10990,13 +11293,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"Please, may I hav... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：深吸一口氣雙手平伸！",
-            "lyricZh": "我深呼吸一口氣，把話好好說出來。"
+            "lyricZh": "我深呼吸一口氣，把話好好說出來。",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 20.5,
             "end": 24.3,
             "title": "第 05 節: 請是魔法小鑰匙",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_02.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"\"Please, may I have some juice today?\"\"",
             "sub": "✨ 【禮貌好習慣】「請」是開啟心門的魔法金鑰匙，",
@@ -11004,13 +11310,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"Thank you\" is wha... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：單手轉動轉開魔法鑰匙！",
-            "lyricZh": "「請」是開啟心門的魔法金鑰匙，"
+            "lyricZh": "「請」是開啟心門的魔法金鑰匙，",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 24.3,
             "end": 28,
             "title": "第 06 節: 溫暖微風吹拂面",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_03.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"\"Thank you\" is what I'd always say.\"",
             "sub": "✨ 【禮貌好習慣】像微風一樣溫暖而自由。",
@@ -11018,13 +11327,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Magic words that s... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手如輕柔微風左右擺！",
-            "lyricZh": "像微風一樣溫暖而自由。"
+            "lyricZh": "像微風一樣溫暖而自由。",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 28,
             "end": 31.77,
             "title": "第 07 節: 謝謝你像大擁抱",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_03.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Magic words that shine like stars,\"",
             "sub": "✨ 【禮貌好習慣】「謝謝你」像冬日裡的溫暖擁抱，",
@@ -11032,13 +11344,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Spreading kindness... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙臂抱緊自己溫暖微笑！",
-            "lyricZh": "「謝謝你」像冬日裡的溫暖擁抱，"
+            "lyricZh": "「謝謝你」像冬日裡的溫暖擁抱，",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 31.77,
             "end": 37.33,
             "title": "第 08 節: 笑容處處在綻放",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_03.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Spreading kindness near and far.\"",
             "sub": "✨ 【禮貌好習慣】讓笑容在每個地方綻放發光！",
@@ -11046,13 +11361,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Someone drops a ba... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手展開比出大燦笑！",
-            "lyricZh": "讓笑容在每個地方綻放發光！"
+            "lyricZh": "讓笑容在每個地方綻放發光！",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 37.33,
             "end": 40.7,
             "title": "第 09 節: 神奇話語甜甜說",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_04.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Someone drops a ball for me.\"",
             "sub": "✨ 【禮貌好習慣】魔法字，甜美說出來，",
@@ -11060,13 +11378,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"Thank you,\" says ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手輕拍手掌踏步走！",
-            "lyricZh": "魔法字，甜美說出來，"
+            "lyricZh": "魔法字，甜美說出來，",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 40.7,
             "end": 44.87,
             "title": "第 10 節: 仁愛恩慈常相伴",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_04.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"\"Thank you,\" says my heart with glee.\"",
             "sub": "✨ 【禮貌好習慣】仁愛仁慈常伴我們每一天！",
@@ -11074,13 +11395,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "They reply, \"You'r... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手比愛心送給鏡頭！",
-            "lyricZh": "仁愛仁慈常伴我們每一天！"
+            "lyricZh": "仁愛仁慈常伴我們每一天！",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 44.87,
             "end": 48.17,
             "title": "第 11 節: 對不起擦亮心靈",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_04.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"They reply, \"You're welcome, dear.\"\"",
             "sub": "✨ 【禮貌好習慣】「對不起」讓心靈保持乾淨又明亮，",
@@ -11088,13 +11412,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Polite words bring... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：低頭禮貌微微欠身致意！",
-            "lyricZh": "「對不起」讓心靈保持乾淨又明亮，"
+            "lyricZh": "「對不起」讓心靈保持乾淨又明亮，",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 48.17,
             "end": 52.37,
             "title": "第 12 節: 擦亮心窗迎光明",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_05.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Polite words bring so much cheer.\"",
             "sub": "✨ 【禮貌好習慣】像擦掉窗台上的小灰塵一樣。",
@@ -11102,13 +11429,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"Please, may I hav... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手做擦玻璃清潔動作！",
-            "lyricZh": "像擦掉窗台上的小灰塵一樣。"
+            "lyricZh": "像擦掉窗台上的小灰塵一樣。",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 52.37,
             "end": 56.17,
             "title": "第 13 節: 不客氣牽起小手",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_05.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"\"Please, may I have some juice today?\"\"",
             "sub": "✨ 【禮貌好習慣】「不客氣」牽起你我的小手，",
@@ -11116,13 +11446,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"Thank you\" is wha... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手向前友善伸出牽手！",
-            "lyricZh": "「不客氣」牽起你我的小手，"
+            "lyricZh": "「不客氣」牽起你我的小手，",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 56.17,
             "end": 59.9,
             "title": "第 14 節: 暖如晴空大太陽",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_05.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"\"Thank you\" is what I always say.\"",
             "sub": "✨ 【禮貌好習慣】像晴朗的日子一樣溫暖心田。",
@@ -11130,13 +11463,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Magic words that s... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手上托溫暖陽光微笑！",
-            "lyricZh": "像晴朗的日子一樣溫暖心田。"
+            "lyricZh": "像晴朗的日子一樣溫暖心田。",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 59.9,
             "end": 63.67,
             "title": "第 15 節: 請是魔法小鑰匙",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_06.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Magic words that shine like stars,\"",
             "sub": "✨ 【禮貌好習慣】「請」是開啟心門的魔法金鑰匙，",
@@ -11144,13 +11480,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Spreading kindness... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：單手轉動轉開魔法鑰匙！",
-            "lyricZh": "「請」是開啟心門的魔法金鑰匙，"
+            "lyricZh": "「請」是開啟心門的魔法金鑰匙，",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 63.67,
             "end": 66.47,
             "title": "第 16 節: 溫暖微風吹拂面",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_06.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Spreading kindness near and far.\"",
             "sub": "✨ 【禮貌好習慣】像微風一樣溫暖而自由。",
@@ -11158,13 +11497,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"Please, may I hav... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手如輕柔微風左右擺！",
-            "lyricZh": "像微風一樣溫暖而自由。"
+            "lyricZh": "像微風一樣溫暖而自由。",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 66.47,
             "end": 84.3,
             "title": "[間奏] 🎵 歡樂律動間奏",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_06.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "[Music Interlude 🎵 輕快間奏]",
             "sub": "✨ 【生活英文與品格】感受律動，原地踩點",
@@ -11172,13 +11514,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"Please, may I hav... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 84.3,
             "end": 87.8,
             "title": "第 17 節: 謝謝你像大擁抱",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_07.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"\"Please, may I have some juice today?\"\"",
             "sub": "✨ 【禮貌好習慣】「謝謝你」像冬日裡的溫暖擁抱，",
@@ -11186,13 +11531,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Thank you! Da da d... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙臂抱緊自己溫暖微笑！",
-            "lyricZh": "「謝謝你」像冬日裡的溫暖擁抱，"
+            "lyricZh": "「謝謝你」像冬日裡的溫暖擁抱，",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 87.8,
             "end": 91.77,
             "title": "第 18 節: 笑容處處在綻放",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_07.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Thank you! Da da da da da da da da,\"",
             "sub": "✨ 【禮貌好習慣】讓笑容在每個地方綻放發光！",
@@ -11200,13 +11548,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Da da da da da da ... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手展開比出大燦笑！",
-            "lyricZh": "讓笑容在每個地方綻放發光！"
+            "lyricZh": "讓笑容在每個地方綻放發光！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 91.77,
             "end": 99.3,
             "title": "第 19 節: 神奇話語甜甜說",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_07.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Da da da da da da da da da da da.\"",
             "sub": "✨ 【禮貌好習慣】魔法字，甜美說出來，",
@@ -11214,13 +11565,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"Please, may I hav... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手輕拍手掌踏步走！",
-            "lyricZh": "魔法字，甜美說出來，"
+            "lyricZh": "魔法字，甜美說出來，",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 99.3,
             "end": 103.07,
             "title": "第 20 節: 仁愛恩慈常相伴",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_07.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"\"Please, may I have some juice today?\"\"",
             "sub": "✨ 【禮貌好習慣】仁愛仁慈常伴我們每一天！",
@@ -11228,13 +11582,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"Thank you\" is wha... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手比愛心送給鏡頭！",
-            "lyricZh": "仁愛仁慈常伴我們每一天！"
+            "lyricZh": "仁愛仁慈常伴我們每一天！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 103.07,
             "end": 106.77,
             "title": "第 21 節: 恩慈相伴在今天",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_07.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"\"Thank you\" is what I always say.\"",
             "sub": "✨ 【禮貌好習慣】仁愛仁慈，就在今天！",
@@ -11242,13 +11599,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Magic words that s... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：輕快彈跳揮灑魔法金光！",
-            "lyricZh": "仁愛仁慈，就在今天！"
+            "lyricZh": "仁愛仁慈，就在今天！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 106.77,
             "end": 110.67,
             "title": "第 22 節: 請與謝謝常掛嘴邊",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_07.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Magic words that shine like stars.\"",
             "sub": "✨ 【禮貌好習慣】常說「請」與「謝謝你」！",
@@ -11256,13 +11616,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Magic words are al... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手合十鞠躬甜甜笑！",
-            "lyricZh": "常說「請」與「謝謝你」！"
+            "lyricZh": "常說「請」與「謝謝你」！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 110.67,
             "end": 113.27,
             "title": "第 23 節: 禮貌天使閃亮定格",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_07.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "\"Magic words are all we need.\"",
             "sub": "✨ 【禮貌好習慣】神奇魔法話語常記在心田！",
@@ -11270,13 +11633,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手比臉頰愛心定格！",
-            "lyricZh": "神奇魔法話語常記在心田！"
+            "lyricZh": "神奇魔法話語常記在心田！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 113.27,
             "end": 120,
             "title": "[尾奏] 🌟 快樂 Ending 定格",
-            "video": null,
+            "video": "./videos/G3/a3_t5_phrase_07.mp4",
             "image": "./images/album3_jpop/kid2_jessie_jpop.jpg",
             "lyric": "[Ending Outro 🌟 帥氣結尾]",
             "sub": "✨ 【禮貌好習慣】做最棒的自己，定格微笑！",
@@ -11284,7 +11650,10 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           }
         ],
         "leadDancer": "Jessie (波浪雙馬尾女孩)"
@@ -11312,7 +11681,7 @@ window.KAI_ALBUM_DATABASE = {
             "start": 0,
             "end": 7.17,
             "title": "[前奏] 🎵 歡樂律動前奏",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_01.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "[Intro 🎵 歡樂律動前奏]",
             "sub": "✨ 【生活英文與品格】團結互助 · 原地踏步暖身準備",
@@ -11320,13 +11689,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Two little hands, ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友準備好，跟著輕快節奏一起動起來！",
-            "lyricZh": "歡樂律動前奏"
+            "lyricZh": "歡樂律動前奏",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 7.17,
             "end": 10.7,
             "title": "第 01 節: 兩隻小手出發囉",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_01.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Two little hands, ready to go.\"",
             "sub": "✨ 【團結互助】兩隻小巧的手，隨時準備出發！",
@@ -11334,13 +11706,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Helping each other... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：翻轉展示雙手掌心踏步！",
-            "lyricZh": "兩隻小巧的手，隨時準備出發！"
+            "lyricZh": "兩隻小巧的手，隨時準備出發！",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 10.7,
             "end": 14.7,
             "title": "第 02 節: 善良幼苗漸茁壯",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_01.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Helping each other, watch goodness grow.\"",
             "sub": "✨ 【團結互助】互相幫忙，看善良在心裡發芽長大。",
@@ -11348,13 +11723,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Mom is carrying a ... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手由低處向上慢慢長高！",
-            "lyricZh": "互相幫忙，看善良在心裡發芽長大。"
+            "lyricZh": "互相幫忙，看善良在心裡發芽長大。",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 14.7,
             "end": 17.67,
             "title": "第 03 節: 媽媽搬箱好辛苦",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_01.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Mom is carrying a heavy box.\"",
             "sub": "✨ 【團結互助】媽媽正搬著一個沉重的大箱子，",
@@ -11362,13 +11740,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Daddy is looking f... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手在腰間抱重物踏步！",
-            "lyricZh": "媽媽正搬著一個沉重的大箱子，"
+            "lyricZh": "媽媽正搬著一個沉重的大箱子，",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 17.67,
             "end": 21.27,
             "title": "第 04 節: 爸爸找襪忙不停",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_02.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Daddy is looking for matching socks.\"",
             "sub": "✨ 【團結互助】爸爸正忙著找配對的襪子。",
@@ -11376,13 +11757,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I have two hands, ... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：單手遮額左右張望尋找！",
-            "lyricZh": "爸爸正忙著找配對的襪子。"
+            "lyricZh": "爸爸正忙著找配對的襪子。",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 21.27,
             "end": 25,
             "title": "第 05 節: 雙手雖小力量大",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_02.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"I have two hands, small but strong.\"",
             "sub": "✨ 【團結互助】我有兩隻手，雖然小但很堅強，",
@@ -11390,13 +11774,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Let me help you al... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手握拳展示小小肱二頭肌！",
-            "lyricZh": "我有兩隻手，雖然小但很堅強，"
+            "lyricZh": "我有兩隻手，雖然小但很堅強，",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 25,
             "end": 27.93,
             "title": "第 06 節: 一整天都主動幫忙",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_02.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Let me help you all day long.\"",
             "sub": "✨ 【團結互助】讓我一整天都來主動幫忙你！",
@@ -11404,13 +11791,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Can I help you? Ye... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手主動向前扶持相助！",
-            "lyricZh": "讓我一整天都來主動幫忙你！"
+            "lyricZh": "讓我一整天都來主動幫忙你！",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 27.93,
             "end": 31.53,
             "title": "第 07 節: 我可以幫忙你嗎",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_02.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Can I help you? Yes, I can!\"",
             "sub": "✨ 【團結互助】「我可以幫忙你嗎？」「沒問題，我可以！」",
@@ -11418,13 +11808,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I am a helpful lit... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手合十禮貌主動詢問！",
-            "lyricZh": "「我可以幫忙你嗎？」「沒問題，我可以！」"
+            "lyricZh": "「我可以幫忙你嗎？」「沒問題，我可以！」",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 31.53,
             "end": 35.1,
             "title": "第 08 節: 熱心助人小幫手",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_03.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"I am a helpful little fan.\"",
             "sub": "✨ 【團結互助】我是熱心助人的小小模範生。",
@@ -11432,13 +11825,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Pick it up and put... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：大拇指指自己自豪點頭！",
-            "lyricZh": "我是熱心助人的小小模範生。"
+            "lyricZh": "我是熱心助人的小小模範生。",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 35.1,
             "end": 38.7,
             "title": "第 09 節: 撿起玩具放整齊",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_03.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Pick it up and put it right,\"",
             "sub": "✨ 【團結互助】撿起來，放整齊，",
@@ -11446,13 +11842,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Doing good with al... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：彎腰撿起玩具轉身放好！",
-            "lyricZh": "撿起來，放整齊，"
+            "lyricZh": "撿起來，放整齊，",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 38.7,
             "end": 43.13,
             "title": "第 10 節: 盡心盡力行良善",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_03.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Doing good with all our might.\"",
             "sub": "✨ 【團結互助】盡心盡力做善事！",
@@ -11460,13 +11859,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "A crayon rolled ac... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙臂有力握拳向天空舉起！",
-            "lyricZh": "盡心盡力做善事！"
+            "lyricZh": "盡心盡力做善事！",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 43.13,
             "end": 46.3,
             "title": "第 11 節: 蠟筆滾落在地板",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_03.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"A crayon rolled across the floor.\"",
             "sub": "✨ 【團結互助】一支蠟筆滾到了地板上，",
@@ -11474,13 +11876,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I picked it up rig... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：手掌在身前做滾動線條！",
-            "lyricZh": "一支蠟筆滾到了地板上，"
+            "lyricZh": "一支蠟筆滾到了地板上，",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 46.3,
             "end": 49.87,
             "title": "第 12 節: 蹲下撿起好孩子",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_04.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"I picked it up right by the door.\"",
             "sub": "✨ 【團結互助】我在門口把它輕輕撿起來。",
@@ -11488,13 +11893,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Here is your crayo... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：輕輕蹲下撿起遞給朋友！",
-            "lyricZh": "我在門口把它輕輕撿起來。"
+            "lyricZh": "我在門口把它輕輕撿起來。",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 49.87,
             "end": 53.67,
             "title": "第 13 節: 物歸原主有禮貌",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_04.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Here is your crayon, friend of mine.\"",
             "sub": "✨ 【團結互助】「好朋友，這是你的蠟筆！」，",
@@ -11502,13 +11910,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Helping hands make... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手向前平捧送還蠟筆！",
-            "lyricZh": "「好朋友，這是你的蠟筆！」，"
+            "lyricZh": "「好朋友，這是你的蠟筆！」，",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 53.67,
             "end": 56.5,
             "title": "第 14 節: 助人雙手閃閃亮",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_04.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Helping hands make everyone shine.\"",
             "sub": "✨ 【團結互助】助人為樂的雙手讓大家閃閃發光！",
@@ -11516,13 +11927,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Can I help you? Ye... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手十指張開如星光閃爍！",
-            "lyricZh": "助人為樂的雙手讓大家閃閃發光！"
+            "lyricZh": "助人為樂的雙手讓大家閃閃發光！",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 56.5,
             "end": 60.2,
             "title": "第 15 節: 我可以幫忙你嗎",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_04.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Can I help you? Yes, I can!\"",
             "sub": "✨ 【團結互助】「我可以幫忙你嗎？」「沒問題，我可以！」",
@@ -11530,13 +11944,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I am a helpful lit... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手合十禮貌主動詢問！",
-            "lyricZh": "「我可以幫忙你嗎？」「沒問題，我可以！」"
+            "lyricZh": "「我可以幫忙你嗎？」「沒問題，我可以！」",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 60.2,
             "end": 63.73,
             "title": "第 16 節: 熱心助人小幫手",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_05.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"I am a helpful little fan.\"",
             "sub": "✨ 【團結互助】我是熱心助人的小小模範生。",
@@ -11544,13 +11961,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Pick it up and put... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：大拇指指自己自豪點頭！",
-            "lyricZh": "我是熱心助人的小小模範生。"
+            "lyricZh": "我是熱心助人的小小模範生。",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 63.73,
             "end": 67.33,
             "title": "第 17 節: 撿起玩具放整齊",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_05.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Pick it up and put it right,\"",
             "sub": "✨ 【團結互助】撿起來，放整齊，",
@@ -11558,13 +11978,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Doing good with al... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：彎腰撿起玩具轉身放好！",
-            "lyricZh": "撿起來，放整齊，"
+            "lyricZh": "撿起來，放整齊，",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 67.33,
             "end": 71.57,
             "title": "第 18 節: 盡心盡力行良善",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_05.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Doing good with all our might.\"",
             "sub": "✨ 【團結互助】盡心盡力做善事！",
@@ -11572,13 +11995,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Teamwork, dreamwor... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙臂有力握拳向天空舉起！",
-            "lyricZh": "盡心盡力做善事！"
+            "lyricZh": "盡心盡力做善事！",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 71.57,
             "end": 73.87,
             "title": "第 19 節: 團隊合作擊掌拍",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_05.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Teamwork, dreamwork! High\"",
             "sub": "✨ 【團結互助】團隊合作實現夢想！來個擊掌歡呼！",
@@ -11586,13 +12012,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "five, clap! Goodne... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：向空中用力拍手擊掌！",
-            "lyricZh": "團隊合作實現夢想！來個擊掌歡呼！"
+            "lyricZh": "團隊合作實現夢想！來個擊掌歡呼！",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 73.87,
             "end": 79.87,
             "title": "第 20 節: 善良超能真厲害",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_06.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"five, clap! Goodness, I'm the man.\"",
             "sub": "✨ 【團結互助】善良是超能力，我做得真棒！",
@@ -11600,13 +12029,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Can I help you? Ye... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：雙腳跳躍雙拳慶祝！",
-            "lyricZh": "善良是超能力，我做得真棒！"
+            "lyricZh": "善良是超能力，我做得真棒！",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 79.87,
             "end": 83.37,
             "title": "第 21 節: 我可以幫忙你嗎",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_06.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Can I help you? Yes, I can!\"",
             "sub": "✨ 【團結互助】「我可以幫忙你嗎？」「沒問題，我可以！」",
@@ -11614,13 +12046,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I am a helpful lit... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手合十禮貌主動詢問！",
-            "lyricZh": "「我可以幫忙你嗎？」「沒問題，我可以！」"
+            "lyricZh": "「我可以幫忙你嗎？」「沒問題，我可以！」",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 83.37,
             "end": 87,
             "title": "第 22 節: 熱心助人小幫手",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_06.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"I am a helpful little fan.\"",
             "sub": "✨ 【團結互助】我是熱心助人的小小模範生。",
@@ -11628,13 +12063,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Pick it up and put... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：大拇指指自己自豪點頭！",
-            "lyricZh": "我是熱心助人的小小模範生。"
+            "lyricZh": "我是熱心助人的小小模範生。",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 87,
             "end": 90.6,
             "title": "第 23 節: 撿起玩具放整齊",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_06.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Pick it up and put it right,\"",
             "sub": "✨ 【團結互助】撿起來，放整齊，",
@@ -11642,13 +12080,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Doing good with al... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：彎腰撿起玩具轉身放好！",
-            "lyricZh": "撿起來，放整齊，"
+            "lyricZh": "撿起來，放整齊，",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 90.6,
             "end": 94.2,
             "title": "第 24 節: 盡心盡力行良善",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_07.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Doing good with all our might.\"",
             "sub": "✨ 【團結互助】盡心盡力做善事！",
@@ -11656,13 +12097,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Can I help you? Ye... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙臂有力握拳向天空舉起！",
-            "lyricZh": "盡心盡力做善事！"
+            "lyricZh": "盡心盡力做善事！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 94.2,
             "end": 97.8,
             "title": "第 25 節: 我一定能幫助你",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_07.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Can I help you? Yes, I can!\"",
             "sub": "✨ 【團結互助】我可以幫你！",
@@ -11670,13 +12114,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I am a helpful lit... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：踏出右腳雙手前伸相助！",
-            "lyricZh": "我可以幫你！"
+            "lyricZh": "我可以幫你！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 97.8,
             "end": 101.37,
             "title": "第 26 節: 善良雙手傳遞愛",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_07.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"I am a helpful little fan.\"",
             "sub": "✨ 【團結互助】這就是善良的愛心雙手！",
@@ -11684,13 +12131,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Pick it up and put... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手胸前比出愛心波浪！",
-            "lyricZh": "這就是善良的愛心雙手！"
+            "lyricZh": "這就是善良的愛心雙手！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 101.37,
             "end": 104.93,
             "title": "第 27 節: 手牽著手向前走",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_07.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Pick it up and put it right,\"",
             "sub": "✨ 【團結互助】牽著手，一起走！",
@@ -11698,13 +12148,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Doing good with al... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：左右伸展如同手拉手！",
-            "lyricZh": "牽著手，一起走！"
+            "lyricZh": "牽著手，一起走！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 104.93,
             "end": 110.7,
             "title": "第 28 節: 良善小幫手定格笑",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_07.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Doing good with all our might, might.\"",
             "sub": "✨ 【團結互助】助人小天使閃耀定格！",
@@ -11712,13 +12165,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：單腿微屈招手定格微笑！",
-            "lyricZh": "助人小天使閃耀定格！"
+            "lyricZh": "助人小天使閃耀定格！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 110.7,
             "end": 120,
             "title": "[尾奏] 🌟 快樂 Ending 定格",
-            "video": null,
+            "video": "./videos/G3/a3_t6_phrase_07.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "[Ending Outro 🌟 帥氣結尾]",
             "sub": "✨ 【團結互助】做最棒的自己，定格微笑！",
@@ -11726,7 +12182,10 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           }
         ],
         "leadDancer": "MiMi (健康小麥肌捲髮女孩)"
@@ -11754,7 +12213,7 @@ window.KAI_ALBUM_DATABASE = {
             "start": 0,
             "end": 3.87,
             "title": "第 01 節: 啦噠歡樂輕快哼唱",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_01.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"La da da da, la da da da da.\"",
             "sub": "✨ 【信守承諾】啦噠噠噠，啦噠噠噠噠。",
@@ -11762,13 +12221,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "La da da da.... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：左右輕晃身體隨節拍踏步！",
-            "lyricZh": "啦噠噠噠，啦噠噠噠噠。"
+            "lyricZh": "啦噠噠噠，啦噠噠噠噠。",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 3.87,
             "end": 7.67,
             "title": "第 02 節: 輕快卡點轉身",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_01.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"La da da da.\"",
             "sub": "✨ 【信守承諾】啦噠噠噠。",
@@ -11776,13 +12238,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "La da da da, la da... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：原地轉半圈輕巧點地！",
-            "lyricZh": "啦噠噠噠。"
+            "lyricZh": "啦噠噠噠。",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 7.67,
             "end": 14.97,
             "title": "第 03 節: 旋律躍動好心情",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_01.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"La da da da, la da da da da, la da da da.\"",
             "sub": "✨ 【信守承諾】啦噠噠噠，啦噠噠噠噠，啦噠噠噠。",
@@ -11790,13 +12255,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Pinky promise, loc... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手拍膝再拍手踏步！",
-            "lyricZh": "啦噠噠噠，啦噠噠噠噠，啦噠噠噠。"
+            "lyricZh": "啦噠噠噠，啦噠噠噠噠，啦噠噠噠。",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 14.97,
             "end": 18.77,
             "title": "第 04 節: 打勾勾蓋章守信",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_02.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Pinky promise, lock it tight.\"",
             "sub": "✨ 【信守承諾】打勾勾蓋手印，緊緊鎖定承諾，",
@@ -11804,13 +12272,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Keeping promises f... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：伸出小指做出打勾勾動作！",
-            "lyricZh": "打勾勾蓋手印，緊緊鎖定承諾，"
+            "lyricZh": "打勾勾蓋手印，緊緊鎖定承諾，",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 18.77,
             "end": 22.5,
             "title": "第 05 節: 守信用心裡好踏實",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_02.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Keeping promises feels so right.\"",
             "sub": "✨ 【信守承諾】遵守諾言讓人心裡好舒暢踏實。",
@@ -11818,13 +12289,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I said I'd pack my... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手輕按心口自信點頭！",
-            "lyricZh": "遵守諾言讓人心裡好舒暢踏實。"
+            "lyricZh": "遵守諾言讓人心裡好舒暢踏實。",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 22.5,
             "end": 26.37,
             "title": "第 06 節: 答應收玩具收整齊",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_02.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"I said I'd pack my toys away\"",
             "sub": "✨ 【信守承諾】我答應會把玩具全部收整齊，",
@@ -11832,13 +12306,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Before I go outsid... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手做收拾歸位動作！",
-            "lyricZh": "我答應會把玩具全部收整齊，"
+            "lyricZh": "我答應會把玩具全部收整齊，",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 26.37,
             "end": 30.3,
             "title": "第 07 節: 完成約定再玩耍",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_03.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Before I go outside to play.\"",
             "sub": "✨ 【信守承諾】在出門去院子跑跑玩耍之前。",
@@ -11846,13 +12323,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Even when nobody i... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：指向窗外再指向手腕約定！",
-            "lyricZh": "在出門去院子跑跑玩耍之前。"
+            "lyricZh": "在出門去院子跑跑玩耍之前。",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 30.3,
             "end": 34.13,
             "title": "第 08 節: 無人看見也守誠實",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_03.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Even when nobody is looking 'round,\"",
             "sub": "✨ 【信守承諾】就算身邊沒有任何人在看著我，",
@@ -11860,13 +12340,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I put each toy upo... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：左右張望保持端正品格！",
-            "lyricZh": "就算身邊沒有任何人在看著我，"
+            "lyricZh": "就算身邊沒有任何人在看著我，",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 34.13,
             "end": 40.3,
             "title": "第 09 節: 物歸原位做得到",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_03.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"I put each toy upon the ground.\"",
             "sub": "✨ 【信守承諾】我也會把每一件玩具放回原位。",
@@ -11874,13 +12357,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I keep my word, I ... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：彎腰將玩具輕放進箱子！",
-            "lyricZh": "我也會把每一件玩具放回原位。"
+            "lyricZh": "我也會把每一件玩具放回原位。",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 40.3,
             "end": 44.4,
             "title": "第 10 節: 說到做到最守信",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_04.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"I keep my word, I keep my say,\"",
             "sub": "✨ 【信守承諾】我信守承諾，說到做到，",
@@ -11888,13 +12374,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Faithful and true ... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：右手舉拳握緊向天空定格！",
-            "lyricZh": "我信守承諾，說到做到，"
+            "lyricZh": "我信守承諾，說到做到，",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 44.4,
             "end": 48.57,
             "title": "第 11 節: 凡事信實真英雄",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_04.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Faithful and true in every way.\"",
             "sub": "✨ 【信守承諾】在每一件事上都忠誠又真誠！",
@@ -11902,13 +12391,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "A promise made is ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：原地踏步腰桿挺得筆直！",
-            "lyricZh": "在每一件事上都忠誠又真誠！"
+            "lyricZh": "在每一件事上都忠誠又真誠！",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 48.57,
             "end": 52.17,
             "title": "第 12 節: 答應了就一定實現",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_04.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"A promise made is a promise kept.\"",
             "sub": "✨ 【信守承諾】許下的承諾就是必須實現的約定，",
@@ -11916,13 +12408,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Honest steps where... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：伸出小指打勾再用大拇指蓋章！",
-            "lyricZh": "許下的承諾就是必須實現的約定，"
+            "lyricZh": "許下的承諾就是必須實現的約定，",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 52.17,
             "end": 56.4,
             "title": "第 13 節: 誠實步伐邁向前",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_05.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Honest steps where heroes step.\"",
             "sub": "✨ 【信守承諾】踩著誠實信實的腳步向前邁進！",
@@ -11930,13 +12425,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Da da da da da da ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：大步昂首向前踏步走！",
-            "lyricZh": "踩著誠實信實的腳步向前邁進！"
+            "lyricZh": "踩著誠實信實的腳步向前邁進！",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 56.4,
             "end": 63.3,
             "title": "第 14 節: 歡樂步伐噠噠跳",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_05.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Da da da da da da da da da.\"",
             "sub": "✨ 【信守承諾】噠噠噠噠噠噠噠噠噠。",
@@ -11944,13 +12442,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I'll be back at fi... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：輕快小碎步原地彈跳！",
-            "lyricZh": "噠噠噠噠噠噠噠噠噠。"
+            "lyricZh": "噠噠噠噠噠噠噠噠噠。",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 63.3,
             "end": 67.13,
             "title": "第 15 節: 五點準時守約回家",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_05.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"I'll be back at five o'clock,\"",
             "sub": "✨ 【信守承諾】我答應五點準時會回到家，",
@@ -11958,13 +12459,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Sure like the tick... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：手指指向手錶確認時間！",
-            "lyricZh": "我答應五點準時會回到家，"
+            "lyricZh": "我答應五點準時會回到家，",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 67.13,
             "end": 71.07,
             "title": "第 16 節: 像時鐘指針一樣準時",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_06.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Sure like the tick-tock of the clock.\"",
             "sub": "✨ 【信守承諾】就像時鐘滴答滴答一樣準確不差。",
@@ -11972,13 +12476,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "You can trust me, ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：手臂如指針規律左右走動！",
-            "lyricZh": "就像時鐘滴答滴答一樣準確不差。"
+            "lyricZh": "就像時鐘滴答滴答一樣準確不差。",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 71.07,
             "end": 75.17,
             "title": "第 17 節: 你可以放心相信我",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_06.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"You can trust me, count on me,\"",
             "sub": "✨ 【信守承諾】你可以信任我、依靠我，",
@@ -11986,13 +12493,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "As faithful as a g... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：右手拍拍胸脯自信微笑！",
-            "lyricZh": "你可以信任我、依靠我，"
+            "lyricZh": "你可以信任我、依靠我，",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 75.17,
             "end": 77.8,
             "title": "第 18 節: 像大樹一樣穩重堅定",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_06.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"As faithful as a great big tree.\"",
             "sub": "✨ 【信守承諾】就像一棵屹立不搖的大大橡樹！",
@@ -12000,13 +12510,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I keep my word, I ... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙臂向上如大樹茂盛展開！",
-            "lyricZh": "就像一棵屹立不搖的大大橡樹！"
+            "lyricZh": "就像一棵屹立不搖的大大橡樹！",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 77.8,
             "end": 81,
             "title": "[間奏] 🎵 歡樂律動間奏",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_07.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "[Music Interlude 🎵 輕快間奏]",
             "sub": "✨ 【生活英文與品格】感受律動，原地踩點",
@@ -12014,13 +12527,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I keep my word, I ... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 81,
             "end": 85.07,
             "title": "第 19 節: 說到做到最守信",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_07.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"I keep my word, I keep my say,\"",
             "sub": "✨ 【信守承諾】我信守承諾，說到做到，",
@@ -12028,13 +12544,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Faithful and true ... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：右手舉拳握緊向天空定格！",
-            "lyricZh": "我信守承諾，說到做到，"
+            "lyricZh": "我信守承諾，說到做到，",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 85.07,
             "end": 89.2,
             "title": "第 20 節: 凡事信實真英雄",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_07.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Faithful and true in every way.\"",
             "sub": "✨ 【信守承諾】在每一件事上都忠誠又真誠！",
@@ -12042,13 +12561,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "A promise made is ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：原地踏步腰桿挺得筆直！",
-            "lyricZh": "在每一件事上都忠誠又真誠！"
+            "lyricZh": "在每一件事上都忠誠又真誠！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 89.2,
             "end": 92.8,
             "title": "第 21 節: 答應了就一定實現",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_07.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"A promise made is a promise kept.\"",
             "sub": "✨ 【信守承諾】許下的承諾就是必須實現的約定，",
@@ -12056,13 +12578,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Honest steps where... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：伸出小指打勾再用大拇指蓋章！",
-            "lyricZh": "許下的承諾就是必須實現的約定，"
+            "lyricZh": "許下的承諾就是必須實現的約定，",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 92.8,
             "end": 99,
             "title": "第 22 節: 誠實步伐邁向前",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_07.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Honest steps where heroes step.\"",
             "sub": "✨ 【信守承諾】踩著誠實信實的腳步向前邁進！",
@@ -12070,13 +12595,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Da da da da da da ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：大步昂首向前踏步走！",
-            "lyricZh": "踩著誠實信實的腳步向前邁進！"
+            "lyricZh": "踩著誠實信實的腳步向前邁進！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 99,
             "end": 103.97,
             "title": "第 23 節: 歡樂步伐噠噠跳",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_07.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Da da da da da da da da da.\"",
             "sub": "✨ 【信守承諾】噠噠噠噠噠噠噠噠噠。",
@@ -12084,13 +12612,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Pinky promise, sea... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：輕快小碎步原地彈跳！",
-            "lyricZh": "噠噠噠噠噠噠噠噠噠。"
+            "lyricZh": "噠噠噠噠噠噠噠噠噠。",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 103.97,
             "end": 107.77,
             "title": "第 24 節: 小指勾勾印在心",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_07.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Pinky promise, sealed with heart.\"",
             "sub": "✨ 【信守承諾】打勾勾，用愛心烙印承諾，",
@@ -12098,13 +12629,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Faithfulness right... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：小指互勾放在胸前比心！",
-            "lyricZh": "打勾勾，用愛心烙印承諾，"
+            "lyricZh": "打勾勾，用愛心烙印承諾，",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 107.77,
             "end": 110.87,
             "title": "第 25 節: 信實守信小英雄定格",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_07.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "\"Faithfulness right from the start.\"",
             "sub": "✨ 【信守承諾】從小做個言而有信的信實好孩子！",
@@ -12112,13 +12646,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：帥氣自信單手叉腰定格笑！",
-            "lyricZh": "從小做個言而有信的信實好孩子！"
+            "lyricZh": "從小做個言而有信的信實好孩子！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 110.87,
             "end": 120,
             "title": "[尾奏] 🌟 快樂 Ending 定格",
-            "video": null,
+            "video": "./videos/G3/a3_t7_phrase_07.mp4",
             "image": "./images/album3_jpop/kid3_tim_jpop.jpg",
             "lyric": "[Ending Outro 🌟 帥氣結尾]",
             "sub": "✨ 【信守承諾】做最棒的自己，定格微笑！",
@@ -12126,7 +12663,10 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           }
         ],
         "leadDancer": "Tim (蓬鬆呆毛棕髮男孩)"
@@ -12154,7 +12694,7 @@ window.KAI_ALBUM_DATABASE = {
             "start": 0,
             "end": 3.93,
             "title": "[前奏] 🎵 歡樂律動前奏",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_01.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "[Intro 🎵 歡樂律動前奏]",
             "sub": "✨ 【生活英文與品格】溫柔呵護 · 原地踏步暖身準備",
@@ -12162,13 +12702,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Soft like a feathe... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友準備好，跟著輕快節奏一起動起來！",
-            "lyricZh": "歡樂律動前奏"
+            "lyricZh": "歡樂律動前奏",
+            "phraseIndex": 1,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 3.93,
             "end": 8.13,
             "title": "第 01 節: 像羽毛般溫柔輕拂",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_01.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Soft like a feather, warm like the sun,\"",
             "sub": "✨ 【溫柔呵護】輕柔得像羽毛，溫暖得像太陽，",
@@ -12176,13 +12719,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Gentle love for ev... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手在空中做羽毛飄落動作！",
-            "lyricZh": "輕柔得像羽毛，溫暖得像太陽，"
+            "lyricZh": "輕柔得像羽毛，溫暖得像太陽，",
+            "phraseIndex": 1,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 8.13,
             "end": 12.7,
             "title": "第 02 節: 溫柔愛護每個人",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_01.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Gentle love for everyone.\"",
             "sub": "✨ 【溫柔呵護】用溫柔的愛對待每一個人。",
@@ -12190,13 +12736,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Here comes a puppy... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙臂環抱溫暖身心！",
-            "lyricZh": "用溫柔的愛對待每一個人。"
+            "lyricZh": "用溫柔的愛對待每一個人。",
+            "phraseIndex": 1,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 12.7,
             "end": 15.97,
             "title": "[間奏] 🎵 歡樂律動間奏",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_01.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "[Music Interlude 🎵 輕快間奏]",
             "sub": "✨ 【生活英文與品格】感受律動，原地踩點",
@@ -12204,13 +12753,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Here comes a puppy... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "phraseIndex": 1,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 15.97,
             "end": 19.8,
             "title": "第 03 節: 可愛小狗搖尾巴",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_02.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Here comes a puppy, wagging his tail.\"",
             "sub": "✨ 【溫柔呵護】瞧！一隻搖著尾巴的小狗狗走過來了，",
@@ -12218,13 +12770,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "His fur is soft as... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手在身後模仿小狗搖尾巴！",
-            "lyricZh": "瞧！一隻搖著尾巴的小狗狗走過來了，"
+            "lyricZh": "瞧！一隻搖著尾巴的小狗狗走過來了，",
+            "phraseIndex": 2,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 19.8,
             "end": 23.93,
             "title": "第 04 節: 毛絨絨小狗好柔軟",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_02.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"His fur is soft as a little sail.\"",
             "sub": "✨ 【溫柔呵護】牠的絨毛摸起來像小船帆一樣柔軟。",
@@ -12232,13 +12787,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I don't squeeze, a... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手輕輕向前摸摸空氣！",
-            "lyricZh": "牠的絨毛摸起來像小船帆一樣柔軟。"
+            "lyricZh": "牠的絨毛摸起來像小船帆一樣柔軟。",
+            "phraseIndex": 2,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 23.93,
             "end": 28.1,
             "title": "第 05 節: 不推不拉愛動物",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_02.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"I don't squeeze, and I don't grab.\"",
             "sub": "✨ 【溫柔呵護】我不使勁擠壓，我也不粗暴拉扯，",
@@ -12246,13 +12804,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Gentle strokes mak... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手掌心朝外輕輕推阻！",
-            "lyricZh": "我不使勁擠壓，我也不粗暴拉扯，"
+            "lyricZh": "我不使勁擠壓，我也不粗暴拉扯，",
+            "phraseIndex": 2,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 28.1,
             "end": 34.07,
             "title": "第 06 節: 輕輕摸摸小狗開心",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_02.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Gentle strokes make puppies glad.\"",
             "sub": "✨ 【溫柔呵護】輕輕撫摸讓小狗狗開心極了！",
@@ -12260,13 +12821,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Gentle hands, soft... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：單手在空中做輕柔撫摸動作！",
-            "lyricZh": "輕輕撫摸讓小狗狗開心極了！"
+            "lyricZh": "輕輕撫摸讓小狗狗開心極了！",
+            "phraseIndex": 2,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 34.07,
             "end": 37.93,
             "title": "第 07 節: 溫柔小手輕輕拍",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_03.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Gentle hands, soft and sweet,\"",
             "sub": "✨ 【溫柔呵護】溫柔的小手，輕巧又甜美，",
@@ -12274,13 +12838,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Pat, pat, pat to a... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手輕輕互拍打拍子！",
-            "lyricZh": "溫柔的小手，輕巧又甜美，"
+            "lyricZh": "溫柔的小手，輕巧又甜美，",
+            "phraseIndex": 3,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 37.93,
             "end": 41.93,
             "title": "第 08 節: 跟著平靜節拍走",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_03.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Pat, pat, pat to a quiet beat.\"",
             "sub": "✨ 【溫柔呵護】順著安靜的節拍輕輕拍拍。",
@@ -12288,13 +12855,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "No rough pushing, ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：輕輕拍拍膝蓋原地踏步！",
-            "lyricZh": "順著安靜的節拍輕輕拍拍。"
+            "lyricZh": "順著安靜的節拍輕輕拍拍。",
+            "phraseIndex": 3,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 41.93,
             "end": 46.13,
             "title": "第 09 節: 不吵不鬧不推擠",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_03.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"No rough pushing, no rough cries,\"",
             "sub": "✨ 【溫柔呵護】沒有粗魯的推擠，沒有暴躁的哭喊，",
@@ -12302,13 +12872,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Only kindness in o... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：左右輕輕搖頭溫和微笑！",
-            "lyricZh": "沒有粗魯的推擠，沒有暴躁的哭喊，"
+            "lyricZh": "沒有粗魯的推擠，沒有暴躁的哭喊，",
+            "phraseIndex": 3,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 46.13,
             "end": 51.07,
             "title": "第 10 節: 眼中滿滿都是善良",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_03.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Only kindness in our eyes.\"",
             "sub": "✨ 【溫柔呵護】只有善良與溫柔閃耀在我們眼眸。",
@@ -12316,13 +12889,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "When baby sister i... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：指尖輕點眼角展現溫和目光！",
-            "lyricZh": "只有善良與溫柔閃耀在我們眼眸。"
+            "lyricZh": "只有善良與溫柔閃耀在我們眼眸。",
+            "phraseIndex": 3,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 51.07,
             "end": 57.8,
             "title": "[間奏] 🎵 歡樂律動間奏",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_04.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "[Music Interlude 🎵 輕快間奏]",
             "sub": "✨ 【生活英文與品格】感受律動，原地踩點",
@@ -12330,13 +12906,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "When baby sister i... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "phraseIndex": 4,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 57.8,
             "end": 61.67,
             "title": "第 11 節: 小妹妹熟睡安詳",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_04.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"When baby sister is fast asleep,\"",
             "sub": "✨ 【溫柔呵護】當小寶寶妹妹熟睡的時候，",
@@ -12344,13 +12923,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I walk as quiet as... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手合十貼臉頰做睡覺姿勢！",
-            "lyricZh": "當小寶寶妹妹熟睡的時候，"
+            "lyricZh": "當小寶寶妹妹熟睡的時候，",
+            "phraseIndex": 4,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 61.67,
             "end": 65.93,
             "title": "第 12 節: 小綿羊踮腳尖輕步走",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_04.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"I walk as quiet as little sheep.\"",
             "sub": "✨ 【溫柔呵護】我走路輕悄悄的，就像一隻安靜的小綿羊。",
@@ -12358,13 +12940,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Gentle words and g... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：踮起腳尖躡手躡腳走路！",
-            "lyricZh": "我走路輕悄悄的，就像一隻安靜的小綿羊。"
+            "lyricZh": "我走路輕悄悄的，就像一隻安靜的小綿羊。",
+            "phraseIndex": 4,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 65.93,
             "end": 69.8,
             "title": "第 13 節: 輕言細語大擁抱",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_04.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Gentle words and gentle hug,\"",
             "sub": "✨ 【溫柔呵護】說著溫柔的話，給一個溫柔的擁抱，",
@@ -12372,13 +12957,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Warm as a cuddle i... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：張開雙臂送出輕柔擁抱！",
-            "lyricZh": "說著溫柔的話，給一個溫柔的擁抱，"
+            "lyricZh": "說著溫柔的話，給一個溫柔的擁抱，",
+            "phraseIndex": 4,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 69.8,
             "end": 75.9,
             "title": "第 14 節: 像小毛毯一樣暖烘烘",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_05.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Warm as a cuddle in a rug.\"",
             "sub": "✨ 【溫柔呵護】溫暖得像裹在軟綿綿的小毛毯裡。",
@@ -12386,13 +12974,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Gentle hands, soft... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手拉起虛擬毛毯裹好自己！",
-            "lyricZh": "溫暖得像裹在軟綿綿的小毛毯裡。"
+            "lyricZh": "溫暖得像裹在軟綿綿的小毛毯裡。",
+            "phraseIndex": 5,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 75.9,
             "end": 79.77,
             "title": "第 15 節: 溫柔小手輕輕拍",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_05.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Gentle hands, soft and sweet,\"",
             "sub": "✨ 【溫柔呵護】溫柔的小手，輕巧又甜美，",
@@ -12400,13 +12991,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Pat, pat, pat to a... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手輕輕互拍打拍子！",
-            "lyricZh": "溫柔的小手，輕巧又甜美，"
+            "lyricZh": "溫柔的小手，輕巧又甜美，",
+            "phraseIndex": 5,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 79.77,
             "end": 83.7,
             "title": "第 16 節: 跟著平靜節拍走",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_05.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Pat, pat, pat to a quiet beat.\"",
             "sub": "✨ 【溫柔呵護】順著安靜的節拍輕輕拍拍。",
@@ -12414,13 +13008,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "No rough pushing, ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：輕輕拍拍膝蓋原地踏步！",
-            "lyricZh": "順著安靜的節拍輕輕拍拍。"
+            "lyricZh": "順著安靜的節拍輕輕拍拍。",
+            "phraseIndex": 5,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 83.7,
             "end": 87.97,
             "title": "第 17 節: 不吵不鬧不推擠",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_05.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"No rough pushing, no rough cries,\"",
             "sub": "✨ 【溫柔呵護】沒有粗魯的推擠，沒有暴躁的哭喊，",
@@ -12428,13 +13025,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Only kindness in o... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：左右輕輕搖頭溫和微笑！",
-            "lyricZh": "沒有粗魯的推擠，沒有暴躁的哭喊，"
+            "lyricZh": "沒有粗魯的推擠，沒有暴躁的哭喊，",
+            "phraseIndex": 5,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 87.97,
             "end": 93.53,
             "title": "第 18 節: 眼中滿滿都是善良",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_06.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Only kindness in our eyes.\"",
             "sub": "✨ 【溫柔呵護】只有善良與溫柔閃耀在我們眼眸。",
@@ -12442,13 +13042,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Soft and gentle, s... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：指尖輕點眼角展現溫和目光！",
-            "lyricZh": "只有善良與溫柔閃耀在我們眼眸。"
+            "lyricZh": "只有善良與溫柔閃耀在我們眼眸。",
+            "phraseIndex": 6,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 93.53,
             "end": 99.57,
             "title": "[間奏] 🎵 歡樂律動間奏",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_06.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "[Music Interlude 🎵 輕快間奏]",
             "sub": "✨ 【生活英文與品格】感受律動，原地踩點",
@@ -12456,13 +13059,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Soft and gentle, s... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "phraseIndex": 6,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 99.57,
             "end": 103.77,
             "title": "第 19 節: 柔和溫暖心田美",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_06.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Soft and gentle, sweet and kind,\"",
             "sub": "✨ 【溫柔呵護】溫軟又輕柔，甜美又善良，",
@@ -12470,13 +13076,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Peace and gentlene... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手輕揉心口甜美微笑！",
-            "lyricZh": "溫軟又輕柔，甜美又善良，"
+            "lyricZh": "溫軟又輕柔，甜美又善良，",
+            "phraseIndex": 6,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 103.77,
             "end": 110.33,
             "title": "第 20 節: 溫柔小天使微笑定格",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_06.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "\"Peace and gentleness we find.\"",
             "sub": "✨ 【溫柔呵護】這就是我們心中珍貴的溫柔和平！",
@@ -12484,13 +13093,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：撫摸小動物微笑定格！",
-            "lyricZh": "這就是我們心中珍貴的溫柔和平！"
+            "lyricZh": "這就是我們心中珍貴的溫柔和平！",
+            "phraseIndex": 6,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 110.33,
             "end": 120,
             "title": "[尾奏] 🌟 快樂 Ending 定格",
-            "video": null,
+            "video": "./videos/G3/a3_t8_phrase_06.mp4",
             "image": "./images/album3_jpop/kid4_mimi_jpop.jpg",
             "lyric": "[Ending Outro 🌟 帥氣結尾]",
             "sub": "✨ 【溫柔呵護】做最棒的自己，定格微笑！",
@@ -12498,7 +13110,10 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "phraseIndex": 6,
+            "phraseTotal": 6,
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           }
         ],
         "leadDancer": "Mimi (烏黑齊瀏海女孩)"
@@ -12526,7 +13141,7 @@ window.KAI_ALBUM_DATABASE = {
             "start": 0,
             "end": 4.87,
             "title": "第 01 節: 跳躍搖擺動起來",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_01.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Dance, dance, dance and shake.\"",
             "sub": "✨ 【自制專注】跳吧、跳吧、盡情搖擺動起來！",
@@ -12534,13 +13149,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Ha, ho! Dance, dan... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：身體跟隨動感重低音扭動！",
-            "lyricZh": "跳吧、跳吧、盡情搖擺動起來！"
+            "lyricZh": "跳吧、跳吧、盡情搖擺動起來！",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 4.87,
             "end": 7.57,
             "title": "第 02 節: 哈嗬動感雙手甩",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_01.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Ha, ho! Dance, dance, dance and shake.\"",
             "sub": "✨ 【自制專注】哈、嗬！跳吧、跳吧，扭扭跳跳！",
@@ -12548,13 +13166,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Now hit your super... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手臂左右帥氣揮甩！",
-            "lyricZh": "哈、嗬！跳吧、跳吧，扭扭跳跳！"
+            "lyricZh": "哈、嗬！跳吧、跳吧，扭扭跳跳！",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 7.57,
             "end": 12.6,
             "title": "第 03 節: 踩下超級煞車定格",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_01.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Now hit your super brake!\"",
             "sub": "✨ 【自制專注】現在踩下你的超級大煞車！",
@@ -12562,13 +13183,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "The cartoon is fun... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：右腳大步踏下雙手握煞車定格！",
-            "lyricZh": "現在踩下你的超級大煞車！"
+            "lyricZh": "現在踩下你的超級大煞車！",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 12.6,
             "end": 16.37,
             "title": "第 04 節: 卡通好看糖果甜",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_02.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"The cartoon is fun, the candy is sweet.\"",
             "sub": "✨ 【自制專注】卡通好好看，糖果甜滋滋，",
@@ -12576,13 +13200,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I want to keep jum... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手在臉頰兩側晃動表現開心！",
-            "lyricZh": "卡通好好看，糖果甜滋滋，"
+            "lyricZh": "卡通好好看，糖果甜滋滋，",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 16.37,
             "end": 19.53,
             "title": "第 05 節: 好想一直跳不停",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_02.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"I want to keep jumping on my feet.\"",
             "sub": "✨ 【自制專注】我真想一直雙腳不停地跳下去。",
@@ -12590,13 +13217,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Mom says, time is ... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：雙腳快速小碎步跳動！",
-            "lyricZh": "我真想一直雙腳不停地跳下去。"
+            "lyricZh": "我真想一直雙腳不停地跳下去。",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 19.53,
             "end": 23.27,
             "title": "第 06 節: 媽媽提醒時間到",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_02.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Mom says, time is up, my dear.\"",
             "sub": "✨ 【自制專注】媽媽說：「親愛的，時間到了喔！」",
@@ -12604,13 +13234,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "What will I do whe... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：單手比手錶指針做提醒姿勢！",
-            "lyricZh": "媽媽說：「親愛的，時間到了喔！」"
+            "lyricZh": "媽媽說：「親愛的，時間到了喔！」",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 23.27,
             "end": 26.13,
             "title": "第 07 節: 我該怎麼做選擇",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_03.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"What will I do when the words I hear?\"",
             "sub": "✨ 【自制專注】當我聽到這句話時，我會怎麼做？",
@@ -12618,13 +13251,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I hear, screech, s... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：單手扶下巴做思考姿勢！",
-            "lyricZh": "當我聽到這句話時，我會怎麼做？"
+            "lyricZh": "當我聽到這句話時，我會怎麼做？",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 26.13,
             "end": 30,
             "title": "第 08 節: 吱吱踩下自制煞車",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_03.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"I hear, screech, screech! Step on the brake!\"",
             "sub": "✨ 【自制專注】我聽見：吱——！踩下自律大煞車！",
@@ -12632,13 +13268,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Ah, yeah, yeah! I ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：用力踩煞車帥氣定格！！",
-            "lyricZh": "我聽見：吱——！踩下自律大煞車！"
+            "lyricZh": "我聽見：吱——！踩下自律大煞車！",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 30,
             "end": 35.07,
             "title": "第 09 節: 我知道做出好選擇",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_03.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Ah, yeah, yeah! I know which good choice to make. Ha, ha, ha!\"",
             "sub": "✨ 【自制專注】啊耶耶！我知道該做出哪一個好的選擇！哈哈！",
@@ -12646,13 +13285,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I have super self-... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：雙手比耶左右晃動哈哈笑！",
-            "lyricZh": "啊耶耶！我知道該做出哪一個好的選擇！哈哈！"
+            "lyricZh": "啊耶耶！我知道該做出哪一個好的選擇！哈哈！",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 35.07,
             "end": 38.67,
             "title": "第 10 節: 我有超強自制力",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_04.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"I have super self-control.\"",
             "sub": "✨ 【自制專注】我擁有超級無敵的自我控制超能力！",
@@ -12660,13 +13302,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I'm the master of ... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙拳用力在腰側握緊展現力量！",
-            "lyricZh": "我擁有超級無敵的自我控制超能力！"
+            "lyricZh": "我擁有超級無敵的自我控制超能力！",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 38.67,
             "end": 42.37,
             "title": "第 11 節: 我是自己的大主人",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_04.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"I'm the master of my soul. Oh, oh!\"",
             "sub": "✨ 【自制專注】我是我自己心靈與情緒的大主人！噢！",
@@ -12674,13 +13319,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Just one cookie, n... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：單手握拳高舉自信大喊！",
-            "lyricZh": "我是我自己心靈與情緒的大主人！噢！"
+            "lyricZh": "我是我自己心靈與情緒的大主人！噢！",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 42.37,
             "end": 46.13,
             "title": "第 12 節: 只要一塊不貪心",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_04.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Just one cookie, not ten. Ha, ha!\"",
             "sub": "✨ 【自制專注】就吃一塊餅乾就好，不要吃十塊！哈哈！",
@@ -12688,13 +13336,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Put the lid right ... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：豎起食指表示只吃一塊！",
-            "lyricZh": "就吃一塊餅乾就好，不要吃十塊！哈哈！"
+            "lyricZh": "就吃一塊餅乾就好，不要吃十塊！哈哈！",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 46.13,
             "end": 49.67,
             "title": "第 13 節: 蓋好蓋子有自律",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_05.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Put the lid right back again. Ha, ha!\"",
             "sub": "✨ 【自制專注】把餅乾蓋子好好地蓋回去！哈哈！",
@@ -12702,13 +13353,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Stop my hands and ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手做用力蓋上蓋子的動作！",
-            "lyricZh": "把餅乾蓋子好好地蓋回去！哈哈！"
+            "lyricZh": "把餅乾蓋子好好地蓋回去！哈哈！",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 49.67,
             "end": 53.07,
             "title": "第 14 節: 停住雙手停小腳",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_05.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Stop my hands and stop my toes.\"",
             "sub": "✨ 【自制專注】停住我的小手，停住我的小腳趾。",
@@ -12716,13 +13370,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Self-control is br... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手收回身側雙腳併攏站直！",
-            "lyricZh": "停住我的小手，停住我的小腳趾。"
+            "lyricZh": "停住我的小手，停住我的小腳趾。",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 53.07,
             "end": 57.1,
             "title": "第 15 節: 自制自律最勇敢",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_05.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Self-control is brave and young.\"",
             "sub": "✨ 【自制專注】自制力是勇敢又帥氣的好品質！",
@@ -12730,13 +13387,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Screech, screech! ... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：挺胸行最帥氣的童子軍禮！",
-            "lyricZh": "自制力是勇敢又帥氣的好品質！"
+            "lyricZh": "自制力是勇敢又帥氣的好品質！",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 57.1,
             "end": 59.5,
             "title": "第 16 節: 吱吱踩下大煞車",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_06.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Screech, screech! Step on the brake!\"",
             "sub": "✨ 【自制專注】吱——！踩下自律大煞車！",
@@ -12744,13 +13404,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Ah, yeah, yeah! I ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：右腳再次踩煞車帥氣定格！",
-            "lyricZh": "吱——！踩下自律大煞車！"
+            "lyricZh": "吱——！踩下自律大煞車！",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 59.5,
             "end": 64.57,
             "title": "第 17 節: 我知道做出好選擇",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_06.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"Ah, yeah, yeah! I know which good choice to make. Ha, ha, ha!\"",
             "sub": "✨ 【自制專注】啊耶耶！我知道該做出哪一個好的選擇！哈哈！",
@@ -12758,13 +13421,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I have super self-... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：雙手比耶左右晃動哈哈笑！",
-            "lyricZh": "啊耶耶！我知道該做出哪一個好的選擇！哈哈！"
+            "lyricZh": "啊耶耶！我知道該做出哪一個好的選擇！哈哈！",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 64.57,
             "end": 68.17,
             "title": "第 18 節: 我有超強自制力",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_06.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"I have super self-control.\"",
             "sub": "✨ 【自制專注】我擁有超級無敵的自我控制超能力！",
@@ -12772,13 +13438,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I'm the master of ... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙拳用力在腰側握緊展現力量！",
-            "lyricZh": "我擁有超級無敵的自我控制超能力！"
+            "lyricZh": "我擁有超級無敵的自我控制超能力！",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 68.17,
             "end": 74.57,
             "title": "第 19 節: 掌控自我大主人",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_07.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"I'm the master of my soul. Oh, oh! One, two, three.\"",
             "sub": "✨ 【自制專注】我是我自己心靈與情緒的大主人！一、二、三！",
@@ -12786,13 +13455,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I choose control, ... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：一二三倒數擺出超級英雄姿勢！",
-            "lyricZh": "我是我自己心靈與情緒的大主人！一、二、三！"
+            "lyricZh": "我是我自己心靈與情緒的大主人！一、二、三！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 74.57,
             "end": 79.33,
             "title": "[間奏] 🎵 歡樂律動間奏",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_07.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "[Music Interlude 🎵 輕快間奏]",
             "sub": "✨ 【生活英文與品格】感受律動，原地踩點",
@@ -12800,13 +13472,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I choose control, ... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 79.33,
             "end": 83.3,
             "title": "第 20 節: 超級自律小英雄定格",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_07.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "\"I choose control, yes, please!\"",
             "sub": "✨ 【自制專注】我選擇自制自律，我最棒！",
@@ -12814,13 +13489,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：超級英雄煞車定格微笑！",
-            "lyricZh": "我選擇自制自律，我最棒！"
+            "lyricZh": "我選擇自制自律，我最棒！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 83.3,
             "end": 120,
             "title": "[尾奏] 🌟 快樂 Ending 定格",
-            "video": null,
+            "video": "./videos/G3/a3_t9_phrase_07.mp4",
             "image": "./images/album3_jpop/kid1_kai_jpop.jpg",
             "lyric": "[Ending Outro 🌟 帥氣結尾]",
             "sub": "✨ 【自制專注】做最棒的自己，定格微笑！",
@@ -12828,7 +13506,10 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           }
         ],
         "leadDancer": "Kai (陽光刺蝟頭男孩)"
@@ -12856,7 +13537,7 @@ window.KAI_ALBUM_DATABASE = {
             "start": 0,
             "end": 3.73,
             "title": "第 01 節: 勇敢說聲對不起",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_01.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"It's okay to say you're sorry.\"",
             "sub": "✨ 【包容和好】開口說聲「對不起」是很勇敢很棒的事，",
@@ -12864,13 +13545,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Love washes away t... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手在心前合十真誠致歉！",
-            "lyricZh": "開口說聲「對不起」是很勇敢很棒的事，"
+            "lyricZh": "開口說聲「對不起」是很勇敢很棒的事，",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 3.73,
             "end": 7.5,
             "title": "第 02 節: 愛洗去所有煩惱",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_01.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Love washes away the worry.\"",
             "sub": "✨ 【包容和好】愛能把所有的煩惱與擔憂都洗滌乾淨。",
@@ -12878,13 +13562,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "We pulled a teddy ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手如水流輕拂心胸！",
-            "lyricZh": "愛能把所有的煩惱與擔憂都洗滌乾淨。"
+            "lyricZh": "愛能把所有的煩惱與擔憂都洗滌乾淨。",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 7.5,
             "end": 15.37,
             "title": "[間奏] 🎵 歡樂律動間奏",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_01.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "[Music Interlude 🎵 輕快間奏]",
             "sub": "✨ 【生活英文與品格】感受律動，原地踩點",
@@ -12892,13 +13579,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "We pulled a teddy ... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "phraseIndex": 1,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 15.37,
             "end": 17.8,
             "title": "第 03 節: 搶扯小熊不開心",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_02.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"We pulled a teddy both\"",
             "sub": "✨ 【包容和好】我們剛剛同時用力拉扯泰迪熊，",
@@ -12906,13 +13596,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "at once. We got up... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手做拔河拉扯小動作！",
-            "lyricZh": "我們剛剛同時用力拉扯泰迪熊，"
+            "lyricZh": "我們剛剛同時用力拉扯泰迪熊，",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 17.8,
             "end": 22.97,
             "title": "第 04 節: 亂了節奏好難過",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_02.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"at once. We got upset and lost our dance.\"",
             "sub": "✨ 【包容和好】我們生氣了，打亂了快樂的舞步。",
@@ -12920,13 +13613,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "My heart felt heav... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手下垂微微低頭跺腳！",
-            "lyricZh": "我們生氣了，打亂了快樂的舞步。"
+            "lyricZh": "我們生氣了，打亂了快樂的舞步。",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 22.97,
             "end": 27,
             "title": "第 05 節: 心裡沉重像大石",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_02.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"My heart felt heavy like a stone.\"",
             "sub": "✨ 【包容和好】我的心裡感覺像壓了一顆沉沉的大石頭，",
@@ -12934,13 +13630,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I don't wanna play... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：手撫心口表現不開心！",
-            "lyricZh": "我的心裡感覺像壓了一顆沉沉的大石頭，"
+            "lyricZh": "我的心裡感覺像壓了一顆沉沉的大石頭，",
+            "phraseIndex": 2,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 27,
             "end": 30.8,
             "title": "第 06 節: 不想一個人孤單",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_03.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"I don't wanna play along.\"",
             "sub": "✨ 【包容和好】我不想再這樣賭氣不說話了一個人玩。",
@@ -12948,13 +13647,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"I am sorry.\" \"It'... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：左右轉身渴望和好！",
-            "lyricZh": "我不想再這樣賭氣不說話了一個人玩。"
+            "lyricZh": "我不想再這樣賭氣不說話了一個人玩。",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 30.8,
             "end": 34.47,
             "title": "第 07 節: 對不起沒關係",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_03.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"\"I am sorry.\" \"It's okay.\"\"",
             "sub": "✨ 【包容和好】「對不起！」「沒關係，我原諒你！」",
@@ -12962,13 +13664,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Let's wipe the lit... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：互相伸手握手和解！",
-            "lyricZh": "「對不起！」「沒關係，我原諒你！」"
+            "lyricZh": "「對不起！」「沒關係，我原諒你！」",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 34.47,
             "end": 38.6,
             "title": "第 08 節: 擦乾眼淚重展笑顏",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_03.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Let's wipe the little tears away.\"",
             "sub": "✨ 【包容和好】讓我們把眼角的小眼淚輕輕擦掉吧！",
@@ -12976,13 +13681,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Open arms, big war... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：食指輕抹臉頰擦去眼淚！",
-            "lyricZh": "讓我們把眼角的小眼淚輕輕擦掉吧！"
+            "lyricZh": "讓我們把眼角的小眼淚輕輕擦掉吧！",
+            "phraseIndex": 3,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 38.6,
             "end": 42.33,
             "title": "第 09 節: 張開雙臂大擁抱",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_04.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Open arms, big warm hug,\"",
             "sub": "✨ 【包容和好】張開溫暖雙臂，來個大大深情的擁抱！",
@@ -12990,13 +13698,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Snug as a bug insi... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：向前方熱情張開雙臂擁抱！",
-            "lyricZh": "張開溫暖雙臂，來個大大深情的擁抱！"
+            "lyricZh": "張開溫暖雙臂，來個大大深情的擁抱！",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 42.33,
             "end": 46.07,
             "title": "第 10 節: 暖洋洋溫暖相擁",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_04.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Snug as a bug inside a rug.\"",
             "sub": "✨ 【包容和好】溫暖舒服得像裹在軟軟毛毯裡的小蟲蟲。",
@@ -13004,13 +13715,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Love is stronger, ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手環抱肩膀輕輕搖擺！",
-            "lyricZh": "溫暖舒服得像裹在軟軟毛毯裡的小蟲蟲。"
+            "lyricZh": "溫暖舒服得像裹在軟軟毛毯裡的小蟲蟲。",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 46.07,
             "end": 50.3,
             "title": "第 11 節: 愛的力量最強大",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_04.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Love is stronger, peace is bright.\"",
             "sub": "✨ 【包容和好】愛的力量更大，和平光芒更加明亮，",
@@ -13018,13 +13732,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Everything is shin... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手托光芒向天空盛開！",
-            "lyricZh": "愛的力量更大，和平光芒更加明亮，"
+            "lyricZh": "愛的力量更大，和平光芒更加明亮，",
+            "phraseIndex": 4,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 50.3,
             "end": 52.47,
             "title": "第 12 節: 重現耀眼星光",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_05.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Everything is shining light.\"",
             "sub": "✨ 【包容和好】一切都重新閃閃發光！",
@@ -13032,13 +13749,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Friends forgive, a... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手掌心朝外旋轉放光芒！",
-            "lyricZh": "一切都重新閃閃發光！"
+            "lyricZh": "一切都重新閃閃發光！",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 52.47,
             "end": 55.6,
             "title": "[間奏] 🎵 歡樂律動間奏",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_05.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "[Music Interlude 🎵 輕快間奏]",
             "sub": "✨ 【生活英文與品格】感受律動，原地踩點",
@@ -13046,13 +13766,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Friends forgive, a... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 55.6,
             "end": 59.37,
             "title": "第 13 節: 互相原諒互相懂",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_05.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Friends forgive, and friends understand,\"",
             "sub": "✨ 【包容和好】好朋友會彼此原諒，好朋友會互相理解，",
@@ -13060,13 +13783,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Walking together h... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手牽手左右歡快踏步！",
-            "lyricZh": "好朋友會彼此原諒，好朋友會互相理解，"
+            "lyricZh": "好朋友會彼此原諒，好朋友會互相理解，",
+            "phraseIndex": 5,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 59.37,
             "end": 63.2,
             "title": "第 14 節: 手牽手向前走",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_06.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Walking together hand in hand.\"",
             "sub": "✨ 【包容和好】手牽著手一起歡樂向前走！",
@@ -13074,13 +13800,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Love is patient, l... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：大步向前邁進踏步！",
-            "lyricZh": "手牽著手一起歡樂向前走！"
+            "lyricZh": "手牽著手一起歡樂向前走！",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 63.2,
             "end": 66.8,
             "title": "第 15 節: 愛是恆久有恩慈",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_06.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Love is patient, love is kind,\"",
             "sub": "✨ 【包容和好】愛是恆久忍耐，愛是有恩慈，",
@@ -13088,13 +13817,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "The best treasure ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手在胸口畫出愛心脈動！",
-            "lyricZh": "愛是恆久忍耐，愛是有恩慈，"
+            "lyricZh": "愛是恆久忍耐，愛是有恩慈，",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 66.8,
             "end": 70.8,
             "title": "第 16 節: 最棒的無價之寶",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_06.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"The best treasure we can find.\"",
             "sub": "✨ 【包容和好】這是我們能找到最棒的無價珍寶！",
@@ -13102,13 +13834,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "\"I am sorry.\" \"It'... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手向前捧出寶藏箱！",
-            "lyricZh": "這是我們能找到最棒的無價珍寶！"
+            "lyricZh": "這是我們能找到最棒的無價珍寶！",
+            "phraseIndex": 6,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 70.8,
             "end": 74.47,
             "title": "第 17 節: 對不起沒關係",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_07.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"\"I am sorry.\" \"It's okay.\"\"",
             "sub": "✨ 【包容和好】「對不起！」「沒關係，我原諒你！」",
@@ -13116,13 +13851,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Let's wipe the lit... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：互相伸手握手和解！",
-            "lyricZh": "「對不起！」「沒關係，我原諒你！」"
+            "lyricZh": "「對不起！」「沒關係，我原諒你！」",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 74.47,
             "end": 78.67,
             "title": "第 18 節: 擦乾眼淚重展笑顏",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_07.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Let's wipe the little tears away.\"",
             "sub": "✨ 【包容和好】讓我們把眼角的小眼淚輕輕擦掉吧！",
@@ -13130,13 +13868,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Open arms, big war... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：食指輕抹臉頰擦去眼淚！",
-            "lyricZh": "讓我們把眼角的小眼淚輕輕擦掉吧！"
+            "lyricZh": "讓我們把眼角的小眼淚輕輕擦掉吧！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 78.67,
             "end": 82.33,
             "title": "第 19 節: 張開雙臂大擁抱",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_07.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Open arms, big warm hug,\"",
             "sub": "✨ 【包容和好】張開溫暖雙臂，來個大大深情的擁抱！",
@@ -13144,13 +13885,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Snug as a bug insi... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：向前方熱情張開雙臂擁抱！",
-            "lyricZh": "張開溫暖雙臂，來個大大深情的擁抱！"
+            "lyricZh": "張開溫暖雙臂，來個大大深情的擁抱！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 82.33,
             "end": 86,
             "title": "第 20 節: 暖洋洋溫暖相擁",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_07.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Snug as a bug inside a rug.\"",
             "sub": "✨ 【包容和好】溫暖舒服得像裹在軟軟毛毯裡的小蟲蟲。",
@@ -13158,13 +13902,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Love is stronger, ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手環抱肩膀輕輕搖擺！",
-            "lyricZh": "溫暖舒服得像裹在軟軟毛毯裡的小蟲蟲。"
+            "lyricZh": "溫暖舒服得像裹在軟軟毛毯裡的小蟲蟲。",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 86,
             "end": 90.27,
             "title": "第 21 節: 愛的力量最強大",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_07.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Love is stronger, peace is bright.\"",
             "sub": "✨ 【包容和好】愛的力量更大，和平光芒更加明亮，",
@@ -13172,13 +13919,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Everything is shin... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手托光芒向天空盛開！",
-            "lyricZh": "愛的力量更大，和平光芒更加明亮，"
+            "lyricZh": "愛的力量更大，和平光芒更加明亮，",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 90.27,
             "end": 95.53,
             "title": "第 22 節: 重現耀眼星光",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_07.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Everything is shining light.\"",
             "sub": "✨ 【包容和好】一切都重新閃閃發光！",
@@ -13186,13 +13936,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "We are star friend... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手掌心朝外旋轉放光芒！",
-            "lyricZh": "一切都重新閃閃發光！"
+            "lyricZh": "一切都重新閃閃發光！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 95.53,
             "end": 99.37,
             "title": "第 23 節: 星際好朋友心連心",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_07.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"We are star friends, side by side.\"",
             "sub": "✨ 【包容和好】我們是肩並肩、心連心的星光好朋友！",
@@ -13200,13 +13953,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Love is our greate... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：搭肩微笑向鏡頭招手！",
-            "lyricZh": "我們是肩並肩、心連心的星光好朋友！"
+            "lyricZh": "我們是肩並肩、心連心的星光好朋友！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 99.37,
             "end": 103.77,
             "title": "第 24 節: 愛的擁抱大團結定格",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_07.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "\"Love is our greatest guide.\"",
             "sub": "✨ 【包容和好】愛是我們一生最美好的指引指南針！",
@@ -13214,13 +13970,16 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手比大愛心甜美定格！",
-            "lyricZh": "愛是我們一生最美好的指引指南針！"
+            "lyricZh": "愛是我們一生最美好的指引指南針！",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 103.77,
             "end": 120,
             "title": "[尾奏] 🌟 快樂 Ending 定格",
-            "video": null,
+            "video": "./videos/G3/a3_t10_phrase_07.mp4",
             "image": "./images/album3_jpop/kid5_MiMi_jpop.jpg",
             "lyric": "[Ending Outro 🌟 帥氣結尾]",
             "sub": "✨ 【包容和好】做最棒的自己，定格微笑！",
@@ -13228,7 +13987,10 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "phraseIndex": 7,
+            "phraseTotal": 7,
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           }
         ],
         "leadDancer": "MiMi (健康小麥肌捲髮女孩)"
