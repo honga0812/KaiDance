@@ -2635,13 +2635,18 @@
         
         <!-- 頂欄：自適應整合狀態列 (手機端單行優雅對齊，絕不重疊遮擋視訊) -->
         <div class="camera-bar-top p-2 md:p-2.5 px-3 z-30 flex flex-wrap items-center justify-between gap-1.5 border-b border-cyan-300/25 bg-slate-950/40 shrink-0">
-          <div class="flex items-center gap-2 min-w-0">
+          <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
             <button id="btn-camera" onclick="initRealCamera()" class="jelly-btn-cyan px-3 sm:px-3.5 py-1 rounded-full text-[11px] md:text-xs font-black transition flex items-center gap-1 shrink-0 active:scale-95">
               📷 開啟攝影機
             </button>
-            <span id="stickman-status-badge" class="bg-slate-900/80 backdrop-blur text-cyan-100 text-[10px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full border border-cyan-300/35 shadow-xs truncate max-w-[130px] sm:max-w-xs">
+            <span id="stickman-status-badge" class="bg-slate-900/80 backdrop-blur text-cyan-100 text-[10px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full border border-cyan-300/35 shadow-xs truncate max-w-[110px] sm:max-w-xs">
               等待小朋友入鏡...
             </span>
+            <!-- 💡 舞台聲控雷射與氛圍燈光按鍵 -->
+            <button id="btn-stage-lighting" onclick="toggleStageLighting()" class="bg-slate-900/80 hover:bg-slate-800 text-amber-300 text-[10px] sm:text-xs font-bold px-2 sm:px-2.5 py-0.5 rounded-full border border-amber-300/40 shadow-xs flex items-center gap-1 transition active:scale-95 shrink-0" title="點擊切換舞台聲控激光與氛圍燈效 (開/關)">
+              <span id="stage-lighting-icon">⚡</span>
+              <span id="stage-lighting-text" class="hidden xs:inline">動感激光</span>
+            </button>
           </div>
 
           <div class="flex items-center gap-1.5 shrink-0 ml-auto">
@@ -2676,15 +2681,23 @@
           </div>
         </div>
 
-        <!-- 畫面主體：真實攝像頭 Video (底層) + 萌趣發光火柴人 Canvas (頂層) -->
+        <!-- 畫面主體：真實攝像頭 Video (底層) + 舞台動態聲控激光/燈光 Canvas (中層) + 萌趣發光火柴人 Canvas (頂層) -->
         <div id="camera-container" class="flex-1 relative flex items-center justify-center bg-slate-950 overflow-hidden min-h-0 w-full">
           <video id="webcam-video" autoplay playsinline webkit-playsinline="true" muted class="absolute inset-0 w-full h-full object-contain sm:object-cover transform -scale-x-100 opacity-90"></video>
+          <!-- 💡 舞台聲控動態激光與光線畫布 (Stage Laser & Audio-Reactive Lights) -->
+          <canvas id="stage-laser-canvas" class="absolute inset-0 w-full h-full object-contain sm:object-cover z-15 pointer-events-none" style="mix-blend-mode: screen;"></canvas>
           <canvas id="camera-canvas" width="640" height="480" class="absolute inset-0 w-full h-full object-contain sm:object-cover z-20 pointer-events-none"></canvas>
 
-          <!-- 全螢幕退出懸浮按鈕 (全螢幕時置頂最右側，便於隨時一鍵返回雙屏教室) -->
-          <button id="btn-camera-exit-fs" onclick="toggleCameraFullscreen()" class="hidden absolute top-4 right-4 z-40 px-4 py-2 rounded-2xl bg-black/75 hover:bg-black/90 text-white font-black text-xs border border-white/30 backdrop-blur-md shadow-2xl flex items-center gap-1.5 transition active:scale-95">
-            <span>✕</span> 退出全螢幕
-          </button>
+          <!-- 全螢幕控制懸浮按鈕組 (全螢幕時置頂最右側，便於隨時一鍵返回雙屏教室與切換燈效) -->
+          <div id="camera-fs-controls" class="hidden absolute top-4 right-4 z-40 flex items-center gap-2">
+            <button id="btn-camera-fs-lighting" onclick="toggleStageLighting()" class="px-3 py-1.5 rounded-2xl bg-black/75 hover:bg-black/90 text-amber-300 border border-amber-300/40 backdrop-blur-md font-bold text-xs flex items-center gap-1.5 transition active:scale-95 shadow-xl">
+              <span id="fs-lighting-icon">⚡</span>
+              <span id="fs-lighting-text">動感激光</span>
+            </button>
+            <button id="btn-camera-exit-fs" onclick="toggleCameraFullscreen()" class="px-4 py-2 rounded-2xl bg-black/75 hover:bg-black/90 text-white font-black text-xs border border-white/30 backdrop-blur-md shadow-2xl flex items-center gap-1.5 transition active:scale-95">
+              <span>✕</span> 退出全螢幕
+            </button>
+          </div>
 
           <!-- 引導提示框（攝像頭開啟前，懸浮於底部，絕不遮擋火柴人舞台） -->
           <div id="camera-guide-prompt" class="absolute bottom-4 left-1/2 -translate-x-1/2 z-10 flex items-center gap-3 px-4 py-2.5 rounded-2xl bg-slate-900/90 backdrop-blur-md border border-cyan-400/50 shadow-[0_8px_30px_rgba(0,0,0,0.7),0_0_20px_rgba(56,189,248,0.3)] text-white max-w-[92%]">
@@ -3353,7 +3366,8 @@
       voiceGuidance: true,
       bgmEnabled: true,
       spaceAmbient: true,
-      spaceVolume: 0.3
+      spaceVolume: 0.3,
+      stageLighting: true
     };
 
     let userSettings = { ...DEFAULT_PARENT_SETTINGS };
@@ -3512,6 +3526,523 @@
         audioCtx.resume();
       }
       return audioCtx;
+    }
+
+    // ========================================================
+    // 2-C. 舞台聲控動態激光與光線效果系統 (Stage Laser & Audio-Reactive Lights)
+    // ========================================================
+    // 40 首歌曲動感活潑程度與燈光風格對照表 (1: 舒緩極光 ~ 5: 超速激光)
+    const SONG_VIBRANCY_PROFILES = {
+      // 第一集：晨光星球 (探索生活大冒險)
+      a1_s01: { energyLevel: 4, bpm: 122, lightStyle: "spotlight_energetic", label: "☀️ 晨光活力追光" },
+      a1_s02: { energyLevel: 3, bpm: 110, lightStyle: "spotlight_medium", label: "🌟 歡樂節奏追光" },
+      a1_s03: { energyLevel: 4, bpm: 124, lightStyle: "laser_energetic", label: "🌈 彩虹動感激光" },
+      a1_s04: { energyLevel: 4, bpm: 120, lightStyle: "spotlight_energetic", label: "🦁 探險進行追光" },
+      a1_s05: { energyLevel: 2, bpm: 92,  lightStyle: "soft_warm", label: "🧹 清新收納暖光" },
+      a1_s06: { energyLevel: 5, bpm: 136, lightStyle: "laser_hyper", label: "🚀 超速火箭激光" },
+      a1_s07: { energyLevel: 3, bpm: 108, lightStyle: "spotlight_medium", label: "🚂 字母列車光芒" },
+      a1_s08: { energyLevel: 5, bpm: 132, lightStyle: "laser_hyper", label: "⚡ 定格狂想激光" },
+      a1_s09: { energyLevel: 2, bpm: 88,  lightStyle: "soft_warm", label: "🍓 愉悅點心柔光" },
+      a1_s10: { energyLevel: 1, bpm: 62,  lightStyle: "soft_aurora", label: "🌙 枕頭安眠極光" },
+
+      // 第二集：派對星球 (歡樂節奏派對篇)
+      a2_s01: { energyLevel: 4, bpm: 125, lightStyle: "laser_energetic", label: "💖 夢幻韓流激光" },
+      a2_s02: { energyLevel: 2, bpm: 82,  lightStyle: "soft_warm", label: "🌸 粉彩夢境柔光" },
+      a2_s03: { energyLevel: 5, bpm: 134, lightStyle: "laser_hyper", label: "🔢 數字狂歡激光" },
+      a2_s04: { energyLevel: 4, bpm: 122, lightStyle: "laser_energetic", label: "🎧 重低音律動激光" },
+      a2_s05: { energyLevel: 3, bpm: 106, lightStyle: "spotlight_medium", label: "✨ 閃耀清潔追光" },
+      a2_s06: { energyLevel: 5, bpm: 138, lightStyle: "laser_hyper", label: "🌌 超新星爆發激光" },
+      a2_s07: { energyLevel: 5, bpm: 130, lightStyle: "laser_hyper", label: "🕺 K-Pop街舞激光" },
+      a2_s08: { energyLevel: 5, bpm: 135, lightStyle: "laser_hyper", label: "🎈 氣球定格激光" },
+      a2_s09: { energyLevel: 3, bpm: 104, lightStyle: "spotlight_medium", label: "🍇 莓果野餐暖光" },
+      a2_s10: { energyLevel: 1, bpm: 65,  lightStyle: "soft_aurora", label: "⭐ 睡衣晚安極光" },
+
+      // 第三集：櫻花星球
+      a3_s01: { energyLevel: 4, bpm: 124, lightStyle: "laser_energetic", label: "🌸 櫻花微笑激光" },
+      a3_s02: { energyLevel: 5, bpm: 136, lightStyle: "laser_hyper", label: "⚡ 晨光躍動激光" },
+      a3_s03: { energyLevel: 1, bpm: 60,  lightStyle: "soft_aurora", label: "🌈 深呼吸和平極光" },
+      a3_s04: { energyLevel: 3, bpm: 105, lightStyle: "spotlight_medium", label: "🚃 耐心排隊光束" },
+      a3_s05: { energyLevel: 3, bpm: 112, lightStyle: "spotlight_medium", label: "🪄 禮貌魔法追光" },
+      a3_s06: { energyLevel: 4, bpm: 120, lightStyle: "spotlight_energetic", label: "🤝 團結好幫手光芒" },
+      a3_s07: { energyLevel: 3, bpm: 108, lightStyle: "spotlight_medium", label: "🌟 約定小精靈光芒" },
+      a3_s08: { energyLevel: 2, bpm: 78,  lightStyle: "soft_warm", label: "🐶 溫柔小手柔光" },
+      a3_s09: { energyLevel: 5, bpm: 134, lightStyle: "laser_hyper", label: "🛑 神奇剎車激光" },
+      a3_s10: { energyLevel: 3, bpm: 110, lightStyle: "spotlight_medium", label: "🫂 擁抱和好暖光" },
+
+      // 第四集：日落星球
+      a4_s01: { energyLevel: 2, bpm: 76,  lightStyle: "soft_warm", label: "🌅 暖陽擁抱柔光" },
+      a4_s02: { energyLevel: 4, bpm: 126, lightStyle: "laser_energetic", label: "🎶 口袋快樂激光" },
+      a4_s03: { energyLevel: 1, bpm: 58,  lightStyle: "soft_aurora", label: "💧 平靜溪流極光" },
+      a4_s04: { energyLevel: 2, bpm: 72,  lightStyle: "soft_warm", label: "🐢 慢步烏龜柔光" },
+      a4_s05: { energyLevel: 3, bpm: 102, lightStyle: "spotlight_medium", label: "🍯 蜂蜜甜甜暖光" },
+      a4_s06: { energyLevel: 3, bpm: 110, lightStyle: "spotlight_medium", label: "🌱 誠實樹苗追光" },
+      a4_s07: { energyLevel: 4, bpm: 122, lightStyle: "spotlight_energetic", label: "🏮 燈塔旋轉追光" },
+      a4_s08: { energyLevel: 1, bpm: 64,  lightStyle: "soft_aurora", label: "🦋 蝴蝶細語極光" },
+      a4_s09: { energyLevel: 3, bpm: 100, lightStyle: "spotlight_medium", label: "💡 沉著明智微光" },
+      a4_s10: { energyLevel: 1, bpm: 56,  lightStyle: "soft_aurora", label: "🌌 星光靈魂極光" }
+    };
+
+    function getSongVibrancyProfile(song) {
+      if (!song) return { energyLevel: 3, bpm: 108, lightStyle: "spotlight_medium", label: "🌟 舞台追光", isFast: false, isSlow: false };
+      const explicit = SONG_VIBRANCY_PROFILES[song.id];
+      if (explicit) {
+        return {
+          ...explicit,
+          isFast: explicit.energyLevel >= 4,
+          isSlow: explicit.energyLevel <= 2
+        };
+      }
+      const tag = song.tag || '';
+      let energy = 3;
+      let style = 'spotlight_medium';
+      let label = '🌟 歡樂節奏追光';
+      if (/爆發|狂歡|大跳躍|反應|急速|街舞|動感/.test(tag) || song.difficulty === '⭐⭐⭐') {
+        energy = 5;
+        style = 'laser_hyper';
+        label = '⚡ 動感狂想激光';
+      } else if (/活力|進行曲|律動|重低音/.test(tag)) {
+        energy = 4;
+        style = 'laser_energetic';
+        label = '✨ 舞台動感激光';
+      } else if (/放鬆|晚安|平靜|舒緩|安眠/.test(tag) || song.difficulty === '⭐') {
+        energy = 1;
+        style = 'soft_aurora';
+        label = '🌙 夢幻星光極光';
+      } else if (/溫柔|慢步|擁抱|常規/.test(tag)) {
+        energy = 2;
+        style = 'soft_warm';
+        label = '🌸 舒緩柔和光線';
+      }
+      return {
+        energyLevel: energy,
+        bpm: energy >= 4 ? 128 : (energy <= 2 ? 70 : 105),
+        lightStyle: style,
+        label: label,
+        isFast: energy >= 4,
+        isSlow: energy <= 2
+      };
+    }
+
+    // Web Audio 即時音訊分析器
+    let bgmAudioSourceNode = null;
+    let bgmAnalyserNode = null;
+    let bgmFreqData = null;
+    let audioAnalysisFailed = false;
+
+    function setupBgmAudioAnalysis() {
+      if (audioAnalysisFailed || bgmAnalyserNode) return;
+      const ctx = getAudioContext();
+      if (!ctx || !audioBgm) return;
+      try {
+        bgmAnalyserNode = ctx.createAnalyser();
+        bgmAnalyserNode.fftSize = 128;
+        bgmAnalyserNode.smoothingTimeConstant = 0.72;
+        bgmFreqData = new Uint8Array(bgmAnalyserNode.frequencyBinCount);
+
+        if (!bgmAudioSourceNode) {
+          bgmAudioSourceNode = ctx.createMediaElementSource(audioBgm);
+          bgmAudioSourceNode.connect(bgmAnalyserNode);
+          bgmAnalyserNode.connect(ctx.destination);
+        }
+      } catch (err) {
+        console.warn("setupBgmAudioAnalysis fallback to math beat model:", err);
+        audioAnalysisFailed = true;
+      }
+    }
+
+    // 即時聲音狀態分析資料
+    const stageAudioState = {
+      bass: 0,
+      mid: 0,
+      treble: 0,
+      overall: 0,
+      smoothedBass: 0,
+      beatImpact: 0,
+      isBeat: false,
+      lastBeatTime: 0,
+      beatCount: 0
+    };
+
+    function updateStageAudioAnalysis() {
+      const now = performance.now() / 1000;
+      const song = (typeof currentSongKey !== 'undefined' && songDatabase) ? songDatabase[currentSongKey] : null;
+      const profile = getSongVibrancyProfile(song);
+
+      let rawBass = 0, rawMid = 0, rawTreble = 0, rawRms = 0;
+      let hasRealAudio = false;
+
+      if (bgmAnalyserNode && bgmFreqData && audioBgm && !audioBgm.paused && audioBgm.currentTime > 0) {
+        try {
+          bgmAnalyserNode.getByteFrequencyData(bgmFreqData);
+          let bSum = 0;
+          for (let i = 1; i <= 5; i++) bSum += bgmFreqData[i] || 0;
+          rawBass = (bSum / 5) / 255;
+
+          let mSum = 0;
+          for (let i = 6; i <= 20; i++) mSum += bgmFreqData[i] || 0;
+          rawMid = (mSum / 15) / 255;
+
+          let tSum = 0;
+          for (let i = 21; i <= 50; i++) tSum += bgmFreqData[i] || 0;
+          rawTreble = (tSum / 30) / 255;
+
+          rawRms = rawBass * 0.5 + rawMid * 0.35 + rawTreble * 0.15;
+          if (rawRms > 0.02) hasRealAudio = true;
+        } catch (e) {}
+      }
+
+      if (!hasRealAudio) {
+        if (isPlaying && audioBgm && !audioBgm.paused) {
+          const bpm = profile.bpm || (profile.isFast ? 128 : (profile.isSlow ? 65 : 104));
+          const beatSec = 60 / bpm;
+          const songT = audioBgm.currentTime || (now % 300);
+          const phase = (songT % beatSec) / beatSec;
+          rawBass = Math.pow(Math.max(0, 1 - phase * 3.0), 3) * (0.65 + profile.energyLevel * 0.07);
+          rawMid = (0.35 + 0.35 * Math.sin(songT * 3.2)) * (profile.energyLevel / 4);
+          rawTreble = (0.2 + 0.25 * Math.cos(songT * 6.5)) * (profile.energyLevel / 4);
+          rawRms = rawBass * 0.5 + rawMid * 0.35 + rawTreble * 0.15;
+        } else {
+          rawBass = 0.05 + 0.04 * Math.sin(now * 1.5);
+          rawMid = 0.05 + 0.03 * Math.cos(now * 1.2);
+          rawTreble = 0.03;
+          rawRms = 0.05;
+        }
+      }
+
+      stageAudioState.bass = stageAudioState.bass * 0.55 + rawBass * 0.45;
+      stageAudioState.mid = stageAudioState.mid * 0.65 + rawMid * 0.35;
+      stageAudioState.treble = stageAudioState.treble * 0.7 + rawTreble * 0.3;
+      stageAudioState.overall = stageAudioState.overall * 0.6 + rawRms * 0.4;
+      stageAudioState.smoothedBass = stageAudioState.smoothedBass * 0.92 + stageAudioState.bass * 0.08;
+
+      const beatThreshold = stageAudioState.smoothedBass * (profile.isFast ? 1.25 : 1.45) + (profile.isFast ? 0.08 : 0.15);
+      const minBeatGap = profile.isFast ? 0.22 : 0.45;
+
+      if (stageAudioState.bass > beatThreshold && (now - stageAudioState.lastBeatTime) > minBeatGap) {
+        stageAudioState.isBeat = true;
+        stageAudioState.lastBeatTime = now;
+        stageAudioState.beatImpact = 1.0;
+        stageAudioState.beatCount++;
+      } else {
+        stageAudioState.isBeat = false;
+        stageAudioState.beatImpact *= 0.88;
+      }
+
+      // 同步動態氛圍微脈衝至教室背景大星球
+      const dancePlanetGlow = document.getElementById('dance-bg-planet-glow');
+      if (dancePlanetGlow && viewDance && !viewDance.classList.contains('hidden')) {
+        const glowOpacity = 0.35 + 0.4 * stageAudioState.bass + 0.25 * stageAudioState.beatImpact;
+        dancePlanetGlow.style.opacity = glowOpacity.toFixed(2);
+      }
+    }
+
+    // 漂浮夢幻微光微粒 (慢歌專屬)
+    const dreamStardustParticles = Array.from({ length: 24 }, () => ({
+      x: Math.random(),
+      y: Math.random(),
+      radius: 2 + Math.random() * 4,
+      speedY: 0.0012 + Math.random() * 0.0025,
+      swaySpeed: 1.0 + Math.random() * 2.0,
+      swayDist: 0.015 + Math.random() * 0.025,
+      phase: Math.random() * Math.PI * 2,
+      color: ['rgba(196,181,253,', 'rgba(254,205,211,', 'rgba(254,240,138,', 'rgba(167,243,208,'][Math.floor(Math.random() * 4)],
+      alpha: 0.3 + Math.random() * 0.5
+    }));
+
+    // 舞台聲控動態激光與燈光主渲染函數
+    function renderStageLighting() {
+      const stageLaserCanvas = document.getElementById('stage-laser-canvas');
+      if (!stageLaserCanvas) return;
+      const lCtx = stageLaserCanvas.getContext('2d');
+      if (!lCtx) return;
+
+      const w = stageLaserCanvas.width;
+      const h = stageLaserCanvas.height;
+      if (w <= 0 || h <= 0) return;
+
+      if (!userSettings.stageLighting || !viewDance || viewDance.classList.contains('hidden')) {
+        lCtx.clearRect(0, 0, w, h);
+        return;
+      }
+
+      lCtx.clearRect(0, 0, w, h);
+
+      const song = (typeof currentSongKey !== 'undefined' && songDatabase) ? songDatabase[currentSongKey] : null;
+      const profile = getSongVibrancyProfile(song);
+      const now = performance.now() / 1000;
+      const audio = stageAudioState;
+
+      if (profile.isFast) {
+        renderFastLaserStage(lCtx, w, h, profile, now, audio);
+      } else if (profile.isSlow) {
+        renderSlowAuroraStage(lCtx, w, h, profile, now, audio);
+      } else {
+        renderMediumSpotlightStage(lCtx, w, h, profile, now, audio);
+      }
+    }
+
+    // 快歌：高能動態激光束陣列 + 踩點頻閃 + 地面光斑
+    function renderFastLaserStage(ctx, w, h, profile, now, audio) {
+      const isHyper = profile.energyLevel >= 5;
+      const beamCount = isHyper ? 8 : 6;
+      const sweepBaseSpeed = isHyper ? 2.5 : 1.8;
+      const sweepRate = sweepBaseSpeed * (0.7 + 0.8 * audio.mid);
+
+      const emitters = [
+        { x: w * 0.18, y: 0, baseAngle: 0.35, phase: 0 },
+        { x: w * 0.50, y: 0, baseAngle: 0.00, phase: Math.PI * 0.5 },
+        { x: w * 0.82, y: 0, baseAngle: -0.35, phase: Math.PI }
+      ];
+
+      const laserPalette = [
+        { stroke: '#00f0ff', glow: 'rgba(0, 240, 255, 0.45)', core: 'rgba(255, 255, 255, 0.95)' },
+        { stroke: '#ff007f', glow: 'rgba(255, 0, 127, 0.45)', core: 'rgba(255, 255, 255, 0.95)' },
+        { stroke: '#39ff14', glow: 'rgba(57, 255, 20, 0.45)', core: 'rgba(255, 255, 255, 0.95)' },
+        { stroke: '#ffd700', glow: 'rgba(255, 215, 0, 0.45)', core: 'rgba(255, 255, 255, 0.95)' },
+        { stroke: '#a855f7', glow: 'rgba(168, 85, 247, 0.45)', core: 'rgba(255, 255, 255, 0.95)' }
+      ];
+
+      ctx.save();
+
+      // 1. 頂部雷射鏡頭發射源
+      emitters.forEach((em, eIdx) => {
+        const color = laserPalette[eIdx % laserPalette.length];
+        const rad = 8 + 10 * audio.bass + 12 * audio.beatImpact;
+        const eGrad = ctx.createRadialGradient(em.x, em.y, 0, em.x, em.y, rad);
+        eGrad.addColorStop(0, '#ffffff');
+        eGrad.addColorStop(0.35, color.stroke);
+        eGrad.addColorStop(1, 'rgba(0,0,0,0)');
+        ctx.fillStyle = eGrad;
+        ctx.beginPath();
+        ctx.arc(em.x, em.y, rad, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      // 2. 掃射雷射光束與地面光斑
+      for (let i = 0; i < beamCount; i++) {
+        const em = emitters[i % emitters.length];
+        const col = laserPalette[i % laserPalette.length];
+        const beamPhase = em.phase + (i * 0.85);
+        const maxSpread = isHyper ? 0.46 : 0.35;
+        const dynamicDir = (i % 2 === 0 ? 1 : -1);
+        const angle = em.baseAngle + Math.sin(now * sweepRate + beamPhase) * maxSpread + (dynamicDir * audio.beatImpact * 0.12);
+
+        const floorY = h * 0.92;
+        const targetX = em.x + Math.tan(angle) * floorY;
+        const targetY = floorY;
+
+        // 光錐羽化外緣
+        const coneWidth = (16 + 28 * audio.bass) * (1 + 0.5 * audio.beatImpact);
+        const bGrad = ctx.createLinearGradient(em.x, em.y, targetX, targetY);
+        bGrad.addColorStop(0, col.glow);
+        bGrad.addColorStop(0.8, col.glow);
+        bGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+
+        ctx.fillStyle = bGrad;
+        ctx.beginPath();
+        ctx.moveTo(em.x - 2, em.y);
+        ctx.lineTo(targetX - coneWidth * 0.5, targetY);
+        ctx.lineTo(targetX + coneWidth * 0.5, targetY);
+        ctx.lineTo(em.x + 2, em.y);
+        ctx.closePath();
+        ctx.fill();
+
+        // 超細銳利雷射核心線
+        ctx.strokeStyle = col.stroke;
+        ctx.lineWidth = (2.2 + 2.4 * audio.bass) * (1 + 0.4 * audio.beatImpact);
+        ctx.shadowBlur = 14 + 18 * audio.bass;
+        ctx.shadowColor = col.stroke;
+        ctx.beginPath();
+        ctx.moveTo(em.x, em.y);
+        ctx.lineTo(targetX, targetY);
+        ctx.stroke();
+
+        // 核心純白亮芯
+        ctx.strokeStyle = col.core;
+        ctx.lineWidth = 1.0;
+        ctx.shadowBlur = 0;
+        ctx.beginPath();
+        ctx.moveTo(em.x, em.y);
+        ctx.lineTo(targetX, targetY);
+        ctx.stroke();
+
+        // 地面雷射接觸光斑 (透視橢圓)
+        const spotRadius = (16 + 22 * audio.bass) * (1 + 0.4 * audio.beatImpact);
+        const spotGrad = ctx.createRadialGradient(targetX, targetY, 0, targetX, targetY, spotRadius);
+        spotGrad.addColorStop(0, '#ffffff');
+        spotGrad.addColorStop(0.35, col.stroke);
+        spotGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+        ctx.fillStyle = spotGrad;
+        ctx.beginPath();
+        ctx.ellipse(targetX, targetY, spotRadius, spotRadius * 0.32, 0, 0, Math.PI * 2);
+        ctx.fill();
+      }
+
+      // 3. 節拍重擊頻閃
+      if (audio.beatImpact > 0.38) {
+        const strobeGrad = ctx.createLinearGradient(0, 0, 0, h * 0.45);
+        strobeGrad.addColorStop(0, `rgba(255, 255, 255, ${0.16 * audio.beatImpact})`);
+        strobeGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+        ctx.fillStyle = strobeGrad;
+        ctx.fillRect(0, 0, w, h * 0.45);
+      }
+
+      ctx.restore();
+    }
+
+    // 慢歌：柔和聖光／極光光錐 + 夢幻微光粒子漂浮
+    function renderSlowAuroraStage(ctx, w, h, profile, now, audio) {
+      const breath = Math.sin(now * 0.75) * 0.15 + 0.85;
+      const lightAlpha = (0.18 + 0.12 * audio.overall) * breath;
+
+      ctx.save();
+
+      const domeLeft = { x: w * 0.25, y: -20 };
+      const domeRight = { x: w * 0.75, y: -20 };
+
+      const pastelTones = [
+        { r: 196, g: 181, b: 253 },
+        { r: 254, g: 205, b: 211 },
+        { r: 254, g: 240, b: 138 },
+        { r: 167, g: 243, b: 208 }
+      ];
+
+      [domeLeft, domeRight].forEach((dome, dIdx) => {
+        const tone = pastelTones[dIdx % pastelTones.length];
+        const drift = Math.sin(now * 0.45 + dIdx * Math.PI) * (w * 0.08);
+        const centerX = (dIdx === 0 ? w * 0.35 : w * 0.65) + drift;
+        const spreadWidth = w * (0.35 + 0.1 * breath);
+
+        const rayGrad = ctx.createRadialGradient(dome.x, dome.y, 20, centerX, h * 0.85, spreadWidth);
+        rayGrad.addColorStop(0, `rgba(${tone.r}, ${tone.g}, ${tone.b}, ${lightAlpha * 1.4})`);
+        rayGrad.addColorStop(0.5, `rgba(${tone.r}, ${tone.g}, ${tone.b}, ${lightAlpha * 0.6})`);
+        rayGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+
+        ctx.fillStyle = rayGrad;
+        ctx.beginPath();
+        ctx.moveTo(dome.x - 30, 0);
+        ctx.lineTo(centerX - spreadWidth, h);
+        ctx.lineTo(centerX + spreadWidth, h);
+        ctx.lineTo(dome.x + 30, 0);
+        ctx.closePath();
+        ctx.fill();
+      });
+
+      // 地面呼吸暖光
+      const floorGrad = ctx.createRadialGradient(w * 0.5, h * 0.9, 0, w * 0.5, h * 0.9, w * 0.45);
+      floorGrad.addColorStop(0, `rgba(254, 240, 138, ${lightAlpha * 0.9})`);
+      floorGrad.addColorStop(0.5, `rgba(196, 181, 253, ${lightAlpha * 0.4})`);
+      floorGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+      ctx.fillStyle = floorGrad;
+      ctx.beginPath();
+      ctx.ellipse(w * 0.5, h * 0.9, w * 0.45, h * 0.16, 0, 0, Math.PI * 2);
+      ctx.fill();
+
+      // 夢幻微光粒子
+      dreamStardustParticles.forEach(p => {
+        p.y -= p.speedY * (0.7 + 0.3 * audio.overall);
+        if (p.y < -0.05) {
+          p.y = 1.05;
+          p.x = Math.random();
+        }
+        const px = (p.x + Math.sin(now * p.swaySpeed + p.phase) * p.swayDist) * w;
+        const py = p.y * h;
+        const pRad = p.radius * (1 + 0.25 * audio.bass);
+        const pAlpha = p.alpha * (0.6 + 0.4 * Math.sin(now * 2.0 + p.phase));
+
+        const pGrad = ctx.createRadialGradient(px, py, 0, px, py, pRad);
+        pGrad.addColorStop(0, `${p.color}${pAlpha})`);
+        pGrad.addColorStop(1, `${p.color}0)`);
+        ctx.fillStyle = pGrad;
+        ctx.beginPath();
+        ctx.arc(px, py, pRad, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      ctx.restore();
+    }
+
+    // 中速歌曲：優雅動態追光燈 + 節奏交叉光芒
+    function renderMediumSpotlightStage(ctx, w, h, profile, now, audio) {
+      const sweepRate = 1.1 * (0.8 + 0.4 * audio.mid);
+      ctx.save();
+
+      const spots = [
+        { x: w * 0.20, y: 0, targetBaseX: w * 0.40, color: 'rgba(251, 191, 36,', phase: 0 },
+        { x: w * 0.35, y: 0, targetBaseX: w * 0.55, color: 'rgba(56, 189, 248,', phase: Math.PI * 0.5 },
+        { x: w * 0.65, y: 0, targetBaseX: w * 0.45, color: 'rgba(244, 63, 94,', phase: Math.PI },
+        { x: w * 0.80, y: 0, targetBaseX: w * 0.60, color: 'rgba(168, 85, 247,', phase: Math.PI * 1.5 }
+      ];
+
+      spots.forEach((sp) => {
+        const sweepX = Math.sin(now * sweepRate + sp.phase) * (w * 0.18);
+        const targetX = sp.targetBaseX + sweepX;
+        const targetY = h * 0.88;
+        const beamW = (40 + 35 * audio.bass) * (1 + 0.3 * audio.beatImpact);
+        const alpha = 0.20 + 0.15 * audio.overall;
+
+        const sGrad = ctx.createLinearGradient(sp.x, sp.y, targetX, targetY);
+        sGrad.addColorStop(0, `${sp.color}${alpha * 1.3})`);
+        sGrad.addColorStop(0.85, `${sp.color}${alpha * 0.6})`);
+        sGrad.addColorStop(1, `${sp.color}0)`);
+
+        ctx.fillStyle = sGrad;
+        ctx.beginPath();
+        ctx.moveTo(sp.x - 10, sp.y);
+        ctx.lineTo(targetX - beamW * 0.5, targetY);
+        ctx.lineTo(targetX + beamW * 0.5, targetY);
+        ctx.lineTo(sp.x + 10, sp.y);
+        ctx.closePath();
+        ctx.fill();
+
+        const spotGrad = ctx.createRadialGradient(targetX, targetY, 0, targetX, targetY, beamW * 0.6);
+        spotGrad.addColorStop(0, `${sp.color}${alpha * 1.5})`);
+        spotGrad.addColorStop(1, `${sp.color}0)`);
+        ctx.fillStyle = spotGrad;
+        ctx.beginPath();
+        ctx.ellipse(targetX, targetY, beamW * 0.6, beamW * 0.22, 0, 0, Math.PI * 2);
+        ctx.fill();
+      });
+
+      ctx.restore();
+    }
+
+    // 切換舞台燈光開關
+    function toggleStageLighting() {
+      userSettings.stageLighting = !userSettings.stageLighting;
+      saveParentSettings();
+      updateStageLightingUIForSong();
+    }
+
+    function updateStageLightingUIForSong(song) {
+      const curSong = song || (typeof currentSongKey !== 'undefined' && songDatabase && songDatabase[currentSongKey]);
+      const profile = getSongVibrancyProfile(curSong);
+
+      const btn = document.getElementById('btn-stage-lighting');
+      const icon = document.getElementById('stage-lighting-icon');
+      const text = document.getElementById('stage-lighting-text');
+      const fsIcon = document.getElementById('fs-lighting-icon');
+      const fsText = document.getElementById('fs-lighting-text');
+
+      const styleIcon = profile.isFast ? '⚡' : (profile.isSlow ? '🌙' : '🌟');
+
+      if (userSettings.stageLighting) {
+        if (icon) icon.innerText = styleIcon;
+        if (text) text.innerText = profile.label;
+        if (fsIcon) fsIcon.innerText = styleIcon;
+        if (fsText) fsText.innerText = `${profile.label}: 開`;
+        if (btn) {
+          btn.className = "bg-slate-900/80 hover:bg-slate-800 text-amber-300 text-[10px] sm:text-xs font-bold px-2 sm:px-2.5 py-0.5 rounded-full border border-amber-300/40 shadow-xs flex items-center gap-1 transition active:scale-95 shrink-0";
+        }
+      } else {
+        if (icon) icon.innerText = '💡';
+        if (text) text.innerText = '燈效: 關';
+        if (fsIcon) fsIcon.innerText = '💡';
+        if (fsText) fsText.innerText = '燈效: 關';
+        if (btn) {
+          btn.className = "bg-slate-900/50 hover:bg-slate-800 text-slate-400 text-[10px] sm:text-xs font-bold px-2 sm:px-2.5 py-0.5 rounded-full border border-white/20 shadow-xs flex items-center gap-1 transition active:scale-95 shrink-0";
+        }
+      }
     }
 
     // ========================================================
@@ -6143,6 +6674,9 @@
         }
       }
 
+      // 依當前歌曲動感活潑程度即時更新舞台雷射/光線狀態標籤
+      updateStageLightingUIForSong(song);
+
       // 立即切換底層視圖至單曲跳舞教室 (被 z-[100] 的 song-stage-loader 遮罩覆蓋)，讓視訊與音訊元素處於可見 DOM 樹中以加速硬體解碼
       viewLobby.classList.add('hidden');
       if (viewDancerSquad) viewDancerSquad.classList.add('hidden');
@@ -6480,20 +7014,33 @@
 
     function resizeCanvas() {
       updateDanceStageScale();
-      if (!cameraCanvas) return;
-      const container = document.getElementById('camera-container') || cameraCanvas.parentElement;
+      const container = document.getElementById('camera-container') || (cameraCanvas && cameraCanvas.parentElement);
       if (!container) return;
       const rect = container.getBoundingClientRect();
       const w = Math.round(container.clientWidth || container.offsetWidth || rect.width || 0);
       const h = Math.round(container.clientHeight || container.offsetHeight || rect.height || 0);
-      if (w > 0 && h > 0) {
-        if (cameraCanvas.width !== w || cameraCanvas.height !== h) {
-          cameraCanvas.width = w;
-          cameraCanvas.height = h;
+      if (cameraCanvas) {
+        if (w > 0 && h > 0) {
+          if (cameraCanvas.width !== w || cameraCanvas.height !== h) {
+            cameraCanvas.width = w;
+            cameraCanvas.height = h;
+          }
+        } else if (!cameraCanvas.width || !cameraCanvas.height) {
+          cameraCanvas.width = 640;
+          cameraCanvas.height = 480;
         }
-      } else if (!cameraCanvas.width || !cameraCanvas.height) {
-        cameraCanvas.width = 640;
-        cameraCanvas.height = 480;
+      }
+      const stageLaserCanvas = document.getElementById('stage-laser-canvas');
+      if (stageLaserCanvas) {
+        if (w > 0 && h > 0) {
+          if (stageLaserCanvas.width !== w || stageLaserCanvas.height !== h) {
+            stageLaserCanvas.width = w;
+            stageLaserCanvas.height = h;
+          }
+        } else if (!stageLaserCanvas.width || !stageLaserCanvas.height) {
+          stageLaserCanvas.width = 640;
+          stageLaserCanvas.height = 480;
+        }
       }
     }
     window.addEventListener('resize', resizeCanvas);
@@ -7567,6 +8114,12 @@
         ctx.clearRect(0, 0, cameraCanvas.width, cameraCanvas.height);
         frameTick++;
 
+        // 💡 舞台聲控動態激光與光線效果渲染 (依歌曲活潑動感程度與即時音訊頻譜自適應)
+        try {
+          updateStageAudioAnalysis();
+          renderStageLighting();
+        } catch(e) {}
+
         const w = cameraCanvas.width;
         const h = cameraCanvas.height;
         if (w > 0 && h > 0) {
@@ -8513,6 +9066,8 @@
 
       if (audioBgm) {
         audioBgm.muted = !userSettings.bgmEnabled;
+        getAudioContext();
+        setupBgmAudioAnalysis();
         audioBgm.play().catch(e => {
           console.log("Audio autoplay fallback:", e);
         });
@@ -8670,6 +9225,7 @@
       isCameraFullscreen = !isCameraFullscreen;
       const cameraSec = document.getElementById('camera-section');
       const ktvBar = document.getElementById('camera-ktv-subtitle-bar');
+      const fsControls = document.getElementById('camera-fs-controls');
       const btnExitFs = document.getElementById('btn-camera-exit-fs');
       const fsIcon = document.getElementById('camera-fs-icon');
       const fsText = document.getElementById('camera-fs-text');
@@ -8679,6 +9235,7 @@
         if (viewDance) viewDance.classList.add('is-camera-fs');
         if (cameraSec) cameraSec.classList.add('camera-fullscreen-active');
         if (ktvBar) ktvBar.classList.remove('hidden');
+        if (fsControls) fsControls.classList.remove('hidden');
         if (btnExitFs) btnExitFs.classList.remove('hidden');
         if (cameraBottomBar) cameraBottomBar.classList.add('hidden');
         if (fsIcon) fsIcon.innerText = "✖";
@@ -8705,6 +9262,7 @@
         if (viewDance) viewDance.classList.remove('is-camera-fs');
         if (cameraSec) cameraSec.classList.remove('camera-fullscreen-active');
         if (ktvBar) ktvBar.classList.add('hidden');
+        if (fsControls) fsControls.classList.add('hidden');
         if (btnExitFs) btnExitFs.classList.add('hidden');
         if (cameraBottomBar) cameraBottomBar.classList.remove('hidden');
         if (fsIcon) fsIcon.innerText = "🔲";
