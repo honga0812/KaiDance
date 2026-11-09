@@ -2235,7 +2235,7 @@
 
   <!-- ========================================================= -->
   <!-- 🌟 頁面 1-A：K-Pop 舞蹈戰隊 5 位小朋友 3D 環形旋轉選單頁    -->
-  <!-- (上方動態投射燈掃射 + 圓形立體轉盤選角 + 小朋友童聲口號 + 專屬 4 首歌單連播) -->
+  <!-- (上方動態投射燈掃射 + 圓形立體轉盤選角 + 小朋友童聲口號 + 專屬 8 首歌單連播) -->
   <!-- ========================================================= -->
   <div id="view-dancer-squad" class="hidden flex-1 flex flex-col p-3 sm:p-4 md:p-5 max-w-6xl mx-auto w-full rounded-3xl overflow-hidden jelly-cosmic-stage my-2 relative">
 
@@ -2288,7 +2288,7 @@
               <span>🎤 Kai舞蹈戰隊選單</span>
             </h2>
             <p class="text-[11px] sm:text-xs text-amber-200 font-bold">
-              左右拖曳 3D 舞台空間旋轉選擇小朋友 · 聆聽活力童聲與專屬 4 首舞曲連播！
+              左右拖曳 3D 舞台空間旋轉選擇小朋友 · 聆聽活力童聲與專屬 8 首舞曲連播！
             </p>
           </div>
         </div>
@@ -2343,9 +2343,9 @@
       </div>
     </section>
 
-    <!-- 🎵 下方：當前選中小朋友的「專屬 4 首代表舞曲」歌單與一鍵連播控制台 -->
+    <!-- 🎵 下方：當前選中小朋友的「專屬 8 首代表舞曲」歌單與一鍵連播控制台 -->
     <section class="relative z-20 mt-1 bg-slate-950/75 backdrop-blur-xl border border-white/20 rounded-3xl p-3 sm:p-4 shadow-[0_16px_40px_rgba(0,0,0,0.75)]">
-      <!-- 角色專屬歌單標題列 + 一鍵連播 4 首歌大按鈕 -->
+      <!-- 角色專屬歌單標題列 + 一鍵連播 8 首歌大按鈕 -->
       <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 pb-3 mb-3 border-b border-white/15">
         <div class="flex items-center gap-3">
           <div id="selected-dancer-avatar-badge" class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl overflow-hidden border-2 border-amber-300 shadow-[0_0_16px_rgba(251,191,36,0.5)] shrink-0">
@@ -2354,28 +2354,28 @@
           <div>
             <div class="flex items-center gap-2 flex-wrap">
               <h3 id="selected-dancer-playlist-title" class="text-base sm:text-lg font-black text-white">
-                👦⚡ Kai · 專屬 4 首代表舞曲
+                👦⚡ Kai · 專屬 8 首代表舞曲
               </h3>
               <span id="selected-dancer-style-badge" class="px-2.5 py-0.5 rounded-full text-[10px] sm:text-[11px] font-black bg-sky-500/30 text-sky-200 border border-sky-300/50">
                 ⚡ K-Pop 銀藍星際男團風
               </span>
             </div>
             <p id="selected-dancer-playlist-desc" class="text-[11px] sm:text-xs text-slate-300 font-bold mt-0.5">
-              包含 ☀️ 晨光星球 2 首 ＋ 🪐 派對星球 2 首 · 點選下方任一首或一鍵連播這 4 首歌！
+              包含 ☀️ 晨光 2 首 ＋ 🪐 派對 2 首 ＋ 🌸 櫻花 2 首 ＋ 🌅 日落 2 首 · 點選下方任一首或一鍵連播這 8 首歌！
             </p>
           </div>
         </div>
 
-        <!-- ▶ 一鍵連播該小朋友的 4 首歌主按鈕 -->
+        <!-- ▶ 一鍵連播該小朋友的 8 首歌主按鈕 -->
         <button id="btn-play-dancer-4songs" onclick="playSelectedDancerAllSongs()" class="jelly-btn jelly-btn-gold px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-black text-xs sm:text-sm md:text-base flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(251,191,36,0.65)] shrink-0 cursor-pointer">
           <span>▶</span>
-          <span id="btn-play-dancer-4songs-label">連播 Kai 的 4 首專屬舞曲 (1➔4)</span>
+          <span id="btn-play-dancer-4songs-label">連播 Kai 的 8 首專屬舞曲 (1➔8)</span>
         </button>
       </div>
 
-      <!-- 4 首專屬歌曲卡片橫列 (1~4 播放順序) -->
+      <!-- 8 首專屬歌曲卡片橫列 (1~8 播放順序) -->
       <div id="dancer-4songs-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-3.5">
-        <!-- 由 JS 動態渲染該小朋友的 4 首代表歌曲卡片 -->
+        <!-- 由 JS 動態渲染該小朋友的 8 首代表歌曲卡片 -->
       </div>
     </section>
 
@@ -4330,7 +4330,7 @@
         id: 'dance_squad',
         title: 'Kai舞蹈戰隊',
         shortName: '🎤 Kai舞蹈戰隊',
-        badge: '🎤 舞團專屬 4 首歌單選單',
+        badge: '🎤 舞團專屬 8 首歌單選單',
         style: 'Kai · Jessie · Tim · Mina · MiMi · 自由旋轉選角與專屬舞曲連播',
         color: '#38bdf8',
         glowClass: 'glow-squad',
@@ -4995,13 +4995,13 @@
     }
 
     // ========================================================
-    // 🌟 K-Pop 舞蹈戰隊 5 位小朋友 3D 無圖卡空間拖曳旋轉選單與專屬 4 首歌單連播系統
+    // 🌟 K-Pop 舞蹈戰隊 5 位小朋友 3D 無圖卡空間拖曳旋轉選單與專屬 8 首歌單連播系統
     // ========================================================
     const viewDancerSquad = document.getElementById('view-dancer-squad');
     let currentDancerIndex = 0; // 0: Kai, 1: Jessie, 2: Tim, 3: Mina, 4: MiMi
     let dancerStageAngle = 0; // 連續 3D 空間旋轉角度 (度)，支援 360 度無縫拖曳
     let isDancerDragging = false;
-    let isDancerPlaylistMode = false; // 是否處於小朋友專屬 4 首歌單連播模式
+    let isDancerPlaylistMode = false; // 是否處於小朋友專屬 8 首歌單連播模式
     let activeDancerIndexForPlay = 0;
 
     const DANCER_SQUAD_DATA = [
@@ -5016,7 +5016,7 @@
         cutout: './images/album2_kpop/cutouts/kid1_kai.png',
         voiceAudioId: 'audio-kid-voice-0',
         voiceText: "Let's go! 我是 Kai，讓我們一起來跳舞吧！",
-        songs: ['a1_s01', 'a1_s06', 'a2_s03', 'a2_s06'],
+        songs: ['a1_s01', 'a1_s06', 'a2_s03', 'a2_s06', 'a3_s02', 'a3_s09', 'a4_s02', 'a4_s07'],
         accentColor: '#38bdf8',
         glowRgba: 'rgba(56, 189, 248, 0.85)',
         spotlightBg: 'linear-gradient(180deg, rgba(56, 189, 248, 0.88) 0%, rgba(59, 130, 246, 0.28) 58%, transparent 100%)',
@@ -5033,7 +5033,7 @@
         cutout: './images/album2_kpop/cutouts/kid2_niu.png',
         voiceAudioId: 'audio-kid-voice-1',
         voiceText: "耶！我是 Jessie，準備好了嗎？跟我一起閃亮搖擺吧！",
-        songs: ['a1_s02', 'a1_s07', 'a2_s01', 'a2_s07'],
+        songs: ['a1_s02', 'a1_s07', 'a2_s01', 'a2_s07', 'a3_s01', 'a3_s05', 'a4_s01', 'a4_s08'],
         accentColor: '#f472b6',
         glowRgba: 'rgba(244, 114, 182, 0.88)',
         spotlightBg: 'linear-gradient(180deg, rgba(244, 114, 182, 0.88) 0%, rgba(217, 70, 239, 0.28) 58%, transparent 100%)',
@@ -5050,7 +5050,7 @@
         cutout: './images/album2_kpop/cutouts/kid3_hihi.png',
         voiceAudioId: 'audio-kid-voice-2',
         voiceText: "Yo! Let's party! 我是 Tim，跟上節拍一起跳起來！",
-        songs: ['a1_s03', 'a1_s08', 'a2_s04', 'a2_s08'],
+        songs: ['a1_s03', 'a1_s08', 'a2_s04', 'a2_s08', 'a3_s04', 'a3_s07', 'a4_s04', 'a4_s09'],
         accentColor: '#34d399',
         glowRgba: 'rgba(52, 211, 153, 0.85)',
         spotlightBg: 'linear-gradient(180deg, rgba(52, 211, 153, 0.86) 0%, rgba(16, 185, 129, 0.28) 58%, transparent 100%)',
@@ -5067,7 +5067,7 @@
         cutout: './images/album2_kpop/cutouts/kid4_mina.png',
         voiceAudioId: 'audio-kid-voice-3',
         voiceText: "Hi! Let's dance! 我是 Mina，快樂音樂開始囉，一起開心跳舞吧！",
-        songs: ['a1_s04', 'a1_s09', 'a2_s02', 'a2_s09'],
+        songs: ['a1_s04', 'a1_s09', 'a2_s02', 'a2_s09', 'a3_s03', 'a3_s08', 'a4_s03', 'a4_s06'],
         accentColor: '#c084fc',
         glowRgba: 'rgba(192, 132, 252, 0.88)',
         spotlightBg: 'linear-gradient(180deg, rgba(192, 132, 252, 0.88) 0%, rgba(139, 92, 246, 0.28) 58%, transparent 100%)',
@@ -5084,7 +5084,7 @@
         cutout: './images/album2_kpop/cutouts/kid5_mimi.png',
         voiceAudioId: 'audio-kid-voice-4',
         voiceText: "One, two, three, jump! 我是 MiMi，派對時間到，大家一起嗨起來！",
-        songs: ['a1_s05', 'a1_s10', 'a2_s05', 'a2_s10'],
+        songs: ['a1_s05', 'a1_s10', 'a2_s05', 'a2_s10', 'a3_s06', 'a3_s10', 'a4_s05', 'a4_s10'],
         accentColor: '#fbbf24',
         glowRgba: 'rgba(251, 191, 36, 0.88)',
         spotlightBg: 'linear-gradient(180deg, rgba(251, 191, 36, 0.88) 0%, rgba(244, 63, 94, 0.28) 58%, transparent 100%)',
@@ -5322,7 +5322,7 @@
       });
     }
 
-    // 根據 currentDancerIndex 更新舞台燈光、童聲氣泡與下方 4 首專屬代表舞曲面板
+    // 根據 currentDancerIndex 更新舞台燈光、童聲氣泡與下方 8 首專屬代表舞曲面板
     function updateDancer3DCarouselUI() {
       renderDancer3DStagePositions();
       const activeDancer = DANCER_SQUAD_DATA[currentDancerIndex] || DANCER_SQUAD_DATA[0];
@@ -5364,7 +5364,7 @@
       if (speechText) speechText.innerText = `"${activeDancer.voiceText}"`;
       if (speechBubble) speechBubble.style.borderColor = activeDancer.accentColor;
 
-      // 更新下方該小朋友的 4 首專屬代表舞曲面板
+      // 更新下方該小朋友的 8 首專屬代表舞曲面板
       renderSelectedDancer4Songs(activeDancer);
     }
 
@@ -5373,37 +5373,73 @@
       const titleEl = document.getElementById('selected-dancer-playlist-title');
       const styleBadge = document.getElementById('selected-dancer-style-badge');
       const playAllLabel = document.getElementById('btn-play-dancer-4songs-label');
+      const descEl = document.getElementById('selected-dancer-playlist-desc');
       const gridEl = document.getElementById('dancer-4songs-grid');
 
+      const songCount = dancer.songs.length;
       if (miniImg) miniImg.src = dancer.image;
-      if (titleEl) titleEl.innerText = `${dancer.emoji} ${dancer.name} · 專屬 4 首代表舞曲`;
+      if (titleEl) titleEl.innerText = `${dancer.emoji} ${dancer.name} · 專屬 ${songCount} 首代表舞曲`;
       if (styleBadge) styleBadge.innerText = dancer.styleTag;
-      if (playAllLabel) playAllLabel.innerText = `連播 ${dancer.name} 的 4 首專屬舞曲 (1➔4)`;
+      if (playAllLabel) playAllLabel.innerText = `連播 ${dancer.name} 的 ${songCount} 首專屬舞曲 (1➔${songCount})`;
+      if (descEl) descEl.innerText = `包含 ☀️ 晨光 2 首 ＋ 🪐 派對 2 首 ＋ 🌸 櫻花 2 首 ＋ 🌅 日落 2 首 · 點選下方任一首或一鍵連播這 ${songCount} 首歌！`;
 
       if (!gridEl || !window.KAI_ALBUM_DATABASE) return;
 
       gridEl.innerHTML = dancer.songs.map((songId, orderIdx) => {
         const song = songDatabase[songId];
         if (!song) return '';
-        const isP1 = songId.startsWith('a1_');
-        const planetLabel = isP1 ? '☀️ 晨光星球' : '🪐 派對星球';
-        const planetBadgeClass = isP1
-          ? 'bg-amber-400 text-slate-950 border-amber-200'
-          : 'bg-fuchsia-500 text-white border-fuchsia-300';
-        const cardClass = isP1 ? 'jelly-song-card-p1' : 'jelly-song-card-p2';
-        const titleColorClass = isP1 ? 'text-amber-950' : 'text-white';
-        const subColorClass = isP1 ? 'text-amber-800' : 'text-fuchsia-300';
+        let planetLabel = '☀️ 晨光星球';
+        let planetBadgeClass = 'bg-amber-400 text-slate-950 border-amber-200';
+        let cardClass = 'jelly-song-card-p1';
+        let titleColorClass = 'text-amber-950';
+        let subColorClass = 'text-amber-800';
+        let borderClass = 'border-amber-500/25';
+        let coachColorClass = 'text-amber-900/80';
+
+        if (songId.startsWith('a2_')) {
+          planetLabel = '🪐 派對星球';
+          planetBadgeClass = 'bg-fuchsia-500 text-white border-fuchsia-300';
+          cardClass = 'jelly-song-card-p2';
+          titleColorClass = 'text-white';
+          subColorClass = 'text-fuchsia-300';
+          borderClass = 'border-white/15';
+          coachColorClass = 'text-sky-200/80';
+        } else if (songId.startsWith('a3_')) {
+          planetLabel = '🌸 櫻花星球';
+          planetBadgeClass = 'bg-rose-500 text-white border-rose-300';
+          cardClass = 'jelly-song-card-p1';
+          titleColorClass = 'text-rose-950';
+          subColorClass = 'text-rose-600';
+          borderClass = 'border-rose-400/25';
+          coachColorClass = 'text-rose-900/80';
+        } else if (songId.startsWith('a4_')) {
+          planetLabel = '🌅 日落星球';
+          planetBadgeClass = 'bg-orange-500 text-slate-950 border-amber-300';
+          cardClass = 'jelly-song-card-p2';
+          titleColorClass = 'text-white';
+          subColorClass = 'text-amber-400';
+          borderClass = 'border-orange-500/30';
+          coachColorClass = 'text-orange-200/80';
+        }
+
+        const hasVideo = song.timeline && song.timeline.some(s => s.video);
+        const mediaBadge = hasVideo
+          ? '<span class="jelly-btn-gold text-[9px] font-black px-1.5 py-0.5 rounded-full">🎬 示範影片</span>'
+          : '<span class="jelly-btn-cyan text-[9px] font-black px-1.5 py-0.5 rounded-full">📸 動作寫真</span>';
 
         return `
           <div onclick="playDancerSongAtIndex(${orderIdx})"
                class="group relative ${cardClass} rounded-2xl p-3 sm:p-3.5 transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden select-none">
             <div class="flex items-center justify-between gap-1 mb-1.5 relative z-20">
               <span class="px-2 py-0.5 rounded-full text-[10px] font-black ${planetBadgeClass} border shadow-xs">
-                順序 ${orderIdx + 1}/4 · ${planetLabel}
+                順序 ${orderIdx + 1}/${songCount} · ${planetLabel}
               </span>
-              <span class="text-[10px] font-black px-2 py-0.5 rounded-full bg-slate-950/75 text-amber-300 border border-amber-300/40">
-                #${String(song.trackNumber).padStart(2, '0')}
-              </span>
+              <div class="flex items-center gap-1">
+                ${mediaBadge}
+                <span class="text-[10px] font-black px-1.5 py-0.5 rounded-full bg-slate-950/75 text-amber-300 border border-amber-300/40">
+                  #${String(song.trackNumber).padStart(2, '0')}
+                </span>
+              </div>
             </div>
 
             <div>
@@ -5416,10 +5452,10 @@
               </p>
             </div>
 
-            <div class="mt-2.5 pt-2 border-t ${isP1 ? 'border-amber-500/25' : 'border-white/15'} flex items-center justify-between">
-              <span class="text-[10px] font-bold ${isP1 ? 'text-amber-900/80' : 'text-sky-200/80'}">🎤 領舞: ${dancer.name}</span>
+            <div class="mt-2.5 pt-2 border-t ${borderClass} flex items-center justify-between">
+              <span class="text-[10px] font-bold ${coachColorClass}">🎤 領舞: ${dancer.name}</span>
               <button class="jelly-btn-gold text-[11px] font-black px-3 py-1 rounded-xl flex items-center gap-1">
-                <span>▶</span> 開跳 (${orderIdx + 1}/4)
+                <span>▶</span> 開跳 (${orderIdx + 1}/${songCount})
               </button>
             </div>
           </div>
@@ -5446,7 +5482,7 @@
       }
     }
 
-    // 點選小朋友互動邏輯：若點選非當前主角，旋轉至正中央並播放引導語音；若已在正中央再次點下去，直接進入專屬 4 首歌播放！
+    // 點選小朋友互動邏輯：若點選非當前主角，旋轉至正中央並播放引導語音；若已在正中央再次點下去，直接進入專屬 8 首歌播放！
     function handleDancerTapOrSelect(idx) {
       const targetIdx = ((idx % 5) + 5) % 5;
       if (targetIdx === currentDancerIndex) {
@@ -5478,12 +5514,12 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
-    // 啟動該小朋友的 4 首歌專屬連播模式 (從第 1 首開始連播 4 首)
+    // 啟動該小朋友的 8 首歌專屬連播模式 (從第 1 首開始連播 8 首)
     function playSelectedDancerAllSongs() {
       playDancerSongAtIndex(0);
     }
 
-    // 從該小朋友的 4 首歌單中點選第 orderIdx 首開始連播
+    // 從該小朋友的 8 首歌單中點選第 orderIdx 首開始連播
     function playDancerSongAtIndex(orderIdx) {
       const dancer = DANCER_SQUAD_DATA[currentDancerIndex] || DANCER_SQUAD_DATA[0];
       const targetSongId = dancer.songs[orderIdx] || dancer.songs[0];
@@ -5865,7 +5901,7 @@
       }
     }
 
-    // 渲染歌單抽屜 (支援「小朋友專屬 4 首歌單連播模式」與「全星球 10 首歌單模式」)
+    // 渲染歌單抽屜 (支援「小朋友專屬 8 首歌單連播模式」與「全星球 10 首歌單模式」)
     function renderPlaylistDrawer() {
       const listContainer = document.getElementById('drawer-song-list');
       const dTitle = document.getElementById('drawer-album-title');
@@ -5879,11 +5915,11 @@
         const dancer = DANCER_SQUAD_DATA[activeDancerIndexForPlay] || DANCER_SQUAD_DATA[0];
         songsToRender = dancer.songs.map(id => songDatabase[id]).filter(Boolean);
         if (dTitle) {
-          dTitle.innerText = `${dancer.emoji} ${dancer.name} 專屬 4 首代表舞曲`;
+          dTitle.innerText = `${dancer.emoji} ${dancer.name} 專屬 ${dancer.songs.length} 首代表舞曲`;
           dTitle.className = isP1 ? "font-black text-base text-amber-950 leading-tight" : "font-black text-base text-white leading-tight drop-shadow";
         }
         if (dSub) {
-          dSub.innerText = `${isAlbumContinuousPlay ? `${dancer.name} 4首專屬連播中` : '單曲模式'} · 跨星球精選 4 首`;
+          dSub.innerText = `${isAlbumContinuousPlay ? `${dancer.name} ${dancer.songs.length}首專屬連播中` : '單曲模式'} · 跨星球精選 ${dancer.songs.length} 首`;
           dSub.className = isP1 ? "text-xs text-amber-800 font-bold" : "text-xs text-sky-200/80 font-bold";
         }
       } else {
@@ -5915,7 +5951,7 @@
           : (isCurrent ? 'text-amber-300' : 'text-white');
         const subClass = isP1 ? 'text-amber-800/90' : 'text-sky-200/80';
         const badgeText = isDancerPlaylistMode
-          ? `${idx + 1}/4`
+          ? `${idx + 1}/${songsToRender.length}`
           : `#${String(song.trackNumber).padStart(2, '0')}`;
 
         return `
@@ -5964,7 +6000,7 @@
       const drawerHint = document.getElementById('drawer-loop-hint');
       const drawerIcon = document.getElementById('drawer-loop-icon');
       const dancer = DANCER_SQUAD_DATA[activeDancerIndexForPlay] || DANCER_SQUAD_DATA[0];
-      const contLabel = isDancerPlaylistMode ? `${dancer.name} 4首連播` : '全專輯連播';
+      const contLabel = isDancerPlaylistMode ? `${dancer.name} ${dancer.songs.length}首連播` : '全專輯連播';
 
       if (isAlbumContinuousPlay) {
         if (btnIcon) btnIcon.innerText = "🔁";
@@ -5974,7 +6010,7 @@
           drawerBtn.className = "jelly-btn-gold text-xs font-black px-3 py-1 rounded-xl active:scale-95 transition";
         }
         if (drawerHint) drawerHint.innerText = isDancerPlaylistMode
-          ? `依序連播 ${dancer.name} 的 4 首代表舞曲`
+          ? `依序連播 ${dancer.name} 的 ${dancer.songs.length} 首代表舞曲`
           : "播完自動換下一首 (全專輯循環)";
         if (drawerIcon) drawerIcon.innerText = "🔁";
       } else {
@@ -5989,7 +6025,7 @@
       }
     }
 
-    // 上一首 (若處於小朋友專屬 4 首歌單模式，則在該小朋友的 4 首歌之間循環)
+    // 上一首 (若處於小朋友專屬 8 首歌單模式，則在該小朋友的 8 首歌之間循環)
     function prevSong() {
       if (isDancerPlaylistMode) {
         const dancer = DANCER_SQUAD_DATA[activeDancerIndexForPlay] || DANCER_SQUAD_DATA[0];
@@ -6006,7 +6042,7 @@
       selectSong(album.songs[prevIdx].id);
     }
 
-    // 下一首 (若處於小朋友專屬 4 首歌單模式，則依該小朋友的 4 首歌順序播放)
+    // 下一首 (若處於小朋友專屬 8 首歌單模式，則依該小朋友的 8 首歌順序播放)
     function nextSong() {
       if (isDancerPlaylistMode) {
         const dancer = DANCER_SQUAD_DATA[activeDancerIndexForPlay] || DANCER_SQUAD_DATA[0];
@@ -6101,7 +6137,7 @@
         if (isDancerPlaylistMode) {
           const dancer = DANCER_SQUAD_DATA[activeDancerIndexForPlay] || DANCER_SQUAD_DATA[0];
           const dOrd = dancer.songs.indexOf(song.id) + 1;
-          albumBadge.innerHTML = `<img src="${badgePlanetImg}" alt="" class="w-4 h-4 object-contain inline-block shrink-0"> <span>${dancer.emoji} ${dancer.name} 歌單 (${dOrd || 1}/4) · ${badgePlanetName}</span>`;
+          albumBadge.innerHTML = `<img src="${badgePlanetImg}" alt="" class="w-4 h-4 object-contain inline-block shrink-0"> <span>${dancer.emoji} ${dancer.name} 歌單 (${dOrd || 1}/${dancer.songs.length}) · ${badgePlanetName}</span>`;
         } else {
           albumBadge.innerHTML = `<img src="${badgePlanetImg}" alt="" class="w-4 h-4 object-contain inline-block shrink-0"> <span>${badgePlanetName} #${String(song.trackNumber || 1).padStart(2, '0')}</span>`;
         }

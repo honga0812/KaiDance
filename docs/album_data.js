@@ -14038,7 +14038,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Hmm.... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友準備好，跟著輕快節奏一起動起來！",
-            "lyricZh": "歡樂律動前奏"
+            "lyricZh": "歡樂律動前奏",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 3.57,
@@ -14052,7 +14053,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Feel the love toni... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：歪頭手托耳旁閉眼聆聽！",
-            "lyricZh": "嗯，溫柔的旋律在耳邊響起。"
+            "lyricZh": "嗯，溫柔的旋律在耳邊響起。",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 8.2,
@@ -14066,7 +14068,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Warm as sunshine s... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手撫胸溫柔深呼吸！",
-            "lyricZh": "感受今晚空氣中流淌的愛意，"
+            "lyricZh": "感受今晚空氣中流淌的愛意，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 11.7,
@@ -14080,7 +14083,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Warm as sunshine s... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 15.57,
@@ -14094,7 +14098,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Morning light peek... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手由胸前向兩側展開！",
-            "lyricZh": "像溫暖明媚的陽光一樣燦爛發光。"
+            "lyricZh": "像溫暖明媚的陽光一樣燦爛發光。",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 21.67,
@@ -14108,7 +14113,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Gentle breeze danc... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：抬頭仰望晨光微露！",
-            "lyricZh": "晨光悄悄穿過樹梢灑落下來，"
+            "lyricZh": "晨光悄悄穿過樹梢灑落下來，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 26.87,
@@ -14122,7 +14128,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I walk up to you w... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙臂如柳枝輕柔左右飄動！",
-            "lyricZh": "溫柔的微風正與樹葉一同翩翩起舞。"
+            "lyricZh": "溫柔的微風正與樹葉一同翩翩起舞。",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 31.4,
@@ -14136,7 +14143,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Open my arms and l... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：邁開步伐向鏡頭前進微笑！",
-            "lyricZh": "我帶著快樂燦爛的笑容走向你，"
+            "lyricZh": "我帶著快樂燦爛的笑容走向你，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 36.47,
@@ -14150,7 +14158,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Wrap your arms aro... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：敞開胸懷準備大擁抱！",
-            "lyricZh": "張開溫暖雙臂，讓擁抱拉開序幕！"
+            "lyricZh": "張開溫暖雙臂，讓擁抱拉開序幕！",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 41.87,
@@ -14164,7 +14173,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Everything is gonn... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手抱緊自己溫柔轉動！",
-            "lyricZh": "用雙臂緊緊把彼此環抱在一起，"
+            "lyricZh": "用雙臂緊緊把彼此環抱在一起，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 47.37,
@@ -14178,7 +14188,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I love you in the ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手合十微笑點頭安心！",
-            "lyricZh": "所有的事情都會變得平安美好！"
+            "lyricZh": "所有的事情都會變得平安美好！",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 51.1,
@@ -14192,7 +14203,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Love you at night.... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手自心口向外推愛心！",
-            "lyricZh": "清晨醒來的時候我深深愛著你，"
+            "lyricZh": "清晨醒來的時候我深深愛著你，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 53.87,
@@ -14206,7 +14218,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Warm hug symphony,... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手貼臉頰溫柔依偎！",
-            "lyricZh": "夜晚入睡時我也依然愛著你。"
+            "lyricZh": "夜晚入睡時我也依然愛著你。",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 56.13,
@@ -14220,7 +14233,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Such a delight! It... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：身體跟隨節奏大弧度律動！",
-            "lyricZh": "這是一首溫暖擁抱的交響曲，"
+            "lyricZh": "這是一首溫暖擁抱的交響曲，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 60.13,
@@ -14234,7 +14248,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Doesn't take all d... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手攤開展現無價之愛！",
-            "lyricZh": "多麼令人欣喜快樂！擁抱不花一分錢，"
+            "lyricZh": "多麼令人欣喜快樂！擁抱不花一分錢，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 64.07,
@@ -14248,7 +14263,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "A simple warm hug ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：手指比出一點點溫柔笑！",
-            "lyricZh": "也不會花費一整天的時間。"
+            "lyricZh": "也不會花費一整天的時間。",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 66.2,
@@ -14262,7 +14278,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "From my little hea... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手向上推開所有烏雲！",
-            "lyricZh": "一個純真溫暖的擁抱，就能吹散心頭所有的烏雲！"
+            "lyricZh": "一個純真溫暖的擁抱，就能吹散心頭所有的烏雲！",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 71.27,
@@ -14276,7 +14293,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Love opens up all ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：食指從自己胸膛指向朋友心膛！",
-            "lyricZh": "從我的小小小心靈直接傳遞進你的心房，"
+            "lyricZh": "從我的小小小心靈直接傳遞進你的心房，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 76.5,
@@ -14290,7 +14308,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Wrap your arms aro... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手推開宏偉金色大門！",
-            "lyricZh": "愛會為我們開啟所有閃閃發光的金色大門！"
+            "lyricZh": "愛會為我們開啟所有閃閃發光的金色大門！",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 82.3,
@@ -14304,7 +14323,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Everything is gonn... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手抱緊自己溫柔轉動！",
-            "lyricZh": "用雙臂緊緊把彼此環抱在一起，"
+            "lyricZh": "用雙臂緊緊把彼此環抱在一起，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 87.77,
@@ -14318,7 +14338,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I love you in the ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手合十微笑點頭安心！",
-            "lyricZh": "所有的事情都會變得平安美好！"
+            "lyricZh": "所有的事情都會變得平安美好！",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 91.5,
@@ -14332,7 +14353,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Love you at night.... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手自心口向外推愛心！",
-            "lyricZh": "清晨醒來的時候我深深愛著你，"
+            "lyricZh": "清晨醒來的時候我深深愛著你，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 94.27,
@@ -14346,7 +14368,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Warm hug symphony,... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手貼臉頰溫柔依偎！",
-            "lyricZh": "夜晚入睡時我也依然愛著你。"
+            "lyricZh": "夜晚入睡時我也依然愛著你。",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 96.5,
@@ -14360,7 +14383,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Such a delight! Lo... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：身體跟隨節奏大弧度律動！",
-            "lyricZh": "這是一首溫暖擁抱的交響曲，"
+            "lyricZh": "這是一首溫暖擁抱的交響曲，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 100.57,
@@ -14374,7 +14398,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Love is true. Big ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手胸前交疊深情點頭！",
-            "lyricZh": "多麼令人欣喜快樂！愛是恆久忍耐，"
+            "lyricZh": "多麼令人欣喜快樂！愛是恆久忍耐，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 105,
@@ -14388,7 +14413,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：張開雙臂送出深情擁抱定格！",
-            "lyricZh": "愛是信實真誠，送給你一個大大的溫暖擁抱！"
+            "lyricZh": "愛是信實真誠，送給你一個大大的溫暖擁抱！",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 112.77,
@@ -14402,7 +14428,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           }
         ],
         "leadDancer": "Jessie (波浪雙馬尾女孩)"
@@ -14438,7 +14465,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Snap, snap, snap, ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友準備好，跟著輕快節奏一起動起來！",
-            "lyricZh": "歡樂律動前奏"
+            "lyricZh": "歡樂律動前奏",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 1.87,
@@ -14452,7 +14480,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Got a little joy i... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手打響指隨節拍搖擺！",
-            "lyricZh": "噠、噠、噠、噠！彈響手指節拍！"
+            "lyricZh": "噠、噠、噠、噠！彈響手指節拍！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 4.07,
@@ -14466,7 +14495,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Raindrops tapping ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手拍拍褲子口袋俏皮笑！",
-            "lyricZh": "在我的小口袋裡裝滿了滿滿的喜樂！"
+            "lyricZh": "在我的小口袋裡裝滿了滿滿的喜樂！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 6.9,
@@ -14480,7 +14510,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Raindrops tapping ... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 19.6,
@@ -14494,7 +14525,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Can't go outside, ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：手指在身前做雨滴下落律動！",
-            "lyricZh": "小雨滴劈啪敲打在玻璃窗台，"
+            "lyricZh": "小雨滴劈啪敲打在玻璃窗台，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 21.93,
@@ -14508,7 +14540,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Can't go outside, ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：左右輕輕搖頭微帶甜笑！",
-            "lyricZh": "雖然不能出門，但我一點都不抱怨。"
+            "lyricZh": "雖然不能出門，但我一點都不抱怨。",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 24.57,
@@ -14522,7 +14555,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Turn on the lamp, ... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手攤開笑容燦爛！",
-            "lyricZh": "雖然不能出門，但我一點都不抱怨。"
+            "lyricZh": "雖然不能出門，但我一點都不抱怨。",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 27.07,
@@ -14536,7 +14570,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Got my own sunshin... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：一手轉動黑膠唱盤開關！",
-            "lyricZh": "扭開小檯燈，放上一張黑膠唱片，"
+            "lyricZh": "扭開小檯燈，放上一張黑膠唱片，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 29.37,
@@ -14550,7 +14585,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I've got sunshine ... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：跟著節奏自如卡點搖擺！",
-            "lyricZh": "我自己擁有燦爛陽光，在音樂中搖擺！"
+            "lyricZh": "我自己擁有燦爛陽光，在音樂中搖擺！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 31.67,
@@ -14564,7 +14600,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Joy in my heart.... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手拍拍口袋再指指心窩！",
-            "lyricZh": "我把溫暖陽光裝在口袋裡，"
+            "lyricZh": "我把溫暖陽光裝在口袋裡，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 33.9,
@@ -14578,7 +14615,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Smiling from the i... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手捧心甜甜微笑！",
-            "lyricZh": "喜樂深深留在我的心窩間。"
+            "lyricZh": "喜樂深深留在我的心窩間。",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 36.5,
@@ -14592,7 +14630,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Tap your shoes, sn... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手撫摸臉頰笑靨如花！",
-            "lyricZh": "打從心底由內而外綻放笑容，這就是快樂的起點！"
+            "lyricZh": "打從心底由內而外綻放笑容，這就是快樂的起點！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 41.33,
@@ -14606,7 +14645,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Joy is the rhythm,... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：踏踏舞步搭配大拇指彈指！",
-            "lyricZh": "踩動你的舞鞋，彈響你的大拇指，"
+            "lyricZh": "踩動你的舞鞋，彈響你的大拇指，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 44.4,
@@ -14620,7 +14660,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Listen to it hum.... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手在耳側聆聽音符！",
-            "lyricZh": "喜樂就是動聽的旋律節奏，"
+            "lyricZh": "喜樂就是動聽的旋律節奏，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 47,
@@ -14634,7 +14675,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Joy isn't about ha... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙臂自然左右輕晃踏步！",
-            "lyricZh": "靜靜聆聽它在心底輕聲哼唱！"
+            "lyricZh": "靜靜聆聽它在心底輕聲哼唱！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 52.13,
@@ -14648,7 +14690,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "It's finding the m... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手向兩側推推表達不貪心！",
-            "lyricZh": "喜樂並不在於要擁有所有的玩具，"
+            "lyricZh": "喜樂並不在於要擁有所有的玩具，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 57.07,
@@ -14662,7 +14705,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "A cup of warm milk... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：食指指天發現生活趣味！",
-            "lyricZh": "而在於發現簡單生活裡的美妙音樂！"
+            "lyricZh": "而在於發現簡單生活裡的美妙音樂！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 61.67,
@@ -14676,7 +14720,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "A happy little hea... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：一手托杯一手翻書沉醉！",
-            "lyricZh": "一杯溫暖的牛奶，一本好看的故事書，"
+            "lyricZh": "一杯溫暖的牛奶，一本好看的故事書，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 64.17,
@@ -14690,7 +14735,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Yeah!... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手抱懷滿足自豪微笑！",
-            "lyricZh": "一顆快樂滿足的小心靈，就是我所需要的一切！"
+            "lyricZh": "一顆快樂滿足的小心靈，就是我所需要的一切！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 69.27,
@@ -14704,7 +14750,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I, I've got sunshi... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：跳躍單手握拳高舉慶祝！",
-            "lyricZh": "耶！"
+            "lyricZh": "耶！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 70.07,
@@ -14718,7 +14765,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I, I've got sunshi... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 73.37,
@@ -14732,7 +14780,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Joy in my heart.... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手拍拍口袋再指指心窩！",
-            "lyricZh": "我把溫暖陽光裝在口袋裡，"
+            "lyricZh": "我把溫暖陽光裝在口袋裡，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 75.93,
@@ -14746,7 +14795,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Smiling from the i... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手捧心甜甜微笑！",
-            "lyricZh": "喜樂深深留在我的心窩間。"
+            "lyricZh": "喜樂深深留在我的心窩間。",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 78.53,
@@ -14760,7 +14810,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Tap your shoes, sn... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手撫摸臉頰笑靨如花！",
-            "lyricZh": "打從心底由內而外綻放笑容，這就是快樂的起點！"
+            "lyricZh": "打從心底由內而外綻放笑容，這就是快樂的起點！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 83.5,
@@ -14774,7 +14825,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Joy is the rhythm,... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：踏踏舞步搭配大拇指彈指！",
-            "lyricZh": "踩動你的舞鞋，彈響你的大拇指，"
+            "lyricZh": "踩動你的舞鞋，彈響你的大拇指，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 86.5,
@@ -14788,7 +14840,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Listen to it hum.... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手在耳側聆聽音符！",
-            "lyricZh": "喜樂就是動聽的旋律節奏，"
+            "lyricZh": "喜樂就是動聽的旋律節奏，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 89.1,
@@ -14802,7 +14855,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Keep on smiling, r... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙臂自然左右輕晃踏步！",
-            "lyricZh": "靜靜聆聽它在心底輕聲哼唱！"
+            "lyricZh": "靜靜聆聽它在心底輕聲哼唱！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 91.9,
@@ -14816,7 +14870,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Keep on smiling, r... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 96.7,
@@ -14830,7 +14885,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Joy is mine, divin... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手在頭頂遮雨化作大笑臉！",
-            "lyricZh": "無論天晴還是落雨，都要一直保持微笑，"
+            "lyricZh": "無論天晴還是落雨，都要一直保持微笑，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 101.6,
@@ -14844,7 +14900,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：拍拍口袋比耶定格微笑！",
-            "lyricZh": "喜樂屬於我，純真美好永相伴！"
+            "lyricZh": "喜樂屬於我，純真美好永相伴！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 107.2,
@@ -14858,7 +14915,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           }
         ],
         "leadDancer": "Kai (陽光刺蝟頭男孩)"
@@ -14894,7 +14952,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Soft and low, like... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：手掌輕撫耳背專心傾聽！",
-            "lyricZh": "靠近細細聆聽，"
+            "lyricZh": "靠近細細聆聽，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 2.6,
@@ -14908,7 +14967,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "When the world is ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手如水波在身前輕柔波動！",
-            "lyricZh": "輕柔而低沉，就像一條平靜流淌的溪流。"
+            "lyricZh": "輕柔而低沉，就像一條平靜流淌的溪流。",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 10.77,
@@ -14922,7 +14982,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "And the noisy cars... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙腳快速交替小跑步！",
-            "lyricZh": "當外面的世界走得太快太匆忙時，"
+            "lyricZh": "當外面的世界走得太快太匆忙時，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 16.27,
@@ -14936,7 +14997,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I find a quiet cor... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：深吸一口氣腳步踏實站定！",
-            "lyricZh": "這股平靜是能夠長久停留的力量。"
+            "lyricZh": "這股平靜是能夠長久停留的力量。",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 21.4,
@@ -14950,7 +15012,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Calm like a blanke... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手向上緩慢吸氣再下落吐氣！",
-            "lyricZh": "我深吸一口氣，一呼一吸，"
+            "lyricZh": "我深吸一口氣，一呼一吸，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 26.13,
@@ -14964,7 +15027,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Peace like a river... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：手掌朝外輕推把煩惱送走！",
-            "lyricZh": "把心中的擔憂放走，讓平靜安寧留下來。"
+            "lyricZh": "把心中的擔憂放走，讓平靜安寧留下來。",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 32.07,
@@ -14978,7 +15042,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Let the busy worri... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手在腰側做輕撫溪石波紋！",
-            "lyricZh": "就像溪水溫柔安撫著河畔的岩石一樣。"
+            "lyricZh": "就像溪水溫柔安撫著河畔的岩石一樣。",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 37.33,
@@ -14992,7 +15057,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Quiet and still, h... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙臂隨身體大弧度左右搖擺！",
-            "lyricZh": "像平靜的水流一樣緩緩流淌，"
+            "lyricZh": "像平靜的水流一樣緩緩流淌，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 42.67,
@@ -15006,7 +15072,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Resting safe in ge... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手撫胸撫平所有躁動！",
-            "lyricZh": "感受心中的平靜，讓所有暴躁都冷卻下來。"
+            "lyricZh": "感受心中的平靜，讓所有暴躁都冷卻下來。",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 47.93,
@@ -15020,7 +15087,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Close my eyes, tak... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手抱膝抱臂溫暖依偎！",
-            "lyricZh": "在小小的安靜角落裡，在小小的擁抱裡，"
+            "lyricZh": "在小小的安靜角落裡，在小小的擁抱裡，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 54.07,
@@ -15034,7 +15102,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Watching fluffy cl... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手如白鴿降落心田！",
-            "lyricZh": "和平和平靜找到了落腳的地方。"
+            "lyricZh": "和平和平靜找到了落腳的地方。",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 58.53,
@@ -15048,7 +15117,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "No more shouting, ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：食指比噓身體安靜放鬆！",
-            "lyricZh": "沒有大喊大叫，不用急促催促，"
+            "lyricZh": "沒有大喊大叫，不用急促催促，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 64.33,
@@ -15062,7 +15132,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Peace is resting t... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙臂平伸向前方遠方延伸！",
-            "lyricZh": "溫和的水流能走得最遠最廣。"
+            "lyricZh": "溫和的水流能走得最遠最廣。",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 69.77,
@@ -15076,7 +15147,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Peace like a river... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手合捧如一泓清泉水！",
-            "lyricZh": "當心中的水流平靜清澈時，"
+            "lyricZh": "當心中的水流平靜清澈時，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 75.7,
@@ -15090,7 +15162,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Let the busy worri... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：眼睛明亮自信環視四周！",
-            "lyricZh": "我就能把周圍的一切看得清清楚楚。"
+            "lyricZh": "我就能把周圍的一切看得清清楚楚。",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 81,
@@ -15104,7 +15177,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Quiet and still, h... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙臂隨身體大弧度左右搖擺！",
-            "lyricZh": "像平靜的水流一樣緩緩流淌，"
+            "lyricZh": "像平靜的水流一樣緩緩流淌，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 86.27,
@@ -15118,7 +15192,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Resting safe in ge... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手撫胸撫平所有躁動！",
-            "lyricZh": "感受心中的平靜，讓所有暴躁都冷卻下來。"
+            "lyricZh": "感受心中的平靜，讓所有暴躁都冷卻下來。",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 91.67,
@@ -15132,7 +15207,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Peace in my soul,... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手抱膝抱臂溫暖依偎！",
-            "lyricZh": "在小小的安靜角落裡，在小小的擁抱裡，"
+            "lyricZh": "在小小的安靜角落裡，在小小的擁抱裡，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 97.2,
@@ -15146,7 +15222,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Peace in the air,... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手如白鴿降落心田！",
-            "lyricZh": "和平和平靜找到了落腳的地方。"
+            "lyricZh": "和平和平靜找到了落腳的地方。",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 99.9,
@@ -15160,7 +15237,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "True... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙肩下沉吐氣閉眼享受！",
-            "lyricZh": "平靜、安寧、祥和、美好，"
+            "lyricZh": "平靜、安寧、祥和、美好，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 102.67,
@@ -15174,7 +15252,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "everywhere.... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手由上而下輕撫胸腹！",
-            "lyricZh": "平靜地流淌著，純淨溫柔。"
+            "lyricZh": "平靜地流淌著，純淨溫柔。",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 105.77,
@@ -15188,7 +15267,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Peace in my soul,... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：側耳傾聽大自然的微風！",
-            "lyricZh": "在微風細語中，我聽見平安的聲音。"
+            "lyricZh": "在微風細語中，我聽見平安的聲音。",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 108.4,
@@ -15202,7 +15282,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Peace in the air,... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：身體輕輕左右如水草擺動！",
-            "lyricZh": "像平靜的水流一樣，"
+            "lyricZh": "像平靜的水流一樣，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 111.17,
@@ -15216,7 +15297,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Everywhere.... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手化作細流緩緩延展！",
-            "lyricZh": "一直溫柔流淌著，"
+            "lyricZh": "一直溫柔流淌著，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 113.4,
@@ -15230,7 +15312,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Everywhere.... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 116.53,
@@ -15244,7 +15327,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手平合放在心口定格微笑！",
-            "lyricZh": "直到世界的盡頭。"
+            "lyricZh": "直到世界的盡頭。",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 118.3,
@@ -15258,7 +15342,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           }
         ],
         "leadDancer": "Mimi (烏黑齊瀏海女孩)"
@@ -15294,7 +15379,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Ah!... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友準備好，跟著輕快節奏一起動起來！",
-            "lyricZh": "歡樂律動前奏"
+            "lyricZh": "歡樂律動前奏",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 7.17,
@@ -15308,7 +15394,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Step by step, no h... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手伸展大口呼吸！",
-            "lyricZh": "啊！慢一點沒關係！"
+            "lyricZh": "啊！慢一點沒關係！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 10.27,
@@ -15322,7 +15409,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Don't you worry.... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：步伐緩慢有力一步一步踏！",
-            "lyricZh": "一步一步來，不用急躁。走得穩才能贏得比賽！"
+            "lyricZh": "一步一步來，不用急躁。走得穩才能贏得比賽！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 17.6,
@@ -15336,7 +15424,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Tying my shoelaces... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手在胸前向下平撫安慰！",
-            "lyricZh": "不用擔心發愁，"
+            "lyricZh": "不用擔心發愁，",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 20.9,
@@ -15350,7 +15439,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Loop by loop,... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手做蹲下打蝴蝶結動作！",
-            "lyricZh": "繫鞋帶需要一個圈接一個圈地繞，"
+            "lyricZh": "繫鞋帶需要一個圈接一個圈地繞，",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 23.17,
@@ -15364,7 +15454,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Spilling a little ... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手食指相互纏繞穿過！",
-            "lyricZh": "一個環套著一個環，"
+            "lyricZh": "一個環套著一個環，",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 25.93,
@@ -15378,7 +15469,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I don't throw a fi... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手做出拿湯匙微晃動作！",
-            "lyricZh": "不小心灑出了一小滴熱騰騰的麵湯。"
+            "lyricZh": "不小心灑出了一小滴熱騰騰的麵湯。",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 30.8,
@@ -15392,7 +15484,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I don't give up in... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手擺擺拒絕情緒失控！",
-            "lyricZh": "我不亂發脾氣鬧情緒，"
+            "lyricZh": "我不亂發脾氣鬧情緒，",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 33.3,
@@ -15406,7 +15499,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Patience is a wisd... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：輕輕擦擦眼角展現堅強！",
-            "lyricZh": "我也不難過掉眼淚放棄。"
+            "lyricZh": "我也不難過掉眼淚放棄。",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 36.4,
@@ -15420,7 +15514,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Slow and steady, l... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：手指點點太陽穴自豪點頭！",
-            "lyricZh": "耐心是隨著歲月不斷增長的大智慧！"
+            "lyricZh": "耐心是隨著歲月不斷增長的大智慧！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 41.73,
@@ -15434,7 +15529,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Take your time bef... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：背起小烏龜殼慢慢踏步走！",
-            "lyricZh": "慢而穩定，就像友善可愛的烏龜散步一樣！"
+            "lyricZh": "慢而穩定，就像友善可愛的烏龜散步一樣！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 46.8,
@@ -15448,7 +15544,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Step by step, piec... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：手扶下巴認真思考三秒鐘！",
-            "lyricZh": "在開口說話之前，先給自己一點思考的時間。"
+            "lyricZh": "在開口說話之前，先給自己一點思考的時間。",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 52.07,
@@ -15462,7 +15559,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Watch the frustrat... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手做拾取拼圖拼裝動作！",
-            "lyricZh": "一步一步走，一塊一塊拼，"
+            "lyricZh": "一步一步走，一塊一塊拼，",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 57.27,
@@ -15476,7 +15574,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Puzzle pieces scat... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手向外抹平所有挫折！",
-            "lyricZh": "看所有的挫折與沮喪漸漸消失！"
+            "lyricZh": "看所有的挫折與沮喪漸漸消失！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 62.7,
@@ -15490,7 +15589,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Finding where they... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手低垂看著地上的拼圖！",
-            "lyricZh": "拼圖碎片散落滿了木頭地板，"
+            "lyricZh": "拼圖碎片散落滿了木頭地板，",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 67.1,
@@ -15504,7 +15604,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "One by one, once m... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：轉動手中拼圖仔細尋找！",
-            "lyricZh": "找到它們合適的位置，"
+            "lyricZh": "找到它們合適的位置，",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 69.4,
@@ -15518,7 +15619,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "It takes a little ... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：將拼圖準確拼入底板！",
-            "lyricZh": "一塊接著一塊，再一次拼起。"
+            "lyricZh": "一塊接著一塊，再一次拼起。",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 72,
@@ -15532,7 +15634,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "But oh, what a sig... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：點點手錶展現耐心等待！",
-            "lyricZh": "雖然要花上一點點時間，"
+            "lyricZh": "雖然要花上一點點時間，",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 75.27,
@@ -15546,7 +15649,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "When the whole pic... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手托腮發出驚嘆讚美！",
-            "lyricZh": "但哇！那是多麼美麗壯觀的畫面啊！"
+            "lyricZh": "但哇！那是多麼美麗壯觀的畫面啊！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 77.57,
@@ -15560,7 +15664,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Slow and steady, l... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙臂大大展開展示大拼圖！",
-            "lyricZh": "當整幅大圖畫完美拼好密合在一起時！"
+            "lyricZh": "當整幅大圖畫完美拼好密合在一起時！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 82.8,
@@ -15574,7 +15679,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Slow and steady, l... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 86.1,
@@ -15588,7 +15694,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Take your time bef... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：背起小烏龜殼慢慢踏步走！",
-            "lyricZh": "慢而穩定，就像友善可愛的烏龜散步一樣！"
+            "lyricZh": "慢而穩定，就像友善可愛的烏龜散步一樣！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 91.17,
@@ -15602,7 +15709,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Step by step, piec... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：手扶下巴認真思考三秒鐘！",
-            "lyricZh": "在開口說話之前，先給自己一點思考的時間。"
+            "lyricZh": "在開口說話之前，先給自己一點思考的時間。",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 96.37,
@@ -15616,7 +15724,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Watch the frustrat... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手做拾取拼圖拼裝動作！",
-            "lyricZh": "一步一步走，一塊一塊拼，"
+            "lyricZh": "一步一步走，一塊一塊拼，",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 101.6,
@@ -15630,7 +15739,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Patience is sweet ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手向外抹平所有挫折！",
-            "lyricZh": "看所有的挫折與沮喪漸漸消失！"
+            "lyricZh": "看所有的挫折與沮喪漸漸消失！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 106.87,
@@ -15644,7 +15754,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Steady and calm as... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手捧茶杯輕嗅茶香！",
-            "lyricZh": "耐心就像蜂蜜和甜茶一樣香甜可口，"
+            "lyricZh": "耐心就像蜂蜜和甜茶一樣香甜可口，",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 111.97,
@@ -15658,7 +15769,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：小烏龜悠閒邁步定格笑！",
-            "lyricZh": "沉著冷靜，做最好的自己！"
+            "lyricZh": "沉著冷靜，做最好的自己！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 115.37,
@@ -15672,7 +15784,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           }
         ],
         "leadDancer": "Tim (蓬鬆呆毛棕髮男孩)"
@@ -15708,7 +15821,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Kindness on every ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手放嘴邊向前放送甜言！",
-            "lyricZh": "話語充滿了力量，讓它們變得甜美吧！"
+            "lyricZh": "話語充滿了力量，讓它們變得甜美吧！",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 6.17,
@@ -15722,7 +15836,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "fell down on the p... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：大步向前散播溫暖星光！",
-            "lyricZh": "把善良帶到每一條大街小巷。我的朋友"
+            "lyricZh": "把善良帶到每一條大街小巷。我的朋友",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 12.27,
@@ -15736,7 +15851,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I ran right over a... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：半蹲伸手做關懷同理動作！",
-            "lyricZh": "在操場跑道上不小心摔倒了。"
+            "lyricZh": "在操場跑道上不小心摔倒了。",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 16.57,
@@ -15750,7 +15866,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I didn't laugh, I ... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：快步走上前輕拍朋友背部！",
-            "lyricZh": "我立刻飛奔過去，輕輕拍拍他的背。"
+            "lyricZh": "我立刻飛奔過去，輕輕拍拍他的背。",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 21.3,
@@ -15764,7 +15881,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I brought him warm... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手輕輕擺動表達尊重！",
-            "lyricZh": "我沒有嘲笑他，我也沒有取笑逗弄他，"
+            "lyricZh": "我沒有嘲笑他，我也沒有取笑逗弄他，",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 24.53,
@@ -15778,7 +15896,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "You can do it!... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手送出溫暖微風手勢！",
-            "lyricZh": "我乘著微風給他送去了溫暖的安慰言語。"
+            "lyricZh": "我乘著微風給他送去了溫暖的安慰言語。",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 30.73,
@@ -15792,7 +15911,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "You're gonna be ok... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手握拳大力為他加油！",
-            "lyricZh": "「你一定可以做到的！」"
+            "lyricZh": "「你一定可以做到的！」",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 33.13,
@@ -15806,7 +15926,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "sweet words bright... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：握住朋友雙手給予力量！",
-            "lyricZh": "「你一定會好起來沒事的！」蜂蜜般"
+            "lyricZh": "「你一定會好起來沒事的！」蜂蜜般",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 37.53,
@@ -15820,7 +15941,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Kindness in the wa... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手在頭頂綻放如大太陽！",
-            "lyricZh": "甜美的話語點亮了原本灰暗的一天！"
+            "lyricZh": "甜美的話語點亮了原本灰暗的一天！",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 43.1,
@@ -15834,7 +15956,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Giving strength to... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：撫著胸口溫柔甜美微笑！",
-            "lyricZh": "在我們說話的語氣中充滿善良溫暖，"
+            "lyricZh": "在我們說話的語氣中充滿善良溫暖，",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 47.73,
@@ -15848,7 +15971,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Words like honey o... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙臂用力向上托舉力量！",
-            "lyricZh": "給疲憊與軟弱的人帶去重新站起的勇氣力量！"
+            "lyricZh": "給疲憊與軟弱的人帶去重新站起的勇氣力量！",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 53.1,
@@ -15862,7 +15986,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Making broken spir... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手在心前輕撫甘甜！",
-            "lyricZh": "話語就像蜂蜜一樣滋潤著心靈，"
+            "lyricZh": "話語就像蜂蜜一樣滋潤著心靈，",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 57.07,
@@ -15876,7 +16001,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Making broken spir... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 61.37,
@@ -15890,7 +16016,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I believe in you, ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手把兩半愛心拼完整！",
-            "lyricZh": "讓受傷破碎的心靈重新變得完整健全！"
+            "lyricZh": "讓受傷破碎的心靈重新變得完整健全！",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 65.6,
@@ -15904,7 +16031,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Kindness will neve... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：豎起大拇指深情注視鏡頭！",
-            "lyricZh": "好朋友，我永遠相信你、支持你！"
+            "lyricZh": "好朋友，我永遠相信你、支持你！",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 71.93,
@@ -15918,7 +16046,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "You're gonna be ok... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙臂大弧度在空中劃愛心！",
-            "lyricZh": "善良與恩慈永遠不會停止！"
+            "lyricZh": "善良與恩慈永遠不會停止！",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 75.6,
@@ -15932,7 +16061,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "sweet words bright... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：握住朋友雙手給予力量！",
-            "lyricZh": "「你一定會好起來沒事的！」蜂蜜般"
+            "lyricZh": "「你一定會好起來沒事的！」蜂蜜般",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 79.97,
@@ -15946,7 +16076,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Kindness in the wa... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手在頭頂綻放如大太陽！",
-            "lyricZh": "甜美的話語點亮了原本灰暗的一天！"
+            "lyricZh": "甜美的話語點亮了原本灰暗的一天！",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 85.53,
@@ -15960,7 +16091,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Giving strength to... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：撫著胸口溫柔甜美微笑！",
-            "lyricZh": "在我們說話的語氣中充滿善良溫暖，"
+            "lyricZh": "在我們說話的語氣中充滿善良溫暖，",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 90.27,
@@ -15974,7 +16106,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Speak with kindnes... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙臂用力向上托舉力量！",
-            "lyricZh": "給疲憊與軟弱的人帶去重新站起的勇氣力量！"
+            "lyricZh": "給疲憊與軟弱的人帶去重新站起的勇氣力量！",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 94.47,
@@ -15988,7 +16121,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Speak with kindnes... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 98.07,
@@ -16002,7 +16136,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Gentle like a morn... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手放唇邊吹送愛心之吻！",
-            "lyricZh": "用善良的話語說話，用滿滿的愛說話，"
+            "lyricZh": "用善良的話語說話，用滿滿的愛說話，",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 105.27,
@@ -16016,7 +16151,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手化作白鴿翅膀定格！",
-            "lyricZh": "溫柔得就像早晨的白鴿一樣純潔安詳！"
+            "lyricZh": "溫柔得就像早晨的白鴿一樣純潔安詳！",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 109.3,
@@ -16030,7 +16166,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           }
         ],
         "leadDancer": "MiMi (健康小麥肌捲髮女孩)"
@@ -16066,7 +16203,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Honesty is brave.... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友準備好，跟著輕快節奏一起動起來！",
-            "lyricZh": "歡樂律動前奏"
+            "lyricZh": "歡樂律動前奏",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 1.33,
@@ -16080,7 +16218,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Honesty is bright,... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：昂首挺胸單手叉腰站立！",
-            "lyricZh": "誠實是最勇敢的品格，"
+            "lyricZh": "誠實是最勇敢的品格，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 3.87,
@@ -16094,7 +16233,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Standing tall in t... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手向天空閃爍金光！",
-            "lyricZh": "誠實是最明亮的光芒，"
+            "lyricZh": "誠實是最明亮的光芒，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 7.27,
@@ -16108,7 +16248,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I bump the cup upo... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：如大樹般雙手向上伸展！",
-            "lyricZh": "在溫暖的陽光下挺拔聳立！"
+            "lyricZh": "在溫暖的陽光下挺拔聳立！",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 10.2,
@@ -16122,7 +16263,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I bump the cup upo... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 19.37,
@@ -16136,7 +16278,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "My heart goes fast... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手微驚縮手看著桌子！",
-            "lyricZh": "我在廚房流理台上不小心撞翻了水杯，"
+            "lyricZh": "我在廚房流理台上不小心撞翻了水杯，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 24.4,
@@ -16150,7 +16293,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "No, I'll be honest... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：按著心口左右猶豫思索！",
-            "lyricZh": "我的心跳得好快。我是不是該躲起來？"
+            "lyricZh": "我的心跳得好快。我是不是該躲起來？",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 29.2,
@@ -16164,7 +16308,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Honesty is the bes... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：堅定搖頭踏出勇敢步伐！",
-            "lyricZh": "不！我要勇敢誠實，輕輕說出來："
+            "lyricZh": "不！我要勇敢誠實，輕輕說出來：",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 34.27,
@@ -16178,7 +16323,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "It was an accident... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：伸出右手做出堅定宣誓！",
-            "lyricZh": "誠實是我們能夠做出最好的選擇！"
+            "lyricZh": "誠實是我們能夠做出最好的選擇！",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 39.6,
@@ -16192,7 +16338,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I made a mistake.... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手合十低下頭誠懇致歉！",
-            "lyricZh": "「這是不小心的意外，"
+            "lyricZh": "「這是不小心的意外，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 41.5,
@@ -16206,7 +16353,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Honesty is the bes... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：右手拍拍胸脯坦白承認！",
-            "lyricZh": "我犯錯了，對不起！」"
+            "lyricZh": "我犯錯了，對不起！」",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 44.37,
@@ -16220,7 +16368,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Walking with goodn... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：伸出右手做出堅定宣誓！",
-            "lyricZh": "誠實是我們能夠做出最好的選擇，"
+            "lyricZh": "誠實是我們能夠做出最好的選擇，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 49.33,
@@ -16234,7 +16383,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Mile after mile.... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：昂首闊步向前踏步走！",
-            "lyricZh": "與善良良善一路同行，"
+            "lyricZh": "與善良良善一路同行，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 51.9,
@@ -16248,7 +16398,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Mom gave a hug and... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：踏出每一步都踏實有力！",
-            "lyricZh": "一步一腳印，走得好坦蕩！"
+            "lyricZh": "一步一腳印，走得好坦蕩！",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 53.97,
@@ -16262,7 +16413,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Mom gave a hug and... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 59.87,
@@ -16276,7 +16428,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Honesty grows like... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手做拖地清潔與擁抱動作！",
-            "lyricZh": "媽媽溫柔地給了我一個大擁抱，一起擦乾淨了地板。"
+            "lyricZh": "媽媽溫柔地給了我一個大擁抱，一起擦乾淨了地板。",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 64.57,
@@ -16290,7 +16443,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Rooted in love for... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙腳扎根如樹幹挺拔！",
-            "lyricZh": "誠實就像一棵堅固茁壯的綠色大樹，"
+            "lyricZh": "誠實就像一棵堅固茁壯的綠色大樹，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 67.07,
@@ -16304,7 +16458,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I made a mistake.... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙臂向上如大樹繁茂枝椏！",
-            "lyricZh": "深深扎根在愛裡面，讓全世界都能看見！"
+            "lyricZh": "深深扎根在愛裡面，讓全世界都能看見！",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 71.8,
@@ -16318,7 +16473,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Honesty is the bes... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：右手按在心口真誠坦率！",
-            "lyricZh": "「我犯錯了，我承認！」"
+            "lyricZh": "「我犯錯了，我承認！」",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 74.7,
@@ -16332,7 +16488,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "It was an accident... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：伸出右手做出堅定宣誓！",
-            "lyricZh": "誠實是我們能夠做出最好的選擇！"
+            "lyricZh": "誠實是我們能夠做出最好的選擇！",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 80,
@@ -16346,7 +16503,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I made a mistake.... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手合十低下頭誠懇致歉！",
-            "lyricZh": "「這是不小心的意外，"
+            "lyricZh": "「這是不小心的意外，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 81.87,
@@ -16360,7 +16518,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Honesty is the bes... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：右手拍拍胸脯坦白承認！",
-            "lyricZh": "我犯錯了，對不起！」"
+            "lyricZh": "我犯錯了，對不起！」",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 84.77,
@@ -16374,7 +16533,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Walking with goodn... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：伸出右手做出堅定宣誓！",
-            "lyricZh": "誠實是我們能夠做出最好的選擇，"
+            "lyricZh": "誠實是我們能夠做出最好的選擇，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 89.77,
@@ -16388,7 +16548,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Mile after mile.... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：昂首闊步向前踏步走！",
-            "lyricZh": "與善良良善一路同行，"
+            "lyricZh": "與善良良善一路同行，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 92.33,
@@ -16402,7 +16563,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "True and honest, b... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：踏出每一步都踏實有力！",
-            "lyricZh": "一步一腳印，走得好坦蕩！"
+            "lyricZh": "一步一腳印，走得好坦蕩！",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 94.97,
@@ -16416,7 +16578,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Growing like a str... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手展開大自由迎風笑！",
-            "lyricZh": "真實又誠實，勇敢又坦蕩自由，"
+            "lyricZh": "真實又誠實，勇敢又坦蕩自由，",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 100.3,
@@ -16430,7 +16593,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Growing like a str... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 104.7,
@@ -16444,7 +16608,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：大樹挺立英雄姿勢定格！",
-            "lyricZh": "像一棵茁壯強大的橡樹一樣不斷成長！"
+            "lyricZh": "像一棵茁壯強大的橡樹一樣不斷成長！",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           },
           {
             "start": 108.13,
@@ -16458,7 +16623,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "danceCoach": "Mimi (烏黑齊瀏海女孩)"
           }
         ],
         "leadDancer": "Mimi (烏黑齊瀏海女孩)"
@@ -16494,7 +16660,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Hmm.... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友準備好，跟著輕快節奏一起動起來！",
-            "lyricZh": "歡樂律動前奏"
+            "lyricZh": "歡樂律動前奏",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 1.97,
@@ -16508,7 +16675,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Oh.... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：手扶心口沉穩踏步！",
-            "lyricZh": "嗯，深厚的情誼在心頭流動。"
+            "lyricZh": "嗯，深厚的情誼在心頭流動。",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 5.1,
@@ -16522,7 +16690,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Yeah!... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙臂微展沉穩微笑！",
-            "lyricZh": "噢，好朋友是無價的寶藏。"
+            "lyricZh": "噢，好朋友是無價的寶藏。",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 8.33,
@@ -16536,7 +16705,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Through sunny days... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手握拳碰拳致意！",
-            "lyricZh": "耶！堅若磐石的朋友！"
+            "lyricZh": "耶！堅若磐石的朋友！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 11.57,
@@ -16550,7 +16720,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Faithful friends s... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙臂如狂風吹葉左右搖擺！",
-            "lyricZh": "大風呼呼颳起，落葉漫天飛舞，"
+            "lyricZh": "大風呼呼颳起，落葉漫天飛舞，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 16.9,
@@ -16564,7 +16735,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "When you need a ha... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手做擺放玩具動作！",
-            "lyricZh": "有些玩具會壞掉，壞了就丟在一旁。"
+            "lyricZh": "有些玩具會壞掉，壞了就丟在一旁。",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 21,
@@ -16578,7 +16750,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "In the heat or in ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手抱圓如巨石般穩固！",
-            "lyricZh": "但真正的友誼就像山上的巨石一樣堅定，"
+            "lyricZh": "但真正的友誼就像山上的巨石一樣堅定，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 23.67,
@@ -16592,7 +16765,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I'll be standing b... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙腿大步扎馬步雙手叉腰！",
-            "lyricZh": "即使暴風雨來襲，也永遠屹立不搖！"
+            "lyricZh": "即使暴風雨來襲，也永遠屹立不搖！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 26.2,
@@ -16606,7 +16780,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "No need to run, no... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：右手拍拍左胸堅定立約！",
-            "lyricZh": "像岩石一樣堅固的好朋友，忠誠又堅定，"
+            "lyricZh": "像岩石一樣堅固的好朋友，忠誠又堅定，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 28.53,
@@ -16620,7 +16795,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "You can count on m... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：伸出友誼右手拉手同行！",
-            "lyricZh": "永遠站在你身邊，手牽著手在一起！"
+            "lyricZh": "永遠站在你身邊，手牽著手在一起！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 30.8,
@@ -16634,7 +16810,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Faithful friend, a... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手撐開雨傘微笑擋雨！",
-            "lyricZh": "無論天晴還是落雨，信實陪伴身邊，"
+            "lyricZh": "無論天晴還是落雨，信實陪伴身邊，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 33.57,
@@ -16648,7 +16825,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Rock solid like a ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手心前比大愛心脈動！",
-            "lyricZh": "真正的友誼永遠不會褪色改變！"
+            "lyricZh": "真正的友誼永遠不會褪色改變！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 36.47,
@@ -16662,7 +16840,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Shining through th... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：單手遮額頭左右張望尋找！",
-            "lyricZh": "你在捉迷藏遊戲裡找不到藏身處嗎？"
+            "lyricZh": "你在捉迷藏遊戲裡找不到藏身處嗎？",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 39.37,
@@ -16676,7 +16855,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "If you're sad, I'l... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：招招手歡迎朋友來到身邊！",
-            "lyricZh": "別擔心，我會為你留一個最好的避風港！"
+            "lyricZh": "別擔心，我會為你留一個最好的避風港！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 41.9,
@@ -16690,7 +16870,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "If you're sad, I'l... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 47.57,
@@ -16704,7 +16885,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Keep the secrets t... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手捧臉給予溫柔關懷！",
-            "lyricZh": "當你難過孤單、需要一個溫暖傾聽的耳朵時，"
+            "lyricZh": "當你難過孤單、需要一個溫暖傾聽的耳朵時，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 52.7,
@@ -16718,7 +16900,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Loyal and dependab... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙腳立正拍胸承諾守候！",
-            "lyricZh": "我就在這裡，絕不會離開你跑開！"
+            "lyricZh": "我就在這裡，絕不會離開你跑開！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 56.7,
@@ -16732,7 +16915,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "A faithful friend ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：右手拍拍左胸堅定立約！",
-            "lyricZh": "像岩石一樣堅固的好朋友，忠誠又堅定，"
+            "lyricZh": "像岩石一樣堅固的好朋友，忠誠又堅定，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 60.17,
@@ -16746,7 +16930,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "You can count on m... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：伸出友誼右手拉手同行！",
-            "lyricZh": "永遠站在你身邊，手牽著手在一起！"
+            "lyricZh": "永遠站在你身邊，手牽著手在一起！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 62.97,
@@ -16760,7 +16945,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "You can count on m... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 66.5,
@@ -16774,7 +16960,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Faithful friend, a... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手撐開雨傘微笑擋雨！",
-            "lyricZh": "無論天晴還是落雨，信實陪伴身邊，"
+            "lyricZh": "無論天晴還是落雨，信實陪伴身邊，",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 69.37,
@@ -16788,7 +16975,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Rock solid like a ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手心前比大愛心脈動！",
-            "lyricZh": "真正的友誼永遠不會褪色改變！"
+            "lyricZh": "真正的友誼永遠不會褪色改變！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 72.27,
@@ -16802,7 +16990,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Shining through th... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙拳在胸前用力碰擊卡點！",
-            "lyricZh": "像岩石一樣堅固！"
+            "lyricZh": "像岩石一樣堅固！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 75.1,
@@ -16816,7 +17005,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "True to the end,... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：大步向前舉起友誼雙手！",
-            "lyricZh": "永遠真實、永遠忠誠！"
+            "lyricZh": "永遠真實、永遠忠誠！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 79.33,
@@ -16830,7 +17020,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Faithful and stron... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：並肩挽臂邁出整齊步伐！",
-            "lyricZh": "永遠站在你身邊！"
+            "lyricZh": "永遠站在你身邊！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 81.5,
@@ -16844,7 +17035,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Oh!... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手大拇指互相點贊！",
-            "lyricZh": "真正的朋友！"
+            "lyricZh": "真正的朋友！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 83.3,
@@ -16858,7 +17050,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Oh!... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 86.6,
@@ -16872,7 +17065,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I, I, I.... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙拳平舉沉穩如山！",
-            "lyricZh": "像岩石一樣堅不可摧！"
+            "lyricZh": "像岩石一樣堅不可摧！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 87.4,
@@ -16886,7 +17080,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I, I, I.... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 98.93,
@@ -16900,7 +17095,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：搭肩比心定格微笑！",
-            "lyricZh": "一生的忠誠信實好夥伴！"
+            "lyricZh": "一生的忠誠信實好夥伴！",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           },
           {
             "start": 99.73,
@@ -16914,7 +17110,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "danceCoach": "Kai (陽光刺蝟頭男孩)"
           }
         ],
         "leadDancer": "Kai (陽光刺蝟頭男孩)"
@@ -16950,7 +17147,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Quiet now,... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友準備好，跟著輕快節奏一起動起來！",
-            "lyricZh": "歡樂律動前奏"
+            "lyricZh": "歡樂律動前奏",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 2.77,
@@ -16964,7 +17162,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Like a butterfly o... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：食指放唇前做溫柔噓聲！",
-            "lyricZh": "安靜下來，輕悄悄的，"
+            "lyricZh": "安靜下來，輕悄悄的，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 7.13,
@@ -16978,7 +17177,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Inside the library... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手大拇指相扣扇動蝶翅！",
-            "lyricZh": "就像停在花枝上的美麗小蝴蝶一樣。"
+            "lyricZh": "就像停在花枝上的美麗小蝴蝶一樣。",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 10.4,
@@ -16992,7 +17192,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Inside the library... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 13.53,
@@ -17006,7 +17207,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Filled with books,... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手輕輕捧著故事書走！",
-            "lyricZh": "在圖書館的安靜大廳裡，"
+            "lyricZh": "在圖書館的安靜大廳裡，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 15.6,
@@ -17020,7 +17222,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Quiet smiles and f... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手翻動書頁欣賞閱讀！",
-            "lyricZh": "滿滿都是有趣好看的書籍，"
+            "lyricZh": "滿滿都是有趣好看的書籍，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 19.5,
@@ -17034,7 +17237,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I don't yell acros... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：眼神柔和甜美微笑點頭！",
-            "lyricZh": "只有安靜的微笑與友善的目光。"
+            "lyricZh": "只有安靜的微笑與友善的目光。",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 24.93,
@@ -17048,7 +17252,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I speak in whisper... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手輕推表示安靜自律！",
-            "lyricZh": "我不會在走廊上大聲喊叫奔跑，"
+            "lyricZh": "我不會在走廊上大聲喊叫奔跑，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 30,
@@ -17062,7 +17267,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Like a butterfly w... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：手罩在嘴邊溫柔說悄悄話！",
-            "lyricZh": "我用輕輕柔柔、小小的耳語說話。"
+            "lyricZh": "我用輕輕柔柔、小小的耳語說話。",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 34.8,
@@ -17076,7 +17282,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Gentle voices put ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手如小蝴蝶在耳畔拍翅！",
-            "lyricZh": "就像微風中蝴蝶的輕柔耳語一樣，"
+            "lyricZh": "就像微風中蝴蝶的輕柔耳語一樣，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 41.17,
@@ -17090,7 +17297,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Handle little thin... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手撫胸感受舒服與寧靜！",
-            "lyricZh": "溫柔的聲音讓所有人的心靈感到安適舒服。"
+            "lyricZh": "溫柔的聲音讓所有人的心靈感到安適舒服。",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 46.67,
@@ -17104,7 +17312,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Spreading gentlene... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手細心捧起精緻小物件！",
-            "lyricZh": "小心翼翼地對待每一樣小東西，"
+            "lyricZh": "小心翼翼地對待每一樣小東西，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 52.13,
@@ -17118,7 +17327,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "When holding a bab... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手向四周揮灑輕柔花粉！",
-            "lyricZh": "把溫柔與愛心傳播到每一個角落。"
+            "lyricZh": "把溫柔與愛心傳播到每一個角落。",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 55.5,
@@ -17132,7 +17342,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "When holding a bab... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 58.77,
@@ -17146,7 +17357,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Gentle hands won't... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手窩成小鳥巢保護小雞！",
-            "lyricZh": "當手裡捧著一隻小小剛孵出的小雞時，"
+            "lyricZh": "當手裡捧著一隻小小剛孵出的小雞時，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 64.2,
@@ -17160,7 +17372,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Softness is streng... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：細心托穩小雞步步小心！",
-            "lyricZh": "溫柔的小手絕不會讓牠摔落地上。"
+            "lyricZh": "溫柔的小手絕不會讓牠摔落地上。",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 68.9,
@@ -17174,7 +17387,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Gentle and mild,... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：展現溫和而有力量的站姿！",
-            "lyricZh": "溫柔其實是一種強大的力量，"
+            "lyricZh": "溫柔其實是一種強大的力量，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 71.87,
@@ -17188,7 +17402,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "A tender, loving, ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手由上而下輕輕安撫！",
-            "lyricZh": "溫和又輕柔，"
+            "lyricZh": "溫和又輕柔，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 75.57,
@@ -17202,7 +17417,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Like a butterfly w... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手抱懷甜美優雅點頭！",
-            "lyricZh": "做一個體貼、充滿愛心又懂事的孩子！"
+            "lyricZh": "做一個體貼、充滿愛心又懂事的孩子！",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 79.47,
@@ -17216,7 +17432,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Gentle voices put ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手如小蝴蝶在耳畔拍翅！",
-            "lyricZh": "就像微風中蝴蝶的輕柔耳語一樣，"
+            "lyricZh": "就像微風中蝴蝶的輕柔耳語一樣，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 85.8,
@@ -17230,7 +17447,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Handle little thin... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手撫胸感受舒服與寧靜！",
-            "lyricZh": "溫柔的聲音讓所有人的心靈感到安適舒服。"
+            "lyricZh": "溫柔的聲音讓所有人的心靈感到安適舒服。",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 91.3,
@@ -17244,7 +17462,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Spreading gentlene... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手細心捧起精緻小物件！",
-            "lyricZh": "小心翼翼地對待每一樣小東西，"
+            "lyricZh": "小心翼翼地對待每一樣小東西，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 96.77,
@@ -17258,7 +17477,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Soft and gentle,... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手向四周揮灑輕柔花粉！",
-            "lyricZh": "把溫柔與愛心傳播到每一個角落。"
+            "lyricZh": "把溫柔與愛心傳播到每一個角落。",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 102.33,
@@ -17272,7 +17492,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Tender and calm,... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手在空中緩慢劃水波！",
-            "lyricZh": "輕輕的、溫柔的，"
+            "lyricZh": "輕輕的、溫柔的，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 105.2,
@@ -17286,7 +17507,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Peace in the cente... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手放胸前合掌安息！",
-            "lyricZh": "溫和又平靜安寧，"
+            "lyricZh": "溫和又平靜安寧，",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 108.3,
@@ -17300,7 +17522,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手比蝴蝶振翅微笑定格！",
-            "lyricZh": "和平就在我們的手掌心中綻放！"
+            "lyricZh": "和平就在我們的手掌心中綻放！",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           },
           {
             "start": 112.27,
@@ -17314,7 +17537,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "danceCoach": "Jessie (波浪雙馬尾女孩)"
           }
         ],
         "leadDancer": "Jessie (波浪雙馬尾女孩)"
@@ -17350,7 +17574,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Oh, oh!... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友準備好，跟著輕快節奏一起動起來！",
-            "lyricZh": "歡樂律動前奏"
+            "lyricZh": "歡樂律動前奏",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 3.3,
@@ -17364,7 +17589,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Uh, at the store, ... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手伸出打住手勢！",
-            "lyricZh": "噢、噢！停一下！"
+            "lyricZh": "噢、噢！停一下！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 4.1,
@@ -17378,7 +17604,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Uh, at the store, ... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 16.57,
@@ -17392,7 +17619,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I want it now. I s... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：單手遮眼看著遠方發光小車！",
-            "lyricZh": "在商場裡，我看見了一輛閃閃發光的小汽車，"
+            "lyricZh": "在商場裡，我看見了一輛閃閃發光的小汽車，",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 21.17,
@@ -17406,7 +17634,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I want it now, but... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手向前伸出渴望得到！",
-            "lyricZh": "我好想要現在立刻擁有它，我好想好想！"
+            "lyricZh": "我好想要現在立刻擁有它，我好想好想！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 25.9,
@@ -17420,7 +17649,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Mom says, \"Not tod... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：歪頭認真掂量思考！",
-            "lyricZh": "我好想要它，但是要走多遠？"
+            "lyricZh": "我好想要它，但是要走多遠？",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 30.9,
@@ -17434,7 +17664,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I take a breath an... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：左右輕輕擺頭接受指令！",
-            "lyricZh": "媽媽溫柔地說：「親愛的，今天不行喔！」"
+            "lyricZh": "媽媽溫柔地說：「親愛的，今天不行喔！」",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 35.3,
@@ -17448,7 +17679,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "No need to scream,... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：深吸一口氣挺直身子微笑！",
-            "lyricZh": "我深吸一口氣，做出了一個好的選擇！"
+            "lyricZh": "我深吸一口氣，做出了一個好的選擇！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 39.93,
@@ -17462,7 +17694,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I am the captain o... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手平放在身側不亂抓！",
-            "lyricZh": "不用尖叫大哭，也不用哭鬧抱怨發脾氣！"
+            "lyricZh": "不用尖叫大哭，也不用哭鬧抱怨發脾氣！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 44.67,
@@ -17476,7 +17709,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Self-control with ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手握住大輪舵英勇轉動！",
-            "lyricZh": "我是我自己這艘生命大船的船長！"
+            "lyricZh": "我是我自己這艘生命大船的船長！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 49.33,
@@ -17490,7 +17724,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Yeah, one chocolat... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手平穩握拳展現自控力！",
-            "lyricZh": "用穩定的手掌牢牢掌握自制力！"
+            "lyricZh": "用穩定的手掌牢牢掌握自制力！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 54.17,
@@ -17504,7 +17739,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Yeah, one chocolat... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 58.93,
@@ -17518,7 +17754,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I don't need the w... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：指尖拈起一顆巧克力享受！",
-            "lyricZh": "一顆巧克力豆吃起來好甜美，"
+            "lyricZh": "一顆巧克力豆吃起來好甜美，",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 64.33,
@@ -17532,7 +17769,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Knowing when to st... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手推推表示適可而止！",
-            "lyricZh": "但我不需要把整大包一口氣吃光光！"
+            "lyricZh": "但我不需要把整大包一口氣吃光光！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 68.5,
@@ -17546,7 +17784,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "That is the golden... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：豎起大拇指聰明自豪點頭！",
-            "lyricZh": "懂得何時該停下來，才是聰明又帥氣的行為！"
+            "lyricZh": "懂得何時該停下來，才是聰明又帥氣的行為！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 74.1,
@@ -17560,7 +17799,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "So take a breath a... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙臂托起金色大獎盃！",
-            "lyricZh": "這就是我們生活中的黃金大守則！"
+            "lyricZh": "這就是我們生活中的黃金大守則！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 77.9,
@@ -17574,7 +17814,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "No need to scream,... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手撫胸平靜做出選擇！",
-            "lyricZh": "所以深吸一口氣，做出明智的好選擇吧！"
+            "lyricZh": "所以深吸一口氣，做出明智的好選擇吧！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 82.37,
@@ -17588,7 +17829,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "I am the captain o... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：雙手平放在身側不亂抓！",
-            "lyricZh": "不用尖叫大哭，也不用哭鬧抱怨發脾氣！"
+            "lyricZh": "不用尖叫大哭，也不用哭鬧抱怨發脾氣！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 87.07,
@@ -17602,7 +17844,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Self-control with ... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手握住大輪舵英勇轉動！",
-            "lyricZh": "我是我自己這艘生命大船的船長！"
+            "lyricZh": "我是我自己這艘生命大船的船長！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 91.7,
@@ -17616,7 +17859,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Pause, think, choo... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手平穩握拳展現自控力！",
-            "lyricZh": "用穩定的手掌牢牢掌握自制力！"
+            "lyricZh": "用穩定的手掌牢牢掌握自制力！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 97.33,
@@ -17630,7 +17874,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Self-control with ... ➜",
             "targetPose": "jump",
             "voiceScript": "小朋友看老師示範：原地跳躍擺出思考決定姿勢！",
-            "lyricZh": "停一下、想一想、選出最好的路！耶！"
+            "lyricZh": "停一下、想一想、選出最好的路！耶！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 101.17,
@@ -17644,7 +17889,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Ah, ah, ah, ah!... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：雙手平穩握拳展現自控力！",
-            "lyricZh": "用穩定的手掌牢牢掌握自制力！"
+            "lyricZh": "用穩定的手掌牢牢掌握自制力！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 105.7,
@@ -17658,7 +17904,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Ah, ah, ah, ah!... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 109.5,
@@ -17672,7 +17919,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "march",
             "voiceScript": "小朋友看老師示範：單手遮額向遠方眺望定格！",
-            "lyricZh": "自律讓我是最酷的船長！"
+            "lyricZh": "自律讓我是最酷的船長！",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           },
           {
             "start": 111.33,
@@ -17686,7 +17934,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "danceCoach": "Tim (蓬鬆呆毛棕髮男孩)"
           }
         ],
         "leadDancer": "Tim (蓬鬆呆毛棕髮男孩)"
@@ -17722,7 +17971,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Ah.... ➜",
             "targetPose": "march",
             "voiceScript": "小朋友準備好，跟著輕快節奏一起動起來！",
-            "lyricZh": "歡樂律動前奏"
+            "lyricZh": "歡樂律動前奏",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 11.33,
@@ -17736,7 +17986,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Ah.... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：抬頭仰望滿天星斗！",
-            "lyricZh": "啊，寧靜的夜晚降臨了。"
+            "lyricZh": "啊，寧靜的夜晚降臨了。",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 12.37,
@@ -17750,7 +18001,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Ah.... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 17,
@@ -17764,7 +18016,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "The toys are aslee... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：身體左右慢節奏擺動！",
-            "lyricZh": "啊，微風在輕輕搖曳。"
+            "lyricZh": "啊，微風在輕輕搖曳。",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 18.13,
@@ -17778,7 +18031,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "The toys are aslee... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 22.33,
@@ -17792,7 +18046,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Little birds are d... ➜",
             "targetPose": "reach",
             "voiceScript": "小朋友看老師示範：雙手做輕輕關上玩具箱動作！",
-            "lyricZh": "玩具們已經在木箱子裡甜甜睡著了，"
+            "lyricZh": "玩具們已經在木箱子裡甜甜睡著了，",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 28.47,
@@ -17806,7 +18061,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Thank you for this... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手做小鳥翅膀收攏入睡！",
-            "lyricZh": "小鳥兒們也在溫暖的鳥巢裡做著美夢。"
+            "lyricZh": "小鳥兒們也在溫暖的鳥巢裡做著美夢。",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 34.1,
@@ -17820,7 +18076,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "All the laughter, ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手合十向星空感謝！",
-            "lyricZh": "謝謝今天這美麗美好的一天，"
+            "lyricZh": "謝謝今天這美麗美好的一天，",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 40.1,
@@ -17834,7 +18091,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Close your eyes un... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：雙手在心前化作燦爛花朵！",
-            "lyricZh": "所有充滿歡笑的時光，所有快樂的遊戲。"
+            "lyricZh": "所有充滿歡笑的時光，所有快樂的遊戲。",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 45.53,
@@ -17848,7 +18106,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Love is protecting... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手做拉上棉被蓋好動作！",
-            "lyricZh": "在滿天星斗的溫暖棉被下閉上眼睛吧，"
+            "lyricZh": "在滿天星斗的溫暖棉被下閉上眼睛吧，",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 51.2,
@@ -17862,7 +18121,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Softly breathing, ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙臂抱緊自己感受溫暖安全！",
-            "lyricZh": "滿滿的愛在身邊守護著，無論近處或遠方。"
+            "lyricZh": "滿滿的愛在身邊守護著，無論近處或遠方。",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 56.87,
@@ -17876,7 +18136,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Into sweet and pea... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：深吸一口氣慢慢閉上眼睛！",
-            "lyricZh": "輕輕地深呼吸，緩緩漂浮沉浸，"
+            "lyricZh": "輕輕地深呼吸，緩緩漂浮沉浸，",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 62.87,
@@ -17890,7 +18151,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "With love and joy ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手合十貼臉頰做睡覺姿勢！",
-            "lyricZh": "進入甜美又平靜的安穩夢鄉。"
+            "lyricZh": "進入甜美又平靜的安穩夢鄉。",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 68.07,
@@ -17904,7 +18166,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Gentle hearts have... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：手捧心口甜美溫柔微笑！",
-            "lyricZh": "心裡裝著滿滿的愛與無比的喜樂，"
+            "lyricZh": "心裡裝著滿滿的愛與無比的喜樂，",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 74.1,
@@ -17918,7 +18181,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Tomorrow brings a ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：輕輕拍拍肩膀安穩放下！",
-            "lyricZh": "善良溫柔的心靈迎來了最好的安歇。"
+            "lyricZh": "善良溫柔的心靈迎來了最好的安歇。",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 79.5,
@@ -17932,7 +18196,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Sweet dreams, litt... ➜",
             "targetPose": "sun_rise",
             "voiceScript": "小朋友看老師示範：手指點向遠方明日朝陽！",
-            "lyricZh": "明天又會帶來全新的希望光芒，"
+            "lyricZh": "明天又會帶來全新的希望光芒，",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 86.17,
@@ -17946,7 +18211,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Close your eyes un... ➜",
             "targetPose": "wave",
             "voiceScript": "小朋友看老師示範：單手在胸前向小星星輕輕招手！",
-            "lyricZh": "做個甜甜的美夢吧，小星星，晚安囉！"
+            "lyricZh": "做個甜甜的美夢吧，小星星，晚安囉！",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 91.17,
@@ -17960,7 +18226,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Love is protecting... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手做拉上棉被蓋好動作！",
-            "lyricZh": "在滿天星斗的溫暖棉被下閉上眼睛吧，"
+            "lyricZh": "在滿天星斗的溫暖棉被下閉上眼睛吧，",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 96.77,
@@ -17974,7 +18241,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Softly breathing, ... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙臂抱緊自己感受溫暖安全！",
-            "lyricZh": "滿滿的愛在身邊守護著，無論近處或遠方。"
+            "lyricZh": "滿滿的愛在身邊守護著，無論近處或遠方。",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 102.4,
@@ -17988,7 +18256,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Goodnight, Kai Dan... ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：雙手交疊在胸前平靜呼吸！",
-            "lyricZh": "輕輕地深呼吸，緩緩沉入甜蜜夢鄉。"
+            "lyricZh": "輕輕地深呼吸，緩緩沉入甜蜜夢鄉。",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 107.73,
@@ -18002,7 +18271,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "Goodnight, Kai Dan... ➜",
             "targetPose": "march",
             "voiceScript": "跟著節奏拍拍手，下一個動作馬上要來囉！",
-            "lyricZh": "歡樂律動間奏"
+            "lyricZh": "歡樂律動間奏",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 113.77,
@@ -18016,7 +18286,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "跟上尾奏定格 ➜",
             "targetPose": "heart",
             "voiceScript": "小朋友看老師示範：合掌依偎臉頰甜甜入睡定格！",
-            "lyricZh": "晚安 KaiDance，晚安我親愛的好朋友！"
+            "lyricZh": "晚安 KaiDance，晚安我親愛的好朋友！",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           },
           {
             "start": 118.7,
@@ -18030,7 +18301,8 @@ window.KAI_ALBUM_DATABASE = {
             "next": "完成練習！太棒了！🎉",
             "targetPose": "heart",
             "voiceScript": "太棒了！擺出最帥氣可愛的 Ending Pose，定格微笑！",
-            "lyricZh": "快樂結尾定格"
+            "lyricZh": "快樂結尾定格",
+            "danceCoach": "MiMi (健康小麥肌女孩)"
           }
         ],
         "leadDancer": "MiMi (健康小麥肌捲髮女孩)"
