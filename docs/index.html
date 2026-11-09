@@ -3322,13 +3322,25 @@
     let mpPose = null;
     let isMpRunning = false;
 
-    // DOM 引用
+    // DOM 引用與全域前置狀態 (避免任何 Temporal Dead Zone 存取異常)
     const viewLobby = document.getElementById('view-lobby');
     const viewDance = document.getElementById('view-dance');
     const viewAlbumLevels = document.getElementById('view-album-levels');
     const viewDancerSquad = document.getElementById('view-dancer-squad');
     const viewTurntable = document.getElementById('view-turntable');
     const audioTurntable = document.getElementById('audio-turntable');
+    let currentSongEntryToken = 0;
+    let cameraZoomLevel = 1.0;
+    let frameTick = 0;
+    let turntableActiveAlbum = 'album_1';
+    let turntableActiveSongId = 'a1_s01';
+    let turntableIsPlaying = false;
+    let turntableLoopMode = 'album'; // 'single' (🔂), 'album' (🔁), 'all' (🌌)
+    let turntablePlaylistView = 'album'; // 'album' (當前星球10首) or 'all' (全宇宙40首)
+    let turntableIsShuffle = false;
+    let turntableSpeed = 1.0;
+    let turntableVolume = 1.0;
+    let isTurntableSeeking = false;
     const roomSongTitle = document.getElementById('room-song-title');
     const coachVideoA = document.getElementById('coach-video-a');
     const coachVideoB = document.getElementById('coach-video-b');
@@ -6695,8 +6707,6 @@
     }
 
     // 單曲進入世代令牌：確保畫面已切入且攝影機開啟/關閉確認完成後，才啟動音樂播放
-    let currentSongEntryToken = 0;
-
     async function selectSong(key) {
       const entryToken = ++currentSongEntryToken;
       currentSongKey = key;
@@ -7198,8 +7208,6 @@
     resizeCanvas();
 
     // 鏡頭數位縮放狀態 (支援 1.0x ~ 2.25x 放大，讓站得遠、人物小的小朋友也能被特寫並精準鎖定)
-    let cameraZoomLevel = 1.0;
-
     function adjustCameraZoom(delta) {
       cameraZoomLevel = Math.max(1.0, Math.min(2.25, Math.round((cameraZoomLevel + delta) * 100) / 100));
       updateCameraZoomUI();
@@ -8249,7 +8257,6 @@
     }
 
     // --- 核心：每帧绘制萌趣发光火柴人 (Stick-Figure) ---
-    let frameTick = 0;
     function renderStickmanLoop() {
       try {
         processRealVideoFrame();
@@ -9475,16 +9482,6 @@
     // ========================================================
     // 🪐 Kai 宇宙星空黑膠唱片機 (Turntable Player) 控制系統
     // ========================================================
-    let turntableActiveAlbum = 'album_1';
-    let turntableActiveSongId = 'a1_s01';
-    let turntableIsPlaying = false;
-    let turntableLoopMode = 'album'; // 'single' (🔂), 'album' (🔁), 'all' (🌌)
-    let turntablePlaylistView = 'album'; // 'album' (當前星球10首) or 'all' (全宇宙40首)
-    let turntableIsShuffle = false;
-    let turntableSpeed = 1.0;
-    let turntableVolume = 1.0;
-    let isTurntableSeeking = false;
-
     const TURNTABLE_ALBUM_CONFIGS = {
       'album_1': {
         name: '晨光星球 · 第 1 集',
