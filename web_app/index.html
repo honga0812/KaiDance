@@ -5667,6 +5667,10 @@
       }
 
       isTransitioningPlanet = false;
+      const stageLoaderEl = document.getElementById('song-stage-loader');
+      if (stageLoaderEl) {
+        stageLoaderEl.classList.add('hidden', 'opacity-0', 'pointer-events-none');
+      }
       if (viewDancerSquad) viewDancerSquad.classList.add('hidden');
       if (viewAlbumLevels) viewAlbumLevels.classList.add('hidden');
       if (viewDance) viewDance.classList.add('hidden');
@@ -6074,7 +6078,7 @@
       }
       applyPlanetThemeToViews(currentAlbumId);
 
-      // 2. 更新單曲教室頂欄的主題圖示、左上角所屬星球標章與歌名
+      // 2. 更新單曲教室頂欄的主題圖示、左上角所屬星球標章與歌名，並先將單曲舞台開啟於載入遮罩下方 (確保瀏覽器優先解碼視訊與音訊，且不被 hidden 檢查誤判中止)
       const roomEmblemEl = document.getElementById('room-song-emblem');
       if (roomEmblemEl) {
         roomEmblemEl.innerHTML = renderSongThemeEmblem(song, 'header');
@@ -6103,136 +6107,7 @@
         }
       }
 
-      // 3. 設定音訊並真正等待音訊緩衝完成
-      updateStageLoader(35, "正在載入高音質音樂與動作資料...", "音訊通道緩衝中");
-      audioBgm.pause();
-      audioBgm.src = song.file;
-      audioBgm.preload = "auto";
-      audioBgm.currentTime = 0;
-      currentTime = 0;
-      lastSpokenSegment = -1;
-      combo = 0;
-      score = 0;
-
-      await new Promise(resolve => {
-        let done = false;
-        const onAudioReady = () => {
-          if (!done) {
-            done = true;
-            audioBgm.removeEventListener('canplay', onAudioReady);
-            audioBgm.removeEventListener('canplaythrough', onAudioReady);
-            resolve();
-          }
-        };
-        if (audioBgm.readyState >= 2) return resolve();
-        audioBgm.addEventListener('canplay', onAudioReady);
-        audioBgm.addEventListener('canplaythrough', onAudioReady);
-        setTimeout(onAudioReady, 2500); // 至多等待 2.5 秒
-      });
-      if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
-
-      // 4. 收集該歌曲所有獨立引導影片
-      const uniqueVideoUrls = [];
-      if (song.timeline) {
-        song.timeline.forEach(seg => {
-          if (seg.video && !uniqueVideoUrls.includes(seg.video)) {
-            uniqueVideoUrls.push(seg.video);
-          }
-        });
-      }
-
-      if (uniqueVideoUrls.length > 0) {
-        activeVideoSlot = 'a';
-        setupVideoElement(coachVideoA);
-        setupVideoElement(coachVideoB);
-        if (coachImage) coachImage.classList.add('hidden', 'opacity-0', 'pointer-events-none');
-        coachVideoA.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
-        coachVideoA.classList.add('opacity-100');
-        coachVideoB.classList.remove('opacity-100');
-        coachVideoB.classList.add('opacity-0', 'pointer-events-none');
-        if (coachTypeBadge) coachTypeBadge.innerText = "🎬 示範影片";
-
-        // 🌟 預載第 1 幕影片 (下載至記憶體 Blob 並確認就緒)
-        updateStageLoader(55, "正在預載第 1 幕動作引導影片...", "記憶體零延遲解碼");
-        const vid1 = uniqueVideoUrls[0];
-        const blob1 = await Promise.race([
-          preloadVideo(vid1),
-          new Promise(r => setTimeout(() => r(vid1), 4000))
-        ]);
-        if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
-
-        coachVideoA.src = blob1 || vid1;
-        coachVideoA._logicalVideoUrl = vid1;
-        coachVideoA.preload = "auto";
-        coachVideoA.load();
-
-        await new Promise(resolve => {
-          let done = false;
-          const onVid1Ready = () => {
-            if (!done) {
-              done = true;
-              coachVideoA.removeEventListener('canplay', onVid1Ready);
-              coachVideoA.removeEventListener('loadeddata', onVid1Ready);
-              resolve();
-            }
-          };
-          if (coachVideoA.readyState >= 2) return resolve();
-          coachVideoA.addEventListener('canplay', onVid1Ready);
-          coachVideoA.addEventListener('loadeddata', onVid1Ready);
-          setTimeout(onVid1Ready, 3000);
-        });
-        if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
-
-        // 🌟 預載第 2 幕影片到 coachVideoB (若存在)
-        if (uniqueVideoUrls.length > 1) {
-          updateStageLoader(75, "第 1 幕就緒！預先緩衝第 2 幕動作...", "雙緩衝無縫交替");
-          const vid2 = uniqueVideoUrls[1];
-          const blob2Promise = preloadVideo(vid2);
-          blob2Promise.then(blob2 => {
-            if (entryToken === currentSongEntryToken) {
-              setupVideoElement(coachVideoB);
-              coachVideoB.src = blob2 || vid2;
-              coachVideoB._logicalVideoUrl = vid2;
-              coachVideoB.preload = "auto";
-              coachVideoB.load();
-            }
-          });
-          await Promise.race([
-            blob2Promise,
-            new Promise(r => setTimeout(r, 800))
-          ]);
-          if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
-        }
-
-        // 🌟 立即啟動後續段落 (第 3 幕起) 背景持續預熱佇列
-        updateStageLoader(88, "啟動連續段落預熱佇列...", "多樂句無縫預備");
-        startContinuousVideoPrefetch(song);
-      } else {
-        if (coachVideoA) {
-          coachVideoA.pause();
-          coachVideoA.classList.remove('opacity-100');
-          coachVideoA.classList.add('hidden', 'opacity-0', 'pointer-events-none');
-        }
-        if (coachVideoB) {
-          coachVideoB.pause();
-          coachVideoB.classList.remove('opacity-100');
-          coachVideoB.classList.add('hidden', 'opacity-0', 'pointer-events-none');
-        }
-        if (coachImage) {
-          coachImage.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
-          coachImage.classList.add('opacity-100');
-          const firstSeg = (song.timeline && song.timeline[0]) || null;
-          coachImage.src = (firstSeg && firstSeg.image) || song.coachImage || './images/boy_dance_coach_1790908303698.jpg';
-        }
-        if (coachTypeBadge) coachTypeBadge.innerText = "📸 動作引導寫真";
-      }
-
-      // 先更新初始歌詞與動作文字
-      updatePlaybackUI();
-      if (playIcon) playIcon.innerText = "⏳";
-      if (playLabel) playLabel.innerText = "準備舞台中...";
-
-      // 5. 切換畫面至單曲跳舞教室
+      // 立即切換底層視圖至單曲跳舞教室 (被 z-[100] 的 song-stage-loader 遮罩覆蓋)，讓視訊與音訊元素處於可見 DOM 樹中以加速硬體解碼
       viewLobby.classList.add('hidden');
       if (viewDancerSquad) viewDancerSquad.classList.add('hidden');
       if (viewAlbumLevels) viewAlbumLevels.classList.add('hidden');
@@ -6246,48 +6121,188 @@
         renderPlaylistDrawer();
       }
 
-      await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
-      if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
+      try {
+        // 3. 設定音訊並真正等待音訊緩衝完成
+        updateStageLoader(35, "正在載入高音質音樂與動作資料...", "音訊通道緩衝中");
+        audioBgm.pause();
+        audioBgm.src = song.file;
+        audioBgm.preload = "auto";
+        try { audioBgm.load(); } catch(e) {}
+        try { audioBgm.currentTime = 0; } catch(e) {}
+        currentTime = 0;
+        lastSpokenSegment = -1;
+        combo = 0;
+        score = 0;
 
-      resizeCanvas();
-      setTimeout(resizeCanvas, 80);
-      setTimeout(resizeCanvas, 220);
+        await new Promise(resolve => {
+          let done = false;
+          const onAudioReady = () => {
+            if (!done) {
+              done = true;
+              audioBgm.removeEventListener('canplay', onAudioReady);
+              audioBgm.removeEventListener('canplaythrough', onAudioReady);
+              audioBgm.removeEventListener('loadeddata', onAudioReady);
+              audioBgm.removeEventListener('error', onAudioReady);
+              resolve();
+            }
+          };
+          if (audioBgm.readyState >= 2) return resolve();
+          audioBgm.addEventListener('canplay', onAudioReady);
+          audioBgm.addEventListener('canplaythrough', onAudioReady);
+          audioBgm.addEventListener('loadeddata', onAudioReady);
+          audioBgm.addEventListener('error', onAudioReady);
+          setTimeout(onAudioReady, 2000); // 至多等待 2 秒
+        });
+        if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
 
-      // 6. 確認攝影機狀態
-      if (userSettings.cameraAutoStart) {
-        updateStageLoader(94, "AI 動作偵測鏡頭暖機中...", "火柴人骨骼辨識");
-        if (!isCameraActive) {
-          if (stickmanStatusBadge) stickmanStatusBadge.innerText = "📷 正在啟動攝影機與偵測狀態...";
-          await Promise.race([
-            initRealCamera(),
-            new Promise(resolve => setTimeout(resolve, 1800))
-          ]);
-        }
-        if (isCameraActive && webcamVideo && webcamVideo.readyState < 2) {
-          await new Promise(resolve => {
-            const onReady = () => {
-              webcamVideo.removeEventListener('loadeddata', onReady);
-              resolve();
-            };
-            webcamVideo.addEventListener('loadeddata', onReady);
-            setTimeout(() => {
-              webcamVideo.removeEventListener('loadeddata', onReady);
-              resolve();
-            }, 300);
+        // 4. 收集該歌曲所有獨立引導影片
+        const uniqueVideoUrls = [];
+        if (song.timeline) {
+          song.timeline.forEach(seg => {
+            if (seg.video && !uniqueVideoUrls.includes(seg.video)) {
+              uniqueVideoUrls.push(seg.video);
+            }
           });
         }
-      } else {
-        if (isCameraActive) stopRealCamera();
-        if (stickmanStatusBadge) {
-          stickmanStatusBadge.innerText = "📷 攝影機已關閉 · 可點擊左側開啟鏡頭";
+
+        if (uniqueVideoUrls.length > 0) {
+          activeVideoSlot = 'a';
+          setupVideoElement(coachVideoA);
+          setupVideoElement(coachVideoB);
+          if (coachImage) coachImage.classList.add('hidden', 'opacity-0', 'pointer-events-none');
+          coachVideoA.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+          coachVideoA.classList.add('opacity-100');
+          coachVideoB.classList.remove('opacity-100');
+          coachVideoB.classList.add('opacity-0', 'pointer-events-none');
+          if (coachTypeBadge) coachTypeBadge.innerText = "🎬 示範影片";
+
+          // 🌟 預載第 1 幕影片 (下載至記憶體 Blob 並確認就緒)
+          updateStageLoader(55, "正在預載第 1 幕動作引導影片...", "記憶體零延遲解碼");
+          const vid1 = uniqueVideoUrls[0];
+          const blob1 = await Promise.race([
+            preloadVideo(vid1),
+            new Promise(r => setTimeout(() => r(vid1), 3500))
+          ]);
+          if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
+
+          coachVideoA.src = blob1 || vid1;
+          coachVideoA._logicalVideoUrl = vid1;
+          coachVideoA.preload = "auto";
+          try { coachVideoA.load(); } catch(e) {}
+
+          await new Promise(resolve => {
+            let done = false;
+            const onVid1Ready = () => {
+              if (!done) {
+                done = true;
+                coachVideoA.removeEventListener('canplay', onVid1Ready);
+                coachVideoA.removeEventListener('loadeddata', onVid1Ready);
+                coachVideoA.removeEventListener('error', onVid1Ready);
+                resolve();
+              }
+            };
+            if (coachVideoA.readyState >= 2) return resolve();
+            coachVideoA.addEventListener('canplay', onVid1Ready);
+            coachVideoA.addEventListener('loadeddata', onVid1Ready);
+            coachVideoA.addEventListener('error', onVid1Ready);
+            setTimeout(onVid1Ready, 2200);
+          });
+          if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
+
+          // 🌟 預載第 2 幕影片到 coachVideoB (若存在)
+          if (uniqueVideoUrls.length > 1) {
+            updateStageLoader(75, "第 1 幕就緒！預先緩衝第 2 幕動作...", "雙緩衝無縫交替");
+            const vid2 = uniqueVideoUrls[1];
+            const blob2Promise = preloadVideo(vid2);
+            blob2Promise.then(blob2 => {
+              if (entryToken === currentSongEntryToken) {
+                setupVideoElement(coachVideoB);
+                coachVideoB.src = blob2 || vid2;
+                coachVideoB._logicalVideoUrl = vid2;
+                coachVideoB.preload = "auto";
+                try { coachVideoB.load(); } catch(e) {}
+              }
+            });
+            await Promise.race([
+              blob2Promise,
+              new Promise(r => setTimeout(r, 700))
+            ]);
+            if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
+          }
+
+          // 🌟 立即啟動後續段落 (第 3 幕起) 背景持續預熱佇列
+          updateStageLoader(88, "啟動連續段落預熱佇列...", "多樂句無縫預備");
+          startContinuousVideoPrefetch(song);
+        } else {
+          if (coachVideoA) {
+            coachVideoA.pause();
+            coachVideoA.classList.remove('opacity-100');
+            coachVideoA.classList.add('hidden', 'opacity-0', 'pointer-events-none');
+          }
+          if (coachVideoB) {
+            coachVideoB.pause();
+            coachVideoB.classList.remove('opacity-100');
+            coachVideoB.classList.add('hidden', 'opacity-0', 'pointer-events-none');
+          }
+          if (coachImage) {
+            coachImage.classList.remove('hidden', 'opacity-0', 'pointer-events-none');
+            coachImage.classList.add('opacity-100');
+            const firstSeg = (song.timeline && song.timeline[0]) || null;
+            coachImage.src = (firstSeg && firstSeg.image) || song.coachImage || './images/boy_dance_coach_1790908303698.jpg';
+          }
+          if (coachTypeBadge) coachTypeBadge.innerText = "📸 動作引導寫真";
         }
+
+        // 先更新初始歌詞與動作文字
+        updatePlaybackUI();
+        if (playIcon) playIcon.innerText = "⏳";
+        if (playLabel) playLabel.innerText = "準備舞台中...";
+
+        await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
+        if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
+
+        resizeCanvas();
+        setTimeout(resizeCanvas, 80);
+        setTimeout(resizeCanvas, 220);
+
+        // 6. 確認攝影機狀態
+        if (userSettings.cameraAutoStart) {
+          updateStageLoader(94, "AI 動作偵測鏡頭暖機中...", "火柴人骨骼辨識");
+          if (!isCameraActive) {
+            if (stickmanStatusBadge) stickmanStatusBadge.innerText = "📷 正在啟動攝影機與偵測狀態...";
+            await Promise.race([
+              initRealCamera(),
+              new Promise(resolve => setTimeout(resolve, 1800))
+            ]);
+          }
+          if (isCameraActive && webcamVideo && webcamVideo.readyState < 2) {
+            await new Promise(resolve => {
+              const onReady = () => {
+                webcamVideo.removeEventListener('loadeddata', onReady);
+                resolve();
+              };
+              webcamVideo.addEventListener('loadeddata', onReady);
+              setTimeout(() => {
+                webcamVideo.removeEventListener('loadeddata', onReady);
+                resolve();
+              }, 300);
+            });
+          }
+        } else {
+          if (isCameraActive) stopRealCamera();
+          if (stickmanStatusBadge) {
+            stickmanStatusBadge.innerText = "📷 攝影機已關閉 · 可點擊左側開啟鏡頭";
+          }
+        }
+      } catch (err) {
+        console.warn("selectSong preload warning:", err);
       }
 
       if (entryToken !== currentSongEntryToken || viewDance.classList.contains('hidden')) return;
 
       // 7. 100% 準備完成，優雅淡出 Loading 畫面，正式開始播放！
       updateStageLoader(100, "🎉 舞台準備完成！音樂即刻開始！", "100% 零延遲秒播就緒");
-      await new Promise(r => setTimeout(r, 220));
+      await new Promise(r => setTimeout(r, 200));
 
       const stageLoaderEl = document.getElementById('song-stage-loader');
       if (stageLoaderEl) {
