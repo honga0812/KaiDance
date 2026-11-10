@@ -2209,10 +2209,10 @@
         <!-- 6. 舞台聲控激光與動態燈光預設開關 -->
         <div class="flex items-center justify-between p-3.5 rounded-2xl bg-slate-800/60 border border-slate-700/60">
           <div class="flex items-center gap-3">
-            <span class="text-xl">⚡</span>
+            <span class="text-xl">🫧</span>
             <div>
-              <div class="font-bold text-sm text-white">舞台聲控激光與動態燈效</div>
-              <div class="text-[11px] text-slate-400">播放單曲時自動依歌曲動感節奏投射高能激光束與極光燈效</div>
+              <div class="font-bold text-sm text-white">舞台浪漫抒情柔光與漂浮氣泡</div>
+              <div class="text-[11px] text-slate-400">播放單曲時自動投射柔和浪漫極光與往上飄的夢幻光泡效果</div>
             </div>
           </div>
           <label class="relative inline-flex items-center cursor-pointer">
@@ -2643,10 +2643,10 @@
             <span id="stickman-status-badge" class="bg-slate-900/80 backdrop-blur text-cyan-100 text-[10px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full border border-cyan-300/35 shadow-xs truncate max-w-[110px] sm:max-w-xs">
               等待小朋友入鏡...
             </span>
-            <!-- 💡 舞台聲控雷射與氛圍燈光按鍵 -->
-            <button id="btn-stage-lighting" onclick="toggleStageLighting()" class="bg-slate-900/80 hover:bg-slate-800 text-amber-300 text-[10px] sm:text-xs font-bold px-2 sm:px-2.5 py-0.5 rounded-full border border-amber-300/40 shadow-xs flex items-center gap-1 transition active:scale-95 shrink-0" title="點擊切換舞台聲控激光與氛圍燈效 (開/關)">
-              <span id="stage-lighting-icon">⚡</span>
-              <span id="stage-lighting-text" class="hidden xs:inline">動感激光</span>
+            <!-- 💡 舞台浪漫抒情光泡與氛圍燈光按鍵 -->
+            <button id="btn-stage-lighting" onclick="toggleStageLighting()" class="bg-slate-900/80 hover:bg-slate-800 text-amber-300 text-[10px] sm:text-xs font-bold px-2 sm:px-2.5 py-0.5 rounded-full border border-amber-300/40 shadow-xs flex items-center gap-1 transition active:scale-95 shrink-0" title="點擊切換浪漫抒情光泡氛圍燈效 (開/關)">
+              <span id="stage-lighting-icon">🫧</span>
+              <span id="stage-lighting-text" class="hidden xs:inline">浪漫光泡</span>
             </button>
           </div>
 
@@ -2692,8 +2692,8 @@
           <!-- 全螢幕控制懸浮按鈕組 (全螢幕時置頂最右側，便於隨時一鍵返回雙屏教室與切換燈效) -->
           <div id="camera-fs-controls" class="hidden absolute top-4 right-4 z-40 flex items-center gap-2">
             <button id="btn-camera-fs-lighting" onclick="toggleStageLighting()" class="px-3 py-1.5 rounded-2xl bg-black/75 hover:bg-black/90 text-amber-300 border border-amber-300/40 backdrop-blur-md font-bold text-xs flex items-center gap-1.5 transition active:scale-95 shadow-xl">
-              <span id="fs-lighting-icon">⚡</span>
-              <span id="fs-lighting-text">動感激光</span>
+              <span id="fs-lighting-icon">🫧</span>
+              <span id="fs-lighting-text">浪漫光泡</span>
             </button>
             <button id="btn-camera-exit-fs" onclick="toggleCameraFullscreen()" class="px-4 py-2 rounded-2xl bg-black/75 hover:bg-black/90 text-white font-black text-xs border border-white/30 backdrop-blur-md shadow-2xl flex items-center gap-1.5 transition active:scale-95">
               <span>✕</span> 退出全螢幕
@@ -3650,43 +3650,14 @@
     };
 
     function getSongVibrancyProfile(song) {
-      if (!song) return { energyLevel: 3, bpm: 108, lightStyle: "spotlight_medium", label: "🌟 舞台追光", isFast: false, isSlow: false };
-      const explicit = SONG_VIBRANCY_PROFILES[song.id];
-      if (explicit) {
-        return {
-          ...explicit,
-          isFast: explicit.energyLevel >= 4,
-          isSlow: explicit.energyLevel <= 2
-        };
-      }
-      const tag = song.tag || '';
-      let energy = 3;
-      let style = 'spotlight_medium';
-      let label = '🌟 歡樂節奏追光';
-      if (/爆發|狂歡|大跳躍|反應|急速|街舞|動感/.test(tag) || song.difficulty === '⭐⭐⭐') {
-        energy = 5;
-        style = 'laser_hyper';
-        label = '⚡ 動感狂想激光';
-      } else if (/活力|進行曲|律動|重低音/.test(tag)) {
-        energy = 4;
-        style = 'laser_energetic';
-        label = '✨ 舞台動感激光';
-      } else if (/放鬆|晚安|平靜|舒緩|安眠/.test(tag) || song.difficulty === '⭐') {
-        energy = 1;
-        style = 'soft_aurora';
-        label = '🌙 夢幻星光極光';
-      } else if (/溫柔|慢步|擁抱|常規/.test(tag)) {
-        energy = 2;
-        style = 'soft_warm';
-        label = '🌸 舒緩柔和光線';
-      }
+      const explicit = song && SONG_VIBRANCY_PROFILES[song.id];
       return {
-        energyLevel: energy,
-        bpm: energy >= 4 ? 128 : (energy <= 2 ? 70 : 105),
-        lightStyle: style,
-        label: label,
-        isFast: energy >= 4,
-        isSlow: energy <= 2
+        energyLevel: 1,
+        bpm: (explicit && explicit.bpm) ? explicit.bpm : 72,
+        lightStyle: "soft_aurora",
+        label: "🫧 浪漫光泡",
+        isFast: false,
+        isSlow: true
       };
     }
 
@@ -3803,32 +3774,53 @@
       }
     }
 
-    // 漂浮夢幻微光微粒 (慢歌專屬)
-    const dreamStardustParticles = Array.from({ length: 24 }, () => ({
+    // 浪漫抒情慢歌專屬：往上飄浮的夢幻微光泡泡微粒 (全曲目統一採用此柔和浪漫效果)
+    const dreamStardustParticles = Array.from({ length: 28 }, () => ({
       x: Math.random(),
       y: Math.random(),
-      radius: 2 + Math.random() * 4,
-      speedY: 0.0012 + Math.random() * 0.0025,
-      swaySpeed: 1.0 + Math.random() * 2.0,
+      radius: 2.5 + Math.random() * 5.5,
+      speedY: 0.0010 + Math.random() * 0.0022,
+      swaySpeed: 0.9 + Math.random() * 1.8,
       swayDist: 0.015 + Math.random() * 0.025,
       phase: Math.random() * Math.PI * 2,
-      color: ['rgba(196,181,253,', 'rgba(254,205,211,', 'rgba(254,240,138,', 'rgba(167,243,208,'][Math.floor(Math.random() * 4)],
-      alpha: 0.3 + Math.random() * 0.5
+      color: ['rgba(196,181,253,', 'rgba(254,205,211,', 'rgba(254,240,138,', 'rgba(167,243,208,', 'rgba(186,230,253,'][Math.floor(Math.random() * 5)],
+      alpha: 0.32 + Math.random() * 0.45
     }));
 
-    // 舞台聲控動態激光與燈光主渲染函數 (同時驅動全景大舞台、相機特寫與黑膠唱片機)
+    // 舞台浪漫抒情光泡與柔光主渲染函數 (同時驅動全景大舞台、相機特寫與黑膠唱片機)
     function renderStageLighting() {
-      if (!userSettings.stageLighting) return;
+      const panoCanvas = document.getElementById('stage-panoramic-laser-canvas');
+      const camCanvas = document.getElementById('stage-laser-canvas');
+      const ttCanvas = document.getElementById('stage-turntable-laser-canvas');
+
+      if (!userSettings.stageLighting) {
+        [panoCanvas, camCanvas, ttCanvas].forEach(c => {
+          if (c && c.width > 0 && c.height > 0) {
+            const ctx = c.getContext('2d');
+            if (ctx) ctx.clearRect(0, 0, c.width, c.height);
+          }
+        });
+        return;
+      }
+
       const now = performance.now() / 1000;
       const audio = stageAudioState;
+
+      // 每幀統一更新一次往上飄的夢幻泡泡座標，避免雙畫布重複累加導致速度翻倍
+      dreamStardustParticles.forEach(p => {
+        p.y -= p.speedY * (0.7 + 0.35 * audio.overall);
+        if (p.y < -0.05) {
+          p.y = 1.05;
+          p.x = Math.random();
+        }
+      });
 
       // 1. 若處於跳舞教室介面 (viewDance 顯示中)
       if (viewDance && !viewDance.classList.contains('hidden')) {
         const song = (typeof currentSongKey !== 'undefined' && songDatabase) ? songDatabase[currentSongKey] : null;
         const profile = getSongVibrancyProfile(song);
 
-        // 1-A. 全景大舞台激光畫布 (覆蓋整個跳舞大教室背景與空間)
-        const panoCanvas = document.getElementById('stage-panoramic-laser-canvas');
+        // 1-A. 全景大舞台柔光與氣泡畫布 (覆蓋整個跳舞大教室背景與空間)
         if (panoCanvas && panoCanvas.width > 0 && panoCanvas.height > 0) {
           const pCtx = panoCanvas.getContext('2d');
           if (pCtx) {
@@ -3837,8 +3829,7 @@
           }
         }
 
-        // 1-B. 攝影機舞台特寫激光畫布 (覆蓋鏡頭畫面與全螢幕鏡頭)
-        const camCanvas = document.getElementById('stage-laser-canvas');
+        // 1-B. 攝影機舞台特寫柔光與氣泡畫布 (覆蓋鏡頭畫面與全螢幕鏡頭)
         if (camCanvas && camCanvas.width > 0 && camCanvas.height > 0) {
           const cCtx = camCanvas.getContext('2d');
           if (cCtx) {
@@ -3853,7 +3844,6 @@
         const song = (typeof turntableActiveSongId !== 'undefined' && songDatabase) ? songDatabase[turntableActiveSongId] : null;
         const profile = getSongVibrancyProfile(song);
 
-        const ttCanvas = document.getElementById('stage-turntable-laser-canvas');
         if (ttCanvas && ttCanvas.width > 0 && ttCanvas.height > 0) {
           const tCtx = ttCanvas.getContext('2d');
           if (tCtx) {
@@ -3864,135 +3854,15 @@
       }
     }
 
-    // 核心光效渲染器 (支援快歌動態激光陣、慢歌極光聖光、中速動態追光)
+    // 核心光效渲染器 (依用戶指示：全數統一採用浪漫抒情慢歌的柔和微光與往上飄浮夢幻泡泡效果，不影響視覺)
     function renderStageBeamsToCanvas(ctx, w, h, profile, now, audio, targetMode) {
-      if (profile.isFast) {
-        renderFastLaserStage(ctx, w, h, profile, now, audio, targetMode);
-      } else if (profile.isSlow) {
-        renderSlowAuroraStage(ctx, w, h, profile, now, audio, targetMode);
-      } else {
-        renderMediumSpotlightStage(ctx, w, h, profile, now, audio, targetMode);
-      }
+      renderSlowAuroraStage(ctx, w, h, profile, now, audio, targetMode);
     }
 
-    // 快歌：高能動態激光束陣列 + 踩點頻閃 + 地面光斑
-    function renderFastLaserStage(ctx, w, h, profile, now, audio, targetMode) {
-      const isHyper = profile.energyLevel >= 5;
-      const beamCount = isHyper ? (targetMode === 'panoramic' ? 10 : 8) : 6;
-      const sweepBaseSpeed = isHyper ? 2.5 : 1.8;
-      const sweepRate = sweepBaseSpeed * (0.7 + 0.8 * audio.mid);
-
-      // 頂部雷射發射器桁架
-      const emitters = [
-        { x: w * 0.15, y: 0, baseAngle: 0.38, phase: 0 },
-        { x: w * 0.32, y: 0, baseAngle: 0.18, phase: Math.PI * 0.3 },
-        { x: w * 0.50, y: 0, baseAngle: 0.00, phase: Math.PI * 0.6 },
-        { x: w * 0.68, y: 0, baseAngle: -0.18, phase: Math.PI * 0.9 },
-        { x: w * 0.85, y: 0, baseAngle: -0.38, phase: Math.PI * 1.2 }
-      ];
-
-      const laserPalette = [
-        { stroke: '#00f0ff', glow: 'rgba(0, 240, 255, 0.65)', core: '#ffffff' },
-        { stroke: '#ff007f', glow: 'rgba(255, 0, 127, 0.65)', core: '#ffffff' },
-        { stroke: '#39ff14', glow: 'rgba(57, 255, 20, 0.65)', core: '#ffffff' },
-        { stroke: '#ffd700', glow: 'rgba(255, 215, 0, 0.65)', core: '#ffffff' },
-        { stroke: '#a855f7', glow: 'rgba(168, 85, 247, 0.65)', core: '#ffffff' }
-      ];
-
-      ctx.save();
-      ctx.globalCompositeOperation = 'lighter';
-
-      // 1. 頂部雷射鏡頭發射源
-      emitters.forEach((em, eIdx) => {
-        const color = laserPalette[eIdx % laserPalette.length];
-        const rad = 12 + 12 * audio.bass + 14 * audio.beatImpact;
-        const eGrad = ctx.createRadialGradient(em.x, em.y, 0, em.x, em.y, rad);
-        eGrad.addColorStop(0, '#ffffff');
-        eGrad.addColorStop(0.4, color.stroke);
-        eGrad.addColorStop(1, 'rgba(0,0,0,0)');
-        ctx.fillStyle = eGrad;
-        ctx.beginPath();
-        ctx.arc(em.x, em.y, rad, 0, Math.PI * 2);
-        ctx.fill();
-      });
-
-      // 2. 掃射雷射光束與地面光斑
-      for (let i = 0; i < beamCount; i++) {
-        const em = emitters[i % emitters.length];
-        const col = laserPalette[i % laserPalette.length];
-        const beamPhase = em.phase + (i * 0.75);
-        const maxSpread = isHyper ? 0.48 : 0.38;
-        const dynamicDir = (i % 2 === 0 ? 1 : -1);
-        const angle = em.baseAngle + Math.sin(now * sweepRate + beamPhase) * maxSpread + (dynamicDir * audio.beatImpact * 0.14);
-
-        const floorY = h * 0.94;
-        const targetX = em.x + Math.tan(angle) * floorY;
-        const targetY = floorY;
-
-        // 立體大光錐羽化外緣
-        const coneWidth = (36 + 42 * audio.bass) * (1 + 0.45 * audio.beatImpact);
-        const bGrad = ctx.createLinearGradient(em.x, em.y, targetX, targetY);
-        bGrad.addColorStop(0, col.glow);
-        bGrad.addColorStop(0.7, col.glow);
-        bGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
-
-        ctx.fillStyle = bGrad;
-        ctx.beginPath();
-        ctx.moveTo(em.x - 3, em.y);
-        ctx.lineTo(targetX - coneWidth * 0.5, targetY);
-        ctx.lineTo(targetX + coneWidth * 0.5, targetY);
-        ctx.lineTo(em.x + 3, em.y);
-        ctx.closePath();
-        ctx.fill();
-
-        // 粗光暈雷射外芯
-        ctx.strokeStyle = col.stroke;
-        ctx.lineWidth = (3.8 + 3.0 * audio.bass) * (1 + 0.4 * audio.beatImpact);
-        ctx.shadowBlur = 24 + 20 * audio.bass;
-        ctx.shadowColor = col.stroke;
-        ctx.beginPath();
-        ctx.moveTo(em.x, em.y);
-        ctx.lineTo(targetX, targetY);
-        ctx.stroke();
-
-        // 超亮純白雷射針芯
-        ctx.strokeStyle = '#ffffff';
-        ctx.lineWidth = 1.8;
-        ctx.shadowBlur = 8;
-        ctx.shadowColor = '#ffffff';
-        ctx.beginPath();
-        ctx.moveTo(em.x, em.y);
-        ctx.lineTo(targetX, targetY);
-        ctx.stroke();
-
-        // 地面雷射接觸光斑 (透視橢圓)
-        const spotRadius = (26 + 28 * audio.bass) * (1 + 0.45 * audio.beatImpact);
-        const spotGrad = ctx.createRadialGradient(targetX, targetY, 0, targetX, targetY, spotRadius);
-        spotGrad.addColorStop(0, '#ffffff');
-        spotGrad.addColorStop(0.4, col.stroke);
-        spotGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
-        ctx.fillStyle = spotGrad;
-        ctx.beginPath();
-        ctx.ellipse(targetX, targetY, spotRadius, spotRadius * 0.35, 0, 0, Math.PI * 2);
-        ctx.fill();
-      }
-
-      // 3. 節拍重擊頻閃 (Kick Strobe Pulse)
-      if (audio.beatImpact > 0.32) {
-        const strobeGrad = ctx.createLinearGradient(0, 0, 0, h * 0.55);
-        strobeGrad.addColorStop(0, `rgba(255, 255, 255, ${0.28 * audio.beatImpact})`);
-        strobeGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
-        ctx.fillStyle = strobeGrad;
-        ctx.fillRect(0, 0, w, h * 0.55);
-      }
-
-      ctx.restore();
-    }
-
-    // 慢歌：柔和聖光／極光光錐 + 夢幻微光粒子漂浮
+    // 浪漫抒情慢歌效果：柔和微光氛圍 + 往上飄浮的夢幻光泡粒子
     function renderSlowAuroraStage(ctx, w, h, profile, now, audio, targetMode) {
       const breath = Math.sin(now * 0.75) * 0.18 + 0.82;
-      const lightAlpha = (0.35 + 0.20 * audio.overall) * breath;
+      const lightAlpha = (0.14 + 0.08 * audio.overall) * breath;
 
       ctx.save();
       ctx.globalCompositeOperation = 'lighter';
@@ -4017,8 +3887,8 @@
         const spreadWidth = w * (0.32 + 0.12 * breath);
 
         const rayGrad = ctx.createRadialGradient(dome.x, dome.y, 25, centerX, h * 0.9, spreadWidth);
-        rayGrad.addColorStop(0, `rgba(${tone.r}, ${tone.g}, ${tone.b}, ${lightAlpha * 1.5})`);
-        rayGrad.addColorStop(0.5, `rgba(${tone.r}, ${tone.g}, ${tone.b}, ${lightAlpha * 0.8})`);
+        rayGrad.addColorStop(0, `rgba(${tone.r}, ${tone.g}, ${tone.b}, ${lightAlpha * 1.2})`);
+        rayGrad.addColorStop(0.5, `rgba(${tone.r}, ${tone.g}, ${tone.b}, ${lightAlpha * 0.6})`);
         rayGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
 
         ctx.fillStyle = rayGrad;
@@ -4033,80 +3903,28 @@
 
       // 地面呼吸暖光池
       const floorGrad = ctx.createRadialGradient(w * 0.5, h * 0.92, 0, w * 0.5, h * 0.92, w * 0.48);
-      floorGrad.addColorStop(0, `rgba(254, 240, 138, ${lightAlpha * 1.1})`);
-      floorGrad.addColorStop(0.4, `rgba(196, 181, 253, ${lightAlpha * 0.6})`);
+      floorGrad.addColorStop(0, `rgba(254, 240, 138, ${lightAlpha * 0.9})`);
+      floorGrad.addColorStop(0.4, `rgba(196, 181, 253, ${lightAlpha * 0.5})`);
       floorGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
       ctx.fillStyle = floorGrad;
       ctx.beginPath();
       ctx.ellipse(w * 0.5, h * 0.92, w * 0.48, h * 0.18, 0, 0, Math.PI * 2);
       ctx.fill();
 
-      // 夢幻微光粒子
+      // 往上飄浮的夢幻光泡微粒
       dreamStardustParticles.forEach(p => {
-        p.y -= p.speedY * (0.7 + 0.4 * audio.overall);
-        if (p.y < -0.05) {
-          p.y = 1.05;
-          p.x = Math.random();
-        }
         const px = (p.x + Math.sin(now * p.swaySpeed + p.phase) * p.swayDist) * w;
         const py = p.y * h;
-        const pRad = p.radius * (1.2 + 0.3 * audio.bass);
-        const pAlpha = p.alpha * (0.7 + 0.3 * Math.sin(now * 2.0 + p.phase));
+        const pRad = p.radius * (1.25 + 0.3 * audio.bass);
+        const pAlpha = p.alpha * (0.75 + 0.25 * Math.sin(now * 2.0 + p.phase));
 
         const pGrad = ctx.createRadialGradient(px, py, 0, px, py, pRad);
         pGrad.addColorStop(0, '#ffffff');
-        pGrad.addColorStop(0.35, `${p.color}${pAlpha})`);
+        pGrad.addColorStop(0.38, `${p.color}${pAlpha})`);
         pGrad.addColorStop(1, `${p.color}0)`);
         ctx.fillStyle = pGrad;
         ctx.beginPath();
         ctx.arc(px, py, pRad, 0, Math.PI * 2);
-        ctx.fill();
-      });
-
-      ctx.restore();
-    }
-
-    // 中速歌曲：優雅動態追光燈 + 節奏交叉光芒
-    function renderMediumSpotlightStage(ctx, w, h, profile, now, audio) {
-      const sweepRate = 1.1 * (0.8 + 0.4 * audio.mid);
-      ctx.save();
-      ctx.globalCompositeOperation = 'lighter';
-
-      const spots = [
-        { x: w * 0.18, y: 0, targetBaseX: w * 0.38, color: 'rgba(251, 191, 36,', phase: 0 },
-        { x: w * 0.35, y: 0, targetBaseX: w * 0.55, color: 'rgba(56, 189, 248,', phase: Math.PI * 0.5 },
-        { x: w * 0.65, y: 0, targetBaseX: w * 0.45, color: 'rgba(244, 63, 94,', phase: Math.PI },
-        { x: w * 0.82, y: 0, targetBaseX: w * 0.62, color: 'rgba(168, 85, 247,', phase: Math.PI * 1.5 }
-      ];
-
-      spots.forEach((sp) => {
-        const sweepX = Math.sin(now * sweepRate + sp.phase) * (w * 0.20);
-        const targetX = sp.targetBaseX + sweepX;
-        const targetY = h * 0.90;
-        const beamW = (65 + 45 * audio.bass) * (1 + 0.35 * audio.beatImpact);
-        const alpha = 0.35 + 0.20 * audio.overall;
-
-        const sGrad = ctx.createLinearGradient(sp.x, sp.y, targetX, targetY);
-        sGrad.addColorStop(0, `${sp.color}${alpha * 1.5})`);
-        sGrad.addColorStop(0.75, `${sp.color}${alpha * 0.8})`);
-        sGrad.addColorStop(1, `${sp.color}0)`);
-
-        ctx.fillStyle = sGrad;
-        ctx.beginPath();
-        ctx.moveTo(sp.x - 12, sp.y);
-        ctx.lineTo(targetX - beamW * 0.5, targetY);
-        ctx.lineTo(targetX + beamW * 0.5, targetY);
-        ctx.lineTo(sp.x + 12, sp.y);
-        ctx.closePath();
-        ctx.fill();
-
-        const spotGrad = ctx.createRadialGradient(targetX, targetY, 0, targetX, targetY, beamW * 0.65);
-        spotGrad.addColorStop(0, '#ffffff');
-        spotGrad.addColorStop(0.4, `${sp.color}${alpha * 1.6})`);
-        spotGrad.addColorStop(1, `${sp.color}0)`);
-        ctx.fillStyle = spotGrad;
-        ctx.beginPath();
-        ctx.ellipse(targetX, targetY, beamW * 0.65, beamW * 0.26, 0, 0, Math.PI * 2);
         ctx.fill();
       });
 
@@ -4142,13 +3960,13 @@
       const fsIcon = document.getElementById('fs-lighting-icon');
       const fsText = document.getElementById('fs-lighting-text');
 
-      const styleIcon = profile.isFast ? '⚡' : (profile.isSlow ? '🌙' : '🌟');
+      const styleIcon = '🫧';
 
       if (userSettings.stageLighting) {
         if (icon) icon.innerText = styleIcon;
-        if (text) text.innerText = profile.label;
+        if (text) text.innerText = '浪漫光泡';
         if (fsIcon) fsIcon.innerText = styleIcon;
-        if (fsText) fsText.innerText = `${profile.label}: 開`;
+        if (fsText) fsText.innerText = '浪漫光泡: 開';
         if (btn) {
           btn.className = "bg-slate-900/80 hover:bg-slate-800 text-amber-300 text-[10px] sm:text-xs font-bold px-2 sm:px-2.5 py-0.5 rounded-full border border-amber-300/40 shadow-xs flex items-center gap-1 transition active:scale-95 shrink-0";
         }
