@@ -29,7 +29,7 @@
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js" crossorigin="anonymous"></script>
   <!-- KaiDance 完整多專輯音樂與動作資料庫 (Album 1 十首全曲 & Album 2 搶先體驗) -->
-  <script src="./album_data.js?v=20261110_0216"></script>
+  <script src="./album_data.js?v=20261113_0115"></script>
   <style>
     @keyframes bounce-slow {
       0%, 100% { transform: translateY(0); }
@@ -5894,6 +5894,8 @@
 
         return `
           <div onclick="playDancerSongAtIndex(${orderIdx})"
+               onmouseenter="if(window.prefetchSongVideos) window.prefetchSongVideos(songDatabase['${songId}'])"
+               ontouchstart="if(window.prefetchSongVideos) window.prefetchSongVideos(songDatabase['${songId}'])"
                class="group relative ${cardClass} rounded-2xl p-3 sm:p-3.5 transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden select-none">
             <div class="flex items-center justify-between gap-1 mb-1.5 relative z-20">
               <span class="px-2 py-0.5 rounded-full text-[10px] font-black ${planetBadgeClass} border shadow-xs">
