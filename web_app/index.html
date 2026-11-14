@@ -3793,10 +3793,10 @@
       if (levelsVipBtn && levelsVipLabel) {
         const isCurrentAlbumUnlocked = isAlbumFullyUnlocked(currentAlbumId);
         if (isCurrentAlbumUnlocked) {
-          levelsVipLabel.innerText = '👑 星球已解鎖暢跳';
+          levelsVipLabel.innerText = '星球已解鎖暢跳';
           levelsVipBtn.className = 'px-3.5 py-2 rounded-full font-black text-xs bg-emerald-500/20 text-emerald-300 border border-emerald-400/60 shadow transition flex items-center gap-1.5 cursor-pointer';
         } else {
-          levelsVipLabel.innerText = '👑 訂閱解鎖本星球 (10首)';
+          levelsVipLabel.innerText = '訂閱解鎖本星球 (10首)';
           levelsVipBtn.className = 'px-3.5 py-2 rounded-full font-black text-xs bg-slate-900/90 hover:bg-slate-800 text-amber-300 border border-amber-400/70 shadow-md transition flex items-center gap-1.5 active:scale-95 cursor-pointer';
         }
       }
@@ -3804,11 +3804,11 @@
       // 4. 戰隊與唱片機頂部標籤更新
       const dancerVipLabel = document.getElementById('dancer-vip-sub-label');
       if (dancerVipLabel) {
-        dancerVipLabel.innerText = isSub ? '👑 VIP 已啟用' : '👑 VIP 訂閱解鎖';
+        dancerVipLabel.innerText = isSub ? 'VIP 已啟用' : 'VIP 訂閱解鎖';
       }
       const turntableVipLabel = document.getElementById('turntable-vip-sub-label');
       if (turntableVipLabel) {
-        turntableVipLabel.innerText = isSub ? '👑 VIP 全開' : '👑 訂閱解鎖';
+        turntableVipLabel.innerText = isSub ? 'VIP 全開' : '訂閱解鎖';
       }
 
       // 5. 訂閱視窗頂部狀態 Badge
@@ -3860,9 +3860,56 @@
       lifetime: 1790
     };
 
+    let lastActiveViewBeforePaywall = 'view-lobby';
+
+    // 確保任何時刻關閉訂閱視窗後，底層必定有對應的活躍畫面可見（徹底杜絕任何單元關閉訂閱視窗後出現黑屏）
+    function ensureActiveViewVisible(fallbackSource = '') {
+      const viewIds = ['view-dancer-squad', 'view-album-levels', 'view-dance', 'view-turntable', 'view-lobby'];
+      const visibleView = viewIds.find(id => {
+        const el = document.getElementById(id);
+        return el && !el.classList.contains('hidden');
+      });
+
+      if (!visibleView) {
+        let restoreId = lastActiveViewBeforePaywall || 'view-lobby';
+        if (fallbackSource && fallbackSource.includes('dancer')) restoreId = 'view-dancer-squad';
+        else if (fallbackSource && fallbackSource.includes('turntable')) restoreId = 'view-turntable';
+        else if (fallbackSource && fallbackSource.includes('levels')) restoreId = 'view-album-levels';
+        const targetEl = document.getElementById(restoreId) || document.getElementById('view-lobby');
+        if (targetEl) {
+          targetEl.classList.remove('hidden');
+        }
+      }
+
+      // 若單曲跳舞頁未開啟，確保載入遮罩 (#song-stage-loader) 必定隱藏，不遮擋畫面造成黑屏
+      const danceEl = document.getElementById('view-dance');
+      const stageLoaderEl = document.getElementById('song-stage-loader');
+      if (stageLoaderEl && (!danceEl || danceEl.classList.contains('hidden'))) {
+        stageLoaderEl.classList.add('hidden', 'opacity-0', 'pointer-events-none');
+      }
+
+      // 若當前處於 Kai 舞蹈戰隊頁，確保 3D 舞台角色位置與圖層立即刷新重繪 (修復 iPad Safari WebKit 圖層重繪)
+      const dancerEl = document.getElementById('view-dancer-squad');
+      if (dancerEl && !dancerEl.classList.contains('hidden') && typeof updateDancer3DCarouselUI === 'function') {
+        updateDancer3DCarouselUI();
+      }
+    }
+
     function openSubscriptionModal(options = {}) {
       const modal = document.getElementById('modal-subscription-paywall');
       if (!modal) return;
+
+      // 紀錄開啟訂閱視窗前正在顯示的頁面 ID，供關閉時多重保護還原
+      const viewIds = ['view-dancer-squad', 'view-album-levels', 'view-dance', 'view-turntable', 'view-lobby'];
+      const currentVisible = viewIds.find(id => {
+        const el = document.getElementById(id);
+        return el && !el.classList.contains('hidden');
+      });
+      if (currentVisible) {
+        lastActiveViewBeforePaywall = currentVisible;
+      } else {
+        ensureActiveViewVisible(options.source || '');
+      }
 
       const triggerBanner = document.getElementById('sub-modal-trigger-banner');
       const triggerIcon = document.getElementById('sub-modal-trigger-icon');
@@ -3912,12 +3959,15 @@
       updatePlanPricesDisplay();
 
       modal.classList.remove('hidden');
-      window.scrollTo({ top: 0, behavior: 'instant' });
+      modal.scrollTop = 0;
+      const innerCard = modal.firstElementChild;
+      if (innerCard) innerCard.scrollTop = 0;
     }
 
     function closeSubscriptionModal() {
       const modal = document.getElementById('modal-subscription-paywall');
       if (modal) modal.classList.add('hidden');
+      ensureActiveViewVisible();
     }
 
     function handleSubscriptionBackdropClick(e) {
@@ -6540,7 +6590,7 @@
         cutout: './images/album2_kpop/cutouts/kid2_niu.png',
         voiceAudioId: 'audio-kid-voice-1',
         voiceText: "耶！我是 Jessie，準備好了嗎？跟我一起閃亮搖擺吧！",
-        songs: ['a1_s02', 'a1_s07', 'a2_s01', 'a2_s07', 'a3_s01', 'a3_s05', 'a4_s01', 'a4_s08'],
+        songs: ['a2_s01', 'a1_s02', 'a1_s07', 'a2_s07', 'a3_s04', 'a3_s05', 'a4_s04', 'a4_s08'],
         accentColor: '#f472b6',
         glowRgba: 'rgba(244, 114, 182, 0.88)',
         spotlightBg: 'linear-gradient(180deg, rgba(244, 114, 182, 0.88) 0%, rgba(217, 70, 239, 0.28) 58%, transparent 100%)',
@@ -6557,7 +6607,7 @@
         cutout: './images/album2_kpop/cutouts/kid3_hihi.png',
         voiceAudioId: 'audio-kid-voice-2',
         voiceText: "Yo! Let's party! 我是 Tim，跟上節拍一起跳起來！",
-        songs: ['a1_s03', 'a1_s08', 'a2_s04', 'a2_s08', 'a3_s04', 'a3_s07', 'a4_s04', 'a4_s09'],
+        songs: ['a3_s01', 'a1_s03', 'a1_s08', 'a2_s04', 'a2_s08', 'a3_s07', 'a4_s03', 'a4_s09'],
         accentColor: '#34d399',
         glowRgba: 'rgba(52, 211, 153, 0.85)',
         spotlightBg: 'linear-gradient(180deg, rgba(52, 211, 153, 0.86) 0%, rgba(16, 185, 129, 0.28) 58%, transparent 100%)',
@@ -6574,7 +6624,7 @@
         cutout: './images/album2_kpop/cutouts/kid4_mina.png',
         voiceAudioId: 'audio-kid-voice-3',
         voiceText: "Hi! Let's dance! 我是 Mina，快樂音樂開始囉，一起開心跳舞吧！",
-        songs: ['a1_s04', 'a1_s09', 'a2_s02', 'a2_s09', 'a3_s03', 'a3_s08', 'a4_s03', 'a4_s06'],
+        songs: ['a4_s01', 'a1_s04', 'a1_s09', 'a2_s02', 'a2_s09', 'a3_s03', 'a3_s08', 'a4_s06'],
         accentColor: '#c084fc',
         glowRgba: 'rgba(192, 132, 252, 0.88)',
         spotlightBg: 'linear-gradient(180deg, rgba(192, 132, 252, 0.88) 0%, rgba(139, 92, 246, 0.28) 58%, transparent 100%)',
@@ -6591,7 +6641,7 @@
         cutout: './images/album2_kpop/cutouts/kid5_mimi.png',
         voiceAudioId: 'audio-kid-voice-4',
         voiceText: "One, two, three, jump! 我是 MiMi，派對時間到，大家一起嗨起來！",
-        songs: ['a1_s05', 'a1_s10', 'a2_s05', 'a2_s10', 'a3_s06', 'a3_s10', 'a4_s05', 'a4_s10'],
+        songs: ['a1_s01', 'a1_s05', 'a1_s10', 'a2_s05', 'a2_s10', 'a3_s06', 'a3_s10', 'a4_s10'],
         accentColor: '#fbbf24',
         glowRgba: 'rgba(251, 191, 36, 0.88)',
         spotlightBg: 'linear-gradient(180deg, rgba(251, 191, 36, 0.88) 0%, rgba(244, 63, 94, 0.28) 58%, transparent 100%)',
@@ -7045,19 +7095,30 @@
 
     // 啟動該小朋友的 8 首歌專屬連播模式 (從第 1 首開始連播 8 首)
     function playSelectedDancerAllSongs() {
-      playDancerSongAtIndex(0);
+      const dancer = DANCER_SQUAD_DATA[currentDancerIndex] || DANCER_SQUAD_DATA[0];
+      const firstUnlockedIdx = dancer.songs.findIndex(id => isSongUnlocked(id));
+      if (firstUnlockedIdx >= 0) {
+        playDancerSongAtIndex(firstUnlockedIdx);
+      } else {
+        playDancerSongAtIndex(0);
+      }
     }
 
     // 從該小朋友的 8 首歌單中點選第 orderIdx 首開始連播
     function playDancerSongAtIndex(orderIdx) {
       const dancer = DANCER_SQUAD_DATA[currentDancerIndex] || DANCER_SQUAD_DATA[0];
       const targetSongId = dancer.songs[orderIdx] || dancer.songs[0];
+      // 🔒 核心防黑屏保護：未解鎖曲目直接彈出訂閱視窗，絕不隱藏 viewDancerSquad！
+      if (!isSongUnlocked(targetSongId)) {
+        const song = songDatabase[targetSongId];
+        openSubscriptionModal({ song: song, albumId: song?.albumId, source: 'dancer_song_locked' });
+        return;
+      }
       stopAllKidPreviewVoices();
       stopHomeBgm(0);
       isDancerPlaylistMode = true;
       activeDancerIndexForPlay = currentDancerIndex;
       isAlbumContinuousPlay = true;
-      if (viewDancerSquad) viewDancerSquad.classList.add('hidden');
       updateLoopModeUI();
       selectSong(targetSongId);
     }
@@ -7403,7 +7464,7 @@
       }
     }
 
-    // 一鍵全專輯連續循環播放 (未解鎖時若點全專輯連播提示解鎖)
+    // 一鍵全專輯連續循環播放 (從第 1 首免費曲開始連播；播完進入第 2 首時若未訂閱由 nextSong 自動攔截提示)
     function playCurrentAlbumAll() {
       if (isThemeSongLyricsActive) exitThemeSongLyricsMode();
       isDancerPlaylistMode = false;
@@ -7412,15 +7473,6 @@
       stopSpaceAmbient(0.3);
       const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
       if (!album || !album.songs.length) return;
-
-      if (!isAlbumFullyUnlocked(currentAlbumId)) {
-        // 未解鎖第 2~10 首時：點擊第一首（免費曲）播放，並溫馨提示
-        selectSong(album.songs[0].id);
-        setTimeout(() => {
-          openSubscriptionModal({ albumId: currentAlbumId, source: 'play_album_all_locked' });
-        }, 1200);
-        return;
-      }
 
       isAlbumContinuousPlay = true;
       updateLoopModeUI();
@@ -7611,21 +7663,34 @@
       }
     }
 
-    // 上一首 (若處於小朋友專屬 8 首歌單模式，則在該小朋友的 8 首歌之間循環)
+    // 上一首 (若處於小朋友專屬 8 首歌單模式，則在該小朋友的 8 首歌之間循環；遇到未解鎖曲目則攔截提示訂閱)
     function prevSong() {
       if (isDancerPlaylistMode) {
         const dancer = DANCER_SQUAD_DATA[activeDancerIndexForPlay] || DANCER_SQUAD_DATA[0];
         const list = dancer.songs;
         const curIdx = list.indexOf(currentSongKey);
         const prevIdx = ((curIdx >= 0 ? curIdx : 0) - 1 + list.length) % list.length;
-        selectSong(list[prevIdx]);
+        const prevKey = list[prevIdx];
+        if (isSongUnlocked(prevKey)) {
+          selectSong(prevKey);
+        } else {
+          pauseDance();
+          const s = songDatabase[prevKey];
+          openSubscriptionModal({ song: s, albumId: s?.albumId, source: 'prev_song_locked' });
+        }
         return;
       }
       const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
       if (!album || !album.songs.length) return;
       const curIdx = album.songs.findIndex(s => s.id === currentSongKey);
       const prevIdx = (curIdx - 1 + album.songs.length) % album.songs.length;
-      selectSong(album.songs[prevIdx].id);
+      const prevSongObj = album.songs[prevIdx];
+      if (isSongUnlocked(prevSongObj.id)) {
+        selectSong(prevSongObj.id);
+      } else {
+        pauseDance();
+        openSubscriptionModal({ song: prevSongObj, albumId: currentAlbumId, source: 'prev_song_locked' });
+      }
     }
 
     // 下一首 (若處於小朋友專屬 8 首歌單模式，則依該小朋友的 8 首歌順序播放；遇到未解鎖曲目則攔截提示訂閱)
