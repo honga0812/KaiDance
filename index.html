@@ -2323,7 +2323,7 @@
             <span class="text-xl shrink-0">👑</span>
             <div class="min-w-0">
               <div class="font-bold text-sm text-amber-300 truncate" id="settings-vip-status-title">VIP 訂閱通行證 · 免費體驗版</div>
-              <div class="text-[11px] text-slate-300 truncate" id="settings-vip-status-desc">目前僅開放各星球第 1 首與主題曲 · 點擊管理訂閱或輸入密碼</div>
+              <div class="text-[11px] text-slate-300 truncate" id="settings-vip-status-desc">目前僅開放每顆星球精選 1 首與每位小隊長各 1 首代表曲 · 點擊管理訂閱或輸入密碼</div>
             </div>
           </div>
           <button type="button" onclick="closeParentSettingsModal(); openSubscriptionModal({ source: 'settings_modal' });" class="px-3.5 py-1.5 rounded-xl text-xs font-black bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 shadow hover:opacity-95 transition active:scale-95 shrink-0 ml-2 cursor-pointer">
@@ -2361,7 +2361,7 @@
               </span>
             </div>
             <p class="text-[11px] sm:text-xs text-sky-200/90 font-bold mt-0.5">
-              免費體驗每顆星球第 1 首與主題曲 · 訂閱立即解鎖第 2～10 首進階律動與全宇宙 40 首曲目！
+              免費體驗每顆星球精選 1 首、每位小隊長 1 首代表曲與主題曲 · 訂閱立即解鎖全宇宙 40 首曲目！
             </p>
           </div>
         </div>
@@ -2373,7 +2373,7 @@
         <div class="flex items-center gap-2 min-w-0">
           <span id="sub-modal-trigger-icon" class="text-lg shrink-0">🔒</span>
           <span id="sub-modal-trigger-text" class="font-bold text-amber-200 leading-snug">
-            每顆星球的第 1 首歌曲與首頁主題曲皆可免費播放；第 2～10 首進階舞曲需訂閱通行證解鎖（訂閱到期後將自動恢復上鎖）。
+            每顆星球開放 1 首精選歌曲、每位戰隊小隊長各開放 1 首代表曲免費播放；其餘進階舞曲需訂閱通行證解鎖（到期自動恢復上鎖）。
           </span>
         </div>
         <span id="sub-modal-countdown-badge" class="hidden px-2.5 py-1 rounded-xl bg-rose-500/90 text-white font-mono font-black text-[11px] shrink-0 animate-pulse"></span>
@@ -3630,11 +3630,22 @@
     // ========================================================
     // 2-B. 👑 KaiDance 星際通行證訂閱、權限控制與防誤觸安全系統 (StoreKit 2 / Paywall Engine)
     // 核心規則：
-    // 1. 每顆星球第 1 首 (a1_s01, a2_s01, a3_s01, a4_s01) 與首頁主題曲永久免費！
-    // 2. 第 2～10 首需有效訂閱（單顆星球通行證、全宇宙年訂、終身買斷或管理員密碼）
-    // 3. 訂閱到期後自動恢復上鎖 🔒；支援折扣碼 (KAI80, EARLYBIRD) 與管理員內部密碼 (KAIDANCE888)
+    // 1. 4 顆星球各開放 1 首精選免費曲（不限第 1 首：晨光 #01 a1_s01 Kai、派對 #01 a2_s01 Jessie、櫻花 #04 a3_s04 Tim、日落 #03 a4_s03 Mina）
+    // 2. Kai 舞蹈戰隊 5 位小朋友各開放 1 首自己領舞的免費代表曲（Kai: a1_s01、Jessie: a2_s01、Tim: a3_s04、Mina: a4_s03、MiMi: a1_s05）
+    // 3. 其餘進階歌曲需有效訂閱（單顆星球通行證、全宇宙年訂、終身買斷或管理員密碼）；到期自動恢復上鎖 🔒
     // ========================================================
-    const FREE_SONG_IDS = new Set(['a1_s01', 'a2_s01', 'a3_s01', 'a4_s01', 'morning', 'shine']);
+    const PLANET_FREE_SONG_IDS = new Set(['a1_s01', 'a2_s01', 'a3_s04', 'a4_s03', 'morning', 'shine']);
+    const DANCER_FREE_SONG_IDS = new Set(['a1_s01', 'a2_s01', 'a3_s04', 'a4_s03', 'a1_s05', 'morning', 'shine']);
+    const FREE_SONG_IDS = PLANET_FREE_SONG_IDS;
+
+    function isFreeTrackForContext(songId, context = 'auto') {
+      if (!songId) return false;
+      if (context === 'dancer') return DANCER_FREE_SONG_IDS.has(songId);
+      if (context === 'planet' || context === 'turntable') return PLANET_FREE_SONG_IDS.has(songId);
+      const inDancerContext = (typeof isDancerPlaylistMode !== 'undefined' && isDancerPlaylistMode) ||
+                              (typeof viewDancerSquad !== 'undefined' && viewDancerSquad && !viewDancerSquad.classList.contains('hidden'));
+      return inDancerContext ? DANCER_FREE_SONG_IDS.has(songId) : PLANET_FREE_SONG_IDS.has(songId);
+    }
     const ADMIN_MASTER_CODES = new Set(['KAIDANCE888', 'KAIDANCEVIP', 'ADMINVIP']);
     const PROMO_DISCOUNT_RULES = {
       'KAI80': { type: 'percent', discount: 0.8, label: 'KAI80 專屬 8 折優惠' },
@@ -3698,10 +3709,10 @@
     }
 
     // 判斷某首歌曲目前是否已解鎖可播放
-    function isSongUnlocked(songId) {
+    function isSongUnlocked(songId, context = 'auto') {
       if (!songId) return true;
-      // 1. 每顆星球第 1 首與舊相容 key 永遠免費開放
-      if (FREE_SONG_IDS.has(songId)) return true;
+      // 1. 檢查是否為該模式下的免費開放歌曲（每顆星球各 1 首 / 每位小朋友各 1 首）
+      if (isFreeTrackForContext(songId, context)) return true;
       // 2. 檢查訂閱有效性
       checkSubscriptionExpiration();
       if (!userSubscriptionState.isSubscribed) return false;
@@ -3718,6 +3729,14 @@
         return userSubscriptionState.unlockedPlanets.includes(aid);
       }
       return false;
+    }
+
+    // 取得指定星球在當前訂閱狀態下的第一首可播放歌曲 ID
+    function getFirstUnlockedSongIdInAlbum(albumId, context = 'planet') {
+      const album = window.KAI_ALBUM_DATABASE ? window.KAI_ALBUM_DATABASE[albumId] : null;
+      if (!album || !album.songs || !album.songs.length) return 'a1_s01';
+      const unlockedSong = album.songs.find(s => isSongUnlocked(s.id, context));
+      return unlockedSong ? unlockedSong.id : album.songs[0].id;
     }
 
     // 判斷某顆星球是否全解鎖（10 首歌全開）
@@ -3920,14 +3939,14 @@
         if (triggerBanner) triggerBanner.className = 'mt-3 p-3 rounded-2xl bg-amber-500/20 border-2 border-amber-400 flex items-center justify-between gap-2 text-xs animate-pulse';
         if (triggerIcon) triggerIcon.innerText = '🔒';
         if (triggerText) {
-          triggerText.innerHTML = `<span class="text-amber-300 font-black">【${options.song.title}】為 VIP 進階律動曲目</span><br><span class="text-white/90">每顆星球第 1 首歌可免費暢跳；訂閱星際通行證即可解鎖本曲與全宇宙 40 首曲目！</span>`;
+          triggerText.innerHTML = `<span class="text-amber-300 font-black">【${options.song.title}】為 VIP 進階律動曲目</span><br><span class="text-white/90">每顆星球開放 1 首、每位小隊長各開放 1 首免費暢跳；訂閱星際通行證即可解鎖本曲與全宇宙 40 首曲目！</span>`;
         }
       } else if (options.albumId && !isAlbumFullyUnlocked(options.albumId)) {
         const aObj = window.KAI_ALBUM_DATABASE ? window.KAI_ALBUM_DATABASE[options.albumId] : null;
         if (triggerBanner) triggerBanner.className = 'mt-3 p-3 rounded-2xl bg-amber-500/20 border-2 border-amber-400 flex items-center justify-between gap-2 text-xs';
         if (triggerIcon) triggerIcon.innerText = '🔒';
         if (triggerText) {
-          triggerText.innerHTML = `<span class="text-amber-300 font-black">解鎖【${aObj?.zhTitle || '本星球'}】全部 10 關舞曲</span><br><span class="text-white/90">訂閱後立即開通第 2～10 首進階關卡與連播特權！</span>`;
+          triggerText.innerHTML = `<span class="text-amber-300 font-black">解鎖【${aObj?.zhTitle || '本星球'}】全部 10 關舞曲</span><br><span class="text-white/90">訂閱後立即開通本星球全部進階關卡與連播特權！</span>`;
         }
       } else {
         if (triggerBanner) triggerBanner.className = 'mt-3 p-3 rounded-2xl bg-slate-900/90 border border-white/15 flex items-center justify-between gap-2 text-xs';
@@ -3935,7 +3954,7 @@
         if (triggerText) {
           triggerText.innerText = userSubscriptionState.isSubscribed
             ? `您目前已擁有【${userSubscriptionState.planType === 'lifetime' ? '星際終身 VIP' : userSubscriptionState.planType === 'admin_master' ? '管理員終身全開' : '有效訂閱'}】特權！隨時可在此管理或兌換新序號。`
-            : '每顆星球的第 1 首歌曲與首頁主題曲皆永久免費播放；第 2～10 首進階舞曲需訂閱通行證解鎖（到期後自動恢復上鎖）。';
+            : '每顆星球開放 1 首精選歌曲、每位小隊長各開放 1 首代表曲與首頁主題曲免費播放；其餘進階舞曲需訂閱通行證解鎖（到期自動恢復上鎖）。';
         }
       }
 
@@ -6590,7 +6609,7 @@
         cutout: './images/album2_kpop/cutouts/kid2_niu.png',
         voiceAudioId: 'audio-kid-voice-1',
         voiceText: "耶！我是 Jessie，準備好了嗎？跟我一起閃亮搖擺吧！",
-        songs: ['a2_s01', 'a1_s02', 'a1_s07', 'a2_s07', 'a3_s04', 'a3_s05', 'a4_s04', 'a4_s08'],
+        songs: ['a2_s01', 'a1_s02', 'a1_s07', 'a2_s07', 'a3_s01', 'a3_s05', 'a4_s01', 'a4_s08'],
         accentColor: '#f472b6',
         glowRgba: 'rgba(244, 114, 182, 0.88)',
         spotlightBg: 'linear-gradient(180deg, rgba(244, 114, 182, 0.88) 0%, rgba(217, 70, 239, 0.28) 58%, transparent 100%)',
@@ -6607,7 +6626,7 @@
         cutout: './images/album2_kpop/cutouts/kid3_hihi.png',
         voiceAudioId: 'audio-kid-voice-2',
         voiceText: "Yo! Let's party! 我是 Tim，跟上節拍一起跳起來！",
-        songs: ['a3_s01', 'a1_s03', 'a1_s08', 'a2_s04', 'a2_s08', 'a3_s07', 'a4_s03', 'a4_s09'],
+        songs: ['a3_s04', 'a1_s03', 'a1_s08', 'a2_s04', 'a2_s08', 'a3_s07', 'a4_s04', 'a4_s09'],
         accentColor: '#34d399',
         glowRgba: 'rgba(52, 211, 153, 0.85)',
         spotlightBg: 'linear-gradient(180deg, rgba(52, 211, 153, 0.86) 0%, rgba(16, 185, 129, 0.28) 58%, transparent 100%)',
@@ -6624,7 +6643,7 @@
         cutout: './images/album2_kpop/cutouts/kid4_mina.png',
         voiceAudioId: 'audio-kid-voice-3',
         voiceText: "Hi! Let's dance! 我是 Mina，快樂音樂開始囉，一起開心跳舞吧！",
-        songs: ['a4_s01', 'a1_s04', 'a1_s09', 'a2_s02', 'a2_s09', 'a3_s03', 'a3_s08', 'a4_s06'],
+        songs: ['a4_s03', 'a1_s04', 'a1_s09', 'a2_s02', 'a2_s09', 'a3_s03', 'a3_s08', 'a4_s06'],
         accentColor: '#c084fc',
         glowRgba: 'rgba(192, 132, 252, 0.88)',
         spotlightBg: 'linear-gradient(180deg, rgba(192, 132, 252, 0.88) 0%, rgba(139, 92, 246, 0.28) 58%, transparent 100%)',
@@ -6641,7 +6660,7 @@
         cutout: './images/album2_kpop/cutouts/kid5_mimi.png',
         voiceAudioId: 'audio-kid-voice-4',
         voiceText: "One, two, three, jump! 我是 MiMi，派對時間到，大家一起嗨起來！",
-        songs: ['a1_s01', 'a1_s05', 'a1_s10', 'a2_s05', 'a2_s10', 'a3_s06', 'a3_s10', 'a4_s10'],
+        songs: ['a1_s05', 'a1_s10', 'a2_s05', 'a2_s10', 'a3_s06', 'a3_s10', 'a4_s05', 'a4_s10'],
         accentColor: '#fbbf24',
         glowRgba: 'rgba(251, 191, 36, 0.88)',
         spotlightBg: 'linear-gradient(180deg, rgba(251, 191, 36, 0.88) 0%, rgba(244, 63, 94, 0.28) 58%, transparent 100%)',
@@ -6945,8 +6964,8 @@
       gridEl.innerHTML = dancer.songs.map((songId, orderIdx) => {
         const song = songDatabase[songId];
         if (!song) return '';
-        const unlocked = isSongUnlocked(songId);
-        const isFreeTrack = FREE_SONG_IDS.has(songId);
+        const unlocked = isSongUnlocked(songId, 'dancer');
+        const isFreeTrack = isFreeTrackForContext(songId, 'dancer');
 
         let planetLabel = '☀️ 晨光星球';
         let planetBadgeClass = 'bg-amber-400 text-slate-950 border-amber-200';
@@ -7085,7 +7104,7 @@
     function handleDancerSongCardClick(orderIdx) {
       const dancer = DANCER_SQUAD_DATA[currentDancerIndex] || DANCER_SQUAD_DATA[0];
       const targetSongId = dancer.songs[orderIdx] || dancer.songs[0];
-      if (isSongUnlocked(targetSongId)) {
+      if (isSongUnlocked(targetSongId, 'dancer')) {
         playDancerSongAtIndex(orderIdx);
       } else {
         const song = songDatabase[targetSongId];
@@ -7096,7 +7115,7 @@
     // 啟動該小朋友的 8 首歌專屬連播模式 (從第 1 首開始連播 8 首)
     function playSelectedDancerAllSongs() {
       const dancer = DANCER_SQUAD_DATA[currentDancerIndex] || DANCER_SQUAD_DATA[0];
-      const firstUnlockedIdx = dancer.songs.findIndex(id => isSongUnlocked(id));
+      const firstUnlockedIdx = dancer.songs.findIndex(id => isSongUnlocked(id, 'dancer'));
       if (firstUnlockedIdx >= 0) {
         playDancerSongAtIndex(firstUnlockedIdx);
       } else {
@@ -7109,7 +7128,7 @@
       const dancer = DANCER_SQUAD_DATA[currentDancerIndex] || DANCER_SQUAD_DATA[0];
       const targetSongId = dancer.songs[orderIdx] || dancer.songs[0];
       // 🔒 核心防黑屏保護：未解鎖曲目直接彈出訂閱視窗，絕不隱藏 viewDancerSquad！
-      if (!isSongUnlocked(targetSongId)) {
+      if (!isSongUnlocked(targetSongId, 'dancer')) {
         const song = songDatabase[targetSongId];
         openSubscriptionModal({ song: song, albumId: song?.albumId, source: 'dancer_song_locked' });
         return;
@@ -7361,8 +7380,8 @@
 
       container.innerHTML = album.songs.map((song) => {
         const isCurrentActive = song.id === currentSongKey;
-        const unlocked = isSongUnlocked(song.id);
-        const isFreeTrack = FREE_SONG_IDS.has(song.id);
+        const unlocked = isSongUnlocked(song.id, 'planet');
+        const isFreeTrack = isFreeTrackForContext(song.id, 'planet');
 
         let cardThemeClass = `jelly-song-card-p1 ${isCurrentActive ? 'ring-2 ring-amber-500/80 border-amber-500' : ''} ${!unlocked ? 'song-card-locked opacity-90' : ''}`;
         let btnClass = unlocked ? 'jelly-btn-gold' : 'jelly-btn-indigo';
@@ -7456,7 +7475,8 @@
 
     // 歌曲卡片點擊統一攔截器：若已解鎖進入播放；若未解鎖彈出訂閱專頁
     function handleSongCardClick(songId) {
-      if (isSongUnlocked(songId)) {
+      if (isSongUnlocked(songId, 'planet')) {
+        isDancerPlaylistMode = false;
         selectSong(songId);
       } else {
         const song = songDatabase[songId];
@@ -7464,7 +7484,7 @@
       }
     }
 
-    // 一鍵全專輯連續循環播放 (從第 1 首免費曲開始連播；播完進入第 2 首時若未訂閱由 nextSong 自動攔截提示)
+    // 一鍵全專輯連續循環播放 (從該星球免費曲或第 1 首開始連播；播完進入未解鎖曲時由 nextSong 自動攔截提示)
     function playCurrentAlbumAll() {
       if (isThemeSongLyricsActive) exitThemeSongLyricsMode();
       isDancerPlaylistMode = false;
@@ -7476,7 +7496,8 @@
 
       isAlbumContinuousPlay = true;
       updateLoopModeUI();
-      selectSong(album.songs[0].id);
+      const startSongId = getFirstUnlockedSongIdInAlbum(currentAlbumId, 'planet');
+      selectSong(startSongId);
     }
 
     // 隨機跳一首 (未訂閱時僅在已解鎖的免費曲目中抽選，絕不讓使用者隨機踩到上鎖歌曲)
@@ -7490,14 +7511,25 @@
       const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
       if (!album || !album.songs.length) return;
 
-      // 過濾出目前已解鎖可播放的歌曲清單
-      const availableSongs = album.songs.filter(s => isSongUnlocked(s.id));
+      // 若在首頁點擊隨機跳舞，從 4 顆星球全部已解鎖曲目中隨機抽選
+      const isInLobby = viewLobby && !viewLobby.classList.contains('hidden');
+      if (isInLobby && window.KAI_ALBUM_DATABASE) {
+        const allPlanetSongs = Object.values(window.KAI_ALBUM_DATABASE).flatMap(a => a.songs || []);
+        const unlockedAll = allPlanetSongs.filter(s => isSongUnlocked(s.id, 'planet'));
+        if (unlockedAll.length > 0) {
+          const randIdx = Math.floor(Math.random() * unlockedAll.length);
+          selectSong(unlockedAll[randIdx].id);
+          return;
+        }
+      }
+
+      // 過濾出當前星球目前已解鎖可播放的歌曲清單
+      const availableSongs = album.songs.filter(s => isSongUnlocked(s.id, 'planet'));
       if (availableSongs.length > 0) {
         const randIdx = Math.floor(Math.random() * availableSongs.length);
         selectSong(availableSongs[randIdx].id);
       } else {
-        // 若該星球完全無解鎖，從全域 4 首免費曲中抽選
-        const globalFreeSongs = ['a1_s01', 'a2_s01', 'a3_s01', 'a4_s01'].filter(id => songDatabase[id]);
+        const globalFreeSongs = ['a1_s01', 'a2_s01', 'a3_s04', 'a4_s03'].filter(id => songDatabase[id]);
         const randIdx = Math.floor(Math.random() * globalFreeSongs.length);
         selectSong(globalFreeSongs[randIdx]);
       }
@@ -7560,8 +7592,9 @@
 
       listContainer.innerHTML = songsToRender.map((song, idx) => {
         const isCurrent = song.id === currentSongKey;
-        const unlocked = isSongUnlocked(song.id);
-        const isFreeTrack = FREE_SONG_IDS.has(song.id);
+        const drawerCtx = isDancerPlaylistMode ? 'dancer' : 'planet';
+        const unlocked = isSongUnlocked(song.id, drawerCtx);
+        const isFreeTrack = isFreeTrackForContext(song.id, drawerCtx);
 
         const rowClass = isP1
           ? (isCurrent
@@ -10864,8 +10897,8 @@
           const aid = song.albumId || 'album_1';
           const cfg = TURNTABLE_ALBUM_CONFIGS[aid] || TURNTABLE_ALBUM_CONFIGS['album_1'];
           const trackNo = `#${String(idx + 1).padStart(2, '0')}`;
-          const unlocked = isSongUnlocked(song.id);
-          const isFreeTrack = FREE_SONG_IDS.has(song.id);
+          const unlocked = isSongUnlocked(song.id, 'turntable');
+          const isFreeTrack = isFreeTrackForContext(song.id, 'turntable');
 
           if (aid !== lastAlbumId) {
             lastAlbumId = aid;
@@ -10936,8 +10969,8 @@
         container.innerHTML = album.songs.map((song, idx) => {
           const isCurrent = song.id === turntableActiveSongId;
           const trackNo = `#${String(idx + 1).padStart(2, '0')}`;
-          const unlocked = isSongUnlocked(song.id);
-          const isFreeTrack = FREE_SONG_IDS.has(song.id);
+          const unlocked = isSongUnlocked(song.id, 'turntable');
+          const isFreeTrack = isFreeTrackForContext(song.id, 'turntable');
 
           return `
             <div onclick="handleTurntableTrackClick('${song.id}')" 
@@ -10983,7 +11016,7 @@
     }
 
     function handleTurntableTrackClick(songId) {
-      if (isSongUnlocked(songId)) {
+      if (isSongUnlocked(songId, 'turntable')) {
         turntablePlaySong(songId, true);
       } else {
         const song = songDatabase[songId];
@@ -11089,7 +11122,7 @@
     function turntablePlaySong(songId, autoPlay = true) {
       const song = songDatabase[songId];
       if (!song) return;
-      if (!isSongUnlocked(songId)) {
+      if (!isSongUnlocked(songId, 'turntable')) {
         if (audioTurntable) audioTurntable.pause();
         turntableSetPlayState(false);
         openSubscriptionModal({ song, albumId: song.albumId || turntableActiveAlbum, source: 'turntable_play_gate' });
@@ -11160,7 +11193,8 @@
       updateTurntableLoopUI();
       const album = window.KAI_ALBUM_DATABASE ? window.KAI_ALBUM_DATABASE[albumId] : null;
       if (!album || !album.songs || !album.songs.length) return;
-      turntablePlaySong(album.songs[0].id, turntableIsPlaying);
+      const startId = getFirstUnlockedSongIdInAlbum(albumId, 'turntable');
+      turntablePlaySong(startId, turntableIsPlaying);
     }
 
     function openTurntablePlayer(albumId, songId) {
@@ -11187,7 +11221,9 @@
       updateTurntableAlbumTabs();
       updateTurntableLoopUI();
 
-      const targetSongId = songId || (window.KAI_ALBUM_DATABASE && window.KAI_ALBUM_DATABASE[turntableActiveAlbum]?.songs[0]?.id) || 'a1_s01';
+      const targetSongId = (songId && isSongUnlocked(songId, 'turntable'))
+        ? songId
+        : getFirstUnlockedSongIdInAlbum(turntableActiveAlbum, 'turntable');
       turntablePlaySong(targetSongId, true);
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
