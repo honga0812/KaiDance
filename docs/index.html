@@ -1581,6 +1581,46 @@
     }
 
     /* ======================================================== */
+    /* 👑 星際通行證 VIP 訂閱 Logo 與未訂閱鎖頭 (🔒) 卡片視覺樣式 */
+    /* ======================================================== */
+    @keyframes vip-crown-shimmer {
+      0%, 100% { box-shadow: 0 0 18px rgba(251, 191, 36, 0.45), inset 0 1px 2px rgba(255, 255, 255, 0.5); }
+      50% { box-shadow: 0 0 28px rgba(251, 191, 36, 0.85), 0 0 12px rgba(244, 114, 182, 0.55), inset 0 1px 3px rgba(255, 255, 255, 0.8); }
+    }
+    .vip-logo-btn-glow {
+      animation: vip-crown-shimmer 2.8s ease-in-out infinite;
+    }
+    .song-card-locked {
+      position: relative;
+    }
+    .song-card-locked::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(160deg, rgba(15, 23, 42, 0.12) 0%, rgba(2, 6, 23, 0.46) 100%);
+      pointer-events: none;
+      z-index: 10;
+      border-radius: inherit;
+    }
+    .lock-corner-medallion {
+      position: absolute;
+      bottom: 3.1rem;
+      right: 0.75rem;
+      z-index: 25;
+      width: 2.1rem;
+      height: 2.1rem;
+      border-radius: 9999px;
+      background: radial-gradient(circle at 30% 30%, #fbbf24 0%, #d97706 65%, #78350f 100%);
+      border: 2px solid #fef3c7;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.65), 0 0 14px rgba(251, 191, 36, 0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.95rem;
+      pointer-events: none;
+    }
+
+    /* ======================================================== */
     /* 🌟 K-Pop 舞蹈戰隊 3D 環形旋轉空間與上方動態投射燈掃射特效 */
     /* ======================================================== */
     @keyframes spotlight-sweep-1 {
@@ -1950,6 +1990,20 @@
           <span class="text-[10px] sm:text-[11px] text-slate-300 font-bold hidden sm:inline">總積分:</span>
           <strong id="total-score-lobby" class="text-amber-300 text-xs sm:text-sm font-mono tracking-wider tabular-nums font-black drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]">000,000,980</strong>
         </div>
+
+        <!-- 👑 首頁專屬 VIP 訂閱 Logo 按鈕 (點擊開啟星際通行證訂閱、優惠碼兌換與管理員解鎖中心) -->
+        <button id="btn-home-vip-sub" onclick="openSubscriptionModal({ source: 'home_logo' })"
+                class="vip-logo-btn-glow group relative flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-amber-500/95 via-yellow-400/95 to-orange-500/95 hover:from-amber-400 hover:to-orange-400 text-slate-950 border-2 border-amber-100 px-2.5 sm:px-3.5 py-1 sm:py-1.5 rounded-full transition-all duration-200 active:scale-95 cursor-pointer select-none shrink-0"
+                title="KaiDance 星際通行證訂閱中心 · 點擊解鎖全宇宙 40 首舞曲或輸入優惠碼">
+          <div class="w-6 h-6 sm:w-7 sm:h-7 rounded-full bg-slate-950/90 border border-amber-300 flex items-center justify-center shadow-inner shrink-0">
+            <span id="home-vip-logo-icon" class="text-xs sm:text-sm">👑</span>
+          </div>
+          <div class="flex flex-col text-left leading-tight pr-0.5">
+            <span id="home-vip-logo-title" class="text-[10px] sm:text-[11px] font-black text-slate-950 tracking-tight">VIP 訂閱通行證</span>
+            <span id="home-vip-status-text" class="text-[8px] sm:text-[9px] font-extrabold text-amber-950/90">🔒 免費體驗 (4首)</span>
+          </div>
+        </button>
+
         <button id="btn-parent-settings" onclick="openParentSettingsModal()" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-slate-900/85 hover:bg-slate-800 border border-slate-700/90 hover:border-amber-400/80 flex items-center justify-center text-xs sm:text-sm text-slate-200 hover:text-amber-300 shadow-md transition-all active:scale-95 shrink-0" title="家長與教練設定：攝影機開關、鏡頭靈敏度與提示語音">
           ⚙️
         </button>
@@ -2262,6 +2316,20 @@
             <div class="w-11 h-6 bg-slate-700 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-cyan-400"></div>
           </label>
         </div>
+
+        <!-- 7. 星際通行證訂閱狀態與管理員/優惠碼入口 -->
+        <div class="flex items-center justify-between p-3.5 rounded-2xl bg-gradient-to-r from-amber-500/15 via-slate-800/80 to-indigo-500/15 border border-amber-400/50">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="text-xl shrink-0">👑</span>
+            <div class="min-w-0">
+              <div class="font-bold text-sm text-amber-300 truncate" id="settings-vip-status-title">VIP 訂閱通行證 · 免費體驗版</div>
+              <div class="text-[11px] text-slate-300 truncate" id="settings-vip-status-desc">目前僅開放各星球第 1 首與主題曲 · 點擊管理訂閱或輸入密碼</div>
+            </div>
+          </div>
+          <button type="button" onclick="closeParentSettingsModal(); openSubscriptionModal({ source: 'settings_modal' });" class="px-3.5 py-1.5 rounded-xl text-xs font-black bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 shadow hover:opacity-95 transition active:scale-95 shrink-0 ml-2 cursor-pointer">
+            管理訂閱 / 優惠碼
+          </button>
+        </div>
       </div>
 
       <!-- 底部操作按鈕 -->
@@ -2269,6 +2337,245 @@
         <button onclick="resetParentSettingsDefault()" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-400 hover:text-white transition">恢復預設值</button>
         <button onclick="closeParentSettingsModal()" class="px-6 py-2.5 rounded-xl text-xs font-black bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 shadow-md hover:opacity-95 transition active:scale-95">確認並儲存</button>
       </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 👑 彈窗：KaiDance 星際通行證訂閱專頁 (Subscription Paywall)  -->
+  <!-- 支援：單顆星球訂閱 / 全宇宙年訂(主推) / 終身買斷 / 優惠碼與管理員全開 / 到期自動重新上鎖 -->
+  <!-- ========================================================= -->
+  <div id="modal-subscription-paywall" class="hidden fixed inset-0 z-[120] bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-2.5 sm:p-4 overflow-y-auto allow-touch-scroll" onclick="handleSubscriptionBackdropClick(event)">
+    <div class="relative bg-gradient-to-b from-slate-900 via-indigo-950/95 to-slate-950 border-2 border-amber-400/75 rounded-3xl p-4 sm:p-6 max-w-3xl w-full shadow-[0_25px_70px_rgba(0,0,0,0.9),0_0_40px_rgba(251,191,36,0.28)] text-white my-auto max-h-[94dvh] overflow-y-auto allow-touch-scroll">
+      
+      <!-- 頂部標題與關閉 -->
+      <div class="flex items-start justify-between gap-3 pb-3 border-b border-white/15">
+        <div class="flex items-center gap-3">
+          <div class="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-gradient-to-br from-amber-400 via-yellow-300 to-orange-500 flex items-center justify-center text-2xl shadow-[0_0_20px_rgba(251,191,36,0.6)] border border-white shrink-0">
+            👑
+          </div>
+          <div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <h3 class="text-base sm:text-xl font-black text-white tracking-wide">KaiDance 星際通行證 · 訂閱解鎖中心</h3>
+              <span id="sub-modal-current-badge" class="px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-black bg-slate-800 text-amber-300 border border-amber-400/50">
+                🔒 目前為免費體驗版 (開放4首)
+              </span>
+            </div>
+            <p class="text-[11px] sm:text-xs text-sky-200/90 font-bold mt-0.5">
+              免費體驗每顆星球第 1 首與主題曲 · 訂閱立即解鎖第 2～10 首進階律動與全宇宙 40 首曲目！
+            </p>
+          </div>
+        </div>
+        <button type="button" onclick="closeSubscriptionModal()" class="w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition active:scale-95 shrink-0 cursor-pointer" title="關閉">✕</button>
+      </div>
+
+      <!-- 動態攔截提示橫幅 (當點擊 🔒 鎖頭歌曲時顯示) -->
+      <div id="sub-modal-trigger-banner" class="mt-3 p-3 rounded-2xl bg-amber-500/15 border border-amber-300/60 flex items-center justify-between gap-2 text-xs">
+        <div class="flex items-center gap-2 min-w-0">
+          <span id="sub-modal-trigger-icon" class="text-lg shrink-0">🔒</span>
+          <span id="sub-modal-trigger-text" class="font-bold text-amber-200 leading-snug">
+            每顆星球的第 1 首歌曲與首頁主題曲皆可免費播放；第 2～10 首進階舞曲需訂閱通行證解鎖（訂閱到期後將自動恢復上鎖）。
+          </span>
+        </div>
+        <span id="sub-modal-countdown-badge" class="hidden px-2.5 py-1 rounded-xl bg-rose-500/90 text-white font-mono font-black text-[11px] shrink-0 animate-pulse"></span>
+      </div>
+
+      <!-- 已套用折扣碼橫幅 -->
+      <div id="sub-discount-applied-banner" class="hidden mt-2.5 px-3.5 py-2 rounded-xl bg-emerald-500/20 border border-emerald-400/70 flex items-center justify-between text-xs text-emerald-200 font-black">
+        <span id="sub-discount-applied-text">🎉 已套用行銷優惠碼！以下方案價格已自動折抵！</span>
+        <button type="button" onclick="clearAppliedPromoDiscount()" class="text-[11px] underline text-emerald-300 hover:text-white ml-2 cursor-pointer">取消折扣</button>
+      </div>
+
+      <!-- 三層付費方案選擇卡片 (方案 A: 單顆星球 / 方案 B: 全宇宙年訂主推 / 方案 C: 終身買斷) -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mt-3.5">
+        
+        <!-- 🪐 方案 A：單顆星球通行證 -->
+        <div id="plan-card-single_planet" onclick="selectSubscriptionPlan('single_planet')"
+             class=" rounded-2xl p-3.5 border-2 border-white/15 bg-slate-900/75 hover:border-sky-400/60 transition-all cursor-pointer flex flex-col justify-between relative">
+          <div>
+            <div class="flex items-center justify-between gap-1 mb-1">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-sky-500/25 text-sky-300 border border-sky-400/40">🪐 單顆星球訂閱</span>
+              <span id="plan-check-single_planet" class="w-5 h-5 rounded-full border border-white/30 flex items-center justify-center text-[10px] text-transparent">✓</span>
+            </div>
+            <h4 class="font-black text-sm sm:text-base text-white">單一星球通行證</h4>
+            <div class="mt-1 flex items-baseline gap-1.5">
+              <span id="plan-price-single_planet" class="text-xl sm:text-2xl font-black text-sky-300 font-mono">NT$ 120</span>
+              <span class="text-[11px] text-slate-400 font-bold">/ 月 (30天)</span>
+              <span id="plan-orig-single_planet" class="hidden text-xs text-slate-500 line-through font-mono">NT$ 120</span>
+            </div>
+            <p class="text-[11px] text-slate-300 mt-1.5 leading-relaxed">
+              任選 1 顆星球解鎖該星球全部 10 首歌曲，適合先練習單一主題；30 天到期自動關閉。
+            </p>
+            <!-- 選擇要解鎖哪一顆星球 -->
+            <div class="mt-2.5 pt-2 border-t border-white/10" onclick="event.stopPropagation()">
+              <div class="text-[10px] font-bold text-sky-200 mb-1.5">選擇要訂閱的星球：</div>
+              <div class="grid grid-cols-2 gap-1.5">
+                <button type="button" id="sub-planet-btn-album_1" onclick="selectSubTargetPlanet('album_1')" class="px-2 py-1 rounded-lg text-[10px] font-black border border-amber-400 bg-amber-400/25 text-amber-200 flex items-center gap-1 cursor-pointer">☀️ 晨光星球</button>
+                <button type="button" id="sub-planet-btn-album_2" onclick="selectSubTargetPlanet('album_2')" class="px-2 py-1 rounded-lg text-[10px] font-bold border border-white/15 bg-slate-800/80 text-slate-300 flex items-center gap-1 cursor-pointer">🪐 派對星球</button>
+                <button type="button" id="sub-planet-btn-album_3" onclick="selectSubTargetPlanet('album_3')" class="px-2 py-1 rounded-lg text-[10px] font-bold border border-white/15 bg-slate-800/80 text-slate-300 flex items-center gap-1 cursor-pointer">🌸 櫻花星球</button>
+                <button type="button" id="sub-planet-btn-album_4" onclick="selectSubTargetPlanet('album_4')" class="px-2 py-1 rounded-lg text-[10px] font-bold border border-white/15 bg-slate-800/80 text-slate-300 flex items-center gap-1 cursor-pointer">🌅 日落星球</button>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 pt-2 border-t border-white/10 text-[10px] text-sky-300/90 font-bold">
+            ✓ 解鎖所選星球第 2～10 首
+          </div>
+        </div>
+
+        <!-- 👑 方案 B：全宇宙暢跳年訂 (主力推薦 Hero Plan) -->
+        <div id="plan-card-all_annual" onclick="selectSubscriptionPlan('all_annual')"
+             class="rounded-2xl p-3.5 border-2 border-amber-400 bg-gradient-to-b from-amber-500/20 via-slate-900/90 to-slate-900 shadow-[0_0_25px_rgba(251,191,36,0.3)] transition-all cursor-pointer flex flex-col justify-between relative">
+          <div class="absolute -top-2.5 right-3 px-2.5 py-0.5 rounded-full text-[10px] font-black bg-gradient-to-r from-amber-300 via-yellow-300 to-orange-400 text-slate-950 shadow-md border border-white">
+            🔥 85% 家長首選 · 最划算
+          </div>
+          <div>
+            <div class="flex items-center justify-between gap-1 mb-1 mt-0.5">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-400/25 text-amber-300 border border-amber-300/50">👑 全宇宙暢跳年訂</span>
+              <span id="plan-check-all_annual" class="w-5 h-5 rounded-full bg-amber-400 text-slate-950 font-black flex items-center justify-center text-xs shadow">✓</span>
+            </div>
+            <h4 class="font-black text-sm sm:text-base text-amber-200">全宇宙 4 顆星球年度通行證</h4>
+            <div class="mt-1 flex items-baseline gap-1.5 flex-wrap">
+              <span id="plan-price-all_annual" class="text-2xl sm:text-3xl font-black text-amber-300 font-mono">NT$ 890</span>
+              <span class="text-[11px] text-amber-100/90 font-bold">/ 年 (365天)</span>
+              <span id="plan-orig-all_annual" class="text-xs text-slate-400 line-through font-mono">NT$ 1,440</span>
+            </div>
+            <div id="plan-avg-all_annual" class="text-[11px] font-black text-emerald-300 mt-0.5">
+              ✨ 平均每月僅 NT$ 74 · 陪伴孩子黃金律動期
+            </div>
+            <ul class="text-[11px] text-slate-200 mt-2 space-y-1 font-medium">
+              <li>✅ 全面解鎖 <b class="text-amber-300">4 顆星球全部 40 首</b> 歌曲與引導動畫</li>
+              <li>✅ 解鎖 <b class="text-amber-300">Kai 舞蹈戰隊 5 位小隊長</b> 全 40 首歌單</li>
+              <li>✅ 解鎖 <b class="text-amber-300">宇宙唱片機</b> 四張專輯 40 首連續播放</li>
+              <li>✅ 一年到期若孩子長大不續訂即自動關閉，無負擔！</li>
+            </ul>
+          </div>
+          <div class="mt-3 pt-2 border-t border-amber-400/30 text-[10px] text-amber-300 font-black">
+            ★ 主力推薦：比單訂 4 顆星球省下超過 40%！
+          </div>
+        </div>
+
+        <!-- 💎 方案 C：全宇宙終身買斷 VIP -->
+        <div id="plan-card-lifetime" onclick="selectSubscriptionPlan('lifetime')"
+             class="rounded-2xl p-3.5 border-2 border-white/15 bg-slate-900/75 hover:border-pink-400/60 transition-all cursor-pointer flex flex-col justify-between relative">
+          <div>
+            <div class="flex items-center justify-between gap-1 mb-1">
+              <span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-pink-500/25 text-pink-300 border border-pink-400/40">💎 終身買斷 VIP</span>
+              <span id="plan-check-lifetime" class="w-5 h-5 rounded-full border border-white/30 flex items-center justify-center text-[10px] text-transparent">✓</span>
+            </div>
+            <h4 class="font-black text-sm sm:text-base text-white">星際榮譽終身買斷</h4>
+            <div class="mt-1 flex items-baseline gap-1.5 flex-wrap">
+              <span id="plan-price-lifetime" class="text-xl sm:text-2xl font-black text-pink-300 font-mono">NT$ 1,790</span>
+              <span class="text-[11px] text-slate-400 font-bold">/ 一次買斷永久有效</span>
+              <span id="plan-orig-lifetime" class="hidden text-xs text-slate-500 line-through font-mono">NT$ 1,790</span>
+            </div>
+            <p class="text-[11px] text-slate-300 mt-1.5 leading-relaxed">
+              一次付費永久解鎖全宇宙 4 顆星球 40 首舞曲與未來所有新動畫更新，無到期日限制。
+            </p>
+            <ul class="text-[11px] text-slate-300 mt-2 space-y-1">
+              <li>✅ 永久解鎖全部 40 首舞曲，不會過期</li>
+              <li>✅ 適合家有二寶接力跳、幼兒園或才藝教室</li>
+              <li>✅ 支援 Apple ID 跨機恢復購買</li>
+            </ul>
+          </div>
+          <div class="mt-3 pt-2 border-t border-white/10 text-[10px] text-pink-300/90 font-bold">
+            ✓ 一次付費 · 永久無限暢跳
+          </div>
+        </div>
+
+      </div>
+
+      <!-- 主購買行動按鈕 (支援多元支付說明) -->
+      <div class="mt-4 flex flex-col items-center gap-1.5">
+        <button type="button" id="btn-sub-confirm-purchase" onclick="startSubscriptionPurchaseFlow()"
+                class="w-full py-3 px-6 rounded-2xl font-black text-sm sm:text-base bg-gradient-to-r from-amber-400 via-yellow-300 to-orange-500 hover:from-amber-300 hover:to-orange-400 text-slate-950 shadow-[0_0_30px_rgba(251,191,36,0.65)] transition-all active:scale-98 flex items-center justify-center gap-2 cursor-pointer">
+          <span>👑</span>
+          <span id="btn-sub-confirm-label">立即訂閱【全宇宙暢跳年訂 · NT$ 890/年】解鎖全部關卡 ➜</span>
+        </button>
+        <div class="text-[10px] sm:text-[11px] text-slate-400 text-center flex items-center justify-center gap-2 flex-wrap">
+          <span>💳 支援多元付款：Apple Pay · 信用卡 · LINE Pay · 電信帳單代收</span>
+          <span>·</span>
+          <span>🛡️ 內建家長防誤觸驗證</span>
+        </div>
+      </div>
+
+      <!-- 🎟️ 行銷優惠碼 / 折扣碼 / 團購啟動碼 / 開發者管理員密碼兌換區 -->
+      <div class="mt-4 p-3.5 rounded-2xl bg-slate-900/90 border border-white/15">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+          <div>
+            <div class="text-xs font-black text-amber-300 flex items-center gap-1.5">
+              <span>🎟️</span>
+              <span>行銷優惠碼 / 折扣碼 / 管理員專屬兌換</span>
+            </div>
+            <div class="text-[10px] text-slate-400 mt-0.5">
+              輸入活動折扣碼可享訂閱或買斷打折優惠；輸入團購序號或管理員密碼可直接解鎖全曲目
+            </div>
+          </div>
+          <div class="flex items-center gap-1.5">
+            <input type="text" id="sub-promo-code-input" placeholder="輸入優惠碼或管理員密碼..."
+                   class="px-3 py-1.5 rounded-xl bg-slate-950 border border-white/25 text-xs font-mono font-bold text-white placeholder-slate-500 focus:outline-none focus:border-amber-400 w-44 sm:w-52 uppercase">
+            <button type="button" onclick="applySubscriptionPromoOrAdminCode()"
+                    class="px-3.5 py-1.5 rounded-xl bg-sky-500 hover:bg-sky-400 text-slate-950 font-black text-xs transition active:scale-95 shrink-0 cursor-pointer">
+              套用兌換
+            </button>
+          </div>
+        </div>
+        <div id="sub-promo-feedback" class="hidden mt-2 text-xs font-bold px-3 py-1.5 rounded-xl"></div>
+
+        <!-- 快捷測試與展示標籤 (方便直接點選測試各種優惠碼與管理員內部全開模式) -->
+        <div class="mt-2.5 pt-2 border-t border-white/10 flex items-center justify-between gap-2 flex-wrap text-[10px]">
+          <div class="flex items-center gap-1.5 flex-wrap">
+            <span class="text-slate-400 font-bold">快速填入測試碼：</span>
+            <button type="button" onclick="quickFillPromoCode('KAI80')" class="px-2 py-0.5 rounded-md bg-slate-800 hover:bg-slate-700 text-amber-300 border border-amber-400/30 font-mono cursor-pointer">KAI80 (8折優惠)</button>
+            <button type="button" onclick="quickFillPromoCode('EARLYBIRD')" class="px-2 py-0.5 rounded-md bg-slate-800 hover:bg-slate-700 text-emerald-300 border border-emerald-400/30 font-mono cursor-pointer">EARLYBIRD (早鳥7折)</button>
+            <button type="button" onclick="quickFillPromoCode('VIP30')" class="px-2 py-0.5 rounded-md bg-slate-800 hover:bg-slate-700 text-sky-300 border border-sky-400/30 font-mono cursor-pointer">VIP30 (免費開通30天)</button>
+            <button type="button" onclick="quickFillPromoCode('KAIDANCE888')" class="px-2 py-0.5 rounded-md bg-amber-400/20 hover:bg-amber-400/35 text-amber-200 border border-amber-300/60 font-mono font-black cursor-pointer">🔑 KAIDANCE888 (管理員永久全開)</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- 底部：App Store 恢復購買 ＋ 到期自動關閉模擬測試器 -->
+      <div class="mt-3 pt-2.5 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-400">
+        <div class="flex items-center gap-2 flex-wrap">
+          <button type="button" onclick="restoreAppStorePurchases()" class="px-3 py-1 rounded-xl bg-white/10 hover:bg-white/15 text-slate-200 font-bold transition cursor-pointer">
+            🔄 恢復購買 (Restore Purchases)
+          </button>
+          <button type="button" onclick="simulateShortExpirationDemo(15)" class="px-3 py-1 rounded-xl bg-indigo-500/25 hover:bg-indigo-500/40 text-indigo-200 border border-indigo-400/40 font-bold transition cursor-pointer" title="模擬訂閱 15 秒後到期，測試時間到自動重新上鎖">
+            ⏱️ 測試「15秒後訂閱到期自動上鎖」
+          </button>
+        </div>
+        <button type="button" onclick="resetSubscriptionToFreeLocked()" class="px-3 py-1 rounded-xl bg-rose-500/20 hover:bg-rose-500/35 text-rose-300 border border-rose-400/40 font-bold transition cursor-pointer">
+          🔒 重置為「未訂閱免費版 (鎖住2~10首)」
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 🛡️ 彈窗：Apple App Store 兒童類必備「家長防誤觸驗證門檻」     -->
+  <!-- ========================================================= -->
+  <div id="modal-parental-gate" class="hidden fixed inset-0 z-[130] bg-black/80 backdrop-blur-md flex items-center justify-center p-4">
+    <div class="bg-slate-900 border-2 border-amber-400/80 rounded-3xl p-5 sm:p-6 max-w-sm w-full shadow-2xl text-center text-white space-y-4">
+      <div class="w-12 h-12 rounded-2xl bg-amber-400/20 border border-amber-300/60 flex items-center justify-center text-2xl mx-auto">
+        🛡️
+      </div>
+      <div>
+        <h4 class="text-base sm:text-lg font-black text-amber-300">家長防誤觸安全確認</h4>
+        <p class="text-xs text-slate-300 mt-1">
+          為避免小朋友誤觸購買，請家長回答以下簡單算術題以繼續完成訂閱解鎖：
+        </p>
+      </div>
+      <div id="parental-gate-question" class="py-3 px-4 rounded-2xl bg-slate-950 border border-white/15 text-xl font-mono font-black text-white tracking-wider">
+        6 × 7 = ?
+      </div>
+      <div id="parental-gate-options" class="grid grid-cols-2 gap-2.5">
+        <!-- Dynamically populated buttons -->
+      </div>
+      <div id="parental-gate-error" class="hidden text-xs font-bold text-rose-400">
+        答案不正確，請家長重新點選！
+      </div>
+      <button type="button" onclick="closeParentalGateModal()" class="text-xs font-bold text-slate-400 hover:text-white underline cursor-pointer">
+        取消返回
+      </button>
     </div>
   </div>
 
@@ -2406,11 +2713,17 @@
           </div>
         </div>
 
-        <!-- ▶ 一鍵連播該小朋友的 8 首歌主按鈕 -->
-        <button id="btn-play-dancer-4songs" onclick="playSelectedDancerAllSongs()" class="jelly-btn jelly-btn-gold px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-black text-xs sm:text-sm md:text-base flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(251,191,36,0.65)] shrink-0 cursor-pointer">
-          <span>▶</span>
-          <span id="btn-play-dancer-4songs-label">連播 Kai 的 8 首專屬舞曲 (1➔8)</span>
-        </button>
+        <!-- ▶ 一鍵連播該小朋友的 8 首歌主按鈕 + VIP 訂閱按鈕 -->
+        <div class="flex items-center gap-2 flex-wrap">
+          <button onclick="openSubscriptionModal({ source: 'dancer_header' })" id="btn-dancer-vip-sub" class="px-3.5 py-2.5 rounded-full font-black text-xs bg-slate-900/90 hover:bg-slate-800 text-amber-300 border border-amber-400/70 shadow-md transition flex items-center gap-1.5 active:scale-95 cursor-pointer">
+            <span>👑</span>
+            <span id="dancer-vip-sub-label">VIP 訂閱解鎖</span>
+          </button>
+          <button id="btn-play-dancer-4songs" onclick="playSelectedDancerAllSongs()" class="jelly-btn jelly-btn-gold px-5 sm:px-6 py-2.5 sm:py-3 rounded-full font-black text-xs sm:text-sm md:text-base flex items-center justify-center gap-2 shadow-[0_0_30px_rgba(251,191,36,0.65)] shrink-0 cursor-pointer">
+            <span id="btn-play-dancer-4songs-icon">▶</span>
+            <span id="btn-play-dancer-4songs-label">連播 Kai 的 8 首專屬舞曲 (1➔8)</span>
+          </button>
+        </div>
       </div>
 
       <!-- 8 首專屬歌曲卡片橫列 (1~8 播放順序) -->
@@ -2458,10 +2771,15 @@
         </div>
       </div>
 
-      <!-- 連續播放按鈕 -->
-      <div class="flex items-center gap-2">
-        <button onclick="playCurrentAlbumAll()" class="jelly-btn-gold px-5 py-2.5 rounded-full font-black text-xs md:text-sm transition flex items-center gap-2 active:scale-95 anim-pulse">
-          <span>▶</span> 全星球 10 關循環播放
+      <!-- 連續播放與訂閱按鈕 -->
+      <div class="flex items-center gap-2 flex-wrap">
+        <button onclick="openSubscriptionModal({ albumId: currentAlbumId, source: 'levels_header' })" id="btn-levels-vip-sub" class="px-3.5 py-2 rounded-full font-black text-xs bg-slate-900/90 hover:bg-slate-800 text-amber-300 border border-amber-400/70 shadow-md transition flex items-center gap-1.5 active:scale-95 cursor-pointer">
+          <span>👑</span>
+          <span id="levels-vip-sub-label">訂閱解鎖全關卡</span>
+        </button>
+        <button onclick="playCurrentAlbumAll()" id="btn-levels-play-all" class="jelly-btn-gold px-5 py-2.5 rounded-full font-black text-xs md:text-sm transition flex items-center gap-2 active:scale-95 anim-pulse">
+          <span id="levels-play-all-icon">▶</span>
+          <span id="levels-play-all-label">全星球 10 關循環播放</span>
         </button>
       </div>
     </header>
@@ -2982,6 +3300,11 @@
           <span>四張專輯連播</span>
           <span class="text-[10px] font-mono px-1.5 py-0.2 rounded-full bg-amber-400/20 text-amber-300 border border-amber-300/30">40首</span>
         </button>
+        <!-- 👑 唱片機 VIP 訂閱按鈕 -->
+        <button onclick="openSubscriptionModal({ albumId: turntableActiveAlbum, source: 'turntable_header' })" id="btn-turntable-vip-sub" class="px-2.5 sm:px-3 py-1 rounded-full text-xs font-black transition-all flex items-center gap-1 border border-amber-400/80 bg-gradient-to-r from-amber-400 to-orange-400 text-slate-950 cursor-pointer active:scale-95 shadow-sm">
+          <span>👑</span>
+          <span id="turntable-vip-sub-label">訂閱解鎖</span>
+        </button>
       </div>
     </header>
 
@@ -3304,6 +3627,221 @@
     let playerCount = 1; // 1, 2, 3
     let currentHeadTheme = 'human'; // 'human' (小男孩,小女孩,老爺爺), 'wild' (獅子,兔子,猴子), 'farm' (小豬,牛,馬)
 
+    // ========================================================
+    // 2-B. 👑 KaiDance 星際通行證訂閱、權限控制與防誤觸安全系統 (StoreKit 2 / Paywall Engine)
+    // 核心規則：
+    // 1. 每顆星球第 1 首 (a1_s01, a2_s01, a3_s01, a4_s01) 與首頁主題曲永久免費！
+    // 2. 第 2～10 首需有效訂閱（單顆星球通行證、全宇宙年訂、終身買斷或管理員密碼）
+    // 3. 訂閱到期後自動恢復上鎖 🔒；支援折扣碼 (KAI80, EARLYBIRD) 與管理員內部密碼 (KAIDANCE888)
+    // ========================================================
+    const FREE_SONG_IDS = new Set(['a1_s01', 'a2_s01', 'a3_s01', 'a4_s01', 'morning', 'shine']);
+    const ADMIN_MASTER_CODES = new Set(['KAIDANCE888', 'KAIDANCEVIP', 'ADMINVIP']);
+    const PROMO_DISCOUNT_RULES = {
+      'KAI80': { type: 'percent', discount: 0.8, label: 'KAI80 專屬 8 折優惠' },
+      'EARLYBIRD': { type: 'percent', discount: 0.7, label: 'EARLYBIRD 早鳥 7 折優惠' },
+      'VIP30': { type: 'grant_days', days: 30, plan: 'all_annual', label: 'VIP30 免費開通全宇宙通行證 30 天' },
+      'TRIAL7': { type: 'grant_days', days: 7, plan: 'all_annual', label: 'TRIAL7 免費試跳體驗 7 天' }
+    };
+
+    let userSubscriptionState = {
+      isSubscribed: false,       // 是否有任何有效付費權限
+      planType: 'none',          // 'none', 'single_planet', 'all_annual', 'lifetime', 'admin_master'
+      unlockedPlanets: [],       // ['album_1'], ['album_2'] 或 ['album_1', 'album_2', 'album_3', 'album_4']
+      expirationTimestamp: 0,    // 0 = 無或已過期，Infinity = 終身買斷 / 管理員
+      promoDiscountPercent: 1.0, // 1.0 = 原價, 0.8 = 8折
+      appliedPromoCode: ''
+    };
+
+    let activeSelectedSubPlan = 'all_annual'; // 'single_planet', 'all_annual', 'lifetime'
+    let activeSubTargetPlanet = 'album_1';     // 當選擇 single_planet 時目標星球
+    let pendingPurchaseResolve = null;
+
+    // 從本機讀取並驗證訂閱狀態（啟動時自動檢查是否到期）
+    function loadUserSubscriptionState() {
+      try {
+        const raw = localStorage.getItem('kaidance_user_subscription');
+        if (raw) {
+          const parsed = JSON.parse(raw);
+          userSubscriptionState = { ...userSubscriptionState, ...parsed };
+        }
+      } catch (err) {
+        console.warn('載入訂閱資訊失敗，使用預設免費體驗狀態:', err);
+      }
+      checkSubscriptionExpiration();
+      updateAllSubscriptionUIs();
+    }
+
+    function saveUserSubscriptionState() {
+      try {
+        localStorage.setItem('kaidance_user_subscription', JSON.stringify(userSubscriptionState));
+      } catch (err) {
+        console.warn('儲存訂閱資訊失敗:', err);
+      }
+      updateAllSubscriptionUIs();
+    }
+
+    // 檢查訂閱是否到期（時間到自動上鎖 🔒）
+    function checkSubscriptionExpiration() {
+      if (!userSubscriptionState.isSubscribed) return false;
+      if (userSubscriptionState.expirationTimestamp === Infinity) return false; // 終身買斷或管理員
+      const now = Date.now();
+      if (now >= userSubscriptionState.expirationTimestamp) {
+        console.log('⏰ 訂閱時間已到期，系統已自動為進階歌曲恢復上鎖 🔒');
+        userSubscriptionState.isSubscribed = false;
+        userSubscriptionState.planType = 'none';
+        userSubscriptionState.unlockedPlanets = [];
+        userSubscriptionState.expirationTimestamp = 0;
+        saveUserSubscriptionState();
+        return true;
+      }
+      return false;
+    }
+
+    // 判斷某首歌曲目前是否已解鎖可播放
+    function isSongUnlocked(songId) {
+      if (!songId) return true;
+      // 1. 每顆星球第 1 首與舊相容 key 永遠免費開放
+      if (FREE_SONG_IDS.has(songId)) return true;
+      // 2. 檢查訂閱有效性
+      checkSubscriptionExpiration();
+      if (!userSubscriptionState.isSubscribed) return false;
+      // 3. 管理員全開、全宇宙年訂、終身買斷 ➔ 全開
+      if (userSubscriptionState.planType === 'all_annual' ||
+          userSubscriptionState.planType === 'lifetime' ||
+          userSubscriptionState.planType === 'admin_master') {
+        return true;
+      }
+      // 4. 單顆星球訂閱 ➔ 檢查是否屬於已解鎖星球
+      if (userSubscriptionState.planType === 'single_planet') {
+        const song = songDatabase[songId];
+        const aid = song?.albumId || (songId.startsWith('a1_') ? 'album_1' : songId.startsWith('a2_') ? 'album_2' : songId.startsWith('a3_') ? 'album_3' : 'album_4');
+        return userSubscriptionState.unlockedPlanets.includes(aid);
+      }
+      return false;
+    }
+
+    // 判斷某顆星球是否全解鎖（10 首歌全開）
+    function isAlbumFullyUnlocked(albumId) {
+      checkSubscriptionExpiration();
+      if (!userSubscriptionState.isSubscribed) return false;
+      if (userSubscriptionState.planType === 'all_annual' ||
+          userSubscriptionState.planType === 'lifetime' ||
+          userSubscriptionState.planType === 'admin_master') {
+        return true;
+      }
+      if (userSubscriptionState.planType === 'single_planet') {
+        return userSubscriptionState.unlockedPlanets.includes(albumId);
+      }
+      return false;
+    }
+
+    // 更新首頁 👑 Logo、關卡頁、戰隊與唱片機的訂閱狀態顯示
+    function updateAllSubscriptionUIs() {
+      checkSubscriptionExpiration();
+      const isSub = userSubscriptionState.isSubscribed;
+      const plan = userSubscriptionState.planType;
+
+      // 1. 首頁 VIP Logo
+      const homeVipIcon = document.getElementById('home-vip-logo-icon');
+      const homeVipTitle = document.getElementById('home-vip-logo-title');
+      const homeVipStatus = document.getElementById('home-vip-status-text');
+      if (homeVipStatus) {
+        if (!isSub) {
+          homeVipIcon.innerText = '👑';
+          homeVipTitle.innerText = 'VIP 訂閱通行證';
+          homeVipStatus.innerText = '🔒 免費體驗 (4首)';
+        } else if (plan === 'admin_master') {
+          homeVipIcon.innerText = '🔑';
+          homeVipTitle.innerText = '開發者終身全開';
+          homeVipStatus.innerText = '✨ 40首永久解鎖';
+        } else if (plan === 'lifetime') {
+          homeVipIcon.innerText = '💎';
+          homeVipTitle.innerText = '星際終身 VIP';
+          homeVipStatus.innerText = '✨ 永久有效全解鎖';
+        } else if (plan === 'all_annual') {
+          const daysLeft = Math.max(1, Math.ceil((userSubscriptionState.expirationTimestamp - Date.now()) / (1000 * 60 * 60 * 24)));
+          homeVipIcon.innerText = '👑';
+          homeVipTitle.innerText = '全宇宙暢跳中';
+          homeVipStatus.innerText = `✨ 剩餘 ${daysLeft} 天全解鎖`;
+        } else if (plan === 'single_planet') {
+          const planetNames = { album_1: '晨光', album_2: '派對', album_3: '櫻花', album_4: '日落' };
+          const pName = planetNames[userSubscriptionState.unlockedPlanets[0]] || '單星球';
+          homeVipIcon.innerText = '🪐';
+          homeVipTitle.innerText = `${pName}星球通行證`;
+          homeVipStatus.innerText = '✨ 10首歌已解鎖';
+        }
+      }
+
+      // 2. 家長設定彈窗中的狀態文字
+      const settingsVipTitle = document.getElementById('settings-vip-status-title');
+      const settingsVipDesc = document.getElementById('settings-vip-status-desc');
+      if (settingsVipTitle && settingsVipDesc) {
+        if (!isSub) {
+          settingsVipTitle.innerText = 'VIP 訂閱通行證 · 免費體驗版';
+          settingsVipDesc.innerText = '目前僅開放各星球第 1 首與主題曲 · 點擊管理訂閱或輸入密碼';
+        } else {
+          settingsVipTitle.innerText = `VIP 訂閱通行證 · ${plan === 'lifetime' ? '終身買斷 VIP' : plan === 'admin_master' ? '管理員全開模式' : '有效訂閱中'}`;
+          settingsVipDesc.innerText = userSubscriptionState.expirationTimestamp === Infinity 
+            ? '所有 4 顆星球 40 首曲目均已永久解鎖' 
+            : `訂閱有效至：${new Date(userSubscriptionState.expirationTimestamp).toLocaleDateString()} (到期自動關閉)`;
+        }
+      }
+
+      // 3. 關卡頁頂欄 VIP 按鈕狀態
+      const levelsVipBtn = document.getElementById('btn-levels-vip-sub');
+      const levelsVipLabel = document.getElementById('levels-vip-sub-label');
+      if (levelsVipBtn && levelsVipLabel) {
+        const isCurrentAlbumUnlocked = isAlbumFullyUnlocked(currentAlbumId);
+        if (isCurrentAlbumUnlocked) {
+          levelsVipLabel.innerText = '👑 星球已解鎖暢跳';
+          levelsVipBtn.className = 'px-3.5 py-2 rounded-full font-black text-xs bg-emerald-500/20 text-emerald-300 border border-emerald-400/60 shadow transition flex items-center gap-1.5 cursor-pointer';
+        } else {
+          levelsVipLabel.innerText = '👑 訂閱解鎖本星球 (10首)';
+          levelsVipBtn.className = 'px-3.5 py-2 rounded-full font-black text-xs bg-slate-900/90 hover:bg-slate-800 text-amber-300 border border-amber-400/70 shadow-md transition flex items-center gap-1.5 active:scale-95 cursor-pointer';
+        }
+      }
+
+      // 4. 戰隊與唱片機頂部標籤更新
+      const dancerVipLabel = document.getElementById('dancer-vip-sub-label');
+      if (dancerVipLabel) {
+        dancerVipLabel.innerText = isSub ? '👑 VIP 已啟用' : '👑 VIP 訂閱解鎖';
+      }
+      const turntableVipLabel = document.getElementById('turntable-vip-sub-label');
+      if (turntableVipLabel) {
+        turntableVipLabel.innerText = isSub ? '👑 VIP 全開' : '👑 訂閱解鎖';
+      }
+
+      // 5. 訂閱視窗頂部狀態 Badge
+      const subModalBadge = document.getElementById('sub-modal-current-badge');
+      if (subModalBadge) {
+        if (!isSub) {
+          subModalBadge.className = 'px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-black bg-slate-800 text-amber-300 border border-amber-400/50';
+          subModalBadge.innerText = '🔒 目前為免費體驗版 (開放4首)';
+        } else {
+          subModalBadge.className = 'px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-black bg-emerald-500/25 text-emerald-300 border border-emerald-400/60';
+          subModalBadge.innerText = `✨ 已開通：${plan === 'lifetime' ? '終身買斷 VIP' : plan === 'admin_master' ? '管理員全開' : plan === 'all_annual' ? '全宇宙年訂' : '單顆星球訂閱'}`;
+        }
+      }
+
+      // 重新渲染當前檢視卡片以同步 🔒 鎖頭顯示
+      if (viewAlbumLevels && !viewAlbumLevels.classList.contains('hidden')) {
+        renderLobbySongs(currentAlbumId);
+      }
+      if (viewDancerSquad && !viewDancerSquad.classList.contains('hidden')) {
+        const activeDancer = DANCER_SQUAD_DATA[currentDancerIndex] || DANCER_SQUAD_DATA[0];
+        renderSelectedDancer4Songs(activeDancer);
+      }
+      if (viewTurntable && !viewTurntable.classList.contains('hidden')) {
+        renderTurntablePlaylist();
+      }
+      if (isPlaylistDrawerOpen) {
+        renderPlaylistDrawer();
+      }
+    }
+
+    // 每 15 秒檢查一次訂閱是否到期
+    setInterval(checkSubscriptionExpiration, 15000);
+
     // 初始化讀取 9 位數累計總積分
     try {
       const savedTotal = parseInt(localStorage.getItem('kaidance_total_score') || '980', 10);
@@ -3312,6 +3850,431 @@
         totalScoreLobby.innerText = String(savedTotal).padStart(9, '0').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
       }
     } catch(e) {}
+
+    // ========================================================
+    // 2-C. 👑 訂閱彈窗控制、方案計算、行銷優惠碼、Apple IAP 模擬與安全家長門檻
+    // ========================================================
+    const BASE_PRICES = {
+      single_planet: 120,
+      all_annual: 890,
+      lifetime: 1790
+    };
+
+    function openSubscriptionModal(options = {}) {
+      const modal = document.getElementById('modal-subscription-paywall');
+      if (!modal) return;
+
+      const triggerBanner = document.getElementById('sub-modal-trigger-banner');
+      const triggerIcon = document.getElementById('sub-modal-trigger-icon');
+      const triggerText = document.getElementById('sub-modal-trigger-text');
+      const countdownBadge = document.getElementById('sub-modal-countdown-badge');
+
+      if (options.song) {
+        if (triggerBanner) triggerBanner.className = 'mt-3 p-3 rounded-2xl bg-amber-500/20 border-2 border-amber-400 flex items-center justify-between gap-2 text-xs animate-pulse';
+        if (triggerIcon) triggerIcon.innerText = '🔒';
+        if (triggerText) {
+          triggerText.innerHTML = `<span class="text-amber-300 font-black">【${options.song.title}】為 VIP 進階律動曲目</span><br><span class="text-white/90">每顆星球第 1 首歌可免費暢跳；訂閱星際通行證即可解鎖本曲與全宇宙 40 首曲目！</span>`;
+        }
+      } else if (options.albumId && !isAlbumFullyUnlocked(options.albumId)) {
+        const aObj = window.KAI_ALBUM_DATABASE ? window.KAI_ALBUM_DATABASE[options.albumId] : null;
+        if (triggerBanner) triggerBanner.className = 'mt-3 p-3 rounded-2xl bg-amber-500/20 border-2 border-amber-400 flex items-center justify-between gap-2 text-xs';
+        if (triggerIcon) triggerIcon.innerText = '🔒';
+        if (triggerText) {
+          triggerText.innerHTML = `<span class="text-amber-300 font-black">解鎖【${aObj?.zhTitle || '本星球'}】全部 10 關舞曲</span><br><span class="text-white/90">訂閱後立即開通第 2～10 首進階關卡與連播特權！</span>`;
+        }
+      } else {
+        if (triggerBanner) triggerBanner.className = 'mt-3 p-3 rounded-2xl bg-slate-900/90 border border-white/15 flex items-center justify-between gap-2 text-xs';
+        if (triggerIcon) triggerIcon.innerText = userSubscriptionState.isSubscribed ? '👑' : '🪐';
+        if (triggerText) {
+          triggerText.innerText = userSubscriptionState.isSubscribed
+            ? `您目前已擁有【${userSubscriptionState.planType === 'lifetime' ? '星際終身 VIP' : userSubscriptionState.planType === 'admin_master' ? '管理員終身全開' : '有效訂閱'}】特權！隨時可在此管理或兌換新序號。`
+            : '每顆星球的第 1 首歌曲與首頁主題曲皆永久免費播放；第 2～10 首進階舞曲需訂閱通行證解鎖（到期後自動恢復上鎖）。';
+        }
+      }
+
+      if (userSubscriptionState.isSubscribed && userSubscriptionState.expirationTimestamp !== Infinity) {
+        if (countdownBadge) {
+          const hoursLeft = Math.max(1, Math.round((userSubscriptionState.expirationTimestamp - Date.now()) / (1000 * 60 * 60)));
+          countdownBadge.innerText = hoursLeft > 48 ? `剩餘 ${Math.ceil(hoursLeft / 24)} 天到期` : `剩餘 ${hoursLeft} 小時到期`;
+          countdownBadge.classList.remove('hidden');
+        }
+      } else if (countdownBadge) {
+        countdownBadge.classList.add('hidden');
+      }
+
+      if (options.albumId && ['album_1', 'album_2', 'album_3', 'album_4'].includes(options.albumId)) {
+        activeSubTargetPlanet = options.albumId;
+      }
+      selectSubTargetPlanet(activeSubTargetPlanet);
+
+      // 預設選中主力方案 B (all_annual)
+      selectSubscriptionPlan(activeSelectedSubPlan || 'all_annual');
+      updatePlanPricesDisplay();
+
+      modal.classList.remove('hidden');
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+
+    function closeSubscriptionModal() {
+      const modal = document.getElementById('modal-subscription-paywall');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    function handleSubscriptionBackdropClick(e) {
+      if (e.target && e.target.id === 'modal-subscription-paywall') {
+        closeSubscriptionModal();
+      }
+    }
+
+    // 切換選取的方案 (single_planet, all_annual, lifetime)
+    function selectSubscriptionPlan(planId) {
+      activeSelectedSubPlan = planId;
+      ['single_planet', 'all_annual', 'lifetime'].forEach(p => {
+        const card = document.getElementById(`plan-card-${p}`);
+        const check = document.getElementById(`plan-check-${p}`);
+        if (!card || !check) return;
+        if (p === planId) {
+          if (p === 'all_annual') {
+            card.className = "rounded-2xl p-3.5 border-2 border-amber-400 bg-gradient-to-b from-amber-500/25 via-slate-900/95 to-slate-900 shadow-[0_0_30px_rgba(251,191,36,0.45)] transition-all cursor-pointer flex flex-col justify-between relative scale-[1.02]";
+            check.className = "w-5 h-5 rounded-full bg-amber-400 text-slate-950 font-black flex items-center justify-center text-xs shadow";
+            check.innerText = "✓";
+          } else if (p === 'single_planet') {
+            card.className = "rounded-2xl p-3.5 border-2 border-sky-400 bg-slate-900/90 shadow-[0_0_24px_rgba(56,189,248,0.35)] transition-all cursor-pointer flex flex-col justify-between relative scale-[1.02]";
+            check.className = "w-5 h-5 rounded-full bg-sky-400 text-slate-950 font-black flex items-center justify-center text-xs shadow";
+            check.innerText = "✓";
+          } else {
+            card.className = "rounded-2xl p-3.5 border-2 border-pink-400 bg-slate-900/90 shadow-[0_0_24px_rgba(244,114,182,0.35)] transition-all cursor-pointer flex flex-col justify-between relative scale-[1.02]";
+            check.className = "w-5 h-5 rounded-full bg-pink-400 text-slate-950 font-black flex items-center justify-center text-xs shadow";
+            check.innerText = "✓";
+          }
+        } else {
+          card.className = "rounded-2xl p-3.5 border-2 border-white/15 bg-slate-900/70 hover:border-white/30 transition-all cursor-pointer flex flex-col justify-between relative opacity-85 hover:opacity-100";
+          check.className = "w-5 h-5 rounded-full border border-white/30 flex items-center justify-center text-[10px] text-transparent";
+          check.innerText = "";
+        }
+      });
+      updatePurchaseConfirmButtonLabel();
+    }
+
+    // 當選擇單顆星球方案時，切換欲解鎖的目標星球
+    function selectSubTargetPlanet(albumId) {
+      activeSubTargetPlanet = albumId;
+      ['album_1', 'album_2', 'album_3', 'album_4'].forEach(id => {
+        const btn = document.getElementById(`sub-planet-btn-${id}`);
+        if (!btn) return;
+        if (id === albumId) {
+          btn.className = "px-2 py-1 rounded-lg text-[10px] font-black border-2 border-sky-300 bg-sky-500/35 text-white flex items-center gap-1 shadow-xs cursor-pointer";
+        } else {
+          btn.className = "px-2 py-1 rounded-lg text-[10px] font-bold border border-white/15 bg-slate-800/80 text-slate-300 flex items-center gap-1 cursor-pointer";
+        }
+      });
+      updatePurchaseConfirmButtonLabel();
+    }
+
+    // 計算打折後的價格並更新按鈕文字
+    function updatePlanPricesDisplay() {
+      const discount = userSubscriptionState.promoDiscountPercent || 1.0;
+      const discountBanner = document.getElementById('sub-discount-applied-banner');
+      const discountText = document.getElementById('sub-discount-applied-text');
+
+      if (discount < 1.0) {
+        if (discountBanner) discountBanner.classList.remove('hidden');
+        if (discountText) discountText.innerText = `🎉 已套用折扣碼【${userSubscriptionState.appliedPromoCode}】：全方案享 ${(discount * 10).toFixed(0)} 折優惠！`;
+      } else if (discountBanner) {
+        discountBanner.classList.add('hidden');
+      }
+
+      ['single_planet', 'all_annual', 'lifetime'].forEach(p => {
+        const base = BASE_PRICES[p];
+        const finalPrice = Math.round(base * discount);
+        const priceEl = document.getElementById(`plan-price-${p}`);
+        const origEl = document.getElementById(`plan-orig-${p}`);
+        if (priceEl) priceEl.innerText = `NT$ ${finalPrice}`;
+        if (origEl) {
+          if (discount < 1.0) {
+            origEl.innerText = `NT$ ${base}`;
+            origEl.classList.remove('hidden');
+          } else if (p === 'all_annual') {
+            origEl.innerText = 'NT$ 1,440';
+            origEl.classList.remove('hidden');
+          } else {
+            origEl.classList.add('hidden');
+          }
+        }
+      });
+      updatePurchaseConfirmButtonLabel();
+    }
+
+    function updatePurchaseConfirmButtonLabel() {
+      const confirmLabel = document.getElementById('btn-sub-confirm-label');
+      if (!confirmLabel) return;
+      const discount = userSubscriptionState.promoDiscountPercent || 1.0;
+      const plan = activeSelectedSubPlan || 'all_annual';
+      const base = BASE_PRICES[plan];
+      const finalPrice = Math.round(base * discount);
+
+      if (plan === 'all_annual') {
+        confirmLabel.innerText = `立即訂閱【👑 全宇宙暢跳年訂 · NT$ ${finalPrice}/年】解鎖 4 顆星球 ➜`;
+      } else if (plan === 'single_planet') {
+        const pNames = { album_1: '晨光星球', album_2: '派對星球', album_3: '櫻花星球', album_4: '日落星球' };
+        confirmLabel.innerText = `立即開通【🪐 ${pNames[activeSubTargetPlanet] || '單星球'}通行證 · NT$ ${finalPrice}/月】➜`;
+      } else {
+        confirmLabel.innerText = `立即購買【💎 星際終身買斷 VIP · NT$ ${finalPrice}】永久解鎖 ➜`;
+      }
+    }
+
+    // 啟動購買流程：第一步觸發 Apple 規範之「家長防誤觸驗證 (Parental Gate)」
+    function startSubscriptionPurchaseFlow() {
+      triggerParentalGate(() => {
+        executeSubscriptionPurchase(activeSelectedSubPlan, activeSubTargetPlanet);
+      });
+    }
+
+    // 執行結帳流程（支援 Apple In-App Purchase 整合介面與 Web 端模擬沙盒結帳）
+    function executeSubscriptionPurchase(planType, targetPlanet = 'album_1') {
+      const discount = userSubscriptionState.promoDiscountPercent || 1.0;
+      const finalPrice = Math.round(BASE_PRICES[planType] * discount);
+      console.log(`[StoreKit 2 / IAP] 發起結帳: plan=${planType}, planet=${targetPlanet}, finalPrice=NT$ ${finalPrice}`);
+
+      // 設定權限到期時間（單顆星球 30 天，全宇宙年訂 365 天，終身買斷 Infinity）
+      let expiration = Infinity;
+      let unlockedPlanets = ['album_1', 'album_2', 'album_3', 'album_4'];
+      const now = Date.now();
+
+      if (planType === 'single_planet') {
+        expiration = now + (30 * 24 * 60 * 60 * 1000); // 30 天
+        unlockedPlanets = [targetPlanet];
+      } else if (planType === 'all_annual') {
+        expiration = now + (365 * 24 * 60 * 60 * 1000); // 365 天
+      } else if (planType === 'lifetime') {
+        expiration = Infinity;
+      }
+
+      userSubscriptionState.isSubscribed = true;
+      userSubscriptionState.planType = planType;
+      userSubscriptionState.unlockedPlanets = unlockedPlanets;
+      userSubscriptionState.expirationTimestamp = expiration;
+      saveUserSubscriptionState();
+
+      closeSubscriptionModal();
+
+      // 歡慶特效
+      showVipCelebrationAlert(planType);
+    }
+
+    function showSubscriptionToast(title, subtitle = '') {
+      let toast = document.getElementById('kaidance-sub-toast');
+      if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'kaidance-sub-toast';
+        toast.className = 'fixed top-4 left-1/2 -translate-x-1/2 z-[150] max-w-md w-[92%] px-4 py-3 rounded-2xl bg-slate-900/95 border-2 border-amber-400 shadow-[0_12px_40px_rgba(0,0,0,0.85),0_0_25px_rgba(251,191,36,0.5)] text-center transition-all duration-300 pointer-events-none';
+        document.body.appendChild(toast);
+      }
+      toast.innerHTML = `
+        <div class="text-sm font-black text-amber-300 drop-shadow">${title}</div>
+        ${subtitle ? `<div class="text-xs font-bold text-white/90 mt-1 leading-relaxed">${subtitle}</div>` : ''}
+      `;
+      toast.style.opacity = '1';
+      toast.style.transform = 'translate(-50%, 0)';
+      if (window._subToastTimer) clearTimeout(window._subToastTimer);
+      window._subToastTimer = setTimeout(() => {
+        if (toast) {
+          toast.style.opacity = '0';
+          toast.style.transform = 'translate(-50%, -12px)';
+        }
+      }, 4200);
+    }
+
+    function showVipCelebrationAlert(planType) {
+      const titles = {
+        single_planet: '🎉 恭喜成功訂閱單顆星球通行證！',
+        all_annual: '🌟 太棒啦！已開通【全宇宙暢跳年度通行證】！',
+        lifetime: '💎 榮譽解鎖【星際終身 VIP】！永久有效！',
+        admin_master: '🔑 開發者管理員終身全開模式已啟用！'
+      };
+      showSubscriptionToast(
+        titles[planType] || '🎉 恭喜訂閱成功！',
+        '已為您解鎖對應歌曲與引導動畫，現在即可盡情熱跳！（訂閱方案到期後將自動恢復上鎖）'
+      );
+    }
+
+    // 行銷優惠碼與管理員密碼驗證引擎
+    function applySubscriptionPromoOrAdminCode() {
+      const input = document.getElementById('sub-promo-code-input');
+      const feedback = document.getElementById('sub-promo-feedback');
+      if (!input || !feedback) return;
+      const code = input.value.trim().toUpperCase();
+
+      feedback.classList.remove('hidden', 'bg-emerald-500/25', 'text-emerald-300', 'bg-rose-500/25', 'text-rose-300', 'bg-amber-500/25', 'text-amber-300');
+
+      if (!code) {
+        feedback.innerText = '請先輸入優惠代碼或管理員密碼！';
+        feedback.className = 'mt-2 text-xs font-bold px-3 py-1.5 rounded-xl bg-rose-500/25 text-rose-300 border border-rose-400/50';
+        return;
+      }
+
+      // 1. 管理員專屬全開密碼 (KAIDANCE888 等)
+      if (ADMIN_MASTER_CODES.has(code)) {
+        userSubscriptionState.isSubscribed = true;
+        userSubscriptionState.planType = 'admin_master';
+        userSubscriptionState.unlockedPlanets = ['album_1', 'album_2', 'album_3', 'album_4'];
+        userSubscriptionState.expirationTimestamp = Infinity;
+        userSubscriptionState.appliedPromoCode = code;
+        saveUserSubscriptionState();
+
+        feedback.innerHTML = `🔑 <b>開發者管理員驗證通過！</b> 已啟用終身全開模式，40 首歌曲與全功能已全部永久解鎖！`;
+        feedback.className = 'mt-2 text-xs font-bold px-3 py-1.5 rounded-xl bg-emerald-500/25 text-emerald-300 border border-emerald-400/60';
+        input.value = '';
+        setTimeout(() => closeSubscriptionModal(), 1800);
+        return;
+      }
+
+      // 2. 行銷折扣或免費贈送代碼 (KAI80, EARLYBIRD, VIP30, TRIAL7)
+      if (PROMO_DISCOUNT_RULES[code]) {
+        const rule = PROMO_DISCOUNT_RULES[code];
+        if (rule.type === 'percent') {
+          userSubscriptionState.promoDiscountPercent = rule.discount;
+          userSubscriptionState.appliedPromoCode = code;
+          saveUserSubscriptionState();
+          feedback.innerHTML = `🎉 <b>${rule.label} 套用成功！</b> 方案價格已自動折抵！`;
+          feedback.className = 'mt-2 text-xs font-bold px-3 py-1.5 rounded-xl bg-emerald-500/25 text-emerald-300 border border-emerald-400/60';
+          updatePlanPricesDisplay();
+        } else if (rule.type === 'grant_days') {
+          const expiration = Date.now() + (rule.days * 24 * 60 * 60 * 1000);
+          userSubscriptionState.isSubscribed = true;
+          userSubscriptionState.planType = 'all_annual';
+          userSubscriptionState.unlockedPlanets = ['album_1', 'album_2', 'album_3', 'album_4'];
+          userSubscriptionState.expirationTimestamp = expiration;
+          userSubscriptionState.appliedPromoCode = code;
+          saveUserSubscriptionState();
+          feedback.innerHTML = `🎁 <b>${rule.label} 兌換成功！</b> 全宇宙 40 首曲目已開通，有效至 ${new Date(expiration).toLocaleDateString()}！`;
+          feedback.className = 'mt-2 text-xs font-bold px-3 py-1.5 rounded-xl bg-emerald-500/25 text-emerald-300 border border-emerald-400/60';
+          input.value = '';
+          setTimeout(() => closeSubscriptionModal(), 2000);
+        }
+        return;
+      }
+
+      // 無效代碼
+      feedback.innerText = `⚠️ 找不到代碼「${code}」，請確認英文字母與數字是否正確。`;
+      feedback.className = 'mt-2 text-xs font-bold px-3 py-1.5 rounded-xl bg-rose-500/25 text-rose-300 border border-rose-400/50';
+    }
+
+    function quickFillPromoCode(code) {
+      const input = document.getElementById('sub-promo-code-input');
+      if (input) {
+        input.value = code;
+        applySubscriptionPromoOrAdminCode();
+      }
+    }
+
+    function clearAppliedPromoDiscount() {
+      userSubscriptionState.promoDiscountPercent = 1.0;
+      userSubscriptionState.appliedPromoCode = '';
+      saveUserSubscriptionState();
+      updatePlanPricesDisplay();
+    }
+
+    // App Store 官方規範：恢復購買 (Restore Purchases)
+    function restoreAppStorePurchases() {
+      loadUserSubscriptionState();
+      showSubscriptionToast(
+        '🔄 Apple App Store 購買憑證同步完成',
+        userSubscriptionState.isSubscribed
+          ? '已成功驗證並恢復您的 VIP 通行證權限！'
+          : '目前尚未偵測到有效付費訂閱紀錄，維持免費體驗版（開放各星球第 1 首與主題曲）。'
+      );
+    }
+
+    // 模擬短期到期自動重新上鎖測試（例如：15 秒後到期）
+    function simulateShortExpirationDemo(seconds = 15) {
+      userSubscriptionState.isSubscribed = true;
+      userSubscriptionState.planType = 'all_annual';
+      userSubscriptionState.unlockedPlanets = ['album_1', 'album_2', 'album_3', 'album_4'];
+      userSubscriptionState.expirationTimestamp = Date.now() + (seconds * 1000);
+      saveUserSubscriptionState();
+      showSubscriptionToast(
+        `⏱️ 已啟動模擬測試：【${seconds} 秒後】訂閱自動到期！`,
+        '現在可點播第 2～10 首歌曲；時間一到系統將自動恢復上鎖 🔒！'
+      );
+      closeSubscriptionModal();
+    }
+
+    // 重置為初始未訂閱免費體驗狀態（鎖住 2~10 首）
+    function resetSubscriptionToFreeLocked() {
+      userSubscriptionState = {
+        isSubscribed: false,
+        planType: 'none',
+        unlockedPlanets: [],
+        expirationTimestamp: 0,
+        promoDiscountPercent: 1.0,
+        appliedPromoCode: ''
+      };
+      saveUserSubscriptionState();
+      showSubscriptionToast(
+        '🔒 已重置為「未訂閱免費體驗狀態」',
+        '現在僅每顆星球第 1 首與主題曲可免費播放，第 2～10 首均已加上鎖頭 🔒。'
+      );
+      closeSubscriptionModal();
+    }
+
+    // 🛡️ Apple 兒童向規範：家長安全門檻 (Parental Gate)
+    function triggerParentalGate(onSuccessCallback) {
+      pendingPurchaseResolve = onSuccessCallback;
+      const modal = document.getElementById('modal-parental-gate');
+      const qEl = document.getElementById('parental-gate-question');
+      const optsEl = document.getElementById('parental-gate-options');
+      const errEl = document.getElementById('parental-gate-error');
+      if (!modal || !qEl || !optsEl) {
+        if (typeof onSuccessCallback === 'function') onSuccessCallback();
+        return;
+      }
+
+      if (errEl) errEl.classList.add('hidden');
+
+      // 產生隨機九九乘法題目 (數字 4~9)
+      const a = Math.floor(Math.random() * 6) + 4;
+      const b = Math.floor(Math.random() * 6) + 4;
+      const correct = a * b;
+      qEl.innerText = `${a} × ${b} = ?`;
+
+      // 產生 4 個選項（1 正確，3 干擾）
+      const answers = new Set([correct]);
+      while (answers.size < 4) {
+        const offset = (Math.floor(Math.random() * 5) + 1) * (Math.random() < 0.5 ? 1 : -1);
+        const wrong = correct + offset;
+        if (wrong > 0 && wrong !== correct) answers.add(wrong);
+      }
+      const shuffled = Array.from(answers).sort(() => Math.random() - 0.5);
+
+      optsEl.innerHTML = shuffled.map(ans => `
+        <button type="button" onclick="verifyParentalGateAnswer(${ans}, ${correct})"
+                class="py-2.5 px-4 rounded-xl text-base font-mono font-black bg-slate-800 hover:bg-amber-400 hover:text-slate-950 border border-white/20 transition active:scale-95 cursor-pointer">
+          ${ans}
+        </button>
+      `).join('');
+
+      modal.classList.remove('hidden');
+    }
+
+    function verifyParentalGateAnswer(selected, correct) {
+      const errEl = document.getElementById('parental-gate-error');
+      if (selected === correct) {
+        closeParentalGateModal();
+        if (typeof pendingPurchaseResolve === 'function') {
+          pendingPurchaseResolve();
+          pendingPurchaseResolve = null;
+        }
+      } else {
+        if (errEl) errEl.classList.remove('hidden');
+      }
+    }
+
+    function closeParentalGateModal() {
+      const modal = document.getElementById('modal-parental-gate');
+      if (modal) modal.classList.add('hidden');
+      pendingPurchaseResolve = null;
+    }
 
     // 三大類型與五位玩家頭部造型特徵配置
     const CHARACTER_PROFILES = {
@@ -5932,6 +6895,9 @@
       gridEl.innerHTML = dancer.songs.map((songId, orderIdx) => {
         const song = songDatabase[songId];
         if (!song) return '';
+        const unlocked = isSongUnlocked(songId);
+        const isFreeTrack = FREE_SONG_IDS.has(songId);
+
         let planetLabel = '☀️ 晨光星球';
         let planetBadgeClass = 'bg-amber-400 text-slate-950 border-amber-200';
         let cardClass = 'jelly-song-card-p1';
@@ -5966,16 +6932,19 @@
           coachColorClass = 'text-orange-200/80';
         }
 
-        const hasVideo = song.timeline && song.timeline.some(s => s.video);
-        const mediaBadge = hasVideo
-          ? '<span class="jelly-btn-gold text-[9px] font-black px-1.5 py-0.5 rounded-full">🎬 示範影片</span>'
-          : '<span class="jelly-btn-cyan text-[9px] font-black px-1.5 py-0.5 rounded-full">📸 動作寫真</span>';
+        const mediaBadge = unlocked
+          ? (isFreeTrack 
+              ? '<span class="px-2 py-0.5 rounded-full text-[9px] font-black bg-emerald-500 text-white border border-emerald-300 shadow-xs">🎁 免費</span>'
+              : (song.timeline && song.timeline.some(s => s.video)
+                  ? '<span class="jelly-btn-gold text-[9px] font-black px-1.5 py-0.5 rounded-full">🎬 示範影片</span>'
+                  : '<span class="jelly-btn-cyan text-[9px] font-black px-1.5 py-0.5 rounded-full">📸 動作寫真</span>'))
+          : '<span class="text-[9px] font-black px-2 py-0.5 rounded-full bg-amber-500 text-slate-950 border border-amber-300 font-mono shadow-xs">🔒 VIP</span>';
 
         return `
-          <div onclick="playDancerSongAtIndex(${orderIdx})"
-               onmouseenter="if(window.prefetchSongVideos) window.prefetchSongVideos(songDatabase['${songId}'])"
-               ontouchstart="if(window.prefetchSongVideos) window.prefetchSongVideos(songDatabase['${songId}'])"
-               class="group relative ${cardClass} rounded-2xl p-3 sm:p-3.5 transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden select-none">
+          <div onclick="handleDancerSongCardClick(${orderIdx})"
+               onmouseenter="if(window.prefetchSongVideos && isSongUnlocked('${songId}')) window.prefetchSongVideos(songDatabase['${songId}'])"
+               ontouchstart="if(window.prefetchSongVideos && isSongUnlocked('${songId}')) window.prefetchSongVideos(songDatabase['${songId}'])"
+               class="group relative ${cardClass} rounded-2xl p-3 sm:p-3.5 transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden select-none ${!unlocked ? 'song-card-locked opacity-90' : ''}">
             <div class="flex items-center justify-between gap-1 mb-1.5 relative z-20">
               <span class="px-2 py-0.5 rounded-full text-[10px] font-black ${planetBadgeClass} border shadow-xs">
                 順序 ${orderIdx + 1}/${songCount} · ${planetLabel}
@@ -5988,6 +6957,8 @@
               </div>
             </div>
 
+            ${!unlocked ? '<div class="lock-corner-medallion" style="bottom: 2.7rem; right: 0.5rem;">🔒</div>' : ''}
+
             <div>
               ${renderSongThemeEmblem(song, 'card')}
               <h4 class="font-black text-sm ${titleColorClass} line-clamp-1">
@@ -5998,10 +6969,10 @@
               </p>
             </div>
 
-            <div class="mt-2.5 pt-2 border-t ${borderClass} flex items-center justify-between">
+            <div class="mt-2.5 pt-2 border-t ${borderClass} flex items-center justify-between relative z-20">
               <span class="text-[10px] font-bold ${coachColorClass}">🎤 領舞: ${dancer.name}</span>
-              <button class="jelly-btn-gold text-[11px] font-black px-3 py-1 rounded-xl flex items-center gap-1">
-                <span>▶</span> 開跳 (${orderIdx + 1}/${songCount})
+              <button class="${unlocked ? 'jelly-btn-gold' : 'jelly-btn-indigo'} text-[11px] font-black px-3 py-1 rounded-xl flex items-center gap-1">
+                ${unlocked ? `<span>▶</span> 開跳 (${orderIdx + 1}/${songCount})` : '<span>🔒</span> 點擊解鎖'}
               </button>
             </div>
           </div>
@@ -6058,6 +7029,18 @@
       startHomeBgm();
       selectDancerByIndex(currentDancerIndex, true);
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // 戰隊專屬歌單單曲點選攔截器
+    function handleDancerSongCardClick(orderIdx) {
+      const dancer = DANCER_SQUAD_DATA[currentDancerIndex] || DANCER_SQUAD_DATA[0];
+      const targetSongId = dancer.songs[orderIdx] || dancer.songs[0];
+      if (isSongUnlocked(targetSongId)) {
+        playDancerSongAtIndex(orderIdx);
+      } else {
+        const song = songDatabase[targetSongId];
+        openSubscriptionModal({ song: song, albumId: song?.albumId, source: 'dancer_song_locked' });
+      }
     }
 
     // 啟動該小朋友的 8 首歌專屬連播模式 (從第 1 首開始連播 8 首)
@@ -6317,12 +7300,11 @@
 
       container.innerHTML = album.songs.map((song) => {
         const isCurrentActive = song.id === currentSongKey;
-        const coachBadge = song.timeline && song.timeline.some(s => s.video) 
-          ? '<span class="jelly-btn-gold text-[10px] font-black px-2 py-0.5 rounded-full">🎬 3D 示範影片</span>'
-          : '<span class="jelly-btn-cyan text-[10px] font-black px-2 py-0.5 rounded-full">📸 動作引導寫真</span>';
+        const unlocked = isSongUnlocked(song.id);
+        const isFreeTrack = FREE_SONG_IDS.has(song.id);
 
-        let cardThemeClass = `jelly-song-card-p1 ${isCurrentActive ? 'ring-2 ring-amber-500/80 border-amber-500' : ''}`;
-        let btnClass = 'jelly-btn-gold';
+        let cardThemeClass = `jelly-song-card-p1 ${isCurrentActive ? 'ring-2 ring-amber-500/80 border-amber-500' : ''} ${!unlocked ? 'song-card-locked opacity-90' : ''}`;
+        let btnClass = unlocked ? 'jelly-btn-gold' : 'jelly-btn-indigo';
         let numberBadge = 'bg-amber-400 text-slate-950 border-amber-200';
         let titleColorClass = 'text-amber-950 group-hover:text-orange-600';
         let zhColorClass = 'text-amber-700';
@@ -6332,8 +7314,8 @@
         let metaColorClass = 'text-amber-900/85';
 
         if (albumId === 'album_2') {
-          cardThemeClass = `jelly-song-card-p2 ${isCurrentActive ? 'ring-2 ring-fuchsia-400/70 border-fuchsia-300' : ''}`;
-          btnClass = 'jelly-btn-cyan';
+          cardThemeClass = `jelly-song-card-p2 ${isCurrentActive ? 'ring-2 ring-fuchsia-400/70 border-fuchsia-300' : ''} ${!unlocked ? 'song-card-locked opacity-90' : ''}`;
+          btnClass = unlocked ? 'jelly-btn-cyan' : 'jelly-btn-indigo';
           numberBadge = 'bg-fuchsia-500/90 text-white border-fuchsia-300';
           titleColorClass = 'text-white group-hover:text-amber-300';
           zhColorClass = 'text-fuchsia-300';
@@ -6342,8 +7324,8 @@
           footerBorderClass = 'border-white/15';
           metaColorClass = 'text-sky-200/80';
         } else if (albumId === 'album_3') {
-          cardThemeClass = `jelly-song-card-p1 ${isCurrentActive ? 'ring-2 ring-rose-500/80 border-rose-400' : ''}`;
-          btnClass = 'jelly-btn-gold';
+          cardThemeClass = `jelly-song-card-p1 ${isCurrentActive ? 'ring-2 ring-rose-500/80 border-rose-400' : ''} ${!unlocked ? 'song-card-locked opacity-90' : ''}`;
+          btnClass = unlocked ? 'jelly-btn-gold' : 'jelly-btn-indigo';
           numberBadge = 'bg-rose-500 text-white border-rose-300';
           titleColorClass = 'text-rose-950 group-hover:text-pink-600';
           zhColorClass = 'text-rose-600';
@@ -6352,8 +7334,8 @@
           footerBorderClass = 'border-rose-400/25';
           metaColorClass = 'text-rose-900/85';
         } else if (albumId === 'album_4') {
-          cardThemeClass = `jelly-song-card-p2 ${isCurrentActive ? 'ring-2 ring-orange-500/80 border-orange-400' : ''}`;
-          btnClass = 'jelly-btn-cyan';
+          cardThemeClass = `jelly-song-card-p2 ${isCurrentActive ? 'ring-2 ring-orange-500/80 border-orange-400' : ''} ${!unlocked ? 'song-card-locked opacity-90' : ''}`;
+          btnClass = unlocked ? 'jelly-btn-cyan' : 'jelly-btn-indigo';
           numberBadge = 'bg-orange-500 text-slate-950 border-amber-300';
           titleColorClass = 'text-white group-hover:text-amber-300';
           zhColorClass = 'text-amber-400';
@@ -6363,10 +7345,18 @@
           metaColorClass = 'text-orange-200/80';
         }
 
+        const statusBadge = unlocked
+          ? (isFreeTrack 
+              ? '<span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-emerald-500 text-white border border-emerald-300 shadow-xs">🎁 免費試跳</span>'
+              : (song.timeline && song.timeline.some(s => s.video) 
+                  ? '<span class="jelly-btn-gold text-[10px] font-black px-2 py-0.5 rounded-full">🎬 3D 示範影片</span>'
+                  : '<span class="jelly-btn-cyan text-[10px] font-black px-2 py-0.5 rounded-full">📸 動作引導寫真</span>'))
+          : '<span class="px-2 py-0.5 rounded-full text-[10px] font-black bg-amber-500 text-slate-950 border border-amber-200 shadow-md flex items-center gap-1 font-mono">🔒 VIP 解鎖</span>';
+
         return `
-          <div onclick="selectSong('${song.id}')" 
-               onmouseenter="if(window.prefetchSongVideos) window.prefetchSongVideos(songDatabase['${song.id}'])"
-               ontouchstart="if(window.prefetchSongVideos) window.prefetchSongVideos(songDatabase['${song.id}'])"
+          <div onclick="handleSongCardClick('${song.id}')" 
+               onmouseenter="if(window.prefetchSongVideos && isSongUnlocked('${song.id}')) window.prefetchSongVideos(songDatabase['${song.id}'])"
+               ontouchstart="if(window.prefetchSongVideos && isSongUnlocked('${song.id}')) window.prefetchSongVideos(songDatabase['${song.id}'])"
                class="group relative ${cardThemeClass} rounded-2xl p-3.5 sm:p-4 transition-all duration-300 cursor-pointer flex flex-col justify-between overflow-hidden select-none">
             
             <div class="absolute top-2.5 left-2.5 ${numberBadge} backdrop-blur text-[10px] font-black px-2 py-0.5 rounded-full shadow-md z-20 border">
@@ -6374,8 +7364,10 @@
             </div>
 
             <div class="absolute top-2.5 right-2.5 z-20">
-              ${coachBadge}
+              ${statusBadge}
             </div>
+
+            ${!unlocked ? '<div class="lock-corner-medallion" title="需訂閱解鎖">🔒</div>' : ''}
 
             <div>
               ${renderSongThemeEmblem(song, 'card')}
@@ -6390,10 +7382,10 @@
               </p>
             </div>
 
-            <div class="mt-3 pt-2.5 border-t ${footerBorderClass} flex items-center justify-between">
-              <span class="text-[11px] ${metaColorClass} font-bold">⏱ 2:00 · ${song.difficulty}</span>
+            <div class="mt-3 pt-2.5 border-t ${footerBorderClass} flex items-center justify-between relative z-20">
+              <span class="text-[11px] ${metaColorClass} font-bold">${unlocked ? (isFreeTrack ? '🌟 永久免費' : '⏱ 2:00') : '🔒 需通行證'}</span>
               <button class="${btnClass} text-xs font-black px-3.5 py-1.5 rounded-xl transition-all active:scale-95 flex items-center gap-1">
-                <span>▶</span> 開始跳
+                ${unlocked ? '<span>▶</span> 開始跳' : '<span>🔒</span> 點擊訂閱'}
               </button>
             </div>
           </div>
@@ -6401,7 +7393,17 @@
       }).join('');
     }
 
-    // 一鍵全專輯連續循環播放
+    // 歌曲卡片點擊統一攔截器：若已解鎖進入播放；若未解鎖彈出訂閱專頁
+    function handleSongCardClick(songId) {
+      if (isSongUnlocked(songId)) {
+        selectSong(songId);
+      } else {
+        const song = songDatabase[songId];
+        openSubscriptionModal({ song: song, albumId: song?.albumId || currentAlbumId, source: 'song_card_locked' });
+      }
+    }
+
+    // 一鍵全專輯連續循環播放 (未解鎖時若點全專輯連播提示解鎖)
     function playCurrentAlbumAll() {
       if (isThemeSongLyricsActive) exitThemeSongLyricsMode();
       isDancerPlaylistMode = false;
@@ -6410,22 +7412,43 @@
       stopSpaceAmbient(0.3);
       const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
       if (!album || !album.songs.length) return;
+
+      if (!isAlbumFullyUnlocked(currentAlbumId)) {
+        // 未解鎖第 2~10 首時：點擊第一首（免費曲）播放，並溫馨提示
+        selectSong(album.songs[0].id);
+        setTimeout(() => {
+          openSubscriptionModal({ albumId: currentAlbumId, source: 'play_album_all_locked' });
+        }, 1200);
+        return;
+      }
+
       isAlbumContinuousPlay = true;
       updateLoopModeUI();
       selectSong(album.songs[0].id);
     }
 
-    // 隨機跳一首
+    // 隨機跳一首 (未訂閱時僅在已解鎖的免費曲目中抽選，絕不讓使用者隨機踩到上鎖歌曲)
     function playRandomSongInAlbum() {
       if (isThemeSongLyricsActive) exitThemeSongLyricsMode();
       isDancerPlaylistMode = false;
       stopAllKidPreviewVoices();
       stopHomeBgm(0);
       stopSpaceAmbient(0.3);
+
       const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
       if (!album || !album.songs.length) return;
-      const randIdx = Math.floor(Math.random() * album.songs.length);
-      selectSong(album.songs[randIdx].id);
+
+      // 過濾出目前已解鎖可播放的歌曲清單
+      const availableSongs = album.songs.filter(s => isSongUnlocked(s.id));
+      if (availableSongs.length > 0) {
+        const randIdx = Math.floor(Math.random() * availableSongs.length);
+        selectSong(availableSongs[randIdx].id);
+      } else {
+        // 若該星球完全無解鎖，從全域 4 首免費曲中抽選
+        const globalFreeSongs = ['a1_s01', 'a2_s01', 'a3_s01', 'a4_s01'].filter(id => songDatabase[id]);
+        const randIdx = Math.floor(Math.random() * globalFreeSongs.length);
+        selectSong(globalFreeSongs[randIdx]);
+      }
     }
 
     // 切換全專輯播放清單抽屜
@@ -6485,6 +7508,9 @@
 
       listContainer.innerHTML = songsToRender.map((song, idx) => {
         const isCurrent = song.id === currentSongKey;
+        const unlocked = isSongUnlocked(song.id);
+        const isFreeTrack = FREE_SONG_IDS.has(song.id);
+
         const rowClass = isP1
           ? (isCurrent
               ? 'bg-amber-300/60 border-amber-500 shadow-[0_4px_16px_rgba(245,158,11,0.3)]'
@@ -6501,19 +7527,22 @@
           : `#${String(song.trackNumber).padStart(2, '0')}`;
 
         return `
-          <div onclick="selectSong('${song.id}')" 
-               onmouseenter="if(window.prefetchSongVideos) window.prefetchSongVideos(songDatabase['${song.id}'])"
-               class="p-3 rounded-2xl flex items-center justify-between transition-all cursor-pointer border ${rowClass}">
+          <div onclick="handleDrawerSongClick('${song.id}')" 
+               onmouseenter="if(window.prefetchSongVideos && isSongUnlocked('${song.id}')) window.prefetchSongVideos(songDatabase['${song.id}'])"
+               class="p-3 rounded-2xl flex items-center justify-between transition-all cursor-pointer border ${rowClass} ${!unlocked ? 'opacity-85' : ''}">
             <div class="flex items-center gap-3 min-w-0">
               ${renderSongThemeEmblem(song, 'drawer')}
               <div class="min-w-0">
                 <div class="flex items-center gap-1.5">
                   <span class="text-[10px] font-black px-1.5 py-0.5 rounded-md ${isCurrent ? 'bg-amber-400 text-slate-950' : (isP1 ? 'bg-amber-100 text-amber-900' : 'bg-white/10 text-sky-200')}">${badgeText}</span>
-                  <h4 class="text-xs md:text-sm font-black ${titleClass} truncate">
-                    ${song.title}
+                  <h4 class="text-xs md:text-sm font-black ${titleClass} truncate flex items-center gap-1">
+                    <span>${song.title}</span>
+                    ${!unlocked ? '<span class="text-xs font-normal">🔒</span>' : ''}
                   </h4>
                 </div>
-                <p class="text-[11px] ${subClass} font-bold mt-0.5 truncate">${song.zhTitle} · ${song.tag}</p>
+                <p class="text-[11px] ${subClass} font-bold mt-0.5 truncate">
+                  ${song.zhTitle} · ${song.tag} ${!unlocked ? '· <span class="text-amber-300 font-black">需通行證</span>' : (isFreeTrack ? '· <span class="text-emerald-400 font-bold">免費</span>' : '')}
+                </p>
               </div>
             </div>
             <div class="flex items-center gap-2 shrink-0 ml-2">
@@ -6523,14 +7552,25 @@
                   <span class="w-1 bg-amber-500 rounded-full wave-bar-2"></span>
                   <span class="w-1 bg-amber-500 rounded-full wave-bar-3"></span>
                 </div>
-              ` : `
+              ` : (unlocked ? `
                 <span class="text-[11px] ${isP1 ? 'text-amber-800/70' : 'text-sky-200/60'} font-mono">2:00</span>
                 <span class="w-7 h-7 rounded-xl jelly-btn-gold flex items-center justify-center text-xs font-black">▶</span>
-              `}
+              ` : `
+                <span class="px-2 py-1 rounded-xl bg-amber-500/25 border border-amber-300/50 text-[10px] font-black text-amber-300">🔒 解鎖</span>
+              `)}
             </div>
           </div>
         `;
       }).join('');
+    }
+
+    function handleDrawerSongClick(songId) {
+      if (isSongUnlocked(songId)) {
+        selectSong(songId);
+      } else {
+        const song = songDatabase[songId];
+        openSubscriptionModal({ song: song, albumId: song?.albumId || currentAlbumId, source: 'drawer_locked' });
+      }
     }
 
     // 切換全專輯循環 / 單曲循環
@@ -6588,25 +7628,46 @@
       selectSong(album.songs[prevIdx].id);
     }
 
-    // 下一首 (若處於小朋友專屬 8 首歌單模式，則依該小朋友的 8 首歌順序播放)
+    // 下一首 (若處於小朋友專屬 8 首歌單模式，則依該小朋友的 8 首歌順序播放；遇到未解鎖曲目則攔截提示訂閱)
     function nextSong() {
       if (isDancerPlaylistMode) {
         const dancer = DANCER_SQUAD_DATA[activeDancerIndexForPlay] || DANCER_SQUAD_DATA[0];
         const list = dancer.songs;
         const curIdx = list.indexOf(currentSongKey);
         const nextIdx = ((curIdx >= 0 ? curIdx : -1) + 1) % list.length;
-        selectSong(list[nextIdx]);
+        const nextKey = list[nextIdx];
+        if (isSongUnlocked(nextKey)) {
+          selectSong(nextKey);
+        } else {
+          pauseDance();
+          const s = songDatabase[nextKey];
+          openSubscriptionModal({ song: s, albumId: s?.albumId, source: 'next_song_locked' });
+        }
         return;
       }
       const album = window.KAI_ALBUM_DATABASE[currentAlbumId] || window.KAI_ALBUM_DATABASE['album_1'];
       if (!album || !album.songs.length) return;
       const curIdx = album.songs.findIndex(s => s.id === currentSongKey);
       const nextIdx = (curIdx + 1) % album.songs.length;
-      selectSong(album.songs[nextIdx].id);
+      const nextSongObj = album.songs[nextIdx];
+      if (isSongUnlocked(nextSongObj.id)) {
+        selectSong(nextSongObj.id);
+      } else {
+        pauseDance();
+        openSubscriptionModal({ song: nextSongObj, albumId: currentAlbumId, source: 'next_song_locked' });
+      }
     }
 
     // 單曲進入世代令牌：確保畫面已切入且攝影機開啟/關閉確認完成後，才啟動音樂播放
     async function selectSong(key) {
+      // 🔒 核心邊界防線：若嘗試呼叫未解鎖的歌曲，強制攔截彈出訂閱頁，絕不播放
+      if (!isSongUnlocked(key)) {
+        console.warn(`[Paywall Intercept] 攔截未解鎖歌曲播放請求: ${key}`);
+        const blockedSong = songDatabase[key];
+        openSubscriptionModal({ song: blockedSong, albumId: blockedSong?.albumId || currentAlbumId, source: 'select_song_gate' });
+        return;
+      }
+
       const entryToken = ++currentSongEntryToken;
       currentSongKey = key;
       const song = songDatabase[key];
@@ -9738,6 +10799,8 @@
           const aid = song.albumId || 'album_1';
           const cfg = TURNTABLE_ALBUM_CONFIGS[aid] || TURNTABLE_ALBUM_CONFIGS['album_1'];
           const trackNo = `#${String(idx + 1).padStart(2, '0')}`;
+          const unlocked = isSongUnlocked(song.id);
+          const isFreeTrack = FREE_SONG_IDS.has(song.id);
 
           if (aid !== lastAlbumId) {
             lastAlbumId = aid;
@@ -9757,11 +10820,13 @@
           }
 
           html += `
-            <div onclick="turntablePlaySong('${song.id}', true)" 
+            <div onclick="handleTurntableTrackClick('${song.id}')" 
                  class="group flex items-center justify-between py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl border transition-all cursor-pointer ${
                    isCurrent 
                      ? 'bg-amber-400/25 border-amber-300/80 shadow-[0_0_12px_rgba(251,191,36,0.28)] text-white is-active-track' 
-                     : 'bg-slate-950/45 hover:bg-slate-800/60 border-white/10 hover:border-white/25 text-slate-300 hover:text-white'
+                     : (unlocked 
+                         ? 'bg-slate-950/45 hover:bg-slate-800/60 border-white/10 hover:border-white/25 text-slate-300 hover:text-white'
+                         : 'bg-slate-950/70 border-white/5 opacity-80 hover:opacity-100 text-slate-400')
                  }">
               <div class="flex items-center gap-2.5 min-w-0">
                 <span class="text-xs font-mono font-black ${isCurrent ? 'text-amber-300' : 'text-slate-400'} shrink-0">${trackNo}</span>
@@ -9772,6 +10837,7 @@
                   <div class="text-xs sm:text-sm font-bold truncate flex items-center gap-1.5 leading-tight">
                     <span class="${isCurrent ? 'text-amber-200 font-black' : ''}">${song.title}</span>
                     ${isCurrent && turntableIsPlaying ? '<span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span>' : ''}
+                    ${!unlocked ? '<span class="text-[10px] text-amber-300/90 font-mono">🔒 VIP</span>' : ''}
                   </div>
                   <div class="text-[10px] sm:text-[11px] text-slate-300/90 truncate mt-0.5 leading-none flex items-center gap-1.5">
                     <span class="text-[9px] px-1 rounded bg-slate-800/80 ${cfg.planetBadgeColor}">${cfg.name.split('·')[0].trim()}</span>
@@ -9780,9 +10846,9 @@
                 </div>
               </div>
               <div class="shrink-0 flex items-center gap-2 ml-2">
-                <span class="text-[10px] font-mono text-slate-400">2:00</span>
+                <span class="text-[10px] font-mono text-slate-400">${unlocked ? (isFreeTrack ? '免費' : '2:00') : '🔒'}</span>
                 <span class="text-xs ${isCurrent && turntableIsPlaying ? 'text-amber-300 scale-110' : 'text-slate-500 opacity-60 group-hover:opacity-100'}">
-                  ${isCurrent && turntableIsPlaying ? '▶' : '♪'}
+                  ${unlocked ? (isCurrent && turntableIsPlaying ? '▶' : '♪') : '🔒'}
                 </span>
               </div>
             </div>
@@ -9805,12 +10871,17 @@
         container.innerHTML = album.songs.map((song, idx) => {
           const isCurrent = song.id === turntableActiveSongId;
           const trackNo = `#${String(idx + 1).padStart(2, '0')}`;
+          const unlocked = isSongUnlocked(song.id);
+          const isFreeTrack = FREE_SONG_IDS.has(song.id);
+
           return `
-            <div onclick="turntablePlaySong('${song.id}', true)" 
+            <div onclick="handleTurntableTrackClick('${song.id}')" 
                  class="group flex items-center justify-between py-1.5 sm:py-2 px-2.5 sm:px-3 rounded-xl border transition-all cursor-pointer ${
                    isCurrent 
                      ? 'bg-amber-400/25 border-amber-300/80 shadow-[0_0_12px_rgba(251,191,36,0.28)] text-white is-active-track' 
-                     : 'bg-slate-950/45 hover:bg-slate-800/60 border-white/10 hover:border-white/25 text-slate-300 hover:text-white'
+                     : (unlocked 
+                         ? 'bg-slate-950/45 hover:bg-slate-800/60 border-white/10 hover:border-white/25 text-slate-300 hover:text-white'
+                         : 'bg-slate-950/70 border-white/5 opacity-80 hover:opacity-100 text-slate-400')
                  }">
               <div class="flex items-center gap-2.5 min-w-0">
                 <span class="text-xs font-mono font-black ${isCurrent ? 'text-amber-300' : 'text-slate-400'} shrink-0">${trackNo}</span>
@@ -9821,14 +10892,15 @@
                   <div class="text-xs sm:text-sm font-bold truncate flex items-center gap-1.5 leading-tight">
                     <span class="${isCurrent ? 'text-amber-200 font-black' : ''}">${song.title}</span>
                     ${isCurrent && turntableIsPlaying ? '<span class="inline-block w-1.5 h-1.5 rounded-full bg-amber-400 animate-ping"></span>' : ''}
+                    ${!unlocked ? '<span class="text-[10px] text-amber-300/90 font-mono">🔒 VIP</span>' : ''}
                   </div>
                   <div class="text-[10px] sm:text-[11px] text-slate-300/90 truncate mt-0.5 leading-none">${song.zhTitle || song.desc || ''}</div>
                 </div>
               </div>
               <div class="shrink-0 flex items-center gap-2 ml-2">
-                <span class="text-[10px] font-mono text-slate-400">2:00</span>
+                <span class="text-[10px] font-mono text-slate-400">${unlocked ? (isFreeTrack ? '免費' : '2:00') : '🔒'}</span>
                 <span class="text-xs ${isCurrent && turntableIsPlaying ? 'text-amber-300 scale-110' : 'text-slate-500 opacity-60 group-hover:opacity-100'}">
-                  ${isCurrent && turntableIsPlaying ? '▶' : '♪'}
+                  ${unlocked ? (isCurrent && turntableIsPlaying ? '▶' : '♪') : '🔒'}
                 </span>
               </div>
             </div>
@@ -9842,6 +10914,15 @@
         setTimeout(() => {
           activeEl.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
         }, 50);
+      }
+    }
+
+    function handleTurntableTrackClick(songId) {
+      if (isSongUnlocked(songId)) {
+        turntablePlaySong(songId, true);
+      } else {
+        const song = songDatabase[songId];
+        openSubscriptionModal({ song: song, albumId: song?.albumId || turntableActiveAlbum, source: 'turntable_track_locked' });
       }
     }
 
@@ -9941,9 +11022,15 @@
     }
 
     function turntablePlaySong(songId, autoPlay = true) {
-      turntableActiveSongId = songId;
       const song = songDatabase[songId];
       if (!song) return;
+      if (!isSongUnlocked(songId)) {
+        if (audioTurntable) audioTurntable.pause();
+        turntableSetPlayState(false);
+        openSubscriptionModal({ song, albumId: song.albumId || turntableActiveAlbum, source: 'turntable_play_gate' });
+        return;
+      }
+      turntableActiveSongId = songId;
 
       if (song.albumId && song.albumId !== turntableActiveAlbum) {
         turntableActiveAlbum = song.albumId;
@@ -10052,30 +11139,34 @@
     }
 
     function turntableNextTrack(isAutoAdvance = false) {
+      const allSongs = turntableLoopMode === 'all' 
+        ? getAllTurntableTracks() 
+        : (window.KAI_ALBUM_DATABASE[turntableActiveAlbum]?.songs || []);
+
       if (turntableIsShuffle) {
-        const allSongs = turntableLoopMode === 'all' 
-          ? getAllTurntableTracks() 
-          : (window.KAI_ALBUM_DATABASE[turntableActiveAlbum]?.songs || []);
-        if (allSongs.length > 1) {
+        // 過濾出目前已解鎖可播的清單（未訂閱僅播放解鎖曲）
+        const unlockedPool = allSongs.filter(s => isSongUnlocked(s.id));
+        if (unlockedPool.length > 0) {
           let randIdx;
           do {
-            randIdx = Math.floor(Math.random() * allSongs.length);
-          } while (allSongs[randIdx].id === turntableActiveSongId && allSongs.length > 1);
-          turntablePlaySong(allSongs[randIdx].id, true);
+            randIdx = Math.floor(Math.random() * unlockedPool.length);
+          } while (unlockedPool[randIdx].id === turntableActiveSongId && unlockedPool.length > 1);
+          turntablePlaySong(unlockedPool[randIdx].id, true);
           return;
         }
       }
 
-      if (turntableLoopMode === 'all') {
-        const allSongs = getAllTurntableTracks();
-        const curIdx = allSongs.findIndex(s => s.id === turntableActiveSongId);
-        const nextIdx = (curIdx + 1) % allSongs.length;
-        turntablePlaySong(allSongs[nextIdx].id, true);
-      } else {
-        const curAlbumSongs = window.KAI_ALBUM_DATABASE[turntableActiveAlbum]?.songs || [];
-        const curIdx = curAlbumSongs.findIndex(s => s.id === turntableActiveSongId);
-        const nextIdx = (curIdx + 1) % curAlbumSongs.length;
-        turntablePlaySong(curAlbumSongs[nextIdx].id, true);
+      const curIdx = allSongs.findIndex(s => s.id === turntableActiveSongId);
+      const nextIdx = (curIdx + 1) % allSongs.length;
+      const nextSong = allSongs[nextIdx];
+      if (nextSong) {
+        if (isSongUnlocked(nextSong.id)) {
+          turntablePlaySong(nextSong.id, true);
+        } else {
+          if (audioTurntable) audioTurntable.pause();
+          turntableSetPlayState(false);
+          openSubscriptionModal({ song: nextSong, albumId: nextSong.albumId || turntableActiveAlbum, source: 'turntable_next_locked' });
+        }
       }
     }
 
@@ -10256,6 +11347,7 @@
       });
     }
 
+    try { loadUserSubscriptionState(); } catch(e) { console.warn('loadUserSubscriptionState error:', e); }
     try { loadParentSettings(); } catch(e) { console.warn('loadParentSettings error:', e); }
     try { updateHomeCdUI(); } catch(e) { console.warn('updateHomeCdUI error:', e); }
     try { renderThemeSongLyricsDOM(); } catch(e) { console.warn('renderThemeSongLyricsDOM error:', e); }
