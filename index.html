@@ -1953,13 +1953,16 @@
       <div id="home-kaidance-logo-btn" class="flex items-center gap-3.5 group cursor-pointer select-none self-start sm:self-auto hover-glow-logo" onclick="toggleThemeSongLyricsMode(event)" title="點選 KaiDance 播放官方主題曲《Jump to the Moon》與電影滾動歌詞">
         <img src="./images/ui/kaidance_logo.png" alt="KaiDance 奇妙星律動" class="h-14 md:h-18 lg:h-20 w-auto object-contain glow-kaidance-logo anim-float">
         <div class="flex flex-col text-left">
-          <span class="font-black text-2xl md:text-3xl lg:text-4xl tracking-tight text-white select-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">KaiDance</span>
+          <div class="flex items-center gap-2">
+            <span class="font-black text-2xl md:text-3xl lg:text-4xl tracking-tight text-white select-none drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">KaiDance</span>
+            <span id="app-version-badge-home" class="px-2 py-0.5 rounded-full text-[10px] sm:text-[11px] font-mono font-black bg-indigo-950/90 text-cyan-300 border border-cyan-400/55 shadow-[0_0_10px_rgba(34,211,238,0.28)] select-none" title="KaiDance 官方版本編號 (Beta . 2026年 . 11月 . 第129次開發)">B.26.11.129</span>
+          </div>
           <span class="text-xs md:text-sm lg:text-base font-extrabold bg-gradient-to-r from-amber-300 via-pink-300 to-sky-300 bg-clip-text text-transparent select-none drop-shadow-sm">奇妙星律動</span>
         </div>
       </div>
 
-      <!-- 右側：旋轉 CD 背景音樂開關 + 累計總積分 + 家長教練設定 -->
-      <div class="flex items-center gap-1.5 sm:gap-2.5 self-center sm:self-auto flex-wrap sm:flex-nowrap justify-center sm:justify-end w-full sm:w-auto">
+      <!-- 右側：旋轉 CD 背景音樂開關 + 累計總積分(點擊開排行榜) + 家長帳號同步 + VIP 訂閱 + 家長教練設定 -->
+      <div class="flex items-center gap-1.5 sm:gap-2 self-center sm:self-auto flex-wrap sm:flex-nowrap justify-center sm:justify-end w-full sm:w-auto">
 
         <!-- 💿 CD 旋轉唱片背景音樂開關 (開啟時彩色旋轉，關閉時灰階停止) -->
         <button id="btn-home-cd" onclick="toggleHomeBgmFromCD(event)" 
@@ -1985,11 +1988,24 @@
           </div>
         </button>
 
-        <div id="lobby-total-score-capsule" class="flex items-center gap-1.5 sm:gap-2 bg-slate-900/85 backdrop-blur-md border border-amber-400/60 px-2.5 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs font-black text-amber-300 shadow-[0_0_18px_rgba(245,158,11,0.25)] shrink-0 cursor-pointer select-none" title="全宇宙跳舞總積分 (最多累計至 9 位數)">
+        <!-- 🏆 累計總積分 & 全球20人天梯排行榜入口 -->
+        <button type="button" id="lobby-total-score-capsule" onclick="DanceLeaderboardEngine.openModal()" class="flex items-center gap-1.5 sm:gap-2 bg-slate-900/90 hover:bg-slate-800 backdrop-blur-md border border-amber-400/75 hover:border-amber-300 px-2.5 sm:px-3.5 py-1.5 sm:py-2 rounded-full text-xs font-black text-amber-300 shadow-[0_0_18px_rgba(245,158,11,0.28)] transition active:scale-95 shrink-0 cursor-pointer select-none" title="點擊開啟「全球動態20人天梯排行榜（上10名+下10名）」與個人戰績">
           <span class="text-xs sm:text-sm">🏆</span>
           <span class="text-[10px] sm:text-[11px] text-slate-300 font-bold hidden sm:inline">總積分:</span>
           <strong id="total-score-lobby" class="text-amber-300 text-xs sm:text-sm font-mono tracking-wider tabular-nums font-black drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]">000,000,980</strong>
-        </div>
+          <span class="px-1.5 py-0.5 rounded-full text-[9px] font-black bg-amber-400/20 text-amber-200 border border-amber-300/40">排行榜</span>
+        </button>
+
+        <!-- 👨‍👩‍👧‍👦 家長雲端帳號與跨設備同步按鈕 (比照 KaiSpeak) -->
+        <button type="button" id="btn-home-account-sync" onclick="openParentAccountModal()"
+                class="flex items-center gap-1.5 bg-slate-900/90 hover:bg-slate-800 border border-indigo-400/70 hover:border-indigo-300 px-2.5 sm:px-3 py-1.5 rounded-full text-white shadow-md transition-all active:scale-95 cursor-pointer select-none shrink-0"
+                title="家長雲端主帳號 · 跨設備 (iPad/手機/電腦) 同步 VIP 權限與累積總積分">
+          <span class="text-xs sm:text-sm">👨‍👩‍👧‍👦</span>
+          <div class="flex flex-col text-left leading-tight">
+            <span class="text-[9px] sm:text-[10px] font-black text-indigo-200">跨設備同步</span>
+            <span id="home-account-status-text" class="text-[8px] sm:text-[9px] font-bold text-cyan-300">帳號轉移</span>
+          </div>
+        </button>
 
         <!-- 👑 首頁專屬 VIP 訂閱 Logo 按鈕 (點擊開啟星際通行證訂閱、優惠碼兌換與管理員解鎖中心) -->
         <button id="btn-home-vip-sub" onclick="openSubscriptionModal({ source: 'home_logo' })"
@@ -2330,11 +2346,28 @@
             管理訂閱 / 優惠碼
           </button>
         </div>
+
+        <!-- 8. 家長雲端帳號與跨設備 VIP / 積分同步轉移入口 -->
+        <div class="flex items-center justify-between p-3.5 rounded-2xl bg-gradient-to-r from-indigo-500/15 via-slate-800/80 to-purple-500/15 border border-indigo-400/50">
+          <div class="flex items-center gap-3 min-w-0">
+            <span class="text-xl shrink-0">👨‍👩‍👧‍👦</span>
+            <div class="min-w-0">
+              <div class="font-bold text-sm text-indigo-300 truncate" id="settings-parent-acc-title">家長雲端主帳號 · 跨設備同步</div>
+              <div class="text-[11px] text-slate-300 truncate" id="settings-parent-acc-desc">把 VIP 購買權限與累積總積分同步到新平板、手機或電腦</div>
+            </div>
+          </div>
+          <button type="button" onclick="closeParentSettingsModal(); openParentAccountModal();" class="px-3.5 py-1.5 rounded-xl text-xs font-black bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow hover:opacity-95 transition active:scale-95 shrink-0 ml-2 cursor-pointer">
+            帳號同步 / 轉移
+          </button>
+        </div>
       </div>
 
       <!-- 底部操作按鈕 -->
       <div class="pt-3 flex items-center justify-between border-t border-slate-800">
-        <button onclick="resetParentSettingsDefault()" class="px-4 py-2 rounded-xl text-xs font-bold text-slate-400 hover:text-white transition">恢復預設值</button>
+        <div class="flex items-center gap-2">
+          <button onclick="resetParentSettingsDefault()" class="px-3 py-2 rounded-xl text-xs font-bold text-slate-400 hover:text-white transition">恢復預設值</button>
+          <span class="text-[11px] font-mono font-bold text-cyan-300/80 bg-slate-800/90 px-2.5 py-1 rounded-lg border border-cyan-400/30">Ver B.26.11.129</span>
+        </div>
         <button onclick="closeParentSettingsModal()" class="px-6 py-2.5 rounded-xl text-xs font-black bg-gradient-to-r from-amber-400 to-orange-500 text-slate-950 shadow-md hover:opacity-95 transition active:scale-95">確認並儲存</button>
       </div>
     </div>
@@ -2532,9 +2565,12 @@
         </div>
       </div>
 
-      <!-- 底部：App Store 恢復購買 ＋ 到期自動關閉模擬測試器 -->
+      <!-- 底部：App Store 恢復購買 ＋ 跨設備帳號同步 ＋ 到期自動關閉模擬測試器 -->
       <div class="mt-3 pt-2.5 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 text-[11px] text-slate-400">
         <div class="flex items-center gap-2 flex-wrap">
+          <button type="button" onclick="closeSubscriptionModal(); openParentAccountModal();" class="px-3 py-1 rounded-xl bg-indigo-500/30 hover:bg-indigo-500/45 text-indigo-200 border border-indigo-400/50 font-black transition cursor-pointer flex items-center gap-1">
+            <span>👨‍👩‍👧‍👦</span> <span>跨設備帳號同步 / 轉移 VIP</span>
+          </button>
           <button type="button" onclick="restoreAppStorePurchases()" class="px-3 py-1 rounded-xl bg-white/10 hover:bg-white/15 text-slate-200 font-bold transition cursor-pointer">
             🔄 恢復購買 (Restore Purchases)
           </button>
@@ -2542,9 +2578,12 @@
             ⏱️ 測試「15秒後訂閱到期自動上鎖」
           </button>
         </div>
-        <button type="button" onclick="resetSubscriptionToFreeLocked()" class="px-3 py-1 rounded-xl bg-rose-500/20 hover:bg-rose-500/35 text-rose-300 border border-rose-400/40 font-bold transition cursor-pointer">
-          🔒 重置為「未訂閱免費版 (鎖住2~10首)」
-        </button>
+        <div class="flex items-center gap-2">
+          <span class="text-[10px] font-mono font-bold text-cyan-300/80">Ver B.26.11.129</span>
+          <button type="button" onclick="resetSubscriptionToFreeLocked()" class="px-3 py-1 rounded-xl bg-rose-500/20 hover:bg-rose-500/35 text-rose-300 border border-rose-400/40 font-bold transition cursor-pointer">
+            🔒 重置為「未訂閱免費版」
+          </button>
+        </div>
       </div>
 
     </div>
@@ -2576,6 +2615,183 @@
       <button type="button" onclick="closeParentalGateModal()" class="text-xs font-bold text-slate-400 hover:text-white underline cursor-pointer">
         取消返回
       </button>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 🏆 彈窗：全球動態 20 人累積積分天梯排行榜 (上10名+下10名)    -->
+  <!-- ========================================================= -->
+  <div id="modal-dance-leaderboard" class="hidden fixed inset-0 z-[125] bg-slate-950/88 backdrop-blur-md flex items-center justify-center p-2.5 sm:p-4 overflow-y-auto allow-touch-scroll" onclick="if(event.target && event.target.id==='modal-dance-leaderboard') DanceLeaderboardEngine.closeModal()">
+    <div class="relative bg-gradient-to-b from-indigo-950 via-slate-900 to-indigo-950 rounded-3xl p-4 sm:p-6 max-w-2xl w-full border-2 border-amber-400/80 shadow-[0_0_50px_rgba(245,158,11,0.35)] text-white flex flex-col max-h-[93dvh] overflow-hidden select-none my-auto">
+      
+      <!-- 頂部標題與關閉 -->
+      <div class="flex items-center justify-between pb-3 border-b border-indigo-800/80 shrink-0">
+        <div class="flex items-center gap-2.5">
+          <div class="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-amber-500/20 border border-amber-400/60 flex items-center justify-center text-2xl shadow-inner shrink-0">
+            🏆
+          </div>
+          <div>
+            <div class="flex items-center gap-2 flex-wrap">
+              <h3 class="text-base sm:text-lg font-black text-amber-300">KaiDance 全球星光積分天梯排行榜</h3>
+              <span class="text-[10px] bg-indigo-900/80 text-cyan-300 px-2 py-0.5 rounded-full border border-cyan-400/40 font-mono font-bold">上10名 + 下10名 動態20人</span>
+            </div>
+            <p class="text-[11px] text-indigo-200 mt-0.5">所有下載 App 與線上跳舞的小舞星累積總積分即時排行 · 挑戰彩線衝刺高分！</p>
+          </div>
+        </div>
+        <button type="button" onclick="DanceLeaderboardEngine.closeModal()" class="w-8 h-8 rounded-full bg-slate-800/80 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition active:scale-90 text-sm font-bold border border-slate-700 cursor-pointer" title="關閉排行榜">
+          ✕
+        </button>
+      </div>
+
+      <!-- 當前小舞星名次卡片與暱稱快速設定 -->
+      <div id="dance-leaderboard-hero-ribbon" class="mt-3 p-3 rounded-2xl bg-gradient-to-r from-amber-500/20 via-indigo-900/60 to-purple-900/40 border border-amber-400/50 flex flex-col gap-2 shrink-0">
+        <!-- Rendered by DanceLeaderboardEngine -->
+      </div>
+
+      <!-- 分頁切換：全球競爭天梯 (20人) vs 我的個人歷史戰績 -->
+      <div class="flex items-center justify-between gap-2 mt-3 pb-1.5 border-b border-indigo-900/60 text-xs shrink-0 flex-wrap">
+        <div class="flex items-center gap-2">
+          <button type="button" id="dance-tab-ladder-btn" onclick="DanceLeaderboardEngine.switchTab('ladder')" class="px-3.5 py-2 rounded-xl bg-amber-400 text-slate-950 font-black shadow-md transition active:scale-95 flex items-center gap-1.5 cursor-pointer">
+            <span>🏆 全球競爭天梯 (共20名)</span>
+          </button>
+          <button type="button" id="dance-tab-history-btn" onclick="DanceLeaderboardEngine.switchTab('history')" class="px-3.5 py-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white font-bold transition active:scale-95 flex items-center gap-1.5 cursor-pointer">
+            <span>📜 我的跳舞戰績 (<span id="dance-history-count-badge">0</span>)</span>
+          </button>
+        </div>
+        <button type="button" onclick="DanceLeaderboardEngine.syncNow()" class="px-2.5 py-1.5 rounded-xl bg-indigo-900/80 hover:bg-indigo-800 text-cyan-300 border border-cyan-400/40 text-[11px] font-bold transition active:scale-95 cursor-pointer">
+          🔄 刷新雲端排行
+        </button>
+      </div>
+
+      <!-- Tab 1: 上 10 名 + 下 10 名 共 20 名動態視窗天梯 -->
+      <div id="dance-leaderboard-ladder-view" class="flex-1 overflow-y-auto mt-2.5 pr-1 min-h-0 flex flex-col gap-2 allow-touch-scroll">
+        <div class="bg-indigo-950/60 border border-indigo-700/50 rounded-xl px-3 py-2 text-[11px] text-indigo-200 flex items-center justify-between flex-wrap gap-1">
+          <span class="flex items-center gap-1.5">
+            <span>🎯</span>
+            <span><strong>動態 20 名天梯規則：</strong>精準展示你目前排名的<strong>前 10 名 ＋ 後 10 名</strong>（共 20 位小舞星）</span>
+          </span>
+          <span id="dance-total-players-badge" class="text-cyan-300 font-mono font-bold text-[10px] bg-slate-900 px-2 py-0.5 rounded-full border border-indigo-600">全球連線中</span>
+        </div>
+        <div id="dance-ladder-list" class="flex flex-col gap-1.5 pb-2">
+          <!-- Rendered by DanceLeaderboardEngine -->
+        </div>
+      </div>
+
+      <!-- Tab 2: 個人跳舞戰績明細 -->
+      <div id="dance-leaderboard-history-view" class="hidden flex-1 overflow-y-auto mt-2.5 pr-1 min-h-0 flex flex-col gap-2 allow-touch-scroll">
+        <div id="dance-history-quick-stats" class="grid grid-cols-2 sm:grid-cols-4 gap-2 text-center text-xs shrink-0">
+          <!-- Rendered by DanceLeaderboardEngine -->
+        </div>
+        <div id="dance-history-list" class="flex flex-col gap-1.5 pb-2">
+          <!-- Rendered by DanceLeaderboardEngine -->
+        </div>
+      </div>
+
+      <!-- 底部說明與關閉 -->
+      <div class="mt-3 pt-2.5 border-t border-indigo-900/60 flex items-center justify-between shrink-0 flex-wrap gap-2">
+        <span class="text-[11px] text-indigo-300">💡 綁定「👨‍👩‍👧‍👦 家長雲端帳號」即可把累積總積分與 VIP 同步到所有設備！ · <span class="font-mono text-cyan-300">Ver B.26.11.129</span></span>
+        <button type="button" onclick="DanceLeaderboardEngine.closeModal()" class="px-5 py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold text-xs transition active:scale-95 cursor-pointer">
+          返回跳舞
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 👨‍👩‍👧‍👦 彈窗：家長雲端主帳號與跨設備 VIP / 積分同步 (比照 KaiSpeak) -->
+  <!-- ========================================================= -->
+  <div id="modal-parent-account-sync" class="hidden fixed inset-0 z-[126] bg-slate-950/88 backdrop-blur-md flex items-center justify-center p-3 sm:p-5 overflow-y-auto allow-touch-scroll" onclick="if(event.target && event.target.id==='modal-parent-account-sync') closeParentAccountModal()">
+    <div class="bg-slate-900 border-2 border-indigo-400/80 rounded-3xl p-5 sm:p-6 max-w-lg w-full shadow-[0_25px_70px_rgba(0,0,0,0.9),0_0_40px_rgba(99,102,241,0.3)] text-white flex flex-col gap-4 my-auto max-h-[92dvh] overflow-y-auto allow-touch-scroll">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between pb-3 border-b border-white/15">
+        <div class="flex items-center gap-3">
+          <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-indigo-500 via-purple-500 to-pink-500 flex items-center justify-center text-white text-2xl shadow-md shrink-0">
+            👨‍👩‍👧‍👦
+          </div>
+          <div class="text-left">
+            <h3 class="text-base sm:text-lg font-black text-white flex items-center gap-2 flex-wrap">
+              <span>家長雲端主帳號</span>
+              <span id="parent-modal-vip-badge" class="text-[10px] bg-slate-800 text-amber-300 border border-amber-400/50 px-2 py-0.5 rounded-full font-bold">🔒 免費體驗版</span>
+            </h3>
+            <p class="text-xs text-indigo-200 font-medium mt-0.5">跨設備 (iPad / iPhone / 新平板 / 電腦) 同步轉移 VIP 權限與累積總積分</p>
+          </div>
+        </div>
+        <button type="button" onclick="closeParentAccountModal()" class="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white font-black text-sm flex items-center justify-center transition active:scale-95 cursor-pointer">✕</button>
+      </div>
+
+      <!-- 目前帳號連線狀態卡 -->
+      <div id="parent-account-status-card" class="p-4 rounded-2xl bg-indigo-950/70 border border-indigo-400/40 text-left space-y-2.5">
+        <!-- Rendered by ParentAccountSyncEngine -->
+      </div>
+
+      <!-- 登入 / 綁定表單 -->
+      <div id="parent-account-form-section" class="space-y-3 text-left">
+        <div class="space-y-1">
+          <label class="block text-xs font-bold text-indigo-200">家長雲端帳號 ID (Email / 手機號碼 / 自訂家庭代碼)</label>
+          <input type="text" id="parent-input-account-id" placeholder="例如：family@gmail.com 或 KaiFamily88" class="w-full text-xs font-bold bg-slate-950 border border-indigo-400/40 focus:border-amber-400 rounded-xl px-3.5 py-2.5 text-white placeholder-slate-500 focus:outline-none">
+          <p class="text-[10px] text-slate-400">在任何新平板或手機輸入同一個帳號 ID，即可 1 秒同步 VIP 訂閱狀態與 9 位數累積總積分，無須重複購買。</p>
+        </div>
+
+        <div class="space-y-1">
+          <label class="block text-xs font-bold text-indigo-200">家長安全管理密碼 (4~6 位數數字，預設 8888)</label>
+          <input type="password" id="parent-input-pin" placeholder="例如：8888" maxlength="6" class="w-full text-xs font-mono font-bold bg-slate-950 border border-indigo-400/40 focus:border-amber-400 rounded-xl px-3.5 py-2.5 text-white placeholder-slate-500 focus:outline-none">
+        </div>
+
+        <div class="flex flex-col gap-2 pt-1">
+          <button type="button" onclick="handleParentLoginSubmit()" class="w-full py-3 rounded-2xl bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 hover:from-indigo-400 hover:to-pink-400 text-white font-black text-xs sm:text-sm shadow-[0_0_20px_rgba(99,102,241,0.5)] active:scale-95 transition flex items-center justify-center gap-1.5 cursor-pointer">
+            <span>🚀 登入 / 綁定此設備帳號（自動同步 VIP 與積分）</span>
+          </button>
+          <button type="button" onclick="handleParentRestorePurchases()" class="w-full py-2.5 rounded-2xl bg-amber-400/20 hover:bg-amber-400/30 text-amber-300 border border-amber-400/50 font-black text-xs transition active:scale-95 flex items-center justify-center gap-1.5 cursor-pointer">
+            <span>🔄 查詢並恢復此帳號已購買的 VIP 與積分</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- 跨設備同步保障說明 -->
+      <div class="p-3 bg-slate-950/80 rounded-2xl border border-white/10 text-left space-y-1">
+        <div class="flex items-center justify-between text-xs font-black text-amber-300">
+          <span>💡 跨設備同步保障機制（與 KaiSpeak 相同架構）：</span>
+          <span class="font-mono text-[10px] text-cyan-300">Ver B.26.11.129</span>
+        </div>
+        <ul class="text-[11px] text-slate-300 space-y-1 list-disc list-inside leading-relaxed">
+          <li><strong>一處購買，全家多設備通行</strong>：在平板購買或開通 VIP 後，新平板、手機或電腦登入同帳號（或掃描 QR Code）即自動開通 VIP。</li>
+          <li><strong>分數與排行榜雲端無損合併</strong>：兩台設備的累積總積分與歷史戰績自動取最高值無損合併，換機絕不歸零。</li>
+        </ul>
+      </div>
+
+      <button type="button" onclick="closeParentAccountModal()" class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs transition cursor-pointer">
+        返回首頁
+      </button>
+    </div>
+  </div>
+
+  <!-- ========================================================= -->
+  <!-- 📱 彈窗：iPad / 手機 1 秒相機掃碼免打字跨設備同步 QR Code   -->
+  <!-- ========================================================= -->
+  <div id="modal-cross-device-qr" class="hidden fixed inset-0 z-[135] bg-black/85 backdrop-blur-md flex items-center justify-center p-4" onclick="if(event.target && event.target.id==='modal-cross-device-qr') closeCrossDeviceQrModal()">
+    <div class="bg-slate-900 border-2 border-amber-400/80 rounded-3xl p-5 sm:p-6 max-w-sm w-full shadow-2xl text-center text-white space-y-4">
+      <div class="w-12 h-12 rounded-2xl bg-amber-400/20 border border-amber-300/60 flex items-center justify-center text-2xl mx-auto">
+        📱
+      </div>
+      <div>
+        <h3 class="text-base sm:text-lg font-black text-amber-300">跨設備 1 秒掃碼轉移 VIP 與積分</h3>
+        <p class="text-xs text-slate-300 mt-1 leading-relaxed">
+          請拿<strong>新平板或手機的內建相機</strong>對準下方 QR Code 掃描開啟，即可免打字自動繼承 VIP 訂閱權限與累積總積分！
+        </p>
+      </div>
+      <div class="p-3 bg-white rounded-2xl border-2 border-amber-300 flex flex-col items-center justify-center mx-auto w-52 h-52 shadow-inner">
+        <img id="cross-device-qr-img" src="" alt="跨設備同步 QR Code" class="w-full h-full object-contain">
+      </div>
+      <div id="cross-device-qr-acc-label" class="text-xs font-mono font-black text-cyan-300"></div>
+      <div class="flex flex-col gap-2">
+        <button type="button" onclick="copyCrossDeviceSyncLink()" class="w-full py-2.5 rounded-xl bg-gradient-to-r from-indigo-500 to-purple-600 hover:from-indigo-400 text-white font-black text-xs shadow-md active:scale-95 transition cursor-pointer">
+          📋 複製專屬同步網址 (可用 LINE 或 AirDrop 傳送)
+        </button>
+        <button type="button" onclick="closeCrossDeviceQrModal()" class="w-full py-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 font-bold text-xs transition cursor-pointer">
+          關閉
+        </button>
+      </div>
     </div>
   </div>
 
@@ -2918,15 +3134,15 @@
           <span id="voice-icon">🔊</span> 口令: 開
         </button>
 
-        <!-- 連擊與總分 (鎖定固定尺寸 w-[138px] md:w-[148px] h-[38px] md:h-[42px]、數字等寬 tabular-nums) -->
-        <div class="jelly-btn-gold px-3 py-1 rounded-2xl flex items-center justify-between gap-1.5 md:gap-2 shrink-0 w-[138px] md:w-[148px] h-[38px] md:h-[42px] select-none">
+        <!-- 連擊與總分 (點擊可開啟全球20人天梯排行榜；鎖定固定尺寸 w-[138px] md:w-[148px] h-[38px] md:h-[42px]、數字等寬 tabular-nums) -->
+        <div onclick="DanceLeaderboardEngine.openModal()" title="點擊查看全球動態 20 人天梯排行榜 (上10名+下10名)" class="jelly-btn-gold px-3 py-1 rounded-2xl flex items-center justify-between gap-1.5 md:gap-2 shrink-0 w-[138px] md:w-[148px] h-[38px] md:h-[42px] select-none cursor-pointer active:scale-95 transition">
           <div class="text-center w-[50px] shrink-0">
             <span class="text-[9px] md:text-[10px] font-extrabold opacity-85 leading-none block">連擊</span>
             <span id="combo-count" class="text-sm md:text-base font-black tabular-nums font-mono leading-tight block truncate">12x</span>
           </div>
           <div class="h-5 w-px bg-slate-950/25 shrink-0"></div>
           <div class="text-center w-[60px] shrink-0">
-            <span class="text-[9px] md:text-[10px] font-extrabold opacity-85 leading-none block">星光積分</span>
+            <span class="text-[9px] md:text-[10px] font-extrabold opacity-85 leading-none block">🏆 積分榜</span>
             <span id="score-count" class="text-sm md:text-base font-black tabular-nums font-mono leading-tight block truncate">980</span>
           </div>
         </div>
@@ -3022,19 +3238,32 @@
       <!-- 【右半屏：高挑 16:9 / 4:3 大螢幕攝影鏡頭 + 人物入鏡趣味發光火柴人】 -->
       <section id="camera-section" class="relative jelly-card-camera rounded-3xl overflow-hidden flex flex-col justify-between flex-1 min-w-0 h-[380px] sm:h-[440px] lg:h-[510px] xl:h-[540px] transition-all duration-300">
         
-        <!-- 頂欄：自適應整合狀態列 (手機端單行優雅對齊，絕不重疊遮擋視訊) -->
-        <div class="camera-bar-top p-2 md:p-2.5 px-3 z-30 flex flex-wrap items-center justify-between gap-1.5 border-b border-cyan-300/25 bg-slate-950/40 shrink-0">
-          <div class="flex items-center gap-1.5 sm:gap-2 min-w-0">
-            <button id="btn-camera" onclick="initRealCamera()" class="jelly-btn-cyan px-3 sm:px-3.5 py-1 rounded-full text-[11px] md:text-xs font-black transition flex items-center gap-1 shrink-0 active:scale-95">
+        <!-- 頂欄：自適應整合狀態列 (含「🎓 引導模式 / ⚡ 挑戰模式」雙模式一鍵切換，單行優雅對齊) -->
+        <div class="camera-bar-top p-1.5 md:p-2 px-2.5 z-30 flex items-center justify-between gap-1.5 border-b border-cyan-300/25 bg-slate-950/40 shrink-0 overflow-x-auto no-scrollbar">
+          <div class="flex items-center gap-1.5 min-w-0 shrink-0">
+            <button id="btn-camera" onclick="initRealCamera()" class="jelly-btn-cyan px-2.5 sm:px-3 py-1 rounded-full text-[11px] md:text-xs font-black transition flex items-center gap-1 shrink-0 active:scale-95">
               📷 開啟攝影機
             </button>
-            <span id="stickman-status-badge" class="bg-slate-900/80 backdrop-blur text-cyan-100 text-[10px] sm:text-xs font-bold px-2.5 py-0.5 rounded-full border border-cyan-300/35 shadow-xs truncate max-w-[110px] sm:max-w-xs">
+
+            <!-- 🎓 引導模式 vs ⚡ 挑戰模式 (彩色橫線掉落觸碰得分) 雙模式切換膠囊 -->
+            <div class="flex items-center bg-slate-950/85 p-0.5 rounded-full border border-amber-400/50 shadow-inner shrink-0" title="切換「🎓 引導模式（純火柴人+語音引導）」或「⚡ 挑戰模式（上方掉落彩色橫線，手/腳/頭碰到即得分）」">
+              <button type="button" id="btn-mode-guide" onclick="setStickmanGameMode('guide')" class="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-black transition-all flex items-center gap-1 jelly-btn-gold shadow-xs cursor-pointer">
+                <span>🎓</span>
+                <span>引導模式</span>
+              </button>
+              <button type="button" id="btn-mode-challenge" onclick="setStickmanGameMode('challenge')" class="px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-black transition-all flex items-center gap-1 text-slate-300 hover:text-white cursor-pointer">
+                <span>⚡</span>
+                <span>挑戰模式</span>
+              </button>
+            </div>
+
+            <span id="stickman-status-badge" class="bg-slate-900/80 backdrop-blur text-cyan-100 text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full border border-cyan-300/35 shadow-xs truncate max-w-[100px] sm:max-w-[160px]">
               等待小朋友入鏡...
             </span>
             <!-- 💡 舞台浪漫抒情光泡與氛圍燈光按鍵 -->
-            <button id="btn-stage-lighting" onclick="toggleStageLighting()" class="bg-slate-900/80 hover:bg-slate-800 text-amber-300 text-[10px] sm:text-xs font-bold px-2 sm:px-2.5 py-0.5 rounded-full border border-amber-300/40 shadow-xs flex items-center gap-1 transition active:scale-95 shrink-0" title="點擊切換浪漫抒情光泡氛圍燈效 (開/關)">
+            <button id="btn-stage-lighting" onclick="toggleStageLighting()" class="bg-slate-900/80 hover:bg-slate-800 text-amber-300 text-[10px] sm:text-xs font-bold px-2 py-0.5 rounded-full border border-amber-300/40 shadow-xs flex items-center gap-1 transition active:scale-95 shrink-0" title="點擊切換浪漫抒情光泡氛圍燈效 (開/關)">
               <span id="stage-lighting-icon">🫧</span>
-              <span id="stage-lighting-text" class="hidden xs:inline">浪漫光泡</span>
+              <span id="stage-lighting-text" class="hidden sm:inline">浪漫光泡</span>
             </button>
           </div>
 
@@ -3077,8 +3306,12 @@
           <canvas id="stage-laser-canvas" class="absolute inset-0 w-full h-full object-contain sm:object-cover z-20 pointer-events-none"></canvas>
           <canvas id="camera-canvas" width="640" height="480" class="absolute inset-0 w-full h-full object-contain sm:object-cover z-25 pointer-events-none"></canvas>
 
-          <!-- 全螢幕控制懸浮按鈕組 (全螢幕時置頂最右側，便於隨時一鍵返回雙屏教室與切換燈效) -->
-          <div id="camera-fs-controls" class="hidden absolute top-4 right-4 z-40 flex items-center gap-2">
+          <!-- 全螢幕控制懸浮按鈕組 (全螢幕時置頂最右側，便於隨時一鍵返回雙屏教室、切換引導/挑戰模式與燈效) -->
+          <div id="camera-fs-controls" class="hidden absolute top-4 right-4 z-40 flex items-center gap-2 flex-wrap">
+            <button id="btn-camera-fs-mode" onclick="toggleStickmanGameMode()" class="px-3 py-1.5 rounded-2xl bg-black/75 hover:bg-black/90 text-amber-300 border border-amber-300/50 backdrop-blur-md font-black text-xs flex items-center gap-1.5 transition active:scale-95 shadow-xl cursor-pointer">
+              <span id="fs-mode-icon">🎓</span>
+              <span id="fs-mode-text">引導模式</span>
+            </button>
             <button id="btn-camera-fs-lighting" onclick="toggleStageLighting()" class="px-3 py-1.5 rounded-2xl bg-black/75 hover:bg-black/90 text-amber-300 border border-amber-300/40 backdrop-blur-md font-bold text-xs flex items-center gap-1.5 transition active:scale-95 shadow-xl">
               <span id="fs-lighting-icon">🫧</span>
               <span id="fs-lighting-text">浪漫光泡</span>
@@ -3673,6 +3906,9 @@
         const raw = localStorage.getItem('kaidance_user_subscription');
         if (raw) {
           const parsed = JSON.parse(raw);
+          if (parsed.expirationTimestamp === 'Infinity' || parsed.planType === 'lifetime' || parsed.planType === 'admin_master') {
+            parsed.expirationTimestamp = Infinity;
+          }
           userSubscriptionState = { ...userSubscriptionState, ...parsed };
         }
       } catch (err) {
@@ -3684,11 +3920,18 @@
 
     function saveUserSubscriptionState() {
       try {
-        localStorage.setItem('kaidance_user_subscription', JSON.stringify(userSubscriptionState));
+        const toSave = {
+          ...userSubscriptionState,
+          expirationTimestamp: userSubscriptionState.expirationTimestamp === Infinity ? 'Infinity' : userSubscriptionState.expirationTimestamp
+        };
+        localStorage.setItem('kaidance_user_subscription', JSON.stringify(toSave));
       } catch (err) {
         console.warn('儲存訂閱資訊失敗:', err);
       }
       updateAllSubscriptionUIs();
+      if (typeof ParentAccountSyncEngine !== 'undefined') {
+        ParentAccountSyncEngine.debouncedSyncWithCloud(1500);
+      }
     }
 
     // 檢查訂閱是否到期（時間到自動上鎖 🔒）
@@ -4344,6 +4587,914 @@
       if (modal) modal.classList.add('hidden');
       pendingPurchaseResolve = null;
     }
+
+    // ========================================================
+    // 2-D. 🏷️ 官方版本編號系統 (B.26.11.129)
+    // 格式：[階段 B=Beta].[年份 26].[月份 11].[開發次數 129]
+    // ========================================================
+    const KAIDANCE_APP_VERSION = 'B.26.11.129';
+
+    // ========================================================
+    // 2-E. 👨‍👩‍👧‍👦 家長雲端主帳號與跨設備 VIP / 積分無損同步系統 (比照 KaiSpeak 架構)
+    // ========================================================
+    const ParentAccountSyncEngine = {
+      _syncDebounceTimer: null,
+      _lastPullTime: 0,
+      _isSyncing: false,
+
+      getAccountId() {
+        return localStorage.getItem('kaidance_parent_account_id') || '';
+      },
+      getPin() {
+        return localStorage.getItem('kaidance_parent_account_pin') || '8888';
+      },
+      isLoggedIn() {
+        return !!this.getAccountId();
+      },
+      getSyncTopic(accountId) {
+        const clean = (accountId || '').trim().toLowerCase().replace(/[^a-z0-9]/g, '_');
+        return 'kaidance_family_' + (clean || 'default');
+      },
+
+      getTotalScore() {
+        return parseInt(localStorage.getItem('kaidance_total_score') || '980', 10) || 980;
+      },
+
+      setTotalScore(newScore) {
+        const val = Math.max(980, parseInt(newScore || 980, 10));
+        localStorage.setItem('kaidance_total_score', String(val));
+        const totalScoreLobby = document.getElementById('total-score-lobby');
+        if (totalScoreLobby) {
+          totalScoreLobby.innerText = String(val).padStart(9, '0').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+        }
+      },
+
+      // 智慧無損合併：VIP 取最遠到期日與最高權限，總積分取最高累積值，歷史戰績無損聯集
+      mergeAndApplyAccountData(cloudData) {
+        if (!cloudData) return;
+        this._isSyncing = true;
+        try {
+          // 1. VIP 訂閱權限無損合併
+          const cSub = cloudData.subscriptionState;
+          if (cSub && cSub.isSubscribed) {
+            const localExp = userSubscriptionState.expirationTimestamp === 'Infinity' || userSubscriptionState.expirationTimestamp === Infinity
+              ? Infinity : (Number(userSubscriptionState.expirationTimestamp) || 0);
+            const cloudExp = cSub.expirationTimestamp === 'Infinity' || cSub.expirationTimestamp === Infinity || cSub.planType === 'lifetime' || cSub.planType === 'admin_master'
+              ? Infinity : (Number(cSub.expirationTimestamp) || 0);
+
+            if (!userSubscriptionState.isSubscribed || cloudExp > localExp || cSub.planType === 'lifetime' || cSub.planType === 'admin_master') {
+              userSubscriptionState = {
+                ...userSubscriptionState,
+                ...cSub,
+                expirationTimestamp: cloudExp
+              };
+              try {
+                localStorage.setItem('kaidance_user_subscription', JSON.stringify({
+                  ...userSubscriptionState,
+                  expirationTimestamp: cloudExp === Infinity ? 'Infinity' : cloudExp
+                }));
+              } catch(e) {}
+            }
+          }
+
+          // 2. 9 位數累積總積分無損合併 (取本機與雲端較高值)
+          const localTotal = this.getTotalScore();
+          const cloudTotal = parseInt(cloudData.totalScore || 0, 10) || 0;
+          if (cloudTotal > localTotal) {
+            this.setTotalScore(cloudTotal);
+          }
+
+          // 3. 小舞星個人檔案與歷史戰績無損合併
+          if (cloudData.dancerProfile && typeof DanceLeaderboardEngine !== 'undefined') {
+            const localProf = DanceLeaderboardEngine.getProfileInfo();
+            if (cloudData.dancerProfile.name && (localProf.name === 'Kai 小舞星' || !localProf.customEdited)) {
+              DanceLeaderboardEngine.saveProfileInfo(
+                cloudData.dancerProfile.name,
+                cloudData.dancerProfile.avatar || localProf.avatar,
+                cloudData.dancerProfile.region || localProf.region,
+                false
+              );
+            }
+          }
+          if (Array.isArray(cloudData.personalHistory) && typeof DanceLeaderboardEngine !== 'undefined') {
+            DanceLeaderboardEngine.mergeHistory(cloudData.personalHistory);
+          }
+
+          updateAllSubscriptionUIs();
+          this.updateAccountBadgesUI();
+        } finally {
+          this._isSyncing = false;
+        }
+      },
+
+      async fetchFromCloud(accountId) {
+        accountId = (accountId || '').trim().toLowerCase();
+        if (!accountId) return null;
+        try {
+          const topic = this.getSyncTopic(accountId);
+          const resp = await fetch(`https://ntfy.sh/${topic}/json?poll=1`);
+          if (resp.ok) {
+            const text = await resp.text();
+            const lines = text.trim().split('\n');
+            for (let i = lines.length - 1; i >= 0; i--) {
+              const line = lines[i].trim();
+              if (!line) continue;
+              try {
+                const obj = JSON.parse(line);
+                let data = null;
+                if (obj.attachment && obj.attachment.url) {
+                  try {
+                    const att = await fetch(obj.attachment.url);
+                    if (att.ok) data = await att.json();
+                  } catch(e) {}
+                }
+                if (!data && obj.message) {
+                  try { data = JSON.parse(obj.message); } catch(e) {}
+                }
+                if (data && data.accountId) {
+                  return data;
+                }
+              } catch(e) {}
+            }
+          }
+        } catch (err) {
+          console.warn('Cloud account fetch error:', err);
+        }
+        return null;
+      },
+
+      async syncWithCloud() {
+        const accountId = this.getAccountId();
+        if (!accountId) return null;
+        const pin = this.getPin();
+        const subPayload = {
+          ...userSubscriptionState,
+          expirationTimestamp: userSubscriptionState.expirationTimestamp === Infinity ? 'Infinity' : userSubscriptionState.expirationTimestamp
+        };
+        const payload = {
+          accountId,
+          pin,
+          version: KAIDANCE_APP_VERSION,
+          totalScore: this.getTotalScore(),
+          subscriptionState: subPayload,
+          dancerProfile: typeof DanceLeaderboardEngine !== 'undefined' ? DanceLeaderboardEngine.getProfileInfo() : null,
+          personalHistory: typeof DanceLeaderboardEngine !== 'undefined' ? (DanceLeaderboardEngine.cachedData.personalHistory || []).slice(0, 40) : [],
+          updatedAt: new Date().toISOString()
+        };
+        try {
+          const topic = this.getSyncTopic(accountId);
+          await fetch(`https://ntfy.sh/${topic}`, {
+            method: 'POST',
+            body: JSON.stringify(payload),
+            headers: { 'X-Title': 'kaidance_family_sync' }
+          });
+          this.updateAccountBadgesUI();
+          return payload;
+        } catch (err) {
+          console.warn('Cloud account sync error:', err);
+          return null;
+        }
+      },
+
+      debouncedSyncWithCloud(delayMs = 2000) {
+        if (!this.getAccountId() || this._isSyncing) return;
+        if (this._syncDebounceTimer) clearTimeout(this._syncDebounceTimer);
+        this._syncDebounceTimer = setTimeout(() => {
+          this.syncWithCloud();
+        }, delayMs);
+      },
+
+      async login(accountId, pin = '8888') {
+        accountId = (accountId || '').trim().toLowerCase();
+        pin = (pin || '8888').trim();
+        if (!accountId) throw new Error('請輸入家長雲端帳號 ID！');
+
+        localStorage.setItem('kaidance_parent_account_id', accountId);
+        localStorage.setItem('kaidance_parent_account_pin', pin);
+
+        const cloudData = await this.fetchFromCloud(accountId);
+        if (cloudData) {
+          this.mergeAndApplyAccountData(cloudData);
+          await this.syncWithCloud();
+          return { status: 'ok', account: cloudData, fromCloud: true };
+        }
+        await this.syncWithCloud();
+        this.updateAccountBadgesUI();
+        return { status: 'ok', fromCloud: false };
+      },
+
+      async restorePurchases(inputAccId) {
+        const accountId = (inputAccId || this.getAccountId() || '').trim().toLowerCase();
+        if (!accountId) throw new Error('請先輸入家長雲端帳號 ID！');
+        localStorage.setItem('kaidance_parent_account_id', accountId);
+        const cloudData = await this.fetchFromCloud(accountId);
+        if (cloudData) {
+          this.mergeAndApplyAccountData(cloudData);
+          return {
+            success: !!(cloudData.subscriptionState?.isSubscribed || cloudData.totalScore > 980),
+            account: cloudData
+          };
+        }
+        return { success: false };
+      },
+
+      logout() {
+        localStorage.removeItem('kaidance_parent_account_id');
+        localStorage.removeItem('kaidance_parent_account_pin');
+        this.updateAccountBadgesUI();
+      },
+
+      updateAccountBadgesUI() {
+        const accId = this.getAccountId();
+        const homeStatus = document.getElementById('home-account-status-text');
+        if (homeStatus) {
+          homeStatus.innerText = accId ? `已綁定:${accId.slice(0, 8)}` : '帳號轉移';
+        }
+        const settingsTitle = document.getElementById('settings-parent-acc-title');
+        const settingsDesc = document.getElementById('settings-parent-acc-desc');
+        if (settingsTitle && settingsDesc) {
+          if (accId) {
+            settingsTitle.innerText = `家長雲端主帳號 · 已綁定 (${accId})`;
+            settingsDesc.innerText = `VIP 權限與總積分 (${this.getTotalScore().toLocaleString()}) 已連線雲端即時同步`;
+          } else {
+            settingsTitle.innerText = '家長雲端主帳號 · 跨設備同步';
+            settingsDesc.innerText = '把 VIP 購買權限與累積總積分同步到新平板、手機或電腦';
+          }
+        }
+      }
+    };
+
+    function openParentAccountModal() {
+      const modal = document.getElementById('modal-parent-account-sync');
+      if (!modal) return;
+      renderParentAccountModalContent();
+      modal.classList.remove('hidden');
+    }
+
+    function closeParentAccountModal() {
+      const modal = document.getElementById('modal-parent-account-sync');
+      if (modal) modal.classList.add('hidden');
+      ensureActiveViewVisible();
+    }
+
+    function renderParentAccountModalContent() {
+      const statusCard = document.getElementById('parent-account-status-card');
+      const formSection = document.getElementById('parent-account-form-section');
+      const vipBadge = document.getElementById('parent-modal-vip-badge');
+      const accId = ParentAccountSyncEngine.getAccountId();
+      const isSub = userSubscriptionState.isSubscribed;
+      const plan = userSubscriptionState.planType;
+      const totalScore = ParentAccountSyncEngine.getTotalScore();
+
+      if (vipBadge) {
+        if (isSub) {
+          vipBadge.innerText = plan === 'lifetime' ? '💎 終身買斷 VIP' : plan === 'admin_master' ? '🔑 管理員全開' : '👑 VIP 有效訂閱中';
+          vipBadge.className = 'text-[10px] bg-emerald-500/25 text-emerald-300 border border-emerald-400/60 px-2 py-0.5 rounded-full font-black';
+        } else {
+          vipBadge.innerText = '🔒 免費體驗版';
+          vipBadge.className = 'text-[10px] bg-slate-800 text-amber-300 border border-amber-400/50 px-2 py-0.5 rounded-full font-bold';
+        }
+      }
+
+      if (!statusCard) return;
+      if (accId) {
+        const expText = !isSub
+          ? '免費體驗版'
+          : (userSubscriptionState.expirationTimestamp === Infinity || userSubscriptionState.expirationTimestamp === 'Infinity'
+              ? '永久有效 (無到期日)'
+              : new Date(userSubscriptionState.expirationTimestamp).toLocaleDateString());
+
+        statusCard.innerHTML = `
+          <div class="flex items-center justify-between pb-2.5 border-b border-indigo-400/30">
+            <div class="flex items-center gap-2.5">
+              <span class="text-2xl">👤</span>
+              <div>
+                <div class="text-sm font-black text-amber-300 font-mono">${accId}</div>
+                <div class="text-[11px] text-indigo-200">已連線至 KaiDance 雲端主帳號</div>
+              </div>
+            </div>
+            <span class="text-[10px] px-2.5 py-0.5 rounded-full font-black ${isSub ? 'bg-amber-400 text-slate-950' : 'bg-slate-800 text-slate-300 border border-white/15'}">
+              ${isSub ? '👑 VIP 已開通' : '🌿 免費版'}
+            </span>
+          </div>
+          <div class="grid grid-cols-2 gap-2 text-xs pt-1">
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-indigo-400/30">
+              <span class="text-[10px] text-slate-400 block">雲端累積總積分</span>
+              <span class="font-black text-amber-300 font-mono text-sm">🏆 ${totalScore.toLocaleString()}</span>
+            </div>
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-indigo-400/30">
+              <span class="text-[10px] text-slate-400 block">VIP 權限效期</span>
+              <span class="font-bold text-emerald-300 text-xs">${expText}</span>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 pt-2">
+            <button type="button" onclick="handleParentManualSync()" class="flex-1 py-2.5 px-3 rounded-xl bg-indigo-500 hover:bg-indigo-400 text-white font-black text-xs shadow active:scale-95 transition flex items-center justify-center gap-1.5 cursor-pointer">
+              <span>☁️ 立即雙向同步雲端資料</span>
+            </button>
+            <button type="button" onclick="handleParentLogout()" class="py-2.5 px-3 rounded-xl bg-rose-500/20 hover:bg-rose-500/35 text-rose-300 border border-rose-400/40 font-bold text-xs active:scale-95 transition cursor-pointer">
+              登出帳號
+            </button>
+          </div>
+          <div class="pt-2.5 border-t border-indigo-400/30 flex flex-col gap-2">
+            <div class="text-[11px] text-indigo-200 font-bold flex items-center justify-between">
+              <span>📲 跨設備 1 秒轉移（平板 ➔ 新平板 / 手機 / 電腦）：</span>
+              <span class="text-[10px] text-emerald-300 font-black">免重複購買</span>
+            </div>
+            <div class="grid grid-cols-2 gap-2">
+              <button type="button" onclick="copyCrossDeviceSyncLink()" class="py-2 px-2.5 rounded-xl bg-purple-500/25 hover:bg-purple-500/40 text-purple-200 border border-purple-400/50 font-black text-xs active:scale-95 transition flex items-center justify-center gap-1 cursor-pointer">
+                <span>🔗 複製同步連結</span>
+              </button>
+              <button type="button" onclick="showCrossDeviceQrModal()" class="py-2 px-2.5 rounded-xl bg-amber-400/25 hover:bg-amber-400/40 text-amber-200 border border-amber-300/60 font-black text-xs active:scale-95 transition flex items-center justify-center gap-1 cursor-pointer">
+                <span>📱 產生同步 QR 碼</span>
+              </button>
+            </div>
+          </div>
+        `;
+        if (formSection) formSection.classList.add('hidden');
+      } else {
+        statusCard.innerHTML = `
+          <div class="flex items-start gap-2.5">
+            <span class="text-2xl">⚠️</span>
+            <div>
+              <div class="text-xs font-black text-amber-300">目前尚未綁定家長雲端帳號（本機模式）</div>
+              <div class="text-[11px] text-slate-300 mt-0.5 leading-relaxed">
+                綁定帳號後，您的 <strong>VIP 訂閱權限</strong> 與 <strong>9 位數累積總積分 (${totalScore.toLocaleString()} 分)</strong> 即可自由轉移並同步至任何平板、手機或電腦！
+              </div>
+            </div>
+          </div>
+        `;
+        if (formSection) formSection.classList.remove('hidden');
+      }
+    }
+
+    function generateCrossDeviceSyncLink() {
+      const inputAcc = document.getElementById('parent-input-account-id');
+      const accountId = ParentAccountSyncEngine.getAccountId() || (inputAcc ? inputAcc.value.trim() : '') || 'kaifamily';
+      ParentAccountSyncEngine.syncWithCloud();
+      const base = window.location.origin + window.location.pathname;
+      return `${base}?acc=${encodeURIComponent(accountId)}`;
+    }
+
+    function copyCrossDeviceSyncLink() {
+      const url = generateCrossDeviceSyncLink();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url).then(() => {
+          showSubscriptionToast('📋 已複製跨設備 1 秒同步連結！', '傳送至新平板、手機或電腦打開，即可自動繼承 VIP 權限與累積總積分！');
+        }).catch(() => {
+          prompt('請複製以下跨設備同步連結並在新設備開啟：', url);
+        });
+      } else {
+        prompt('請複製以下跨設備同步連結並在新設備開啟：', url);
+      }
+    }
+
+    function showCrossDeviceQrModal() {
+      const url = generateCrossDeviceSyncLink();
+      const modal = document.getElementById('modal-cross-device-qr');
+      const img = document.getElementById('cross-device-qr-img');
+      const label = document.getElementById('cross-device-qr-acc-label');
+      const accId = ParentAccountSyncEngine.getAccountId() || 'kaifamily';
+      if (img) {
+        img.src = `https://api.qrserver.com/v1/create-qr-code/?size=240x240&margin=8&data=${encodeURIComponent(url)}`;
+      }
+      if (label) {
+        label.innerText = `綁定帳號：${accId} · 總積分：${ParentAccountSyncEngine.getTotalScore().toLocaleString()}`;
+      }
+      if (modal) modal.classList.remove('hidden');
+    }
+
+    function closeCrossDeviceQrModal() {
+      const modal = document.getElementById('modal-cross-device-qr');
+      if (modal) modal.classList.add('hidden');
+    }
+
+    async function handleParentLoginSubmit() {
+      const inputAcc = document.getElementById('parent-input-account-id');
+      const inputPin = document.getElementById('parent-input-pin');
+      const accId = inputAcc ? inputAcc.value.trim() : '';
+      const pin = inputPin ? inputPin.value.trim() : '8888';
+      if (!accId) {
+        showSubscriptionToast('⚠️ 請輸入家長雲端帳號 ID', '可輸入 Email、手機號碼或自訂家庭名稱（如 KaiFamily）');
+        return;
+      }
+      try {
+        showSubscriptionToast('☁️ 正在連線同步雲端帳號...', `帳號：${accId}`);
+        const res = await ParentAccountSyncEngine.login(accId, pin);
+        renderParentAccountModalContent();
+        if (res && res.fromCloud) {
+          showSubscriptionToast(
+            `🎉 帳號【${accId}】跨設備同步成功！`,
+            `已成功同步 VIP 權限與累積總積分 (${ParentAccountSyncEngine.getTotalScore().toLocaleString()} 分)！`
+          );
+        } else {
+          showSubscriptionToast(
+            `🎉 帳號【${accId}】已成功綁定並備份至雲端！`,
+            '在其他平板或手機輸入相同帳號（或掃描 QR Code），即可 1 秒轉移 VIP 與積分！'
+          );
+        }
+      } catch (err) {
+        showSubscriptionToast('❌ 帳號同步失敗', err.message || '請稍後再試');
+      }
+    }
+
+    async function handleParentManualSync() {
+      showSubscriptionToast('☁️ 正在同步雲端資料...', '正在上傳並合併最新積分與 VIP 狀態');
+      const accId = ParentAccountSyncEngine.getAccountId();
+      const cloudData = await ParentAccountSyncEngine.fetchFromCloud(accId);
+      if (cloudData) {
+        ParentAccountSyncEngine.mergeAndApplyAccountData(cloudData);
+      }
+      await ParentAccountSyncEngine.syncWithCloud();
+      renderParentAccountModalContent();
+      showSubscriptionToast('✅ 雲端雙向同步完成！', `目前累積總積分：${ParentAccountSyncEngine.getTotalScore().toLocaleString()} 分`);
+    }
+
+    function handleParentLogout() {
+      ParentAccountSyncEngine.logout();
+      renderParentAccountModalContent();
+      showSubscriptionToast('👋 已登出家長雲端帳號', '此設備目前已切換回本機模式');
+    }
+
+    async function handleParentRestorePurchases() {
+      const inputAcc = document.getElementById('parent-input-account-id');
+      const accId = (inputAcc && inputAcc.value.trim()) || ParentAccountSyncEngine.getAccountId();
+      if (!accId) {
+        showSubscriptionToast('⚠️ 請先輸入家長帳號 ID', '輸入您先前綁定的帳號，即可查詢並恢復 VIP 與總積分');
+        return;
+      }
+      try {
+        const res = await ParentAccountSyncEngine.restorePurchases(accId);
+        renderParentAccountModalContent();
+        if (res && res.success) {
+          showSubscriptionToast(
+            `🎉 已成功恢復帳號【${accId}】資料！`,
+            `VIP 狀態與累積總積分 (${ParentAccountSyncEngine.getTotalScore().toLocaleString()} 分) 已同步至此設備！`
+          );
+        } else {
+          showSubscriptionToast(
+            `ℹ️ 尚未查找到【${accId}】的雲端 VIP 紀錄`,
+            '請先在原購買設備登入此帳號並點擊「立即雙向同步雲端資料」'
+          );
+        }
+      } catch (err) {
+        showSubscriptionToast('❌ 恢復失敗', err.message);
+      }
+    }
+
+    // ========================================================
+    // 2-F. 🏆 全球動態 20 人累積積分天梯排行榜引擎 (上 10 名 + 下 10 名 = 共 20 名)
+    // ========================================================
+    const DanceLeaderboardEngine = {
+      activeTab: 'ladder',
+      GLOBAL_TOPIC: 'kaidance_global_leaderboard_v1',
+      cachedData: {
+        myRank: 12,
+        totalPlayers: 26,
+        windowRankings: [],
+        personalHistory: [],
+        cloudPlayersMap: {}
+      },
+
+      getProfileInfo() {
+        try {
+          const raw = localStorage.getItem('kaidance_dancer_profile');
+          if (raw) {
+            const p = JSON.parse(raw);
+            if (p && p.name) return p;
+          }
+        } catch(e) {}
+        return {
+          id: localStorage.getItem('kaidance_device_player_id') || (() => {
+            const newId = 'kd_' + Math.random().toString(36).slice(2, 9);
+            try { localStorage.setItem('kaidance_device_player_id', newId); } catch(e) {}
+            return newId;
+          })(),
+          name: 'Kai 小舞星',
+          avatar: '👦',
+          region: '🇹🇼 台北',
+          customEdited: false
+        };
+      },
+
+      saveProfileInfo(name, avatar, region, customEdited = true) {
+        const cur = this.getProfileInfo();
+        const updated = {
+          id: cur.id,
+          name: (name || cur.name || 'Kai 小舞星').trim().slice(0, 16),
+          avatar: avatar || cur.avatar || '👦',
+          region: region || cur.region || '🇹🇼 台北',
+          customEdited
+        };
+        try {
+          localStorage.setItem('kaidance_dancer_profile', JSON.stringify(updated));
+        } catch(e) {}
+        this.recalculateLadder();
+        this.renderModalContent();
+        this.pushMyScoreToGlobalCloud();
+        ParentAccountSyncEngine.debouncedSyncWithCloud(1500);
+      },
+
+      init() {
+        try {
+          const rawH = localStorage.getItem('kaidance_personal_dance_history');
+          if (rawH) {
+            const parsed = JSON.parse(rawH);
+            if (Array.isArray(parsed)) this.cachedData.personalHistory = parsed;
+          }
+          const rawC = localStorage.getItem('kaidance_cloud_players_cache');
+          if (rawC) {
+            const parsedC = JSON.parse(rawC);
+            if (parsedC && typeof parsedC === 'object') this.cachedData.cloudPlayersMap = parsedC;
+          }
+        } catch(e) {}
+        this.recalculateLadder();
+        setTimeout(() => this.fetchGlobalCloudLeaderboard(), 1200);
+      },
+
+      mergeHistory(cloudHistory) {
+        if (!Array.isArray(cloudHistory)) return;
+        const map = new Map();
+        (this.cachedData.personalHistory || []).forEach(h => {
+          if (h && h.id) map.set(h.id, h);
+        });
+        cloudHistory.forEach(h => {
+          if (h && h.id && !map.has(h.id)) map.set(h.id, h);
+        });
+        const merged = Array.from(map.values()).sort((a, b) => (b.ts || 0) - (a.ts || 0)).slice(0, 50);
+        this.cachedData.personalHistory = merged;
+        try {
+          localStorage.setItem('kaidance_personal_dance_history', JSON.stringify(merged));
+        } catch(e) {}
+      },
+
+      recordDanceSession(songTitle, earnedScore, maxComboVal, mode = 'guide') {
+        if (!earnedScore || earnedScore <= 0) return;
+        const item = {
+          id: 'dance_' + Date.now(),
+          ts: Date.now(),
+          timestamp: new Date().toLocaleString('zh-TW', { hour12: false }),
+          songTitle: songTitle || '星際舞曲',
+          score: earnedScore,
+          maxCombo: maxComboVal || combo || 12,
+          mode: mode === 'challenge' ? '⚡ 彩線挑戰' : '🎓 語音引導'
+        };
+        this.cachedData.personalHistory = [item, ...(this.cachedData.personalHistory || [])].slice(0, 50);
+        try {
+          localStorage.setItem('kaidance_personal_dance_history', JSON.stringify(this.cachedData.personalHistory));
+        } catch(e) {}
+        this.recalculateLadder();
+        this.pushMyScoreToGlobalCloud();
+        ParentAccountSyncEngine.debouncedSyncWithCloud(2000);
+      },
+
+      async pushMyScoreToGlobalCloud() {
+        const prof = this.getProfileInfo();
+        const totalScore = ParentAccountSyncEngine.getTotalScore();
+        const payload = {
+          id: prof.id,
+          name: prof.name,
+          avatar: prof.avatar,
+          region: prof.region,
+          totalScore,
+          maxCombo: Math.max(combo || 12, 15),
+          isVip: userSubscriptionState.isSubscribed,
+          updatedAt: Date.now()
+        };
+        try {
+          await fetch(`https://ntfy.sh/${this.GLOBAL_TOPIC}`, {
+            method: 'POST',
+            body: JSON.stringify(payload),
+            headers: { 'X-Title': 'kaidance_leaderboard_score' }
+          });
+        } catch(e) {}
+      },
+
+      async fetchGlobalCloudLeaderboard() {
+        try {
+          const resp = await fetch(`https://ntfy.sh/${this.GLOBAL_TOPIC}/json?poll=1`);
+          if (resp.ok) {
+            const text = await resp.text();
+            const lines = text.trim().split('\n');
+            const map = { ...(this.cachedData.cloudPlayersMap || {}) };
+            lines.forEach(line => {
+              if (!line.trim()) return;
+              try {
+                const obj = JSON.parse(line);
+                if (obj && obj.message) {
+                  const p = JSON.parse(obj.message);
+                  if (p && p.id && p.totalScore) {
+                    if (!map[p.id] || p.totalScore >= map[p.id].totalScore) {
+                      map[p.id] = p;
+                    }
+                  }
+                }
+              } catch(e) {}
+            });
+            this.cachedData.cloudPlayersMap = map;
+            try {
+              localStorage.setItem('kaidance_cloud_players_cache', JSON.stringify(map));
+            } catch(e) {}
+            this.recalculateLadder();
+          }
+        } catch(e) {}
+      },
+
+      recalculateLadder() {
+        // 25 位全球種子小舞星 (積分分佈於 650 ~ 18,500，讓使用者從 980 起跳即可看見前方 10 名與後方 10 名！)
+        const seeds = [
+          { id: 'seed_01', name: 'Lucas W.', avatar: '🚀', region: '🇺🇸 舊金山', totalScore: 18650, maxCombo: 142, isVip: true },
+          { id: 'seed_02', name: 'Mia Chen', avatar: '🦄', region: '🇹🇼 台北', totalScore: 15420, maxCombo: 128, isVip: true },
+          { id: 'seed_03', name: 'Yuto Sato', avatar: '🦖', region: '🇯🇵 東京', totalScore: 12980, maxCombo: 115, isVip: true },
+          { id: 'seed_04', name: 'Chloe Tan', avatar: '⭐', region: '🇸🇬 新加坡', totalScore: 9840, maxCombo: 96, isVip: true },
+          { id: 'seed_05', name: 'Leo Huang', avatar: '🦁', region: '🇹🇼 台中', totalScore: 7650, maxCombo: 88, isVip: true },
+          { id: 'seed_06', name: 'Sophie B.', avatar: '🌸', region: '🇩🇪 柏林', totalScore: 5890, maxCombo: 74, isVip: true },
+          { id: 'seed_07', name: 'Emma Wong', avatar: '🦊', region: '🇭🇰 香港', totalScore: 4320, maxCombo: 65, isVip: true },
+          { id: 'seed_08', name: 'Ethan Lin', avatar: '🏀', region: '🇹🇼 高雄', totalScore: 3480, maxCombo: 58, isVip: true },
+          { id: 'seed_09', name: 'Hana Tanaka', avatar: '🐱', region: '🇯🇵 大阪', totalScore: 2790, maxCombo: 52, isVip: true },
+          { id: 'seed_10', name: 'Noah Wu', avatar: '🐬', region: '🇹🇼 新竹', totalScore: 2240, maxCombo: 46, isVip: true },
+          { id: 'seed_11', name: 'Ava Kim', avatar: '🎨', region: '🇰🇷 首爾', totalScore: 1850, maxCombo: 41, isVip: true },
+          { id: 'seed_12', name: 'Mason Tsai', avatar: '⚡', region: '🇹🇼 台南', totalScore: 1560, maxCombo: 37, isVip: false },
+          { id: 'seed_13', name: 'Zoey Chang', avatar: '🌈', region: '🇹🇼 桃園', totalScore: 1320, maxCombo: 33, isVip: false },
+          { id: 'seed_14', name: 'Liam Smith', avatar: '🐯', region: '🇬🇧 倫敦', totalScore: 1140, maxCombo: 29, isVip: false },
+          { id: 'seed_15', name: 'Aria Wilson', avatar: '🐨', region: '🇦🇺 墨爾本', totalScore: 1025, maxCombo: 25, isVip: false },
+          { id: 'seed_16', name: '小樂樂', avatar: '👦', region: '🇹🇼 新北', totalScore: 950, maxCombo: 22, isVip: false },
+          { id: 'seed_17', name: '妞妞寶貝', avatar: '👧', region: '🇹🇼 台中', totalScore: 910, maxCombo: 20, isVip: false },
+          { id: 'seed_18', name: 'William R.', avatar: '🏒', region: '🇨🇦 溫哥華', totalScore: 875, maxCombo: 19, isVip: false },
+          { id: 'seed_19', name: 'Ella Brown', avatar: '🎻', region: '🇬🇧 愛丁堡', totalScore: 840, maxCombo: 18, isVip: false },
+          { id: 'seed_20', name: '小凱凱', avatar: '🚀', region: '🇹🇼 高雄', totalScore: 805, maxCombo: 17, isVip: false },
+          { id: 'seed_21', name: 'Lily Lee', avatar: '🧁', region: '🇸🇬 樟宜', totalScore: 770, maxCombo: 16, isVip: false },
+          { id: 'seed_22', name: 'Max Murphy', avatar: '🍀', region: '🇺🇸 紐約', totalScore: 735, maxCombo: 15, isVip: false },
+          { id: 'seed_23', name: '圓圓小舞星', avatar: '🐼', region: '🇹🇼 桃園', totalScore: 700, maxCombo: 14, isVip: false },
+          { id: 'seed_24', name: 'Ben Taylor', avatar: '⛵', region: '🇳🇿 奧克蘭', totalScore: 665, maxCombo: 13, isVip: false },
+          { id: 'seed_25', name: 'Momo 桃子', avatar: '🍑', region: '🇯🇵 福岡', totalScore: 630, maxCombo: 12, isVip: false }
+        ];
+
+        const prof = this.getProfileInfo();
+        const myTotalScore = ParentAccountSyncEngine.getTotalScore();
+        const playerMap = new Map();
+
+        seeds.forEach(s => playerMap.set(s.id, { ...s }));
+        Object.values(this.cachedData.cloudPlayersMap || {}).forEach(cp => {
+          if (cp && cp.id && cp.id !== prof.id) {
+            playerMap.set(cp.id, {
+              id: cp.id,
+              name: cp.name || '星際小舞星',
+              avatar: cp.avatar || '🌟',
+              region: cp.region || '🇹🇼 台灣',
+              totalScore: parseInt(cp.totalScore || 980, 10),
+              maxCombo: parseInt(cp.maxCombo || 15, 10),
+              isVip: !!cp.isVip
+            });
+          }
+        });
+
+        // 加入目前使用者本人
+        playerMap.set(prof.id, {
+          id: prof.id,
+          name: prof.name,
+          avatar: prof.avatar,
+          region: prof.region,
+          totalScore: myTotalScore,
+          maxCombo: Math.max(combo || 12, ...(this.cachedData.personalHistory || []).map(h => h.maxCombo || 12)),
+          isVip: userSubscriptionState.isSubscribed,
+          isCurrentPlayer: true
+        });
+
+        const allPlayers = Array.from(playerMap.values()).sort((a, b) => b.totalScore - a.totalScore);
+        const total = allPlayers.length;
+        let myIdx = allPlayers.findIndex(p => p.id === prof.id);
+        if (myIdx === -1) myIdx = total - 1;
+
+        // 🎯 核心規則：上 10 名 + 下 10 名 = 總共 20 名動態排行視窗
+        const WINDOW_SIZE = Math.min(20, total);
+        let startIdx = myIdx - 10;
+        if (startIdx < 0) startIdx = 0;
+        if (startIdx + WINDOW_SIZE > total) startIdx = Math.max(0, total - WINDOW_SIZE);
+
+        const windowItems = [];
+        for (let i = startIdx; i < startIdx + WINDOW_SIZE; i++) {
+          windowItems.push({
+            ...allPlayers[i],
+            rank: i + 1,
+            isCurrentPlayer: allPlayers[i].id === prof.id
+          });
+        }
+
+        this.cachedData.myRank = myIdx + 1;
+        this.cachedData.totalPlayers = total;
+        this.cachedData.windowRankings = windowItems;
+      },
+
+      openModal() {
+        this.recalculateLadder();
+        this.renderModalContent();
+        const modal = document.getElementById('modal-dance-leaderboard');
+        if (modal) modal.classList.remove('hidden');
+        this.fetchGlobalCloudLeaderboard().then(() => {
+          this.renderModalContent();
+        });
+      },
+
+      closeModal() {
+        const modal = document.getElementById('modal-dance-leaderboard');
+        if (modal) modal.classList.add('hidden');
+        ensureActiveViewVisible();
+      },
+
+      switchTab(tab) {
+        this.activeTab = tab;
+        const ladderBtn = document.getElementById('dance-tab-ladder-btn');
+        const historyBtn = document.getElementById('dance-tab-history-btn');
+        const ladderView = document.getElementById('dance-leaderboard-ladder-view');
+        const historyView = document.getElementById('dance-leaderboard-history-view');
+
+        if (tab === 'ladder') {
+          if (ladderBtn) ladderBtn.className = 'px-3.5 py-2 rounded-xl bg-amber-400 text-slate-950 font-black shadow-md transition active:scale-95 flex items-center gap-1.5 cursor-pointer';
+          if (historyBtn) historyBtn.className = 'px-3.5 py-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white font-bold transition active:scale-95 flex items-center gap-1.5 cursor-pointer';
+          if (ladderView) ladderView.classList.remove('hidden');
+          if (historyView) historyView.classList.add('hidden');
+        } else {
+          if (historyBtn) historyBtn.className = 'px-3.5 py-2 rounded-xl bg-amber-400 text-slate-950 font-black shadow-md transition active:scale-95 flex items-center gap-1.5 cursor-pointer';
+          if (ladderBtn) ladderBtn.className = 'px-3.5 py-2 rounded-xl bg-slate-800 text-slate-300 hover:text-white font-bold transition active:scale-95 flex items-center gap-1.5 cursor-pointer';
+          if (historyView) historyView.classList.remove('hidden');
+          if (ladderView) ladderView.classList.add('hidden');
+        }
+      },
+
+      async syncNow() {
+        showSubscriptionToast('🔄 正在刷新全球天梯排行榜...', '同步最新小舞星累積積分');
+        await this.pushMyScoreToGlobalCloud();
+        await this.fetchGlobalCloudLeaderboard();
+        this.renderModalContent();
+      },
+
+      promptEditProfile() {
+        const prof = this.getProfileInfo();
+        const newName = prompt('請輸入小朋友在全球排行榜顯示的暱稱：', prof.name);
+        if (newName === null) return;
+        const newRegion = prompt('請輸入所在城市或地區（例如：🇹🇼 台北、🇹🇼 台中、🇹🇼 高雄）：', prof.region);
+        this.saveProfileInfo(newName || prof.name, prof.avatar, newRegion || prof.region, true);
+        showSubscriptionToast('✨ 小舞星排行榜名牌已更新！', `暱稱：${this.getProfileInfo().name}`);
+      },
+
+      cycleProfileAvatar() {
+        const avatars = ['👦', '👧', '🦁', '🐰', '🚀', '🦄', '⚡', '🌟', '🐼', '🦊'];
+        const prof = this.getProfileInfo();
+        const idx = (avatars.indexOf(prof.avatar) + 1) % avatars.length;
+        this.saveProfileInfo(prof.name, avatars[idx], prof.region, true);
+      },
+
+      renderModalContent() {
+        const prof = this.getProfileInfo();
+        const myTotalScore = ParentAccountSyncEngine.getTotalScore();
+        const heroEl = document.getElementById('dance-leaderboard-hero-ribbon');
+        const totalBadge = document.getElementById('dance-total-players-badge');
+        const ladderList = document.getElementById('dance-ladder-list');
+        const historyCountBadge = document.getElementById('dance-history-count-badge');
+        const historyStats = document.getElementById('dance-history-quick-stats');
+        const historyList = document.getElementById('dance-history-list');
+
+        if (totalBadge) {
+          totalBadge.innerText = `全球共 ${this.cachedData.totalPlayers} 位小舞星連線`;
+        }
+        if (historyCountBadge) {
+          historyCountBadge.innerText = String((this.cachedData.personalHistory || []).length);
+        }
+
+        if (heroEl) {
+          heroEl.innerHTML = `
+            <div class="flex items-center justify-between flex-wrap gap-2">
+              <div class="flex items-center gap-2.5">
+                <button type="button" onclick="DanceLeaderboardEngine.cycleProfileAvatar()" title="點擊切換頭像圖示" class="w-11 h-11 rounded-2xl bg-slate-900 border-2 border-amber-400 flex items-center justify-center text-2xl shadow-md hover:scale-105 active:scale-95 transition cursor-pointer">
+                  ${prof.avatar}
+                </button>
+                <div>
+                  <div class="flex items-center gap-1.5 flex-wrap">
+                    <span class="font-black text-sm sm:text-base text-white">${prof.name}</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-slate-900/90 text-sky-300 border border-sky-400/40 font-bold">${prof.region}</span>
+                    <button type="button" onclick="DanceLeaderboardEngine.promptEditProfile()" class="text-[10px] px-2 py-0.5 rounded-lg bg-amber-400/20 hover:bg-amber-400/35 text-amber-300 border border-amber-300/40 font-bold cursor-pointer">✏️ 修改暱稱</button>
+                  </div>
+                  <div class="text-[11px] text-amber-200/90 font-bold mt-0.5">
+                    目前全球排位：<strong class="text-amber-300 font-mono text-xs">第 #${this.cachedData.myRank} 名</strong>（下方展示你前後共 20 名競爭對手）
+                  </div>
+                </div>
+              </div>
+              <div class="text-right bg-slate-950/80 px-3.5 py-1.5 rounded-2xl border border-amber-400/50">
+                <span class="text-[10px] text-slate-400 block font-bold">累積總積分</span>
+                <span class="text-base sm:text-lg font-mono font-black text-amber-300 tabular-nums">${String(myTotalScore).padStart(9, '0').replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')}</span>
+              </div>
+            </div>
+          `;
+        }
+
+        if (ladderList) {
+          ladderList.innerHTML = (this.cachedData.windowRankings || []).map(item => {
+            const rankMedal = item.rank === 1 ? '🥇' : item.rank === 2 ? '🥈' : item.rank === 3 ? '🥉' : `#${item.rank}`;
+            const isMe = item.isCurrentPlayer;
+            return `
+              <div class="flex items-center justify-between px-3 py-2 rounded-2xl border transition-all ${
+                isMe
+                  ? 'bg-gradient-to-r from-amber-500/30 via-amber-400/20 to-indigo-900/80 border-2 border-amber-300 shadow-[0_0_20px_rgba(251,191,36,0.35)]'
+                  : 'bg-slate-900/75 border-white/10 hover:border-white/25'
+              }">
+                <div class="flex items-center gap-2.5 min-w-0">
+                  <span class="w-8 text-center font-mono font-black text-xs sm:text-sm ${item.rank <= 3 ? 'text-base' : (isMe ? 'text-amber-300' : 'text-slate-400')} shrink-0">${rankMedal}</span>
+                  <span class="w-8 h-8 rounded-xl bg-slate-800 border border-white/15 flex items-center justify-center text-base shrink-0">${item.avatar}</span>
+                  <div class="min-w-0">
+                    <div class="flex items-center gap-1.5 flex-wrap">
+                      <span class="text-xs sm:text-sm font-black ${isMe ? 'text-amber-300' : 'text-white'} truncate">${item.name}</span>
+                      ${isMe ? '<span class="px-1.5 py-0.2 rounded-full text-[9px] font-black bg-amber-400 text-slate-950">✨ 目前你的位置</span>' : ''}
+                      ${item.isVip ? '<span class="text-[9px] px-1.5 py-0.2 rounded-full bg-amber-500/20 text-amber-300 border border-amber-400/40 font-bold">👑 VIP</span>' : ''}
+                    </div>
+                    <div class="text-[10px] text-slate-400 font-bold flex items-center gap-2">
+                      <span>${item.region}</span>
+                      <span>·</span>
+                      <span>最高連擊 ${item.maxCombo || 15}x</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-right shrink-0 ml-2">
+                  <div class="text-xs sm:text-sm font-mono font-black ${isMe ? 'text-amber-300' : 'text-cyan-300'} tabular-nums">
+                    ${Number(item.totalScore || 0).toLocaleString()} <span class="text-[10px] font-normal text-slate-400">分</span>
+                  </div>
+                </div>
+              </div>
+            `;
+          }).join('');
+        }
+
+        const history = this.cachedData.personalHistory || [];
+        if (historyStats) {
+          const maxScore = history.reduce((m, h) => Math.max(m, h.score || 0), score || 980);
+          const maxC = history.reduce((m, h) => Math.max(m, h.maxCombo || 0), combo || 12);
+          historyStats.innerHTML = `
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-white/10">
+              <div class="text-[10px] text-slate-400">累積總積分</div>
+              <div class="text-sm font-black text-amber-300 font-mono mt-0.5">${myTotalScore.toLocaleString()}</div>
+            </div>
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-white/10">
+              <div class="text-[10px] text-slate-400">目前全球排名</div>
+              <div class="text-sm font-black text-cyan-300 font-mono mt-0.5">#${this.cachedData.myRank}</div>
+            </div>
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-white/10">
+              <div class="text-[10px] text-slate-400">單曲最高得分</div>
+              <div class="text-sm font-black text-emerald-300 font-mono mt-0.5">${maxScore}</div>
+            </div>
+            <div class="bg-slate-900/90 p-2.5 rounded-xl border border-white/10">
+              <div class="text-[10px] text-slate-400">最高連擊紀錄</div>
+              <div class="text-sm font-black text-pink-300 font-mono mt-0.5">${maxC}x</div>
+            </div>
+          `;
+        }
+
+        if (historyList) {
+          if (history.length === 0) {
+            historyList.innerHTML = `
+              <div class="text-center py-8 text-xs text-slate-400 bg-slate-900/50 rounded-2xl border border-white/10">
+                🎵 目前尚無單曲戰績明細，快進入跳舞教室或開啟「⚡ 挑戰模式」觸碰彩線得分吧！
+              </div>
+            `;
+          } else {
+            historyList.innerHTML = history.map(h => `
+              <div class="flex items-center justify-between px-3.5 py-2.5 rounded-2xl bg-slate-900/80 border border-white/10">
+                <div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-xs font-black text-white">${h.songTitle}</span>
+                    <span class="text-[10px] px-2 py-0.5 rounded-full bg-indigo-500/25 text-indigo-200 border border-indigo-400/40 font-bold">${h.mode || '🎓 引導模式'}</span>
+                  </div>
+                  <div class="text-[10px] text-slate-400 mt-0.5">${h.timestamp} · 最高連擊 ${h.maxCombo}x</div>
+                </div>
+                <div class="text-sm font-mono font-black text-amber-300">+${h.score} 分</div>
+              </div>
+            `).join('');
+          }
+        }
+      }
+    };
+
+    // 啟動時自動初始化排行榜、家長雲端帳號與網址 ?acc= 跨設備 1 秒自動同步
+    setTimeout(() => {
+      DanceLeaderboardEngine.init();
+      ParentAccountSyncEngine.updateAccountBadgesUI();
+      try {
+        const params = new URLSearchParams(window.location.search);
+        const urlAcc = params.get('acc');
+        if (urlAcc && urlAcc.trim()) {
+          const cleanAcc = urlAcc.trim();
+          window.history.replaceState({}, document.title, window.location.pathname);
+          ParentAccountSyncEngine.login(cleanAcc).then(() => {
+            showSubscriptionToast(
+              `🎉 跨設備帳號【${cleanAcc}】自動同步完成！`,
+              `已繼承 VIP 權限與累積總積分 (${ParentAccountSyncEngine.getTotalScore().toLocaleString()} 分)！`
+            );
+          }).catch(() => {});
+        } else if (ParentAccountSyncEngine.isLoggedIn()) {
+          ParentAccountSyncEngine.fetchFromCloud(ParentAccountSyncEngine.getAccountId()).then(cData => {
+            if (cData) ParentAccountSyncEngine.mergeAndApplyAccountData(cData);
+          }).catch(() => {});
+        }
+      } catch(e) {}
+    }, 300);
 
     // 三大類型與五位玩家頭部造型特徵配置
     const CHARACTER_PROFILES = {
@@ -7773,6 +8924,10 @@
         console.warn("Song not found:", key);
         return;
       }
+      challengeHitsThisSong = 0;
+      challengeFallingBars = [];
+      challengeParticles = [];
+      challengeFloatingPopups = [];
 
       // 0. 顯示專屬單曲 Loading 暖機進度畫面 (真實預載保證零延遲秒播)
       function updateStageLoader(pct, statusText, detailText) {
@@ -8063,6 +9218,10 @@
 
     function backToLobby() {
       currentSongEntryToken++;
+      if (typeof DanceLeaderboardEngine !== 'undefined' && currentTime > 5) {
+        const curSong = songDatabase[currentSongKey];
+        DanceLeaderboardEngine.recordDanceSession(curSong ? curSong.title : '星際舞曲', score, combo, stickmanGameMode);
+      }
       pauseDance();
       // 離開跳舞教室，關閉實體攝影機並隱藏載入器
       stopRealCamera();
@@ -8969,6 +10128,7 @@
       }
       isHumanDetected = false;
       presenceConfidence = 0;
+      challengeFallingBars = [];
     }
 
     async function initRealCamera() {
@@ -9488,12 +10648,473 @@
       }
     }
 
+    // ========================================================
+    // 4-B. ⚡ 影像火柴人雙模式互動系統：「🎓 引導模式」vs「⚡ 彩線挑戰模式」
+    // 核心功能：
+    // 1. 🎓 引導模式 (guide)：無掉落線條，僅顯示火柴人並由真人語音引導動作。
+    // 2. ⚡ 挑戰模式 (challenge)：上方掉落彩色霓虹橫線，當火柴人的「頭 / 手 / 腳」觸碰到橫線即爆星得分！
+    //    - 快歌動感曲目：隨歌曲時間推進與連擊數漸進加速，人數越多橫線越豐富、得分越高。
+    //    - 慢歌抒情曲目：橫線柔和緩慢飄落、數量精簡不壓迫，讓小朋友享受音樂並以舒緩動作觸碰得分。
+    // ========================================================
+    let stickmanGameMode = 'guide'; // 'guide' | 'challenge'
+    let challengeFallingBars = [];
+    let challengeParticles = [];
+    let challengeFloatingPopups = [];
+    let currentFrameStickmanHitPoints = [];
+    let lastChallengeBarSpawnTime = 0;
+    let challengeHitsThisSong = 0;
+
+    const CHALLENGE_BAR_COLORS = [
+      { main: '#38bdf8', glow: 'rgba(56, 189, 248, 0.9)', badge: '💠 霓虹天藍' },
+      { main: '#f472b6', glow: 'rgba(244, 114, 182, 0.9)', badge: '💖 炫彩粉紅' },
+      { main: '#facc15', glow: 'rgba(250, 204, 21, 0.95)', badge: '⭐ 星光亮金' },
+      { main: '#34d399', glow: 'rgba(52, 211, 153, 0.9)', badge: '🍀 翡翠霓虹' },
+      { main: '#c084fc', glow: 'rgba(192, 132, 252, 0.9)', badge: '🔮 極光幻紫' },
+      { main: '#fb923c', glow: 'rgba(251, 146, 60, 0.9)', badge: '🔥 活力陽光' }
+    ];
+
+    // 智慧判別當前歌曲是否屬於「慢歌抒情 / 溫柔深呼吸 / 晚安曲」
+    function isSlowBalladSong(song) {
+      if (!song) return false;
+      // 第 4 顆日落星球 (Soul / R&B 抒情慢歌) 全曲目皆為慢歌抒情節奏
+      if (song.albumId === 'album_4' || (song.id && song.id.startsWith('a4_'))) return true;
+      // 各星球明確的慢歌、深呼吸、晚安曲 ID
+      const slowSongIds = new Set(['a1_s10', 'a2_s02', 'a2_s10', 'a3_s03', 'a3_s08', 'a3_s10']);
+      if (slowSongIds.has(song.id)) return true;
+      const text = `${song.title || ''} ${song.zhTitle || ''} ${song.tag || ''} ${song.description || ''}`;
+      return /晚安|深呼吸|溫柔|慢|平靜|抒情|Lullaby|Quiet|Gentle|Soft|Breath|Slow|Dream/i.test(text);
+    }
+
+    function setStickmanGameMode(mode) {
+      stickmanGameMode = mode === 'challenge' ? 'challenge' : 'guide';
+      const btnGuide = document.getElementById('btn-mode-guide');
+      const btnChallenge = document.getElementById('btn-mode-challenge');
+      const fsModeIcon = document.getElementById('fs-mode-icon');
+      const fsModeText = document.getElementById('fs-mode-text');
+      const motionTip = document.getElementById('motion-tip-text');
+
+      if (stickmanGameMode === 'challenge') {
+        if (btnChallenge) {
+          btnChallenge.className = 'px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-black transition-all flex items-center gap-1 bg-gradient-to-r from-amber-300 via-pink-400 to-cyan-300 text-slate-950 shadow-[0_0_14px_rgba(251,191,36,0.75)] cursor-pointer';
+        }
+        if (btnGuide) {
+          btnGuide.className = 'px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-black transition-all flex items-center gap-1 text-slate-300 hover:text-white cursor-pointer';
+        }
+        if (fsModeIcon) fsModeIcon.innerText = '⚡';
+        if (fsModeText) fsModeText.innerText = '挑戰模式 (彩線掉落)';
+        const curSong = songDatabase[currentSongKey];
+        const isSlow = isSlowBalladSong(curSong);
+        if (motionTip) {
+          motionTip.innerText = isSlow
+            ? '⚡ 慢歌抒情挑戰：彩色橫線緩慢飄落，跟隨柔和旋律用頭、手、腳輕觸橫線得分！'
+            : '⚡ 動感彩線挑戰：移動身體、揮手或跳躍，用火柴人的頭、手、腳觸碰掉落的彩色橫線得分！';
+        }
+        challengeFallingBars = [];
+        lastChallengeBarSpawnTime = 0;
+        // 僅在音樂真正播放中才生成第一波彩色彩線，避免靜止時空掉得分
+        if (isDanceMusicActive() && cameraCanvas && cameraCanvas.width > 0) {
+          spawnChallengeFallingWave(cameraCanvas.width, cameraCanvas.height, isSlow);
+        }
+      } else {
+        if (btnGuide) {
+          btnGuide.className = 'px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-black transition-all flex items-center gap-1 jelly-btn-gold shadow-xs cursor-pointer';
+        }
+        if (btnChallenge) {
+          btnChallenge.className = 'px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-black transition-all flex items-center gap-1 text-slate-300 hover:text-white cursor-pointer';
+        }
+        if (fsModeIcon) fsModeIcon.innerText = '🎓';
+        if (fsModeText) fsModeText.innerText = '引導模式';
+        challengeFallingBars = [];
+        challengeParticles = [];
+        challengeFloatingPopups = [];
+        if (motionTip) {
+          const seg = getCurrentSegment();
+          motionTip.innerText = `🎓 語音引導模式：${seg ? seg.sub : '跟著老師語音與火柴人一起做動作！'}`;
+        }
+      }
+    }
+
+    function toggleStickmanGameMode() {
+      setStickmanGameMode(stickmanGameMode === 'guide' ? 'challenge' : 'guide');
+    }
+
+    // 播放觸碰彩色橫線時的歡樂清脆得分音效 (WebAudio 合成，零延遲且不干擾背景音樂)
+    function playChallengeBarHitSFX(partType = 'hand') {
+      try {
+        const AudioCtx = window.AudioContext || window.webkitAudioContext;
+        if (!AudioCtx) return;
+        if (!window._challengeAudioCtx) window._challengeAudioCtx = new AudioCtx();
+        const actx = window._challengeAudioCtx;
+        if (actx.state === 'suspended') actx.resume();
+
+        const now = actx.currentTime;
+        const freqs = partType === 'head' ? [587.33, 880, 1174.66] : partType === 'foot' ? [523.25, 659.25, 987.77] : [523.25, 783.99, 1046.5];
+        freqs.forEach((f, i) => {
+          const osc = actx.createOscillator();
+          const gain = actx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(f, now + i * 0.045);
+          gain.gain.setValueAtTime(0.14, now + i * 0.045);
+          gain.gain.exponentialRampToValueAtTime(0.001, now + i * 0.045 + 0.22);
+          osc.connect(gain);
+          gain.connect(actx.destination);
+          osc.start(now + i * 0.045);
+          osc.stop(now + i * 0.045 + 0.24);
+        });
+      } catch(e) {}
+    }
+
+    // 檢查跳舞房間是否真正處於音樂播放狀態（有正在播放的音樂，未暫停且未結束）
+    function isDanceMusicActive() {
+      return Boolean(isPlaying && audioBgm && !audioBgm.paused && !audioBgm.ended);
+    }
+
+    // 生成單條 1/4 長度彩色霓虹音符橫線
+    function spawnChallengeSingleBar(w, h, isSlow, laneIdx, progress01, extraPlayers, staggerOrder) {
+      const palette = CHALLENGE_BAR_COLORS[Math.floor(Math.random() * CHALLENGE_BAR_COLORS.length)];
+      // 1/4 長度：原長度約為 w * 0.33 ~ 0.44，縮減為原本 ¼ 約 w * 0.08 ~ 0.095，精緻俐落、打擊感集中
+      const barWidth = w * (isSlow ? (0.088 + Math.random() * 0.02) : (0.078 + Math.random() * 0.022));
+
+      // 6 條對稱人體工學軌道基準 X 座標（左外、左內、中偏左、中偏右、右內、右外）
+      const laneAnchors = [0.05, 0.20, 0.36, 0.52, 0.67, 0.82];
+      const anchorRatio = laneAnchors[laneIdx % laneAnchors.length];
+      const jitter = (Math.random() - 0.5) * w * 0.035;
+      const x1 = Math.max(10, Math.min(w - barWidth - 10, w * anchorRatio + jitter));
+      const x2 = x1 + barWidth;
+
+      // 速度計算：
+      // - 慢歌：柔和漂移 (1.18 ~ 1.55 px/frame)
+      // - 快歌：剛開始較慢 (1.35 ~ 1.7 px/frame)，隨歌曲時間與連擊漸進加速至 (3.8 ~ 5.4 px/frame)
+      let speedVy = 1.35;
+      if (isSlow) {
+        speedVy = (h / 480) * (1.18 + Math.random() * 0.32);
+      } else {
+        const comboBoost = Math.min(0.9, (combo || 0) * 0.016);
+        const playerBoost = extraPlayers * 0.16;
+        // 基礎速度 1.35（剛開始比較慢，讓孩子適應多條彩線），隨進度 (progress01 * 2.35) 越來越快！
+        speedVy = (h / 480) * (1.35 + progress01 * 2.35 + comboBoost + playerBoost + Math.random() * 0.32);
+      }
+
+      // 多條同時落下時，頂部生成 Y 座標略微階梯錯開 (12~24px)，營造如音符瀑布的自然律動感
+      const baseY = 36;
+      const staggeredY = baseY - (staggerOrder || 0) * (14 + Math.random() * 12);
+
+      challengeFallingBars.push({
+        id: 'bar_' + Date.now() + '_' + Math.random(),
+        x1,
+        x2,
+        y: staggeredY,
+        vy: speedVy,
+        thickness: isSlow ? 12 : 13,
+        color: palette.main,
+        glow: palette.glow,
+        isSlow,
+        laneIdx,
+        ageFrames: 0,
+        swayPhase: Math.random() * Math.PI * 2,
+        points: isSlow ? 50 : 60
+      });
+    }
+
+    // 生成一波彩色橫線瀑布（快歌剛開始就一次掉落多條 2~3 條，隨進度增多 2~5 條；慢歌飄落 1~2 條）
+    function spawnChallengeFallingWave(w, h, isSlow) {
+      if (!isDanceMusicActive()) return;
+
+      const progress01 = Math.min(1, Math.max(0, (currentTime || 0) / 95));
+      const extraPlayers = Math.max(0, playerCount - 1);
+
+      if (isSlow) {
+        // 慢歌抒情模式：每次柔和飄落 1 條（偶爾 2 條），速度平緩飄逸
+        const burstCount = Math.random() < 0.25 ? 2 : 1;
+        const availableLanes = [0, 1, 2, 3, 4, 5].sort(() => Math.random() - 0.5);
+        for (let k = 0; k < burstCount; k++) {
+          spawnChallengeSingleBar(w, h, true, availableLanes[k], progress01, extraPlayers, k);
+        }
+      } else {
+        // 快歌動感模式：一剛開始就一次掉落多條（2~3 條），隨進度與 Combo 逐漸增多 (2~5 條)
+        let burstCount = 2;
+        if (progress01 < 0.25) {
+          // 歌曲前段暖身：一次落下 2~3 條多目標，速度較慢
+          burstCount = Math.random() < 0.35 ? 3 : 2;
+        } else if (progress01 < 0.65) {
+          // 歌曲中段加速：一次落下 2~4 條
+          burstCount = 2 + Math.floor(Math.random() * 2) + (extraPlayers > 0 ? 1 : 0);
+        } else {
+          // 歌曲後段副歌高潮：一次落下 3~5 條狂歡
+          burstCount = 3 + Math.floor(Math.random() * 2) + (extraPlayers > 0 ? 1 : 0);
+        }
+        burstCount = Math.min(burstCount, 6);
+
+        // 隨機抽選互不重疊的軌道，避免彩線撞在一起
+        const lanes = [0, 1, 2, 3, 4, 5].sort(() => Math.random() - 0.5);
+        for (let k = 0; k < burstCount; k++) {
+          spawnChallengeSingleBar(w, h, false, lanes[k], progress01, extraPlayers, k);
+        }
+      }
+    }
+
+    // 更新並繪製爆星粒子與浮動文字（通用工具）
+    function renderChallengeParticlesAndPopups(ctx, w, h) {
+      // 爆星粒子
+      const nextParticles = [];
+      ctx.save();
+      for (let i = 0; i < challengeParticles.length; i++) {
+        const pt = challengeParticles[i];
+        pt.x += pt.vx;
+        pt.y += pt.vy;
+        pt.alpha -= 0.04;
+        if (pt.alpha > 0) {
+          nextParticles.push(pt);
+          ctx.globalAlpha = Math.max(0, pt.alpha);
+          ctx.fillStyle = pt.color;
+          ctx.beginPath();
+          ctx.arc(pt.x, pt.y, pt.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+      }
+      ctx.restore();
+      challengeParticles = nextParticles;
+
+      // 浮動加分文字
+      const nextPopups = [];
+      ctx.save();
+      for (let i = 0; i < challengeFloatingPopups.length; i++) {
+        const pop = challengeFloatingPopups[i];
+        pop.y += pop.vy;
+        pop.alpha -= 0.028;
+        if (pop.alpha > 0) {
+          nextPopups.push(pop);
+          ctx.globalAlpha = Math.max(0, pop.alpha);
+          ctx.font = '900 16px sans-serif';
+          ctx.textAlign = 'center';
+          ctx.strokeStyle = '#0f172a';
+          ctx.lineWidth = 4;
+          ctx.strokeText(pop.text, pop.x, pop.y);
+          ctx.fillStyle = '#fde047';
+          ctx.fillText(pop.text, pop.x, pop.y);
+        }
+      }
+      ctx.restore();
+      challengeFloatingPopups = nextPopups;
+    }
+
+    // 每幀更新並繪製掉落彩色橫線、偵測與火柴人「頭 / 手 / 腳」碰撞並觸發爆星得分
+    function updateAndRenderChallengeBars(ctx, w, h) {
+      if (stickmanGameMode !== 'challenge' || !w || !h) return;
+
+      // 核心防護：若音樂停止或暫停，立即停止掉落橫線並終止碰撞計分！
+      if (!isDanceMusicActive()) {
+        if (challengeFallingBars.length > 0) {
+          challengeFallingBars = [];
+        }
+        // 頂部等待/暫停膠囊
+        ctx.save();
+        const hudText = isPlaying
+          ? '⏸️ 舞曲已暫停 ｜ 點擊「播放舞曲」繼續彩線體感挑戰！'
+          : '▶️ 準備就緒 ｜ 點擊「播放舞曲」開啟彩線掉落體感挑戰！';
+        ctx.font = 'bold 12px sans-serif';
+        const textW = Math.min(w - 24, ctx.measureText(hudText).width + 26);
+        const hudX = (w - textW) / 2;
+        const hudY = 8;
+        ctx.fillStyle = 'rgba(15, 23, 42, 0.85)';
+        ctx.strokeStyle = 'rgba(148, 163, 184, 0.65)';
+        ctx.lineWidth = 1.6;
+        ctx.beginPath();
+        if (typeof ctx.roundRect === 'function') {
+          ctx.roundRect(hudX, hudY, textW, 24, 12);
+        } else {
+          ctx.rect(hudX, hudY, textW, 24);
+        }
+        ctx.fill();
+        ctx.stroke();
+        ctx.fillStyle = '#cbd5e1';
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText(hudText, w / 2, hudY + 12);
+        ctx.restore();
+
+        renderChallengeParticlesAndPopups(ctx, w, h);
+        return;
+      }
+
+      const curSong = songDatabase[currentSongKey];
+      const isSlow = isSlowBalladSong(curSong);
+      const now = performance.now();
+
+      // 計算生成間隔與同屏最大數量：
+      // - 慢歌抒情：間隔長 (2400ms)、畫面最多 2~3 條，從容優雅
+      // - 快歌動感：間隔從 1150ms 逐漸縮短至 580ms，一剛開始就掉多條，同屏最多 8~14 條！
+      let spawnIntervalMs = 2400;
+      let maxConcurrentBars = 3;
+      let speedLevelLabel = '🎵 慢歌抒情節奏 · 柔和慢速';
+
+      if (!isSlow) {
+        const progress01 = Math.min(1, Math.max(0, (currentTime || 0) / 95));
+        const extraPlayers = Math.max(0, playerCount - 1);
+        spawnIntervalMs = Math.max(580, 1150 - progress01 * 500 - extraPlayers * 80);
+        maxConcurrentBars = Math.min(14, 8 + Math.floor(progress01 * 5) + extraPlayers * 2);
+        const lv = progress01 < 0.33 ? 'Lv.1 暖身 (慢速起步)' : progress01 < 0.68 ? 'Lv.2 加速' : 'Lv.3 狂歡衝刺 (超快感)';
+        speedLevelLabel = `🔥 動感挑戰 ${lv}${playerCount > 1 ? ` · ${playerCount}人同樂加成` : ''}`;
+      }
+
+      if (now - lastChallengeBarSpawnTime >= spawnIntervalMs && challengeFallingBars.length < maxConcurrentBars) {
+        spawnChallengeFallingWave(w, h, isSlow);
+        lastChallengeBarSpawnTime = now;
+      }
+
+      // 1. 頂部挑戰模式狀態膠囊提示
+      ctx.save();
+      const hudText = `${speedLevelLabel} ｜ 頭/手/腳碰彩線得分 (已擊中 ${challengeHitsThisSong} 條)`;
+      ctx.font = 'bold 12px sans-serif';
+      const textW = Math.min(w - 24, ctx.measureText(hudText).width + 26);
+      const hudX = (w - textW) / 2;
+      const hudY = 8;
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.82)';
+      ctx.strokeStyle = isSlow ? 'rgba(56, 189, 248, 0.75)' : 'rgba(250, 204, 21, 0.85)';
+      ctx.lineWidth = 1.8;
+      ctx.beginPath();
+      if (typeof ctx.roundRect === 'function') {
+        ctx.roundRect(hudX, hudY, textW, 24, 12);
+      } else {
+        ctx.rect(hudX, hudY, textW, 24);
+      }
+      ctx.fill();
+      ctx.stroke();
+      ctx.fillStyle = isSlow ? '#bae6fd' : '#fde047';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(hudText, w / 2, hudY + 12);
+      ctx.restore();
+
+      // 2. 更新並繪製每一條掉落中的彩色橫線，並與所有火柴人的頭/手/腳進行碰撞檢測
+      const remainingBars = [];
+      for (let i = 0; i < challengeFallingBars.length; i++) {
+        const bar = challengeFallingBars[i];
+        bar.y += bar.vy;
+        if (bar.isSlow) {
+          const sway = Math.sin(frameTick * 0.04 + bar.swayPhase) * 0.6;
+          bar.x1 = Math.max(8, Math.min(w - (bar.x2 - bar.x1) - 8, bar.x1 + sway));
+          bar.x2 = bar.x1 + (bar.x2 - bar.x1);
+        }
+
+        // 碰撞偵測：檢查 currentFrameStickmanHitPoints 中任一火柴人的頭 (head)、手 (hand)、腳 (foot)
+        let hitResult = null;
+        for (let pIdx = 0; pIdx < currentFrameStickmanHitPoints.length; pIdx++) {
+          const pt = currentFrameStickmanHitPoints[pIdx];
+          const dy = Math.abs(pt.y - bar.y);
+          if (dy <= pt.radius + bar.thickness * 0.75 && pt.x >= bar.x1 - pt.radius && pt.x <= bar.x2 + pt.radius) {
+            hitResult = pt;
+            break;
+          }
+        }
+
+        if (hitResult) {
+          // 🎉 碰撞成功！觸發爆星粒子、音效與加分
+          challengeHitsThisSong++;
+          const bonus = hitResult.part === 'head' ? 80 : hitResult.part === 'foot' ? 65 : 50;
+          const partLabel = hitResult.part === 'head' ? '👑 頭頂跳躍' : hitResult.part === 'foot' ? '🦶 腳部踢擊' : '✋ 手部揮擊';
+          playChallengeBarHitSFX(hitResult.part);
+
+          // 產生彩色爆星粒子
+          const midX = Math.max(bar.x1, Math.min(bar.x2, hitResult.x));
+          for (let k = 0; k < 12; k++) {
+            const ang = (Math.PI * 2 * k) / 12;
+            const spd = 2.0 + Math.random() * 3.8;
+            challengeParticles.push({
+              x: midX + (Math.random() - 0.5) * 30,
+              y: bar.y,
+              vx: Math.cos(ang) * spd,
+              vy: Math.sin(ang) * spd - 1.0,
+              color: bar.color,
+              alpha: 1,
+              size: 4 + Math.random() * 3.5
+            });
+          }
+
+          // 產生浮動加分文字
+          challengeFloatingPopups.push({
+            x: midX,
+            y: Math.max(48, bar.y - 10),
+            text: `${partLabel} +${bonus}!`,
+            color: bar.color,
+            alpha: 1,
+            vy: -1.6
+          });
+
+          // 累加單曲分數、連擊與首頁 9 位數總積分
+          score += bonus;
+          combo++;
+          if (scoreCount) scoreCount.innerText = score;
+          if (comboCount) comboCount.innerText = combo + 'x';
+          try {
+            const nextTotal = ParentAccountSyncEngine.getTotalScore() + bonus;
+            ParentAccountSyncEngine.setTotalScore(nextTotal);
+            if (typeof DanceLeaderboardEngine !== 'undefined') {
+              DanceLeaderboardEngine.recalculateLadder();
+            }
+            ParentAccountSyncEngine.debouncedSyncWithCloud(2500);
+          } catch(e) {}
+          continue;
+        }
+
+        // 若尚未掉出畫面底部，繪製此 ¼ 長度彩色霓虹橫線
+        if (bar.y < h - 14) {
+          remainingBars.push(bar);
+          ctx.save();
+          // 外層霓虹光暈橫線
+          ctx.shadowColor = bar.glow;
+          ctx.shadowBlur = isAppleMobile ? 8 : 16;
+          ctx.strokeStyle = bar.color;
+          ctx.lineWidth = bar.thickness;
+          ctx.lineCap = 'round';
+          ctx.beginPath();
+          ctx.moveTo(bar.x1, bar.y);
+          ctx.lineTo(bar.x2, bar.y);
+          ctx.stroke();
+
+          // 內層高亮白芯橫線
+          ctx.shadowBlur = 0;
+          ctx.strokeStyle = '#ffffff';
+          ctx.lineWidth = Math.max(3, bar.thickness * 0.32);
+          ctx.beginPath();
+          ctx.moveTo(bar.x1 + 3, bar.y);
+          ctx.lineTo(bar.x2 - 3, bar.y);
+          ctx.stroke();
+
+          // 橫線左右兩端閃亮光球
+          [bar.x1, bar.x2].forEach(endX => {
+            ctx.beginPath();
+            ctx.arc(endX, bar.y, bar.thickness * 0.55, 0, Math.PI * 2);
+            ctx.fillStyle = '#ffffff';
+            ctx.fill();
+            ctx.lineWidth = 2.2;
+            ctx.strokeStyle = bar.color;
+            ctx.stroke();
+          });
+
+          // 橫線中央可愛節奏標記
+          const centerBarX = (bar.x1 + bar.x2) / 2;
+          ctx.fillStyle = '#ffffff';
+          ctx.font = '900 11px sans-serif';
+          ctx.textAlign = 'center';
+          ctx.textBaseline = 'middle';
+          ctx.fillText(bar.isSlow ? '🫧' : '⚡', centerBarX, bar.y - 12);
+          ctx.restore();
+        }
+      }
+      challengeFallingBars = remainingBars;
+
+      // 繪製粒子與浮動加分文字
+      renderChallengeParticlesAndPopups(ctx, w, h);
+    }
+
     // --- 核心：每帧绘制萌趣发光火柴人 (Stick-Figure) ---
     function renderStickmanLoop() {
       try {
         processRealVideoFrame();
         ctx.clearRect(0, 0, cameraCanvas.width, cameraCanvas.height);
         frameTick++;
+        currentFrameStickmanHitPoints = [];
 
         // 💡 舞台聲控動態激光與光線效果渲染 (依歌曲活潑動感程度與即時音訊頻譜自適應)
         try {
@@ -9583,6 +11204,11 @@
               console.error(`Error drawing stickman player ${idx + 1}:`, err);
             }
           });
+
+          // 3. ⚡ 挑戰模式：繪製上方掉落彩色霓虹橫線並偵測與火柴人「頭 / 手 / 腳」碰撞得分
+          if (stickmanGameMode === 'challenge') {
+            updateAndRenderChallengeBars(ctx, w, h);
+          }
         }
       } catch (err) {
         console.error("renderStickmanLoop error:", err);
@@ -10042,10 +11668,25 @@
       ctx.fillStyle = boneColor;
       ctx.font = "bold 13px sans-serif";
       ctx.textAlign = "center";
-      const statusText = (d && d.detected) ? (isPoseMatched ? "⭐ PERFECT" : "跟著跳~") : "等待入鏡👋";
+      const statusText = (d && d.detected)
+        ? (stickmanGameMode === 'challenge' ? "⚡ 碰彩線得分!" : (isPoseMatched ? "⭐ PERFECT" : "跟著跳~"))
+        : (stickmanGameMode === 'challenge' ? "⚡ 揮手碰彩線!" : "等待入鏡👋");
       ctx.fillText(`${p.name} · ${statusText}`, head.x, head.y - headRadius - 28);
 
       ctx.restore();
+
+      // 7. ⚡ 收集本幀火柴人「頭 (head) / 左右手 (hand) / 左右腳 (foot)」碰撞點，供挑戰模式彩色橫線偵測得分
+      if (stickmanGameMode === 'challenge') {
+        currentFrameStickmanHitPoints.push(
+          { playerIdx: idx, part: 'head', x: head.x, y: head.y, radius: 30 },
+          { playerIdx: idx, part: 'hand', x: lFin.x, y: lFin.y, radius: 24 },
+          { playerIdx: idx, part: 'hand', x: rFin.x, y: rFin.y, radius: 24 },
+          { playerIdx: idx, part: 'hand', x: lWri.x, y: lWri.y, radius: 20 },
+          { playerIdx: idx, part: 'hand', x: rWri.x, y: rWri.y, radius: 20 },
+          { playerIdx: idx, part: 'foot', x: lAnk.x, y: lAnk.y, radius: 24 },
+          { playerIdx: idx, part: 'foot', x: rAnk.x, y: rAnk.y, radius: 24 }
+        );
+      }
 
       // 动作达标即时反馈与计分 (僅由主玩家 P1 結算並以時間戳平滑防抖，防止高頻微調引發介面重排)
       if (idx === 0 && isPoseMatched && isPlaying) {
@@ -10082,7 +11723,8 @@
     // ========================================================
     const VOICE_CACHE_BUSTER = "v=" + Date.now();
     function playTeacherVoice(voiceFile) {
-      if (!voiceEnabled || !voiceFile) return;
+      // 🎓 僅在「引導模式 (guide)」且語音開啟時播放動作引導語音；「挑戰模式 (challenge)」讓小朋友專注聽音樂節奏碰彩線
+      if (!voiceEnabled || !voiceFile || stickmanGameMode === 'challenge') return;
       try {
         audioVoice.pause();
         audioVoice.currentTime = 0;
@@ -10397,11 +12039,17 @@
     });
 
     audioBgm.addEventListener('ended', () => {
+      challengeFallingBars = [];
       if (isAlbumContinuousPlay) {
         nextSong();
       } else {
         pauseDance();
       }
+    });
+
+    audioBgm.addEventListener('pause', () => {
+      // 音樂暫停或停止時，立即清空下落彩線，終止體感判定與得分
+      challengeFallingBars = [];
     });
 
     audioBgm.addEventListener('error', (e) => {
@@ -10442,6 +12090,13 @@
       playLabel.innerText = "暫停舞曲";
       btnPlay.classList.remove('jelly-btn-gold');
       btnPlay.classList.add('jelly-btn-emerald');
+
+      // 若處於挑戰模式，音樂播放時立即啟動第一波彩線瀑布下落
+      if (stickmanGameMode === 'challenge' && cameraCanvas && cameraCanvas.width > 0) {
+        lastChallengeBarSpawnTime = performance.now();
+        challengeFallingBars = [];
+        spawnChallengeFallingWave(cameraCanvas.width, cameraCanvas.height, isSlowBalladSong(songDatabase[currentSongKey]));
+      }
 
       if (timerInterval) clearInterval(timerInterval);
 
@@ -10516,6 +12171,7 @@
 
     function pauseDance() {
       isPlaying = false;
+      challengeFallingBars = [];
       playIcon.innerText = "▶";
       playLabel.innerText = "播放舞曲";
       btnPlay.classList.remove('jelly-btn-emerald');
@@ -10534,6 +12190,8 @@
       lastSpokenSegment = -1;
       combo = 0;
       score = 0;
+      challengeHitsThisSong = 0;
+      challengeFallingBars = [];
       audioBgm.currentTime = 0;
       updatePlaybackUI();
     }
